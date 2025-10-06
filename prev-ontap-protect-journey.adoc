@@ -1,0 +1,293 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-protect-journey.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+---
+= 使用NetApp備份和復原規劃您的保護之旅
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery 讓您能夠建立最多三個來源磁碟區副本來保護您的資料。在您的磁碟區上啟用此服務時，您可以選擇許多選項，因此您應該檢查您的選擇以做好準備。
+
+[]
+====
+*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+
+====
+我們將討論以下選項：
+
+* 您將使用哪些保護功能：快照副本、複製磁碟區和/或備份到雲
+* 您將使用哪種備份架構：磁碟區的級聯備份還是磁軌備份
+* 您是否會使用預設備份策略，還是需要建立自訂策略
+* 您希望服務為您建立雲端儲存桶，還是希望在開始之前建立物件儲存容器
+* 您使用哪種控制台代理部署模式（標準、受限或私有模式）
+
+
+
+
+== 您將使用哪些保護功能
+
+在您選擇要使用的功能之前，這裡先簡單介紹一下每個功能的作用以及它提供的保護類型。
+
+[cols="20,70"]
+|===
+| 備份類型 | 描述 
+
+
+| 快照 | 在來源磁碟區內建立磁碟區的唯讀、時間點映像作為快照副本。您可以使用快照副本來還原單一文件，或還原磁碟區的全部內容。 
+
+
+| 複製 | 在另一個ONTAP儲存系統上建立資料的輔助副本並不斷更新輔助資料。您的資料將保持最新狀態，並在您需要時隨時可用。 
+
+
+| 雲端備份 | 將您的資料備份到雲端，以進行保護並用於長期存檔。如果需要，您可以將磁碟區、資料夾或單一檔案從備份還原到相同或不同的系統。 
+|===
+快照是所有備份方法的基礎，是使用備份和還原服務的必要條件。快照副本是磁碟區的唯讀、時間點映像。此影像所佔用的儲存空間極小，且產生的效能開銷可以忽略不計，因為它僅記錄自上次快照複製以來對檔案的變更。在您的磁碟區上建立的快照副本用於使複製的磁碟區和備份檔案與對來源磁碟區所做的變更保持同步 - 如圖所示。
+
+image:diagram-321-overview.png["此圖表顯示了備份檔案如何作為快照副本存在於來源系統上、作為輔助儲存系統上的複製磁碟區存在以及作為物件儲存中的備份檔案存在。"]
+
+您可以選擇在另一個ONTAP儲存系統上建立複製卷，並在雲端中建立備份檔案。或者您可以選擇僅建立複製磁碟區或備份檔案 - 這是您的選擇。
+
+總而言之，這些是您可以為ONTAP系統中的磁碟區建立的有效保護流程：
+
+* 來源磁碟區 -> 快照副本 -> 複製磁碟區 -> 備份文件
+* 來源磁碟區 -> Snapshot 副本 -> 備份文件
+* 來源卷 -> 快照副本 -> 複製卷
+
+
+
+NOTE: 複製磁碟區或備份檔案的初始建立包括來源資料的完整副本 - 這稱為_基線傳輸_。後續傳輸僅包含來源資料的差異副本（快照）。
+
+*不同備份方法的比較*
+
+下表顯示了三種備份方法的總體比較。雖然物件儲存空間通常比本地磁碟儲存便宜，但如果您認為您可能會頻繁地從雲端恢復數據，那麼雲端提供者的出口費用可能會減少您的一些節省。您需要確定需要多久從雲端中的備份檔案還原資料。
+
+除了此標準之外，如果您使用 DataLock 和勒索軟體保護功能，雲端儲存還可以提供額外的安全性選項，並且透過為舊備份檔案選擇存檔儲存類別可以節省額外的成本。link:prev-ontap-policy-object-options.html["了解有關 DataLock 和勒索軟體保護以及檔案儲存設定的更多信息"] 。
+
+[cols="18,18,22,18,22"]
+|===
+| 備份類型 | 備份速度 | 備份成本 | 恢復速度 | 恢復成本 
+
+
+| *快照* | 高的 | 低（磁碟空間） | 高的 | 低的 
+
+
+| *複製* | 中等的 | 中等（磁碟空間） | 中等的 | 中（網路） 
+
+
+| *雲端備份* | 低的 | 低（物體空間） | 低的 | 高（提供者費用） 
+|===
+
+
+== 您將使用哪種備份架構
+
+在建立複製磁碟區和備份檔案時，您可以選擇磁軌或級聯架構來備份磁碟區。
+
+*扇出*架構將快照副本獨立傳輸到目標儲存系統和雲端中的備份物件。
+
+image:diagram-321-fanout-detailed.png["此圖表顯示如何使用磁碟區的快照副本來建立和更新複製磁碟區和備份檔案。"]
+
+*級聯*架構首先將快照副本傳輸到目標儲存系統，然後該系統將副本傳輸到雲端中的備份物件。
+
+image:diagram-321-cascade-detailed.png["此圖表顯示如何使用磁碟區的快照副本來建立和更新複製磁碟區和備份檔案。"]
+
+*不同架構選擇的比較*
+
+此表提供了扇出型和級聯型架構的比較。
+
+[cols="50,50"]
+|===
+| 扇出 | 級聯 
+
+
+| 對來源系統的效能影響較小，因為它將快照副本傳送到 2 個不同的系統 | 由於僅發送一次快照副本，因此對來源儲存系統效能的影響較小 
+
+
+| 更易於設置，因為所有策略、網路和ONTAP配置都在來源系統上完成 | 還需要從輔助系統完成一些網路和ONTAP配置。 
+|===
+
+
+== 您是否會使用快照、複製和備份的預設策略
+
+您可以使用NetApp提供的預設策略來建立備份，也可以建立自訂策略。當您使用啟動精靈為您的磁碟區啟用備份和復原服務時，您可以從預設原則和系統中已經存在的任何其他策略（Cloud Volumes ONTAP或本機ONTAP系統）中進行選擇。如果您想使用與現有策略不同的策略，您可以在開始之前或使用啟動精靈時建立該策略。
+
+* 預設快照策略按小時、天、週建立快照副本，保留每小時 6 個、每天 2 個、每週 2 個快照副本。
+* 預設複製策略複製每日和每週的快照副本，保留 7 個每日快照副本和 52 個每週快照副本。
+* 預設備份策略複製每日和每週的快照副本，保留 7 個每日快照副本和 52 個每週快照副本。
+
+
+如果您為複製或備份建立自訂策略，則策略標籤（例如「每日」或「每週」）必須與快照策略中存在的標籤匹配，否則將不會建立複製的磁碟區和備份檔案。
+
+您可以在NetApp備份和還原 UI 中建立快照、複製和備份到物件儲存策略。請參閱link:prev-ontap-backup-manage.html["新增新的備份策略"]了解詳情。
+
+除了使用NetApp Backup and Recovery 建立自訂策略之外，您還可以使用 System Manager 或ONTAP命令列介面 (CLI)：
+
+* https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html["使用 System Manager 或ONTAP CLI 建立快照策略"^]
+* https://docs.netapp.com/us-en/ontap/task_dp_create_custom_data_protection_policies.html["使用 System Manager 或ONTAP CLI 建立複製策略"^]
+
+
+*注意：*使用系統管理員時，選擇*非同步*作為複製策略的策略類型，並選擇*非同步*和*備份到雲端*作為備份到物件策略。
+
+以下是一些ONTAP CLI 命令範例，如果您要建立自訂策略，這些命令可能會有所幫助。請注意，您必須使用_admin_ vserver（儲存虛擬機器）作為 `<vserver_name>`在這些命令中。
+
+[cols="30,70"]
+|===
+| 政策描述 | 命令 
+
+
+| 簡單快照策略 | `snapshot policy create -policy WeeklySnapshotPolicy -enabled true -schedule1 weekly -count1 10 -vserver ClusterA -snapmirror-label1 weekly` 
+
+
+| 簡單備份到雲端 | `snapmirror policy create -policy <policy_name> -transfer-priority normal -vserver <vserver_name> -create-snapshot-on-source false -type vault`
+`snapmirror policy add-rule -policy <policy_name> -vserver <vserver_name> -snapmirror-label <snapmirror_label> -keep` 
+
+
+| 使用 DataLock 和勒索軟體保護功能備份到雲端 | `snapmirror policy create -policy CloudBackupService-Enterprise -snapshot-lock-mode enterprise -vserver <vserver_name>`
+`snapmirror policy add-rule -policy CloudBackupService-Enterprise -retention-period 30days` 
+
+
+| 使用歸檔儲存類別備份到雲端 | `snapmirror policy create -vserver <vserver_name> -policy <policy_name> -archive-after-days <days> -create-snapshot-on-source false -type vault`
+`snapmirror policy add-rule -policy <policy_name> -vserver <vserver_name> -snapmirror-label <snapmirror_label> -keep` 
+
+
+| 簡單複製到另一個儲存系統 | `snapmirror policy create -policy <policy_name> -type async-mirror -vserver <vserver_name>`
+`snapmirror policy add-rule -policy <policy_name> -vserver <vserver_name> -snapmirror-label <snapmirror_label> -keep` 
+|===
+
+NOTE: 只有保險庫策略可用於備份到雲端關係。
+
+
+
+== 我的政策在哪裡？
+
+根據您計劃使用的備份架構，備份策略位於不同的位置：扇出式或級聯式。複製策略和備份策略的設計方式不同，因為複製將兩個ONTAP儲存系統配對，而物件備份使用儲存提供者作為目標。
+
+* 快照策略始終駐留在主儲存系統上。
+* 複製策略始終駐留在輔助儲存系統上。
+* 備份到物件策略是在來源磁碟區所在的系統上建立的 - 這是扇出配置的主集群，也是級聯配置的輔助集群。
+
+
+這些差異如表所示。
+
+[cols="25,25,25,25"]
+|===
+| 架構 | 快照策略 | 複製策略 | 備份策略 
+
+
+| *扇出* | 基本的 | 次要 | 基本的 
+
+
+| *級聯* | 基本的 | 次要 | 次要 
+|===
+因此，如果您計劃在使用級聯架構時建立自訂策略，則需要在將建立複製磁碟區的輔助系統上建立複製和備份到物件策略。如果您打算在使用扇出架構時建立自訂策略，則需要在將建立複製磁碟區的輔助系統上建立複製策略，並在主系統上備份到物件原則。
+
+如果您使用所有ONTAP系統上存在的預設策略，那麼一切就都設定好了。
+
+
+
+== 你想建立自己的物件儲存容器嗎
+
+當您在系統的物件儲存中建立備份檔案時，預設情況下，備份和復原服務會在您配置的物件儲存帳戶中為備份檔案建立容器（儲存桶或儲存帳戶）。  AWS 或 GCP 儲存桶預設為「netapp-backup-<uuid>」。  Azure Blob 儲存帳戶名稱為「netappbackup<uuid>」。
+
+如果您想要使用某個前綴或指派特殊屬性，您可以在物件提供者帳戶中自行建立容器。如果您想建立自己的容器，則必須在啟動啟動精靈之前建立它。 NetApp Backup and Recovery 可以使用任何儲存桶並共用儲存桶。備份啟動精靈將自動發現所選帳戶和憑證的設定容器，以便您選擇要使用的容器。
+
+您可以從控制台或雲端提供者建立儲存桶。
+
+* https://docs.netapp.com/us-en/storage-management-s3-storage/task-add-s3-bucket.html["從控制台建立 Amazon S3 儲存桶"^]
+* https://docs.netapp.com/us-en/storage-management-blob-storage/task-add-blob-storage.html["從控制台建立 Azure Blob 儲存體帳戶"^]
+* https://docs.netapp.com/us-en/storage-management-google-cloud-storage/task-add-gcp-bucket.html["從控制台建立 Google Cloud Storage 儲存桶"^]
+
+
+如果您打算使用與「netapp-backup-xxxxxx」不同的儲存桶前綴，則需要修改控制台代理 IAM 角色的 S3 權限。
+
+*進階儲存桶設定*
+
+如果您打算將較舊的備份檔案移至檔案存儲，或者如果您打算啟用 DataLock 和勒索軟體保護來鎖定備份檔案並掃描其中是否存在可能的勒索軟體，則需要使用某些設定來建立容器：
+
+* 目前，當您在叢集上使用ONTAP 9.10.1 或更高版本軟體時，AWS S3 儲存裝置支援您自己的儲存桶上的存檔儲存。預設情況下，備份從 S3 _Standard_ 儲存類別開始。確保使用適當的生命週期規則建立儲存桶：
++
+** 30 天後將整個儲存桶範圍內的物件移至 S3 _Standard-IA_。
+** 將標籤「smc_push_to_archive: true」的物件移到_Glacier Flexible Retrieval_（以前稱為 S3 Glacier）
+
+
+* 當叢集上使用ONTAP 9.11.1 或更高版本軟體時，AWS 儲存支援 DataLock 和勒索軟體保護；當使用ONTAP 9.12.1 或更高版本軟體時，Azure 儲存支援 DataLock 和勒索軟體保護。
++
+** 對於 AWS，您必須使用 30 天的保留期在儲存桶上啟用物件鎖定。
+** 對於 Azure，您需要建立具有版本級不變性支援的儲存體類別。
+
+
+
+
+
+
+== 您正在使用哪種控制台代理部署模式
+
+如果您已經使用控制台來管理您的存儲，那麼控制台代理已經安裝。如果您打算將相同的控制台代理與NetApp Backup and Recovery 一起使用，那麼一切就緒了。如果您需要使用不同的控制台代理，則需要在開始備份和還原實作之前安裝它。
+
+NetApp控制台提供多種部署模式，使您能夠以滿足業務和安全要求的方式使用控制台。  _標準模式_利用控制台 SaaS 層提供全部功能，而_限制模式_和_私人模式_適用於有連線限制的組織。
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解有關NetApp控制台部署模式的更多信息"^] 。
+
+
+
+=== 支援具有完整網路連線的網站
+
+當在具有完全互聯網連接（也稱為_標準模式_或_SaaS 模式_）的站點中使用NetApp Backup and Recovery 時，您可以在控制台管理的任何本地ONTAP或Cloud Volumes ONTAP系統上建立複製卷，並且可以在任何受支援的雲端提供者的物件儲存上建立備份檔案。link:concept-backup-to-cloud.html["查看受支援的備份目標的完整列表"] 。
+
+有關有效控制台代理位置的列表，請參閱您計劃建立備份檔案的雲端提供者的以下備份程式之一。存在一些限制，控制台代理必須手動安裝在 Linux 機器上或部署在特定的雲端提供者中。
+
+* link:prev-ontap-backup-cvo-aws.html["將Cloud Volumes ONTAP資料備份到 Amazon S3"]
+* link:prev-ontap-backup-cvo-azure.html["將Cloud Volumes ONTAP資料備份到 Azure Blob"]
+* link:prev-ontap-backup-cvo-gcp.html["將Cloud Volumes ONTAP資料備份到 Google Cloud"]
+* link:prev-ontap-backup-onprem-aws.html["將本地ONTAP資料備份到 Amazon S3"]
+* link:prev-ontap-backup-onprem-azure.html["將本機ONTAP資料備份到 Azure Blob"]
+* link:prev-ontap-backup-onprem-gcp.html["將本地ONTAP資料備份到 Google Cloud"]
+* link:prev-ontap-backup-onprem-storagegrid.html["將本地ONTAP資料備份到StorageGRID"]
+* link:prev-ontap-backup-onprem-ontaps3.html["將本地ONTAP備份到ONTAP S3"]
+
+
+
+
+=== 支援網路連線有限的網站
+
+NetApp Backup and Recovery 可用於網際網路連線受限的網站（也稱為「受限模式」）來備份磁碟區資料。在這種情況下，您需要在目標雲端區域部署控制台代理程式。
+
+ifdef::aws[]
+
+* 您可以將資料從本機ONTAP系統或安裝在 AWS 商業區域的Cloud Volumes ONTAP系統備份到 Amazon S3。link:prev-ontap-backup-cvo-aws.html["將Cloud Volumes ONTAP資料備份到 Amazon S3"] 。
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* 您可以將資料從本機ONTAP系統或安裝在 Azure 商業區域中的Cloud Volumes ONTAP系統備份到 Azure Blob。link:prev-ontap-backup-cvo-azure.html["將Cloud Volumes ONTAP資料備份到 Azure Blob"] 。
+
+
+endif::azure[]
+
+
+
+=== 支援沒有網路連線的網站
+
+NetApp Backup and Recovery 可用於沒有網路連線的網站（也稱為_私有模式_或_暗站_）來備份磁碟區資料。在這種情況下，您需要在同一網站的 Linux 主機上部署控制台代理程式。
+
+
+NOTE: BlueXP私有模式（傳統BlueXP介面）通常用於沒有網路連線的本機環境和安全雲端區域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。NetApp繼續透過傳統的BlueXP介面支援這些環境。有關舊版BlueXP介面中的私人模式文檔，請參閱 https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF 文檔"]。
+
+* 您可以將資料從本機ONTAP系統備份到本機NetApp StorageGRID系統。link:prev-ontap-backup-onprem-storagegrid.html["將本地ONTAP資料備份到StorageGRID"] 。
+* 您可以將資料從本機ONTAP系統備份到本機ONTAP系統或為 S3 物件儲存配置的Cloud Volumes ONTAP系統。link:prev-ontap-backup-onprem-ontaps3.html["將本地ONTAP資料備份到ONTAP S3"] .ifdef::aws[]
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+endif::azure[]

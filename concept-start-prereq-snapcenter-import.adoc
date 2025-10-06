@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: concept-start-prereq-snapcenter-import.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery, snapcenter, import, migration, migrate 
+summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的準備情況來開始使用NetApp Backup and Recovery。要使用NetApp Backup and Recovery，您需要滿足這些先決條件。 
+---
+= 從外掛程式服務匯入NetApp Backup and Recovery 的先決條件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您要將資源從 Microsoft SQL Server 的SnapCenter外掛程式服務匯入NetApp Backup and Recovery，則需要設定更多項目。
+
+
+
+== 首先在NetApp控制台中建立系統
+
+如果要從SnapCenter匯入資源，則應先將所有本機SnapCenter叢集儲存體新增至控制台 *系統* 頁面，然後再從SnapCenter匯入。這確保主機資源能夠被正確地發現和導入。
+
+
+
+== 確保安裝SnapCenter插件的主機需求
+
+若要從 Microsoft SQL Server 適用的SnapCenter外掛程式匯入資源，請確保符合安裝適用於 Microsoft SQL Server 的SnapCenter外掛程式的主機需求。
+
+專門檢查SnapCenter要求link:concept-start-prereq.html["NetApp備份與復原前提條件"]。
+
+
+
+== 停用使用者帳戶控制遠端限制
+
+從SnapCenter匯入資源之前，請停用SnapCenter Windows 主機上的使用者帳戶控制 (UAC) 遠端限制。如果您使用本機管理帳戶遠端連線至SnapCenter伺服器主機或 SQL 主機，請停用 UAC。
+
+*安全考慮*
+
+在停用 UAC 遠端限制之前，請考慮以下問題：
+
+* 安全風險：停用令牌過濾可能會使您的系統面臨安全漏洞，尤其是在本機管理帳戶被惡意行為者破壞的情況下。
+* 謹慎使用：
++
+** 僅當該設定對於您的管理任務至關重要時才修改它。
+** 確保採用強密碼和其他安全措施來保護管理帳戶。
+
+
+
+
+*替代解決方案*
+
+* 如果需要遠端管理訪問，請考慮使用具有適當權限的網域帳戶。
+* 使用符合最佳安全實務的安全遠端管理工具來最大限度地降低風險。
+
+
+.停用使用者帳戶控制遠端限制的步驟
+. 修改 `LocalAccountTokenFilterPolicy`SnapCenter Windows 主機上的登錄項目。
++
+使用以下方法之一執行此操作，並按照下面的說明進行操作：
+
++
+** 方法 1：登錄編輯器
+** 方法 2：PowerShell 腳本
+
+
+
+
+
+
+=== 方法 1：使用登錄編輯器停用使用者帳戶控制
+
+這是您可以用來停用使用者帳戶控制的方法之一。
+
+.步驟
+. 執行下列操作，在SnapCenter Windows 主機上開啟登錄編輯程式：
++
+.. 按 `Windows+R`開啟“運行”對話框。
+.. 類型 `regedit`並按 `Enter`。
+
+
+. 導航至策略密鑰：
++
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`
+
+. 建立或修改 `DWORD`價值：
++
+.. 定位： `LocalAccountTokenFilterPolicy`
+.. 如果不存在，則建立一個新的 `DWORD`（32 位元）值命名 `LocalAccountTokenFilterPolicy`。
+
+
+. 支援以下值。對於此場景，將值設為 `1`：
++
+** `0`（預設）：啟用 UAC 遠端限制。本機帳戶在遠端存取時已過濾令牌。
+** `1`：UAC 遠端限制已停用。本機帳戶繞過令牌過濾並在遠端存取時擁有完全的管理權限。
+
+
+. 按一下“*確定*”。
+. 關閉登錄編輯程式。
+. 重新啟動SnapCenter Windows 主機。
+
+
+.註冊表修改範例
+此範例將 LocalAccountTokenFilterPolicy 設為“1”，停用 UAC 遠端限制。
+
+[listing]
+----
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+
+"LocalAccountTokenFilterPolicy"=dword:00000001
+----
+
+
+=== 方法 2：使用 PowerShell 腳本停用使用者帳號控制
+
+這是您可以用來停用使用者帳戶控制的另一種方法。
+
+
+CAUTION: 以提升的權限執行 PowerShell 指令可能會影響系統設定。在運行命令之前，請確保您理解這些命令及其含義。
+
+.步驟
+. 在SnapCenter Windows 主機上開啟具有管理權限的 PowerShell 視窗：
++
+.. 點選“*開始*”選單。
+.. 搜尋 *PowerShell 7* 或 *Windows Powershell*。
+.. 右鍵單擊該選項並選擇*以管理員身份執行*。
+
+
+. 確保您的系統上安裝了 PowerShell。安裝後，它應該會出現在*開始*選單中。
++
+
+TIP: Windows 7 及更高版本預設包含 PowerShell。
+
+. 若要停用 UAC 遠端限制，請透過執行下列命令將 LocalAccountTokenFilterPolicy 設定為「1」：
++
+[listing]
+----
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy" -Value 1 -Type DWord
+----
+. 驗證目前值是否設定為“1” `LocalAccountTokenFilterPolicy``透過運行：
++
+[listing]
+----
+Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy"
+----
++
+** 如果值為 1，則停用 UAC 遠端限制。
+** 如果值為 0，則啟用 UAC 遠端限制。
+
+
+. 若要套用更改，請重新啟動電腦。
+
+
+.停用 UAC 遠端限制的 PowerShell 7 命令範例：
+此範例中的值設定為“1”，表示 UAC 遠端限制已停用。
+
+[listing]
+----
+# Disable UAC remote restrictions
+
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy" -Value 1 -Type DWord
+
+# Verify the change
+
+Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy"
+
+# Output
+
+LocalAccountTokenFilterPolicy : 1
+----

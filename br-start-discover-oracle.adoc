@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: br-start-discover-oracle.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, workloads, protect, Oracle 
+summary: NetApp Backup and Recovery 需要先發現工作負載，以便您保護它們。 
+---
+= 發現NetApp備份與復原中的 Oracle 工作負載
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery 需要先發現您的 Oracle 資料庫，以便您可以保護它們。
+
+*所需的控制台角色* 備份和還原超級管理員。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+
+
+== 新增 Oracle 主機並發現資源
+
+新增 Oracle 主機資訊並讓NetApp Backup and Recovery 發現工作負載。在每個控制台代理程式中，選擇您想要發現工作負載的系統。
+
+.步驟
+. 從NetApp控制台選單中，選擇「保護」>「備份與復原」。
+. 在 Oracle 圖塊中，選擇 *發現與管理*。
++
+如果這是您第一次登入此服務，並且您已經在控制台中有一個系統，但尚未發現任何資源，則會出現「歡迎使用新的NetApp備份和還原」登入頁面並顯示*發現資源*的選項。
+
+. 選擇*發現資源*。
+. 輸入以下資訊：
++
+.. *工作負載類型*：選擇*Oracle*。
+.. 如果您尚未儲存此 Oracle 主機的憑證，請選擇「新增憑證」。
++
+... 選擇與該主機一起使用的控制台代理程式。
+... 輸入此憑證的名稱。
+... 輸入該帳戶的使用者名稱和密碼。
+... 選擇*完成*。
+
+
+.. *主機註冊*：新增的 Oracle 主機。輸入主機的 FQDN 或 IP 位址、憑證、控制台代理程式和連接埠號碼。
+
+
+. 選擇*發現*。
++
+
+TIP: 此過程可能需要幾分鐘。
+
+
+
+.結果
+Oracle 工作負載顯示在清單頁面的工作負載清單中。
+
+
+
+== 繼續存取NetApp備份和還原儀表板
+
+. 若要顯示NetApp備份和還原儀表板，請從頂部選單中選擇“*儀表板*”。
+. 檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。
+

@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: br-use-hyperv-backup.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 使用NetApp備份並復原保護您的 Hyper-V 工作負載。 
+---
+= 使用NetApp備份與還原備份 Hyper-V 工作負載
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將 Hyper-V VM 從本機ONTAP系統備份到 Amazon Web Services、 Azure NetApp Files或StorageGRID，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。
+
+* 若要按排程備份工作負載，請建立管理備份和還原作業的策略。看link:br-use-policies-create.html["創建策略"]以取得說明。
+* 建立保護組來管理一組資源的備份和還原作業。看link:br-use-hyper-v-protection-groups.html["使用NetApp備份並還原為 Hyper-V 工作負載建立和管理保護群組"]了解更多。
+* 立即備份工作負載（立即建立按需備份）。
+
+
+
+
+== 立即使用按需備份來備份工作負載
+
+您可以立即執行按需備份。如果您要對系統進行更改並希望確保在開始之前有備份，這將很有幫助。
+
+*必要的控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+.步驟
+. 從選單中選擇*庫存*。
+. 選擇一個工作負載來查看保護詳細資訊。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
+. 選擇「*保護群組*」、「*資料儲存*」或「*虛擬機器*」標籤。
+. 選擇要備份的保護群組或虛擬機器。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *立即備份*。
++
+
+NOTE: 應用於備份的政策與指派給保護群組或虛擬機器的策略相同。
+
+. 選擇計劃層級。
+. 選擇*備份*。
+

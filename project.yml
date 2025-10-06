@@ -1,0 +1,236 @@
+---
+settings:
+  name: NetApp Backup and Recovery
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  filter:
+    label: 雲端提供者
+    default: 所有雲端提供者
+    options:
+    - name: 亞馬遜網路服務
+      alias: AWS
+      id: aws
+    - name: Google雲
+      alias: Google雲
+      id: gcp
+    - name: 微軟 Azure
+      alias: Azure
+      id: azure
+  langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
+sidebar:
+  entries:
+  - title: NetApp備份和還原文檔
+    url: "/index.html"
+  - title: 發行說明
+    entries:
+    - title: 什麼是新的
+      url: "/whats-new.html"
+    - title: ONTAP磁碟區工作負載的已知限制
+      url: "/br-reference-limitations.html"
+    - title: Microsoft SQL Server 工作負載的已知限制
+      url: "/br-limitations.html"
+    - title: VMware 工作負載的已知限制
+      url: "/br-limitations-vmware.html"
+    - title: Hyper-V 工作負載的已知限制
+      url: "/br-limitations-hyperv.html"
+    - title: KVM 工作負載的已知限制
+      url: "/br-limitations-kvm.html"
+    - title: Oracle 工作負載的已知限制
+      url: "/br-limitations-oracle.html"
+  - title: 開始
+    entries:
+    - title: 了解NetApp備份與復原
+      url: "/concept-backup-to-cloud.html"
+    - title: NetApp備份與復原的先決條件
+      url: "/concept-start-prereq.html"
+    - title: 設定NetApp Backup and Recovery 的許可
+      url: "/br-start-licensing.html"
+    - title: 在使用NetApp Backup and Recovery 之前設定備份目標
+      url: "/br-start-setup.html"
+    - title: 登入NetApp備份與復原
+      url: "/br-start-login.html"
+    - title: 發現備份目標
+      url: "/br-start-discover-backup-targets.html"
+    - title: 切換到不同的NetApp備份與復原工作負載
+      url: "/br-start-switch-ui.html"
+    - title: 配置NetApp備份和還原常規設置
+      url: "/br-start-configure.html"
+  - title: 使用NetApp備份和還原
+    entries:
+    - title: 在儀表板中查看保護健康狀況
+      url: "/br-use-dashboard.html"
+    - title: 建立策略來管理備份和還原
+      url: "/br-use-policies-create.html"
+    - title: 保護ONTAP磁碟區工作負載
+      entries:
+      - title: 保護ONTAP磁碟區工作負載概述
+        url: "/prev-ontap-protect-overview.html"
+      - title: 規劃ONTAP卷的保護之旅
+        url: "/prev-ontap-protect-journey.html"
+      - title: 管理ONTAP磁碟區的策略
+        url: "/prev-ontap-policy-manage.html"
+      - title: ONTAP磁碟區的備份到物件策略選項
+        url: "/prev-ontap-policy-object-options.html"
+      - title: 管理備份到物件策略進階設定選項
+        url: "/prev-ontap-policy-object-advanced-settings.html"
+      - title: 將Cloud Volumes ONTAP備份到 Amazon S3
+        url: "/prev-ontap-backup-cvo-aws.html"
+      - title: 將Cloud Volumes ONTAP備份到 Azure Blob
+        url: "/prev-ontap-backup-cvo-azure.html"
+      - title: 將Cloud Volumes ONTAP備份到 Google Cloud
+        url: "/prev-ontap-backup-cvo-gcp.html"
+      - title: 將本機ONTAP備份到 Amazon S3
+        url: "/prev-ontap-backup-onprem-aws.html"
+      - title: 將本機ONTAP備份到 Azure Blob
+        url: "/prev-ontap-backup-onprem-azure.html"
+      - title: 將本地ONTAP備份到 Google Cloud
+        url: "/prev-ontap-backup-onprem-gcp.html"
+      - title: 將本地ONTAP備份到ONTAP S3
+        url: "/prev-ontap-backup-onprem-ontaps3.html"
+      - title: 將本地ONTAP備份到StorageGRID
+        url: "/prev-ontap-backup-onprem-storagegrid.html"
+      - title: 使用SnapMirror將磁碟區遷移到 Cloud Resync
+        url: "/prev-ontap-migrate-resync.html"
+      - title: 在暗站中恢復配置數據
+        url: "/reference-backup-cbs-db-in-dark-site.html"
+      - title: 管理ONTAP備份
+        url: "/prev-ontap-backup-manage.html"
+      - title: 從ONTAP備份還原
+        url: "/prev-ontap-restore.html"
+    - title: 保護 Microsoft SQL Server 工作負載
+      entries:
+      - title: 保護 Microsoft SQL Server 工作負載概述
+        url: "/br-use-mssql-protect-overview.html"
+      - title: 如果從SnapCenter匯入，則配置其他項目
+        url: "/concept-start-prereq-snapcenter-import.html"
+      - title: 發現 Microsoft SQL Server 工作負載
+        url: "/br-start-discover.html"
+      - title: 備份 Microsoft SQL Server 工作負載
+        url: "/br-use-mssql-backup.html"
+      - title: 還原 Microsoft SQL Server 工作負載
+        url: "/br-use-mssql-restore.html"
+      - title: 複製 Microsoft SQL Server 工作負載
+        url: "/br-use-mssql-clone.html"
+      - title: 管理 Microsoft SQL Server 庫存
+        url: "/br-use-manage-inventory.html"
+      - title: 管理 Microsoft SQL Server 快照
+        url: "/br-use-manage-snapshots.html"
+      - title: 建立 Microsoft SQL Server 報告
+        url: "/br-use-reports.html"
+    - title: 保護 VMware 工作負載（無需 VMware SnapCenter外掛程式即可預覽）
+      entries:
+      - title: 保護 VMware 工作負載概述
+        url: "/br-use-vmware-protect-overview.html"
+      - title: 發現 VMware 工作負載
+        url: "/br-use-vmware-discovery.html"
+      - title: 為 VMware 工作負載建立和管理保護群組
+        url: "/br-use-vmware-protection-groups.html"
+      - title: 備份 VMware 工作負載
+        url: "/br-use-vmware-backup.html"
+      - title: 復原 VMware 工作負載
+        url: "/br-use-vmware-restore.html"
+    - title: 保護 VMware 工作負載（使用適用於 VMware 的SnapCenter外掛程式）
+      entries:
+      - title: 保護虛擬機器工作負載概述
+        url: "/prev-vmware-protect-overview.html"
+      - title: 保護虛擬機器工作負載的先決條件
+        url: "/prev-vmware-prereqs.html"
+      - title: SnapCenter Plug-in for VMware vSphere
+        url: "/prev-vmware-register-snapcenter.html"
+      - title: 建立備份虛擬機器資料的策略
+        url: "/prev-vmware-policy-create.html"
+      - title: 將資料儲存備份到 Amazon Web Services
+        url: "/prev-vmware-backup-aws.html"
+      - title: 將資料儲存體備份到 Microsoft Azure
+        url: "/prev-vmware-backup-azure.html"
+      - title: 將資料儲存備份到 Google Cloud Platform
+        url: "/prev-vmware-backup-gcp.html"
+      - title: 將資料儲存備份到StorageGRID
+        url: "/prev-vmware-backup-storagegrid.html"
+      - title: 管理資料儲存和虛擬機器資料的保護
+        url: "/prev-vmware-manage.html"
+      - title: 恢復虛擬機器資料和資料存儲
+        url: "/prev-vmware-restore.html"
+    - title: 保護 KVM 工作負載（預覽版）
+      entries:
+      - title: 保護 KVM 工作負載概述
+        url: "/br-use-kvm-protect-overview.html"
+      - title: 發現 KVM 工作負載
+        url: "/br-start-discover-kvm.html"
+      - title: 為 KVM 工作負載建立和管理保護群組
+        url: "/br-use-kvm-protection-groups.html"
+      - title: 備份 KVM 工作負載
+        url: "/br-use-kvm-backup.html"
+      - title: 恢復 KVM 工作負載
+        url: "/br-use-kvm-restore.html"
+    - title: 保護 Hyper-V 工作負載（預覽版）
+      entries:
+      - title: 保護 Hyper-V 工作負載概述
+        url: "/br-use-hyperv-protect-overview.html"
+      - title: 發現 Hyper-V 工作負載
+        url: "/br-start-discover-hyperv.html"
+      - title: 為 Hyper-V 工作負載建立和管理保護群組
+        url: "/br-use-hyperv-protection-groups.html"
+      - title: 備份 Hyper-V 工作負載
+        url: "/br-use-hyperv-backup.html"
+      - title: 復原 Hyper-V 工作負載
+        url: "/br-use-hyperv-restore.html"
+    - title: 保護 Oracle 工作負載（預覽版）
+      entries:
+      - title: 保護 Oracle 工作負載概述
+        url: "/br-use-oracle-protect-overview.html"
+      - title: 發現 Oracle 工作負載
+        url: "/br-start-discover-oracle.html"
+      - title: 為 Oracle 工作負載建立和管理保護群組
+        url: "/br-use-oracle-protection-groups.html"
+      - title: 備份 Oracle 工作負載
+        url: "/br-use-oracle-backup.html"
+      - title: 復原 Oracle 工作負載
+        url: "/br-use-oracle-restore.html"
+      - title: 安裝和卸載復原點
+        url: "/br-use-oracle-mount-unmount.html"
+    - title: 保護 Kubernetes 工作負載（預覽版）
+      entries:
+      - title: 保護 Kubernetes 工作負載概述
+        url: "/br-use-kubernetes-protect-overview.html"
+      - title: 發現 Kubernetes 工作負載
+        url: "/br-start-discover-kubernetes.html"
+      - title: 新增和保護 Kubernetes 應用程式
+        url: "/br-use-protect-kubernetes-applications.html"
+      - title: 恢復 Kubernetes 應用程式
+        url: "/br-use-restore-kubernetes-applications.html"
+      - title: 管理 Kubernetes 集群
+        url: "/br-use-manage-kubernetes-clusters.html"
+      - title: 管理 Kubernetes 應用程式
+        url: "/br-use-manage-kubernetes-applications.html"
+      - title: 管理 Kubernetes 工作負載的執行鉤子模板
+        url: "/br-use-manage-execution-hook-templates.html"
+    - title: 監控作業
+      url: "/br-use-monitor-tasks.html"
+    - title: 重新啟動NetApp備份與復原
+      url: "/reference-restart-backup.html"
+  - title: 使用 REST API 實現自動化
+    url: "/br-api-backup-restore.html"
+  - title: 參考
+    entries:
+    - title: SnapCenter中的策略與NetApp備份與復原中的策略比較
+      url: "/reference-policy-differences-snapcenter.html"
+    - title: NetApp備份和還原角色和權限
+      url: "/reference-roles.html"
+    - title: 在暗站中恢復NetApp備份、還原數據
+      url: "/reference-backup-cbs-db-in-dark-site.html"
+    - title: 支援的 AWS 存檔儲存層
+      url: "/prev-reference-aws-archive-storage-tiers.html"
+    - title: 支援的 Azure 存檔儲存層
+      url: "/prev-reference-azure-archive-storage-tiers.html"
+    - title: 支援的 Google Cloud 歸檔儲存層
+      url: "/prev-reference-gcp-archive-storage-tiers.html"
+  - title: 法律聲明
+    url: "/legal-notices.html"
+product-family:
+  name: NetApp Data Services
+  repo: data-services-family

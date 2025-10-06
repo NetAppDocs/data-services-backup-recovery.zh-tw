@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: prev-reference-azure-archive-storage-tiers.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp Backup and Recovery 支援一個 Azure 存檔存取層和大多數區域。 
+---
+= NetApp備份和還原支援的 Azure 存檔存取層
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery 支援一個 Azure 存檔存取層和大多數區域。
+
+[]
+====
+*注意* 若要切換到NetApp Backup and Recovery UI 版本，請參閱link:br-start-switch-ui.html["切換到先前的NetApp備份與還原 UI"]。
+
+====
+
+
+== NetApp備份和復原支援的 Azure Blob 存取層
+
+最初建立備份檔案時，它們儲存在_Cool_存取層中。此層針對儲存不經常存取的資料進行了最佳化；但在需要時可以立即存取。
+
+如果您的來源叢集運行的是ONTAP 9.10.1 或更高版本，您可以選擇在一定天數（通常超過 30 天）後將備份從「Cool_」儲存分層到「Azure Archive_」存儲，以進一步最佳化成本。此層中的資料在需要時無法立即訪問，並且需要更高的檢索成本，因此您需要考慮可能需要多久從這些存檔的備份檔案中恢復資料。請參閱此頁面上有關從檔案儲存復原資料的部分。
+
+請注意，當您使用此類生命週期規則來設定NetApp Backup and Recovery 時，在 Azure 帳戶中設定容器時不得設定任何生命週期規則。
+
+https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["了解 Azure Blob 存取層"^] 。
+
+
+
+== 從檔案儲存中復原數據
+
+雖然將較舊的備份檔案儲存在檔案儲存中比冷儲存便宜得多，但從 Azure 檔案中的備份檔案存取資料進行還原作業將花費更長的時間並且花費更多。
+
+從 Azure 存檔復原資料需要多少費用？:: 從 Azure 檔案擷取資料時，可以選擇兩個還原優先權：
++
+--
+* *高*：檢索速度最快，成本較高
+* *標準*：檢索速度較慢，成本較低
+
+
+每種方法都有不同的每 GB 檢索費用和每個請求費用。有關 Azure 區域 Azure 存檔定價的詳細信息，請訪問 https://azure.microsoft.com/en-us/pricing/details/storage/blobs/["Azure 定價頁面"^]。
+
+--
+
+
+
+NOTE: 將資料從 Azure 還原到StorageGRID系統時不支援高優先權。
+
+恢復 Azure 存檔中存檔的資料需要多長時間？:: 恢復時間由兩部分組成：
++
+--
+* *檢索時間*：從 Azure 檔案中擷取已存檔的備份檔案並將其放置在冷儲存中的時間。這有時被稱為“補水”時間。檢索時間根據您選擇的復原優先順序而不同：
++
+** *高*：< 1 小時
+** *標準*：< 15 小時
+
+
+* *恢復時間*：從冷儲存中的備份檔案還原資料的時間。這次與不使用存檔層時直接從冷儲存進行的典型復原作業沒有什麼不同。
+
+
+有關 Azure 存檔檢索選項的更多信息，請參閱 https://azure.microsoft.com/en-us/pricing/details/storage/blobs/#faq["此 Azure 常見問題解答"^]。
+
+--
+

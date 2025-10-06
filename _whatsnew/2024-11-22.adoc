@@ -1,0 +1,25 @@
+= SnapLock Compliance和SnapLock Enterprise保護模式
+:allow-uri-read: 
+
+
+
+
+=== SnapLock Compliance和SnapLock Enterprise保護模式
+
+NetApp Backup and Recovery 現在可以備份使用SnapLock Compliance或SnapLock Enterprise保護模式配置的FlexVol和FlexGroup本機磁碟區。您的叢集必須執行ONTAP 9.14 或更高版本才能獲得此支援。自ONTAP版本 9.11.1 起，支援使用SnapLock Enterprise模式備份FlexVol磁碟區。早期的ONTAP版本不支援備份SnapLock保護磁碟區。
+
+請參閱受支援卷的完整列表 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["了解NetApp備份與復原"]。
+
+
+
+=== 在卷頁頁面上為搜尋和復原過程建立索引
+
+在使用搜尋和還原之前，您需要在要從中還原磁碟區資料的每個來源系統上啟用「索引」。這使得索引目錄能夠追蹤每個卷的備份檔案。卷頁現在顯示索引狀態：
+
+* 已編入索引：磁碟區已編入索引。
+* 進行中
+* 未編入索引
+* 索引已暫停
+* 錯誤
+* 未啟用
+

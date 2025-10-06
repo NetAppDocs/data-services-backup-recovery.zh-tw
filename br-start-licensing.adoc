@@ -1,0 +1,155 @@
+---
+sidebar: sidebar 
+permalink: br-start-licensing.html 
+keywords: license, licensing, updating license, paygo license, byol license, nlf, license generator, backup license, add backup license, update backup license, annual, netapp intelligent services 
+summary: 您可以透過從雲端供應商購買按使用量付費或年度市場訂閱來獲得NetApp Backup and Recovery 的許可，或透過從NetApp購買自帶許可證來獲得許可。需要有效的許可證才能在系統上啟動NetApp Backup and Recovery、建立生產資料的備份以及將備份資料還原到生產系統。 
+---
+= 設定NetApp Backup and Recovery 的許可
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以透過從雲端供應商購買按使用量付費 (PAYGO) 或年度市場訂閱 * NetApp智慧服務* 來獲得NetApp備份和復原許可，或透過從NetApp購買自帶許可 (BYOL)。需要有效的許可證才能在系統上啟動NetApp Backup and Recovery、建立生產資料的備份以及將備份資料還原到生產系統。
+
+在您繼續閱讀之前，請注意以下幾點：
+
+* 如果您已經在雲端供應商的市場中訂閱了Cloud Volumes ONTAP系統的即用即付 (PAYGO) 服務，那麼您也會自動訂閱NetApp Backup and Recovery。您無需再次訂閱。
+* NetApp Backup and Recovery 自帶許可證 (BYOL) 是一種浮動許可證，您可以在與NetApp Console 組織或帳戶關聯的所有系統中使用它。因此，如果您現有的 BYOL 授權具有足夠的備份容量，則無需購買另一個 BYOL 授權。
+* 如果您使用的是 BYOL 許可證，建議您也訂閱 PAYGO 訂閱。如果您備份的資料超出了 BYOL 許可證允許的範圍，或者許可證期限已過期，則備份將透過您的即用即付訂閱繼續進行 - 不會中斷服務。
+* 將本機ONTAP資料備份到StorageGRID時，您需要 BYOL 許可證，但雲端提供者儲存空間無需付費。
+
+
+link:concept-backup-to-cloud.html["了解有關使用NetApp Backup and Recovery 的成本的更多資訊。"]
+
+
+
+== 30天免費試用
+
+如果您在雲端供應商的市場中註冊按使用量付費訂閱* NetApp智慧服務*，則可以獲得NetApp Backup and Recovery 30 天免費試用。免費試用從您訂閱市場清單時開始。請注意，如果您在部署Cloud Volumes ONTAP系統時支付市場訂閱費用，然後在 10 天後開始NetApp Backup and Recovery 免費試用，那麼您將有 20 天的剩餘時間來使用免費試用版。
+
+免費試用結束後，您將自動切換至 PAYGO 訂閱，不會中斷。如果您決定不再繼續使用NetApp Backup and Recovery，只需link:prev-ontap-backup-manage.html["從系統取消註冊NetApp Backup and Recovery"]在試用期結束前，您將不會被收費。
+
+
+
+=== 結束免費試用
+
+如果您想在免費試用結束後繼續使用NetApp Backup and Recovery，則必須設定付費訂閱。您可以從NetApp控制台介面導覽至計費部分並選擇適合您需求的訂閱方案來執行此操作。如果您不想繼續使用NetApp Backup and Recovery，您可以結束免費試用。
+
+當您結束免費試用而未訂閱付費方案時，您的資料將在免費試用結束後 60 天自動刪除。您可以選擇讓系統立即刪除您的資料。
+
+.步驟
+. 從NetApp Backup and Recovery 登入頁面，選擇 *查看免費試用版*。
+. 選擇*結束免費試用*。
+. 選擇「免費試用結束後立即刪除資料」以立即刪除您的資料。
+. 在框框中輸入*結束試用*。
+. 選擇*結束*確認。
+
+
+
+
+== 使用NetApp Backup and Recovery PAYGO 訂閱
+
+對於即用即付，您將在單一訂閱中按小時向雲端供應商支付物件儲存成本和NetApp備份授權成本。即使您有免費試用版或自帶授權 (BYOL)，也應該在 Marketplace 中訂閱 * NetApp Intelligent Services*：
+
+* 訂閱可確保免費試用結束後服務不會中斷。試用期結束後，我們將根據您備份的資料量按小時向您收費。
+* 如果您備份的資料超出了 BYOL 授權允許的範圍，則資料備份和復原作業將透過即用即付訂閱繼續進行。例如，如果您擁有 10 TiB BYOL 許可證，則超過 10 TiB 的所有容量都將透過 PAYGO 訂閱收費。
+
+
+在免費試用期間或未超出 BYOL 授權的情況下，您無需支付即用即付訂閱費用。
+
+NetApp備份和復原有幾種 PAYGO 計畫：
+
+* 「雲端備份」套件可讓您備份Cloud Volumes ONTAP資料和本機ONTAP資料。
+* 「CVO Professional」 軟體包可讓您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery。這包括使用許可證對Cloud Volumes ONTAP系統進行無限制備份（備份容量不計入許可容量）。此選項不允許您備份本機ONTAP資料。
++
+請注意，此選項還需要備份和還原 PAYGO 訂閱，但符合資格的Cloud Volumes ONTAP系統不會產生任何費用。
+
+
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#capacity-based-licensing["了解有關這些基於容量的許可證包的更多信息"] 。
+
+使用這些連結從您的雲端供應商市場訂閱NetApp Backup and Recovery：
+
+ifdef::aws[]
+
+* AWS： https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["前往NetApp智能服務市場了解定價詳情"^] .endif::aws[]
+
+
+ifdef::azure[]
+
+* Azure： https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["前往NetApp智能服務市場了解定價詳情"^] .endif::azure[]
+
+
+ifdef::gcp[]
+
+* Google雲端： https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["前往NetApp智能服務市場了解定價詳情"^] .endif::gcp[]
+
+
+
+
+== 使用年度合約
+
+透過購買年度合約每年支付NetApp Backup and Recovery 的費用。期限分為 1 年、2 年或 3 年。
+
+如果您與市場簽訂了年度合同，則所有NetApp備份和恢復消費均根據該合約收費。您不能將年度市場合約與 BYOL 混合搭配。
+
+ifdef::aws[]
+
+當您使用 AWS 時，有兩種年度合約可供選擇 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace 頁面"^]對於Cloud Volumes ONTAP和本機ONTAP系統：
+
+* 「雲端備份」計畫可讓您備份Cloud Volumes ONTAP資料和本機ONTAP資料。
++
+如果您想使用此選項，請從 Marketplace 頁面設定您的訂閱，然後 https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["將訂閱與您的 AWS 憑證關聯"^]。請注意，您還需要使用此年度合約訂閱來支付您的Cloud Volumes ONTAP系統的費用，因為您只能在控制台中為您的 AWS 憑證指派一個有效訂閱。
+
+* 「CVO Professional」計畫可讓您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery。這包括使用許可證對Cloud Volumes ONTAP系統進行無限制備份（備份容量不計入許可容量）。此選項不允許您備份本機ONTAP資料。
++
+查看 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP授權主題"^]了解有關此許可選項的更多資訊。
+
++
+如果您想使用此選項，您可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 AWS Marketplace。 endif::aws[]
+
+
+
+ifdef::azure[]
+
+使用 Azure 時，有兩種年度合約可供選擇 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp["Azure 市集頁面"^]對於Cloud Volumes ONTAP和本機ONTAP系統：
+
+* 「雲端備份」計畫可讓您備份Cloud Volumes ONTAP資料和本機ONTAP資料。
++
+如果您想使用此選項，請從 Marketplace 頁面設定您的訂閱，然後 https://docs.netapp.com/us-en/console-setup-admin/task-adding-azure-accounts.html#subscribe["將訂閱與您的 Azure 憑證關聯"^]。請注意，您還需要使用此年度合約訂閱來支付您的Cloud Volumes ONTAP系統的費用，因為您只能在控制台中為您的 Azure 憑證指派有效訂閱。
+
+* 「CVO Professional」計畫可讓您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery。這包括使用許可證對Cloud Volumes ONTAP系統進行無限制備份（備份容量不計入許可容量）。此選項不允許您備份本機ONTAP資料。
++
+查看 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP授權主題"^]了解有關此許可選項的更多資訊。
+
++
+如果您想使用此選項，您可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 Azure 市場。 endif::azure[]
+
+
+
+ifdef::gcp[]
+
+當您使用 GCP 時，請聯絡您的NetApp銷售代表購買年度合約。該合約在 Google Cloud Marketplace 中以私人優惠形式提供。
+
+NetApp與您分享專屬優惠後，您可以在NetApp Backup and Recovery 啟用期間從 Google Cloud Marketplace 訂閱時選擇年度方案。 endif::gcp[]
+
+
+
+== 使用NetApp備份和還原 BYOL 許可證
+
+NetApp提供的自備授權的有效期限為 1 年、2 年或 3 年。您只需為您保護的資料付費，該費用根據正在備份的來源ONTAP磁碟區的邏輯使用容量（任何效率之前）計算。此容量也稱為前端兆位元組 (FETB)。
+
+BYOL NetApp備份和復原許可證是一種浮動許可證，其總容量在與您的NetApp控制台組織或帳戶關聯的所有系統之間共用。對於ONTAP系統，您可以透過執行 CLI 命令來粗略估計所需的容量 `volume show -fields logical-used-by-afs`對於您計劃備份的磁碟區。
+
+如果您沒有NetApp Backup and Recovery BYOL 許可證，請點擊控制台右下角的聊天圖示購買。
+
+或者，如果您擁有未指派的基於節點的Cloud Volumes ONTAP授權但不會使用，則可以將其轉換為具有相同美元等值和相同到期日的NetApp備份和復原授權。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["點此了解詳情"^] 。
+
+您可以使用NetApp控制台來管理 BYOL 授權。您可以從控制台新增許可證、更新現有許可證以及查看許可證狀態。
+
+https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["了解如何新增許可證"^] 。

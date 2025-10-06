@@ -1,0 +1,423 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-backup-onprem-ontaps3.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+---
+= 使用NetApp備份和還原將本地ONTAP資料備份到ONTAP S3
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+完成NetApp備份與復原中的幾個步驟即可開始從主本機ONTAP系統備份磁碟區資料。您可以將備份傳送至輔助ONTAP儲存系統（複製磁碟區）或設定為 S3 伺服器的ONTAP系統上的儲存桶（備份檔案），或同時傳送至兩者。
+
+主本地ONTAP系統可以是FAS、 AFF或ONTAP Select系統。輔助ONTAP系統可以是本機ONTAP或Cloud Volumes ONTAP系統。物件儲存可以位於本機ONTAP系統或已啟用簡單儲存服務 (S3) 物件儲存伺服器的Cloud Volumes ONTAP系統上。
+
+[]
+====
+*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+
+====
+
+
+== 識別連接方法
+
+您可以使用多種配置在ONTAP系統上建立 S3 儲存桶的備份。下面顯示了兩種情況。
+
+下圖顯示了將主本機ONTAP系統備份到為 S3 配置的本機ONTAP系統時的每個元件以及您需要在它們之間準備的連線。它還顯示了與同一本地位置的輔助ONTAP系統的連接以複製磁碟區。
+
+image:diagram_cloud_backup_onprem_ontap_s3.png["此圖顯示了NetApp Backup and Recovery 如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
+
+當控制台代理程式和主本機ONTAP系統安裝在沒有網際網路存取的本機位置（「私有」模式部署）時， ONTAP S3 系統必須位於同一個本機資料中心。
+
+下圖顯示了將主本地ONTAP系統備份到為 S3 配置的Cloud Volumes ONTAP系統時的每個元件以及您需要在它們之間準備的連接。它還顯示了與同一雲端提供者環境中的輔助Cloud Volumes ONTAP系統的連接，以複製磁碟區。
+
+image:diagram_cloud_backup_onprem_ontap_s3_cloud.png["此圖顯示了NetApp Backup and Recovery 如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
+
+在這種情況下，控制台代理應部署在部署Cloud Volumes ONTAP系統的相同雲端提供者環境中。
+
+
+
+== 準備控制台代理
+
+控制台代理程式是控制台功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
+
+
+
+=== 建立或切換控制台代理
+
+當您將資料備份到ONTAP S3 時，您的本機或雲端中必須有控制台代理。您需要安裝新的控制台代理，或確保目前選定的控制台代理位於其中一個位置。本機控制台代理程式可以安裝在有或沒有網路存取的網站中。
+
+* https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解控制台代理"^]
+* https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#how-to-create-a-connector["在您的雲端環境中安裝控制台代理"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在具有網際網路存取權限的 Linux 主機上安裝控制台代理"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["在沒有網際網路存取的 Linux 主機上安裝控制台代理"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["在控制台代理之間切換"^]
+
+
+
+
+=== 準備控制台代理網路要求
+
+確保安裝控制台代理程式的網路啟用以下連線：
+
+* 透過連接埠 443 到ONTAP S3 伺服器的 HTTPS 連接
+* 透過連接埠 443 建立到來源ONTAP叢集管理 LIF 的 HTTPS 連接
+* 透過連接埠 443 到NetApp Backup and Recovery 的出站網路連線（當控制台代理安裝在「暗站」時不需要）
+
+
+
+
+==== 私人模式（暗站）注意事項
+
+NetApp備份和復原功能內建於控制台代理程式中。以私人模式安裝時，您需要定期更新控制台代理軟體才能存取新功能。檢查link:whats-new.html["NetApp備份與還原新功能"]查看每個NetApp Backup and Recovery 版本中的新功能。當您想要使用新功能時，請按照以下步驟操作 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["升級控制台代理軟體"^]。
+
+當您在標準 SaaS 環境中使用NetApp Backup and Recovery 時， NetApp Backup and Recovery 設定資料會備份到雲端。當您在沒有網路存取的網站中使用NetApp Backup and Recovery 時， NetApp Backup and Recovery 設定資料將備份到儲存備份的ONTAP S3 儲存桶中。
+
+
+
+== 驗證許可證要求
+
+在為叢集啟動NetApp Backup and Recovery 之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此許可證用於備份和恢復物件儲存 - 無需許可證即可建立 Snapshot 副本或複製磁碟區。此許可證適用於該帳戶，可跨多個系統使用。
+
+您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用本服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"] 。
+
+
+TIP: 將檔案備份到ONTAP S3 時不支援 PAYGO 授權。
+
+
+
+== 準備ONTAP集群
+
+您需要準備來源本機ONTAP系統以及任何輔助本機ONTAP或Cloud Volumes ONTAP系統。
+
+準備ONTAP集群涉及以下步驟：
+
+* 在NetApp控制台中發現您的ONTAP系統
+* 驗證ONTAP系統要求
+* 驗證ONTAP網路要求以將資料備份到對象存儲
+* 驗證ONTAP複製卷的網路要求
+
+
+
+
+=== 在NetApp控制台中發現您的ONTAP系統
+
+您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp控制台 *系統* 頁面上可用。
+
+您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現集群"^] 。
+
+
+
+=== 驗證ONTAP系統要求
+
+確保滿足以下ONTAP要求：
+
+* 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
+* SnapMirror許可證（包含在高級捆綁包或資料保護捆綁包中）。
++
+*注意：*使用NetApp備份和復原時不需要「混合雲端捆綁包」。
+
++
+了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["管理您的叢集許可證"^]。
+
+* 時間和時區設定正確。了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["配置叢集時間"^]。
+* 如果要複製數據，則應在複製資料之前驗證來源系統和目標系統是否運行相容的ONTAP版本。
++
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^] 。
+
+
+
+
+
+=== 驗證ONTAP網路要求以將資料備份到對象存儲
+
+您必須確保連接到物件儲存的系統符合以下要求。
+
+[NOTE]
+====
+* 當您使用扇出備份架構時，必須在主儲存系統上設定設定。
+* 當您使用級聯備份架構時，必須在_輔助_儲存系統上設定設定。
++
+link:prev-ontap-protect-journey.html["了解有關備份架構類型的更多信息"] 。
+
+
+
+====
+需滿足以下ONTAP集群網路需求：
+
+* ONTAP叢集透過使用者指定的連接埠從叢集間 LIF 啟動到ONTAP S3 伺服器的 HTTPS 連接，以執行備份和還原作業。此連接埠可在備份設定期間配置。
++
+ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是響應。
+
+* ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。
+* 每個託管要備份的磁碟區的ONTAP節點上都需要一個叢集間 LIF。  LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有關 IP 空間的更多信息"^] 。
++
+設定NetApp Backup and Recovery 時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
+
+* 節點的群集間 LIF 能夠存取物件儲存（當控制台代理安裝在「暗」站點時不需要）。
+* 已為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["為 SVM 配置 DNS 服務"^]。
+* 如果您使用的 IP 空間與預設 IP 空間不同，則可能需要建立靜態路由才能存取物件儲存。
+* 如有必要，請更新防火牆規則，以允許NetApp備份和復原服務透過您指定的連接埠（通常為連接埠 443）從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
+
+
+
+
+=== 驗證ONTAP複製卷的網路要求
+
+如果您打算使用NetApp Backup and Recovery 在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
+
+
+
+==== 本地ONTAP網路需求
+
+* 如果叢集位於您的場所，您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
+* ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
++
+由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。
+
+
+
+
+
+==== Cloud Volumes ONTAP網路需求
+
+* 實例的安全性群組必須包含所需的入站和出站規則：具體來說，ICMP 和連接埠 11104 和 11105 的規則。這些規則包含在預先定義的安全性群組中。
+
+
+
+
+== 準備ONTAP S3 作為備份目標
+
+您必須在計畫用於物件儲存備份的ONTAP叢集中啟用簡單儲存服務 (S3) 物件儲存伺服器。查看 https://docs.netapp.com/us-en/ontap/s3-config/index.html["ONTAP S3 文檔"^]了解詳情。
+
+*注意：*您可以將此叢集新增至控制台*系統*頁面，但它不會被識別為 S3 物件儲存伺服器，並且您無法將來源系統拖曳到此 S3 系統上以啟動備用啟動。
+
+此ONTAP系統必須符合以下要求。
+
+支援的ONTAP版本:: 本機ONTAP系統需要ONTAP 9.8 及更高版本。  Cloud Volumes ONTAP系統需要ONTAP 9.9.1 及更高版本。
+S3 憑證:: 您必須建立 S3 使用者來控制對ONTAP S3 儲存的存取。 https://docs.netapp.com/us-en/ontap/s3-config/create-s3-user-task.html["有關詳細信息，請參閱ONTAP S3 文檔"^] 。
++
+--
+當您設定備份到ONTAP S3 時，備份精靈會提示您輸入使用者帳戶的 S3 存取金鑰和金鑰。該用戶帳戶使NetApp Backup and Recovery 能夠驗證和存取用於儲存備份的ONTAP S3 儲存桶。需要金鑰，以便ONTAP S3 知道誰在發出請求。
+
+這些存取金鑰必須與具有以下權限的使用者相關聯：
+
+[source, json]
+----
+"s3:ListAllMyBuckets",
+"s3:ListBucket",
+"s3:GetObject",
+"s3:PutObject",
+"s3:DeleteObject",
+"s3:CreateBucket"
+----
+--
+
+
+
+
+== 啟動ONTAP磁碟區上的備份
+
+隨時直接從您的本機系統啟動備份。
+
+嚮導將引導您完成以下主要步驟：
+
+* 選擇要備份的捲
+* 定義備份策略和政策
+* 檢查您的選擇
+
+
+您還可以<<顯示 API 命令>>在審查步驟中，您可以複製程式碼來自動為未來的系統啟動備份。
+
+
+
+=== 啟動精靈
+
+.步驟
+. 使用以下方式之一存取啟動備份和復原精靈：
++
+** 從控制台*系統*頁面中，選擇系統，然後選擇右側面板中備份和還原旁邊的*啟用>備份磁碟區*。
+** 在備份和復原欄中選擇*卷*。從「磁碟區」標籤中，選擇「操作 (...)」選項，然後為單一磁碟區（尚未啟用複製或備份到物件儲存）選擇「啟動備份」。
+
+
++
+精靈的簡介頁面顯示了保護選項，包括本機快照、複製和備份。如果您在此步驟中選擇了第二個選項，則會出現「定義備份策略」頁面，其中選擇一個磁碟區。
+
+. 繼續以下選項：
++
+** 如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。
+** 如果您沒有控制台代理，則會出現「新增控制台代理」選項。請參閱<<準備控制台代理>> 。
+
+
+
+
+
+
+=== 選擇要備份的捲
+
+選擇您想要保護的磁碟區。受保護的磁碟區是具有以下一項或多項的磁碟區：快照策略、複製策略、備份到物件策略。
+
+您可以選擇保護FlexVol或FlexGroup磁碟區；但是，在啟動系統備份時不能選擇這些磁碟區的混合。了解如何link:prev-ontap-backup-manage.html["啟動系統中附加磁碟區的備份"]（FlexVol或FlexGroup）在為初始磁碟區配置備份後。
+
+[NOTE]
+====
+* 您一次只能在單一FlexGroup磁碟區上啟動備份。
+* 您選擇的捲必須具有相同的SnapLock設定。所有磁碟區都必須啟用SnapLock Enterprise或停用SnapLock 。
+
+
+====
+.步驟
+請注意，如果您選擇的磁碟區已經套用了快照或複製策略，那麼您稍後選擇的策略將覆寫這些現有策略。
+
+. 在「選擇卷」頁面中，選擇要保護的一個或多個磁碟區。
++
+** 或者，過濾行以僅顯示具有特定卷類型、樣式等的捲，以便更輕鬆地進行選擇。
+** 選擇第一個磁碟區後，您可以選擇所有FlexVol磁碟區（FlexGroup磁碟區一次只能選擇一個）。若要備份所有現有的FlexVol卷，請先選取一個卷，然後選取標題行中的框。
+** 若要備份單一卷，請選取每個卷對應的複選框。
+
+
+. 選擇“下一步”。
+
+
+
+
+=== 定義備份策略
+
+定義備份策略涉及配置以下選項：
+
+* 保護選項：您是否要實施一個或所有備份選項：本機快照、複製和備份到物件存儲
+* 架構：您是否要使用扇出式或級聯備份架構
+* 本機快照策略
+* 複製目標和策略
+* 備份到物件儲存資訊（提供者、加密、網路、備份策略和匯出選項）。
+
+
+.步驟
+. 在「定義備份策略」頁面中，選擇以下一項或全部。預設情況下，所有三個都被選中：
++
+** *本機快照*：建立本機快照副本。
+** *複製*：在另一個ONTAP儲存系統上建立複製磁碟區。
+** *備份*：將磁碟區備份到為 S3 設定的ONTAP系統上的儲存桶。
+
+
+. *架構*：如果您同時選擇了複製和備份，請選擇下列資訊流之一：
++
+** *級聯*：備份資料從主系統流向輔助系統，然後從輔助系統流向物件儲存。
+** *扇出*：備份資料從主系統流向輔助系統，並從主系統流向物件儲存。
++
+有關這些架構的詳細信息，請參閱link:prev-ontap-protect-journey.html["規劃您的保育之旅"]。
+
+
+
+. *本機快照*：選擇現有的快照原則或建立新的快照策略。
++
+
+TIP: 如果您想要在啟動快照之前建立自訂策略，則可以使用 System Manager 或ONTAP CLI `snapmirror policy create`命令。參考。
+
++
+
+TIP: 若要使用此服務建立自訂策略，請參閱link:br-use-policies-create.html["創建策略"]。
+
++
+若要建立策略，請選擇「建立新策略」並執行下列操作：
+
++
+** 輸入策略的名稱。
+** 選擇最多五個時間表，通常頻率不同。
+** 選擇“*創建*”。
+
+
+. *複製*：如果選擇了*複製*，請設定以下選項：
++
+** *複製目標*：選擇目標系統和 SVM。或者，選擇目標聚合（或FlexGroup磁碟區的聚合）以及將新增至複製磁碟區名稱的前綴或後綴。
+** *複製策略*：選擇現有的複製策略或建立新的複製策略。
++
+若要建立策略，請選擇「建立新策略」並執行下列操作：
+
++
+*** 輸入策略的名稱。
+*** 選擇最多五個時間表，通常頻率不同。
+*** 選擇“*創建*”。
+
+
+
+
+. *備份到物件*：如果您選擇了*備份*，請設定以下選項：
++
+** *提供者*：選擇* ONTAP S3*。
+** *提供者設定*：輸入 S3 伺服器 FQDN 詳細資料、連接埠以及使用者的存取金鑰和金鑰。
++
+存取金鑰和金鑰用於您建立的用戶，以授予ONTAP叢集對 S3 儲存桶的存取權限。
+
+** *網路*：選擇要備份的磁碟區所在的來源ONTAP叢集中的 IP 空間。此 IP 空間的群集間 LIF 必須具有出站網際網路存取權限（當控制台代理安裝在「暗站」時不需要）。
++
+
+TIP: 選擇正確的 IP 空間可確保NetApp Backup and Recovery 可以建立從ONTAP到ONTAP S3 物件儲存的連線。
+
+** *備份策略*：選擇現有的備份策略或建立新的備份策略。
++
+
+TIP: 您可以使用 System Manager 或ONTAP CLI 建立政策。使用ONTAP CLI 建立自訂策略 `snapmirror policy create`命令，請參閱。
+
++
+
+TIP: 若要使用此服務建立自訂策略，請參閱link:br-use-policies-create.html["創建策略"]。
+
++
+若要建立策略，請選擇「建立新策略」並執行下列操作：
+
++
+*** 輸入策略的名稱。
+*** 選擇最多五個時間表，通常頻率不同。
+*** 對於備份到物件策略，設定 DataLock 和勒索軟體保護設定。有關 DataLock 和勒索軟體保護的詳細信息，請參閱link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
+*** 選擇“*創建*”。
+
+
+
+
++
+** *將現有的 Snapshot 副本作為備份檔案匯出到物件儲存*：如果此系統中有任何磁碟區的本機快照副本與您剛剛選擇的備份計畫標籤（例如，每日、每週等）相匹配，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。
+
+
+. 選擇“下一步”。
+
+
+
+
+=== 檢查您的選擇
+
+這是審查您的選擇並在必要時進行調整的機會。
+
+.步驟
+. 在「審核」頁面中，審核您的選擇。
+. （可選）選取核取方塊*自動將快照原則標籤與複製和備份策略標籤同步*。這將建立具有與複製和備份策略中的標籤相符的標籤的快照。如果策略不匹配，則不會建立備份。
+. 選擇*啟動備份*。
+
+
+.結果
+NetApp Backup and Recovery 開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括來源資料的完整副本。後續傳輸包含快照副本中包含的主儲存資料的差異副本。
+
+在目標叢集中建立一個複製卷，該卷將與主儲存卷同步。
+
+在您輸入的 S3 存取金鑰和金鑰指示的服務帳戶中建立一個 S3 儲存桶，並將備份檔案儲存在那裡。
+
+顯示磁碟區備份儀表板，以便您可以監控備份的狀態。
+
+您也可以使用link:br-use-monitor-tasks.html["作業監控頁面"]。
+
+
+
+=== 顯示 API 命令
+
+您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。
+
+.步驟
+. 從啟動備份和復原精靈中，選擇*查看 API 請求*。
+. 若要將指令複製到剪貼簿，請選擇*複製*圖示。
+

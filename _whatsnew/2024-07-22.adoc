@@ -1,0 +1,45 @@
+= 恢復小於 1 GB 的捲
+:allow-uri-read: 
+
+
+
+
+=== 恢復小於 1 GB 的捲
+
+在此版本中，您現在可以還原在ONTAP中建立的小於 1 GB 的磁碟區。您可以使用ONTAP建立的最小磁碟區大小為 20 MB。
+
+
+
+=== 如何降低 DataLock 成本的技巧
+
+DataLock 功能可在指定時間內保護您的備份檔案不被修改或刪除。這有助於保護您的檔案免受勒索軟體攻擊。
+
+有關 DataLock 的詳細資訊以及如何降低相關成本的提示，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-policy-object-options.html["備份到對象策略設置"]。
+
+
+
+=== AWS IAM Roles Anywhere 集成
+
+Amazon Web Services (AWS) Identity and access Roles Anywhere 服務可讓您使用 IAM 角色和短期憑證來為 AWS 以外的工作負載安全地存取 AWS API，就像您使用 IAM 角色來為 AWS 上的工作負載安全存取 AWS API 一樣。當您使用 IAM Roles Anywhere 私鑰基礎架構和 AWS 令牌時，您不需要長期 AWS 存取金鑰和金鑰。這使您可以更頻繁地輪換憑證，從而提高安全性。
+
+在此版本中，對 AWS IAM Roles Anywhere 服務的支援是一種技術預覽。
+
+ifdef::aws[]
+
+這適用於link:prev-ontap-backup-cvo-aws.html["將Cloud Volumes ONTAP備份到 AWS"]。
+
+endif::aws[]
+
+參考 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-July-2024-Release/ba-p/453993["NetApp備份與復原 2024 年 7 月發布博客"]。
+
+
+
+=== FlexGroup資料夾或目錄現已恢復
+
+以前，可以恢復FlexVol卷，但無法恢復FlexGroup資料夾或目錄。使用ONTAP 9.15.1 p2，您可以使用瀏覽和還原選項還原FlexGroup資料夾。
+
+在此版本中，對FlexGroup資料夾復原的支援是一個技術預覽。
+
+有關詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["使用“瀏覽和恢復”功能恢復資料夾和文件"]。
+
+有關手動啟用的詳細信息，請參閱 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-July-2024-Release/ba-p/453993["NetApp備份與復原 2024 年 7 月發布博客"]。

@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: task-migrate-volumes-snapmirror-cloud-resync.html 
+keywords: backing up, back up, backup, backup on-prem ontap, on-premises, back up volumes, cloud backup, cloud, snapmirror, migrate, volume migration, resync, 
+summary: 完成幾個步驟即可開始將磁碟區資料從本機ONTAP系統備份到二級儲存系統和 Google Cloud Storage。 
+---
+= 使用SnapMirror將磁碟區遷移到使用NetApp備份和還原的 Cloud Resync
+:allow-uri-read: 
+
+
+[role="lead"]
+NetApp備份和復原中的SnapMirror到雲端重新同步功能簡化了NetApp環境中磁碟區遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本機NetApp部署遷移到另一個本機 NetApp 部署或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP或Cloud Volumes Service）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可運行。
+
+此功能無需耗時且耗費資源的重新基線操作，使備份操作能夠在遷移後繼續進行。此功能在工作負載遷移場景中很有價值，支援 FlexVols 和 FlexGroups，並且從ONTAP版本 9.16.1 開始可用。
+
+透過維持跨環境的備份連續性， SnapMirror to Cloud Resync 提高了營運效率並降低了混合和多雲資料管理的複雜性。
+
+
+
+== NetApp備份和恢復SnapMirror到雲端重新同步的工作原理
+
+如果您完成技術更新或將磁碟區從一個ONTAP叢集遷移到另一個 ONTAP 叢集，那麼確保備份繼續不間斷地運作非常重要。  NetApp Backup and Recovery SnapMirror到 Cloud Resync 可協助您實現這一點，確保您的雲端備份即使在磁碟區移轉後也能保持一致。
+
+以下是一個例子：
+
+假設您有一個名為 Vol1a 的本機磁碟區。該卷有三個快照：S1、S2 和 S3。這些快照就像還原點。 Vol1 已經使用SnapMirror to Cloud (SM-C) 備份到雲端物件儲存端點。但是，到目前為止只有 S1 和 S2 已備份到物件儲存。
+
+現在，您想要將 Vol1 遷移到另一個ONTAP叢集。為此，您需要建立與名為 Vol1b 的新雲端磁碟區的SnapMirror邏輯複製 (LRSE) 關係。這會將所有三個快照（S1、S2 和 S3）從 Vol1a 傳輸到 Vol1b。
+
+遷移完成後，您將獲得以下設定：
+
+* 刪除原有的SM-C關係式（Vol1a→Object store）。
+* LRSE 關係式 (Vol1a → Vol1b) 也被刪除。
+* Vol1b 現在是您的活動卷。
+
+
+此時，您想要繼續將 Vol1b 備份到同一個雲端點。但是，您無需從頭開始進行完整備份（這會花費時間和資源），而是使用SnapMirror進行 Cloud Resync。
+
+重新同步的工作原理如下：
+
+* 系統檢查 Vol1a 和物件儲存之間的公共快照。在這種情況下，兩者都有 S2。
+* 由於這個共享快照，系統只需要傳輸 S2 和 S3 之間的增量變化。
+
+
+這意味著只有 S2 之後添加的新資料被發送到物件存儲，而不是整個磁碟區。
+
+此過程避免重新發送已備份的數據，節省頻寬，並確保您的備份鏈在遷移後繼續順利進行。
+
+image:diagram-snapmirror-cloud-resync-migration.png["NetApp備份與還原SnapMirror到雲端重新同步"]
+
+
+
+== 程式說明
+
+* 目標ONTAP叢集必須執行ONTAP版本 9.16.1 或更高版本。
+* 必須使用NetApp Backup and Recovery 保護舊的來源ONTAP叢集。
+* 不使用NetApp Backup and Recovery 執行遷移和技術更新。它們應該由專業服務團隊或合格的儲存管理員來執行。
+* NetApp遷移團隊負責在來源 ONTAP 叢集和目標ONTAP叢集之間建立SnapMirror關係，以促進磁碟區遷移。
+* 確保技術更新期間的遷移是基於基於SnapMirror的遷移。
+* 目前不支援使用 SVM-Migrate、SVM-DR 或 Head Swap 方法遷移後將SnapMirror重新同步到 Cloud。
+
+
+
+
+== 如何使用SnapMirror將磁碟區遷移到 Cloud Resync
+
+使用SnapMirror到 Cloud Resync 遷移卷涉及以下主要步驟，以下將更詳細地描述每個步驟：
+
+* *遵循遷移前檢查清單*：在開始遷移之前， NetApp Tech Refresh 團隊會確保滿足以下先決條件，以避免資料遺失並確保遷移過程順利進行。
+* *遵循遷移後檢查清單*：遷移後， NetApp Tech Refresh 團隊確保完成以下步驟以建立保護並為重新同步做好準備。
+* *執行SnapMirror到 Cloud Resync*：遷移後， NetApp Tech Refresh 團隊執行SnapMirror到 Cloud Resync 作業，以從新遷移的磁碟區還原雲端備份。
+
+
+image:diagram-snapmirror-cloud-resync-migration-steps.png["使用SnapMirror到 Cloud Resync 遷移磁碟區的步驟"]
+
+
+
+=== 遵循遷移前檢查清單
+
+在開始遷移之前， NetApp技術更新團隊會確保滿足以下先決條件，以避免資料遺失並確保遷移過程順利進行。
+
+. 確保所有要遷移的磁碟區都使用NetApp Backup and Recovery 進行保護。
+. 記錄卷實例 UUID。在開始遷移之前，記下所有磁碟區的實例 UUID。這些標識符對於稍後的映射和重新同步操作至關重要。
+. 在刪除任何SnapMirror關係之前，對每個磁碟區進行最終快照以保留最新狀態。
+. 記錄SnapMirror策略。記錄目前附加到每個磁碟區關係的SnapMirror策略。稍後在SnapMirror到 Cloud Resync 過程中將需要此功能。
+. 刪除SnapMirror Cloud 與物件儲存的關係。
+. 與新的ONTAP叢集建立標準SnapMirror關係，以將磁碟區遷移到新的目標ONTAP叢集。
+
+
+
+
+=== 遵循遷移後檢查清單
+
+遷移後， NetApp技術更新團隊將確保完成以下步驟以建立保護並為重新同步做好準備。
+
+. 記錄目標ONTAP叢集中所有遷移磁碟區的新磁碟區實例 UUID。
+. 確認舊ONTAP叢集中可用的所有必要SnapMirror策略均已在新ONTAP叢集中正確配置。
+. 在控制台*系統*頁面中將新的ONTAP叢集新增為系統。
+
+
+
+
+=== 執行SnapMirror到雲端重新同步
+
+遷移後， NetApp Tech Refresh 團隊執行SnapMirror到 Cloud Resync 作業，以從新遷移的磁碟區還原雲端備份。
+
+. 在控制台*系統*頁面中將新的ONTAP叢集新增為系統。
+. 查看NetApp備份和還原磁碟區頁面以確保舊來源系統詳細資訊可用。
+. 從NetApp備份與還原卷頁頁面中，選擇*備份設定*。
+. 從選單中選擇*重新同步備份*。
+. 在重新同步系統頁面中，執行以下操作：
++
+.. *新來源系統*：進入已遷移磁碟區的新ONTAP叢集。
+.. *現有目標物件儲存*：選擇包含來自舊來源系統的備份的目標物件儲存。
+
+
+. 選擇「下載 CSV 範本」下載重新同步詳細資料 Excel 表。使用此表輸入要遷移的磁碟區的詳細資訊。在 CSV 檔案中，輸入以下詳細資訊：
++
+** 來源叢集中的舊磁碟區實例 UUID
+** 來自目標叢集的新磁碟區實例 UUID
+** 要應用於新關係的SnapMirror策略。
+
+
+. 選擇“上傳卷對映詳細資料”下的“上傳”，將完成的 CSV 表上傳到NetApp備份和還原 UI。
+. 輸入重新同步操作所需的提供者和網路設定資訊。
+. 選擇*提交*開始驗證程序。
++
+NetApp Backup and Recovery 驗證選擇重新同步的每個磁碟區是否至少有一個通用快照。這可確保磁碟區已準備好進行SnapMirror到 Cloud Resync 操作。
+
+. 查看驗證結果，包括新的來源磁碟區名稱和每個磁碟區的重新同步狀態。
+. 檢查容量是否合格。系統檢查磁碟區是否符合重新同步的條件。如果磁碟區不符合條件，則表示未找到通用快照。
++
+
+IMPORTANT: 為了確保磁碟區仍然符合SnapMirror到 Cloud Resync 操作的條件，請在遷移前階段刪除任何SnapMirror關係之前，為每個磁碟區拍攝最終快照。這保留了資料的最新狀態。
+
+. 選擇*重新同步*以開始重新同步操作。系統使用普通快照只傳輸增量變化，保證備份的連續性。
+. 在 Job Monitor 頁面中監控 resyn 進程。
+

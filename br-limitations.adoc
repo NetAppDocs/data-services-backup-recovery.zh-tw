@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: br-limitations.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: NetApp Backup and Recovery 需要先發現數據，以便您可以使用該服務。在發現過程中， NetApp Backup and Recovery 會分析組織內系統中的所有磁碟區和檔案。 
+---
+= NetApp Backup and Recovery 針對 Microsoft SQL Server 工作負載的已知限制
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+已知限制標識了該產品的此版本不支援或無法與其正確互通的平台、裝置或功能。仔細審查這些限制。
+
+
+
+== 克隆生命週期支援
+
+* 不支援從物件儲存克隆。
+* 按需克隆不支援批量克隆操作。
+* 不支援選擇 I 組。
+* 不支援選擇 QOS（最大吞吐量）選項。
+
+
+
+
+== 僅限標準部署模式
+
+此NetApp Backup and Recovery 版本僅在標準部署模式下有效，不適用於受限或私有模式。
+
+
+
+== Windows 群集名稱限制
+
+Windows 叢集名稱不能包含底線 (_) 字元。
+
+
+
+== SnapCenter遷移問題
+
+將資源從SnapCenter遷移到NetApp Backup and Recovery 有以下限制。
+
+有關SnapCenter策略如何遷移到NetApp備份和恢復策略的詳細信息，請參閱link:reference-policy-differences-snapcenter.html["SnapCenter中的策略與NetApp Backup and Recovery 中的策略比較"]。
+
+
+
+=== 資源組限制
+
+如果資源組中的所有資源都受到保護，並且其中一個資源在資源組外部也受到保護，則從SnapCenter遷移將會被阻止。
+
+*解決方法*：在資源群組中或單獨保護資源，但不能同時保護兩者。
+
+
+
+=== 不支援使用相同計劃層的多個策略的資源
+
+您無法為資源指派使用相同計畫層級（例如，每小時、每天、每週等）的多個策略。  NetApp Backup and Recovery 不會從SnapCenter匯入這些資源。
+
+*解決方法*：僅將使用相同計劃層的一項策略附加到資源。
+
+
+
+=== 每小時保單必須從每小時開始時開始
+
+如果您有一個每小時重複一次但在每小時開始時不使用間隔的SnapCenter策略，NetApp Backup and Recovery 將不會匯入該資源。例如，不支援1:30、2:30、3:30等時間安排的策略，但支援1:00、2:00、3:00等時間安排的策略。
+
+*解決方法*：使用從整點開始以 1 小時為間隔重複的策略。
+
+
+
+=== 不支援將每日和每月策略附加到同一個資源
+
+如果SnapCenter策略以天和月為間隔重複，則NetApp Backup and Recovery 將不會匯入該策略。
+
+例如，您無法將每日策略（少於或等於 7 天或大於 7 天）附加到資源，也無法將每月策略附加到相同資源。
+
+*解決方法*：使用以每日或每月為間隔的策略，但不能同時使用兩者。
+
+
+
+=== 按需備份策略未遷移
+
+NetApp Backup and Recovery 不會從SnapCenter匯入按需備份原則。
+
+
+
+=== 僅日誌備份策略未遷移
+
+NetApp Backup and Recovery 不會從SnapCenter匯入僅日誌備份原則。如果SnapCenter策略包含僅日誌備份， NetApp Backup and Recovery 將不會匯入該資源。
+
+*解決方法*：在SnapCenter中使用不僅僅使用日誌備份的政策。
+
+
+
+=== 主機映射
+
+SnapCenter沒有將資源對應到主機的儲存叢集或 SVM，但NetApp Backup and Recovery 有。本機ONTAP叢集或 SVM 將不會對應到NetApp Backup and Recovery 預覽版中的主機。此外， NetApp Console 不支援 SVM。
+
+*解決方法*：從SnapCenter匯入資源之前，請在NetApp Backup and Recovery 中為在本機SnapCenter中註冊的所有本機ONTAP儲存系統建立一個系統。然後，將該叢集的資源從SnapCenter匯入NetApp Backup and Recovery。
+
+
+
+=== 班次間隔不為 15 分鐘
+
+如果您有一個SnapCenter策略計劃，該計劃在特定時間啟動並以 15 分鐘間隔以外的間隔重複，NetApp Backup and Recovery 將不會匯入該計劃。
+
+*解決方法*：使用SnapCenter調整策略，使其以 15 分鐘的間隔重複。
+
+
+
+== 對虛擬化管理軟體的支援有限
+
+當您保護 KVM 工作負載時， NetApp Backup and Recovery 不支援在使用虛擬化管理軟體（例如 Apache CloudStack 或 Red Hat OpenShift Virtualization）時發現 KVM 工作負載。

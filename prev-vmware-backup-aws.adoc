@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: prev-vmware-backup-aws.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web, services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, bluexp 
+summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+---
+= 在NetApp備份和復原中將資料儲存備份到 Amazon Web Services
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用NetApp Backup and Recovery 將一個或多個資料儲存庫備份並歸檔到 Amazon Web Services，以提高儲存效率和雲端轉換。
+
+如果資料儲存與歸檔策略相關聯，您可以選擇歸檔層。支援的存檔層是 Glacier 和 Glacier Deep。
+
+[]
+====
+*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+
+====
+.開始之前
+確保你已經滿足了所有link:prev-vmware-prereqs.html["虛擬機器保護要求"]在將資料儲存備份到雲端之前。
+
+.步驟
+. 在控制台 UI 中，選擇 *保護* > *備份和還原* > *虛擬機器*。
+. 選擇image:icon-action.png["行動"]對應您要備份的資料存儲，然後按一下*啟動備份*。
+. 在指派策略頁面中，選擇策略並選擇*下一步*。
+. 新增系統。
++
+配置您希望控制台發現的叢集管理 LIF。為其中一個資料儲存庫新增系統後，此系統可重複用於駐留在同一個ONTAP叢集上的所有其他資料儲存庫。
+
++
+.. 選擇與 SVM 對應的 *新增系統*。
+.. 在新增系統精靈中：
++
+... 指定叢集管理 LIF 的 IP 位址。
+... 指定ONTAP叢集使用者的憑證。
+
+
+.. 選擇*新增系統*。
+
+
+. 選擇*Amazon Web Services*將其配置為雲端提供者。
++
+.. 指定 AWS 帳戶。
+.. 在 AWS 存取金鑰欄位中，指定資料加密的金鑰。
+.. 在 AWS 金鑰欄位中，指定資料加密的密碼。
+.. 選擇您想要建立備份的區域。
+.. 指定作為系統新增的叢集管理 LIF 的 IP 位址。
+.. 選擇檔案層。
++
+建議設定存檔層，因為這是一次性活動，您無法稍後設定。
+
+
+
+. 查看詳細資訊並選擇*啟動備份*。
+

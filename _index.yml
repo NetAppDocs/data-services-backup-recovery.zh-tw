@@ -1,0 +1,114 @@
+---
+indexpage:
+  title: NetApp備份和還原文檔
+  summary: NetApp備份和復原是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。
+  keywords: netapp console, netapp backup recovery, ontap, on-premises, data protection,
+    sql, workloads, backup,
+  lead: NetApp備份和復原是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。
+  tiles:
+  - title: 開始
+    links:
+    - title: 了解NetApp備份與復原
+      url: concept-backup-to-cloud.html
+    - title: 什麼是新的
+      url: whats-new.html
+    - title: 先決條件
+      url: concept-start-prereq.html
+    - title: 在使用NetApp Backup and Recovery 之前設定備份目標
+      url: br-start-setup.html
+    - title: 配置NetApp備份與復原設定
+      url: br-start-configure.html
+  - title: 保護ONTAP磁碟區工作負載
+    links:
+    - title: 保護ONTAP磁碟區工作負載概述
+      url: prev-ontap-protect-overview.html
+    - title: 規劃ONTAP卷工作負載的保護之旅
+      url: prev-ontap-protect-journey.html
+    - title: 管理ONTAP磁碟區工作負載的策略
+      url: prev-ontap-policy-manage.html
+    - title: ONTAP磁碟區的備份到物件策略選項
+      url: prev-ontap-policy-object-options.html
+    - title: 恢復ONTAP磁碟區工作負載
+      url: prev-ontap-restore.html
+  - title: 保護 Microsoft SQL Server 工作負載
+    links:
+    - title: 保護 Microsoft SQL Server 工作負載概述
+      url: br-use-mssql-protect-overview.html
+    - title: 發現 Microsoft SQL Server 工作負載並選擇性地匯入SnapCenter資源
+      url: br-start-discover.html
+    - title: 備份 Microsoft SQL Server 工作負載
+      url: br-use-mssql-backup.html
+    - title: 還原 Microsoft SQL Server 工作負載
+      url: br-use-mssql-restore.html
+    - title: 複製 Microsoft SQL Server 工作負載
+      url: br-use-mssql-clone.html
+  - title: 保護 VMware 工作負載（私人預覽版）
+    links:
+    - title: 保護 VMware 工作負載概述
+      url: br-use-vmware-protect-overview.html
+    - title: 發現 VMware 工作負載
+      url: br-use-vmware-discovery.html
+    - title: 為 VMware 工作負載建立和管理保護群組
+      url: br-use-vmware-protection-groups.html
+    - title: 備份 VMware 工作負載
+      url: br-use-vmware-backup.html
+    - title: 復原 VMware 工作負載
+      url: br-use-vmware-restore.html
+  - title: 保護 KVM 工作負載（私人預覽版）
+    links:
+    - title: 保護 KVM 工作負載概述
+      url: "/br-use-kvm-protect-overview.html"
+    - title: 發現 KVM 工作負載
+      url: "/br-start-discover-kvm.html"
+    - title: 為 KVM 工作負載建立和管理保護群組
+      url: "/br-use-kvm-protection-groups.html"
+    - title: 備份 KVM 工作負載
+      url: "/br-use-kvm-backup.html"
+    - title: 恢復 KVM 工作負載
+      url: "/br-use-kvm-restore.html"
+  - title: 保護 Hyper-V 工作負載（私人預覽版）
+    links:
+    - title: 保護 Hyper-V 工作負載概述
+      url: "/br-use-hyperv-protect-overview.html"
+    - title: 發現 Hyper-V 工作負載
+      url: "/br-start-discover-hyperv.html"
+    - title: 為 Hyper-V 工作負載建立和管理保護群組
+      url: "/br-use-hyperv-protection-groups.html"
+    - title: 備份 Hyper-V 工作負載
+      url: "/br-use-hyperv-backup.html"
+    - title: 復原 Hyper-V 工作負載
+      url: "/br-use-hyperv-restore.html"
+  - title: 保護 Oracle 工作負載（私人預覽版）
+    links:
+    - title: 保護 Oracle 工作負載概述
+      url: "/br-use-oracle-protect-overview.html"
+    - title: 發現 Oracle 工作負載
+      url: "/br-start-discover-oracle.html"
+    - title: 為 Oracle 工作負載建立和管理保護群組
+      url: "/br-use-oracle-protection-groups.html"
+    - title: 備份 Oracle 工作負載
+      url: "/br-use-oracle-backup.html"
+    - title: 復原 Oracle 工作負載
+      url: "/br-use-oracle-restore.html"
+  - title: 保護 Kubernetes 工作負載（預覽版）
+    links:
+    - title: 保護 Kubernetes 工作負載概述
+      url: br-use-kubernetes-protect-overview.html
+    - title: 發現 Kubernetes 工作負載
+      url: br-start-discover-kubernetes.html
+    - title: 新增和保護 Kubernetes 應用程式
+      url: br-use-protect-kubernetes-applications.html
+    - title: 管理 Kubernetes 集群
+      url: br-use-manage-kubernetes-clusters.html
+    - title: 管理 Kubernetes 應用程式
+      url: br-use-manage-kubernetes-applications.html
+    - title: 恢復 Kubernetes 應用程式
+      url: br-use-restore-kubernetes-applications.html
+  - title: 部落格和社區
+    links:
+    - title: NetApp控制台
+      url: https://www.netapp.com/console
+    - title: NetApp資料服務
+      url: https://www.netapp.com/data-services/
+    - title: NetApp社群
+      url: https://community.netapp.com/

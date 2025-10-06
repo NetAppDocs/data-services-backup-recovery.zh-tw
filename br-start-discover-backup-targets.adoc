@@ -1,0 +1,157 @@
+---
+sidebar: sidebar 
+permalink: br-start-discover-backup-targets.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Microsoft SQL Server database, 
+summary: '完成幾個步驟即可在NetApp Backup and Recovery 中發現異地備份目標。這些目標可能包括 Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage 和StorageGRID。' 
+---
+= 在NetApp備份與復原中發現異地備份目標
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+完成幾個步驟即可在NetApp Backup and Recovery 中發現或手動新增異地備份目標。
+
+
+
+== 發現備份目標
+
+在使用NetApp Backup and Recovery 之前，您應該設定 Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage 或StorageGRID的備份目標。
+
+您可以自動發現這些目標或手動新增它們。
+
+提供存取儲存帳戶系統所需的憑證。這些憑證用於發現您想要備份的工作負載。
+
+.開始之前
+要新增異地備份目標，必須發現至少一個工作負載。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇*異地備份目標*標籤。
+. 選擇*發現備份目標*。
+. 選擇下列備份目標類型之一：*Amazon Web Services (AWS) S3*、*Microsoft Azure Blob Storage*、* StorageGRID* 或 * ONTAP S3*。
+. 在「選擇憑證位置」部分中，選擇憑證所在的位置，然後選擇如何關聯憑證。
+. 選擇“下一步”。
+. 輸入憑證資訊。根據您選擇的備份目標類型和憑證位置，資訊會有所不同。
++
+** 對於 AWS：
++
+*** *憑證名稱*：輸入 AWS 憑證名稱。
+*** *存取金鑰*：輸入 AWS 金鑰。
+*** *金鑰*：輸入 AWS 金鑰。
+
+
+** 對於 Azure：
++
+*** *憑證名稱*：輸入 Azure Blob 儲存憑證名稱。
+*** *客戶端金鑰*：輸入 Azure Blob 儲存客戶端金鑰。
+*** *應用程式（用戶端）ID*：選擇 Azure Blob 儲存應用程式 ID。
+*** *目錄租用戶 ID*：輸入 Azure Blob 儲存租用戶 ID。
+
+
+** 對於StorageGRID：
++
+*** *憑證名稱*：輸入StorageGRID憑證名稱。
+*** *網關節點 FQDN*：輸入StorageGRID的 FQDN 名稱。
+*** *連接埠*：輸入StorageGRID的連接埠號碼。
+*** *存取金鑰*：輸入StorageGRID S3 存取金鑰。
+*** *金鑰*：輸入StorageGRID S3 金鑰。
+
+
+** 對於ONTAP S3：
++
+*** *憑證名稱*：輸入ONTAP S3 憑證名稱。
+*** *網關節點 FQDN*：輸入ONTAP S3 的 FQDN 名稱。
+*** *連接埠*：輸入ONTAP S3 的連接埠號碼。
+*** *存取金鑰*：輸入ONTAP S3 存取金鑰。
+*** *金鑰*：輸入ONTAP S3 金鑰。
+
+
+
+
+. 選擇*發現*。
+
+
+
+
+== 為備份目標新增儲存桶
+
+您可以手動將儲存桶新增至異地備份目標，而不是讓NetApp Backup and Recovery 自動發現儲存桶。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇*異地備份目標*。
+. 選擇目標，然後在右側選擇“操作”image:icon-action.png["操作圖示"]圖示並選擇*新增儲存桶*。
+. 輸入儲存桶資訊。根據您選擇的備份目標類型，資訊會有所不同。
++
+** 對於 AWS：
++
+*** *儲存桶名稱*：輸入 S3 儲存桶的名稱。「netapp-backup」前綴是必要的前綴，會自動加入您提供的名稱。
+*** *AWS 帳戶*：輸入 AWS 帳戶名稱。
+*** *儲存桶區域*：輸入儲存桶的 AWS 區域。
+*** *啟用 S3 物件鎖定*：選擇此選項可為儲存桶啟用 S3 物件鎖定。 S3 物件鎖定可防止物件在指定的保留期間內被刪除或覆寫，從而提供額外的資料保護層。您只能在建立儲存桶時啟用此功能，並且以後無法將其關閉。
++
+**** *治理模式*：選擇此選項可為 S3 物件鎖定儲存桶啟用治理模式。治理模式使您能夠保護物件不被大多數使用者刪除或覆蓋，但允許某些使用者變更保留設定。
+**** *合規模式*：選擇此選項可為 S3 物件鎖定儲存桶啟用合規模式。合規模式可防止任何使用者（包括根使用者）在保留期到期之前變更保留設定或刪除物件。
+
+
+*** *版本控制*：選擇此選項可為 S3 儲存桶啟用版本控制。版本控制使您能夠在儲存桶中保留物件的多個版本，這對於備份和復原目的很有用。
+*** *標籤*：選擇 S3 儲存桶的標籤。標籤是可用於組織和管理 S3 資源的鍵值對。
+*** *加密*：選擇 S3 儲存桶的加密類型。選項是 AWS S3 管理金鑰或 AWS 金鑰管理服務金鑰。如果您選擇 AWS Key Management Service 金鑰，則必須提供金鑰 ID。
+
+
+** 對於 Azure：
++
+*** *訂閱*：選擇 Azure Blob 儲存容器的名稱。
+*** *資源組*：選擇 Azure 資源組的名稱。
+*** *實例詳情*：
++
+**** *儲存帳戶名稱*：輸入 Azure Blob 儲存容器的名稱。
+**** *Azure 區域*：輸入容器的 Azure 區域。
+**** *效能類型*：為 Azure Blob 儲存容器選擇標準或進階效能類型，以指示所需的效能等級。
+**** *加密*：選擇 Azure Blob 儲存容器的加密類型。選項包括 Microsoft 管理的金鑰或客戶管理的金鑰。如果選擇客戶管理的金鑰，則必須提供金鑰保管庫名稱和金鑰名稱。
+
+
+
+
+** 對於StorageGRID：
++
+*** *備份目標名稱*：選擇StorageGRID桶的名稱。
+*** *儲存桶名稱*：輸入StorageGRID桶的名稱。
+*** *區域*：輸入儲存桶的StorageGRID區域。
+*** *啟用版本控制*：選擇此選項可為StorageGRID桶啟用版本控制。版本控制使您能夠在儲存桶中保留物件的多個版本，這對於備份和復原目的很有用。
+*** *物件鎖定*：選擇此選項可為StorageGRID桶啟用物件鎖定。物件鎖定可防止物件在指定的保留期內被刪除或覆蓋，從而提供額外的資料保護層。您只能在建立儲存桶時啟用此功能，並且以後無法將其關閉。
+*** *容量*：輸入StorageGRID桶的容量。這是儲存桶中可以儲存的最大資料量。
+
+
+** 對於ONTAP S3：
++
+*** *備份目標名稱*：選擇ONTAP S3 儲存桶的名稱。
+*** *儲存桶目標名稱*：輸入ONTAP S3 儲存桶的名稱。
+*** *容量*：輸入ONTAP S3 儲存桶的容量。這是儲存桶中可以儲存的最大資料量。
+*** *啟用版本控制*：選擇此選項可為ONTAP S3 儲存桶啟用版本控制。版本控制使您能夠在儲存桶中保留物件的多個版本，這對於備份和復原目的很有用。
+*** *物件鎖定*：選擇此選項可為ONTAP S3 儲存桶啟用物件鎖定。物件鎖定可防止物件在指定的保留期內被刪除或覆蓋，從而提供額外的資料保護層。您只能在建立儲存桶時啟用此功能，並且以後無法將其關閉。
+
+
+
+
+. 選擇“*新增*”。
+
+
+
+
+== 更改備份目標的憑證
+
+輸入存取備份目標所需的憑證。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇*異地備份目標*。
+. 選擇目標，然後在右側選擇“操作”image:icon-action.png["操作圖示"]圖示並選擇*變更憑證*。
+. 輸入備份目標的新憑證。根據您選擇的備份目標類型，資訊會有所不同。
+. 選擇*完成*。
+

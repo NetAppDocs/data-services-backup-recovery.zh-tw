@@ -1,0 +1,590 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, backup, restore, NetApp Backup and Recovery, protection, sql server, workloads, volumes, snapshots' 
+summary: 了解NetApp備份和復原的新功能。 
+---
+= NetApp備份與復原的新功能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+了解NetApp備份和復原的新功能。
+
+
+
+== 2025年10月6日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== NetApp備份與復原現已更名為NetApp備份與復原
+
+NetApp Backup and Recovery 已重新命名為NetApp Backup and Recovery。
+
+
+
+=== BlueXP現在是NetApp控制台
+
+NetApp控制台建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp資料服務，提供即時洞察、更快的工作流程和簡化的管理，並且高度安全且合規。
+
+有關更改的詳細信息，請參閱link:https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp控制台發行說明。"]
+
+
+
+=== Hyper-V 工作負載支援作為私人預覽版
+
+此版本的NetApp Backup and Recovery 引入了對發現和管理 Hyper-V 工作負載的支援：
+
+* 在獨立實例以及故障轉移群集實例 (FCI) 上備份和還原虛擬機
+* 保護儲存在 SMB3 共用上的虛擬機
+* 虛擬機器層級的批量保護
+* 虛擬機器和崩潰一致性備份
+* 從主儲存、輔助儲存和物件儲存還原虛擬機
+* 搜尋和恢復虛擬機器備份
+
+
+有關保護 Hyper-V 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["保護 Hyper-V 工作負載概述"]。
+
+
+
+=== KVM 工作負載支援作為私人預覽
+
+此版本的NetApp Backup and Recovery 引入了對發現和管理 KVM 工作負載的支援：
+
+* 備份和還原儲存在 NFS 共享上的 qcow2 VM 映像
+* 備份儲存池
+* 使用保護群組進行大量虛擬機器和儲存池保護
+* VM 一致且崩潰一致的 VM 備份
+* 搜尋和恢復虛擬機器備份
+* 備份和還原基於 KVM 的虛擬機器和虛擬機器資料的指導流程
+
+
+有關保護 KVM 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["保護 KVM 工作負載概述"]。
+
+
+
+=== Kubernetes 預覽改進
+
+Kubernetes 工作負載的預覽版引入了以下增強功能：
+
+* 3-2-1 扇出備份架構支持
+* 支援ONTAP S3 作為備份目標
+* 新的 Kubernetes 儀表板，更易於管理
+* 增強的基於角色的存取控制 (RBAC) 配置包括對以下角色的支援：
++
+** 備份和恢復超級管理員
+** 備份和還原備份管理員
+** 備份和還原復原管理員
+** 備份和還原檢視器
+
+
+* 支援 SUSE Rancher Kubernetes 發行版
+* 多重儲存桶支援：現在，您可以跨不同的雲端供應商，透過每個系統多個儲存桶來保護系統內的捲
+
+
+有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"] 。
+
+
+
+=== Oracle 資料庫工作負載支援作為私人預覽
+
+此版本的NetApp Backup and Recovery 引進了對發現和管理 Oracle 資料庫工作負載的支援：
+
+* 發現獨立的 Oracle 資料庫
+* 僅針對資料或資料和日誌備份建立保護策略
+* 使用 3-2-1 備份方案保護 Oracle 資料庫
+* 配置備份保留
+* 掛載和卸載 ARCHIVELOG 備份
+* 虛擬化資料庫
+* 搜尋和還原資料庫備份
+* Oracle 儀表板支援
+
+
+有關保護 Oracle 資料庫工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["保護 Oracle 工作負載概述"]。
+
+
+
+== 2025年8月25日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== 支援在預覽版中保護 VMware 工作負載
+
+此版本增加了對保護 VMware 工作負載的預覽支援。將 VMware VM 和資料儲存區從本機ONTAP系統備份到 Amazon Web Services 和StorageGRID。
+
+
+NOTE: 有關保護 VMware 工作負載的文件以技術預覽的形式提供。對於此預覽版產品， NetApp保留在正式發布之前修改產品詳細資訊、內容和時間表的權利。
+
+link:br-use-vmware-protect-overview.html["了解有關使用NetApp備份和恢復保護 VMware 工作負載的更多信息"] 。
+
+
+
+=== AWS、Azure 和 GCP 的高效能索引現已正式發布
+
+2025 年 2 月，我們宣布推出針對 AWS、Azure 和 GCP 的高效能索引 (Indexed Catalog v2) 預覽版。此功能現已普遍可用（GA）。2025 年 6 月，我們預設向所有新客戶提供該服務。透過此版本，所有客戶都可以獲得支援。高效能索引提高了受物件儲存保護的工作負載的備份和復原作業的效能。
+
+預設啟用：
+
+* 如果您是新客戶，則預設啟用高效能索引。
+* 如果您是現有客戶，您可以前往 UI 的「復原」部分來啟用重新索引。
+
+
+
+
+== 2025年8月12日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== 通用可用性 (GA) 中支援 Microsoft SQL Server 工作負載
+
+Microsoft SQL Server 工作負載支援現已在NetApp Backup and Recovery 中正式推出 (GA)。在ONTAP、 Cloud Volumes ONTAP和Amazon FSx for NetApp ONTAP儲存上使用 MSSQL 環境的組織現在可以利用這項新的備份和復原服務來保護他們的資料。
+
+與先前的預覽版本相比，此版本對 Microsoft SQL Server 工作負載支援進行了以下增強：
+
+* * SnapMirror主動同步*：此版本現在支援SnapMirror主動同步（也稱為SnapMirror業務連續性 [SM-BC]），即使整個網站發生故障，它也能使業務服務繼續運行，支援應用程式使用輔助副本透明地進行故障轉移。NetApp Backup and Recovery 現在支援在SnapMirror主動同步和 Metrocluster 配置中保護 Microsoft SQL Server 資料庫。此資訊顯示在「保護詳細資料」頁面的「儲存和關係狀態」部分。關係資訊顯示在策略頁面更新後的*輔助設定*部分。
++
+參考 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["使用策略保護您的工作負載"]。
+
++
+image:../media/screen-br-sql-protection-details.png["Microsoft SQL Server 工作負載的保護詳細資訊頁面"]
+
+* *多重儲存桶支援*：您現在可以保護工作環境中的捲，每個工作環境最多可跨不同的雲端供應商使用 6 個儲存桶。
+* SQL Server 工作負載的*授權與免費試用更新*：您現在可以使用現有的NetApp Backup and Recovery 授權模型來保護 SQL Server 工作負載。SQL Server 工作負載沒有單獨的授權要求。
++
+有關詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["設定NetApp Backup and Recovery 的許可"]。
+
+* *自訂快照名稱*：您現在可以在管理 Microsoft SQL Server 工作負載備份的原則中使用自己的快照名稱。在策略頁面的*進階設定*部分輸入此資訊。
++
+image:../media/screen-br-sql-policy-create-advanced-snapmirror.png["NetApp備份和復原策略的SnapMirror和快照格式設定螢幕截圖"]
+
++
+參考 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["使用策略保護您的工作負載"]。
+
+* *輔助卷前綴和後綴*：您可以在策略頁面的*進階設定*部分輸入自訂前綴和後綴。
+* *身分和存取*：您現在可以控制使用者對功能的存取。
++
+參考 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-login.html["登入NetApp備份與復原"]和 https://docs.netapp.com/us-en/data-services-backup-recovery/reference-roles.html["NetApp備份和復原功能訪問"]。
+
+* *從物件儲存還原到備用主機*：即使主儲存已關閉，您現在可以從物件儲存還原到備用主機。
+* *日誌備份資料*：資料庫保護詳細資料頁面現在顯示日誌備份。您可以看到備份類型列，顯示備份是完整備份還是日誌備份。
+* *增強型儀表板*：儀表板現在顯示儲存和複製節省。
++
+image:../media/screen-br-dashboard3.png["NetApp備份和還原儀表板"]
+
+
+
+
+
+=== ONTAP磁碟區工作負載增強功能
+
+* * ONTAP磁碟區的多資料夾復原*：到目前為止，您可以透過瀏覽和復原功能一次還原一個資料夾或多個檔案。NetApp Backup and Recovery 現在提供使用瀏覽和復原功能一次選擇多個資料夾的功能。
+* *檢視和管理已刪除磁碟區的備份*： NetApp備份和還原儀表板現在提供顯示和管理從ONTAP中刪除的磁碟區的選項。透過此功能，您可以查看和刪除ONTAP中不再存在的磁碟區的備份。
+* *強制刪除備份*：在某些極端情況下，您可能希望NetApp Backup and Recovery 不再存取備份。例如，如果服務不再有權存取備份儲存桶或備份受到 DataLock 保護但您不再需要它們，則可能會發生這種情況。以前，您無法自行刪除這些內容，而需要致電NetApp支援。在此版本中，您可以使用選項強制刪除備份（在磁碟區和工作環境層級）。
+
+
+
+CAUTION: 請謹慎使用此選項，並且僅在極端清理需要時使用。即使這些備份未被從物件儲存中刪除， NetApp Backup and Recovery 也將無法再存取它們。您需要前往雲端提供者並手動刪除備份。
+
+參考 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["保護ONTAP工作負載"]。
+
+
+
+== 2025年7月28日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== Kubernetes 工作負載支援預覽版
+
+此版本的NetApp Backup and Recovery 引入了對發現和管理 Kubernetes 工作負載的支援：
+
+* 發現由NetApp ONTAP支援的 Red Hat OpenShift 和開源 Kubernetes 集群，無需共享 kubeconfig 檔案。
+* 使用統一的控制平面發現、管理和保護跨多個 Kubernetes 叢集的應用程式。
+* 將 Kubernetes 應用程式的備份和還原資料移動操作卸載到NetApp ONTAP。
+* 協調本地和基於物件儲存的應用程式備份。
+* 將整個應用程式和單一資源備份並還原到任何 Kubernetes 叢集。
+* 使用在 Kubernetes 上運行的容器和虛擬機器。
+* 使用執行掛鉤和模板建立應用程式一致的備份。
+
+
+有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"] 。
+
+
+
+== 2025年7月14日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== 增強型ONTAP卷儀表板
+
+2025 年 4 月，我們推出了增強型ONTAP卷儀表板的預覽版，它速度更快、更有效率。
+
+此儀表板旨在幫助處理大量工作負載的企業客戶。即使對於擁有 20,000 卷的客戶，新的儀表板也只需不到 10 秒即可加載。
+
+在預覽成功並獲得預覽客戶的良好回饋後，我們現在將其作為所有客戶的預設體驗。為極快的儀表板做好準備。
+
+有關詳細信息，請參閱link:br-use-dashboard.html["在儀表板中查看保護健康狀況"] 。
+
+
+
+=== Microsoft SQL Server 工作負載支援作為公共技術預覽
+
+此版本的NetApp Backup and Recovery 提供了更新的使用者介面，使您能夠使用NetApp Backup and Recovery 中熟悉的 3-2-1 保護策略來管理 Microsoft SQL Server 工作負載。使用此新版本，您可以將這些工作負載備份到主存儲，將其複製到輔助存儲，然後將其備份到雲端物件儲存。
+
+您可以透過完成此步驟來註冊預覽 https://forms.office.com/pages/responsepage.aspx?id=oBEJS5uSFUeUS8A3RRZbOojtBW63mDRDv3ZK50MaTlJUNjdENllaVTRTVFJGSDQ2MFJIREcxN0EwQi4u&route=shorturl["預覽註冊表"^]。
+
+
+NOTE: 本文檔旨在介紹如何保護 Microsoft SQL Server 工作負載，目前僅提供技術預覽版。 NetAppNetApp在正式發布之前修改此預覽版產品詳細資訊、內容和時間表的權利。
+
+此版本的NetApp Backup and Recovery 包含以下更新：
+
+* *3-2-1 備份功能*：此版本整合了SnapCenter功能，讓您能夠透過NetApp備份和復原使用者介面使用 3-2-1 資料保護策略來管理和保護您的SnapCenter資源。
+* *從SnapCenter匯入*：您可以將SnapCenter備份資料和政策匯入NetApp Backup and Recovery。
+* *重新設計的使用者介面*為管理備份和復原任務提供了更直覺的體驗。
+* *備份目標*：您可以在 Amazon Web Services (AWS)、Microsoft Azure Blob Storage、 StorageGRID和ONTAP S3 環境中新增儲存桶，以用作 Microsoft SQL Server 工作負載的備份目標。
+* *工作負載支援*：此版本可讓您備份、還原、驗證和複製 Microsoft SQL Server 資料庫和可用性群組。  （未來版本將添加對其他工作負載的支援。）
+* *靈活的復原選項*：此版本可讓您在發生損壞或意外資料遺失的情況下將資料庫還原至原始位置和備用位置。
+* *即時生產副本*：在幾分鐘內（而不是幾小時或幾天）產生用於開發、測試或分析的節省空間的生產副本。
+* 此版本包括建立詳細報告的功能。
+
+
+有關保護 Microsoft SQL Server 工作負載的詳細信息，請參閱link:br-use-mssql-protect-overview.html["保護 Microsoft SQL Server 工作負載概述"]。
+
+
+
+== 2025年6月9日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== 索引目錄支援更新
+
+2025 年 2 月，我們推出了更新的索引功能（索引目錄 v2），您可以在「搜尋和還原」資料復原方法中使用該功能。先前的版本顯著提高了本地環境中的資料索引效能。在此版本中，索引目錄現在可用於 Amazon Web Services、Microsoft Azure 和 Google Cloud Platform (GCP) 環境。
+
+如果您是新客戶，則所有新環境均預設啟用 Indexed Catalog v2。如果您是現有客戶，您可以重新索引您的環境以利用 Indexed Catalog v2。
+
+.如何啟用索引？
+在使用搜尋和還原方法還原資料之前，您需要在排程還原磁碟區或檔案的每個來源工作環境上啟用「索引」。執行搜尋和復原時，選擇“啟用索引”選項。
+
+索引目錄可以追蹤每個捲和備份文件，使您的搜尋快速且有效率。
+
+有關更多信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["啟用搜尋和還原索引"] 。
+
+
+
+=== Azure 專用連結終結點與服務終點
+
+通常， NetApp Backup and Recovery 會與雲端提供者建立一個私有端點來處理保護任務。此版本引入了一個可選設置，可讓您啟用或停用NetApp Backup and Recovery 自動建立私有端點。如果您想要更好地控制私有端點建立流程，這可能對您有用。
+
+您可以在啟用保護或開始復原程序時啟用或停用此選項。
+
+如果停用此設置，則必須手動建立私有端點以使NetApp Backup and Recovery 正常運作。如果沒有適當的連接，您可能無法成功執行備份和還原任務。
+
+
+
+=== ONTAP S3 上支援SnapMirror到雲端重新同步
+
+先前的版本引入了對SnapMirror到 Cloud Resync（SM-C Resync）的支援。此功能簡化了NetApp環境中磁碟區遷移期間的資料保護。此版本增加了對ONTAP S3 上的 SM-C Resync 以及其他與 S3 相容的提供者（如 Wasabi 和 MinIO）的支援。
+
+
+
+=== 為StorageGRID帶來您自己的儲存桶
+
+當您在物件儲存中為工作環境建立備份檔案時，預設情況下， NetApp Backup and Recovery 會為您設定的物件儲存帳戶中的備份檔案建立容器（儲存體桶或儲存帳戶）。以前，您可以覆寫此功能並為 Amazon S3、Azure Blob Storage 和 Google Cloud Storage 指定自己的容器。透過此版本，您現在可以攜帶自己的StorageGRID物件儲存容器。
+
+看 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html["建立您自己的物件儲存容器"]。
+
+
+
+== 2025年5月13日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== SnapMirror到 Cloud Resync 用於磁碟區遷移
+
+SnapMirror到 Cloud Resync 功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本機NetApp部署遷移到另一個本機 NetApp 部署或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP或Cloud Volumes Service）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可運行。
+
+此功能無需耗時且耗費資源的重新基線操作，使備份操作能夠在遷移後繼續進行。此功能在工作負載遷移場景中很有價值，支援 FlexVols 和 FlexGroups，並且從ONTAP版本 9.16.1 開始可用。
+
+透過維持跨環境的備份連續性， SnapMirror to Cloud Resync 提高了營運效率並降低了混合和多雲資料管理的複雜性。
+
+有關如何執行重新同步操作的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-migrate-resync.html["使用SnapMirror將磁碟區遷移到 Cloud Resync"]。
+
+
+
+=== 支援第三方 MinIO 物件儲存（預覽）
+
+NetApp Backup and Recovery 現在將其支援擴展到第三方物件存儲，主要專注於 MinIO。此新的預覽功能可讓您利用任何與 S3 相容的物件儲存來滿足您的備份和復原需求。
+
+透過此預覽版本，我們希望在推出完整功能之前確保與第三方物件儲存的強大整合。我們鼓勵您探索這項新功能並提供回饋以幫助增強服務。
+
+
+IMPORTANT: 此功能不應在生產中使用。
+
+*預覽模式限制*
+
+雖然此功能處於預覽狀態，但存在某些限制：
+
+* 不支援自備水桶 (BYOB)。
+* 不支援在策略中啟用 DataLock。
+* 不支援在政策中啟用存檔模式。
+* 僅支援本地ONTAP環境。
+* 不支援MetroCluster 。
+* 不支援啟用儲存桶級加密的選項。
+
+
+*入門*
+
+若要開始使用此預覽功能，您必須在控制台代理程式上啟用一個標誌。然後，您可以在保護工作流程中透過在備份部分中選擇*第三方相容*物件儲存來輸入 MinIO 第三方物件儲存的連接詳細資訊。
+
+
+
+== 2025年4月16日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== UI改進
+
+此版本透過簡化介面來增強您的體驗：
+
+* 從卷宗表中刪除聚合列，以及從 V2 儀表板中的捲表中刪除快照策略、備份策略和複製策略列，可實現更簡化的佈局。
+* 從下拉清單中排除未啟動的工作環境可以使介面更簡潔、導航更有效率、更快載入。
+* 雖然標籤列的排序功能已停用，但您仍然可以查看標籤，確保重要資訊仍然易於存取。
+* 刪除保護圖示上的標籤有助於使外觀更清晰並減少載入時間。
+* 在工作環境啟動過程中，對話方塊會顯示載入圖示以提供回饋，直到發現過程完成，從而增強系統操作的透明度和信心。
+
+
+
+
+=== 增強型音量儀表板（預覽版）
+
+音量儀表板現在可在 10 秒內加載，提供更快、更有效率的介面。此預覽版可供部分客戶使用，讓他們可以事先了解這些改進。
+
+
+
+=== 支援第三方 Wasabi 物件儲存（預覽版）
+
+NetApp Backup and Recovery 現在將其支援擴展到第三方物件存儲，主要專注於 Wasabi。此新預覽功能可讓您利用任何與 S3 相容的物件儲存來滿足您的備份和復原需求。
+
+
+
+==== 開始使用 Wasabi
+
+要開始使用第三方存儲作為物件存儲，您必須在控制台代理中啟用一個標誌。然後，您可以輸入第三方物件儲存的連接詳細資訊並將其整合到備份和還原工作流程中。
+
+.步驟
+. 透過 SSH 進入您的連接器。
+. 進入NetApp Backup and Recovery cbs 伺服器容器：
++
+[listing]
+----
+docker exec -it cloudmanager_cbs sh
+----
+. 打開 `default.json`文件裡面 `config`透過 VIM 或任何其他編輯器資料夾：
++
+[listing]
+----
+vi default.json
+----
+. 調整 `allow-s3-compatible`：假 `allow-s3-compatible`： 真的。
+. 儲存更改。
+. 從容器中退出。
+. 重新啟動NetApp Backup and Recovery cbs 伺服器容器。
+
+
+.結果
+容器再次開啟後，開啟NetApp備份並還原 UI。當您啟動備份或編輯備份策略時，您將看到新的供應商「S3 Compatible」與 AWS、Microsoft Azure、Google Cloud、 StorageGRID和ONTAP S3 等其他備份提供者一起列出。
+
+
+
+==== 預覽模式限制
+
+雖然此功能處於預覽狀態，但請考慮以下限制：
+
+* 不支援自備水桶 (BYOB)。
+* 不支援在策略中啟用 DataLock。
+* 不支援在政策中啟用存檔模式。
+* 僅支援本地ONTAP環境。
+* 不支援MetroCluster 。
+* 不支援啟用儲存桶級加密的選項。
+
+
+在此預覽期間，我們鼓勵您在推出完整功能之前探索此新功能並提供有關與第三方物件儲存整合的回饋。
+
+
+
+== 2025年3月17日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== SMB快照瀏覽
+
+此NetApp備份和復原更新解決了阻止客戶在 SMB 環境中瀏覽本機快照的問題。
+
+
+
+=== AWS GovCloud 環境更新
+
+此NetApp備份和復原更新修復了由於 TLS 憑證錯誤導致 UI 無法連接到 AWS GovCloud 環境的問題。透過使用控制台代理主機名稱而不是 IP 位址解決了該問題。
+
+
+
+=== 備份策略保留限制
+
+以前， NetApp Backup and Recovery UI 將備份限制為 999 份，而 CLI 允許更多。現在，您最多可以將 4,000 個磁碟區附加到備份策略，並包含未附加到備份策略的 1,018 個磁碟區。此更新包括防止超出這些限制的額外驗證。
+
+
+
+=== SnapMirror雲端重新同步
+
+此更新可確保在刪除SnapMirror關係後，無法從NetApp Backup and Recovery 啟動不支援的ONTAP版本的SnapMirror Cloud 重新同步。
+
+
+
+== 2025年2月21日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== 高效能索引
+
+NetApp Backup and Recovery 引入了更新的索引功能，使來源系統上的資料索引更有效率。新的索引功能包括 UI 的更新、資料復原搜尋和復原方法效能的改進、全域搜尋功能的升級以及更好的可擴充性。
+
+以下是改進的具體內容：
+
+* *資料夾合併*：更新後的版本使用包含特定標識符的名稱將資料夾分組在一起，使索引過程更加順暢。
+* *Parquet 檔案壓縮*：更新的版本減少了用於索引每個磁碟區的檔案數量，簡化了流程並消除了對額外資料庫的需求。
+* *透過更多會話進行擴展*：新版本增加了更多會話來處理索引任務，從而加快了進程。
+* *支援多個索引容器*：新版本使用多個容器來更好地管理和分配索引任務。
+* *分割索引工作流程*：新版本將索引流程分為兩部分，提高了效率。
+* *改進的並發性*：新版本可以同時刪除或移動目錄，從而加快索引過程。
+
+
+.誰能從此功能中受益？
+所有新客戶均可使用新的索引功能。
+
+.如何啟用索引？
+在使用搜尋和復原方法還原資料之前，您需要在計劃復原磁碟區或檔案的每個來源系統上啟用「索引」。這使得索引目錄可以追蹤每個捲和每個備份文件，從而使您的搜尋快速且有效率。
+
+執行搜尋和還原時，透過選擇「啟用索引」選項在來源工作環境上啟用索引。
+
+有關詳細信息，請參閱文檔 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["如何使用「搜尋和還原」還原ONTAP數據"]。
+
+.支持規模
+新的索引功能支援以下內容：
+
+* 3分鐘內即可實現全球搜尋效率
+* 最多 50 億個文件
+* 每個集群最多 5000 個卷
+* 每個磁碟區最多 10 萬個快照
+* 基線索引的最長時間少於 7 天。實際時間將根據您的環境而有所不同。
+
+
+
+
+=== 全域搜尋效能改進
+
+此版本還包括對全域搜尋效能的增強。現在您將看到進度指示器和更詳細的搜尋結果，包括文件數量和搜尋所花費的時間。專用的搜尋和索引容器可確保全域搜尋在五分鐘內完成。
+
+請注意與全域搜尋相關的以下注意事項：
+
+* 新索引不會在標記為每小時的快照上執行。
+* 新的索引功能僅適用於 FlexVols 上的快照，而不適用於 FlexGroups 上的快照。
+
+
+
+
+== 2025年2月13日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== NetApp備份與還原預覽版
+
+NetApp Backup and Recovery 的此預覽版提供了更新的使用者介面，可讓您使用NetApp Backup and Recovery 中熟悉的 3-2-1 保護原則來管理 Microsoft SQL Server 工作負載。使用此新版本，您可以將這些工作負載備份到主存儲，將其複製到輔助存儲，然後將其備份到雲端物件儲存。
+
+
+NOTE: 本文檔作為技術預覽提供。對於此預覽版產品， NetApp保留在正式發布之前修改產品詳細資訊、內容和時間表的權利。
+
+此版本的NetApp Backup and Recovery Preview 2025 包含以下更新。
+
+* 重新設計的使用者介面為管理備份和復原任務提供了更直覺的體驗。
+* 預覽版可讓您備份和還原 Microsoft SQL Server 資料庫。  （未來版本將添加對其他工作負載的支援。）
+* 此版本整合了SnapCenter功能，使您能夠透過NetApp備份和還原使用者介面使用 3-2-1 資料保護策略來管理和保護您的SnapCenter資源。
+* 此版本可讓您將SnapCenter工作負載匯入NetApp Backup and Recovery。
+
+
+
+
+== 2024年11月22日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== SnapLock Compliance和SnapLock Enterprise保護模式
+
+NetApp Backup and Recovery 現在可以備份使用SnapLock Compliance或SnapLock Enterprise保護模式配置的FlexVol和FlexGroup本機磁碟區。您的叢集必須執行ONTAP 9.14 或更高版本才能獲得此支援。自ONTAP版本 9.11.1 起，支援使用SnapLock Enterprise模式備份FlexVol磁碟區。早期的ONTAP版本不支援備份SnapLock保護磁碟區。
+
+請參閱受支援卷的完整列表 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["了解NetApp備份與復原"]。
+
+
+
+=== 在卷頁頁面上為搜尋和復原過程建立索引
+
+在使用搜尋和還原之前，您需要在要從中還原磁碟區資料的每個來源系統上啟用「索引」。這使得索引目錄能夠追蹤每個卷的備份檔案。卷頁現在顯示索引狀態：
+
+* 已編入索引：磁碟區已編入索引。
+* 進行中
+* 未編入索引
+* 索引已暫停
+* 錯誤
+* 未啟用
+
+
+
+
+== 2024年9月27日
+
+此NetApp Backup and Recovery 版本包含以下更新。
+
+
+
+=== RHEL 8 或 9 上的 Podman 支援瀏覽和恢復
+
+NetApp Backup and Recovery 現在支援使用 Podman 引擎在 Red Hat Enterprise Linux (RHEL) 版本 8 和 9 上進行檔案和資料夾復原。這適用於NetApp備份和還原瀏覽和還原方法。
+
+控制台代理程式版本 3.9.40 支援 Red Hat Enterprise Linux 版本 8 和 9 的某些版本，用於在 RHEL 8 或 9 主機上手動安裝控制台代理軟體，無論位置如何，以及在 https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["主機需求"^]。這些較新的 RHEL 版本需要 Podman 引擎而不是 Docker 引擎。以前， NetApp Backup and Recovery 在使用 Podman 引擎時有兩個限制。這些限制已被取消。
+
+https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["了解有關從備份檔案還原ONTAP資料的更多信息"] 。
+
+
+
+=== 更快的目錄索引改進了搜尋和恢復
+
+此版本包含改進的目錄索引，可以更快完成基線索引。更快的索引使您能夠更快地使用搜尋和復原功能。
+
+https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["了解有關從備份檔案還原ONTAP資料的更多信息"] 。

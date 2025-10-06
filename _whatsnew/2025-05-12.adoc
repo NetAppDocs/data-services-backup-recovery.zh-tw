@@ -1,0 +1,42 @@
+= SnapMirror到 Cloud Resync 用於磁碟區遷移
+:allow-uri-read: 
+
+
+
+
+=== SnapMirror到 Cloud Resync 用於磁碟區遷移
+
+SnapMirror到 Cloud Resync 功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本機NetApp部署遷移到另一個本機 NetApp 部署或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP或Cloud Volumes Service）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可運行。
+
+此功能無需耗時且耗費資源的重新基線操作，使備份操作能夠在遷移後繼續進行。此功能在工作負載遷移場景中很有價值，支援 FlexVols 和 FlexGroups，並且從ONTAP版本 9.16.1 開始可用。
+
+透過維持跨環境的備份連續性， SnapMirror to Cloud Resync 提高了營運效率並降低了混合和多雲資料管理的複雜性。
+
+有關如何執行重新同步操作的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-migrate-resync.html["使用SnapMirror將磁碟區遷移到 Cloud Resync"]。
+
+
+
+=== 支援第三方 MinIO 物件儲存（預覽）
+
+NetApp Backup and Recovery 現在將其支援擴展到第三方物件存儲，主要專注於 MinIO。此新的預覽功能可讓您利用任何與 S3 相容的物件儲存來滿足您的備份和復原需求。
+
+透過此預覽版本，我們希望在推出完整功能之前確保與第三方物件儲存的強大整合。我們鼓勵您探索這項新功能並提供回饋以幫助增強服務。
+
+
+IMPORTANT: 此功能不應在生產中使用。
+
+*預覽模式限制*
+
+雖然此功能處於預覽狀態，但存在某些限制：
+
+* 不支援自備水桶 (BYOB)。
+* 不支援在策略中啟用 DataLock。
+* 不支援在政策中啟用存檔模式。
+* 僅支援本地ONTAP環境。
+* 不支援MetroCluster 。
+* 不支援啟用儲存桶級加密的選項。
+
+
+*入門*
+
+若要開始使用此預覽功能，您必須在控制台代理程式上啟用一個標誌。然後，您可以在保護工作流程中透過在備份部分中選擇*第三方相容*物件儲存來輸入 MinIO 第三方物件儲存的連接詳細資訊。

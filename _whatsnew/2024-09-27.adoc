@@ -1,0 +1,21 @@
+= RHEL 8 或 9 上的 Podman 支援瀏覽和恢復
+:allow-uri-read: 
+
+
+
+
+=== RHEL 8 或 9 上的 Podman 支援瀏覽和恢復
+
+NetApp Backup and Recovery 現在支援使用 Podman 引擎在 Red Hat Enterprise Linux (RHEL) 版本 8 和 9 上進行檔案和資料夾復原。這適用於NetApp備份和還原瀏覽和還原方法。
+
+控制台代理程式版本 3.9.40 支援 Red Hat Enterprise Linux 版本 8 和 9 的某些版本，用於在 RHEL 8 或 9 主機上手動安裝控制台代理軟體，無論位置如何，以及在 https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["主機需求"^]。這些較新的 RHEL 版本需要 Podman 引擎而不是 Docker 引擎。以前， NetApp Backup and Recovery 在使用 Podman 引擎時有兩個限制。這些限制已被取消。
+
+https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["了解有關從備份檔案還原ONTAP資料的更多信息"] 。
+
+
+
+=== 更快的目錄索引改進了搜尋和恢復
+
+此版本包含改進的目錄索引，可以更快完成基線索引。更快的索引使您能夠更快地使用搜尋和復原功能。
+
+https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["了解有關從備份檔案還原ONTAP資料的更多信息"] 。

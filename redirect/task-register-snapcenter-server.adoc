@@ -1,0 +1,8 @@
+---
+permalink: task-register-snapcenter-server.html 
+redirect: data-services-backup-recovery/index.html 
+---
+= 
+:allow-uri-read: 
+
+

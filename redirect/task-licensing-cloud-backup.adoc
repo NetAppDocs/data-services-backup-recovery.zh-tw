@@ -1,0 +1,8 @@
+---
+permalink: task-licensing-cloud-backup.html 
+redirect: data-services-backup-recovery/br-start-licensing.html 
+---
+= 
+:allow-uri-read: 
+
+

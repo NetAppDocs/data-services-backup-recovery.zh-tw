@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: br-use-vmware-protection-groups.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, vmware, vm, virtual machines, workloads, volumes, snapshots 
+summary: 在NetApp備份和復原中為 VMware 工作負載建立和管理保護群組。 
+---
+= 使用NetApp備份並還原為 VMware 工作負載建立和管理保護群組
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+建立保護組來管理一組工作負載的備份和還原作業。保護群組是您想要一起保護的資源（例如虛擬機器和資料儲存區）的邏輯分組。
+
+您可以執行與保護群組相關的以下任務：
+
+* 建立保護組。
+* 查看保護詳情。
+* 立即備份保護組。看link:br-use-vmware-backup.html["立即備份 VMware 工作負載"] 。
+* 暫停和恢復保護組的備份計畫。
+* 刪除保護組。
+
+
+
+
+== 建立保護組
+
+將您想要保護的工作負載分組到一個保護群組。您可以為想要一起備份和還原的一組工作負載建立一個保護群組。
+
+*必要的控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇一個工作負載來查看保護詳細資訊。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
+. 選擇*保護群組*標籤。
+. 選擇*建立保護組*。
+. 為保護組提供名稱。
+. 選擇要包含在保護群組中的虛擬機器或資料庫。
+. 選擇“下一步”。
+. 選擇要套用於保護群組的*備份策略*。
++
+如果要建立策略，請選擇*建立新策略*並依照指示建立策略。看link:br-use-policies-create.html["創建策略"]了解更多。
+
+. 選擇“下一步”。
+. 檢查配置。
+. 選擇“*建立*”來建立保護組。
+
+
+
+
+== 暫停保護組的備份計劃
+
+暫停保護組將暫停該保護組的計畫備份。如果您想暫時停止該群組中工作負載的備份，您可能需要暫停該保護群組。
+
+當您暫停保護群組時，保護狀態將變更為「維護中」。您可以隨時還原備份計畫。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇一個工作負載來查看保護詳細資訊。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
+. 選擇*保護群組*標籤。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *暫停保護組*。
+. 查看確認訊息並選擇*暫停*。
+
+
+
+
+== 恢復保護組的備份計劃
+
+復原已暫停的保護群組將重新啟動該保護群組的計畫備份。
+
+當您暫停保護群組時，保護狀態將從「維護中」變更為當您恢復保護群組時「受保護」。您可以隨時還原備份計畫。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇一個工作負載來查看保護詳細資訊。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
+. 選擇*保護群組*標籤。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *恢復保護群組*。
+. 查看確認訊息並選擇*恢復*。
+
+
+.結果
+如果計劃有效，系統將驗證計劃，並將保護狀態變更為「已保護」。如果計劃無效，系統將顯示錯誤訊息並且不會恢復保護群組。
+
+
+
+== 刪除保護群組
+
+刪除保護群組會刪除該保護群組以及所有相關的備份計畫。如果不再需要某個保護群組，您可能需要將其刪除。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇一個工作負載來查看保護詳細資訊。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
+. 選擇*保護群組*標籤。
+. 選擇要刪除的保護組。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *刪除*。
+. 查看有關刪除相關備份的確認訊息並確認刪除。
+

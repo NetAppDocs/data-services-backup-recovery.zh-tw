@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: prev-vmware-manage.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+---
+= 在NetApp備份和復原中管理資料儲存和虛擬機器的保護
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在使用NetApp Backup and Recovery 備份和還原資料之前查看策略、資料儲存和虛擬機器。根據資料庫、政策或資源群組的變化，您可以從NetApp控制台 UI 查看更新。
+
+[]
+====
+*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+
+====
+
+
+== 查看政策
+
+您可以查看所有預設的預設策略。對於每個策略，當您查看詳細資訊時，會列出所有相關的策略和虛擬機器。
+
+. 在控制台 UI 中，選擇 *保護* > *備份和還原* > *虛擬機器*。
+. 從“*設定*”下拉式選單中選擇“*策略*”。
+. 選擇與您想要查看其詳細資訊的策略相對應的*查看詳細資訊*。
+
+
+列出了相關的策略和虛擬機器。
+
+
+
+== 查看資料儲存和虛擬機
+
+顯示使用已註冊的SnapCenter Plug-in for VMware vSphere保護的資料儲存和虛擬機器。
+
+.步驟
+. 在控制台 UI 中，選擇 *保護* > *備份和還原* > *虛擬機器* > *設定* > *SnapCenter Plug-in for VMware vSphere*。
+. 選擇要查看其資料儲存區和虛擬機器的 SnapCenter Plug-in for VMware vSphere。
+
+
+
+
+== 取消保護資料存儲
+
+您可以取消保護先前已受保護的資料儲存。當您想要刪除雲端備份或不再想將其備份到雲端時，您可以取消保護資料儲存。取消保護成功後，資料儲存可以再次受到保護。
+
+.步驟
+. 在控制台 UI 中，選擇 *保護* > *備份和還原* > *虛擬機器*。
+. 選擇“操作”圖標image:icon-action.png["行動"]對應您要取消保護的資料儲存並選擇*取消保護*。
+
+
+
+
+== 編輯SnapCenter Plug-in for VMware vSphere
+
+您可以在控制台中編輯SnapCenter Plug-in for VMware vSphere的詳細資訊。
+
+.步驟
+. 在控制台 UI 中，選擇 *保護* > *備份和還原* > *虛擬機器* > *設定* > *SnapCenter Plug-in for VMware vSphere*。
+. 選擇“操作”圖標image:icon-action.png["行動"]並選擇*編輯*。
+. 根據需要修改詳細資料。
+. 選擇*儲存*。
+
+
+
+
+== 刷新資源和備份
+
+如果您想查看已新增至應用程式的最新資料儲存和備份，您應該刷新資源和備份。這將啟動資源和備份的發現，並顯示最新的詳細資訊。
+
+. 選擇“備份和還原”>“虛擬機器”。
+. 從「*設定*」下拉式選單中，選擇「SnapCenter Plug-in for VMware vSphere*」。
+. 選擇“操作”圖標image:icon-action.png["行動"]對應SnapCenter Plug-in for VMware vSphere，然後選擇*刷新資源和備份*。
+
+
+
+
+== 刷新策略或資源組
+
+如果策略或資源群組發生變化，則應重新整理保護關係。
+
+. 選擇“備份和還原”>“虛擬機器”。
+. 選擇“操作”圖標image:icon-action.png["行動"]對應資料儲存並選擇*刷新保護*。
+
+
+
+
+== 取消註冊SnapCenter Plug-in for VMware vSphere
+
+與SnapCenter Plug-in for VMware vSphere關聯的所有資料儲存和虛擬機器將不受保護。
+
+. 選擇“備份和還原”>“虛擬機器”。
+. 從「*設定*」下拉式選單中，選擇「SnapCenter Plug-in for VMware vSphere*」。
+. 選擇“操作”圖標image:icon-action.png["行動"]對應SnapCenter Plug-in for VMware vSphere並選擇 *取消註冊*。
+
+
+
+
+== 監控作業
+
+為所有NetApp備份和復原作業建立作業。您可以監控所有作業以及作為每個任務的一部分執行的所有子任務。
+
+. 選擇“備份和復原”>“作業監控”。
++
+當您啟動一項操作時，會出現一個窗口，表示該作業已啟動。您可以選擇連結來監控該作業。
+
+. 選擇主要任務來查看子任務以及每個子任務的狀態。
+

@@ -1,0 +1,8 @@
+---
+permalink: reference-restart-backup-html.html 
+redirect: data-services-backup-recovery/reference-restart-backup.html 
+---
+= 
+:allow-uri-read: 
+
+

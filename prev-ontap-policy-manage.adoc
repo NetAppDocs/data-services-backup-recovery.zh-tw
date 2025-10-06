@@ -1,0 +1,203 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-policy-manage.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+---
+= 使用NetApp備份和還原管理ONTAP磁碟區的備份策略
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用NetApp Backup and Recovery，使用NetApp提供的預設備份策略來建立備份，或建立自訂策略。策略控制備份頻率、備份時間以及保留的備份檔案數量。
+
+[]
+====
+*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+
+====
+當您使用啟動精靈為您的磁碟區啟用備份和復原服務時，您可以從預設原則和系統中已經存在的任何其他策略（Cloud Volumes ONTAP或本機ONTAP系統）中進行選擇。如果您想使用與現有策略不同的策略，您可以在使用啟動精靈之前或使用啟動精靈時建立該策略。
+
+若要了解提供的預設備份策略，請參閱link:prev-ontap-protect-journey.html["規劃您的保育之旅"]。
+
+NetApp Backup and Recovery 提供三種類型的ONTAP資料備份：快照、複製和物件儲存備份。根據您使用的架構和備份類型，它們的策略位於不同的位置：
+
+[cols="25,25,25,25"]
+|===
+| 架構 | 快照策略儲存位置 | 複製策略儲存位置 | 備份到物件策略儲存位置 
+
+
+| *扇出* | 基本的 | 次要 | 基本的 
+
+
+| *級聯* | 基本的 | 次要 | 次要 
+|===
+根據您的環境、偏好和保護類型，使用以下工具建立備份策略：
+
+* NetApp控制台使用者介面
+* 系統管理器使用者介面
+* ONTAP命令列介面
+
+
+
+TIP: 使用系統管理員時，選擇*非同步*作為複製策略的策略類型，並選擇*非同步*和*備份到雲端*作為備份到物件策略。
+
+
+
+== 查看系統的策略
+
+. 在控制台 UI 中，選擇 *磁碟區* > *備份設定*。
+. 從備份設定頁面，選擇系統，選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*策略管理*。
++
+出現「策略管理」頁面。預設顯示快照策略。
+
+. 若要查看系統中存在的其他策略，請選擇「*複製策略*」或「*備份策略*」。如果現有策略可用於您的備份計劃，則一切就緒。如果您需要具有不同特徵的策略，您可以從此頁面建立新策略。
+
+
+
+
+== 創建策略
+
+您可以建立策略來管理快照副本、複製和備份到物件儲存：
+
+* <<啟動快照之前建立快照策略>>
+* <<在啟動複製之前建立複製策略>>
+* <<在啟動備份之前建立備份到物件儲存策略>>
+
+
+
+
+=== 啟動快照之前建立快照策略
+
+3-2-1 策略的一部分涉及在*主*儲存系統上建立磁碟區的快照副本。
+
+策略創建過程的一部分涉及識別表示計劃和保留的快照和SnapMirror標籤。您可以使用預定義標籤或建立自己的標籤。
+
+.步驟
+. 在控制台 UI 中，選擇 *磁碟區* > *備份設定*。
+. 從備份設定頁面，選擇系統，選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*策略管理*。
++
+出現「策略管理」頁面。
+
+. 在策略頁面中，選擇*建立策略* > *建立快照策略*。
+. 指定策略名稱。
+. 選擇一個或多個快照計劃。您最多可以有 5 個標籤。或者，建立一個時間表。
+. 如果您選擇建立時間表：
++
+.. 選擇每小時、每天、每週、每月或每年的頻率。
+.. 指定表示計劃和保留的快照標籤。
+.. 輸入拍攝快照的時間和頻率。
+.. 保留：輸入要保留的快照數量。
+
+
+. 選擇“*創建*”。
+
+
+*使用級聯架構的快照策略範例*
+
+此範例建立具有兩個叢集的快照策略：
+
+. 集群 1：
++
+.. 在策略頁面上選擇集群 1。
+.. 忽略複製和備份到物件策略部分。
+.. 建立快照策略。
+
+
+. 集群 2：
++
+.. 在策略頁面上選擇集群 2。
+.. 忽略快照策略部分。
+.. 配置複製和備份到物件策略。
+
+
+
+
+
+
+=== 在啟動複製之前建立複製策略
+
+您的 3-2-1 策略可能包括在不同的儲存系統上複製磁碟區。複製策略駐留在*輔助*儲存系統上。
+
+.步驟
+. 在「策略」頁面中，選擇「建立策略」>「建立複製策略」。
+. 在「策略詳細資料」部分中，指定策略名稱。
+. 指定SnapMirror標籤（最多 5 個）以表示每個標籤的保留。
+. 指定傳輸時間表。
+. 選擇“*創建*”。
+
+
+
+
+=== 在啟動備份之前建立備份到物件儲存策略
+
+您的 3-2-1 策略可能包括將磁碟區備份到物件儲存。
+
+根據備份架構，此儲存策略位於不同的儲存系統位置：
+
+* 扇出：主儲存系統
+* 級聯：二級儲存系統
+
+
+.步驟
+. 在策略管理頁面中，選擇*建立策略* > *建立備份策略*。
+. 在「策略詳細資料」部分中，指定策略名稱。
+. 指定SnapMirror標籤（最多 5 個）以表示每個標籤的保留。
+. 指定設置，包括傳輸計劃和何時存檔備份。
+. （可選）要在一定天數後將較舊的備份檔案移至較便宜的儲存類別或存取層，請選擇*存檔*選項並指示存檔資料之前應經過的天數。輸入 *0* 作為「存檔天數」以將備份檔案直接傳送到存檔儲存。
++
+link:prev-ontap-policy-object-options.html["了解有關檔案存儲設置的更多信息"] 。
+
+. （可選）為保護您的備份不被修改或刪除，請選擇*DataLock 和勒索軟體保護*選項。
++
+如果您的叢集使用的是ONTAP 9.11.1 或更高版本，您可以選擇透過設定「DataLock」和「勒索軟體保護」來保護您的備份免於刪除。
+
++
+link:prev-ontap-policy-object-options.html["了解有關可用 DataLock 設定的更多信息"] 。
+
+. 選擇“*創建*”。
+
+
+
+
+== 編輯策略
+
+您可以編輯自訂快照、複製或備份策略。
+
+更改備份策略會影響所有使用該策略的磁碟區。
+
+.步驟
+. 在策略管理頁面中，選擇策略，選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*編輯策略*。
++
+
+NOTE: 複製和備份策略的過程相同。
+
+. 在「編輯策略」頁面中進行變更。
+. 選擇*儲存*。
+
+
+
+
+== 刪除策略
+
+您可以刪除與任何磁碟區均不關聯的策略。
+
+如果某個策略與某個磁碟區關聯，並且您想要刪除該策略，則必須先從該磁碟區中刪除該策略。
+
+.步驟
+. 在策略管理頁面中，選擇策略，選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*刪除快照策略*。
+. 選擇*刪除*。
+
+
+
+
+== 查找更多信息
+
+有關使用 System Manager 或ONTAP CLI 建立政策的說明，請參閱下列內容：
+
+https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html["使用 System Manager 建立 Snapshot 策略"^] https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["使用ONTAP CLI 建立 Snapshot 策略"^] https://docs.netapp.com/us-en/ontap/task_dp_create_custom_data_protection_policies.html["使用 System Manager 建立複製策略"^] https://docs.netapp.com/us-en/ontap/data-protection/create-custom-replication-policy-concept.html["使用ONTAP CLI 建立複製策略"^] https://docs.netapp.com/us-en/ontap/task_dp_back_up_to_cloud.html#create-a-custom-cloud-backup-policy["使用 System Manager 建立物件儲存策略的備份"^] https://docs.netapp.com/us-en/ontap-cli-9131/snapmirror-policy-create.html#description["使用ONTAP CLI 建立物件儲存策略備份"^]

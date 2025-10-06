@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: br-limitations-hyperv.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Hyper-V, SAP HANA database, virtual machine, vm 
+summary: NetApp Backup and Recovery 需要先發現數據，以便您可以使用該服務。在發現過程中， NetApp Backup and Recovery 會分析組織內系統中的所有磁碟區和檔案。 
+---
+= NetApp Backup and Recovery 針對 Hyper-V 工作負載的已知限制
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+已知限制標識了該產品的此版本不支援或無法與其正確互通的平台、裝置或功能。仔細審查這些限制。
+
+NetApp Backup and Recovery 中的 Hyper-V 工作負載的私人預覽版不支援以下操作：
+
+* 建立資源組
+* 跨磁碟（跨多個 CIFS 共用）
+* 透過 SAN 保護虛擬機
+* 從物件儲存恢復
+* 保護使用 System Center Virtual Machine Manager (SCVMM) 叢集的 Hyper-V 主機
+

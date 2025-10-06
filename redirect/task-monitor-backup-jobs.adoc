@@ -1,0 +1,8 @@
+---
+permalink: task-monitor-backup-jobs.html 
+redirect: data-services-backup-recovery/br-use-monitor-tasks.html 
+---
+= 
+:allow-uri-read: 
+
+

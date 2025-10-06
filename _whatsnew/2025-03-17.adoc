@@ -1,0 +1,27 @@
+= SMB快照瀏覽
+:allow-uri-read: 
+
+
+
+
+=== SMB快照瀏覽
+
+此NetApp備份和復原更新解決了阻止客戶在 SMB 環境中瀏覽本機快照的問題。
+
+
+
+=== AWS GovCloud 環境更新
+
+此NetApp備份和復原更新修復了由於 TLS 憑證錯誤導致 UI 無法連接到 AWS GovCloud 環境的問題。透過使用控制台代理主機名稱而不是 IP 位址解決了該問題。
+
+
+
+=== 備份策略保留限制
+
+以前， NetApp Backup and Recovery UI 將備份限制為 999 份，而 CLI 允許更多。現在，您最多可以將 4,000 個磁碟區附加到備份策略，並包含未附加到備份策略的 1,018 個磁碟區。此更新包括防止超出這些限制的額外驗證。
+
+
+
+=== SnapMirror雲端重新同步
+
+此更新可確保在刪除SnapMirror關係後，無法從NetApp Backup and Recovery 啟動不支援的ONTAP版本的SnapMirror Cloud 重新同步。

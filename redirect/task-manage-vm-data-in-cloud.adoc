@@ -1,0 +1,8 @@
+---
+permalink: task-manage-vm-data-in-cloud.html 
+redirect: data-services-backup-recovery/prev-vmware-manage.html 
+---
+= 
+:allow-uri-read: 
+
+

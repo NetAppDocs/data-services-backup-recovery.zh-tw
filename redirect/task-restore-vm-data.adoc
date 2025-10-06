@@ -1,0 +1,8 @@
+---
+permalink: task-restore-vm-data.html 
+redirect: data-services-backup-recovery/prev-vmware-restore.html 
+---
+= 
+:allow-uri-read: 
+
+

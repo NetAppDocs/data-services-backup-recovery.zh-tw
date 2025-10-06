@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: br-reference-limitations.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 已知限制標識了該產品的此版本不支援的功能，或無法與其正確互通的功能。仔細審查這些限制。 
+---
+= NetApp Backup and Recovery for ONTAP磁碟區的已知限制
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+已知限制標識了此版本的NetApp Backup and Recovery 不支援的功能，或無法與其正確互通的功能。仔細審查這些限制。
+
+* NetApp Backup and Recovery 可以將Cloud Volumes ONTAP備份到 AWS 中國區域（包括北京和寧夏）的物件儲存；但是，您可能需要先手動修改身分和存取策略。
++
+有關在 AWS 中建立控制台代理的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-bluexp.html["在 AWS 中安裝控制台代理"^]。
+
++
+有關更多詳細信息，請參閱博客文章 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-Feature-Blog-May-23-Updates/ba-p/444052["NetApp備份與復原功能部落格 2023 年 5 月"^]。
+
+* NetApp Backup and Recovery 不支援 Microsoft Azure 中國區域。
++
+有關在 Azure 中建立控制台代理的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-bluexp.html["在 Azure 中安裝控制台代理"^]。
+
+* NetApp Backup and Recovery 不支援FlexCache磁碟區的備份。
+
+
+
+
+== ONTAP磁碟區的複製限制
+
+* 您一次只能選擇一個FlexGroup磁碟區進行複製。您需要為每個FlexGroup磁碟區單獨啟動備份。
++
+FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區並指派相同的備份原則。
+
+* 支援以下功能 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp複製"]，但使用NetApp Backup and Recovery 的複製功能時則不然：
++
+** 不支援從磁碟區 A 到磁碟區 B 以及從磁碟區 B 到磁碟區 C 的級聯設定複製。支援從卷 A 到卷 B 的複製。
+** 不支援在 FSx for ONTAP系統之間複製資料。
+** 不支援創建卷的一次性複製。
+
+
+* 從本機ONTAP系統建立複製時，如果目標Cloud Volumes ONTAP系統上的ONTAP版本為 9.8、9.9 或 9.11，則只允許鏡像保管庫策略。
+
+
+
+
+== ONTAP磁碟區的備份到物件限制
+
+* 備份資料時， NetApp Backup and Recovery 將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
++
+有關這些加密類型的說明，請參閱https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["配置NetApp卷加密概述"^]。
+
+
+
+* 如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery 備份這些卷，因為這些快照不會移動到物件儲存。
+* 備份資料時， NetApp Backup and Recovery 將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
++
+有關這些加密類型的說明，請參閱https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["配置NetApp卷加密概述"^]。
+
+
+
+* 如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery 備份這些卷，因為這些快照不會移動到物件儲存。
+* 當您建立或編輯備份策略但未向該策略指派任何磁碟區時，保留的備份數量最多可為 1018。將磁碟區指派給策略後，您可以編輯該策略以建立最多 4000 個備份。
+* 備份資料保護 (DP) 磁碟區時：
++
+** 與SnapMirror標籤的關係 `app_consistent`和 `all_source_snapshot`不會備份到雲端。
+** 如果您在SnapMirror目標磁碟區上建立快照的本機副本（無論使用何種SnapMirror標籤），這些快照都不會作為備份移至雲端。此時，您需要為來源 DP 磁碟區建立一個具有所需標籤的 Snapshot 策略，以便NetApp Backup and Recovery 對其進行備份。
+
+
+* FlexGroup卷備份無法移動到檔案儲存。
+* 如果叢集運作的是ONTAP 9.13.1 或更高版本， FlexGroup磁碟區備份可以使用 DataLock 和勒索軟體保護。
+* SVM-DR 磁碟區備份受下列限制支援：
++
+** 僅支援從ONTAP輔助節點進行備份。
+** 應用於磁碟區的快照策略必須是NetApp Backup and Recovery 可識別的策略之一，包括每日、每週、每月等。預設的「sm_created」策略（用於*鏡像所有快照*）無法識別，且 DP 磁碟區不會顯示在可備份的磁碟區清單中。
+** 當從來源或目標進行備份時，SVM-DR 和磁碟區備份和還原完全獨立工作。唯一的限制是 SVM-DR 不會複製SnapMirror雲端關係。在 DR 場景中，當 SVM 在輔助位置上線時，您必須手動更新SnapMirror雲端關係。
+
+
+
+
+* MetroCluster支援：
++
+** 當您使用ONTAP 9.12.1 GA 或更高版本時，連接到主系統時支援備份。整個備份配置會傳輸到輔助系統，以便在切換後自動繼續備份到雲端。您不需要在輔助系統上設定備份（事實上，您被禁止這樣做）。
+** 當您使用ONTAP 9.12.0 及更早版本時，僅支援從ONTAP輔助系統進行備份。
+** 目前不支援FlexGroup磁碟區的備份。
+
+
+* 資料保護卷不支援使用「*立即備份*」按鈕進行臨時磁碟區備份。
+* 不支援 SM-BC 配置。
+* ONTAP不支援從單一磁碟區到多個物件儲存的SnapMirror關係扇出；因此， NetApp Backup and Recovery 不支援此配置。
+* 目前，Amazon S3、Azure 和StorageGRID支援物件儲存上的 WORM/Compliance 模式。這被稱為 DataLock 功能，必須使用NetApp備份和復原設定來管理，而不是使用雲端提供者介面。
+
+
+
+
+== ONTAP磁碟區的還原限制
+
+這些限制適用於恢復文件和資料夾的搜尋和恢復方法以及瀏覽和恢復方法；除非特別指出。
+
+* 瀏覽和恢復一次最多可以恢復 100 個單獨的檔案。
+* 搜尋和恢復一次可以恢復 1 個檔案。
+* 使用ONTAP 9.13.0 或更高版本時，「瀏覽和還原」和「搜尋和還原」可以還原資料夾及其內的所有檔案和子資料夾。
++
+使用高於 9.11.1 但低於 9.13.0 的ONTAP版本時，還原操作只能還原選定的資料夾及其中的文件，而不會還原子資料夾或子資料夾中的檔案。
+
++
+使用 9.11.1 之前的ONTAP版本時，不支援資料夾還原。
+
+* 僅當叢集執行ONTAP 9.13.1 及更高版本時，才支援對駐留在檔案儲存中的資料進行目錄/資料夾還原。
+* 僅當叢集執行ONTAP 9.13.1 及更高版本時，才支援使用 DataLock 保護的資料的目錄/資料夾還原。
+* 目前不支援透過複製和/或本機快照進行目錄/資料夾還原。
+* 不支援從FlexGroup卷還原到FlexVol卷，或從FlexVol卷還原到FlexGroup卷。
+* 正在復原的檔案必須使用與目標磁碟區上的語言相同的語言。如果語言不一樣，您將收到一條錯誤訊息。
+* 將資料從 Azure 檔案儲存還原到StorageGRID系統時，不支援「高」還原優先權。
+* 如果您備份了 DP 卷，然後決定中斷與該卷的SnapMirror關係，則無法將檔案還原到該卷，除非您也刪除SnapMirror關係或反轉SnapMirror方向。
+* 快速恢復限制：
++
+** 目標位置必須是使用ONTAP 9.13.0 或更高版本的Cloud Volumes ONTAP系統。
+** 它不支援位於存檔儲存中的備份。
+** 僅當建立雲端備份的來源系統執行ONTAP 9.12.1 或更高版本時，才支援FlexGroup磁碟區。
+** 只有在建立雲端備份的來源系統運行ONTAP 9.11.0 或更高版本時，才支援SnapLock磁碟區。
+
+
+

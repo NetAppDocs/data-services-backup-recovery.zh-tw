@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: br-use-manage-kubernetes-clusters.html 
+keywords: discover, backup and recovery, snapcenter, kubernetes, k8s, clusters, applications, inventory 
+summary: NetApp Backup and Recovery 使您能夠發現和管理 Kubernetes 集群，以便保護集群託管的資源。 
+---
+= 管理 Kubernetes 集群
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery 使您能夠發現和管理 Kubernetes 集群，以便保護集群託管的資源。
+
+.所需的NetApp控制台角色
+組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp備份與還原存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+
+NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現 Kubernetes 工作負載"] 。
+
+
+
+== 編輯 Kubernetes 叢集訊息
+
+如果需要變更叢集名稱，您可以編輯叢集。
+
+.步驟
+. 在NetApp Backup and Recovery 中，選擇 *Inventory* > *Clusters*。
+. 在群集清單中，選擇要編輯的群集並選擇相關的操作選單。
+. 選擇*編輯集群*。
+. 對叢集名稱進行任何必要的更改。叢集名稱需要與您在發現過程中使用 Helm 命令的名稱相符。
+. 選擇*完成*。
+
+
+
+
+== 刪除 Kubernetes 集群
+
+如果您不再需要保護 Kubernetes 叢集託管的資源，則可以將其從NetApp Backup and Recovery 中刪除。刪除叢集並不會刪除叢集或其資源；它只會從NetApp控制台清單中刪除叢集。在刪除叢集之前，您需要停用保護並從NetApp Backup and Recovery 中刪除相關的應用程式。
+
+.步驟
+. 在NetApp Backup and Recovery 中，選擇 *Inventory* > *Clusters*。
+. 在群集清單中，選擇要編輯的群集並選擇相關的操作選單。
+. 選擇*刪除群集*。
+. 查看確認對話方塊中的信息，然後選擇*刪除*。
+

@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: br-use-oracle-mount-unmount.html 
+keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 使用NetApp備份和復原保護您的 Oracle 工作負載。 
+---
+= 使用NetApp Backup and Recovery 掛載和卸載 Oracle 資料庫復原點
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您需要以受控狀態存取資料庫來執行復原操作，則可能需要安裝 Oracle 資料庫復原點。
+
+
+
+== 安裝 Oracle 資料庫還原點
+
+如果您將資料庫的保護策略配置為保留存檔日誌，則可以掛載資料庫的復原點來查看對資料庫所做的所有變更的歷史記錄。
+
+.步驟
+. 從NetApp控制台選單中，選擇「保護」>「備份與復原」。
+. 選擇 Oracle 圖塊。
+. 在備份和還原選單中，選擇*Inventory*。
+. 對於清單中的 Oracle 資料庫工作負載，選擇「*檢視*」。
+. 選擇*資料庫*選單。
+. 從清單中選擇一個資料庫並選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看保護詳情*。
++
+出現該資料庫的復原點清單。
+
+. 從清單中選擇一個復原點，然後選擇「動作」圖示image:../media/icon-action.png["操作選項"]> *安裝*。
+. 在出現的對話方塊中，執行以下操作：
++
+.. 從清單中選擇應安裝恢復點的主機。
+.. 選擇「備份和復原」應使用哪個位置來安裝復原點。對於預覽版本，不支援從物件儲存掛載。
++
+顯示備份和復原應使用的安裝路徑。
+
+
+
+. 選擇*安裝*。
++
+恢復點安裝在 Oracle 主機上。
+
+
+
+
+
+== 解除安裝 Oracle 資料庫還原點
+
+當您不再需要查看對該資料庫所做的變更時，請卸載復原點。
+
+.步驟
+. 從NetApp控制台選單中，選擇「保護」>「備份與復原」。
+. 選擇 Oracle 圖塊。
+. 在備份和還原選單中，選擇*Inventory*。
+. 對於清單中的 Oracle 工作負載，選擇「*檢視*」。
+. 選擇*資料庫*選單。
+. 從清單中選擇一個資料庫並選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看保護詳情*。
++
+出現該資料庫的復原點清單。
+
+. 從清單中選擇一個復原點，然後選擇「動作」圖示image:../media/icon-action.png["操作選項"]> *卸載*。
+. 選擇“卸載”確認操作。
+

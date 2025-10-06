@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: br-use-dashboard.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, backup, recovery, dashboard, view, health, status, alerts, notifications 
+summary: 監控工作負載的健康狀況可確保您了解工作負載保護的問題並可以採取措施解決這些問題。查看備份和復原的狀態並對NetApp備份和復原儀表板上出現的任何警報做出回應。您可以查看保護摘要、復原摘要、系統摘要等。 
+---
+= 在NetApp備份和復原儀表板上查看保護健康狀況
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+監控工作負載的健康狀況可確保您了解工作負載保護的問題並可以採取措施解決這些問題。在NetApp備份和還原儀表板上查看備份和還原的狀態。您可以查看系統摘要、保護摘要、作業摘要、復原摘要等。
+
+*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員或備份和還原檢視器角色。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *儀表板*。
++
+** 發現的主機或虛擬機器的數量
+** 發現的 Kubernetes 叢集數量
+** 物件儲存上的備份目標數量
+** vCenter 數量
+** ONTAP中的儲存叢集數量
+
+
+
+
+
+
+== 查看保護摘要
+
+查看保護摘要中的以下資訊：
+
+* 受保護和不受保護的資料庫、虛擬機器和資料儲存區的總數。
++
+
+TIP: 受保護的資料庫是已指派備份策略的資料庫。不受保護的資料庫是未分配備份策略的資料庫。
+
+* 成功、出現警告或失敗的備份次數。
+* 備份服務發現的總容量以及受保護的容量和不受保護的容量。將滑鼠懸停在「*i*」圖示上即可查看詳細資訊。
+
+
+
+
+== 查看職位摘要
+
+在作業摘要中查看已完成、正在執行或失敗的作業總數。
+
+.步驟
+. 對於每個作業分佈，變更篩選器以根據天數顯示失敗、正在執行和完成的摘要，例如過去 30 天、過去 7 天、過去 24 小時或過去 1 年。
+. 透過選擇「檢視作業監控」來查看失敗、正在運作和已完成作業的詳細資訊。
+
+
+
+
+== 查看還原摘要
+
+查看還原摘要中的以下資訊：
+
+* 執行的恢復作業總數
+* 已恢復的總容量
+* 在本機、輔助和物件儲存上執行的復原作業的數量。將滑鼠懸停在圖表上即可查看詳細資訊。
+

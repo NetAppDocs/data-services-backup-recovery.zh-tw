@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: prev-vmware-policy-create.html 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
+summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+---
+= 在NetApp Backup and Recovery 中建立備份資料儲存的策略
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以建立一個策略或使用NetApp Backup and Recovery 中提供的以下預定義策略之一。
+
+[]
+====
+*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+
+====
+.開始之前
+* 如果您不想編輯預定義策略，則應該建立策略。
+* 要將備份從物件儲存移至歸檔存儲，您應該執行ONTAP 9.10.1 或更高版本，並且 Amazon Web Services 或 Microsoft Azure 應該是雲端提供者。
+* 您應該為每個雲端提供者配置存檔存取層。
+
+
+.關於此任務
+NetApp控制台中提供了以下預先定義策略：
+
+|===
+| 策略名稱 | 標籤 | 保留價值 
+
+
+ a| 
+1 年每日 LTR（長期保留）
+ a| 
+日常的
+ a| 
+366
+
+
+
+ a| 
+5 年每日 LTR
+ a| 
+日常的
+ a| 
+1830
+
+
+
+ a| 
+7 年每週 LTR
+ a| 
+每週
+ a| 
+370
+
+
+
+ a| 
+10年每月長期利率
+ a| 
+每月
+ a| 
+120
+
+|===
+.步驟
+. 在虛擬機器頁面中，從設定下拉清單中選擇*策略*。
+. 選擇*建立策略*。
+. 在「策略詳細資料」部分中，指定策略名稱。
+. 在「保留」部分中，選擇一種保留類型並指定要保留的備份數量。
+. 選擇主儲存或輔助儲存作為備份儲存來源。
+. （可選）如果您希望在一定天數後將備份從物件儲存移至檔案儲存以優化成本，請選取「將備份分層到檔案」複選框，然後輸入應在多少天後將備份存檔。
+. 選擇“*創建*”。
++
+
+NOTE: 您無法編輯或刪除與資料儲存相關聯的策略。
+
+

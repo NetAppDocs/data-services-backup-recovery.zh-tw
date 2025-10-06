@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: reference-restart-backup.html 
+keywords: backup restart, restart backup 
+summary: 在某些情況下，您可能需要重新啟動NetApp Backup and Recovery。 
+---
+= 重新啟動NetApp備份與復原
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在某些情況下，您可能需要重新啟動NetApp Backup and Recovery。
+
+NetApp備份和復原功能內建於控制台代理程式中。
+
+.步驟
+. 連接到控制台代理正在運行的 Linux 系統。
++
+[cols="25,50"]
+|===
+| 控制台代理位置 | 程式 
+
+
+| 雲端部署 | 請按照以下說明操作 https://docs.netapp.com/us-en/console-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["連接到控制台代理 Linux 虛擬機"^]取決於您使用的雲端提供者。 
+
+
+| 手動安裝 | 登入Linux系統。 
+|===
+. 輸入命令重啟服務。
++
+[cols="40,30,30"]
+|===
+| 控制台代理位置 | Docker 指令 | Podman 指令 
+
+
+| 雲端部署 | `docker restart cloudmanager_cbs` | `podman restart cloudmanager_cbs` 
+
+
+| 手動安裝（需連網） | `docker restart cloudmanager_cbs` | `podman restart cloudmanager_cbs` 
+
+
+| 無需互聯網訪問即可手動安裝 | `docker restart ds_cloudmanager_cbs_1` | `podman restart ds_cloudmanager_cbs_1` 
+|===
+

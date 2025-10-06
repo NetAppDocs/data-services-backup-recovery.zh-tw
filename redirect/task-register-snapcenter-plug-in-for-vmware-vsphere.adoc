@@ -1,0 +1,8 @@
+---
+permalink: task-register-snapCenter-plug-in-for-vmware-vsphere.html 
+redirect: data-services-backup-recovery/prev-vmware-register-snapcenter.html 
+---
+= 
+:allow-uri-read: 
+
+

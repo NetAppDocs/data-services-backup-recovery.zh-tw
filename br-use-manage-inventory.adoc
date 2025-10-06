@@ -1,0 +1,308 @@
+---
+sidebar: sidebar 
+permalink: br-use-manage-inventory.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
+summary: NetApp Backup and Recovery 讓您能夠管理工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。 
+---
+= 使用NetApp備份和復原管理 Microsoft SQL Server 庫存
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery 讓您能夠管理 Microsoft SQL Server 工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。
+
+您可以完成以下與管理庫存相關的任務：
+
+* 管理主機資訊
++
+** 暫停時間表
+** 編輯或刪除主機
+
+
+* 管理實例資訊
++
+** 將憑證與資源關聯
+** 立即啟動按需備份
+** 編輯保護設定
+
+
+* 管理資料庫資訊
++
+** 保護資料庫
+** 還原資料庫
+** 編輯保護設定
+** 立即啟動按需備份
+
+
+* 配置日誌目錄（從庫存 > 主機）。如果要在快照中備份資料庫主機的日誌，請先在NetApp Backup and Recovery 中設定日誌。有關詳細信息，請參閱link:br-start-setup.html["配置NetApp備份與復原設定"]。
+
+
+
+
+== 管理主機資訊
+
+您可以管理主機資訊以確保正確的主機受到保護。您可以查看、編輯和刪除主機資訊。
+
+*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員或備份和還原複製管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+* 配置日誌目錄。有關詳細信息，請參閱link:br-start-setup.html["配置NetApp備份與復原設定"]。
+* 暫停時間表
+* 編輯主機
+* 刪除主機
+
+
+
+
+=== 管理主機
+
+您可以管理系統中發現的主機。您可以單獨或作為一個群組來管理它們。
+
+
+TIP: 您只能管理主機列中顯示「未管理」狀態的主機。如果狀態為“Managed”，則表示該主機已由NetApp Backup and Recovery 管理。
+
+在您管理NetApp Backup and Recovery 中的主機後， SnapCenter不再管理這些主機上的資源。
+
+*所需的NetApp控制台角色* 儲存檢視器，或備份和還原超級管理員。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+.步驟
+. 從選單中選擇*庫存*。
+. 選擇一個工作負載來查看保護詳細資訊。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
+. 選擇“*主機*”標籤。
+. 選擇一個或多個主機。如果您選擇多個主機，則會出現批次操作選項，您可以在其中選擇*管理（最多 5 個主機）*。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *管理*。
+. 查看主機依賴關係：
++
+** 如果未顯示 vCenter，請選擇鉛筆圖示以新增或編輯 vCenter 詳細資訊。
+** 如果您新增了 vCenter，您也必須透過選擇「註冊 vCenter」來註冊 vCenter。
+
+
+. 選擇*驗證設定*來測試您的設定。
+. 選擇*管理*來管理主機。
+
+
+
+
+=== 暫停時間表
+
+您可以暫停計劃以停止主機的備份和還原作業。如果您需要在主機上執行維護活動，您可能需要這樣做。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇要暫停計劃的主機。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*暫停計劃*。
+. 在確認對話方塊中，選擇*暫停*。
+
+
+
+
+=== 編輯主機
+
+您可以變更 vCenter 伺服器資訊、主機註冊憑證和進階設定選項。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇要編輯的主機。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*編輯主機*。
+. 編輯主機資訊。
+. 選擇*完成*。
+
+
+
+
+=== 刪除主機
+
+您可以刪除主機資訊以停止服務收費。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇要刪除的主機。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*刪除主機*。
+. 查看確認訊息並選擇*刪除*。
+
+
+
+
+== 管理實例資訊
+
+您可以管理實例資訊以確保資源具有適當的保護憑證，並且可以透過以下方式備份資源：
+
+* 保護實例
+* 關聯憑證
+* 取消關聯憑證
+* 編輯保護
+* 立即備份
+
+
+*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+
+
+=== 保護資料庫實例
+
+您可以使用管理資源保護計畫和保留的策略將政策指派給資料庫執行個體。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇您想要查看的工作負載並選擇*查看*。
+. 選擇“*實例*”標籤。
+. 選擇實例。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*保護*。
+. 選擇一個策略或建立一個新策略。
++
+有關創建策略的詳細信息，請參閱link:br-use-policies-create.html["創建策略"]。
+
+. 提供有關您想要在備份之前和之後運行的腳本的資訊。
++
+** *預腳本*：輸入您的腳本檔案名稱和位置，以便在觸發保護操作之前自動執行它。這有助於執行保護工作流程之前需要執行的附加任務或配置。
+** *後腳本*：輸入您的腳本檔案名稱和位置，以便在保護操作完成後自動執行它。這有助於執行保護工作流程之後需要執行的附加任務或配置。
+
+
+. 提供有關如何驗證快照的資訊：
++
+** 儲存位置：選擇驗證快照的儲存位置。
+** 驗證資源：選擇要驗證的資源是在本機快照上還是在ONTAP二級儲存上。
+** 驗證計畫：選擇每小時、每天、每週、每月或每年的頻率。
+
+
+
+
+
+
+=== 將憑證與資源關聯
+
+您可以將憑證與資源關聯起來，以便進行保護。
+
+有關詳細信息，請參閱link:br-start-configure.html["配置NetApp備份和復原設置，包括憑證"] 。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇您想要查看的工作負載並選擇*查看*。
+. 選擇“*實例*”標籤。
+. 選擇實例。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*關聯憑證*。
+. 使用現有憑證或建立新憑證。
+
+
+
+
+=== 編輯保護設定
+
+您可以變更策略、建立新策略、設定時間表和設定保留設定。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇您想要查看的工作負載並選擇*查看*。
+. 選擇“*實例*”標籤。
+. 選擇實例。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*編輯保護*。
++
+有關創建策略的詳細信息，請參閱link:br-use-policies-create.html["創建策略"]。
+
+
+
+
+
+=== 立即備份
+
+現在您可以備份您的數據，以確保您的資料受到立即保護。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇您想要查看的工作負載並選擇*查看*。
+. 選擇“*實例*”標籤。
+. 選擇實例。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*立即備份*。
+. 選擇備份類型並設定計劃。
++
+有關建立臨時備份的詳細信息，請參閱link:br-use-mssql-backup.html["創建策略"]。
+
+
+
+
+
+== 管理資料庫資訊
+
+您可以透過以下方式管理資料庫資訊：
+
+* 保護資料庫
+* 還原資料庫
+* 查看保護詳細信息
+* 編輯保護設定
+* 立即備份
+
+
+
+
+=== 保護資料庫
+
+您可以變更策略、建立新策略、設定時間表和設定保留設定。
+
+*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇您想要查看的工作負載並選擇*查看*。
+. 選擇“*資料庫*”標籤。
+. 選擇資料庫。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*保護*。
++
+有關創建策略的詳細信息，請參閱link:br-use-policies-create.html["創建策略"]。
+
+
+
+
+
+=== 還原資料庫
+
+您可以恢復資料庫以確保您的資料受到保護。
+
+*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+. 選擇“*資料庫*”標籤。
+. 選擇資料庫。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*恢復*。
++
+有關恢復工作負載的信息，請參閱link:br-use-mssql-restore.html["恢復工作負載"]。
+
+
+
+
+
+=== 編輯保護設定
+
+您可以變更策略、建立新策略、設定時間表和設定保留設定。
+
+*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇您想要查看的工作負載並選擇*查看*。
+. 選擇“*資料庫*”標籤。
+. 選擇資料庫。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*編輯保護*。
++
+有關創建策略的詳細信息，請參閱link:br-use-policies-create.html["創建策略"]。
+
+
+
+
+
+=== 立即備份
+
+現在您可以備份您的 Microsoft SQL Server 執行個體和資料庫，以確保您的資料受到立即保護。
+
+*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+.步驟
+. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 選擇您想要查看的工作負載並選擇*查看*。
+. 選擇“*實例*”或“*資料庫*”選項卡。
+. 選擇實例或資料庫。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*立即備份*。
+

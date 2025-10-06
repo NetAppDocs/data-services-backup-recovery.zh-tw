@@ -1,0 +1,23 @@
+= 本地ONTAP網路需求
+:allow-uri-read: 
+
+
+如果您打算使用NetApp Backup and Recovery 在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
+
+
+
+==== 本地ONTAP網路需求
+
+* 如果叢集位於您的場所，您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
+* ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
++
+由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。
+
+
+
+
+
+==== Cloud Volumes ONTAP網路需求
+
+* 實例的安全性群組必須包含所需的入站和出站規則：具體來說，ICMP 和連接埠 11104 和 11105 的規則。這些規則包含在預先定義的安全性群組中。
+

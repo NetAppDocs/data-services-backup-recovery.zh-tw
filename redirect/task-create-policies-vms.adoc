@@ -1,0 +1,8 @@
+---
+permalink: task-create-policies-vms.html 
+redirect: data-services-backup-recovery/prev-vmware-policy-create.html 
+---
+= 
+:allow-uri-read: 
+
+

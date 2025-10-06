@@ -1,0 +1,8 @@
+---
+permalink: concept-protection-journey.html 
+redirect: data-services-backup-recovery/prev-ontap-protect-journey.html 
+---
+= 
+:allow-uri-read: 
+
+

@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: br-use-restore-kvm-vms.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
+summary: NetApp Backup and Recovery 讓您能夠恢復已透過保護策略保護的應用程式。 
+---
+= 恢復 Kubernetes 應用程式
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery 讓您能夠恢復已透過保護策略保護的應用程式。要恢復應用程序，應用程式需要至少有一個可用的恢復點。復原點由本機快照或物件儲存備份（或兩者）組成。您可以使用本機、輔助或物件儲存存檔來還原應用程式。
+
+.所需的NetApp控制台角色
+組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp備份與還原存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+
+.步驟
+. 在NetApp Backup and Recovery 中，選擇 *Inventory*。
+. 選擇一個 Kubernetes 實例，然後選擇「檢視」以查看與該實例關聯的資源。
+. 選擇“*應用程式*”標籤。
+. 在應用程式清單中，選擇要還原的應用程式並選擇相關的操作選單。
+. 選擇*查看和恢復*。
++
+出現還原點清單。
+
+. 開啟您要使用的還原點的操作選單，然後選擇*還原*。
+
+
+[discrete]
+===== 常規設定
+
+. 選擇要從中復原的來源（本機或物件儲存）。
+. 從*Cluster*清單中選擇目標群集。
+. 選擇還原目標命名空間。
++
+您可以還原到原始命名空間，也可以還原到新的命名空間。
+
+. 選擇“下一步”。
+
+
+[discrete]
+===== 資源選擇
+
+. 選擇是否要恢復與應用程式相關的所有資源，或使用篩選器選擇要復原的特定資源：
+
+
+[role="tabbed-block"]
+====
+.恢復所有資源
+--
+. 選擇*恢復所有資源*。
+. 選擇“下一步”。
+
+
+--
+.恢復特定資源
+--
+. 選擇*選擇性資源*。
+. 選擇資源過濾器的行為。如果您選擇“*包括*”，則會恢復您選擇的資源。如果您選擇“*排除*”，則您選擇的資源將不會被恢復。
+. 選擇*新增規則*來新增定義選擇資源的篩選器的規則。您至少需要一條規則來過濾資源。
++
+每個規則都可以根據資源命名空間、標籤、群組、版本和種類等標準進行過濾。
+
+. 選擇*儲存*來儲存每條規則。
+. 新增所有需要的規則後，選擇*搜尋*即可查看備份檔案中符合篩選條件的可用資源。
++
+
+NOTE: 顯示的資源是叢集上目前存在的資源。
+
+. 對結果滿意後，選擇*下一步*。
+
+
+--
+====
+[discrete]
+===== 目的地設定
+
+. 選擇恢復到預設儲存類別或其他儲存類別。
+. 或者，如果您選擇還原到不同的儲存類，請選擇一個目標儲存類別來符合每個來源儲存類別。
+. 選擇*恢復*。
+
