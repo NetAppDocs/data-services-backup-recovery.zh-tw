@@ -416,6 +416,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 +
 ** 輸入策略的名稱。
 ** 選擇最多五個時間表，通常頻率不同。
+** 對於備份到物件策略，設定 Datalock 和 Ransomware Resilience。有關 Datalock 和勒索軟體復原的詳細信息，請參閱link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
 ** 選擇“*創建*”。
 
 

@@ -59,7 +59,7 @@ NetApp Backup and Recovery 讓您能夠為每個系統（叢集）建立具有�
 
 NetApp Backup and Recovery 為您的磁碟區備份提供 DataLock 和勒索軟體保護支援。這些功能使您能夠鎖定備份檔案並對其進行掃描以偵測備份檔案上可能存在的勒索軟體。這是一個可選設置，當您希望為叢集的磁碟區備份提供額外保護時，可以在備份策略中定義它。
 
-這兩個功能都可以保護您的備份文件，以便在您的備份遭受勒索軟體攻擊時，您始終擁有一個有效的備份文件來恢復資料。滿足某些監管要求也很有幫助，在這些要求中，備份需要被鎖定並保留一段時間。啟用 DataLock 和勒索軟體保護選項後，作為NetApp Backup 和 Recovery 啟動的一部分配置的雲端儲存桶將啟用物件鎖定和物件版本控制。
+這兩個功能都可以保護您的備份文件，以便在您的備份遭受勒索軟體攻擊時，您始終擁有一個有效的備份文件來恢復資料。滿足某些監管要求也很有幫助，在這些要求中，備份需要被鎖定並保留一段時間。啟用 DataLock 和勒索軟體復原選項後，作為NetApp Backup 和 Recovery 啟動的一部分配置的雲端儲存桶將啟用物件鎖定和物件版本控制。
 
 https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-from-ransomware["請參閱 DataLock 和勒索軟體保護部落格以了解更多詳細信息"^] 。
 
@@ -124,7 +124,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 
 您可以在建立策略時啟用 DataLock 和勒索軟體保護。建立策略後，您無法啟用、修改或停用此功能。
 
-. 建立策略時，展開「DataLock 和勒索軟體保護」部分。
+. 建立策略時，展開「DataLock 和勒索軟體彈性」部分。
 . 選擇下列選項之一：
 +
 ** *無*：DataLock 保護和勒索軟體復原功能已停用。
@@ -165,7 +165,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 
 === 支援的系統和對象儲存提供者
 
-在下列公有和私有雲供應商中使用物件儲存時，您可以從下列系統在ONTAP磁碟區上啟用 DataLock 和勒索軟體保護。未來版本中將新增更多雲端提供者。
+在下列公有和私有雲供應商中使用物件儲存時，您可以從下列系統在ONTAP磁碟區上啟用 DataLock 和勒索軟體保護。
 
 [cols="55,45"]
 |===
@@ -175,10 +175,13 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 | AWS 中的Cloud Volumes ONTAP | 亞馬遜 S3 endif::aws[] ifdef::azure[] 
 
 
-| Azure 中的Cloud Volumes ONTAP | Azure Blob endif::azure[] ifdef::gcp[] endif::gcp[] 
+| Azure 中的Cloud Volumes ONTAP | Azure Blob endif::azure[] ifdef::gcp[] 
 
 
-| 本地ONTAP系統 | ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] endif::gcp[] NetApp StorageGRID 
+| Google Cloud 中的Cloud Volumes ONTAP | Google雲 endif::gcp[] 
+
+
+| 本地ONTAP系統 | ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud endif::gcp[] NetApp StorageGRID 
 |===
 
 
@@ -244,6 +247,18 @@ ifdef::azure[]
 
 
 endif::azure[]
+
+ifdef::gcp[]
+
+* 對於 Google Cloud：
++
+** 您的叢集必須執行ONTAP 9.17.1 或更高版本
+** 控制台代理可以部署在雲端或您的本地
+
+
+
+
+endif::gcp[]
 
 * 對於StorageGRID：
 +

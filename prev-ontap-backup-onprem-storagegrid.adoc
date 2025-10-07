@@ -187,12 +187,12 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 StorageGRID必須符合以下要求。查看 https://docs.netapp.com/us-en/storagegrid-117/["StorageGRID文檔"^]了解更多。
 
-有關StorageGRID的 DataLock 和勒索軟體保護要求的詳細信息，請參閱link:prev-ontap-policy-object-options.html["備份到物件策略選項"]。
+有關StorageGRID的 DataLock 和勒索軟體復原要求的詳細信息，請參閱link:prev-ontap-policy-object-options.html["備份到物件策略選項"]。
 
 支援的StorageGRID版本:: 支援StorageGRID 10.3 及更高版本。
 +
 --
-若要對備份使用 DataLock 和勒索軟體保護，您的StorageGRID系統必須執行 11.6.0.3 或更高版本。
+若要使用 DataLock 和 Ransomware Resilience 進行備份，您的StorageGRID系統必須執行 11.6.0.3 或更高版本。
 
 要將舊備份分層到雲端檔案存儲，您的StorageGRID系統必須運行 11.3 或更高版本。此外，您的StorageGRID系統必須在控制台*系統*頁面上被發現。
 
@@ -432,9 +432,9 @@ TIP: 若要建立自訂策略，請參閱link:br-use-policies-create.html["創�
 +
 *** 輸入策略的名稱。
 *** 選擇最多五個時間表，通常頻率不同。
-*** 對於備份到物件策略，設定 DataLock 和勒索軟體保護設定。有關 DataLock 和勒索軟體保護的詳細信息，請參閱link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
+*** 對於備份到物件策略，設定 DataLock 和 Ransomware Resilience 設定。有關 DataLock 和勒索軟體恢復的詳細信息，請參閱link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
 +
-如果您的叢集使用的是ONTAP 9.11.1 或更高版本，您可以選擇透過設定「DataLock 和勒索軟體保護」來保護您的備份免於刪除和勒索軟體攻擊。  _DataLock_ 保護您的備份檔案不被修改或刪除，而 _Ransomware Protection_ 會掃描您的備份檔案以查找備份檔案中勒索軟體攻擊的證據。
+如果您的叢集使用的是ONTAP 9.11.1 或更高版本，您可以選擇透過設定「DataLock」和「Ransomware Resilience」來保護您的備份免遭刪除和勒索軟體攻擊。  _DataLock_ 保護您的備份檔案不被修改或刪除，而 _Ransomware Resilience_ 會掃描您的備份檔案以查找備份檔案中勒索軟體攻擊的證據。
 
 *** 選擇“*創建*”。
 

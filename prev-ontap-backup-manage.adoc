@@ -69,7 +69,7 @@ CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更�
 . 從「*卷*」標籤中，找到要進行策略變更的捲，選擇「操作」選單image:icon-action.png["操作圖示"]在行尾，選擇*編輯備份策略*。
 . 在「編輯備份策略」頁面中，對本機快照副本、複製磁碟區和備份檔案的現有備份策略進行更改，然後選擇「下一步」。
 +
-如果在為此叢集啟動NetApp Backup and Recovery 時，在初始備份策略中為雲端備份啟用了“DataLock 和勒索軟體保護”，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp備份和復原時未啟用“DataLock 和勒索軟體保護”，您將只會看到未配置 DataLock 的其他雲端備份策略。
+如果在為此叢集啟動NetApp Backup and Recovery 時，在初始備份策略中為雲端備份啟用了 _DataLock 和 Ransomware Resilience_，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp備份和復原時未啟用“DataLock 和勒索軟體復原”，您將只會看到未配置 DataLock 的其他雲端備份策略。
 
 . 檢查此卷的備份設置，然後選擇*啟動備份*。
 
@@ -112,7 +112,7 @@ CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更�
 |===
 . 在出現的備份頁面中，對本機快照副本、複製磁碟區或備份檔案的現有備份策略進行更改，然後選擇*儲存*。
 +
-如果在為此叢集啟動NetApp Backup and Recovery 時，在初始備份策略中為雲端備份啟用了“DataLock 和勒索軟體保護”，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp備份和復原時未啟用“DataLock 和勒索軟體保護”，您將只會看到未配置 DataLock 的其他雲端備份策略。
+如果在為此叢集啟動NetApp Backup and Recovery 時，在初始備份策略中為雲端備份啟用了 _DataLock 和 Ransomware Resilience_，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp備份和復原時未啟用“DataLock 和勒索軟體復原”，您將只會看到未配置 DataLock 的其他雲端備份策略。
 
 
 
@@ -126,7 +126,7 @@ CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更�
 
 備份名稱包含時間戳，以便您可以從其他計畫備份中識別出您的按需備份。
 
-如果在為此叢集啟動NetApp Backup and Recovery 時啟用了“DataLock 和勒索軟體保護”，則按需備份也將配置 DataLock，保留期為 30 天。臨時備份不支援勒索軟體掃描。link:prev-ontap-policy-object-options.html["了解有關 DataLock 和勒索軟體保護的更多信息"^] 。
+如果在為此叢集啟動NetApp Backup and Recovery 時啟用了“DataLock 和 Ransomware Resilience”，則按需備份也將配置 DataLock，保留期為 30 天。臨時備份不支援勒索軟體掃描。link:prev-ontap-policy-object-options.html["了解有關 DataLock 和勒索軟體保護的更多信息"^] 。
 
 當您建立臨時備份時，會在來源磁碟區上建立快照。由於此快照不是正常快照計劃的一部分，因此它不會旋轉。備份完成後，您可能會想要從來源磁碟區手動刪除此快照。這將允許釋放與此快照相關的區塊。快照名稱將以 `cbs-snapshot-adhoc-`。 https://docs.netapp.com/us-en/ontap/san-admin/delete-all-existing-snapshot-copies-volume-task.html["了解如何使用ONTAP CLI 刪除快照"^] 。
 
@@ -159,7 +159,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 
 當建立目標檔案備份時以及還原備份檔案中的資料時， NetApp Backup and Recovery 會掃描您的備份檔案以尋找勒索軟體攻擊的證據。您也可以隨時執行按需掃描，以驗證物件儲存中特定備份檔案的可用性。如果您在特定磁碟區上遇到勒索軟體問題並且想要驗證該磁碟區的備份不受影響，這將很有用。
 
-只有當磁碟區備份是從具有ONTAP 9.11.1 或更高版本的系統建立的，並且在備份到物件策略中啟用了_DataLock 和勒索軟體保護_時，此功能才可用。
+只有當磁碟區備份是從具有ONTAP 9.11.1 或更高版本的系統建立的，並且在備份到物件策略中啟用了_DataLock 和 Ransomware Resilience_ 時，此功能才可用。
 
 .步驟
 . 從「卷」標籤中選擇image:icon-actions-horizontal.gif["操作圖示"]對於來源磁碟區並選擇*查看磁碟區詳細資料*。
@@ -169,7 +169,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 . 選擇*備份*以查看物件儲存中的備份檔案清單。
 . 選擇image:icon-actions-horizontal.gif["操作圖示"]對於您想要掃描勒索軟體的捲備份文件，然後點擊*掃描勒索軟體*。
 +
-勒索軟體保護列顯示掃描正在進行中。
+勒索軟體復原力列顯示掃描正在進行中。
 
 
 
@@ -224,7 +224,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 
 [NOTE]
 ====
-* 如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Protection_，則您編輯的任何策略都必須配置相同的 DataLock 設定（治理或合規性）。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和勒索軟體保護”，則現在無法啟用 DataLock。
+* 如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Resilience_，則您編輯的任何策略都必須配置相同的 DataLock 設定（治理或合規性）。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和 Ransomware Resilience”，則現在無法啟用 DataLock。
 * 在 AWS 上建立備份時，如果您在啟動NetApp Backup and Recovery 時在第一個備份策略中選擇了 _S3 Glacier_ 或 _S3 Glacier Deep Archive_，那麼該層將是編輯備份策略時唯一可用的存檔層。如果您在第一個備份策略中未選擇存檔層，那麼在編輯策略時，_S3 Glacier_ 將是您唯一的存檔選項。
 
 
@@ -270,7 +270,7 @@ endif::gcp[]
 
 [NOTE]
 ====
-* 如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Protection_，則您建立的任何其他策略都必須使用相同的 DataLock 設定（治理或合規性）進行設定。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和勒索軟體保護”，則無法建立使用 DataLock 的新策略。
+* 如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Resilience_，則您建立的任何其他策略都必須使用相同的 DataLock 設定（治理或合規性）進行設定。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和 Ransomware Resilience”，則無法建立使用 DataLock 的新政策。
 * 在 AWS 上建立備份時，如果您在啟動NetApp Backup and Recovery 時在第一個備份策略中選擇了 _S3 Glacier_ 或 _S3 Glacier Deep Archive_，則該層將是該叢集未來備份策略可用的唯一存檔層。如果您在第一個備份策略中未選擇存檔層，那麼_S3 Glacier_ 將是您未來策略的唯一存檔選項。
 
 

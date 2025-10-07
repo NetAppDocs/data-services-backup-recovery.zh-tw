@@ -116,7 +116,7 @@ image:screenshot_backup_edit_yearly_snap_delete.png["進階設定頁面中年度
 
 預設啟用勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照副本上。您可以使用「進階設定」頁面上的選項在最新快照副本上啟用或停用勒索軟體掃描。如果啟用它，則預設每 7 天執行一次掃描。
 
-有關 DataLock 和勒索軟體保護選項的詳細信息，請參閱link:prev-ontap-policy-object-options.html["DataLock 和勒索軟體保護選項"]。
+有關 DataLock 和勒索軟體恢復選項的詳細信息，請參閱link:prev-ontap-policy-object-options.html["DataLock 和勒索軟體復原選項"]。
 
 您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。
 

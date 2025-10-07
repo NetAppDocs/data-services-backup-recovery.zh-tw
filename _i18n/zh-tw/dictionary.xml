@@ -1101,7 +1101,6 @@
   <block id="6e32536aeb87365f67ba5a96c664e861" category="paragraph-title">恢復到這些點</block>
   <block id="4acf582ba1791858c42c901e8d64f664" category="paragraph">您可以將資料恢復到原始位置；在此私人預覽版中不提供恢復到備用位置的功能。</block>
   <block id="485775104c27dcbdf8d49f22f897f823" category="paragraph-title">從物件儲存中復原的注意事項</block>
-  <block id="6f558593ad91ef445cb81ae10b4fb10a" category="paragraph">如果您選擇物件儲存中的備份文件，且該備份的勒索軟體保護處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體保護），系統會提示您在復原資料之前對備份檔案執行額外的完整性檢查。我們建議您執行掃描。</block>
   <block id="fb1b557500e8d14608e76a0b93711e4c" category="admonition">您將需要向雲端提供者支付額外的出口費用才能存取備份文件的內容。</block>
   <block id="10f4565a78ebd1822c60902cbb077e98" category="section-title">恢復工作負載的工作原理</block>
   <block id="68976f4a60a7e436e5b5aff0b5dabf41" category="paragraph">恢復工作負載時，會發生以下情況：</block>
@@ -2242,7 +2241,6 @@
   <block id="9fece9ac1c7d50fbf1a1498b93cbeb15" category="inline-link">Google Cloud BigQuery 服務</block>
   <block id="a9e0f848e6e51d1ca02fdbb4bf91773a" category="list-text">在 Google 中，部署了一個新的 bucket，並且<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>在帳戶/項目層級進行配置。 endif::gcp[]</block>
   <block id="705d7d5204c001ada8d7869c065a6a70" category="list-text">如果您打算從已移動到檔案物件儲存的備份檔案中恢復磁碟區數據，則雲端提供者會收取額外的每 GiB 檢索費用和每個請求費用。</block>
-  <block id="36dc906951fe63e88433bc318e4fccd5" category="list-text">如果您打算在恢復磁碟區資料的過程中掃描備份檔案中的勒索軟體（如果您為雲端備份啟用了 DataLock 和勒索軟體保護），那麼您還將產生來自雲端提供者的額外出口成本。</block>
   <block id="e1b4a0ddcd3124f71fd5c65649282433" category="paragraph">*服務費*</block>
   <block id="40ff88020bcb9f0e42545b8535db30db" category="paragraph">服務費用支付給NetApp ，涵蓋建立物件儲存備份的成本以及從這些備份中還原磁碟區或檔案的成本。您只需為物件儲存中保護的資料付費，該費用根據備份到物件儲存的ONTAP磁碟區的來源邏輯使用容量（ ONTAP效率之前）計算。此容量也稱為前端兆位元組 (FETB)。</block>
   <block id="9b84371e23a14f93e2d9314a2599ac9a" category="admonition">對於 Microsoft SQL Server，當您啟動將快照複製到輔助ONTAP目標或物件儲存時，會產生費用。</block>
@@ -2647,7 +2645,6 @@
   <block id="ec32f8eb7058323c02b13f59dd447a40" category="admonition">如果您選擇了現有的儲存桶，加密資訊已經可用，因此您現在無需輸入。</block>
   <block id="2283ed1c2d2204e889a93d07486e3a8b" category="list-text">*備份策略*：選擇現有的備份到物件儲存策略或建立一個。</block>
   <block id="37c981be270bef0d7503a46e3ee55d35" category="admonition">若要在啟動備份之前建立自訂策略，請參閱<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block>。</block>
-  <block id="9f933f8dd9e00607a2c65e19d903a5f0" category="list-text">對於備份到物件策略，設定 DataLock 和勒索軟體保護設定。有關 DataLock 和勒索軟體保護的詳細信息，請參閱<block ref="7a234b4add653baca92b7b8d8c25d2af" category="inline-link-macro-rx"></block>。</block>
   <block id="cd6dcf8587329d56e9a684f1fcc33d0e" category="list-text">*將現有的 Snapshot 副本匯出到物件儲存作為備份副本*：如果此系統中磁碟區的任何本機 Snapshot 副本與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相匹配，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
   <block id="1637762bf8b62862e92c5779dd292872" category="section-title">檢查您的選擇</block>
   <block id="6ff9dd41947ac05f6484a120fb4310b2" category="paragraph">這是審查您的選擇並在必要時進行調整的機會。</block>
@@ -2870,7 +2867,6 @@
   <block id="6c143468a72ae48b392ccaf6bfdab3dd" category="section-title">編輯單一磁碟區上的備份設置</block>
   <block id="6783230016acdea3f2efff067c9f0ae2" category="list-text">從「*卷*」標籤中，找到要進行策略變更的捲，選擇「操作」選單<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>在行尾，選擇*編輯備份策略*。</block>
   <block id="6ec852eec1715258286ed981ae615b37" category="list-text">在「編輯備份策略」頁面中，對本機快照副本、複製磁碟區和備份檔案的現有備份策略進行更改，然後選擇「下一步」。</block>
-  <block id="430e2fadb00ad3942d5507e8f1031301" category="paragraph">如果在為此叢集啟動NetApp Backup and Recovery 時，在初始備份策略中為雲端備份啟用了“DataLock 和勒索軟體保護”，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp備份和復原時未啟用“DataLock 和勒索軟體保護”，您將只會看到未配置 DataLock 的其他雲端備份策略。</block>
   <block id="ed3685aa06ca7db640e77339c669a75e" category="section-title">編輯多個卷上的備份設置</block>
   <block id="90d35772fb2c0d1903fd5cb179fca792" category="paragraph">如果您想在多個磁碟區上使用相同的備份設置，您可以同時在多個磁碟區上啟用或編輯備份設定。您可以選擇沒有備份設定、只有快照設定、只有備份到雲端設定等的捲，並使用不同的備份設定對所有這些磁碟區進行批次變更。</block>
   <block id="254b8ee80daf8cdfb1e85c4784ce11e4" category="paragraph">當使用多個磁碟區時，所有磁碟區必須具有以下共同特徵：</block>
@@ -2897,7 +2893,6 @@
   <block id="9097ffd4045af3a3ae322b0f719b20c9" category="paragraph">您可以建立臨時快照副本或備份到磁碟區的物件。您無法建立臨時複製磁碟區。</block>
   <block id="75f0ab2aa06321fc5a92c205273b43b6" category="paragraph">備份名稱包含時間戳，以便您可以從其他計畫備份中識別出您的按需備份。</block>
   <block id="6ee3062ac668cf28f71bf489fd741bcd" category="inline-link-macro">了解有關 DataLock 和勒索軟體保護的更多信息</block>
-  <block id="d54659a6758be0221155c241b9d69600" category="paragraph">如果在為此叢集啟動NetApp Backup and Recovery 時啟用了“DataLock 和勒索軟體保護”，則按需備份也將配置 DataLock，保留期為 30 天。臨時備份不支援勒索軟體掃描。<block ref="17481ecd9087b2947e2c31f934c4a716" category="inline-link-macro-rx"></block> 。</block>
   <block id="34654042ecfc4226d89a0eec5901d43e" category="inline-link">了解如何使用ONTAP CLI 刪除快照</block>
   <block id="4786401e865ef261720869019898fa6c" category="paragraph">當您建立臨時備份時，會在來源磁碟區上建立快照。由於此快照不是正常快照計劃的一部分，因此它不會旋轉。備份完成後，您可能會想要從來源磁碟區手動刪除此快照。這將允許釋放與此快照相關的區塊。快照名稱將以<block ref="3fbd2a9ee3863b8841029b21d6bf8e89" prefix=" " category="inline-code"></block>。<block ref="7e565776b86561f26a3208af24c76dc9" category="inline-link-rx"></block> 。</block>
   <block id="a7ddc69bf51887dfb9d3f72e57328bff" category="admonition">資料保護卷不支援按需卷備份。</block>
@@ -2910,11 +2905,9 @@
   <block id="b1cb92c2a23b4cbaa76face717d899cf" category="list-text">選擇「*快照*」、「*複製*」或「*備份*」以查看每種備份類型的所有備份檔案清單。</block>
   <block id="c3da5f4c5e9e366bce0761355a7a32b9" category="section-title">對物件儲存中的磁碟區備份執行勒索軟體掃描</block>
   <block id="76d4ec74983530f8007b9dfb9961f585" category="paragraph">當建立目標檔案備份時以及還原備份檔案中的資料時， NetApp Backup and Recovery 會掃描您的備份檔案以尋找勒索軟體攻擊的證據。您也可以隨時執行按需掃描，以驗證物件儲存中特定備份檔案的可用性。如果您在特定磁碟區上遇到勒索軟體問題並且想要驗證該磁碟區的備份不受影響，這將很有用。</block>
-  <block id="64cd9938ff73165ac39f233fdf80919a" category="paragraph">只有當磁碟區備份是從具有ONTAP 9.11.1 或更高版本的系統建立的，並且在備份到物件策略中啟用了_DataLock 和勒索軟體保護_時，此功能才可用。</block>
   <block id="5f10de94b506d8ff164c981c019bd24a" category="paragraph">將顯示該卷的詳細資訊。</block>
   <block id="aa132131d3096dd036d6592cccc8f815" category="list-text">選擇*備份*以查看物件儲存中的備份檔案清單。</block>
   <block id="faaa44db37f803e5f9607b2a2e619de9" category="list-text">選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於您想要掃描勒索軟體的捲備份文件，然後點擊*掃描勒索軟體*。</block>
-  <block id="6a70c24614f677351a22938d3dc908b6" category="paragraph">勒索軟體保護列顯示掃描正在進行中。</block>
   <block id="7ce389d951938726d9655f7501c33bfb" category="section-title">管理與來源磁碟區的複製關係</block>
   <block id="b75f2bb92b2f898b4d1052fdc12c5b0d" category="paragraph">在兩個系統之間設定資料複製後，您可以管理資料複製關係。</block>
   <block id="552d9d27b17eb9bf973d8bf7569a67d7" category="list-text">從「卷」標籤中選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於來源磁碟區並選擇*複製*選項。您可以看到所有可用的選項。</block>
@@ -2940,7 +2933,6 @@
   <block id="333d93ae30f96072d9533be9257871fc" category="paragraph">選擇操作後，控制台將更新關係。</block>
   <block id="e5c31b44cc452f945aec38b328ab97da" category="section-title">編輯現有的備份到雲端策略</block>
   <block id="27adbc6c374272e79f9592a18fa6b31c" category="paragraph">您可以變更目前套用至系統中的磁碟區的備份策略的屬性。更改備份策略會影響所有使用該策略的現有磁碟區。</block>
-  <block id="9b7e554d688d20c7e30bb0f27e58f6d9" category="list-text">如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Protection_，則您編輯的任何策略都必須配置相同的 DataLock 設定（治理或合規性）。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和勒索軟體保護”，則現在無法啟用 DataLock。</block>
   <block id="393cdac7e3ba811fae25e3e3bbfa2f9e" category="list-text">在 AWS 上建立備份時，如果您在啟動NetApp Backup and Recovery 時在第一個備份策略中選擇了 _S3 Glacier_ 或 _S3 Glacier Deep Archive_，那麼該層將是編輯備份策略時唯一可用的存檔層。如果您在第一個備份策略中未選擇存檔層，那麼在編輯策略時，_S3 Glacier_ 將是您唯一的存檔選項。</block>
   <block id="fb74ece6972051de48e476af9e1e3b61" category="list-text">從*Volumes*選項卡中，選擇*Backup Settings*。</block>
   <block id="03e9f860a103616b43466e85b0aa6489" category="list-text">在「備份設定」頁面中，選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於您想要變更策略設定的系統，然後選擇*管理策略*。</block>
@@ -2958,7 +2950,6 @@
   <block id="704cbb6a4b98702a1ff1e784b08e0bc1" category="paragraph">當您為系統啟用NetApp Backup and Recovery 時，您最初選擇的所有磁碟區都會使用您定義的預設備份策略進行備份。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，您可以為該叢集建立其他策略並將這些原則指派給其他磁碟區。</block>
   <block id="ebef09b04d71dbdf490084193f232a2f" category="inline-xref">將策略應用於該系統中的捲</block>
   <block id="49411695d7d9015ad07ddd38f74e331d" category="paragraph">如果要將新的備份策略套用到系統中的某些卷，首先需要將備份策略新增到系統中。然後你可以<block ref="e642665ab169685987c0c09bf6eca490" category="inline-xref-macro-rx"></block>。</block>
-  <block id="a2377b859451aa0b34ec6b71f9de4e4b" category="list-text">如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Protection_，則您建立的任何其他策略都必須使用相同的 DataLock 設定（治理或合規性）進行設定。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和勒索軟體保護”，則無法建立使用 DataLock 的新策略。</block>
   <block id="33728a43a58c6c49f30ad0f6afe6cb1a" category="list-text">在 AWS 上建立備份時，如果您在啟動NetApp Backup and Recovery 時在第一個備份策略中選擇了 _S3 Glacier_ 或 _S3 Glacier Deep Archive_，則該層將是該叢集未來備份策略可用的唯一存檔層。如果您在第一個備份策略中未選擇存檔層，那麼_S3 Glacier_ 將是您未來策略的唯一存檔選項。</block>
   <block id="32c508c6d8137a2e6d45fe3a47abfd20" category="list-text">在「備份設定」頁面中，選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於您想要新增策略的系統，然後選擇*管理策略*。</block>
   <block id="424f2e0883bc9947bd7d3e3b3a3981a1" category="list-text">從「管理策略」頁面中，選擇「新增策略」。</block>
@@ -3322,10 +3313,8 @@
   <block id="08cdeb7ce64fda06111111c8fea66510" category="section-title">準備StorageGRID作為備份目標</block>
   <block id="ef58a6d55100435043d388bfdf72c624" category="paragraph">StorageGRID必須符合以下要求。查看<block ref="babf3072d9403ab5e1ffb9e4bb9a27cb" category="inline-link-rx"></block>了解更多。</block>
   <block id="45167bc71bd7fe459b6a35c45730024a" category="inline-link-macro">備份到物件策略選項</block>
-  <block id="0532a83813f81bdfa46c4f259d1e347e" category="paragraph">有關StorageGRID的 DataLock 和勒索軟體保護要求的詳細信息，請參閱<block ref="bbc9f622da531392bbcdbdc340d647a2" category="inline-link-macro-rx"></block>。</block>
   <block id="793640ee72b7150dff71a288a821c67c" category="list-text">支援的StorageGRID版本</block>
   <block id="8a456872aea50fd247449bd552854586" category="list-text">支援StorageGRID 10.3 及更高版本。</block>
-  <block id="22c37949858e0a6877e1770be16db62b" category="paragraph">若要對備份使用 DataLock 和勒索軟體保護，您的StorageGRID系統必須執行 11.6.0.3 或更高版本。</block>
   <block id="a3c3d46eb7dece1ea66293e26e27c747" category="paragraph">要將舊備份分層到雲端檔案存儲，您的StorageGRID系統必須運行 11.3 或更高版本。此外，您的StorageGRID系統必須在控制台*系統*頁面上被發現。</block>
   <block id="de84af939f41492b1264ce8c3df573a9" category="paragraph">對於使用者檔案存儲，需要管理節點 IP 存取。</block>
   <block id="a99287c7990930f58a55c1e2dba88d64" category="paragraph">始終需要網關 IP 存取。</block>
@@ -3374,7 +3363,6 @@
   <block id="cde236f353f324c0446bb3b8cfb426fc" category="list-text">*網路*：選擇要備份的磁碟區所在的ONTAP叢集中的 IP 空間。此 IP 空間的群集間 LIF 必須具有出站網際網路存取權限（當控制台代理安裝在「暗站」時不需要）。</block>
   <block id="7f62bdecf08bb9ff2fd358b915cc37e0" category="admonition">選擇正確的 IP 空間可確保NetApp Backup and Recovery 可以建立從ONTAP到StorageGRID物件儲存的連線。</block>
   <block id="29ec9eea05a4e021ec0af54e27e66224" category="list-text">*備份策略*：選擇現有的備份到物件儲存策略或建立一個。</block>
-  <block id="6c08aad63d31acac8bc5248c2bfd34f2" category="paragraph">如果您的叢集使用的是ONTAP 9.11.1 或更高版本，您可以選擇透過設定「DataLock 和勒索軟體保護」來保護您的備份免於刪除和勒索軟體攻擊。  _DataLock_ 保護您的備份檔案不被修改或刪除，而 _Ransomware Protection_ 會掃描您的備份檔案以查找備份檔案中勒索軟體攻擊的證據。</block>
   <block id="b1e78dfdd8adc3005cff56ffd24b2af1" category="inline-xref">了解如何配置您的系統以實現此功能</block>
   <block id="43f4c1811765abf291168aea7f16a205" category="paragraph">如果您的叢集使用的是ONTAP 9.12.1 或更高版本，而您的StorageGRID系統使用的是 11.4 或更高版本，您可以選擇在一定天數後將舊備份分層到公有雲存檔層。目前支援 AWS S3 Glacier/S3 Glacier Deep Archive 或 Azure Archive 儲存層。<block ref="bf8884094e353a761ed88341de6eaf54" category="inline-xref-macro-rx"></block> 。</block>
   <block id="1f56b8f69150cdfb9829cf942c51a8d3" category="list-text">*分層備份到公有雲*：選擇您想要分層備份的雲端提供者並輸入提供者詳細資料。</block>
@@ -3576,8 +3564,6 @@
   <block id="906f0c83e11579cff84ef8bb2602e8ee" category="list-text">選擇“*停用*”以在來源系統上保留年度快照。</block>
   <block id="32a5c26baa0363b9a3a4a05896b16fd9" category="section-title">啟用或停用勒索軟體掃描</block>
   <block id="c8677ee89c299128bf83f5ed7ce0b535" category="paragraph">預設啟用勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照副本上。您可以使用「進階設定」頁面上的選項在最新快照副本上啟用或停用勒索軟體掃描。如果啟用它，則預設每 7 天執行一次掃描。</block>
-  <block id="645f12199dae2b82a1985743cbc3e647" category="inline-link-macro">DataLock 和勒索軟體保護選項</block>
-  <block id="e3cb94b1267b7b2d68735e1f6faa1a1c" category="paragraph">有關 DataLock 和勒索軟體保護選項的詳細信息，請參閱<block ref="454da2f6f509194a0a53a67aea76cc4c" category="inline-link-macro-rx"></block>。</block>
   <block id="823af9cc6541e49164fb4b1c88f90a63" category="paragraph">您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。</block>
   <block id="c000460328529e6cc52a2a89e3a697dc" category="admonition">根據雲端提供者的不同，啟用勒索軟體掃描將產生額外費用。</block>
   <block id="564c5feaa7f154c02296acfa87cd72f2" category="paragraph">計劃的勒索軟體掃描僅在最新的快照副本上運行。</block>
@@ -3608,7 +3594,6 @@
   <block id="182fb5e3aa2936674fedf15788f2264b" category="paragraph">年度備份在傳輸到物件儲存後會自動從來源系統中刪除。可以在系統的進階設定頁面中變更此預設行為。</block>
   <block id="051658be4ba182ab30138c3d0fa07f2b" category="section-title">DataLock 和勒索軟體保護選項</block>
   <block id="7dc66b1cfd01d4c00dc9fb5720da9bd7" category="paragraph">NetApp Backup and Recovery 為您的磁碟區備份提供 DataLock 和勒索軟體保護支援。這些功能使您能夠鎖定備份檔案並對其進行掃描以偵測備份檔案上可能存在的勒索軟體。這是一個可選設置，當您希望為叢集的磁碟區備份提供額外保護時，可以在備份策略中定義它。</block>
-  <block id="27305cd8e776fa36eb96839c9e5d9bc9" category="paragraph">這兩個功能都可以保護您的備份文件，以便在您的備份遭受勒索軟體攻擊時，您始終擁有一個有效的備份文件來恢復資料。滿足某些監管要求也很有幫助，在這些要求中，備份需要被鎖定並保留一段時間。啟用 DataLock 和勒索軟體保護選項後，作為NetApp Backup 和 Recovery 啟動的一部分配置的雲端儲存桶將啟用物件鎖定和物件版本控制。</block>
   <block id="f45d40d2c3943b450f3c1c0ff3ac37f4" category="inline-link">請參閱 DataLock 和勒索軟體保護部落格以了解更多詳細信息</block>
   <block id="9119c5c13d4a250d1b7c806e437d4713" category="paragraph"><block ref="340a0b0e8509133a13996f4ac0d4f8c7" category="inline-link-rx"></block> 。</block>
   <block id="86fef274eb09e789513af0922e579b5a" category="inline-link">ONTAP提供的反勒索軟體保護</block>
@@ -3639,7 +3624,6 @@
   <block id="b31b5b22923a2871f33f5a4b77d6be83" category="paragraph">DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能會影響您的儲存成本，因為您的備份檔案將在物件儲存中保存更長時間。</block>
   <block id="010f0e105bcb6f73ab6c815fef84dd1c" category="section-title">啟用 DataLock 和勒索軟體保護</block>
   <block id="9f2f26447f0350dee8acbf4adae7b4e0" category="paragraph">您可以在建立策略時啟用 DataLock 和勒索軟體保護。建立策略後，您無法啟用、修改或停用此功能。</block>
-  <block id="5a97c9e0493d72ea10717d6f4f552f9d" category="list-text">建立策略時，展開「DataLock 和勒索軟體保護」部分。</block>
   <block id="a7a08622ee5c8019b57354b99b7693b2" category="list-text">選擇下列選項之一：</block>
   <block id="3f15918939b0d7ada1ed6774a4499a87" category="list-text">*無*：DataLock 保護和勒索軟體復原功能已停用。</block>
   <block id="7acb96413bf2eea8adc563517b923bc2" category="list-text">*已解鎖*：DataLock 保護和勒索軟體復原功能已啟用。具有特定權限的使用者可以在保留期內覆蓋或刪除受保護的備份檔案。</block>
@@ -3660,11 +3644,8 @@
   <block id="988f2ccf804886f5ab1cf1cc72917abe" category="list-text">當啟動勒索軟體掃描時，將驗證兩個物件版本的校驗和並進行比較。如果校驗和不一致，則表示偵測到了潛在的勒索軟體。</block>
   <block id="1364637fafeabf3ff1cd69cc9cda6bcf" category="list-text">恢復過程涉及恢復到最後一個已知的良好副本。</block>
   <block id="b3f1b65a3c7ad581029671863ce84f3e" category="section-title">支援的系統和對象儲存提供者</block>
-  <block id="334396ea69bb97b48449e4120f07c04a" category="paragraph">在下列公有和私有雲供應商中使用物件儲存時，您可以從下列系統在ONTAP磁碟區上啟用 DataLock 和勒索軟體保護。未來版本中將新增更多雲端提供者。</block>
   <block id="49930e1d4376887999c072bd91775525" category="cell">備份檔案目標 ifdef::aws[]</block>
   <block id="8889077573d45691231050324d93b6a9" category="cell">亞馬遜 S3 endif::aws[] ifdef::azure[]</block>
-  <block id="a7333071b8d492fc2184540602ce3b9e" category="cell">Azure Blob endif::azure[] ifdef::gcp[] endif::gcp[]</block>
-  <block id="da3a611050815415e3372ad88f95d3e7" category="cell">ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] endif::gcp[] NetApp StorageGRID</block>
   <block id="f3ec603ab9c35660f371c0fc057b7fd1" category="list-text">您的叢集必須執行ONTAP 9.11.1 或更高版本</block>
   <block id="6eccb1b4300ae9587c674c0708c7ee79" category="list-text">控制台代理可以部署在雲端或您的本地</block>
   <block id="685a143757efe250c8c69c08616cbe33" category="list-text">以下 S3 權限必須是提供控制台代理權限的 IAM 角色的一部分。它們位於資源「arn:aws:s3:::netapp-backup-*」的「backupS3Policy」部分：</block>
@@ -3771,7 +3752,6 @@
   <block id="72d6d7225fde1dafbc05317df9f5b442" category="paragraph">*不同備份方法的比較*</block>
   <block id="8d4622541c56b47641b741cdbe4f8ddf" category="paragraph">下表顯示了三種備份方法的總體比較。雖然物件儲存空間通常比本地磁碟儲存便宜，但如果您認為您可能會頻繁地從雲端恢復數據，那麼雲端提供者的出口費用可能會減少您的一些節省。您需要確定需要多久從雲端中的備份檔案還原資料。</block>
   <block id="15d3cc7c4c3352d19d2b3b84f9c0fc46" category="inline-link-macro">了解有關 DataLock 和勒索軟體保護以及檔案儲存設定的更多信息</block>
-  <block id="f5b750ba82fcc6a40a03973f83147ff8" category="paragraph">除了此標準之外，如果您使用 DataLock 和勒索軟體保護功能，雲端儲存還可以提供額外的安全性選項，並且透過為舊備份檔案選擇存檔儲存類別可以節省額外的成本。<block ref="0c861116d28daa1fe6085df5c3fb8bde" category="inline-link-macro-rx"></block> 。</block>
   <block id="ddb99ca7cced831bad7ef70c4a866fbf" category="cell">備份速度</block>
   <block id="e1cc17541eaf2c504e414ddff25f2eab" category="cell">備份成本</block>
   <block id="ffe53eb9663918ea5038c796f2cb2f26" category="cell">恢復速度</block>
@@ -3973,7 +3953,6 @@
   <block id="1854bdaf3ded217ffdff52794b6c84fc" category="paragraph">除了儲存 Snapshot 副本和複製磁碟區所需的磁碟空間外，建立 Snapshot 副本或複製磁碟區是免費的。</block>
   <block id="dd49bc28723be22ffdd3f04630c122df" category="paragraph">由於NetApp Backup and Recovery 保留了來源磁碟區的儲存效率，因此您需要向雲端提供者物件儲存支付ONTAP效率之後的資料費用（針對應用程式重複資料刪除和壓縮後的較少量的資料）。</block>
   <block id="fedaab8c05c476a14c09d3ad41bf9a22" category="list-text">在 Google 中，部署了一個新的 bucket，並且<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>在帳戶/項目層級進行配置。</block>
-  <block id="832fd1c3441239683a98428c909ca909" category="list-text">如果您打算在恢復磁碟區資料的過程中掃描備份檔案中的勒索軟體（如果您已為雲端備份啟用了 DataLock 和勒索軟體保護），那麼您還將產生來自雲端提供者的額外出口成本。</block>
   <block id="060b6e252a88502e803f6fdc3115b5d9" category="paragraph">服務費用支付給NetApp ，涵蓋建立物件儲存備份的成本以及從這些備份中還原磁碟區或檔案的成本。您只需為物件儲存中保護的資料付費，該費用會根據備份到物件儲存的ONTAP磁碟區的來源邏輯使用容量（ ONTAP效率之前）計算。此容量也稱為前端兆位元組 (FETB)。</block>
   <block id="e71616090dfab7da8f9d13556cae146a" category="paragraph">有三種方式可以支付備份服務費用。第一個選項是從您的雲端供應商訂閱，這樣您就可以按月付費。第二種選擇是簽訂年度合約。第三種選擇是直接從NetApp購買授權。</block>
   <block id="38692e39e588de5b1294ee4cca656080" category="list-text">*BYOL*：從NetApp購買的許可證，可與任何雲端提供者一起使用。</block>
@@ -4017,7 +3996,6 @@
   <block id="27f4e7945442348457ec28cf1aa6eefd" category="paragraph">一旦達到某個類別或間隔的最大備份數量，較舊的備份就會被刪除，以便您始終擁有最新的備份（因此過時的備份不會繼續佔用空間）。</block>
   <block id="c1855e2778d4090a158417283de29dbc" category="admonition">資料保護磁碟區備份的保留期與來源SnapMirror關係中定義的保留期相同。如果您願意，可以使用 API 來變更此設定。</block>
   <block id="01ec9d3adb6b85775aeeda0d6d533e54" category="section-title">備份檔案保護設定</block>
-  <block id="84a5e2f266b193f6638a8ba2e9333a1b" category="paragraph">如果您的叢集使用ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份免於刪除和勒索軟體攻擊。每個備份策略都提供了一個「DataLock 和勒索軟體保護」部分，可以在特定時間段（即「保留期」）內應用於您的備份檔案。</block>
   <block id="8756c7c925830c8c39d9804961d7d40b" category="list-text">_DataLock_ 保護您的備份檔案不被修改或刪除。</block>
   <block id="c73b2d161daabc3a9a53d6dd0c4df263" category="list-text">_勒索軟體保護_會在建立備份檔案時以及恢復備份檔案中的資料時掃描您的備份檔案以查找勒索軟體攻擊的證據。</block>
   <block id="e3414eaea3759c338f18072fbecaa19f" category="paragraph">預設啟用計劃的勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的 Snapshot 副本上。可以停用計劃掃描以降低成本。您可以使用「進階設定」頁面上的選項在最新的 Snapshot 副本上啟用或停用計劃的勒索軟體掃描。如果啟用它，則預設每週執行一次掃描。您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。</block>
@@ -4128,7 +4106,6 @@
   <block id="00e49e17372cc54391186a012dcec566" category="list-text">從「瀏覽和復原」部分，選擇「恢復磁碟區」。</block>
   <block id="7eccde2a14cd84f78dde1af09cf04af9" category="list-text">在「選擇來源」頁面中，導覽至要還原的磁碟區的備份檔案。選擇具有要還原的日期/時間戳記的*系統*、*磁碟區*和*備份*檔案。</block>
   <block id="c884a3e70e8bce1d15f993ac9cb50a73" category="paragraph">*位置*列顯示備份檔案（快照）是*本機*（來源系統上的 Snapshot 副本）、*輔助*（輔助ONTAP系統上的複製磁碟區）還是*物件儲存*（物件儲存中的備份檔案）。選擇您想要恢復的檔案。</block>
-  <block id="e924abd4626456c317eb17ea931d146d" category="paragraph">請注意，如果您選擇物件儲存中的備份文件，並且該備份的勒索軟體復原功能處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體保護），則會提示您在復原資料之前對備份檔案執行額外的勒索軟體掃描。我們建議您掃描備份檔案以尋找勒索軟體。  （您將需要向雲端提供者支付額外的出口費用才能存取備份檔案的內容。）</block>
   <block id="ec4f513ca338429ab9e381b2d0283d04" category="list-text">在「選擇目標」頁面中，選擇要恢復磁碟區的*系統*。</block>
   <block id="4f77ec7cb4d938e815d515d86daf431e" category="list-text">從物件儲存還原備份檔案時，如果您選擇本機ONTAP系統且尚未配置與物件儲存的叢集連接，系統將提示您輸入其他資訊：</block>
   <block id="8e494bd03a27f49a3a42559fa89f035a" category="list-text">從 Amazon S3 還原時，選擇ONTAP叢集中目標磁碟區所在的 IP 空間，輸入您建立的使用者的存取金鑰和金鑰，以授予ONTAP叢集對 S3 儲存桶的存取權限，並可選擇選擇私有 VPC 端點以進行安全資料傳輸。</block>
@@ -4178,7 +4155,6 @@
   <block id="a4d28c95dc9a398dc52d0e10b7e6526a" category="list-text">選擇“*下一步*”，將顯示磁碟區備份中的資料夾和檔案清單。</block>
   <block id="cbb08f72335795850ccfc691c171d12b" category="paragraph">如果您要從位於檔案儲存層的備份文件還原資料夾或文件，則可以選擇還原優先權。</block>
   <block id="85a7bc53afc77150588eb7e96fff336f" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block> 。<block ref="bf09a0f29ffa1dc0ee63da51e58f16ef" category="inline-link-macro-rx"></block> 。<block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block> 。Google Archive 儲存層中的備份檔案幾乎可以立即恢復，並且不需要恢復優先順序。</block>
-  <block id="7a0b16fb94c5a9c41aa35fd38d0fe618" category="paragraph">如果備份檔案的勒索軟體保護功能處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體保護），則會提示您在復原資料之前對備份檔案執行額外的勒索軟體掃描。我們建議您掃描備份檔案以尋找勒索軟體。  （您將需要向雲端提供者支付額外的出口費用才能存取備份檔案的內容。）</block>
   <block id="fa7edcf4876f70f9cdbd4ded39683873" category="list-text">在「選擇項目」頁面中，選擇要復原的資料夾或文件，然後選擇「繼續」。為了幫助您找到該物品：</block>
   <block id="7a08363d26933e1e3210eaeb8dcd46e6" category="list-text">如果看到資料夾或檔案名，您可以選擇它。</block>
   <block id="660646010d4764a96991255190b6923f" category="list-text">您可以選擇搜尋圖示並輸入資料夾或檔案的名稱以直接導航到該項目。</block>
@@ -4991,4 +4967,32 @@
   <block id="74443ec40597d5044894672e880e4cb8" category="summary">NetApp Backup and Recovery 採用 IAM 角色來管理每個使用者對特定功能和操作的存取權。</block>
   <block id="d8242f460ba07545cc4fc280abc24dfd" category="inline-link">NetApp控制台中的NetApp備份與復原角色</block>
   <block id="b7ce2fa7e7dfbfcf006c177bd9507fe6" category="paragraph">若要了解位於NetApp Backup and Recovery 特定的 IAM 角色，請參閱<block ref="00765778411880d6fabcf7f493ef0db6" category="inline-link-rx"></block>。</block>
+  <block id="88e3d91fca73ce1aaac6067b9552277d" category="paragraph">如果您選擇物件儲存中的備份文件，且該備份的勒索軟體保護處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體復原），系統會提示您在復原資料之前對備份檔案執行額外的完整性檢查。我們建議您執行掃描。</block>
+  <block id="e44d61516574d94ce56af3468723e18a" category="list-text">如果您打算在恢復磁碟區資料的過程中掃描備份檔案中的勒索軟體（如果您為雲端備份啟用了 DataLock 和勒索軟體復原功能），那麼您還將產生來自雲端提供者的額外出口成本。</block>
+  <block id="72c9277e73379a7669bea5aea529fe2e" category="list-text">對於備份到物件策略，設定 DataLock 和 Ransomware Resilience 設定。有關 DataLock 和勒索軟體恢復的詳細信息，請參閱<block ref="7a234b4add653baca92b7b8d8c25d2af" category="inline-link-macro-rx"></block>。</block>
+  <block id="87a6427c4107d7090d449e6c8d7aa59e" category="list-text">對於備份到物件策略，設定 Datalock 和 Ransomware Resilience。有關 Datalock 和勒索軟體復原的詳細信息，請參閱<block ref="7a234b4add653baca92b7b8d8c25d2af" category="inline-link-macro-rx"></block>。</block>
+  <block id="28d4180de7948c969ad2c178ab5ac2ba" category="paragraph">如果在為此叢集啟動NetApp Backup and Recovery 時，在初始備份策略中為雲端備份啟用了 _DataLock 和 Ransomware Resilience_，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp備份和復原時未啟用“DataLock 和勒索軟體復原”，您將只會看到未配置 DataLock 的其他雲端備份策略。</block>
+  <block id="b6488996839d3ef81eaf4ab204a7cf5a" category="paragraph">如果在為此叢集啟動NetApp Backup and Recovery 時啟用了“DataLock 和 Ransomware Resilience”，則按需備份也將配置 DataLock，保留期為 30 天。臨時備份不支援勒索軟體掃描。<block ref="17481ecd9087b2947e2c31f934c4a716" category="inline-link-macro-rx"></block> 。</block>
+  <block id="cf2a8b330499d1a7ec5ed6bef1f8ed38" category="paragraph">只有當磁碟區備份是從具有ONTAP 9.11.1 或更高版本的系統建立的，並且在備份到物件策略中啟用了_DataLock 和 Ransomware Resilience_ 時，此功能才可用。</block>
+  <block id="7fc99b18054450dcbf8338f8ee8c67db" category="paragraph">勒索軟體復原力列顯示掃描正在進行中。</block>
+  <block id="f84b10497d58e1c905bec8056b6bd2f3" category="list-text">如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Resilience_，則您編輯的任何策略都必須配置相同的 DataLock 設定（治理或合規性）。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和 Ransomware Resilience”，則現在無法啟用 DataLock。</block>
+  <block id="fce77d9eed9f09cf06c385de40bc0a13" category="list-text">如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Resilience_，則您建立的任何其他策略都必須使用相同的 DataLock 設定（治理或合規性）進行設定。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和 Ransomware Resilience”，則無法建立使用 DataLock 的新政策。</block>
+  <block id="dc4fb298a2d915a967ad75e9e4604270" category="paragraph">有關StorageGRID的 DataLock 和勒索軟體復原要求的詳細信息，請參閱<block ref="bbc9f622da531392bbcdbdc340d647a2" category="inline-link-macro-rx"></block>。</block>
+  <block id="fa622700003f81750a23f422e28a7076" category="paragraph">若要使用 DataLock 和 Ransomware Resilience 進行備份，您的StorageGRID系統必須執行 11.6.0.3 或更高版本。</block>
+  <block id="8c306f494c349b42fe04266c23f46cd1" category="paragraph">如果您的叢集使用的是ONTAP 9.11.1 或更高版本，您可以選擇透過設定「DataLock」和「Ransomware Resilience」來保護您的備份免遭刪除和勒索軟體攻擊。  _DataLock_ 保護您的備份檔案不被修改或刪除，而 _Ransomware Resilience_ 會掃描您的備份檔案以查找備份檔案中勒索軟體攻擊的證據。</block>
+  <block id="4451065c28f2079aa69e4b099c64d39a" category="inline-link-macro">DataLock 和勒索軟體復原選項</block>
+  <block id="653a7bec9106146215db26707b6bc097" category="paragraph">有關 DataLock 和勒索軟體恢復選項的詳細信息，請參閱<block ref="9598f959fcd7486a6e0c3ffa9bbb6de9" category="inline-link-macro-rx"></block>。</block>
+  <block id="9e66cd34efdf210b196fd63e7561d89b" category="paragraph">這兩個功能都可以保護您的備份文件，以便在您的備份遭受勒索軟體攻擊時，您始終擁有一個有效的備份文件來恢復資料。滿足某些監管要求也很有幫助，在這些要求中，備份需要被鎖定並保留一段時間。啟用 DataLock 和勒索軟體復原選項後，作為NetApp Backup 和 Recovery 啟動的一部分配置的雲端儲存桶將啟用物件鎖定和物件版本控制。</block>
+  <block id="96c619118e08abc143b6b640fdb4e7f2" category="list-text">建立策略時，展開「DataLock 和勒索軟體彈性」部分。</block>
+  <block id="04caa6fde87b21be8738fc7aac2130d5" category="paragraph">在下列公有和私有雲供應商中使用物件儲存時，您可以從下列系統在ONTAP磁碟區上啟用 DataLock 和勒索軟體保護。</block>
+  <block id="155ec659cc4e13b84e26ac8a60d0983e" category="cell">Google Cloud 中的Cloud Volumes ONTAP</block>
+  <block id="a9a9ab6f27a7c96f41b3ea91feb1ef02" category="cell">Google雲 endif::gcp[]</block>
+  <block id="4e592a9288f7e548ef70784305002a5e" category="cell">ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud endif::gcp[] NetApp StorageGRID</block>
+  <block id="8dcc4563f1d723683eb1d9c883e3a1eb" category="list-text">對於 Google Cloud：</block>
+  <block id="f17f73c90517746e41e59ce4e6a2072f" category="list-text">您的叢集必須執行ONTAP 9.17.1 或更高版本</block>
+  <block id="e69519c6174a5664192ef13628b25053" category="paragraph">除了此標準之外，如果您使用 DataLock 和勒索軟體復原功能，雲端儲存還可以提供額外的安全性選項，並且透過為舊備份檔案選擇存檔儲存類別可以節省額外的成本。<block ref="0c861116d28daa1fe6085df5c3fb8bde" category="inline-link-macro-rx"></block> 。</block>
+  <block id="1cd41d0d05820bca7b344cb3376a61e1" category="list-text">如果您打算在恢復磁碟區資料的過程中掃描備份檔案中的勒索軟體（如果您已為雲端備份啟用了 DataLock 和勒索軟體復原功能），那麼您還將產生來自雲端提供者的額外出口成本。</block>
+  <block id="03159d4daf48846363441f62acc89b17" category="paragraph">如果您的叢集使用ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份免於刪除和勒索軟體攻擊。每個備份策略都為_DataLock 和 Ransomware Resilience_ 提供了一個部分，可以在特定時間段（即_保留期_）內套用到您的備份檔案。</block>
+  <block id="2dbe24936b99777ea029c253c6887625" category="paragraph">請注意，如果您選擇物件儲存中的備份文件，並且該備份的勒索軟體復原功能處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體復原功能），則系統會提示您在復原資料之前對備份檔案執行額外的勒索軟體掃描。我們建議您掃描備份檔案以尋找勒索軟體。（您將需要向雲端提供者支付額外的出口費用才能存取備份檔案的內容。）</block>
+  <block id="f6c5eba49b66c3e5c7068b19b8b149fe" category="paragraph">如果備份檔案的勒索軟體復原功能處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體復原功能），則會提示您在復原資料之前對備份檔案執行額外的勒索軟體掃描。我們建議您掃描備份檔案以尋找勒索軟體。（您將需要向雲端提供者支付額外的出口費用才能存取備份檔案的內容。）</block>
 </blocks>
