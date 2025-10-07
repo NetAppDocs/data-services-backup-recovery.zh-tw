@@ -51,7 +51,7 @@ TIP: 您將需要向雲端提供者支付額外的出口費用才能存取備份
 
 使用復原選項恢復 Hyper-V 工作負載。您可以按名稱或使用篩選器來搜尋快照。
 
-*所需的控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員、備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的控制台角色* 備份和還原超級管理員或備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
 
 .步驟
 . 從NetApp備份與復原選單中，選擇 *復原*。

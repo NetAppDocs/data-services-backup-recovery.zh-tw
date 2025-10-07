@@ -30,7 +30,7 @@ NOTE: 若要按排程備份保護群組或單一資料庫，請建立管理備�
 
 您可以立即執行按需備份。如果您要對系統進行更改並希望確保在開始之前有備份，這將很有幫助。
 
-*必要的控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
 
 .步驟
 . 從NetApp控制台選單中，選擇「保護」>「備份與復原」。
@@ -55,7 +55,7 @@ NOTE: 應用於備份的策略與指派給保護組的策略相同。
 
 您可以執行單一資料庫的按需備份。
 
-*必要的控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
 
 .步驟
 . 從NetApp控制台選單中，選擇「保護」>「備份與復原」。

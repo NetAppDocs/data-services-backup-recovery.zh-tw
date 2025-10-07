@@ -30,7 +30,7 @@ summary: 在NetApp備份和復原中建立和管理 Hyper-V 工作負載的保�
 
 將您想要保護的工作負載分組到一個保護群組。您可以為想要一起備份和還原的一組工作負載建立一個保護群組。
 
-*必要的控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
 
 .步驟
 . 從NetApp備份和還原選單中，選擇 *Inventory*。

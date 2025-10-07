@@ -14,7 +14,7 @@ summary: 已知限制標識了該產品的此版本不支援的功能，或無�
 
 
 [role="lead"]
-已知限制標識了此版本的NetApp Backup and Recovery 不支援的功能，或無法與其正確互通的功能。仔細審查這些限制。
+此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
 
 * NetApp Backup and Recovery 可以將Cloud Volumes ONTAP備份到 AWS 中國區域（包括北京和寧夏）的物件儲存；但是，您可能需要先手動修改身分和存取策略。
 +

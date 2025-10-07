@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery 需要先發現數據，以便您可以使�
 
 
 [role="lead"]
-已知限制標識了該產品的此版本不支援或無法與其正確互通的平台、裝置或功能。仔細審查這些限制。
+此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
 
 NetApp Backup and Recovery 中的 Hyper-V 工作負載的私人預覽版不支援以下操作：
 

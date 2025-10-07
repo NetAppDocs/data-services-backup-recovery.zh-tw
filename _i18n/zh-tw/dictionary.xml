@@ -340,7 +340,6 @@
   <block id="e5f2b8ab19b544e0e970070da0ef345c" category="admonition">如果您使用服務帳戶，則應使用服務存取令牌而不是使用者令牌。「client_id」的值（「Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC」）是固定值，無法變更。在這種情況下，請按照此處的說明進行操作：<block ref="ad1a67426fea429db40073e48bac82e2" category="inline-link-rx"></block> 。</block>
   <block id="6d66ffd03910363fdf4db60df119c57d" category="summary">NetApp Backup and Recovery 需要先發現數據，以便您可以使用該服務。在發現過程中， NetApp Backup and Recovery 會分析組織內系統中的所有磁碟區和檔案。</block>
   <block id="6b8b6ab08d4425ec0e0d9ea989426fec" category="doc">NetApp Backup and Recovery 針對 Hyper-V 工作負載的已知限制</block>
-  <block id="1eba71d64e6c5e410e558530711e835b" category="paragraph">已知限制標識了該產品的此版本不支援或無法與其正確互通的平台、裝置或功能。仔細審查這些限制。</block>
   <block id="57a114780f98fd4bb0b06506b0ca9577" category="paragraph">NetApp Backup and Recovery 中的 Hyper-V 工作負載的私人預覽版不支援以下操作：</block>
   <block id="020a36deb114af1bb518c70d5975e940" category="list-text">建立資源組</block>
   <block id="5ae6a8a06c30125d00a57910609856cf" category="list-text">跨磁碟（跨多個 CIFS 共用）</block>
@@ -431,7 +430,6 @@
   <block id="cb6fc7dd7b45612ba1f18392811f988b" category="paragraph">當您保護 KVM 工作負載時， NetApp Backup and Recovery 不支援在使用虛擬化管理軟體（例如 Apache CloudStack 或 Red Hat OpenShift Virtualization）時發現 KVM 工作負載。</block>
   <block id="5d8aef9555e5438ddeff623786db2956" category="summary">已知限制標識了該產品的此版本不支援的功能，或無法與其正確互通的功能。仔細審查這些限制。</block>
   <block id="23eb49de2f5ba6e24c6af10a73585797" category="doc">NetApp Backup and Recovery for ONTAP磁碟區的已知限制</block>
-  <block id="1f3fc62460abed605a22f22b000cf656" category="paragraph">已知限制標識了此版本的NetApp Backup and Recovery 不支援的功能，或無法與其正確互通的功能。仔細審查這些限制。</block>
   <block id="32c27a5a3b9d3ca4a4a83c91adb6b781" category="list-text">NetApp Backup and Recovery 可以將Cloud Volumes ONTAP備份到 AWS 中國區域（包括北京和寧夏）的物件儲存；但是，您可能需要先手動修改身分和存取策略。</block>
   <block id="a6740791571196fed9cd8ca4499ec1fd" category="inline-link">在 AWS 中安裝控制台代理</block>
   <block id="4e69be20405025b3c646d8500efa2d1b" category="paragraph">有關在 AWS 中建立控制台代理的詳細信息，請參閱<block ref="faab5e2f0edd338d700e3f66193d79cc" category="inline-link-rx"></block>。</block>
@@ -494,7 +492,6 @@
   <block id="82f72f137722b68957ddade43e2defd1" category="list-text">只有在建立雲端備份的來源系統運行ONTAP 9.11.0 或更高版本時，才支援SnapLock磁碟區。</block>
   <block id="c2b262fa8521e3a1a0aa3fda5aef2e88" category="summary">完成幾個步驟來設定NetApp備份和復原。</block>
   <block id="aa02d2a98a082cacd35a10457e954436" category="doc">配置NetApp備份與復原設定</block>
-  <block id="1b426c9dfcae38a96783498cd1a85d01" category="paragraph">設定NetApp控制台後，設定備份和復原設置，包括新增主機資源的憑證、匯入SnapCenter資源、設定日誌目錄以及配置 VMware vCenter 設定。您應該在主動開始備份和還原資料之前執行此操作。</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-xref"></block>
   <block id="703c7afa8428dbb84a57f0e06749affb" category="list-text"><block ref="473bc5f1f9d293596a6cf3f7d880fe14" category="inline-xref-macro-rx"></block>對於從SnapCenter匯入的 Windows 和 SQL Server 主機並新增憑證。  （僅限 Microsoft SQL Server 工作負載）</block>
   <block id="07ede38140c5a0a6207121bf4f4767ef" category="list-text"><block ref="018d9e0f2fecc03b7f691fcb7f4f3055" category="inline-xref-macro-rx"></block> 。</block>
@@ -504,8 +501,6 @@
   <block id="a5999c1155de9850d34ba60075be7171" category="inline-link">了解所有服務的NetApp控制台存取角色</block>
   <block id="7dea1900c0a761205245e3263e1f1ebf" category="paragraph">*所需的NetApp控制台角色* 備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員。了解<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="5c42b26269b60e99eac73f94a3585743" category="section-title">為主機資源新增憑證</block>
-  <block id="ff11bed4c212bfa13fbabfb47877614e" category="paragraph">新增要從SnapCenter匯入的主機資源的憑證。主機憑證用於發現新的工作負載並套用備份策略。</block>
-  <block id="0e57c8aab8f417ed692f2ba916c480ad" category="paragraph">如果您還沒有憑證，您可以建立它們。這些憑證必須具有存取和管理主機工作負載所需的權限。</block>
   <block id="aedf3a488773fb9c60ee19cf684d0005" category="paragraph">您需要配置以下類型的憑證：</block>
   <block id="33597ea687793f3f614f3518b3d90ac4" category="list-text">Microsoft SQL Server 憑證</block>
   <block id="6f5d563dad84a97a850ccf1693d98d4f" category="list-text">SnapCenter Windows 主機憑證</block>
@@ -531,16 +526,13 @@
   <block id="7c60bb16141be5fd1d4d7893307168fa" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *編輯憑證*。</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">選擇*儲存*。</block>
   <block id="6360c437baff2a09cee7e8dc0efcf0cf" category="section-title">維護 VMware vCenter 設定</block>
-  <block id="d9c00ca3c60e2e450cd1bec138b6a004" category="paragraph">提供 VMware vCenter 憑證以發現要備份的 VMware vCenter Server 工作負載。如果您沒有現有憑證，則可以建立具有存取和管理 VMware vCenter Server 工作負載所需權限的憑證。</block>
   <block id="0ec424d519f92489056d9a7196c34fde" category="list-text">選擇向下箭頭展開 *VMware vCenter* 部分。</block>
   <block id="0fad596c25ef36a260c47293acf33a48" category="list-text">選擇“新增 vCenter”。</block>
   <block id="16b00caa5b26d0343fb3c31fa5c5bf93" category="list-text">輸入 VMware vCenter Server 資訊。</block>
-  <block id="251641e0305b7f4edbe31ac95a17d905" category="list-text">*vCenter FQDN 或 IP 位址*：輸入 VMware vCenter Server 的 FQDN 名稱或 IP 位址。</block>
   <block id="1579d6685378236f1828bd8e364127a6" category="list-text">*使用者名稱*和*密碼*：輸入 VMware vCenter Server 的使用者名稱和密碼。</block>
   <block id="7a7bd0e5e2c8bb51a37a242f6499ad01" category="list-text">*連接埠*：輸入 VMware vCenter Server 的連接埠號碼。</block>
   <block id="d448876927f65c1f1ffa9fbacd95a1c7" category="list-text">*協定*：選擇*HTTP*或*HTTPS*。</block>
   <block id="c7a0590a9821b8dee0782b0f2f78a6eb" category="section-title">匯入並管理SnapCenter主機資源</block>
-  <block id="065737f38005964cd6bc543ec8a6de30" category="paragraph">如果您之前使用SnapCenter備份資源，則可以在NetApp Backup and Recovery 中匯入和管理這些資源。使用此選項，您可以匯入SnapCenter伺服器資訊來註冊多個 Snapcenter 伺服器並發現資料庫工作負載。</block>
   <block id="8ee500e67ed174fc635bb51aa15a8144" category="paragraph">這是一個由兩個部分組成的過程：</block>
   <block id="5b47a2e71047fd0fb279720aee2ba791" category="list-text">匯入SnapCenter Server 應用程式和主機資源</block>
   <block id="be17fa66fcbe51ceaa12130a926f665f" category="list-text">管理選定的SnapCenter主機資源</block>
@@ -895,7 +887,6 @@
   <block id="84431c593b60f03c075ddbf38e5d0185" category="paragraph">有關每個角色可以執行的操作的詳細信息，請參閱<block ref="d0d0dcb15768cc7e1b5fa2cdae059c59" category="inline-link-macro-rx"></block>。</block>
   <block id="8e917942a77709dfd28c155f42a97553" category="inline-link">了解有關登入的更多信息</block>
   <block id="ae5c737a541e095839e199ea2ab82f0f" category="paragraph">若要登入NetApp控制台，您可以使用您的NetApp支援網站憑證，也可以使用您的電子郵件和密碼註冊NetApp控制台登入。<block ref="3546779ff62edcb806e94b283f4a603a" category="inline-link-rx"></block> 。</block>
-  <block id="e3ba12a02b95a6288844ff449c559248" category="paragraph">*所需的NetApp控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員、備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="b2a74e6e00558766d860afbadbfe8a35" category="paragraph">若要新增控制台代理，您必須具有組織管理員或備份和還原超級管理員角色。</block>
   <block id="3c031b939f6ec312ee601d021e7a6644" category="inline-link">NetApp控制台</block>
   <block id="6a65fb509b9c682f9df5eb122484e2f7" category="list-text">開啟 Web 瀏覽器並前往<block ref="d6205946f936217747639e85e1340e8f" category="inline-link-rx"></block>。</block>
@@ -1049,7 +1040,6 @@
   <block id="7560dd7799dfbab82d090d3826c438e5" category="list-text">立即備份工作負載（立即建立按需備份）。</block>
   <block id="7eb85b9ab846044a4d26b2851ea3e18c" category="section-title">立即使用按需備份來備份工作負載</block>
   <block id="a940ef4062bc3a7b375cd592da54d6fe" category="paragraph">您可以立即執行按需備份。如果您要對系統進行更改並希望確保在開始之前有備份，這將很有幫助。</block>
-  <block id="c9b48ac49eb267bc234cdd09141d7f6e" category="paragraph">*必要的控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員或備份和還原備份管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="13ed80e7f4035afba1bfc9687795be5e" category="list-text">從選單中選擇*庫存*。</block>
   <block id="291d091c1411150a9bc3fc401cfdfba6" category="list-text">選擇一個工作負載來查看保護詳細資訊。</block>
   <block id="7a770d938aba1440464532a20ae420f2" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *查看詳情*。</block>
@@ -1120,7 +1110,6 @@
   <block id="0f4570eee3ca580a8c827d191240eb2b" category="paragraph">從「恢復」頁面（也稱為「搜尋和恢復」）*，您可以恢復資源，即使您不記得確切的名稱、它所在的位置或它最後處於良好狀態的日期。您可以使用過濾器搜尋快照。</block>
   <block id="4967eb3bddc1aeeafa7fa83be9252bb4" category="section-title">從恢復選項恢復工作負載資料（搜尋和恢復）</block>
   <block id="ef14b6cabf130697cc9bf71b74faf58b" category="paragraph">使用復原選項恢復 Hyper-V 工作負載。您可以按名稱或使用篩選器來搜尋快照。</block>
-  <block id="d1cd0972eef06df417ba7e1460c5494e" category="paragraph">*所需的控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員、備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="f0b7d058add557b4607545e73a9337e1" category="list-text">從NetApp備份與復原選單中，選擇 *復原*。</block>
   <block id="29020414ea8232d236539005c93e656b" category="list-text">從名稱搜尋欄位右側的下拉清單中，選擇 *Hyper-V*。</block>
   <block id="a989526c4a2f808a35b9f41593ab5a01" category="list-text">輸入要還原的資源的名稱，或篩選要還原的資源所在的 VM 名稱、VM 主機或儲存池。</block>
@@ -1929,7 +1918,6 @@
   <block id="f985f1951686384a15ea5ddf855b3cab" category="paragraph">您可以在編輯策略時新增另一個保護級別，但不能刪除保護級別。例如，如果策略僅保護本機快照，則可以將複製新增至輔助儲存或將備份新增至物件儲存。如果您有本機快照和複製，則可以新增物件儲存。但是，如果您有本機快照、複製和物件存儲，則不能刪除其中一個層級。</block>
   <block id="f28c1acceb60dde3fa2b864db8f83957" category="paragraph">如果您正在編輯備份到物件儲存的策略，則可以啟用存檔。</block>
   <block id="eeef4d21ae9c8e573641508f4902329d" category="paragraph">如果您從SnapCenter匯入資源，您可能會遇到SnapCenter中使用的政策與NetApp Backup and Recovery 中使用的策略之間的一些差異。看<block ref="323b251497d754074219cdf246ce74d7" category="inline-link-macro-rx"></block> 。</block>
-  <block id="29d4493d27f0d217772993ca5eb8939d" category="paragraph">組織管理員或資料夾或專案管理員。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="39f6b3bed078be30324b69d90eca08da" category="list-text">在NetApp控制台中，前往 *保護* &gt; *備份和還原*。</block>
   <block id="c3be1ab29368bfca9929503e6810fe39" category="list-text">選擇*政策*選項。</block>
   <block id="5d7cb595562fb7decc7d53373bf00ebe" category="list-text">選擇要編輯的策略。</block>
@@ -2471,7 +2459,6 @@
   <block id="6736478116770d132993185ee55b6baf" category="list-text">Hyper-V 主機上插件的最低安裝和日誌空間為 5GB</block>
   <block id="523f5e6af5276c06e274c9d76b2d4467" category="admonition">確保在 Hyper-V 主機上為日誌資料夾分配足夠的磁碟空間並定期監控其使用情況。所需空間取決於備份和資料保護操作發生的頻率。如果空間不足，則不會產生日誌。</block>
   <block id="45eb2c9346b72d7957a67eed3bb74a3d" category="list-text">NetApp ONTAP設定需求：</block>
-  <block id="3ecc6bf387ed36ac8116ccc2512c0213" category="list-text">主ONTAP系統（ONTAP 9.15.1 或更高版本）</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">ONTAP 文件</block>
   <block id="0a2b6c395fc07f332dac7e7046c239c4" category="list-text">對於使用 CIFS 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在ONTAP系統上啟用了連續可用性共用屬性。請參閱<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>以取得說明。</block>
   <block id="0811b88847f846fb265d219dc4238de2" category="section-title">在NetApp控制台中</block>
@@ -4699,83 +4686,8 @@
   <block id="f8d2cf753b5dfff0bf9e240741162b9c" category="cell">無需互聯網訪問即可手動安裝</block>
   <block id="7bbc18e8c81866c16ae2fa4ae7b4faa7" category="cell"><block ref="04dcde0112f87c65139657970e95733e" prefix="" category="inline-code"></block></block>
   <block id="e23da6bf724f3225b25342aa20aab822" category="cell"><block ref="1e8904cbbffb7eff1de96297f70cd53e" prefix="" category="inline-code"></block></block>
-  <block id="03cc6e246c5f035602e69014fd72570d" category="summary">NetApp Backup and Recovery 使用角色來管理每個使用者對特定功能和操作的存取權限</block>
   <block id="30aedeff64f56a66117a57772bf048e2" category="doc">NetApp備份和還原身分識別和存取管理 (IAM) 角色</block>
   <block id="628ffac7ede42e0edae88edd9f769e8b" category="paragraph">NetApp Backup and Recovery 採用身分識別和存取管理 (IAM) 來管理每個使用者對特定功能和操作的存取權限。</block>
-  <block id="451228b79a76a54f6c3a4a5d5af0ec52" category="paragraph">該服務使用特定於NetApp Backup and Recovery 的以下角色。</block>
-  <block id="0169af78615f6ddf8a3484e60a01896f" category="list-text">*備份和還原超級管理員*：在NetApp備份和復原中執行任何操作。</block>
-  <block id="532354fdc6bd2980f132e1d07fa7aa5f" category="list-text">*備份和還原備份管理員*：在NetApp備份和還原中執行備份到本機快照、複製到二級儲存以及備份到物件儲存作業。</block>
-  <block id="c0a57abfd326897381a3ffd211e0034d" category="list-text">*備份和還原復原管理員*：使用NetApp備份和還原復原工作負載。</block>
-  <block id="24e1202dabefe42a93a17e758a826775" category="list-text">*備份和還原克隆管理*：使用NetApp備份和還原複製應用程式和資料。</block>
-  <block id="af2800282a31e52b411c02e6d165154e" category="list-text">*備份和還原檢視器*：查看NetApp備份和還原中的信息，但不執行任何操作。</block>
-  <block id="bf786b3a3016622928354c48b7225397" category="inline-link">控制台設定和管理文檔</block>
-  <block id="94190d0421ea1693bd95963ed8c1d2c4" category="paragraph">有關所有NetApp控制台訪問角色的詳細信息，請參閱<block ref="4b225699c724cb72a1654871509070eb" category="inline-link-rx"></block>。</block>
-  <block id="eb6687834d18ce256e1ea40605b27891" category="section-title">用於常見操作的角色</block>
-  <block id="2586127e46d382f00f4e8b5c171b6bbe" category="paragraph">下表列出了每個NetApp備份和復原角色可以針對所有工作負載執行的操作。</block>
-  <block id="4420e7353184ac575b539cdce1b991db" category="cell">特徵和動作</block>
-  <block id="450fdc0a439b3bd7fea7fb59d6181bf1" category="cell">備份和恢復超級管理員</block>
-  <block id="b68dd17bacd097253684c47f7b783d57" category="cell">備份和還原克隆管理員</block>
-  <block id="c4281079caf3fb466c3b52cff7303e52" category="cell">新增、編輯或刪除主機</block>
-  <block id="9d06472988c53bfc768bc7b6a788b697" category="cell">安裝插件</block>
-  <block id="af964a69034eafc184793164ce7342fd" category="cell">新增憑證（主機、實例、vCenter）</block>
-  <block id="b60c44c6bbbb3793d0c08c34cd6e2382" category="cell">查看儀表板和所有選項卡</block>
-  <block id="78c7efbfa07116553a52f59800129dde" category="cell">開始免費試用</block>
-  <block id="42174d568723a8694dc7e6dfd143cb12" category="cell">啟動工作負載發現</block>
-  <block id="666d2ef63ada639c9aafe5a0d4332126" category="cell">查看許可證資訊</block>
-  <block id="9ea1b41f4c4dc25b684804b2da7fcf2d" category="cell">啟動許可證</block>
-  <block id="299b646d08299de5102913812cccecc6" category="cell">查看主機</block>
-  <block id="69a3ca879664da6277ba49bd9bbe9729" category="cell">*時間表*：</block>
-  <block id="b506c3069be23743726ffb8cd92b46ee" category="cell">啟動計劃</block>
-  <block id="b01426d1d7c808e5938d717128d8dbc8" category="cell">*政策與保護*：</block>
-  <block id="8005276261cf598bb8798cc035670c47" category="cell">查看保護計劃</block>
-  <block id="f57a3b9b96166046bfabc5a5d3662156" category="cell">建立、修改或刪除保護</block>
-  <block id="5e53ac0469a268cf66c46c7a3c56a7d3" category="cell">建立克隆、分割克隆或刪除克隆</block>
-  <block id="49eab4762197c9cc75d88afe3fec83a5" category="cell">建立、修改或刪除策略</block>
-  <block id="5ab3d842069448df8d9ee6e65860e0c6" category="cell">*報告*：</block>
-  <block id="94aa9dc7e2488fdf523fa464cb4c393f" category="cell">查看報告</block>
-  <block id="ef7a7b1bec08bef324977926c1fc910c" category="cell">建立報告</block>
-  <block id="cbb776f3d96dc88fa5b9bf1fc5bdb830" category="cell">刪除報告</block>
-  <block id="e3b2c7d7d96bc87893d08fe0e99fe8cc" category="cell">*從SnapCenter匯入並管理主機*：</block>
-  <block id="ae9ef82221423e04c8c412b4ccee5ab0" category="cell">查看導入的SnapCenter數據</block>
-  <block id="297abe281eed8fe2ed5a4ae2c853582e" category="cell">從SnapCenter匯入數據</block>
-  <block id="c2b833451ea07ba6cb2893ff82a0f395" category="cell">管理（遷移）主機</block>
-  <block id="b2a48d97f6dd6a4c809fefa8abbda6f8" category="cell">*配置設定*：</block>
-  <block id="3b83af25a71030e8f59b11202c70c1a4" category="cell">配置日誌目錄</block>
-  <block id="cb691e71dd5ce44d41cbabd83672681c" category="cell">關聯或刪除實例憑證</block>
-  <block id="ae165b1dbb47749bb695e728656b4e2e" category="cell">*桶*：</block>
-  <block id="d83d0c54783ef948cc85a1a9d70fff8d" category="cell">查看儲存桶</block>
-  <block id="eba0ec490b5e802d37e2d60acf6b56f0" category="cell">建立、編輯或刪除儲存桶</block>
-  <block id="18979d93e93cf64a9fa47fc23204a541" category="section-title">用於特定於工作負載的操作的角色</block>
-  <block id="c8cacc43637f526e462bb7b2db5e8a7e" category="paragraph">下表列出了每個NetApp備份和復原角色可以針對特定工作負載執行的動作。</block>
-  <block id="49396edcdc3d3d7e4bec42adc037a5ef" category="section-title">Kubernetes 工作負載</block>
-  <block id="af6540c92b5c87a5b734e8040e55fb5a" category="paragraph">表格顯示了每個NetApp備份和復原角色可以針對特定於 Kubernetes 工作負載的作業執行的操作。</block>
-  <block id="30ecfda5fd2ae815c55d44b805282893" category="cell">查看叢集、命名空間、儲存類別和 API 資源</block>
-  <block id="43cea4fc6153b6f6be274aa7a58165f6" category="cell">新增的 Kubernetes 集群</block>
-  <block id="c7ff7e2dc0038a703b1d65cba9471e66" category="cell">更新叢集配置</block>
-  <block id="0c2bcbbb2f7543049b38e6c7cf0d3632" category="cell">從管理中刪除集群</block>
-  <block id="3abbb617c1b9641e06a22a49bf4d6afe" category="cell">查看應用程式</block>
-  <block id="013a41b4b08c37dcea17e4fa48d255f5" category="cell">建立和定義新的應用程式</block>
-  <block id="90bf343c3b8602cca1dd5d4e496770be" category="cell">更新應用程式配置</block>
-  <block id="9d45b84288e31f73a0250b34d7436ab1" category="cell">從管理中刪除應用程式</block>
-  <block id="80fd001fca7a1e03b48f09198234b180" category="cell">查看受保護的資源和備份狀態</block>
-  <block id="3140b52cbc33f1fa198b21990d606b85" category="cell">建立備份並使用策略保護應用程式</block>
-  <block id="2daccc0f5ea3aea52b03033934a88e4c" category="cell">取消保護應用程式並刪除備份</block>
-  <block id="1e13e123ade8f8dd5aca982f66065814" category="cell">查看恢復點和資源檢視器結果</block>
-  <block id="f4b1a090912137cc4b84e23244744002" category="cell">從復原點還原應用程式</block>
-  <block id="015a5696342f2c49d35e3d76276d8453" category="cell">查看 Kubernetes 備份策略</block>
-  <block id="cd8df251bf029cee276df2228924ec6b" category="cell">建立 Kubernetes 備份策略</block>
-  <block id="5f295d6efeffef266deb291f5b629b24" category="cell">更新備份策略</block>
-  <block id="9ce50604972e3de67c501b4616256878" category="cell">刪除備份策略</block>
-  <block id="06c1eacf9e674add6b6b569a9430fe0f" category="cell">查看執行鉤子和鉤子來源</block>
-  <block id="4f5e12a49954715db6c9052454048e23" category="cell">建立執行鉤子和鉤子來源</block>
-  <block id="e3539bf0fa952b4314159ea521fa2006" category="cell">更新執行鉤子和鉤子來源</block>
-  <block id="aed1daad2d2c2448ce77cb7b4c411815" category="cell">刪除執行鉤子和鉤子來源</block>
-  <block id="ba447c8899720e860548bc226805ea39" category="cell">查看執行鉤子模板</block>
-  <block id="b80b8d6b54aef557dce562267154abad" category="cell">建立執行鉤子模板</block>
-  <block id="63b66bb7113f652709a0d1553dbb839f" category="cell">更新執行鉤子模板</block>
-  <block id="1dcb606a3a707c345cb54b5c3113d621" category="cell">刪除執行鉤子模板</block>
-  <block id="386bacb41d61c7b8e46cd3e9198743cd" category="cell">查看工作負載摘要和分析儀表板</block>
-  <block id="8bbffbb59e50612d870c42d2db4880dc" category="cell">查看StorageGRID儲存桶和儲存目標</block>
   <block id="a99fab69b8aa9775fe1767ce605ae8bd" category="summary">NetApp以多種方式為NetApp控制台提供支援。全天候提供廣泛的免費自助支援選項，例如知識庫 (KB) 文章和社群論壇。您的支援註冊包含透過網路工單取得的遠端技術支援。</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">獲取協助</block>
   <block id="2feeca48692986e9cc471ec61f847fca" category="paragraph">NetApp以多種方式為NetApp Console 及其雲端服務提供支援。全天候提供廣泛的免費自助支援選項，例如知識庫 (KB) 文章和社群論壇。您的支援註冊包含透過網路工單取得的遠端技術支援。</block>
@@ -5059,4 +4971,24 @@
   <block id="83b5525699223779088aa2e2c9ca5b1a" category="doc">BlueXP backup and recovery現已更名NetApp備份與復原</block>
   <block id="6a119fc880b70d0e27bca4b7243a7a55" category="paragraph">BlueXP backup and recovery已重新命名為NetApp備份和復原。</block>
   <block id="56ed5396ea479b4ed31e75f97a4377c7" category="paragraph">NetApp控制台建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp資料服務，提供即時洞察、更快的工作流程以及高度安全且合規的簡化管理。</block>
+  <block id="33b87914ae72ad3c394fc1f941a94c8c" category="list-text">從主儲存、輔助儲存和物件儲存中搜尋並還原虛擬機器備份</block>
+  <block id="a9ad02ebb13f3d9fa3cb4a1b59be6548" category="paragraph">此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。</block>
+  <block id="5095bcec3e4370bbbc8bf8d7b47623c5" category="paragraph">設定NetApp控制台後，配置備份和還原設定。新增主機資源的憑證、匯入SnapCenter資源、設定日誌目錄以及設定 VMware vCenter 設定。在備份或還原資料之前完成這些步驟。</block>
+  <block id="b65c7169cf8702ef1805f781de02bc69" category="paragraph">新增要從SnapCenter匯入的主機資源的憑證。  NetApp Backup and Recovery 使用這些憑證來發現工作負載並套用備份策略。</block>
+  <block id="c353deca6689f7e632a94f8d6f03f7ca" category="paragraph">如果您沒有憑證，請建立具有存取和管理主機工作負載的權限的憑證。</block>
+  <block id="7c36e999276458571738ba8b383accad" category="paragraph">提供 VMware vCenter 憑證來發現要備份的工作負載。如果您沒有憑證，請建立具有存取和管理 VMware vCenter Server 工作負載的權限的憑證。</block>
+  <block id="ae13f95a2724828ee074a902c02b56e4" category="list-text">*vCenter FQDN 或 IP 位址*：輸入 VMware vCenter Server 的 FQDN 名稱或 IP 位址。</block>
+  <block id="1e69c53525c65378aa99055dd2ebfdd1" category="paragraph">如果您之前使用SnapCenter備份資源，則可以在NetApp Backup and Recovery 中匯入和管理這些資源。此選項可讓您匯入SnapCenter伺服器資訊以註冊多個 Snapcenter 伺服器並發現資料庫工作負載。</block>
+  <block id="4c82cd55e9c216695cfce74c86a368dd" category="paragraph">*所需的NetApp控制台角色* 備份和還原超級管理員或備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
+  <block id="62bc49b7db8523d3243d25f81a8028ad" category="paragraph">*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
+  <block id="d1e52fcdb63677c060eb2093a79135fe" category="paragraph">*所需的控制台角色* 備份和還原超級管理員或備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
+  <block id="14230adaf41f6db735e7845098461fcb" category="paragraph">備份和恢復超級管理員。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
+  <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2 或更高版本</block>
+  <block id="4c0e33820cc2625f20df7d75a7db2a90" category="list-text">確保 Windows 防火牆設定中允許下列連接埠進行雙向 HTTPS 通訊：</block>
+  <block id="2f09bec2ba16dad8a4210aafc07d4e36" category="list-text">8144（適用於 Hyper-V 的NetApp插件）</block>
+  <block id="eeb69275da8e2dd563a27a05a24a4ff1" category="list-text">8145（適用於 Windows 的NetApp插件）</block>
+  <block id="1498907a7069094c1a1b679e2a53087a" category="list-text">主ONTAP系統（ONTAP 9.14.1 或更高版本）</block>
+  <block id="74443ec40597d5044894672e880e4cb8" category="summary">NetApp Backup and Recovery 採用 IAM 角色來管理每個使用者對特定功能和操作的存取權。</block>
+  <block id="d8242f460ba07545cc4fc280abc24dfd" category="inline-link">NetApp控制台中的NetApp備份與復原角色</block>
+  <block id="b7ce2fa7e7dfbfcf006c177bd9507fe6" category="paragraph">若要了解位於NetApp Backup and Recovery 特定的 IAM 角色，請參閱<block ref="00765778411880d6fabcf7f493ef0db6" category="inline-link-rx"></block>。</block>
 </blocks>

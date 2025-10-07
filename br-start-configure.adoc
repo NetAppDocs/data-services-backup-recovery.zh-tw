@@ -14,7 +14,7 @@ summary: 完成幾個步驟來設定NetApp備份和復原。
 
 
 [role="lead"]
-設定NetApp控制台後，設定備份和復原設置，包括新增主機資源的憑證、匯入SnapCenter資源、設定日誌目錄以及配置 VMware vCenter 設定。您應該在主動開始備份和還原資料之前執行此操作。
+設定NetApp控制台後，配置備份和還原設定。新增主機資源的憑證、匯入SnapCenter資源、設定日誌目錄以及設定 VMware vCenter 設定。在備份或還原資料之前完成這些步驟。
 
 * <<為主機資源新增憑證>>對於從SnapCenter匯入的 Windows 和 SQL Server 主機並新增憑證。  （僅限 Microsoft SQL Server 工作負載）
 * <<維護 VMware vCenter 設定>> 。
@@ -28,9 +28,9 @@ summary: 完成幾個步驟來設定NetApp備份和復原。
 
 == 為主機資源新增憑證
 
-新增要從SnapCenter匯入的主機資源的憑證。主機憑證用於發現新的工作負載並套用備份策略。
+新增要從SnapCenter匯入的主機資源的憑證。  NetApp Backup and Recovery 使用這些憑證來發現工作負載並套用備份策略。
 
-如果您還沒有憑證，您可以建立它們。這些憑證必須具有存取和管理主機工作負載所需的權限。
+如果您沒有憑證，請建立具有存取和管理主機工作負載的權限的憑證。
 
 您需要配置以下類型的憑證：
 
@@ -89,7 +89,7 @@ TIP: 您需要輸入 Windows 和 Microsoft SQL Server 的憑證，因此您需�
 
 == 維護 VMware vCenter 設定
 
-提供 VMware vCenter 憑證以發現要備份的 VMware vCenter Server 工作負載。如果您沒有現有憑證，則可以建立具有存取和管理 VMware vCenter Server 工作負載所需權限的憑證。
+提供 VMware vCenter 憑證來發現要備份的工作負載。如果您沒有憑證，請建立具有存取和管理 VMware vCenter Server 工作負載的權限的憑證。
 
 .步驟
 . 從NetApp備份和還原選單中，選擇 *設定*。
@@ -110,7 +110,7 @@ TIP: 您需要輸入 Windows 和 Microsoft SQL Server 的憑證，因此您需�
 
 == 匯入並管理SnapCenter主機資源
 
-如果您之前使用SnapCenter備份資源，則可以在NetApp Backup and Recovery 中匯入和管理這些資源。使用此選項，您可以匯入SnapCenter伺服器資訊來註冊多個 Snapcenter 伺服器並發現資料庫工作負載。
+如果您之前使用SnapCenter備份資源，則可以在NetApp Backup and Recovery 中匯入和管理這些資源。此選項可讓您匯入SnapCenter伺服器資訊以註冊多個 Snapcenter 伺服器並發現資料庫工作負載。
 
 這是一個由兩個部分組成的過程：
 

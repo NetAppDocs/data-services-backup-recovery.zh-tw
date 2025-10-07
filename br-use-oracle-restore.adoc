@@ -49,7 +49,7 @@ summary: 使用NetApp備份和復原保護您的 Oracle 工作負載。
 
 根據您的需要，將 Oracle 資料庫還原到特定時間點、特定係統變更號碼 (SCN) 或最後的良好狀態。您也可以簡單地從快照還原資料庫並跳過自動復原程序。如果您想手動執行恢復，您可能想要跳過自動恢復程序。您可以使用資料庫名稱或特定篩選器來搜尋資料庫。
 
-*所需的控制台角色* 組織管理員、資料夾或專案管理員、備份和還原超級管理員、備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的控制台角色* 備份和還原超級管理員或備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
 
 .步驟
 . 從NetApp控制台選單中，選擇「保護」>「備份與復原」。
