@@ -42,7 +42,7 @@ indexpage:
       url: br-use-mssql-restore.html
     - title: 複製 Microsoft SQL Server 工作負載
       url: br-use-mssql-clone.html
-  - title: 保護 VMware 工作負載（私人預覽版）
+  - title: 保護 VMware 工作負載（預覽版）
     links:
     - title: 保護 VMware 工作負載概述
       url: br-use-vmware-protect-overview.html

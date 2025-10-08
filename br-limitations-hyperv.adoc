@@ -16,6 +16,10 @@ summary: NetApp Backup and Recovery 需要先發現數據，以便您可以使�
 [role="lead"]
 此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
 
+
+
+== 不支援的操作
+
 NetApp Backup and Recovery 中的 Hyper-V 工作負載的私人預覽版不支援以下操作：
 
 * 建立資源組
@@ -23,4 +27,24 @@ NetApp Backup and Recovery 中的 Hyper-V 工作負載的私人預覽版不支�
 * 透過 SAN 保護虛擬機
 * 從物件儲存恢復
 * 保護使用 System Center Virtual Machine Manager (SCVMM) 叢集的 Hyper-V 主機
+
+
+
+
+== 不受支援的舊版NetApp Console帳戶
+
+舊版NetApp Console帳號不支援保護 Hyper-V 工作負載所需的功能。檢查您是否在控制台 Web UI 中使用舊帳戶。如果您有舊版控制台帳戶，請在保護 Hyper-V 工作負載之前建立新帳戶。
+
+.步驟
+. 從NetApp Console選單中，選擇「管理」>「身分和存取」。
+. 在「*組織*」下，檢查組織 ID 旁邊是否顯示「帳戶 ID」。
++
+如果顯示*帳號 ID*，則表示您正在使用舊帳戶。
+
+. 如果您使用的是舊帳戶，請執行以下操作：
++
+.. 登出控制台，然後瀏覽到 https://console.netapp.com/["控制台登入頁面"^]。
+.. 選擇“註冊”來建立新帳戶。
+
+
 

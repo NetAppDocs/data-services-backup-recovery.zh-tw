@@ -322,7 +322,7 @@ TIP: 如果您想要在啟動快照之前建立自訂策略，則可以使用 Sy
 
 +
 
-TIP: 若要使用此服務建立自訂策略，請參閱link:br-use-policies-create.html["創建策略"]。
+TIP: 若要使用備份和復原建立自訂策略，請參閱link:br-use-policies-create.html["創建策略"]。
 
 +
 若要建立策略，請選擇「建立新策略」並執行下列操作：
@@ -367,7 +367,7 @@ TIP: 您可以使用 System Manager 或ONTAP CLI 建立政策。使用ONTAP CLI 
 
 +
 
-TIP: 若要使用此服務建立自訂策略，請參閱link:br-use-policies-create.html["創建策略"]。
+TIP: 若要使用備份和復原建立自訂策略，請參閱link:br-use-policies-create.html["創建策略"]。
 
 +
 若要建立策略，請選擇「建立新策略」並執行下列操作：

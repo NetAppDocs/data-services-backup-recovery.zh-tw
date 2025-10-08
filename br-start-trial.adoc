@@ -22,7 +22,7 @@ summary: 開始或結束NetApp Backup and Recovery 的免費試用。在雲端�
 
 .步驟
 . 從控制台左側導覽中，選擇*保護*>*備份和還原*。
-. 如果這是您第一次登入此服務，您已經在NetApp控制台中擁有一個系統，但尚未開始免費試用，則會出現「歡迎使用新的NetApp備份和還原」登入頁面並顯示*開始免費試用*的選項。
+. 如果這是您第一次登入備份和恢復，並且您已經在NetApp Console中擁有一個系統，但尚未開始免費試用，則會出現「歡迎使用新的NetApp Backup and Recovery」登入頁面並顯示*開始免費試用*選項。
 +
 image:screen-br-landing-unified-start-trial.png["NetApp Backup and Recovery 的登入頁面螢幕截圖（非免費試用）"]
 
@@ -34,7 +34,7 @@ image:screen-br-landing-unified-start-trial.png["NetApp Backup and Recovery 的�
 
 開始免費試用後，您可以發現工作負載並建立策略來備份工作負載。
 
-如果這是您第一次登入此服務，您已經在NetApp控制台中擁有一個系統，並且您開始了免費試用，但尚未發現任何資源，則會出現「歡迎使用新的NetApp備份和還原」登入頁面並顯示*發現資源*的選項。
+如果這是您第一次登入備份和恢復，您已經在NetApp Console中擁有一個系統，並且您開始了免費試用，但尚未發現任何資源，則會出現「歡迎使用新的NetApp Backup and Recovery」登入頁面並顯示*發現資源*的選項。
 
 有關發現工作負載的詳細信息，請參閱link:br-start-discover.html["發現工作負載"]。
 

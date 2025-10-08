@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-hyperv.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, workloads, protect 
-summary: NetApp Backup and Recovery 需要先發現工作負載，以便您保護它們。 
+summary: NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您才能保護它們。 
 ---
 = 在NetApp備份與復原中發現 Hyper-V 工作負載
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery 需要先發現工作負載，以便您保�
 
 
 [role="lead"]
-NetApp Backup and Recovery 需要先發現 Hyper-V 虛擬機，以便您可以保護它們。
+NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您才能保護它們。
 
 *所需的控制台角色* 備份和還原超級管理員。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
 
@@ -55,12 +55,13 @@ TIP: 此過程可能需要幾分鐘。
 
 
 .結果
-NetApp Backup and Recovery 發現資源後，Hyper-V 工作負載將顯示在 Inventory 頁面上的工作負載清單中。
+NetApp Backup and Recovery發現資源後，「清單」頁面會在工作負載清單中顯示 Hyper-V 工作負載。
 
 
 
 == 繼續存取NetApp備份和還原儀表板
 
+.步驟
 . 若要顯示NetApp備份和還原儀表板，請從NetApp控制台選單中選擇 *儀表板*。
 . 檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。
 

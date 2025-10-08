@@ -20,14 +20,14 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery 中發現異地�
 
 == 發現備份目標
 
-在使用NetApp Backup and Recovery 之前，您應該設定 Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage 或StorageGRID的備份目標。
+在使用NetApp Backup and Recovery之前，請先設定您的備份目標（Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage 或StorageGRID ）。
 
 您可以自動發現這些目標或手動新增它們。
 
-提供存取儲存帳戶系統所需的憑證。這些憑證用於發現您想要備份的工作負載。
+提供存取儲存帳戶的憑證。  NetApp Backup and Recovery使用這些憑證來發現您想要備份的工作負載。
 
 .開始之前
-要新增異地備份目標，必須發現至少一個工作負載。
+您需要先發現至少一個工作負載，然後才能新增異地備份目標。
 
 .步驟
 . 從NetApp備份和還原選單中，選擇 *Inventory*。

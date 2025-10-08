@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery 需要先發現工作負載，以便您保�
 
 
 [role="lead"]
-NetApp Backup and Recovery 需要先發現 KVM 主機和虛擬機，以便您可以保護它們。
+NetApp Backup and Recovery需要在保護 KVM 主機和虛擬機器之前發現它們。
 
 *所需的控制台角色* 備份和還原超級管理員。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
 
@@ -28,7 +28,7 @@ NetApp Backup and Recovery 需要先發現 KVM 主機和虛擬機，以便您可
 . 從NetApp控制台選單中，選擇「保護」>「備份與復原」。
 . 在 KVM 圖塊中，選擇 *發現和管理*。
 +
-如果這是您第一次登入此服務，並且您已經在控制台中有一個系統，但尚未發現任何資源，則會出現「歡迎使用新的NetApp備份和還原」登入頁面並顯示*發現資源*的選項。
+如果這是您第一次登入備份和恢復，且控制台中已經有一個系統，但尚未發現任何資源，則會出現「歡迎使用新的NetApp Backup and Recovery」登入頁面並顯示*發現資源*選項。
 
 . 選擇*發現資源*。
 . 輸入以下資訊：
@@ -60,6 +60,7 @@ KVM 工作負載顯示在「庫存」頁面的工作負載清單中。
 
 == 繼續存取NetApp備份和還原儀表板
 
+.步驟
 . 若要顯示NetApp備份和還原儀表板，請從頂部選單中選擇“*儀表板*”。
 . 檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。
 

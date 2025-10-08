@@ -14,20 +14,20 @@ summary: 可透過 Web UI 使用的NetApp備份和復原功能也可透過 RESTf
 
 
 [role="lead"]
-可透過 Web UI 使用的NetApp備份和復原功能也可透過 RESTful API 使用。
+可透過 Web UI 使用的NetApp Backup and Recovery功能也可透過備份和還原 REST API 使用。
 
 NetApp Backup and Recovery 中定義了十類端點：
 
-* 備份 - 管理雲端和本地資源的備份操作，並檢索備份資料的詳細信息
-* 目錄 - 根據查詢管理文件的索引目錄搜尋（搜尋和復原）
-* 雲端 - 從NetApp控制台檢索有關各種雲端提供者資源的信息
-* job - 管理NetApp控制台資料庫上的作業詳細資料條目
-* 許可證 - 從NetApp控制台檢索系統的許可證有效性
-* 勒索軟體掃描 - 對特定備份檔案啟動勒索軟體掃描
-* 復原 - 使您能夠執行磁碟區、檔案和資料夾層級的復原操作
-* sfr - 從備份檔案中檢索檔案以進行單一檔案級復原作業（瀏覽和還原）
-* storagegrid - 檢索有關StorageGRID伺服器的詳細信息，並使您能夠發現StorageGRID伺服器
-* 系統 - 管理備份策略，並配置與系統關聯的目標物件存儲
+* `backup`- 管理雲端和本地資源的備份操作，並檢索備份資料的詳細信息
+* `catalog`- 根據查詢管理文件的索引目錄搜尋（搜尋和復原）
+* `cloud`- 從NetApp Console檢索有關各種雲端提供者資源的信息
+* `job`- 管理NetApp Console資料庫上的作業詳細資料條目
+* `license`- 從NetApp Console擷取系統的許可證有效性
+* `ransomware scan`- 對特定備份檔案啟動勒索軟體掃描
+* `restore`- 使您能夠執行磁碟區、檔案和資料夾層級的還原作業
+* `sfr`- 從備份檔案中擷取檔案以進行單一檔案層級復原作業（瀏覽和還原）
+* `storagegrid`- 檢索有關StorageGRID伺服器的詳細信息，並使您能夠發現StorageGRID伺服器
+* `system`- 管理備份策略，並配置與系統關聯的目標物件存儲
 
 
 
@@ -53,7 +53,7 @@ NOTE: 如果您使用服務帳戶，則應使用服務存取令牌而不是使�
 確保從以下連結產生刷新令牌： https://services.cloud.netapp.com/refresh-token/.刷新令牌是一個字母數字字串，您將使用它來產生使用者令牌。
 
 +
-[source, http]
+[source, console]
 ----
 curl --location --request POST 'https://netapp-cloud-account.auth0.com/oauth/token?=' \
 --header 'Content-Type: application/json' \
@@ -69,24 +69,36 @@ NOTE: NetApp控制台網站上的使用者令牌有一個到期日。 API 回應
 
 . 取得您的NetApp控制台帳戶 ID。
 +
-[source, http]
+[source, console]
 ----
 GET 'https://api.bluexp.netapp.com/tenancy/account' -H 'authority: api.bluexp.netapp.com'
 Header:
 -H 'accept: application/json'
 -H 'accept-language: en-GB,en;q=0.9'
--H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR………
+-H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR
 ----
 +
 此 API 將傳回以下回應。您可以透過解析 *[0].[ accountPublicId]* 的輸出來擷取帳戶 ID。
 
 +
- [{"accountPublicId":"account-i6vJXvZW","accountName":"rashidn","isSaas":true,"isGov":false,"isPrivatePreviewEnabled":false,"is3rdPartyServicesEnabled":false,"accountSerial":"96064469711530003565","userRole":"Role-1"}………
+[source, json]
+----
+{
+  "accountPublicId": "account-i6vJXvZW",
+  "accountName": "rashidn",
+  "isSaas": true,
+  "isGov": false,
+  "isPrivatePreviewEnabled": false,
+  "is3rdPartyServicesEnabled": false,
+  "accountSerial": "96064469711530003565",
+  "userRole": "Role-1"
+}
+----
 . 取得包含控制台代理 ID 的 x-agent-id。
 +
-[source, http]
+[source, console]
 ----
-GET curl 'https://api.services.cloud.netapp.com/occm/list-occms/account-OOnAR4ZS?excludeStandalone=true&source=saas' \
+GET 'https://api.services.cloud.netapp.com/occm/list-occms/account-OOnAR4ZS?excludeStandalone=true&source=saas' \
 Header:
   -H 'authority: api.services.cloud.netapp.com' \
   -H 'accept: application/json' \
@@ -94,10 +106,8 @@ Header:
   -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5…………
 ----
 +
-此 API 將傳回以下回應。您可以透過解析 *occm.[0].[agent].[agentId]* 的輸出來檢索代理 ID。
+您可以透過解析 *occm.[0].[agent].[agentId]* 的輸出來從回應中擷取代理 ID。
 
-+
- {"occms":[{"account":"account-OOnAR4ZS","accountName":"cbs","occm":"imEdsEW4HyYTFbt8ZcNKTKDF05jMIe6Z","agentId":"imEdsEW4HyYTFbt8ZcNKTKDF05jMIe6Z","status":"ready","occmName":"cbsgcpdevcntsg-asia","primaryCallbackUri":"http://34.93.197.21","manualOverrideUris":[],"automaticCallbackUris":["http://34.93.197.21","http://34.93.197.21/occmui","https://34.93.197.21","https://34.93.197.21/occmui","http://10.138.0.16","http://10.138.0.16/occmui","https://10.138.0.16","https://10.138.0.16/occmui","http://localhost","http://localhost/occmui","http://localhost:1337","http://localhost:1337/occmui","https://localhost","https://localhost/occmui","https://localhost:1337","https://localhost:1337/occmui"],"createDate":"1652120369286","agent":{"useDockerInfra":true,"network":"default","name":"cbsgcpdevcntsg-asia","agentId":"imEdsEW4HyYTFbt8ZcNKTKDF05jMIe6Zclients","provider":"gcp","systemId":"a3aa3578-bfee-4d16-9e10-
 
 
 
@@ -109,7 +119,7 @@ Header:
 .API 請求
 您會看到我們使用NetApp控制台帳戶 ID `account-DpTFcxN3` 、控制台代理 ID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients`和用戶令牌 `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g`在此命令中。
 
-[source, http]
+[source, console]
 ----
 curl --location --request POST 'https://api.bluexp.netapp.com/account/account-DpTFcxN3/providers/cloudmanager_cbs/api/v3/backup/working-environment/VsaWorkingEnvironment-99hPYEgk' \
 --header 'x-agent-id: iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients' \
@@ -141,17 +151,17 @@ curl --location --request POST 'https://api.bluexp.netapp.com/account/account-Dp
       "resource-group": "rn-test-backup-rg",
       "subscription": "3beb4dd0-25d4-464f-9bb0-303d7cf5c0c2"
     }
-  }'
+  }
 ----
-.回應是一個您可以監控的作業 ID。
-[source, text]
+.回應是一個您可以監控的作業 ID：
+[source, json]
 ----
 {
  "job-id": "1b34b6f6-8f43-40fb-9a52-485b0dfe893a"
 }
 ----
-.監控響應。
-[source, http]
+.監控回應：
+[source, console]
 ----
 curl --location --request GET 'https://api.bluexp.netapp.com/account/account-DpTFcxN3/providers/cloudmanager_cbs/api/v1/job/1b34b6f6-8f43-40fb-9a52-485b0dfe893a' \
 --header 'x-agent-id: iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients' \
@@ -159,33 +169,33 @@ curl --location --request GET 'https://api.bluexp.netapp.com/account/account-DpT
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…hE9ss2NubK6wZRHUdSaORI7JvcOorUhJ8srqdiUiW6MvuGIFAQIh668of2M3dLbhVDBe8BBMtsa939UGnJx7Qz6Eg'
 ----
-.回覆.
-[source, text]
+.回覆:
+[source, json]
 ----
 {
-    "job": [
-        {
-            "id": "1b34b6f6-8f43-40fb-9a52-485b0dfe893a",
-            "type": "backup-working-environment",
-            "status": "PENDING",
-            "error": "",
-            "time": 1651852160000
-        }
-    ]
+  "job": [
+    {
+      "id": "1b34b6f6-8f43-40fb-9a52-485b0dfe893a",
+      "type": "backup-working-environment",
+      "status": "PENDING",
+      "error": "",
+      "time": 1651852160000
+    }
+  ]
 }
 ----
-.監視直到“狀態”為“完成”。
-[source, text]
+.監視直到“狀態”為“完成”：
+[source, json]
 ----
 {
-    "job": [
-        {
-            "id": "1b34b6f6-8f43-40fb-9a52-485b0dfe893a",
-            "type": "backup-working-environment",
-            "status": "COMPLETED",
-            "error": "",
-            "time": 1651852160000
-        }
-    ]
+  "job": [
+    {
+      "id": "1b34b6f6-8f43-40fb-9a52-485b0dfe893a",
+      "type": "backup-working-environment",
+      "status": "COMPLETED",
+      "error": "",
+      "time": 1651852160000
+    }
+  ]
 }
 ----
