@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-restore-hyperv-vms.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: NetApp Backup and Recovery 讓您能夠恢復已透過保護策略保護的應用程式。 
+summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用程式。 
 ---
 = 恢復 Kubernetes 應用程式
 :hardbreaks:
@@ -14,13 +14,13 @@ summary: NetApp Backup and Recovery 讓您能夠恢復已透過保護策略保�
 
 
 [role="lead"]
-NetApp Backup and Recovery 讓您能夠恢復已透過保護策略保護的應用程式。要恢復應用程序，應用程式需要至少有一個可用的恢復點。復原點由本機快照或物件儲存備份（或兩者）組成。您可以使用本機、輔助或物件儲存存檔來還原應用程式。
+NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用程式。要恢復應用程序，應用程式需要至少有一個可用的恢復點。復原點由本機快照或物件儲存備份（或兩者）組成。您可以使用本機、輔助或物件儲存存檔來還原應用程式。
 
-.所需的NetApp控制台角色
-組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp備份與還原存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+.所需的NetApp Console角色
+組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 在NetApp Backup and Recovery 中，選擇 *Inventory*。
+. 在NetApp Backup and Recovery中，選擇 *Inventory*。
 . 選擇一個 Kubernetes 實例，然後選擇「檢視」以查看與該實例關聯的資源。
 . 選擇“*應用程式*”標籤。
 . 在應用程式清單中，選擇要還原的應用程式並選擇相關的操作選單。

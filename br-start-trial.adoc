@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-trial.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 開始或結束NetApp Backup and Recovery 的免費試用。在雲端供應商的市場中註冊NetApp智慧服務的按使用量付費訂閱後，您可以享受 30 天的免費試用。 
+summary: 開始或結束NetApp Backup and Recovery的免費試用。在雲端供應商的市場中註冊NetApp Intelligent Services的按使用量付費訂閱後，您可以享受 30 天的免費試用。 
 ---
 = 開始免費試用NetApp Backup and Recovery
 :hardbreaks:
@@ -14,17 +14,17 @@ summary: 開始或結束NetApp Backup and Recovery 的免費試用。在雲端�
 
 
 [role="lead"]
-如果您在雲端供應商的市場中註冊按使用量付費訂閱* NetApp智慧服務*，則可以獲得NetApp Backup and Recovery 30 天免費試用。免費試用從您訂閱市場清單時開始。請注意，如果您在部署Cloud Volumes ONTAP系統時支付市場訂閱費用，然後在 10 天後開始NetApp Backup and Recovery 免費試用，那麼您將有 20 天的剩餘時間來使用免費試用版。
+如果您在雲端供應商的市場中註冊按使用量付費訂閱 * NetApp Intelligent Services*，則可以獲得NetApp Backup and Recovery 30 天免費試用。免費試用從您訂閱市場清單時開始。請注意，如果您在部署Cloud Volumes ONTAP系統時支付市場訂閱費用，然後在 10 天後開始NetApp Backup and Recovery免費試用，那麼您將有 20 天的剩餘時間來使用免費試用版。
 
 免費試用結束後，您將自動切換至 PAYGO 訂閱，不會中斷。如果您決定不再繼續使用NetApp Backup and Recovery，只需結束免費試用即可。
 
-登入控制台後，您可以開始NetApp Backup and Recovery 的免費試用。
+登入控制台後，您可以開始NetApp Backup and Recovery的免費試用。
 
 .步驟
 . 從控制台左側導覽中，選擇*保護*>*備份和還原*。
 . 如果這是您第一次登入備份和恢復，並且您已經在NetApp Console中擁有一個系統，但尚未開始免費試用，則會出現「歡迎使用新的NetApp Backup and Recovery」登入頁面並顯示*開始免費試用*選項。
 +
-image:screen-br-landing-unified-start-trial.png["NetApp Backup and Recovery 的登入頁面螢幕截圖（非免費試用）"]
+image:screen-br-landing-unified-start-trial.png["NetApp Backup and Recovery的登入頁面螢幕截圖（非免費試用）"]
 
 
 
@@ -38,7 +38,7 @@ image:screen-br-landing-unified-start-trial.png["NetApp Backup and Recovery 的�
 
 有關發現工作負載的詳細信息，請參閱link:br-start-discover.html["發現工作負載"]。
 
-image:screen-br-landing-unified.png["NetApp備份與復原的登入頁面螢幕截圖"]
+image:screen-br-landing-unified.png["NetApp Backup and Recovery的登入頁面螢幕截圖"]
 
 
 
@@ -49,11 +49,11 @@ image:screen-br-landing-unified.png["NetApp備份與復原的登入頁面螢幕�
 .步驟
 . 從控制台左側導覽中，選擇*保護*>*備份和還原*。
 +
-image:screen-br-landing-unified.png["NetApp備份與復原的登入頁面螢幕截圖"]
+image:screen-br-landing-unified.png["NetApp Backup and Recovery的登入頁面螢幕截圖"]
 
-. 從「歡迎使用新的NetApp備份與復原」登入頁面，選擇*查看詳細資料 - 免費試用*或從頁面右上角選擇*免費試用*。
+. 從「歡迎使用新的NetApp Backup and Recovery」登入頁面，選擇 *查看詳細資訊 - 免費試用* 或從頁面右上角選擇 *免費試用*。
 +
-image:screen-br-landing-unified-end-trial.png["NetApp Backup and Recovery 免費試用版登入頁面截圖"]
+image:screen-br-landing-unified-end-trial.png["NetApp Backup and Recovery免費試用版登入頁面截圖"]
 
 . 選擇*結束免費試用*。
 . 在結束免費試用確認對話方塊中，輸入*結束試用*。

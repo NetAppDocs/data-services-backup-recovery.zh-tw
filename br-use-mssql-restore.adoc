@@ -4,7 +4,7 @@ permalink: br-use-mssql-restore.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: 從快照副本、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原資料庫工作負載。 
 ---
-= 使用NetApp備份和復原還原 Microsoft SQL Server 工作負載
+= 使用NetApp Backup and RecoveryMicrosoft SQL Server 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 從快照副本、複製到輔助儲存的工作負載備份或儲存�
 
 
 [role="lead"]
-使用NetApp備份和還原從快照副本、複製到二級儲存的工作負載備份或儲存在物件儲存中的備份還原 Microsoft SQL Server 工作負載。您可以將工作負載還原到原始系統、使用相同雲端帳戶的其他系統或本機ONTAP系統。
+使用NetApp Backup and Recovery and Recovery從快照副本、複製到二級儲存的工作負載備份或儲存在物件儲存中的備份還原 Microsoft SQL Server 工作負載。您可以將工作負載還原到原始系統、使用相同雲端帳戶的其他系統或本機ONTAP系統。
 
 .從這些位置恢復
 您可以從不同的起始位置恢復工作負載：
@@ -33,7 +33,7 @@ summary: 從快照副本、複製到輔助儲存的工作負載備份或儲存�
 
 
 .從物件儲存中復原的注意事項
-如果您選擇物件儲存中的備份文件，並且該備份的勒索軟體復原功能處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體復原功能），則系統會提示您在復原資料之前對備份檔案執行額外的完整性檢查。我們建議您執行掃描。
+如果您在物件儲存中選擇了備份文件，並且該備份的勒索軟體復原功能處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體復原功能），那麼系統會提示您在復原資料之前對備份檔案執行額外的完整性檢查。我們建議您執行掃描。
 
 
 TIP: 您將需要向雲端提供者支付額外的出口費用才能存取備份文件的內容。
@@ -44,7 +44,7 @@ TIP: 您將需要向雲端提供者支付額外的出口費用才能存取備份
 
 恢復工作負載時，會發生以下情況：
 
-* 當您從備份檔案還原工作負載時， NetApp Backup and Recovery 會使用備份中的資料建立一個_新_資源。
+* 當您從備份檔案還原工作負載時， NetApp Backup and Recovery and Recovery會使用備份中的資料建立一個_新_資源。
 * 從複製的工作負載復原時，您可以將工作負載還原到原始系統或本機ONTAP系統。
 +
 image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的圖表"]
@@ -62,7 +62,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 * *從庫存頁面*：當您需要從上週或上個月恢復特定資源時使用此選項 - 並且您知道該資源的名稱和位置，以及它最後處於良好狀態的日期。您瀏覽資源清單以找到要復原的資源。
 
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 
 
@@ -71,7 +71,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 使用復原選項復原資料庫工作負載。
 
 .步驟
-. 從NetApp備份與復原選單中，選擇 *復原*。
+. 從NetApp Backup and Recovery選單中，選擇 *復原*。
 . 選擇要還原的資料庫。使用過濾器進行搜尋。
 . 選擇恢復選項：
 +
@@ -123,7 +123,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 
 === 恢復到特定時間點
 
-NetApp Backup and Recovery 使用日誌和最新的快照來建立資料的時間點復原。
+NetApp Backup and Recovery使用日誌和最新的快照來建立資料的時間點復原。
 
 . 繼續從「恢復選項」頁面，選擇「*恢復到特定時間點*」。
 . 選擇“下一步”。
@@ -166,7 +166,7 @@ NetApp Backup and Recovery 使用日誌和最新的快照來建立資料的時�
 
 . 繼續從復原選項頁面，選擇*還原到最新備份*。
 +
-NetApp Backup and Recovery 向您顯示可用於復原操作的快照。
+NetApp Backup and Recovery向您顯示可用於復原操作的快照。
 
 . 在還原到最新狀態頁面中，選擇本機、二級儲存或物件儲存的快照位置。
 . 選擇“下一步”。
@@ -202,7 +202,7 @@ NetApp Backup and Recovery 向您顯示可用於復原操作的快照。
 從庫存頁面還原資料庫工作負載。使用 Inventory 選項，您只能還原資料庫，而不能還原執行個體。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇要復原的資源所在的主機。
 . 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*查看詳細資訊*。
 . 在 Microsoft SQL Server 頁面上，選擇「*資料庫*」標籤。

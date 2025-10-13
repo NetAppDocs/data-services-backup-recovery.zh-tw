@@ -6,9 +6,9 @@
 
 === SnapLock Compliance和SnapLock Enterprise保護模式
 
-NetApp Backup and Recovery 現在可以備份使用SnapLock Compliance或SnapLock Enterprise保護模式配置的FlexVol和FlexGroup本機磁碟區。您的叢集必須執行ONTAP 9.14 或更高版本才能獲得此支援。自ONTAP版本 9.11.1 起，支援使用SnapLock Enterprise模式備份FlexVol磁碟區。早期的ONTAP版本不支援備份SnapLock保護磁碟區。
+NetApp Backup and Recovery現在可以備份使用SnapLock Compliance或SnapLock Enterprise保護模式配置的FlexVol和FlexGroup本機磁碟區。您的叢集必須執行ONTAP 9.14 或更高版本才能獲得此支援。自ONTAP版本 9.11.1 起，支援使用SnapLock Enterprise模式備份FlexVol磁碟區。早期的ONTAP版本不支援備份SnapLock保護磁碟區。
 
-請參閱受支援卷的完整列表 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["了解NetApp備份與復原"]。
+請參閱受支援卷的完整列表 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["了解NetApp Backup and Recovery"]。
 
 
 

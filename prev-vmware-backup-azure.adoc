@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-vmware-backup-azure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和還原將資料儲存備份到 Microsoft Azure
+= 使用NetApp Backup and Recovery將資料儲存備份到 Microsoft Azure
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,20 +14,20 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-您可以將SnapCenter Plug-in for VMware vSphere與NetApp Backup and Recovery 集成，將一個或多個資料儲存庫備份到 Microsoft Azure。這將有助於 VM 管理員輕鬆快速地備份和存檔數據，以提高儲存效率並加速雲端轉換。
+您可以將SnapCenter Plug-in for VMware vSphere與NetApp Backup and Recovery集成，將一個或多個資料儲存庫備份到 Microsoft Azure。這將有助於 VM 管理員輕鬆快速地備份和存檔數據，以提高儲存效率並加速雲端轉換。
 
 如果資料儲存與存檔策略相關聯，您將可以選擇存檔層。支援的存檔層是 Azure 存檔 Blob 儲存體。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 .開始之前
 確保你已經滿足了所有link:prev-vmware-prereqs.html["虛擬機器保護要求"]在將資料儲存備份到雲端之前。
 
 .步驟
-. 在NetApp控制台 UI 中，選擇 *保護* > *備份與還原* > *虛擬機器*。
+. 在NetApp ConsoleUI 中，選擇 *保護* > *備份與還原* > *虛擬機器*。
 . 選擇image:icon-action.png["行動"]對應您要備份的資料儲存並選擇*啟動備份*。
 . 在指派策略頁面中，選擇策略並選擇*下一步*。
 . 新增系統。

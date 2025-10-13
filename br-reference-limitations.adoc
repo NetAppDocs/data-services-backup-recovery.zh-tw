@@ -16,18 +16,18 @@ summary: 已知限制標識了該產品的此版本不支援的功能，或無�
 [role="lead"]
 此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
 
-* NetApp Backup and Recovery 可以將Cloud Volumes ONTAP備份到 AWS 中國區域（包括北京和寧夏）的物件儲存；但是，您可能需要先手動修改身分和存取策略。
+* NetApp Backup and Recovery可以將Cloud Volumes ONTAP備份到 AWS 中國區域（包括北京和寧夏）的物件儲存；但是，您可能需要先手動修改身分和存取策略。
 +
 有關在 AWS 中建立控制台代理的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-bluexp.html["在 AWS 中安裝控制台代理"^]。
 
 +
-有關更多詳細信息，請參閱博客文章 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-Feature-Blog-May-23-Updates/ba-p/444052["NetApp備份與復原功能部落格 2023 年 5 月"^]。
+有關更多詳細信息，請參閱博客文章 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-Feature-Blog-May-23-Updates/ba-p/444052["NetApp Backup and Recovery功能部落格 2023 年 5 月"^]。
 
-* NetApp Backup and Recovery 不支援 Microsoft Azure 中國區域。
+* NetApp Backup and Recovery不支援 Microsoft Azure 中國區域。
 +
 有關在 Azure 中建立控制台代理的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-bluexp.html["在 Azure 中安裝控制台代理"^]。
 
-* NetApp Backup and Recovery 不支援FlexCache磁碟區的備份。
+* NetApp Backup and Recovery不支援FlexCache磁碟區的備份。
 
 
 
@@ -38,7 +38,7 @@ summary: 已知限制標識了該產品的此版本不支援的功能，或無�
 +
 FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區並指派相同的備份原則。
 
-* 支援以下功能 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp複製"]，但使用NetApp Backup and Recovery 的複製功能時則不然：
+* 支援以下功能 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"]，但使用NetApp Backup and Recovery的複製功能時則不然：
 +
 ** 不支援從磁碟區 A 到磁碟區 B 以及從磁碟區 B 到磁碟區 C 的級聯設定複製。支援從卷 A 到卷 B 的複製。
 ** 不支援在 FSx for ONTAP系統之間複製資料。
@@ -52,25 +52,25 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 
 == ONTAP磁碟區的備份到物件限制
 
-* 備份資料時， NetApp Backup and Recovery 將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
+* 備份資料時， NetApp Backup and Recovery將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
 +
 有關這些加密類型的說明，請參閱https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["配置NetApp卷加密概述"^]。
 
 
 
-* 如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery 備份這些卷，因為這些快照不會移動到物件儲存。
-* 備份資料時， NetApp Backup and Recovery 將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
+* 如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery備份這些卷，因為這些快照不會移動到物件儲存。
+* 備份資料時， NetApp Backup and Recovery將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
 +
 有關這些加密類型的說明，請參閱https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["配置NetApp卷加密概述"^]。
 
 
 
-* 如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery 備份這些卷，因為這些快照不會移動到物件儲存。
+* 如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery備份這些卷，因為這些快照不會移動到物件儲存。
 * 當您建立或編輯備份策略但未向該策略指派任何磁碟區時，保留的備份數量最多可為 1018。將磁碟區指派給策略後，您可以編輯該策略以建立最多 4000 個備份。
 * 備份資料保護 (DP) 磁碟區時：
 +
 ** 與SnapMirror標籤的關係 `app_consistent`和 `all_source_snapshot`不會備份到雲端。
-** 如果您在SnapMirror目標磁碟區上建立快照的本機副本（無論使用何種SnapMirror標籤），這些快照都不會作為備份移至雲端。此時，您需要為來源 DP 磁碟區建立一個具有所需標籤的 Snapshot 策略，以便NetApp Backup and Recovery 對其進行備份。
+** 如果您在SnapMirror目標磁碟區上建立快照的本機副本（無論使用何種SnapMirror標籤），這些快照都不會作為備份移至雲端。此時，您需要為來源 DP 磁碟區建立一個具有所需標籤的 Snapshot 策略，以便NetApp Backup and Recovery對其進行備份。
 
 
 * FlexGroup卷備份無法移動到檔案儲存。
@@ -78,7 +78,7 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 * SVM-DR 磁碟區備份受下列限制支援：
 +
 ** 僅支援從ONTAP輔助節點進行備份。
-** 應用於磁碟區的快照策略必須是NetApp Backup and Recovery 可識別的策略之一，包括每日、每週、每月等。預設的「sm_created」策略（用於*鏡像所有快照*）無法識別，且 DP 磁碟區不會顯示在可備份的磁碟區清單中。
+** 應用於磁碟區的快照策略必須是NetApp Backup and Recovery可識別的策略之一，包括每日、每週、每月等。預設的「sm_created」策略（用於*鏡像所有快照*）無法識別，且 DP 磁碟區不會顯示在可備份的磁碟區清單中。
 ** 當從來源或目標進行備份時，SVM-DR 和磁碟區備份和還原完全獨立工作。唯一的限制是 SVM-DR 不會複製SnapMirror雲端關係。在 DR 場景中，當 SVM 在輔助位置上線時，您必須手動更新SnapMirror雲端關係。
 
 
@@ -93,8 +93,8 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 
 * 資料保護卷不支援使用「*立即備份*」按鈕進行臨時磁碟區備份。
 * 不支援 SM-BC 配置。
-* ONTAP不支援從單一磁碟區到多個物件儲存的SnapMirror關係扇出；因此， NetApp Backup and Recovery 不支援此配置。
-* 目前，Amazon S3、Azure 和StorageGRID支援物件儲存上的 WORM/Compliance 模式。這被稱為 DataLock 功能，必須使用NetApp備份和復原設定來管理，而不是使用雲端提供者介面。
+* ONTAP不支援從單一磁碟區到多個物件儲存的SnapMirror關係扇出；因此， NetApp Backup and Recovery不支援此配置。
+* 目前，Amazon S3、Azure 和StorageGRID支援物件儲存上的 WORM/Compliance 模式。這被稱為 DataLock 功能，必須使用NetApp Backup and Recovery設定來管理，而不是使用雲端提供者介面。
 
 
 

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-vmware-backup.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和還原備份 VMware 工作負載
+= 使用NetApp Backup and RecoveryVMware 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -17,7 +17,7 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 將 VMware VM 和資料儲存區從本機ONTAP系統備份到 Amazon Web Services、 Azure NetApp Files或StorageGRID，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。
 
 * 若要按排程備份工作負載，請建立管理備份和還原作業的策略。看link:br-use-policies-create.html["創建策略"]以取得說明。
-* 建立保護組來管理一組資源的備份和還原作業。看link:br-use-vmware-protection-groups.html["使用NetApp備份並還原為 VMware 工作負載建立和管理保護群組"]了解更多。
+* 建立保護組來管理一組資源的備份和還原作業。看link:br-use-vmware-protection-groups.html["使用NetApp Backup and Recovery為 VMware 工作負載建立和管理保護群組"]了解更多。
 * 立即備份工作負載（立即建立按需備份）。
 
 
@@ -27,7 +27,7 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 立即建立按需備份。如果您要對系統進行變更並希望確保在開始之前有備份，則可能需要執行按需備份。
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
 . 從備份和還原選單中，選擇*庫存*。

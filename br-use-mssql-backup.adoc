@@ -4,7 +4,7 @@ permalink: br-use-mssql-backup.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: 將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID ，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。 
 ---
-= 使用NetApp備份與復原功能備份 Microsoft SQL Server 工作負載
+= 使用NetApp Backup and RecoveryMicrosoft SQL Server 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -27,10 +27,10 @@ summary: 將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份�
 
 在啟動備份之前，請先查看工作負載的保護狀態。
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員或備份和還原檢視器角色。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員或備份和還原檢視器角色。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 查看主機、保護群組、可用性群組、執行個體和資料庫標籤上的詳細資訊。
@@ -42,10 +42,10 @@ summary: 將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份�
 
 在備份工作負載之前，請設定已發現主機的活動日誌的路徑。這有助於您追蹤操作狀態。
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員或備份和還原還原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員或備份和還原還原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇主機。
@@ -65,10 +65,10 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 您可以建立一個保護群組來管理一組工作負載的備份和還原作業。保護群組是您想要一起保護的工作負載的邏輯分組。
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇*保護群組*標籤。
@@ -91,7 +91,7 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 立即建立按需備份。如果您要對系統進行變更並希望確保在開始之前有備份，則可能需要執行按需備份。
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
 . 從選單中選擇*庫存*。
@@ -111,10 +111,10 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 暫停計畫會暫時阻止備份在預定的時間運作。如果您正在對系統進行維護或遇到備份問題，您可能需要執行此操作。
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇「*保護群組*」、「*實例*」或「*資料庫*」標籤。
@@ -128,10 +128,10 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 您可以建立一個保護群組來管理一組工作負載的備份和還原作業。保護群組是您想要一起保護的工作負載的邏輯分組。
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇*保護群組*標籤。
@@ -142,12 +142,12 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 == 刪除工作負載的保護
 
-如果您不再想要備份工作負載或想要停止在NetApp Backup and Recovery 中管理工作負載，則可以從工作負載中移除保護。
+如果您不再想要備份某個工作負載，或是想要停止在NetApp Backup and Recovery中管理該工作負載，則可以從該工作負載中移除保護。
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇「*保護群組*」、「*實例*」或「*資料庫*」標籤。

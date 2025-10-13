@@ -4,7 +4,7 @@ permalink: task-preview-enable.html
 keywords: cloud backup, NetApp Backup and Recovery, backup, restore, preview, enable, object storage, third-party, MinIO, S3-compatible 
 summary: 您可以監控您啟動或排程的本機快照、複製和備份到物件儲存作業的狀態，以及您啟動或排程的還原作業。您可以查看已完成、正在進行或失敗的作業，以便診斷和解決問題。使用通知中心，您可以啟用透過電子郵件發送通知，這樣即使您未登入系統也可以了解重要的系統活動。使用時間軸，您可以查看透過 UI 或 API 發起的所有操作的詳細資訊。 
 ---
-= 在NetApp Backup and Recovery 中啟用預覽功能
+= 在NetApp Backup and Recovery中啟用預覽功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 您可以監控您啟動或排程的本機快照、複製和備份到�
 
 
 [role="lead"]
-NetApp Backup and Recovery 提供預覽功能，讓您可以在新功能全面發布之前進行測試。這些功能旨在增強您的備份和復原體驗，但它們可能無法完全支援或不穩定。
+NetApp Backup and Recovery提供預覽功能，讓您可以在新功能全面發布之前進行測試。這些功能旨在增強您的備份和復原體驗，但它們可能無法完全支援或不穩定。
 
 
 IMPORTANT: 這些功能處於預覽模式，不應在生產環境中使用。它們僅用於測試和反饋目的。
@@ -23,7 +23,7 @@ IMPORTANT: 這些功能處於預覽模式，不應在生產環境中使用。它
 
 == 啟用預覽功能
 
-若要啟用NetApp Backup and Recovery 中的預覽功能，您需要在控制台代理程式上設定一個標誌。此標誌可讓您存取和測試服務中可用的預覽功能。
+若要啟用NetApp Backup and Recovery中的預覽功能，您需要在控制台代理程式上設定一個標誌。此標誌可讓您存取和測試服務中可用的預覽功能。
 
 .步驟
 . 登入控制台代理。

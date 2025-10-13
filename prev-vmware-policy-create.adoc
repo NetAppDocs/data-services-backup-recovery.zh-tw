@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-vmware-policy-create.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 在NetApp Backup and Recovery 中建立備份資料儲存的策略
+= 在NetApp Backup and Recovery中建立備份資料儲存的策略
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-您可以建立一個策略或使用NetApp Backup and Recovery 中提供的以下預定義策略之一。
+您可以建立一個策略或使用NetApp Backup and Recovery中提供的以下預定義策略之一。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 .開始之前
@@ -28,7 +28,7 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 .關於此任務
-NetApp控制台中提供了以下預先定義策略：
+NetApp Console中提供了以下預先定義策略：
 
 |===
 | 策略名稱 | 標籤 | 保留價值 
@@ -79,6 +79,6 @@ NetApp控制台中提供了以下預先定義策略：
 . 選擇“*創建*”。
 +
 
-NOTE: 您無法編輯或刪除與資料儲存相關聯的策略。
+NOTE: 您無法編輯或刪除與資料儲存區關聯的策略。
 
 

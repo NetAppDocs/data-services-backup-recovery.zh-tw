@@ -4,12 +4,12 @@ permalink: task-migrate-volumes-snapmirror-cloud-resync.html
 keywords: backing up, back up, backup, backup on-prem ontap, on-premises, back up volumes, cloud backup, cloud, snapmirror, migrate, volume migration, resync, 
 summary: 完成幾個步驟即可開始將磁碟區資料從本機ONTAP系統備份到二級儲存系統和 Google Cloud Storage。 
 ---
-= 使用SnapMirror將磁碟區遷移到使用NetApp備份和還原的 Cloud Resync
+= 使用SnapMirror將磁碟區遷移到使用NetApp Backup and Recovery的Cloud Resync
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp備份和復原中的SnapMirror到雲端重新同步功能簡化了NetApp環境中磁碟區遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本機NetApp部署遷移到另一個本機 NetApp 部署或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP或Cloud Volumes Service）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可運行。
+NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本機NetApp部署遷移到另一個本機 NetApp 部署或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP或Cloud Volumes Service）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可運行。
 
 此功能無需耗時且耗費資源的重新基線操作，使備份操作能夠在遷移後繼續進行。此功能在工作負載遷移場景中很有價值，支援 FlexVols 和 FlexGroups，並且從ONTAP版本 9.16.1 開始可用。
 
@@ -17,7 +17,7 @@ NetApp備份和復原中的SnapMirror到雲端重新同步功能簡化了NetApp�
 
 
 
-== NetApp備份和恢復SnapMirror到雲端重新同步的工作原理
+== NetApp Backup and RecoverySnapMirror到雲端重新同步的工作原理
 
 如果您完成技術更新或將磁碟區從一個ONTAP叢集遷移到另一個 ONTAP 叢集，那麼確保備份繼續不間斷地運作非常重要。  NetApp Backup and Recovery SnapMirror到 Cloud Resync 可協助您實現這一點，確保您的雲端備份即使在磁碟區移轉後也能保持一致。
 
@@ -46,15 +46,15 @@ NetApp備份和復原中的SnapMirror到雲端重新同步功能簡化了NetApp�
 
 此過程避免重新發送已備份的數據，節省頻寬，並確保您的備份鏈在遷移後繼續順利進行。
 
-image:diagram-snapmirror-cloud-resync-migration.png["NetApp備份與還原SnapMirror到雲端重新同步"]
+image:diagram-snapmirror-cloud-resync-migration.png["NetApp Backup and RecoverySnapMirror到雲端重新同步"]
 
 
 
 == 程式說明
 
-* 目標ONTAP叢集必須執行ONTAP版本 9.16.1 或更高版本。
-* 必須使用NetApp Backup and Recovery 保護舊的來源ONTAP叢集。
-* 不使用NetApp Backup and Recovery 執行遷移和技術更新。它們應該由專業服務團隊或合格的儲存管理員來執行。
+* 目標ONTAP叢集必須執行ONTAP 9.16.1 或更高版本。
+* 必須使用NetApp Backup and Recovery保護舊的來源ONTAP叢集。
+* 不使用NetApp Backup and Recovery執行遷移和技術更新。它們應該由專業服務團隊或合格的儲存管理員來執行。
 * NetApp遷移團隊負責在來源 ONTAP 叢集和目標ONTAP叢集之間建立SnapMirror關係，以促進磁碟區遷移。
 * 確保技術更新期間的遷移是基於基於SnapMirror的遷移。
 * 目前不支援使用 SVM-Migrate、SVM-DR 或 Head Swap 方法遷移後將SnapMirror重新同步到 Cloud。
@@ -79,7 +79,7 @@ image:diagram-snapmirror-cloud-resync-migration-steps.png["使用SnapMirror到 C
 
 在開始遷移之前， NetApp技術更新團隊會確保滿足以下先決條件，以避免資料遺失並確保遷移過程順利進行。
 
-. 確保所有要遷移的磁碟區都使用NetApp Backup and Recovery 進行保護。
+. 確保所有要遷移的磁碟區都使用NetApp Backup and Recovery進行保護。
 . 記錄卷實例 UUID。在開始遷移之前，記下所有磁碟區的實例 UUID。這些標識符對於稍後的映射和重新同步操作至關重要。
 . 在刪除任何SnapMirror關係之前，對每個磁碟區進行最終快照以保留最新狀態。
 . 記錄SnapMirror策略。記錄目前附加到每個磁碟區關係的SnapMirror策略。稍後在SnapMirror到 Cloud Resync 過程中將需要此功能。
@@ -105,8 +105,8 @@ image:diagram-snapmirror-cloud-resync-migration-steps.png["使用SnapMirror到 C
 遷移後， NetApp Tech Refresh 團隊執行SnapMirror到 Cloud Resync 作業，以從新遷移的磁碟區還原雲端備份。
 
 . 在控制台*系統*頁面中將新的ONTAP叢集新增為系統。
-. 查看NetApp備份和還原磁碟區頁面以確保舊來源系統詳細資訊可用。
-. 從NetApp備份與還原卷頁頁面中，選擇*備份設定*。
+. 查看NetApp Backup and Recovery磁碟區頁面以確保舊來源系統詳細資訊可用。
+. 從NetApp Backup and Recovery卷頁頁面中，選擇*備份設定*。
 . 從選單中選擇*重新同步備份*。
 . 在重新同步系統頁面中，執行以下操作：
 +
@@ -121,11 +121,11 @@ image:diagram-snapmirror-cloud-resync-migration-steps.png["使用SnapMirror到 C
 ** 要應用於新關係的SnapMirror策略。
 
 
-. 選擇“上傳卷對映詳細資料”下的“上傳”，將完成的 CSV 表上傳到NetApp備份和還原 UI。
+. 選擇“上傳卷對映詳細資料”下的“上傳”，將完成的 CSV 表上傳到NetApp Backup and RecoveryUI。
 . 輸入重新同步操作所需的提供者和網路設定資訊。
 . 選擇*提交*開始驗證程序。
 +
-NetApp Backup and Recovery 驗證選擇重新同步的每個磁碟區是否至少有一個通用快照。這可確保磁碟區已準備好進行SnapMirror到 Cloud Resync 操作。
+NetApp Backup and Recovery驗證選擇重新同步的每個磁碟區是否至少有一個通用快照。這可確保磁碟區已準備好進行SnapMirror到 Cloud Resync 操作。
 
 . 查看驗證結果，包括新的來源磁碟區名稱和每個磁碟區的重新同步狀態。
 . 檢查容量是否合格。系統檢查磁碟區是否符合重新同步的條件。如果磁碟區不符合條件，則表示未找到通用快照。

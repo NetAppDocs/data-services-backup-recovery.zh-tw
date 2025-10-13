@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-start-prereq.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery 
-summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的準備情況來開始使用NetApp Backup and Recovery。要使用NetApp Backup and Recovery，您需要滿足這些先決條件。 
+summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的準備情況來開始使用NetApp Backup and Recovery 。要使用NetApp Backup and Recovery，您需要滿足這些先決條件。 
 ---
-= NetApp備份與復原前提條件
+= NetApp Backup and Recovery前提條件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 [role="lead"]
-透過驗證操作環境、 NetApp控制台代理程式和NetApp控制台帳戶的準備情況，開始使用NetApp Backup and Recovery。要使用NetApp Backup and Recovery，您需要滿足這些先決條件。
+透過驗證操作環境、 NetApp Console代理程式和NetApp Console帳戶的準備情況，開始使用NetApp Backup and Recovery 。要使用NetApp Backup and Recovery，您需要滿足這些先決條件。
 
 
 
@@ -35,7 +35,7 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 == 保護 Microsoft SQL Server 工作負載的要求
 
-若要將NetApp Backup and Recovery 用於 Microsoft SQL Server 工作負載，您需要滿足下列主機系統、空間和大小調整前提條件。
+若要將NetApp Backup and Recovery用於 Microsoft SQL Server 工作負載，您需要滿足下列主機系統、空間和大小調整前提條件。
 
 [cols="33,66a"]
 |===
@@ -53,10 +53,10 @@ VMware 虛擬機器檔案系統 (VMFS) 和 VMware 虛擬機器磁碟 (VMDK) NFS 
 
 
 | SnapCenter伺服器版本  a| 
-如果要將現有資料從SnapCenter匯入NetApp Backup and Recovery，則需要SnapCenter Server 5.0 或更高版本。
+如果要將現有資料從SnapCenter匯入NetApp Backup and Recovery ，則需要SnapCenter Server 5.0 或更高版本。
 
 
-NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯入之前已滿足先決條件。看link:concept-start-prereq-snapcenter-import.html["從SnapCenter匯入資源的先決條件"] 。
+NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯入之前已滿足先決條件。看link:concept-start-prereq-snapcenter-import.html["從SnapCenter匯入資源的先決條件"]。
 
 
 
@@ -163,7 +163,7 @@ vCenter 管理員帳號必須具有所需的 vCenter 權限。
 
 您需要特定的要求來發現 Kubernetes 資源並保護您的 Kubernetes 應用程式。
 
-有關NetApp控制台要求，請參閱<<在NetApp控制台中>>。
+有關NetApp Console要求，請參閱<<在NetApp Console中>>。
 
 * 主ONTAP系統（ONTAP 9.16.1 或更高版本）
 * Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括：
@@ -217,23 +217,23 @@ NOTE: 確保在 Hyper-V 主機上為日誌資料夾分配足夠的磁碟空間�
 * NetApp ONTAP設定需求：
 +
 ** 主ONTAP系統（ONTAP 9.14.1 或更高版本）
-** 對於使用 CIFS 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在ONTAP系統上啟用了連續可用性共用屬性。請參閱 https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/configure-shares-continuous-availability-task.html["ONTAP 文件"^]以取得說明。
+** 對於使用 CIFS 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在ONTAP系統上啟用了連續可用性共用屬性。請參閱 https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/configure-shares-continuous-availability-task.html["ONTAP 文檔"^]以取得說明。
 
 
 
 
 
 
-== 在NetApp控制台中
+== 在NetApp Console中
 
-確保NetApp Console 符合以下要求。
+確保NetApp Console符合以下要求。
 
-* 控制台使用者應具有對 Microsoft SQL Server 和 Kubernetes 工作負載執行操作所需的角色和權限。要發現資源，您必須具有NetApp Backup and Recovery 超級管理員角色。看link:reference-roles.html["NetApp Backup and Recovery 基於角色的功能訪問"]有關在NetApp Backup and Recovery 中執行操作所需的角色和權限的詳細資訊。
+* 控制台使用者應具有對 Microsoft SQL Server 和 Kubernetes 工作負載執行操作所需的角色和權限。要發現資源，您必須具有NetApp Backup and Recovery超級管理員角色。看link:reference-roles.html["NetApp Backup and Recovery基於角色的功能訪問"]有關在NetApp Backup and Recovery中執行操作所需的角色和權限的詳細資訊。
 * 具有至少一個活動控制台代理的控制台組織，該代理連接到本地ONTAP叢集或Cloud Volumes ONTAP。
 * 至少一個具有NetApp本地ONTAP或Cloud Volumes ONTAP叢集的控制台系統。
 * 控制台代理
 +
-參考 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解如何配置控制台代理"]和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準NetApp控制台要求"^]。
+參考 https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解如何配置控制台代理"]和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準NetApp Console要求"^]。
 
 +
 ** 預覽版需要 Ubuntu 22.04 LTS 作業系統作為控制台代理。
@@ -243,11 +243,11 @@ NOTE: 確保在 Hyper-V 主機上為日誌資料夾分配足夠的磁碟空間�
 
 
 
-=== 設定NetApp控制台
+=== 設定NetApp Console
 
-下一步是設定控制台和NetApp備份和還原。
+下一步是設定控制台和NetApp Backup and Recovery。
 
-審查 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準NetApp控制台要求"^]。
+審查 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["標準NetApp Console要求"^]。
 
 
 
@@ -255,7 +255,7 @@ NOTE: 確保在 Hyper-V 主機上為日誌資料夾分配足夠的磁碟空間�
 
 您應該聯絡您的NetApp產品團隊來嘗試備份和復原。然後，當您使用控制台代理時，它將包含適合該服務的功能。
 
-若要在使用服務之前在NetApp控制台中建立控制台代理，請參閱描述 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["如何建立控制台代理"^]。
+若要在使用服務之前在NetApp Console中建立控制台代理，請參閱描述 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["如何建立控制台代理"^]。
 
 .控制台代理的安裝位置
 若要完成還原操作，可以在下列位置安裝控制台代理程式：

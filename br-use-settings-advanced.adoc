@@ -4,7 +4,7 @@ permalink: br-use-settings-advanced.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: 一些進階設定可能有助於維護您的備份和復原環境。您可以設定進階設定來管理庫存、刪除備份、取消註冊資源、刪除關係、取消保護資源以停止服務費用、設定SnapMirror關係的最大傳輸速率、將快照副本匯出到物件儲存、啟用自動年度快照刪除、啟用維護模式以及更新應用程式外掛程式。 
 ---
-= 在NetApp Backup and Recovery 中配置進階設置
+= 在NetApp Backup and Recovery中配置進階設置
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 [role="lead"]
 一些進階設定可能有助於維護您的備份和復原環境。您可以設定進階設定來管理庫存、刪除備份、取消註冊資源、刪除關係、取消保護資源以停止服務費用、設定SnapMirror關係的最大傳輸速率、將快照副本匯出到物件儲存、啟用自動年度快照刪除、啟用維護模式以及更新應用程式外掛程式。
 
-透過以下方式配置NetApp Backup and Recovery 進階設定：
+透過以下方式配置NetApp Backup and Recovery進階設定：
 
 * 刪除備份。
 * 取消註冊備份、資料庫、執行個體或應用程式主機。
@@ -35,7 +35,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 
 您可以刪除備份以釋放儲存空間。
 
-. 在NetApp備份與復原控制台中，選擇**設定**。
+. 在NetApp Backup and Recovery控制台中，選擇**設定**。
 . 選擇**進階設定**。
 . 選擇**刪除備份**。
 . 選擇要刪除的備份。
@@ -48,7 +48,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 
 您可以取消註冊備份、資料庫、執行個體或應用程式主機以將其從清單中刪除。
 
-. 在NetApp備份與復原控制台中，選擇**設定**。
+. 在NetApp Backup and Recovery控制台中，選擇**設定**。
 . 選擇**進階設定**。
 . 選擇**取消註冊資源**。
 . 選擇要取消註冊的資源。
@@ -61,7 +61,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 
 您可以刪除關係以將其從庫存中移除。
 
-. 在NetApp備份與復原控制台中，選擇**設定**。
+. 在NetApp Backup and Recovery控制台中，選擇**設定**。
 . 選擇**進階設定**。
 . 選擇**刪除關係**。
 . 選擇要刪除的關係。
@@ -74,7 +74,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 
 您可以取消保護資料庫、執行個體、應用程式主機和工作環境以停止服務費用。
 
-. 在NetApp備份與復原控制台中，選擇**設定**。
+. 在NetApp Backup and Recovery控制台中，選擇**設定**。
 . 選擇**進階設定**。
 . 選擇**取消保護資源**。
 
@@ -85,7 +85,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 
 您可以設定SnapMirror關係的最大傳輸速率來管理頻寬使用情況，確保SnapMirror操作不會幹擾其他網路活動。
 
-. 在NetApp備份與復原控制台中，選擇**設定**。
+. 在NetApp Backup and Recovery控制台中，選擇**設定**。
 . 選擇**進階設定**。
 . 選擇**設定SnapMirror關係的最大傳輸速率**。
 . 輸入最大傳輸速率。
@@ -98,7 +98,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 
 您可以將快照副本匯出到物件存儲，透過將較舊的快照副本移至基線備份副本來初始化雲端中的備份。
 
-. 在NetApp備份與復原控制台中，選擇**設定**。
+. 在NetApp Backup and Recovery控制台中，選擇**設定**。
 . 選擇**進階設定**。
 . 選擇**將快照副本匯出到物件儲存**。
 . 選擇要匯出的快照副本。
@@ -111,7 +111,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 
 您可以啟用自動年度快照刪除功能來刪除一年前的快照。
 
-. 在NetApp備份與復原控制台中，選擇**設定**。
+. 在NetApp Backup and Recovery控制台中，選擇**設定**。
 . 選擇**進階設定**。
 . 選擇**啟用自動年度快照刪除**。
 . 選擇**啟用**。
@@ -123,7 +123,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 
 您可以啟用維護模式，以便執行更新或維護任務。
 
-. 在NetApp備份與復原控制台中，選擇**設定**。
+. 在NetApp Backup and Recovery控制台中，選擇**設定**。
 . 選擇**進階設定**。
 . 選擇**啟用維護模式**。
 . 選擇**啟用**。
@@ -135,7 +135,7 @@ summary: 一些進階設定可能有助於維護您的備份和復原環境。�
 
 您可以更新應用程式外掛程式以確保最新功能可用。
 
-. 在NetApp備份與復原控制台中，選擇**設定**。
+. 在NetApp Backup and Recovery控制台中，選擇**設定**。
 . 選擇**進階設定**。
 . 選擇**更新應用程式插件**。
 . 選擇**更新**。

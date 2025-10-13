@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-policy-manage.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和還原管理ONTAP磁碟區的備份策略
+= 使用NetApp Backup and Recovery管理ONTAP磁碟區的備份策略
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,14 +18,14 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 當您使用啟動精靈為您的磁碟區啟用備份和復原服務時，您可以從預設原則和系統中已經存在的任何其他策略（Cloud Volumes ONTAP或本機ONTAP系統）中進行選擇。如果您想使用與現有策略不同的策略，您可以在使用啟動精靈之前或使用啟動精靈時建立該策略。
 
 若要了解提供的預設備份策略，請參閱link:prev-ontap-protect-journey.html["規劃您的保育之旅"]。
 
-NetApp Backup and Recovery 提供三種類型的ONTAP資料備份：快照、複製和物件儲存備份。根據您使用的架構和備份類型，它們的策略位於不同的位置：
+NetApp Backup and Recovery提供三種類型的ONTAP資料備份：快照、複製和物件儲存備份。根據您使用的架構和備份類型，它們的策略位於不同的位置：
 
 [cols="25,25,25,25"]
 |===
@@ -39,7 +39,7 @@ NetApp Backup and Recovery 提供三種類型的ONTAP資料備份：快照、複
 |===
 根據您的環境、偏好和保護類型，使用以下工具建立備份策略：
 
-* NetApp控制台使用者介面
+* NetApp Console介面
 * 系統管理器使用者介面
 * ONTAP命令列介面
 
@@ -56,7 +56,7 @@ TIP: 使用系統管理員時，選擇*非同步*作為複製策略的策略類�
 +
 出現「策略管理」頁面。預設顯示快照策略。
 
-. 若要查看系統中存在的其他策略，請選擇「*複製策略*」或「*備份策略*」。如果現有策略可用於您的備份計劃，則一切就緒。如果您需要具有不同特徵的策略，您可以從此頁面建立新策略。
+. 若要查看系統中存在的其他策略，請選擇「複製策略」或「備份策略」。如果現有策略可用於您的備份計劃，則一切就緒。如果您需要具有不同特徵的策略，您可以從此頁面建立新策略。
 
 
 
@@ -122,7 +122,7 @@ TIP: 使用系統管理員時，選擇*非同步*作為複製策略的策略類�
 
 === 在啟動複製之前建立複製策略
 
-您的 3-2-1 策略可能包括在不同的儲存系統上複製磁碟區。複製策略駐留在*輔助*儲存系統上。
+您的 3-2-1 策略可能包括在不同的儲存系統上複製磁碟區。複製策略位於*輔助*儲存系統上。
 
 .步驟
 . 在「策略」頁面中，選擇「建立策略」>「建立複製策略」。
@@ -151,14 +151,14 @@ TIP: 使用系統管理員時，選擇*非同步*作為複製策略的策略類�
 . 指定設置，包括傳輸計劃和何時存檔備份。
 . （可選）要在一定天數後將較舊的備份檔案移至較便宜的儲存類別或存取層，請選擇*存檔*選項並指示存檔資料之前應經過的天數。輸入 *0* 作為「存檔天數」以將備份檔案直接傳送到存檔儲存。
 +
-link:prev-ontap-policy-object-options.html["了解有關檔案存儲設置的更多信息"] 。
+link:prev-ontap-policy-object-options.html["了解有關檔案存儲設置的更多信息"]。
 
 . （可選）為保護您的備份不被修改或刪除，請選擇*DataLock 和勒索軟體保護*選項。
 +
 如果您的叢集使用的是ONTAP 9.11.1 或更高版本，您可以選擇透過設定「DataLock」和「勒索軟體保護」來保護您的備份免於刪除。
 
 +
-link:prev-ontap-policy-object-options.html["了解有關可用 DataLock 設定的更多信息"] 。
+link:prev-ontap-policy-object-options.html["了解有關可用 DataLock 設定的更多信息"]。
 
 . 選擇“*創建*”。
 

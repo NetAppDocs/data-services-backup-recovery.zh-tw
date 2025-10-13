@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-vmware-protection-groups.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, vmware, vm, virtual machines, workloads, volumes, snapshots 
-summary: 在NetApp備份和復原中為 VMware 工作負載建立和管理保護群組。 
+summary: 在NetApp Backup and Recovery中建立和管理 VMware 工作負載的保護群組。 
 ---
-= 使用NetApp備份並還原為 VMware 工作負載建立和管理保護群組
+= 使用NetApp Backup and Recovery為 VMware 工作負載建立和管理保護群組
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ summary: 在NetApp備份和復原中為 VMware 工作負載建立和管理保護
 
 * 建立保護組。
 * 查看保護詳情。
-* 立即備份保護組。看link:br-use-vmware-backup.html["立即備份 VMware 工作負載"] 。
+* 立即備份保護組。看link:br-use-vmware-backup.html["立即備份 VMware 工作負載"]。
 * 暫停和恢復保護組的備份計畫。
 * 刪除保護組。
 
@@ -31,10 +31,10 @@ summary: 在NetApp備份和復原中為 VMware 工作負載建立和管理保護
 
 將您想要保護的工作負載分組到一個保護群組。您可以為想要一起備份和還原的一組工作負載建立一個保護群組。
 
-*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇*保護群組*標籤。
@@ -60,7 +60,7 @@ summary: 在NetApp備份和復原中為 VMware 工作負載建立和管理保護
 當您暫停保護群組時，保護狀態將變更為「維護中」。您可以隨時還原備份計畫。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇*保護群組*標籤。
@@ -77,7 +77,7 @@ summary: 在NetApp備份和復原中為 VMware 工作負載建立和管理保護
 當您暫停保護群組時，保護狀態將從「維護中」變更為當您恢復保護群組時「受保護」。您可以隨時還原備份計畫。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇*保護群組*標籤。
@@ -95,7 +95,7 @@ summary: 在NetApp備份和復原中為 VMware 工作負載建立和管理保護
 刪除保護群組會刪除該保護群組以及所有相關的備份計畫。如果不再需要某個保護群組，您可能需要將其刪除。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *Inventory*。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇*保護群組*標籤。

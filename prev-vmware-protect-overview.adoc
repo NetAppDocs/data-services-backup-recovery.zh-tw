@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-vmware-protect-overview.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 在NetApp備份與復原中保護虛擬機器工作負載概述
+= 在NetApp Backup and Recovery中保護虛擬機器工作負載概述
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-使用NetApp備份並復原保護您的虛擬機器工作負載。  NetApp Backup and Recovery 為虛擬機器、資料儲存庫和 VMDK 提供快速、節省空間、崩潰一致和虛擬機器一致的備份和還原作業。
+使用NetApp Backup and Recovery保護您的虛擬機器工作負載。  NetApp Backup and Recovery和 VMDK 提供快速、節省空間、崩潰一致和虛擬機器一致的備份和還原作業。
 
 您可以將資料儲存備份至 Amazon Web Services S3、Microsoft Azure Blob、Google Cloud Platform 和StorageGRID ，並將虛擬機器還原回SnapCenter Plug-in for VMware vSphere。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 有關保護虛擬機器工作負載的說明，請參閱以下主題：

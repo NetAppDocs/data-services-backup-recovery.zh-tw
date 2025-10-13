@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-gcp.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和還原將Cloud Volumes ONTAP資料備份到 Google Cloud Storage
+= 使用NetApp Backup and Recovery將Cloud Volumes ONTAP資料備份到 Google Cloud Storage
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-完成NetApp備份與復原中的幾個步驟，開始將磁碟區資料從Cloud Volumes ONTAP系統備份到 Google Cloud Storage。
+完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從Cloud Volumes ONTAP系統備份到 Google Cloud Storage。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 
@@ -31,23 +31,23 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 或者，您也可以使用公用或私有連線連線到用於複製磁碟區的輔助ONTAP系統。
 
-image:diagram_cloud_backup_cvo_google.png["此圖顯示了NetApp Backup and Recovery 如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
+image:diagram_cloud_backup_cvo_google.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
-支援的ONTAP版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
-支援的 GCP 區域:: 所有 GCP 區域均支援NetApp備份和復原。
+支援的 ONTAP 版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
+支援的 GCP 區域:: 所有 GCP 區域均支援NetApp Backup and Recovery。
 GCP 服務帳戶:: 您需要在 Google Cloud 專案中擁有一個具有自訂角色的服務帳戶。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-creating-gcp-service-account.html["了解如何建立服務帳號"^] 。
 
 
 
-NOTE: 啟用NetApp Backup and Recovery 來存取 Google Cloud Storage 儲存桶的服務帳戶不再需要儲存管理員角色。
+NOTE: 啟用NetApp Backup and Recovery來存取 Google Cloud Storage 儲存桶的服務帳戶不再需要儲存管理員角色。
 
 
 
 == 驗證許可證要求
 
-對於NetApp Backup and Recovery PAYGO 許可，可在 Google Marketplace 中訂閱控制台，從而實現Cloud Volumes ONTAP和NetApp Backup and Recovery 的部署。你需要 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["訂閱此控制台訂閱"^]在啟用NetApp備份和復原之前。  NetApp Backup and Recovery 的計費透過此訂閱完成。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["您可以從系統精靈的「詳細資料和憑證」頁面進行訂閱"^] 。
+對於NetApp Backup and Recovery PAYGO 許可，可在 Google Marketplace 中訂閱控制台，從而實現Cloud Volumes ONTAP和NetApp Backup and Recovery 的部署。你需要 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["訂閱此控制台訂閱"^]在啟用NetApp Backup and Recovery之前。  NetApp Backup and Recovery的計費透過此訂閱完成。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["您可以從系統精靈的「詳細資料和憑證」頁面進行訂閱"^] 。
 
-對於NetApp備份和還原 BYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"] 。
+對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。
 
 並且您需要向 Google 訂閱用於儲存備份的儲存空間。
 
@@ -65,7 +65,7 @@ NOTE: 啟用NetApp Backup and Recovery 來存取 Google Cloud Storage 儲存桶�
 
 === 驗證或新增控制台代理的權限
 
-要使用NetApp備份和還原的「搜尋和復原」功能，您需要在控制台代理的角色中擁有特定權限，以便它可以存取 Google Cloud BigQuery 服務。請參閱下面的權限，如果需要修改策略，請依照下列步驟操作。
+要使用NetApp Backup and Recovery的「搜尋和復原」功能，您需要在控制台代理的角色中擁有特定權限，以便它可以存取 Google Cloud BigQuery 服務。請參閱下面的權限，如果需要修改策略，請依照下列步驟操作。
 
 .步驟
 . 在 https://console.cloud.google.com["Google 雲端控制台"^]，轉到*角色*頁面。
@@ -120,7 +120,7 @@ cloudkms.keyRings.setIamPolicy
 * 支援新建立或匯入的 Cloud KMS 金鑰。
 * 僅支援區域密鑰；不支援全域密鑰。
 * 目前僅支援“對稱加密/解密”目的。
-* NetApp Backup and Recovery 為與儲存帳戶關聯的服務代理程式指派了「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM 角色。
+* NetApp Backup and Recovery為與儲存帳戶關聯的服務代理程式指派了「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM 角色。
 
 
 
@@ -129,13 +129,13 @@ cloudkms.keyRings.setIamPolicy
 
 預設情況下，該服務會為您建立儲存桶。如果您想使用自己的儲存桶，您可以在啟動備份啟動精靈之前建立它們，然後在精靈中選擇這些儲存桶。
 
-link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的更多信息"] 。
+link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的更多信息"]。
 
 
 
 == 驗證ONTAP複製卷的網路要求
 
-如果您打算使用NetApp Backup and Recovery 在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
+如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
 
 
 
@@ -160,13 +160,13 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 
 
-== 在Cloud Volumes ONTAP上啟用NetApp備份與復原
+== 在Cloud Volumes ONTAP上啟用NetApp Backup and Recovery
 
-啟用NetApp備份和復原步驟略有不同，具體取決於您擁有的是現有Cloud Volumes ONTAP系統還是新系統。
+啟用NetApp Backup and Recovery步驟略有不同，具體取決於您擁有的是現有Cloud Volumes ONTAP系統還是新系統。
 
-*在新系統上啟用NetApp備份與復原*
+*在新系統上啟用NetApp Backup and Recovery*
 
-當您完成系統精靈以建立新的Cloud Volumes ONTAP系統時，可以啟用NetApp Backup and Recovery。
+當您完成系統精靈以建立新的Cloud Volumes ONTAP系統時，可以啟用NetApp Backup and Recovery 。
 
 您必須已經配置了服務帳戶。如果在建立Cloud Volumes ONTAP系統時未選擇服務帳戶，則需要關閉系統並從 GCP 控制台將服務帳戶新增至Cloud Volumes ONTAP 。
 
@@ -187,16 +187,16 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 
 
-. *服務*：保持NetApp備份並復原處於啟用狀態，然後按一下*繼續*。
+. *服務*：保持NetApp Backup and Recovery處於啟用狀態，然後按一下*繼續*。
 . 完成精靈中的頁面以部署系統，如中所述 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["在 GCP 中啟動Cloud Volumes ONTAP"^]。
 
 
 .結果
-系統上已啟用NetApp Backup and Recovery。在這些Cloud Volumes ONTAP系統上建立磁碟區後，啟動NetApp Backup and Recovery 和link:prev-ontap-backup-manage.html["在您想要保護的每個磁碟區上啟動備份"]。
+系統上已啟用NetApp Backup and Recovery 。在這些Cloud Volumes ONTAP系統上建立磁碟區後，啟動NetApp Backup and Recovery和link:prev-ontap-backup-manage.html["在您想要保護的每個磁碟區上啟動備份"]。
 
-*在現有系統上啟用NetApp備份與復原*
+*在現有系統上啟用NetApp Backup and Recovery*
 
-您可以隨時直接從系統啟用NetApp Backup and Recovery。
+您可以隨時直接從系統啟用NetApp Backup and Recovery 。
 
 .步驟
 . 從控制台*系統*頁面中，選擇系統並選擇右側面板中備份和還原旁邊的*啟用*。
@@ -220,7 +220,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 === 設定權限
 
-您需要使用自訂角色為具有特定權限的服務帳戶提供儲存存取金鑰。服務帳戶使NetApp Backup and Recovery 能夠驗證和存取用於儲存備份的 Cloud Storage 儲存桶。需要金鑰，以便 Google Cloud Storage 知道誰在發出請求。
+您需要使用自訂角色為具有特定權限的服務帳戶提供儲存存取金鑰。服務帳戶使NetApp Backup and Recovery能夠驗證和存取用於儲存備份的 Cloud Storage 儲存桶。需要金鑰，以便 Google Cloud Storage 知道誰在發出請求。
 
 .步驟
 . 在 https://console.cloud.google.com["Google 雲端控制台"^]，轉到*角色*頁面。
@@ -255,7 +255,7 @@ storage.objects.update
 .. 選擇一個項目，然後選擇*互通性*。如果您還沒有這樣做，請選擇*啟用互通性存取*。
 .. 在*服務帳戶的存取金鑰*下，選擇*為服務帳戶建立金鑰*，選擇剛剛建立的服務帳戶，然後按一下*建立金鑰*。
 +
-稍後設定備份服務時，您需要在NetApp Backup and Recovery 中輸入金鑰。
+稍後設定備份服務時，您需要在NetApp Backup and Recovery中輸入金鑰。
 
 
 
@@ -267,7 +267,7 @@ storage.objects.update
 
 預設情況下，該服務會為您建立儲存桶。或者，如果您想使用自己的儲存桶，您可以在啟動備份啟動精靈之前建立它們，然後在精靈中選擇這些儲存桶。
 
-link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的更多信息"] 。
+link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的更多信息"]。
 
 
 
@@ -300,7 +300,7 @@ cloudkms.keyRings.setIamPolicy
 * 支援新建立或匯入的 Cloud KMS 金鑰。
 * 僅支援區域密鑰，不支援全域密鑰。
 * 目前僅支援“對稱加密/解密”目的。
-* NetApp Backup and Recovery 為與儲存帳戶關聯的服務代理程式指派了「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM 角色。
+* NetApp Backup and Recovery為與儲存帳戶關聯的服務代理程式指派了「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM 角色。
 
 
 
@@ -338,7 +338,7 @@ cloudkms.keyRings.setIamPolicy
 . 繼續以下選項：
 +
 ** 如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。
-** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。請參閱<<準備控制台代理>> 。
+** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。參考<<準備控制台代理>>。
 
 
 
@@ -490,7 +490,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 
 
 .結果
-NetApp Backup and Recovery 開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存系統資料的差異副本。
+NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存系統資料的差異副本。
 
 在目標群集中建立一個複製卷，該卷將與主儲存系統卷同步。
 
@@ -517,7 +517,7 @@ NetApp Backup and Recovery 開始對您的磁碟區進行初始備份。複製�
 
 == 下一步是什麼？
 
-* 您可以link:prev-ontap-backup-manage.html["管理您的備份檔案和備份策略"] 。這包括啟動和停止備份、刪除備份、新增和更改備份計劃等。
-* 您可以link:prev-ontap-policy-object-advanced-settings.html["管理叢集級備份設定"] 。這包括更改ONTAP用於存取雲端儲存的儲存金鑰、更改可用於將備份上傳到物件儲存的網路頻寬、更改未來磁碟區的自動備份設定等等。
+* 你可以link:prev-ontap-backup-manage.html["管理您的備份檔案和備份策略"]。這包括啟動和停止備份、刪除備份、新增和更改備份計劃等。
+* 你可以link:prev-ontap-policy-object-advanced-settings.html["管理叢集級備份設定"]。這包括更改ONTAP用於存取雲端儲存的儲存金鑰、更改可用於將備份上傳到物件儲存的網路頻寬、更改未來磁碟區的自動備份設定等等。
 * 您還可以link:prev-ontap-restore.html["從備份文件還原磁碟區、資料夾或單一文件"]到 AWS 中的Cloud Volumes ONTAP系統，或到本機ONTAP系統。
 

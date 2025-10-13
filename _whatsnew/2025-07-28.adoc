@@ -6,7 +6,7 @@
 
 === Kubernetes 工作負載支援預覽版
 
-此版本的NetApp Backup and Recovery 引入了對發現和管理 Kubernetes 工作負載的支援：
+此版本的NetApp Backup and Recovery引入了對發現和管理 Kubernetes 工作負載的支援：
 
 * 發現由NetApp ONTAP支援的 Red Hat OpenShift 和開源 Kubernetes 集群，無需共享 kubeconfig 檔案。
 * 使用統一的控制平面發現、管理和保護跨多個 Kubernetes 叢集的應用程式。
@@ -17,4 +17,4 @@
 * 使用執行掛鉤和模板建立應用程式一致的備份。
 
 
-有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"] 。
+有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"]。

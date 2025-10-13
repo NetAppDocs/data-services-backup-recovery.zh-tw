@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-switch-ui.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 您可以在不同的NetApp備份和復原工作負載之間切換。某些工作負載使用不同的 UI。 
+summary: 您可以在不同的NetApp Backup and Recovery工作負載之間切換。某些工作負載使用不同的 UI。 
 ---
-= 切換到不同的NetApp備份與復原工作負載
+= 切換到不同的NetApp Backup and Recovery工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: 您可以在不同的NetApp備份和復原工作負載之間切換。�
 
 
 [role="lead"]
-您可以在不同的NetApp備份和復原工作負載之間切換。
+您可以在不同的NetApp Backup and Recovery工作負載之間切換。
 
 
 
 == 切換到不同的工作負載
 
-您可以在NetApp備份和還原 UI 中切換到不同的工作負載。
+您可以在NetApp Backup and RecoveryUI 中切換到不同的工作負載。
 
 .步驟
 . 從控制台左側導覽中，選擇*保護*>*備份和還原*。

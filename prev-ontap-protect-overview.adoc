@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-protect-overview.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和復原保護您的ONTAP卷數據
+= 使用NetApp Backup and Recovery保護您的ONTAP卷數據
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-NetApp Backup and Recovery 提供備份和復原功能，用於保護和長期存檔您的ONTAP磁碟區資料。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。
+NetApp Backup and Recovery功能，用於保護和長期存檔您的ONTAP磁碟區資料。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 啟動後，備份和復原會建立區塊級、增量永久備份，這些備份儲存在另一個ONTAP叢集和雲端中的物件儲存中。除了來源磁碟區之外，您還將擁有：
@@ -30,7 +30,7 @@ NetApp Backup and Recovery 提供備份和復原功能，用於保護和長期�
 
 image:diagram-321-overview-unified.png["此圖表顯示了備份檔案如何作為 Snapshot 副本存在於來源系統上、作為輔助儲存系統上的複製磁碟區存在以及作為物件儲存中的備份檔案存在。"]
 
-NetApp Backup and Recovery 利用 NetApp 的SnapMirror資料複製技術，透過建立 Snapshot 副本並將其傳輸到備份位置來確保所有備份完全同步。
+NetApp Backup and Recovery利用 NetApp 的SnapMirror資料複製技術，透過建立 Snapshot 副本並將其傳輸到備份位置來確保所有備份完全同步。
 
 3-2-1 方法的優點包括：
 
@@ -52,7 +52,7 @@ NetApp Backup and Recovery 利用 NetApp 的SnapMirror資料複製技術，透�
 * 透過兩個系統之間的預先共用金鑰 (PSK) 設定的本機ONTAP動態加密。
 * 複製的資料是不可變的，直到您使其可寫入並可供使用為止。
 * 如果傳輸失敗，複製可以自我修復。
-* 與……相比 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp複製"^]， NetApp Backup and Recovery 中的複製包括以下功能：
+* 與……相比 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"^]， NetApp Backup and Recovery中的複製包括以下功能：
 +
 ** 一次將多個FlexVol磁碟區複製到輔助系統。
 ** 使用 UI 將複製的磁碟區還原到來源系統或其他系統。
@@ -72,7 +72,7 @@ NetApp Backup and Recovery 利用 NetApp 的SnapMirror資料複製技術，透�
 * 將較舊的備份文件分層到檔案儲存以節省成本。
 * 刪除備份關係，以便您可以存檔不需要的來源卷，同時保留磁碟區備份。
 * 從雲端備份到雲，從本機系統備份到公有雲或私有雲。
-* 備份資料在靜態時透過 AES-256 位元加密進行保護，並在動態時透過 TLS 1.2 HTTPS 連線進行保護。
+* 備份資料在靜態時透過 AES-256 位元加密保護，在動態時透過 TLS 1.2 HTTPS 連線保護。
 * 使用您自己的客戶管理金鑰進行資料加密，而不是使用雲端提供者提供的預設加密金鑰。
 * 支援單一磁碟區最多 4,000 個備份。
 
@@ -91,13 +91,13 @@ NetApp Backup and Recovery 利用 NetApp 的SnapMirror資料複製技術，透�
 
 == 支援備份和復原作業的系統
 
-NetApp Backup and Recovery 支援ONTAP系統以及公有和私有雲供應商。
+NetApp Backup and Recovery支援ONTAP系統以及公有和私有雲供應商。
 
 
 
 === 支持的區域
 
-NetApp Backup and Recovery 在許多 Amazon Web Services、Microsoft Azure 和 Google Cloud 區域中均支援Cloud Volumes ONTAP 。
+NetApp Backup and Recovery在許多 Amazon Web Services、Microsoft Azure 和 Google Cloud 區域中均支援Cloud Volumes ONTAP 。
 
 https://bluexp.netapp.com/cloud-volumes-global-regions?__hstc=177456119.0da05194dc19e7d38fcb4a4d94f105bc.1583956311718.1592507347473.1592829225079.52&__hssc=177456119.1.1592838591096&__hsfp=76784061&hsCtaTracking=c082a886-e2e2-4ef0-8ef2-89061b2b1955%7Cd07def13-e88c-40a0-b2a1-23b3b4e7a6e7#cvo["使用全球區域地圖了解更多信息"^]
 
@@ -105,7 +105,7 @@ https://bluexp.netapp.com/cloud-volumes-global-regions?__hstc=177456119.0da05194
 
 === 支援的備份目標
 
-NetApp Backup and Recovery 讓您能夠將ONTAP磁碟區從下列來源系統備份到下列輔助系統以及公有和私有雲供應商中的物件儲存。快照副本駐留在來源系統上。
+NetApp Backup and Recovery使您能夠將ONTAP磁碟區從下列來源系統備份到下列輔助系統以及公有和私有雲供應商中的物件儲存。快照副本駐留在來源系統上。
 
 [cols="33,33,33"]
 |===
@@ -157,7 +157,7 @@ NetApp Backup and Recovery 讓您能夠將ONTAP磁碟區從下列來源系統備
 
 == 支持的捲
 
-NetApp Backup and Recovery 支援以下類型的磁碟區：
+NetApp Backup and Recovery支援以下類型的磁碟區：
 
 * FlexVol讀寫卷
 * FlexGroup磁碟區（需要ONTAP 9.12.1 或更高版本）
@@ -167,7 +167,7 @@ NetApp Backup and Recovery 支援以下類型的磁碟區：
 
 
 
-NOTE: NetApp Backup and Recovery 不支援FlexCache磁碟區的備份。
+NOTE: NetApp Backup and Recovery不支援FlexCache磁碟區的備份。
 
 請參閱link:br-reference-limitations.html["ONTAP磁碟區的備份和還原限制"]了解其他要求和限制。
 
@@ -175,7 +175,7 @@ NOTE: NetApp Backup and Recovery 不支援FlexCache磁碟區的備份。
 
 == 成本
 
-使用NetApp Backup and Recovery 與ONTAP系統相關的成本有兩種：資源費用和服務費用。這兩項費用均針對服務的對象部分備份。
+使用NetApp Backup and Recovery與ONTAP系統相關的成本有兩種：資源費用和服務費用。這兩項費用均針對服務的對象部分備份。
 
 除了儲存 Snapshot 副本和複製磁碟區所需的磁碟空間外，建立 Snapshot 副本或複製磁碟區是免費的。
 
@@ -185,7 +185,7 @@ NOTE: NetApp Backup and Recovery 不支援FlexCache磁碟區的備份。
 
 * 對於備份到對象存儲，您需要向雲端提供者支付對象存儲費用。
 +
-由於NetApp Backup and Recovery 保留了來源磁碟區的儲存效率，因此您需要向雲端提供者物件儲存支付ONTAP效率之後的資料費用（針對應用程式重複資料刪除和壓縮後的較少量的資料）。
+由於NetApp Backup and Recovery保留了來源磁碟區的儲存效率，因此您需要向雲端提供者物件儲存支付ONTAP效率之後的資料費用（針對應用程式重複資料刪除和壓縮後的較少量的資料）。
 
 * 對於使用「搜尋和還原」還原數據，您的雲端提供者會提供某些資源，並且您的搜尋要求掃描的數據量會產生每 TiB 成本。  （瀏覽和恢復不需要這些資源。）
 +
@@ -212,7 +212,7 @@ endif::azure[]
 
 ifdef::gcp[]
 
-* 在 Google 中，部署了一個新的 bucket，並且 https://cloud.google.com/bigquery["Google Cloud BigQuery 服務"^]在帳戶/項目層級進行配置。
+* 在 Google 中，部署了一個新的儲存桶，並且 https://cloud.google.com/bigquery["Google Cloud BigQuery 服務"^]在帳戶/項目層級進行配置。
 
 
 endif::gcp[]
@@ -231,10 +231,10 @@ endif::gcp[]
 
 == 授權
 
-NetApp Backup and Recovery 適用於以下消費模式：
+NetApp Backup and Recovery適用於以下消費模式：
 
 * *BYOL*：從NetApp購買的許可證，可與任何雲端提供者一起使用。
-* *PAYGO*：從雲端供應商的市場按小時訂閱。
+* *PAYGO*：從您的雲端供應商市場按小時訂閱。
 * *年度*：來自雲端提供者市場的年度合約。
 
 
@@ -246,17 +246,17 @@ NetApp Backup and Recovery 適用於以下消費模式：
 
 BYOL 是基於期限（1、2 或 3 年）和容量的，以 1 TiB 為增量。您向NetApp付費以使用該服務一段時間（例如 1 年）以及最大容量（例如 10 TiB）。
 
-您將收到一個序號，請在NetApp控制台中輸入該序號以啟用該服務。當達到任一限制時，您都需要更新許可證。備份 BYOL 授權適用於與您的NetApp控制台組織或帳號關聯的所有來源系統。
+您將收到一個序號，請在NetApp Console中輸入該序號以啟用該服務。當達到任一限制時，您都需要更新許可證。備份 BYOL 授權適用於與您的NetApp Console組織或帳號關聯的所有來源系統。
 
-link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"] 。
+link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。
 
 
 
 === 按需付費訂閱
 
-NetApp Backup and Recovery 以按需付費模式提供基於消費的授權。透過雲端供應商的市場訂閱後，您需要按 GiB 為備份資料付費 - 無需預付款。您的雲端提供者將透過每月帳單向您收費。
+NetApp Backup and Recovery以按需付費模式提供基於消費的授權。透過雲端供應商的市場訂閱後，您需要按 GiB 為備份資料付費 - 無需預付款。您的雲端提供者將透過每月帳單向您收費。
 
-link:br-start-licensing.html["了解如何設定即用即付訂閱"] 。
+link:br-start-licensing.html["了解如何設定即用即付訂閱"]。
 
 請注意，當您首次註冊 PAYGO 訂閱時，可以享受 30 天的免費試用。
 
@@ -286,24 +286,24 @@ endif::azure[]
 
 ifdef::gcp[]
 
-當您使用 GCP 時，您可以向NetApp要求私人優惠，然後在NetApp Backup and Recovery 啟動期間從 Google Cloud Marketplace 訂閱時選擇該計劃。
+當您使用 GCP 時，您可以向NetApp要求私人優惠，然後在NetApp Backup and Recovery啟動期間從 Google Cloud Marketplace 訂閱時選擇該計劃。
 
 endif::gcp[]
 
-link:br-start-licensing.html["了解如何制定年度合約"] 。
+link:br-start-licensing.html["了解如何制定年度合約"]。
 
 
 
-== NetApp備份與復原的工作原理
+== NetApp Backup and Recovery的工作原理
 
-當您在Cloud Volumes ONTAP或本機ONTAP系統上啟用NetApp Backup and Recovery 時，本服務會對您的資料執行完整備份。初始備份之後，所有附加備份都是增量的，這意味著只備份更改的區塊和新區塊。這使得網路流量保持最低限度。物件儲存備份建立在 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirror雲端技術"^]。
+當您在Cloud Volumes ONTAP或本機ONTAP系統上啟用NetApp Backup and Recovery時，本服務會對您的資料執行完整備份。初始備份之後，所有附加備份都是增量的，這意味著只備份更改的區塊和新區塊。這使得網路流量保持最低限度。物件儲存備份建立在 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirror雲端技術"^]。
 
 
 CAUTION: 直接從您的雲端提供者環境採取的任何管理或更改雲端備份檔案的操作都可能損壞檔案並導致不受支援的配置。
 
 下圖顯示了各個組件之間的關係：
 
-image:diagram-backup-recovery-general.png["此圖顯示了NetApp Backup and Recovery 如何與來源系統上的磁碟區以及複製磁碟區和備份檔案所在的二級儲存系統和目標物件儲存進行通訊。"]
+image:diagram-backup-recovery-general.png["此圖顯示了NetApp Backup and Recovery系統和目標物件儲存進行通訊。"]
 
 此圖顯示磁碟區被複製到Cloud Volumes ONTAP系統，但磁碟區也可以複製到本機ONTAP系統。
 
@@ -340,13 +340,13 @@ endif::gcp[]
 
 + ** 在ONTAP S3 中，控制台使用 S3 儲存桶的現有使用者帳戶。
 
-如果您將來想要更改叢集的目標物件存儲，則需要link:prev-ontap-backup-manage.html["取消註冊系統的NetApp Backup and Recovery"]，然後使用新的雲端供應商資訊啟用NetApp Backup and Recovery。
+如果您將來想要更改叢集的目標物件存儲，則需要link:prev-ontap-backup-manage.html["取消註冊系統的NetApp Backup and Recovery"]，然後使用新的雲端供應商資訊啟用NetApp Backup and Recovery 。
 
 
 
 === 可自訂的備份計劃和保留設置
 
-當您為系統啟用NetApp備份和復原時，您最初選擇的所有磁碟區都會使用您選擇的策略進行備份。您可以為 Snapshot 副本、複製磁碟區和備份檔案選擇單獨的政策。如果要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，則可以為該叢集建立其他策略，並在啟動NetApp Backup and Recovery 後將這些原則指派給其他磁碟區。
+當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您選擇的策略進行備份。您可以為 Snapshot 副本、複製磁碟區和備份檔案選擇單獨的政策。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，則可以為該叢集建立其他策略，並在啟動NetApp Backup and Recovery後將這些原則指派給其他磁碟區。
 
 您可以選擇所有捲的每小時、每天、每週、每月和每年備份的組合。對於物件備份，您還可以選擇系統定義的策略之一，提供 3 個月、1 年和 7 年的備份和保留。您使用ONTAP System Manager 或ONTAP CLI 在叢集上建立的備份保護原則也會作為選擇出現。這包括使用自訂SnapMirror標籤建立的策略。
 
@@ -362,7 +362,7 @@ TIP: 資料保護磁碟區備份的保留期與來源SnapMirror關係中定義�
 
 === 備份檔案保護設定
 
-如果您的叢集使用ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份免於刪除和勒索軟體攻擊。每個備份策略都為_DataLock 和 Ransomware Resilience_ 提供了一個部分，可以在特定時間段（即_保留期_）內套用到您的備份檔案。
+如果您的叢集使用ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份免於刪除和勒索軟體攻擊。每個備份策略都為_DataLock 和勒索軟體復原_提供了一個部分，可以在特定時間段（即_保留期_）內應用於您的備份檔案。
 
 * _DataLock_ 保護您的備份檔案不被修改或刪除。
 * _勒索軟體保護_會在建立備份檔案時以及恢復備份檔案中的資料時掃描您的備份檔案以查找勒索軟體攻擊的證據。
@@ -376,8 +376,8 @@ TIP: 資料保護磁碟區備份的保留期與來源SnapMirror關係中定義�
 
 欲了解更多詳細信息，請參閱以下信息：
 
-* link:prev-ontap-policy-object-options.html["DataLock 和勒索軟體保護的工作原理"] 。
-* link:prev-ontap-policy-object-advanced-settings.html["如何在「進階設定」頁面中更新勒索軟體防護選項"] 。
+* link:prev-ontap-policy-object-options.html["DataLock 和勒索軟體保護的工作原理"]。
+* link:prev-ontap-policy-object-advanced-settings.html["如何在「進階設定」頁面中更新勒索軟體防護選項"]。
 
 
 
@@ -393,7 +393,7 @@ ifdef::aws[]
 
 * 在 AWS 中，備份從「標準」儲存類別開始，並在 30 天後轉換到「標準-不頻繁存取」儲存類別。
 +
-如果您的叢集使用的是ONTAP 9.10.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp備份和恢復 UI 中的“S3 Glacier”或“S3 Glacier Deep Archive”存儲，以進一步優化成本。link:prev-reference-aws-archive-storage-tiers.html["了解有關 AWS 檔案儲存的更多信息"] 。
+如果您的叢集使用的是ONTAP 9.10.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and RecoveryUI 中的“S3 Glacier”或“S3 Glacier Deep Archive”存儲，以進一步優化成本。link:prev-reference-aws-archive-storage-tiers.html["了解有關 AWS 檔案儲存的更多信息"]。
 
 
 
@@ -403,7 +403,7 @@ ifdef::azure[]
 
 * 在 Azure 中，備份與 _Cool_ 存取層相關聯。
 +
-如果您的叢集使用的是ONTAP 9.10.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp備份和恢復 UI 中的“Azure Archive”存儲，以進一步優化成本。link:prev-reference-azure-archive-storage-tiers.html["了解有關 Azure 檔案儲存的更多信息"] 。
+如果您的叢集使用的是ONTAP 9.10.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and RecoveryUI 中的“Azure Archive”存儲，以進一步優化成本。link:prev-reference-azure-archive-storage-tiers.html["了解有關 Azure 檔案儲存的更多信息"]。
 
 
 
@@ -413,7 +413,7 @@ ifdef::gcp[]
 
 * 在 GCP 中，備份與 _Standard_ 儲存類別相關聯。
 +
-如果您的叢集使用的是ONTAP 9.12.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and Recovery UI 中的「_Archive_」儲存中，以進一步最佳化成本。link:prev-reference-gcp-archive-storage-tiers.html["詳細了解 Google 歸檔存儲"] 。
+如果您的叢集使用的是ONTAP 9.12.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and Recovery UI 中的「_Archive_」儲存中，以進一步最佳化成本。link:prev-reference-gcp-archive-storage-tiers.html["詳細了解 Google 歸檔存儲"]。
 
 
 
@@ -421,7 +421,7 @@ endif::gcp[]
 
 * 在StorageGRID中，備份與 _Standard_ 儲存類別相關聯。
 +
-如果您的本機叢集使用的是ONTAP 9.12.1 或更高版本，而您的StorageGRID系統使用的是 11.4 或更高版本，則可以在一定天數後將較舊的備份檔案存檔到公有雲存檔儲存。目前支援 AWS S3 Glacier/S3 Glacier Deep Archive 或 Azure Archive 儲存層。link:prev-ontap-backup-onprem-storagegrid.html["了解有關從StorageGRID歸檔備份檔案的更多信息"] 。
+如果您的本機叢集使用的是ONTAP 9.12.1 或更高版本，而您的StorageGRID系統使用的是 11.4 或更高版本，則可以在一定天數後將較舊的備份檔案存檔到公有雲存檔儲存。目前支援 AWS S3 Glacier/S3 Glacier Deep Archive 或 Azure Archive 儲存層。link:prev-ontap-backup-onprem-storagegrid.html["了解有關從StorageGRID歸檔備份檔案的更多信息"]。
 
 
 
@@ -442,5 +442,5 @@ endif::gcp[]
 ** 如果在最初建立磁碟區時將分層策略指派給磁碟區，則您將不會看到此問題。
 
 
-* 在分配之前考慮備份的影響 `all`對磁碟區進行分層策略。由於資料是立即分層的，因此NetApp Backup and Recovery 將從雲層而不是本地層讀取資料。由於並發備份操作共享與雲端物件儲存的網路鏈接，因此如果網路資源飽和，可能會出現效能下降。在這種情況下，您可能需要主動配置多個網路介面 (LIF) 來減少這種類型的網路飽和。
+* 在分配之前考慮備份的影響 `all`對磁碟區進行分層策略。由於資料是立即分層的，NetApp Backup and Recovery將從雲層而不是本地層讀取資料。由於並發備份操作共享與雲端物件儲存的網路鏈接，因此如果網路資源飽和，可能會出現效能下降。在這種情況下，您可能需要主動配置多個網路介面 (LIF) 來減少這種類型的網路飽和。
 

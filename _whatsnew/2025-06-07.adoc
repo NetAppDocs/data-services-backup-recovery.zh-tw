@@ -12,26 +12,26 @@
 
 在預覽成功並獲得預覽客戶的良好回饋後，我們現在將其作為所有客戶的預設體驗。為極快的儀表板做好準備。
 
-有關詳細信息，請參閱link:br-use-dashboard.html["在儀表板中查看保護健康狀況"] 。
+有關詳細信息，請參閱link:br-use-dashboard.html["在儀表板中查看保護健康狀況"]。
 
 
 
 === Microsoft SQL Server 工作負載支援作為公共技術預覽
 
-此版本的NetApp Backup and Recovery 提供了更新的使用者介面，使您能夠使用NetApp Backup and Recovery 中熟悉的 3-2-1 保護策略來管理 Microsoft SQL Server 工作負載。使用此新版本，您可以將這些工作負載備份到主存儲，將其複製到輔助存儲，然後將其備份到雲端物件儲存。
+此版本的NetApp Backup and Recovery提供了更新的使用者介面，可讓您使用NetApp Backup and Recovery中熟悉的 3-2-1 保護策略來管理 Microsoft SQL Server 工作負載。使用此新版本，您可以將這些工作負載備份到主存儲，將其複製到輔助存儲，然後將其備份到雲端物件儲存。
 
-您可以透過完成此步驟來註冊預覽 https://forms.office.com/pages/responsepage.aspx?id=oBEJS5uSFUeUS8A3RRZbOojtBW63mDRDv3ZK50MaTlJUNjdENllaVTRTVFJGSDQ2MFJIREcxN0EwQi4u&route=shorturl["預覽註冊表"^]。
+您可以透過完成此步驟來註冊預覽 https://forms.office.com/pages/responsepage.aspx?id=oBEJS5uSFUeUS8A3RRZbOojtBW63mDRDv3ZK50MaTlJUNjdENllaVTRTVFJGSDQ2MFJIREcxN0EwQi4u&route=shorturl["預覽註冊表單"^]。
 
 
 NOTE: 本文檔旨在介紹如何保護 Microsoft SQL Server 工作負載，目前僅提供技術預覽版。 NetAppNetApp在正式發布之前修改此預覽版產品詳細資訊、內容和時間表的權利。
 
-此版本的NetApp Backup and Recovery 包含以下更新：
+此版本的NetApp Backup and Recovery包含以下更新：
 
-* *3-2-1 備份功能*：此版本整合了SnapCenter功能，讓您能夠透過NetApp備份和復原使用者介面使用 3-2-1 資料保護策略來管理和保護您的SnapCenter資源。
+* *3-2-1 備份功能*：此版本整合了SnapCenter功能，讓您能夠透過NetApp Backup and Recovery使用者介面使用 3-2-1 資料保護策略來管理和保護您的SnapCenter資源。
 * *從SnapCenter匯入*：您可以將SnapCenter備份資料和政策匯入NetApp Backup and Recovery。
 * *重新設計的使用者介面*為管理備份和復原任務提供了更直覺的體驗。
 * *備份目標*：您可以在 Amazon Web Services (AWS)、Microsoft Azure Blob Storage、 StorageGRID和ONTAP S3 環境中新增儲存桶，以用作 Microsoft SQL Server 工作負載的備份目標。
-* *工作負載支援*：此版本可讓您備份、還原、驗證和複製 Microsoft SQL Server 資料庫和可用性群組。  （未來版本將添加對其他工作負載的支援。）
+* *工作負載支援*：此版本可讓您備份、還原、驗證和複製 Microsoft SQL Server 資料庫和可用性群組。（未來版本將添加對其他工作負載的支援。）
 * *靈活的復原選項*：此版本可讓您在發生損壞或意外資料遺失的情況下將資料庫還原至原始位置和備用位置。
 * *即時生產副本*：在幾分鐘內（而不是幾小時或幾天）產生用於開發、測試或分析的節省空間的生產副本。
 * 此版本包括建立詳細報告的功能。

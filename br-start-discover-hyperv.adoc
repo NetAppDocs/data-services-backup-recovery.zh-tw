@@ -4,7 +4,7 @@ permalink: br-start-discover-hyperv.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, workloads, protect 
 summary: NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您才能保護它們。 
 ---
-= 在NetApp備份與復原中發現 Hyper-V 工作負載
+= 在NetApp Backup and Recovery中發現 Hyper-V 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,19 +16,19 @@ summary: NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您
 [role="lead"]
 NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您才能保護它們。
 
-*所需的控制台角色* 備份和還原超級管理員。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的控制台角色* 備份和還原超級管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 
 
 == 新增 Hyper-V 主機並發現資源
 
-新增 Hyper-V 主機資訊並讓NetApp Backup and Recovery 發現虛擬機器。在每個控制台代理程式中，選擇您想要發現資源的系統。
+新增 Hyper-V 主機資訊並讓NetApp Backup and Recovery發現虛擬機器。在每個控制台代理程式中，選擇您想要發現資源的系統。
 
 
-NOTE: 當您新增 Hyper-V 主機並發現資源時， NetApp Backup and Recovery 會在 Hyper-V 主機上安裝NetApp Hyper-V 插件和NetApp SnapCenter Windows FileSystem 插件，以協助管理和保護虛擬機器。
+NOTE: 當您新增 Hyper-V 主機並發現資源時， NetApp Backup and Recovery會在 Hyper-V 主機上安裝NetApp Hyper-V 插件和NetApp SnapCenter Windows FileSystem 插件，以協助管理和保護虛擬機器。
 
 .步驟
-. 從NetApp控制台選單中，選擇 *保護* > *備份和還原*。
+. 從NetApp Console選單中，選擇 *保護* > *備份和還原*。
 +
 如果這是您第一次登入NetApp Backup and Recovery，且控制台中已經有系統，但尚未發現任何資源，則會出現「歡迎使用新的NetApp Backup and Recovery」登入頁面並顯示「發現資源」選項。
 
@@ -59,9 +59,9 @@ NetApp Backup and Recovery發現資源後，「清單」頁面會在工作負載
 
 
 
-== 繼續存取NetApp備份和還原儀表板
+== 繼續存取NetApp Backup and Recovery儀表板
 
 .步驟
-. 若要顯示NetApp備份和還原儀表板，請從NetApp控制台選單中選擇 *儀表板*。
+. 若要顯示NetApp Backup and Recovery儀表板，請從NetApp Console選單中選擇 *儀表板*。
 . 檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。
 

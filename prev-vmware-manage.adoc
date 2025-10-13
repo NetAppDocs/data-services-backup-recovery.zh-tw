@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-vmware-manage.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 在NetApp備份和復原中管理資料儲存和虛擬機器的保護
+= 在NetApp Backup and Recovery中管理資料儲存和虛擬機器的保護
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-您可以在使用NetApp Backup and Recovery 備份和還原資料之前查看策略、資料儲存和虛擬機器。根據資料庫、政策或資源群組的變化，您可以從NetApp控制台 UI 查看更新。
+您可以在使用NetApp Backup and Recovery資料之前查看策略、資料儲存庫和虛擬機器。根據資料庫、政策或資源群組的變化，您可以從NetApp ConsoleUI 查看更新。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 
@@ -28,7 +28,7 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 您可以查看所有預設的預設策略。對於每個策略，當您查看詳細資訊時，會列出所有相關的策略和虛擬機器。
 
 . 在控制台 UI 中，選擇 *保護* > *備份和還原* > *虛擬機器*。
-. 從“*設定*”下拉式選單中選擇“*策略*”。
+. 從“*設定*”下拉式選單中，選擇“*策略*”。
 . 選擇與您想要查看其詳細資訊的策略相對應的*查看詳細資訊*。
 
 
@@ -105,7 +105,7 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 == 監控作業
 
-為所有NetApp備份和復原作業建立作業。您可以監控所有作業以及作為每個任務的一部分執行的所有子任務。
+為所有NetApp Backup and Recovery作業建立作業。您可以監控所有作業以及作為每個任務的一部分執行的所有子任務。
 
 . 選擇“備份和復原”>“作業監控”。
 +

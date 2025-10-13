@@ -1,4 +1,4 @@
-= 在NetApp控制台中發現您的ONTAP系統
+= 在NetApp Console中發現您的ONTAP系統
 :allow-uri-read: 
 
 
@@ -6,7 +6,7 @@
 
 準備ONTAP集群涉及以下步驟：
 
-* 在NetApp控制台中發現您的ONTAP系統
+* 在NetApp Console中發現您的ONTAP系統
 * 驗證ONTAP系統要求
 * 驗證ONTAP網路要求以將資料備份到對象存儲
 * 驗證ONTAP複製卷的網路要求
@@ -14,11 +14,11 @@
 
 
 
-=== 在NetApp控制台中發現您的ONTAP系統
+=== 在NetApp Console中發現您的ONTAP系統
 
-您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp控制台 *系統* 頁面上可用。
+您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。
 
-您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現集群"^] 。
+您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現集群"^]。
 
 
 
@@ -29,7 +29,7 @@
 * 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
 * SnapMirror許可證（包含在高級捆綁包或資料保護捆綁包中）。
 +
-*注意：*使用NetApp備份和復原時不需要「混合雲端捆綁包」。
+*注意：*使用NetApp Backup and Recovery時不需要「混合雲端捆綁包」。
 
 +
 了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["管理您的叢集許可證"^]。
@@ -37,6 +37,6 @@
 * 時間和時區設定正確。了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["配置叢集時間"^]。
 * 如果要複製數據，則應在複製資料之前驗證來源系統和目標系統是否運行相容的ONTAP版本。
 +
-https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^] 。
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^]。
 
 

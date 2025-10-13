@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-aws.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和還原將Cloud Volumes ONTAP資料備份到 Amazon S3
+= 使用NetApp Backup and Recovery將Cloud Volumes ONTAP資料備份到 Amazon S3
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-完成NetApp Backup and Recovery 中的幾個步驟即可開始將磁碟區資料從Cloud Volumes ONTAP系統備份到 Amazon S3。
+完成NetApp Backup and Recovery中的幾個步驟即可開始將磁碟區資料從Cloud Volumes ONTAP系統備份到 Amazon S3。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 
@@ -31,11 +31,11 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 或者，您也可以使用公用或私有連線連線到用於複製磁碟區的輔助ONTAP系統。
 
-image:diagram_cloud_backup_cvo_aws.png["此圖顯示了NetApp Backup and Recovery 如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
+image:diagram_cloud_backup_cvo_aws.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
 VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html["了解有關網關端點的更多信息"^] 。
 
-支援的ONTAP版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
+支援的 ONTAP 版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
 使用客戶管理的密鑰進行資料加密所需的信息:: 您可以在啟動精靈中選擇自己的客戶管理金鑰進行資料加密，而不是使用預設的 Amazon S3 加密金鑰。在這種情況下，您需要設定加密管理金鑰。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["了解如何使用自己的密鑰"^] 。
 
 
@@ -43,13 +43,13 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 == 驗證許可證要求
 
-對於NetApp Backup and Recovery PAYGO 許可，AWS Marketplace 中提供控制台訂閱，可實現Cloud Volumes ONTAP和NetApp Backup and Recovery 的部署。你需要 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["訂閱此NetApp控制台"^]在啟用NetApp備份和復原之前。  NetApp Backup and Recovery 的計費透過此訂閱完成。
+對於NetApp Backup and Recovery PAYGO 許可，可在 AWS Marketplace 中訂閱控制台，從而支援部署Cloud Volumes ONTAP和NetApp Backup and Recovery。你需要 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["訂閱此NetApp Console"^]在啟用NetApp Backup and Recovery之前。  NetApp Backup and Recovery的計費透過此訂閱完成。
 
 對於允許您備份Cloud Volumes ONTAP資料和本地ONTAP資料的年度合同，您需要從 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace 頁面"^]進而 https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html["將訂閱與您的 AWS 憑證關聯"^]。
 
 對於允許您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery 的年度合同，您必須在建立Cloud Volumes ONTAP系統時設定年度合約。此選項不允許您備份本機資料。
 
-對於NetApp備份和還原 BYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"] 。當控制台代理程式和Cloud Volumes ONTAP系統部署在暗站時，您必須使用 BYOL 授權。
+對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。當控制台代理程式和Cloud Volumes ONTAP系統部署在暗站時，您必須使用 BYOL 授權。
 
 並且您需要有一個 AWS 帳戶，用於儲存備份所在的儲存空間。
 
@@ -57,7 +57,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 == 準備控制台代理
 
-控制台代理必須安裝在具有完全或有限網路存取權限（「標準」或「受限」模式）的 AWS 區域。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["有關詳細信息，請參閱NetApp控制台部署模式"^] 。
+控制台代理必須安裝在具有完全或有限網路存取權限（「標準」或「受限」模式）的 AWS 區域。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["有關詳細信息，請參閱NetApp Console部署模式"^] 。
 
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解控制台代理"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["在 AWS 中以標準模式（完全網路存取）部署控制台代理"^]
@@ -136,13 +136,13 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 NOTE: 在 AWS 中國區域建立備份時，您需要將 IAM 政策中所有_Resource_部分下的 AWS 資源名稱「arn」從「aws」變更為「aws-cn」；例如 `arn:aws-cn:s3:::netapp-backup-*`。
 
-所需的 AWS Cloud Volumes ONTAP權限:: 當您的Cloud Volumes ONTAP系統執行ONTAP 9.12.1 或更高版本的軟體時，為該系統提供權限的 IAM 角色必須包含一組新的 S3 權限，專門用於NetApp備份和恢復，從最新的 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-set-up-iam-roles.html["Cloud Volumes ONTAP策略"^]。
+所需的 AWS Cloud Volumes ONTAP權限:: 當您的Cloud Volumes ONTAP系統執行ONTAP 9.12.1 或更高版本的軟體時，為該系統提供權限的 IAM 角色必須包含一組新的 S3 權限，專門用於NetApp Backup and Recovery，從最新的 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-set-up-iam-roles.html["Cloud Volumes ONTAP策略"^]。
 +
 --
 如果您使用控制台版本 3.9.23 或更高版本建立了Cloud Volumes ONTAP系統，則這些權限應該已經是 IAM 角色的一部分。否則您將需要新增缺少的權限。
 
 --
-支援的 AWS 區域:: 所有 AWS 區域（包括 AWS GovCloud 區域）均支援NetApp Backup and Recovery。
+支援的 AWS 區域:: 所有 AWS 區域（包括 AWS GovCloud 區域）均支援NetApp Backup and Recovery 。
 在不同的 AWS 帳戶中建立備份所需的設置:: 預設情況下，使用與Cloud Volumes ONTAP系統相同的帳戶建立備份。如果您想要使用不同的 AWS 帳戶進行備份，則必須：
 +
 --
@@ -168,7 +168,7 @@ NOTE: 在 AWS 中國區域建立備份時，您需要將 IAM 政策中所有_Res
 建立您自己的儲存桶:: 預設情況下，該服務會為您建立儲存桶。如果您想使用自己的儲存桶，您可以在啟動備份啟動精靈之前建立它們，然後在精靈中選擇這些儲存桶。
 +
 --
-link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的更多信息"^] 。
+link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的更多信息"^]。
 
 --
 
@@ -177,7 +177,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 == 驗證ONTAP複製卷的網路要求
 
-如果您打算使用NetApp Backup and Recovery 在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
+如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
 
 
 
@@ -202,13 +202,13 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 
 
-== 在Cloud Volumes ONTAP上啟用NetApp備份與復原
+== 在Cloud Volumes ONTAP上啟用NetApp Backup and Recovery
 
-啟用NetApp備份和復原非常簡單。根據您擁有的是現有Cloud Volumes ONTAP系統還是新系統，步驟略有不同。
+啟用NetApp Backup and Recovery非常簡單。根據您擁有的是現有Cloud Volumes ONTAP系統還是新系統，步驟略有不同。
 
-*在新系統上啟用NetApp備份與復原*
+*在新系統上啟用NetApp Backup and Recovery*
 
-NetApp Backup and Recovery 在系統精靈中預設為啟用。確保該選項保持啟用狀態。
+NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保持啟用狀態。
 
 看 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-aws.html["在 AWS 中啟動Cloud Volumes ONTAP"^]了解建立Cloud Volumes ONTAP系統的需求和詳細資訊。
 
@@ -221,11 +221,11 @@ NetApp Backup and Recovery 在系統精靈中預設為啟用。確保該選項�
 
 
 .結果
-系統上已啟用NetApp Backup and Recovery。在這些Cloud Volumes ONTAP系統上建立磁碟區後，啟動NetApp Backup and Recovery 和link:prev-ontap-backup-manage.html["在您想要保護的每個磁碟區上啟動備份"]。
+系統上已啟用NetApp Backup and Recovery 。在這些Cloud Volumes ONTAP系統上建立磁碟區後，啟動NetApp Backup and Recovery和link:prev-ontap-backup-manage.html["在您想要保護的每個磁碟區上啟動備份"]。
 
-*在現有系統上啟用NetApp備份與復原*
+*在現有系統上啟用NetApp Backup and Recovery*
 
-隨時直接從控制台在現有系統上啟用NetApp備份和還原。
+隨時直接從控制台在現有系統上啟用NetApp Backup and Recovery。
 
 .步驟
 . 從控制台*系統*頁面中，選擇叢集並選擇右側面板中備份和還原旁邊的*啟用*。
@@ -269,7 +269,7 @@ NetApp Backup and Recovery 在系統精靈中預設為啟用。確保該選項�
 . 繼續以下選項：
 +
 ** 如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。
-** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。請參閱<<準備控制台代理>> 。
+** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。參考<<準備控制台代理>>。
 
 
 
@@ -430,7 +430,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 
 
 .結果
-NetApp Backup and Recovery 開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存系統資料的差異副本。
+NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存系統資料的差異副本。
 
 在目標叢集中建立一個複製卷，該卷將與主儲存卷同步。
 

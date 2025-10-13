@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-ontaps3.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和還原將本地ONTAP資料備份到ONTAP S3
+= 使用NetApp Backup and Recovery將本機ONTAP資料備份到ONTAP S3
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-完成NetApp備份與復原中的幾個步驟即可開始從主本機ONTAP系統備份磁碟區資料。您可以將備份傳送至輔助ONTAP儲存系統（複製磁碟區）或設定為 S3 伺服器的ONTAP系統上的儲存桶（備份檔案），或同時傳送至兩者。
+完成NetApp Backup and Recovery中的幾個步驟即可開始從主本機ONTAP系統備份磁碟區資料。您可以將備份傳送至輔助ONTAP儲存系統（複製磁碟區）或設定為 S3 伺服器的ONTAP系統上的儲存桶（備份檔案），或同時傳送至兩者。
 
 主本地ONTAP系統可以是FAS、 AFF或ONTAP Select系統。輔助ONTAP系統可以是本機ONTAP或Cloud Volumes ONTAP系統。物件儲存可以位於本機ONTAP系統或已啟用簡單儲存服務 (S3) 物件儲存伺服器的Cloud Volumes ONTAP系統上。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 
@@ -31,13 +31,13 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 下圖顯示了將主本機ONTAP系統備份到為 S3 配置的本機ONTAP系統時的每個元件以及您需要在它們之間準備的連線。它還顯示了與同一本地位置的輔助ONTAP系統的連接以複製磁碟區。
 
-image:diagram_cloud_backup_onprem_ontap_s3.png["此圖顯示了NetApp Backup and Recovery 如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
+image:diagram_cloud_backup_onprem_ontap_s3.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
 當控制台代理程式和主本機ONTAP系統安裝在沒有網際網路存取的本機位置（「私有」模式部署）時， ONTAP S3 系統必須位於同一個本機資料中心。
 
 下圖顯示了將主本地ONTAP系統備份到為 S3 配置的Cloud Volumes ONTAP系統時的每個元件以及您需要在它們之間準備的連接。它還顯示了與同一雲端提供者環境中的輔助Cloud Volumes ONTAP系統的連接，以複製磁碟區。
 
-image:diagram_cloud_backup_onprem_ontap_s3_cloud.png["此圖顯示了NetApp Backup and Recovery 如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
+image:diagram_cloud_backup_onprem_ontap_s3_cloud.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
 在這種情況下，控制台代理應部署在部署Cloud Volumes ONTAP系統的相同雲端提供者環境中。
 
@@ -75,17 +75,17 @@ image:diagram_cloud_backup_onprem_ontap_s3_cloud.png["此圖顯示了NetApp Back
 
 ==== 私人模式（暗站）注意事項
 
-NetApp備份和復原功能內建於控制台代理程式中。以私人模式安裝時，您需要定期更新控制台代理軟體才能存取新功能。檢查link:whats-new.html["NetApp備份與還原新功能"]查看每個NetApp Backup and Recovery 版本中的新功能。當您想要使用新功能時，請按照以下步驟操作 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["升級控制台代理軟體"^]。
+NetApp Backup and Recovery功能內建於控制台代理程式中。以私人模式安裝時，您需要定期更新控制台代理軟體才能存取新功能。檢查link:whats-new.html["NetApp Backup and Recovery新功能"]查看每個NetApp Backup and Recovery版本中的新功能。當您想要使用新功能時，請按照以下步驟操作 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["升級控制台代理軟體"^]。
 
-當您在標準 SaaS 環境中使用NetApp Backup and Recovery 時， NetApp Backup and Recovery 設定資料會備份到雲端。當您在沒有網路存取的網站中使用NetApp Backup and Recovery 時， NetApp Backup and Recovery 設定資料將備份到儲存備份的ONTAP S3 儲存桶中。
+當您在標準 SaaS 環境中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將會備份到雲端。當您在沒有網路存取的網站中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的ONTAP S3 儲存桶中。
 
 
 
 == 驗證許可證要求
 
-在為叢集啟動NetApp Backup and Recovery 之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此許可證用於備份和恢復物件儲存 - 無需許可證即可建立 Snapshot 副本或複製磁碟區。此許可證適用於該帳戶，可跨多個系統使用。
+在為叢集啟動NetApp Backup and Recovery之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此許可證用於備份和恢復物件儲存 - 無需許可證即可建立 Snapshot 副本或複製磁碟區。此許可證適用於該帳戶，可跨多個系統使用。
 
-您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用本服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"] 。
+您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用本服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。
 
 
 TIP: 將檔案備份到ONTAP S3 時不支援 PAYGO 授權。
@@ -98,7 +98,7 @@ TIP: 將檔案備份到ONTAP S3 時不支援 PAYGO 授權。
 
 準備ONTAP集群涉及以下步驟：
 
-* 在NetApp控制台中發現您的ONTAP系統
+* 在NetApp Console中發現您的ONTAP系統
 * 驗證ONTAP系統要求
 * 驗證ONTAP網路要求以將資料備份到對象存儲
 * 驗證ONTAP複製卷的網路要求
@@ -106,11 +106,11 @@ TIP: 將檔案備份到ONTAP S3 時不支援 PAYGO 授權。
 
 
 
-=== 在NetApp控制台中發現您的ONTAP系統
+=== 在NetApp Console中發現您的ONTAP系統
 
-您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp控制台 *系統* 頁面上可用。
+您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。
 
-您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現集群"^] 。
+您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現集群"^]。
 
 
 
@@ -121,7 +121,7 @@ TIP: 將檔案備份到ONTAP S3 時不支援 PAYGO 授權。
 * 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
 * SnapMirror許可證（包含在高級捆綁包或資料保護捆綁包中）。
 +
-*注意：*使用NetApp備份和復原時不需要「混合雲端捆綁包」。
+*注意：*使用NetApp Backup and Recovery時不需要「混合雲端捆綁包」。
 
 +
 了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["管理您的叢集許可證"^]。
@@ -129,7 +129,7 @@ TIP: 將檔案備份到ONTAP S3 時不支援 PAYGO 授權。
 * 時間和時區設定正確。了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["配置叢集時間"^]。
 * 如果要複製數據，則應在複製資料之前驗證來源系統和目標系統是否運行相容的ONTAP版本。
 +
-https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^] 。
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^]。
 
 
 
@@ -144,7 +144,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 * 當您使用扇出備份架構時，必須在主儲存系統上設定設定。
 * 當您使用級聯備份架構時，必須在_輔助_儲存系統上設定設定。
 +
-link:prev-ontap-protect-journey.html["了解有關備份架構類型的更多信息"] 。
+link:prev-ontap-protect-journey.html["了解有關備份架構類型的更多信息"]。
 
 
 
@@ -158,19 +158,19 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 * ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。
 * 每個託管要備份的磁碟區的ONTAP節點上都需要一個叢集間 LIF。  LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有關 IP 空間的更多信息"^] 。
 +
-設定NetApp Backup and Recovery 時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
+當您設定NetApp Backup and Recovery時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
 
 * 節點的群集間 LIF 能夠存取物件儲存（當控制台代理安裝在「暗」站點時不需要）。
 * 已為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["為 SVM 配置 DNS 服務"^]。
 * 如果您使用的 IP 空間與預設 IP 空間不同，則可能需要建立靜態路由才能存取物件儲存。
-* 如有必要，請更新防火牆規則，以允許NetApp備份和復原服務透過您指定的連接埠（通常為連接埠 443）從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
+* 如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery服務透過您指定的連接埠（通常為連接埠 443）從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
 
 
 
 
 === 驗證ONTAP複製卷的網路要求
 
-如果您打算使用NetApp Backup and Recovery 在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
+如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
 
 
 
@@ -200,11 +200,11 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 此ONTAP系統必須符合以下要求。
 
-支援的ONTAP版本:: 本機ONTAP系統需要ONTAP 9.8 及更高版本。  Cloud Volumes ONTAP系統需要ONTAP 9.9.1 及更高版本。
+支援的 ONTAP 版本:: 本機ONTAP系統需要ONTAP 9.8 及更高版本。  Cloud Volumes ONTAP系統需要ONTAP 9.9.1 及更高版本。
 S3 憑證:: 您必須建立 S3 使用者來控制對ONTAP S3 儲存的存取。 https://docs.netapp.com/us-en/ontap/s3-config/create-s3-user-task.html["有關詳細信息，請參閱ONTAP S3 文檔"^] 。
 +
 --
-當您設定備份到ONTAP S3 時，備份精靈會提示您輸入使用者帳戶的 S3 存取金鑰和金鑰。該用戶帳戶使NetApp Backup and Recovery 能夠驗證和存取用於儲存備份的ONTAP S3 儲存桶。需要金鑰，以便ONTAP S3 知道誰在發出請求。
+當您設定備份到ONTAP S3 時，備份精靈會提示您輸入使用者帳戶的 S3 存取金鑰和金鑰。該用戶帳戶使NetApp Backup and Recovery能夠驗證和存取用於儲存備份的ONTAP S3 儲存桶。需要金鑰，以便ONTAP S3 知道誰在發出請求。
 
 這些存取金鑰必須與具有以下權限的使用者相關聯：
 
@@ -252,7 +252,7 @@ S3 憑證:: 您必須建立 S3 使用者來控制對ONTAP S3 儲存的存取。 
 . 繼續以下選項：
 +
 ** 如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。
-** 如果您沒有控制台代理，則會出現「新增控制台代理」選項。請參閱<<準備控制台代理>> 。
+** 如果您沒有控制台代理，則會出現「新增控制台代理」選項。參考<<準備控制台代理>>。
 
 
 
@@ -358,7 +358,7 @@ TIP: 若要使用備份和復原建立自訂策略，請參閱link:br-use-polici
 ** *網路*：選擇要備份的磁碟區所在的來源ONTAP叢集中的 IP 空間。此 IP 空間的群集間 LIF 必須具有出站網際網路存取權限（當控制台代理安裝在「暗站」時不需要）。
 +
 
-TIP: 選擇正確的 IP 空間可確保NetApp Backup and Recovery 可以建立從ONTAP到ONTAP S3 物件儲存的連線。
+TIP: 選擇正確的 IP 空間可確保NetApp Backup and Recovery可以建立從ONTAP到ONTAP S3 物件儲存的連線。
 
 ** *備份策略*：選擇現有的備份策略或建立新的備份策略。
 +
@@ -401,7 +401,7 @@ TIP: 若要使用備份和復原建立自訂策略，請參閱link:br-use-polici
 
 
 .結果
-NetApp Backup and Recovery 開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括來源資料的完整副本。後續傳輸包含快照副本中包含的主儲存資料的差異副本。
+NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括來源資料的完整副本。後續傳輸包含快照副本中包含的主儲存資料的差異副本。
 
 在目標叢集中建立一個複製卷，該卷將與主儲存卷同步。
 

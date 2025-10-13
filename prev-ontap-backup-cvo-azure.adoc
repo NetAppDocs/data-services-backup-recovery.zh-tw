@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-azure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和還原將Cloud Volumes ONTAP資料備份到 Azure Blob 存儲
+= 使用NetApp Backup and Recovery將Cloud Volumes ONTAP資料備份到 Azure Blob 存儲
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,30 +14,30 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-完成NetApp Backup and Recovery 中的幾個步驟，開始將磁碟區資料從Cloud Volumes ONTAP系統備份到 Azure Blob 儲存體。
+完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從Cloud Volumes ONTAP系統備份到 Azure Blob 儲存體。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 
 
 == 驗證對您的配置的支持
 
-在開始將磁碟區備份到 Azure Blob 儲存體之前，請先閱讀下列要求以確保具有支援的設定。
+在開始將磁碟區備份到 Azure Blob 儲存體之前，請閱讀下列要求以確保您具有支援的設定。
 
 下圖顯示了每個組件以及您需要在它們之間準備的連接。
 
 或者，您也可以使用公用或私有連線連線到用於複製磁碟區的輔助ONTAP系統。
 
-image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recovery 如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
+image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
-支援的ONTAP版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
-支援的 Azure 區域:: 所有 Azure 區域（包括 Azure 政府區域）都支援NetApp備份和復原。
+支援的 ONTAP 版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
+支援的 Azure 區域:: 所有 Azure 區域（包括 Azure 政府區域）都支援NetApp Backup and Recovery。
 +
 --
-預設情況下， NetApp Backup and Recovery 為 Blob 容器提供本機冗餘 (LRS) 以優化成本。如果您想要確保資料在不同區域之間複製，則可以在啟動NetApp Backup and Recovery 後將此設定變更為區域冗餘 (ZRS)。請參閱 Microsoft 說明 https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["變更儲存帳戶的複製方式"^]。
+預設情況下， NetApp Backup and Recovery為 Blob 容器提供本機冗餘 (LRS) 以優化成本。如果您想要確保資料在不同區域之間複製，則可以在啟動NetApp Backup and Recovery後將此設定變更為區域冗餘 (ZRS)。請參閱 Microsoft 說明 https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["變更儲存帳戶的複製方式"^]。
 
 --
 在不同的 Azure 訂閱中建立備份所需的設置:: 預設情況下，使用與Cloud Volumes ONTAP系統相同的訂閱來建立備份。
@@ -47,9 +47,9 @@ image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recov
 
 == 驗證許可證要求
 
-對於NetApp Backup and Recovery PAYGO 許可，在啟用NetApp Backup and Recovery 之前，需要透過 Azure Marketplace 進行訂閱。  NetApp Backup and Recovery 的計費透過此訂閱完成。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html["您可以從系統精靈的「詳細資料和憑證」頁面進行訂閱"^] 。
+對於NetApp Backup and Recovery PAYGO 許可，在啟用NetApp Backup and Recovery之前，需要透過 Azure Marketplace 進行訂閱。  NetApp Backup and Recovery的計費透過此訂閱完成。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html["您可以從系統精靈的「詳細資料和憑證」頁面進行訂閱"^] 。
 
-對於NetApp備份和還原 BYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"] 。當控制台代理程式和Cloud Volumes ONTAP系統部署在暗站（「私有模式」）時，您必須使用 BYOL 授權。
+對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。當控制台代理程式和Cloud Volumes ONTAP系統部署在暗站（「私有模式」）時，您必須使用 BYOL 授權。
 
 並且您需要訂閱 Microsoft Azure 以取得備份所在的儲存空間。
 
@@ -57,7 +57,7 @@ image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recov
 
 == 準備控制台代理
 
-控制台代理可以安裝在具有完全或有限網際網路存取權限（「標準」或「受限」模式）的 Azure 區域。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["有關詳細信息，請參閱NetApp控制台部署模式"^] 。
+控制台代理可以安裝在具有完全或有限網際網路存取權限（「標準」或「受限」模式）的 Azure 區域。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["有關詳細信息，請參閱NetApp Console部署模式"^] 。
 
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解控制台代理"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["在 Azure 中以標準模式（完全網際網路存取）部署控制台代理"^]
@@ -68,7 +68,7 @@ image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recov
 
 === 驗證或新增控制台代理的權限
 
-要使用NetApp備份和還原搜尋和還原功能，您需要在控制台代理程式的角色中擁有特定權限，以便它可以存取 Azure Synapse 工作區和資料湖儲存帳戶。請參閱下面的權限，如果需要修改策略，請依照下列步驟操作。
+要使用NetApp Backup and Recovery搜尋和還原功能，您需要在控制台代理程式的角色中擁有特定權限，以便它可以存取 Azure Synapse 工作區和資料湖儲存帳戶。請參閱下面的權限，如果需要修改策略，請依照下列步驟操作。
 
 .開始之前
 * 您必須向您的訂閱註冊 Azure Synapse Analytics 資源提供者（稱為「Microsoft.Synapse」）。 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["了解如何為您的訂閱註冊此資源提供程序"^] 。您必須是訂閱*擁有者*或*貢獻者*才能註冊資源提供者。
@@ -148,7 +148,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 您可以在啟動精靈中使用自己的客戶管理金鑰進行資料加密，而不是使用預設的 Microsoft 管理加密金鑰。在這種情況下，您將需要有 Azure 訂閱、Key Vault 名稱和金鑰。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["了解如何使用自己的密鑰"^] 。
 
-NetApp Backup and Recovery 支援 Azure 存取策略、Azure 以角色為基礎的存取控制 (Azure RBAC) 權限模型和託管硬體安全模型 (HSM)（請參閱 https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/overview["什麼是 Azure Key Vault 託管 HSM？"]）。
+NetApp Backup and Recovery支援 Azure 存取策略、Azure 基於角色的存取控制 (Azure RBAC) 權限模型和託管硬體安全模型 (HSM)（請參閱 https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/overview["什麼是 Azure Key Vault 託管 HSM？"]）。
 
 
 
@@ -156,13 +156,13 @@ NetApp Backup and Recovery 支援 Azure 存取策略、Azure 以角色為基礎�
 
 預設情況下，該服務會為您建立儲存帳戶。如果您想使用自己的儲存帳戶，您可以在啟動備份啟動精靈之前建立它們，然後在精靈中選擇這些儲存帳戶。
 
-link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的更多信息"] 。
+link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的更多信息"]。
 
 
 
 == 驗證ONTAP複製卷的網路要求
 
-如果您打算使用NetApp Backup and Recovery 在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
+如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
 
 
 
@@ -187,18 +187,18 @@ link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的
 
 
 
-== 在Cloud Volumes ONTAP上啟用NetApp備份與復原
+== 在Cloud Volumes ONTAP上啟用NetApp Backup and Recovery
 
-啟用NetApp備份和復原非常簡單。根據您擁有的是現有Cloud Volumes ONTAP系統還是新系統，步驟略有不同。
+啟用NetApp Backup and Recovery非常簡單。根據您擁有的是現有Cloud Volumes ONTAP系統還是新系統，步驟略有不同。
 
-*在新系統上啟用NetApp備份與復原*
+*在新系統上啟用NetApp Backup and Recovery*
 
-NetApp Backup and Recovery 在系統精靈中預設為啟用。確保該選項保持啟用狀態。
+NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保持啟用狀態。
 
 看 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html["在 Azure 中啟動Cloud Volumes ONTAP"^]了解建立Cloud Volumes ONTAP系統的需求和詳細資訊。
 
 
-NOTE: 如果您想要選擇資源組的名稱，請在部署Cloud Volumes ONTAP時*停用* NetApp Backup and Recovery。
+NOTE: 如果您想要選擇資源組的名稱，請在部署Cloud Volumes ONTAP時*停用* NetApp Backup and Recovery 。
 
 .步驟
 . 從控制台*系統*頁面，選擇*新增系統*，選擇雲端提供者，然後選擇*新增*。選擇「建立Cloud Volumes ONTAP」。
@@ -210,11 +210,11 @@ NOTE: 如果您想要選擇資源組的名稱，請在部署Cloud Volumes ONTAP�
 
 
 .結果
-系統上已啟用NetApp Backup and Recovery。在這些Cloud Volumes ONTAP系統上建立磁碟區後，啟動NetApp Backup and Recovery 和link:prev-ontap-backup-manage.html["在您想要保護的每個磁碟區上啟動備份"]。
+系統上已啟用NetApp Backup and Recovery 。在這些Cloud Volumes ONTAP系統上建立磁碟區後，啟動NetApp Backup and Recovery和link:prev-ontap-backup-manage.html["在您想要保護的每個磁碟區上啟動備份"]。
 
-*在現有系統上啟用NetApp備份與復原*
+*在現有系統上啟用NetApp Backup and Recovery*
 
-隨時直接從系統啟用NetApp備份與復原。
+隨時直接從系統啟用NetApp Backup and Recovery。
 
 .步驟
 . 從控制台*系統*頁面中，選擇系統並選擇右側面板中備份和還原旁邊的*啟用*。
@@ -260,7 +260,7 @@ NOTE: 如果您想要選擇資源組的名稱，請在部署Cloud Volumes ONTAP�
 . 繼續以下選項：
 +
 ** 如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。
-** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。請參閱<<準備控制台代理>> 。
+** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。參考<<準備控制台代理>>。
 
 
 
@@ -435,13 +435,13 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 
 
 .結果
-NetApp Backup and Recovery 開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存資料的差異副本。
+NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存資料的差異副本。
 
 在目標群集中建立一個複製卷，該複製卷將與主卷同步。
 
 在您輸入的資源組中建立一個 Blob 儲存容器，並將備份檔案儲存在那裡。
 
-預設情況下， NetApp Backup and Recovery 為 Blob 容器提供本機冗餘 (LRS) 以優化成本。如果您想確保資料在不同區域之間複製，則可以將此設定變更為區域冗餘（ZRS）。請參閱 Microsoft 說明 https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["變更儲存帳戶的複製方式"^]。
+預設情況下， NetApp Backup and Recovery為 Blob 容器提供本機冗餘 (LRS) 以優化成本。如果您想確保資料在不同區域之間複製，則可以將此設定變更為區域冗餘（ZRS）。請參閱 Microsoft 說明 https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["變更儲存帳戶的複製方式"^]。
 
 顯示磁碟區備份儀表板，以便您可以監控備份的狀態。
 
@@ -462,7 +462,7 @@ NetApp Backup and Recovery 開始對您的磁碟區進行初始備份。複製�
 
 == 下一步是什麼？
 
-* 您可以link:prev-ontap-backup-manage.html["管理您的備份檔案和備份策略"] 。這包括啟動和停止備份、刪除備份、新增和更改備份計劃等。
-* 您可以link:prev-ontap-policy-object-advanced-settings.html["管理叢集級備份設定"] 。這包括更改ONTAP用於存取雲端儲存的儲存金鑰、更改可用於將備份上傳到物件儲存的網路頻寬、更改未來磁碟區的自動備份設定等等。
+* 你可以link:prev-ontap-backup-manage.html["管理您的備份檔案和備份策略"]。這包括啟動和停止備份、刪除備份、新增和更改備份計劃等。
+* 你可以link:prev-ontap-policy-object-advanced-settings.html["管理叢集級備份設定"]。這包括更改ONTAP用於存取雲端儲存的儲存金鑰、更改可用於將備份上傳到物件儲存的網路頻寬、更改未來磁碟區的自動備份設定等等。
 * 您還可以link:prev-ontap-restore.html["從備份文件還原磁碟區、資料夾或單一文件"]到 AWS 中的Cloud Volumes ONTAP系統，或到本機ONTAP系統。
 

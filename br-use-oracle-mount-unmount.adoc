@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-oracle-mount-unmount.html 
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp備份和復原保護您的 Oracle 工作負載。 
+summary: 使用NetApp Backup and Recovery保護您的 Oracle 工作負載。 
 ---
-= 使用NetApp Backup and Recovery 掛載和卸載 Oracle 資料庫復原點
+= 使用NetApp Backup and Recovery掛載和解除安裝 Oracle 資料庫復原點
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,7 +23,7 @@ summary: 使用NetApp備份和復原保護您的 Oracle 工作負載。
 如果您將資料庫的保護策略配置為保留存檔日誌，則可以掛載資料庫的復原點來查看對資料庫所做的所有變更的歷史記錄。
 
 .步驟
-. 從NetApp控制台選單中，選擇「保護」>「備份與復原」。
+. 從NetApp Console選單中，選擇「保護」>「備份和復原」。
 . 選擇 Oracle 圖塊。
 . 在備份和還原選單中，選擇*Inventory*。
 . 對於清單中的 Oracle 資料庫工作負載，選擇「*檢視*」。
@@ -55,7 +55,7 @@ summary: 使用NetApp備份和復原保護您的 Oracle 工作負載。
 當您不再需要查看對該資料庫所做的變更時，請卸載復原點。
 
 .步驟
-. 從NetApp控制台選單中，選擇「保護」>「備份與復原」。
+. 從NetApp Console選單中，選擇「保護」>「備份和復原」。
 . 選擇 Oracle 圖塊。
 . 在備份和還原選單中，選擇*Inventory*。
 . 對於清單中的 Oracle 工作負載，選擇「*檢視*」。

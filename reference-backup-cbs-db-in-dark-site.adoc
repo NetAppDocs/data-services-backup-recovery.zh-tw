@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-backup-cbs-db-in-dark-site.html 
 keywords: backup database, recover database, dark site, private mode, restore database, backup and recovery, Console agent 
-summary: 在沒有網際網路存取的網站（稱為「私有模式」）中使用NetApp Backup and Recovery 時， NetApp Backup and Recovery 設定資料將備份到儲存備份的StorageGRID或ONTAP S3 儲存桶中。如果您將來遇到控制台代理主機系統問題，您可以部署新的控制台代理並還原關鍵的NetApp備份和還原資料。 
+summary: 在沒有網際網路存取的網站（稱為「私有模式」）中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID或ONTAP S3 儲存桶中。如果您將來遇到控制台代理主機系統問題，您可以部署新的控制台代理並還原關鍵的NetApp Backup and Recovery資料。 
 ---
-= 在暗站中恢復NetApp備份和還原配置數據
+= 在暗站中恢復NetApp Backup and Recovery配置數據
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,36 +14,36 @@ summary: 在沒有網際網路存取的網站（稱為「私有模式」）中�
 
 
 [role="lead"]
-在沒有網際網路存取的網站（稱為_私有模式_）中使用NetApp Backup and Recovery 時， NetApp Backup and Recovery 設定資料將備份到儲存備份的StorageGRID或ONTAP S3 儲存桶中。如果控制台代理主機系統出現問題，您可以部署新的控制台代理並還原關鍵的NetApp備份和還原資料。
+在沒有網際網路存取的網站（稱為_私有模式_）中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID或ONTAP S3 儲存桶中。如果控制台代理主機系統出現問題，您可以部署新的控制台代理並還原關鍵的NetApp Backup and Recovery資料。
 
 
 NOTE: 此過程僅適用於ONTAP磁碟區資料。
 
-當您在 SaaS 環境中使用NetApp Backup and Recovery 時，其中控制台代理部署在雲端供應商處，或在您自己的具有網際網路存取權限的主機系統上，所有重要的NetApp Backup and Recovery 設定資料都會在雲端備份和保護。如果您遇到控制台代理問題，只需建立新的控制台代理並新增您的系統，備份詳細資訊就會自動還原。
+當您在 SaaS 環境中使用NetApp Backup and Recovery時，其中控制台代理部署在雲端供應商處，或在您自己的具有網際網路存取權限的主機系統上，所有重要的NetApp Backup and Recovery設定資料都會在雲端中備份和保護。如果您遇到控制台代理問題，只需建立新的控制台代理並新增您的系統，備份詳細資訊就會自動還原。
 
 備份的資料有兩種類型：
 
-* NetApp備份和還原資料庫 - 包含所有磁碟區、備份檔案、備份策略和設定資訊的清單。
+* NetApp Backup and Recovery資料庫 - 包含所有磁碟區、備份檔案、備份策略和設定資訊的清單。
 * 索引目錄檔案 - 包含用於搜尋和復原功能的詳細索引，可讓您在尋找要復原的磁碟區資料時搜尋非常快速且有效。
 
 
-這些資料每天午夜備份一次，每個檔案最多保留 7 份副本。如果控制台代理程式正在管理多個本機ONTAP系統，則NetApp備份和復原檔案將位於首先啟動的系統的儲存桶中。
+這些資料每天午夜備份一次，每個檔案最多保留 7 份副本。如果控制台代理程式正在管理多個本機ONTAP系統，則NetApp Backup and Recovery檔案將位於首先啟動的系統的儲存桶中。
 
 
-TIP: NetApp備份和還原資料庫或索引目錄檔案中從未包含任何磁碟區資料。
+TIP: NetApp Backup and Recovery資料庫或索引目錄檔案中從未包含任何磁碟區資料。
 
 
 
-== 將NetApp備份和還原資料還原到新的控制台代理
+== 將NetApp Backup and Recovery資料還原到新的控制台代理
 
-如果您的內部控制台代理發生災難性故障，您將需要安裝新的控制台代理，然後將NetApp備份和還原資料還原到新的控制台代理。
+如果您的內部控制台代理發生災難性故障，您將需要安裝新的控制台代理，然後將NetApp Backup and Recovery資料還原到新的控制台代理。
 
-您需要執行下列任務才能使NetApp備份和復原系統復原工作狀態：
+您需要執行下列任務才能讓NetApp Backup and Recovery系統還原工作狀態：
 
 * 安裝新的控制台代理
-* 還原NetApp備份與還原資料庫
+* 還原NetApp Backup and Recovery資料庫
 * 恢復索引目錄文件
-* 將所有本機ONTAP系統和StorageGRID系統重新發現到NetApp控制台 UI
+* 將所有本機ONTAP系統和StorageGRID系統重新發現到NetApp ConsoleUI
 
 
 一旦您確認系統恢復正常運作，我們建議您建立新的備份檔案。
@@ -51,7 +51,7 @@ TIP: NetApp備份和還原資料庫或索引目錄檔案中從未包含任何磁
 .你需要什麼
 您需要從儲存備份檔案的StorageGRID或ONTAP S3 儲存桶存取最新的資料庫和索引備份：
 
-* NetApp備份與還原 MySQL 資料庫文件
+* NetApp Backup and RecoveryMySQL 資料庫文件
 +
 該檔案位於儲存桶中的以下位置 `netapp-backup-<GUID>/mysql_backup/`，它被命名為 `CBS_DB_Backup_<day>_<month>_<year>.sql`。
 
@@ -65,7 +65,7 @@ TIP: NetApp備份和還原資料庫或索引目錄檔案中從未包含任何磁
 
 === 在新的本機 Linux 主機上安裝新的控制台代理
 
-安裝新的控制台代理程式時，請確保下載與原始控制台代理程式上安裝的相同版本的軟體。 NetApp備份和還原資料庫結構的定期變更可能會導致較新的軟體版本與原始資料庫備份不相容。你可以 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["恢復備份資料庫後，將控制台代理軟體升級至最新版本"^]。
+安裝新的控制台代理程式時，請確保下載與原始控制台代理程式上安裝的相同版本的軟體。 NetApp Backup and Recovery資料庫結構的定期變更可能會導致較新的軟體版本與原始資料庫備份不相容。你可以 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["恢復備份資料庫後，將控制台代理軟體升級至最新版本"^]。
 
 . https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["在新的本機 Linux 主機上安裝控制台代理"^]
 . 使用您剛剛建立的管理員使用者憑證登入控制台。
@@ -73,7 +73,7 @@ TIP: NetApp備份和還原資料庫或索引目錄檔案中從未包含任何磁
 
 
 
-=== 還原NetApp備份與還原資料庫
+=== 還原NetApp Backup and Recovery資料庫
 
 . 將 MySQL 備份從備份位置複製到新的控制台代理主機。下面我們將使用範例檔案名稱「CBS_DB_Backup_23_05_2023.sql」。
 . 根據您使用的是 Docker 還是 Podman 容器，使用以下命令之一將備份複製到 MySQL docker 容器：
@@ -100,7 +100,7 @@ podman exec -it ds_mysql_1 sh
 ----
 . 在容器shell中，部署「env」。
 . 您將需要 MySQL DB 密碼，因此請複製鍵“MYSQL_ROOT_PASSWORD”的值。
-. 使用下列指令還原NetApp備份和還原 MySQL DB：
+. 使用下列命令還原NetApp Backup and RecoveryMySQL DB：
 +
 [source, cli]
 ----
@@ -145,14 +145,14 @@ unzip Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip -d catalogdb1
 === 發現您的ONTAP叢集和StorageGRID系統
 
 . https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html#discover-clusters-using-a-connector["探索所有本地ONTAP系統"^]在您之前的環境中可用。這包括您用作 S3 伺服器的ONTAP系統。
-. https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["發現您的StorageGRID系統"^] 。
+. https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["發現您的StorageGRID系統"^]。
 
 
 
 
 === 設定StorageGRID環境詳細信息
 
-添加與您的ONTAP系統關聯的StorageGRID系統的詳細信息，因為它們是在原始控制台代理設定上使用 https://docs.netapp.com/us-en/console-automation/index.html["NetApp控制台 API"^]。
+添加與您的ONTAP系統關聯的StorageGRID系統的詳細信息，因為它們是在原始控制台代理設定上使用 https://docs.netapp.com/us-en/console-automation/index.html["NetApp ConsoleAPI"^]。
 
 以下資訊適用於從NetApp Console 3.9.xx 開始的私有模式安裝。對於舊版本，請使用以下步驟： https://community.netapp.com/t5/Tech-ONTAP-Blogs/DarkSite-Cloud-Backup-MySQL-and-Indexed-Catalog-Backup-and-Restore/ba-p/440800["DarkSite 雲端備份：MySQL 和索引目錄備份和還原"^] 。
 
@@ -185,7 +185,7 @@ curl -X GET http://10.193.192.202/tenancy/external/resource?account=account-DARK
 +
 此 API 將傳回以下回應。「resourceIdentifier」下的值表示_WorkingEnvironment Id_，「agentId」下的值表示_x-agent-id_。
 
-. 使用與系統關聯的StorageGRID系統的詳細資訊更新NetApp備份和復原資料庫。確保輸入StorageGRID的完全限定網域名稱以及存取金鑰和儲存金鑰，如下所示：
+. 使用與系統關聯的StorageGRID系統的詳細資訊更新NetApp Backup and Recovery資料庫。確保輸入StorageGRID的完全限定網域名稱以及存取金鑰和儲存金鑰，如下所示：
 +
 [source, http]
 ----
@@ -199,7 +199,7 @@ curl -X POST 'http://10.193.192.202/account/account-DARKSITE1/providers/cloudman
 
 
 
-=== 驗證NetApp備份與復原設置
+=== 驗證NetApp Backup and Recovery設置
 
 . 選擇每個ONTAP系統，然後點擊右側面板中備份和還原服務旁邊的「檢視備份」。
 +

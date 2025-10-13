@@ -25,7 +25,7 @@
 
 === 支援第三方 Wasabi 物件儲存（預覽版）
 
-NetApp Backup and Recovery 現在將其支援擴展到第三方物件存儲，主要專注於 Wasabi。此新預覽功能可讓您利用任何與 S3 相容的物件儲存來滿足您的備份和復原需求。
+NetApp Backup and Recovery現在將其支援擴展到第三方物件存儲，主要專注於 Wasabi。此新預覽功能可讓您利用任何與 S3 相容的物件儲存來滿足您的備份和復原需求。
 
 
 
@@ -54,7 +54,7 @@ vi default.json
 
 
 .結果
-容器再次開啟後，開啟NetApp備份並還原 UI。當您啟動備份或編輯備份策略時，您將看到新的供應商「S3 Compatible」與 AWS、Microsoft Azure、Google Cloud、 StorageGRID和ONTAP S3 等其他備份提供者一起列出。
+容器再次開啟後，開啟NetApp Backup and RecoveryUI。當您啟動備份或編輯備份策略時，您將看到新的供應商「S3 Compatible」與 AWS、Microsoft Azure、Google Cloud、 StorageGRID和ONTAP S3 等其他備份提供者一起列出。
 
 
 

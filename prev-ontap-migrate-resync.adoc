@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-migrate-resync.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, migrate volumes, SnapMirror to Cloud Resync, ONTAP, NetApp, NetApp ONTAP, NetApp Cloud Volumes ONTAP, NetApp Cloud Volumes Service, FlexVols, FlexGroups 
-summary: NetApp備份和復原中的SnapMirror到雲端重新同步功能簡化了NetApp環境中磁碟區遷移期間的資料保護和連續性。 
+summary: NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。 
 ---
-= 在NetApp備份和復原中使用SnapMirror將磁碟區遷移到 Cloud Resync
+= 在NetApp Backup and Recovery中使用SnapMirror將磁碟區遷移到 Cloud Resync
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,26 +14,26 @@ summary: NetApp備份和復原中的SnapMirror到雲端重新同步功能簡化�
 
 
 [role="lead"]
-NetApp備份和復原中的SnapMirror到雲端重新同步功能簡化了NetApp環境中磁碟區遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本機NetApp部署遷移到另一個本機 NetApp 部署或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP或Cloud Volumes Service）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可運行。
+NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本機NetApp部署遷移到另一個本機 NetApp 部署或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP或Cloud Volumes Service）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可運行。
 
 此功能無需耗時且耗費資源的重新基線操作，使備份操作能夠在遷移後繼續進行。此功能在工作負載遷移場景中很有價值，支援 FlexVols 和 FlexGroups，並且從ONTAP版本 9.16.1 開始可用。
 
 
-NOTE: 此功能從 2025 年 5 月發布的NetApp Backup and Recovery 版本 4.0.3 開始提供。
+NOTE: 此功能從 2025 年 5 月發布的NetApp Backup and Recovery版本 4.0.3 開始提供。
 
 透過維持跨環境的備份連續性， SnapMirror to Cloud Resync 提高了營運效率並降低了混合和多雲資料管理的複雜性。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 .開始之前
 確保滿足以下先決條件：
 
-* 目標ONTAP叢集必須執行ONTAP版本 9.16.1 或更高版本。
-* 必須使用NetApp Backup and Recovery 保護舊的來源ONTAP叢集。
-* SnapMirror到雲端重新同步功能從 2025 年 5 月發布的NetApp Backup and Recovery 版本 4.0.3 開始提供。
+* 目標ONTAP叢集必須執行ONTAP 9.16.1 或更高版本。
+* 必須使用NetApp Backup and Recovery保護舊的來源ONTAP叢集。
+* SnapMirror到雲端重新同步功能從 2025 年 5 月發布的NetApp Backup and Recovery版本 4.0.3 開始提供。
 * 物件儲存中的最新備份必須是跨舊來源、新來源和物件儲存的公共快照。公共快照不能早於備份到物件儲存的最新快照。
 * 在開始重新同步操作之前，必須在新ONTAP叢集上建立在舊ONTAP上使用的快照和SnapMirror策略。如果要在重新同步過程中使用任何策略，則也必須建立該策略。重新同步操作不會建立策略。
 * 確保應用於遷移卷SnapMirror關係的SnapMirror策略包含雲端關係使用的相同標籤。為避免問題，請使用管理磁碟區和所有快照的精確鏡像的策略。
@@ -73,13 +73,13 @@ NOTE: 目前不支援使用 SVM-Migrate、SVM-DR 或 Head Swap 方法遷移後�
 
 此過程避免重新發送已備份的數據，節省頻寬，並確保您的備份鏈在遷移後繼續順利進行。
 
-image:diagram-snapmirror-cloud-resync-migration.png["NetApp備份與還原SnapMirror到雲端重新同步"]
+image:diagram-snapmirror-cloud-resync-migration.png["NetApp Backup and RecoverySnapMirror到雲端重新同步"]
 
 
 
 == 程式說明
 
-* 不使用NetApp Backup and Recovery 執行遷移和技術更新。它們應該由專業服務團隊或合格的儲存管理員來執行。
+* 不使用NetApp Backup and Recovery執行遷移和技術更新。它們應該由專業服務團隊或合格的儲存管理員來執行。
 * NetApp遷移團隊負責在來源 ONTAP 叢集和目標ONTAP叢集之間建立SnapMirror關係，以促進磁碟區遷移。
 * 確保技術更新期間的遷移是基於基於SnapMirror的遷移。
 
@@ -103,7 +103,7 @@ image:diagram-snapmirror-cloud-resync-migration-steps.png["使用SnapMirror到 C
 
 在開始遷移之前， NetApp技術更新團隊會確保滿足以下先決條件，以避免資料遺失並確保遷移過程順利進行。
 
-. 確保所有要遷移的磁碟區都使用NetApp Backup and Recovery 進行保護。
+. 確保所有要遷移的磁碟區都使用NetApp Backup and Recovery進行保護。
 . 記錄卷實例 UUID。在開始遷移之前，記下所有磁碟區的實例 UUID。這些標識符對於稍後的映射和重新同步操作至關重要。
 . 在刪除任何SnapMirror關係之前，對每個磁碟區進行最終快照以保留最新狀態。
 . 記錄SnapMirror策略。記錄目前附加到每個磁碟區關係的SnapMirror策略。稍後在SnapMirror到 Cloud Resync 過程中將需要此功能。
@@ -133,8 +133,8 @@ NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例
 遷移後， NetApp Tech Refresh 團隊執行SnapMirror到 Cloud Resync 作業，以從新遷移的磁碟區還原雲端備份。
 
 . 在控制台*系統*頁面中將新的ONTAP叢集新增為系統。
-. 查看NetApp備份和還原磁碟區頁面以確保舊來源系統詳細資訊可用。
-. 從NetApp備份與還原卷頁頁面中，選擇*備份設定*。
+. 查看NetApp Backup and Recovery磁碟區頁面以確保舊來源系統詳細資訊可用。
+. 從NetApp Backup and Recovery卷頁頁面中，選擇*備份設定*。
 +
 ** 在備份設定頁面中，選擇*查看全部*。
 ** 從新來源右側的操作...選單中，選擇*重新同步備份*。
@@ -153,7 +153,7 @@ NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例
 ** 要應用於新關係的SnapMirror策略。
 
 
-. 選擇“上傳卷對映詳細資料”下的“上傳”，將完成的 CSV 表上傳到NetApp備份和還原 UI。
+. 選擇“上傳卷對映詳細資料”下的“上傳”，將完成的 CSV 表上傳到NetApp Backup and RecoveryUI。
 +
 
 NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例 UUID 是唯一標識符，在遷移過程中保持一致，而磁碟區 ID 可能會在遷移後發生變化。
@@ -161,7 +161,7 @@ NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例
 . 輸入重新同步操作所需的提供者和網路設定資訊。
 . 選擇*提交*開始驗證程序。
 +
-NetApp Backup and Recovery 驗證選擇重新同步的每個磁碟區是否都是最新快照，並且至少有一個通用快照。這可確保磁碟區已準備好進行SnapMirror到 Cloud Resync 操作。
+NetApp Backup and Recovery驗證選擇重新同步的每個磁碟區是否都是最新快照，並且至少有一個通用快照。這可確保磁碟區已準備好進行SnapMirror到 Cloud Resync 操作。
 
 . 查看驗證結果，包括新的來源磁碟區名稱和每個磁碟區的重新同步狀態。
 . 檢查容量是否合格。系統檢查磁碟區是否符合重新同步的條件。如果磁碟區不符合條件，則表示它不是最新的快照或未找到通用快照。

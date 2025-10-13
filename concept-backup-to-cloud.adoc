@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-backup-to-cloud.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: NetApp備份和復原是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。 
+summary: NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。 
 ---
-= 了解NetApp備份與復原
+= 了解NetApp Backup and Recovery
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp備份和復原是一種資料服務，可為您的所有ONTAP工
 
 
 [role="lead"]
-NetApp備份和復原是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。
+NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。
 
 所有ONTAP系統都已內建備份和復原的支持，因此無需額外的硬體、軟體授權或媒體網關。這使得備份操作變得簡單且經濟高效。  NetApp控制台簡化了任何備份策略的實施，包括全方位的 3-2-1 備份變體，而無需多個資源管理器或專業人員。
 
@@ -23,16 +23,16 @@ NOTE: 有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件�
 
 
 
-== NetApp備份與復原功能
+== NetApp Backup and Recovery
 
-使用NetApp Backup and Recovery 實現以下目標：
+使用NetApp Backup and Recovery實現以下目標：
 
 * * ONTAP磁碟區工作負載*：
 +
 ** 建立本機快照，複製到二級存儲，並將ONTAP磁碟區從本機ONTAP或Cloud Volumes ONTAP系統備份到公有或私有雲帳戶中的物件儲存。
 ** 建立區塊級、增量永久備份，並將其儲存在另一個ONTAP叢集和雲端中的物件儲存中。
-** 將NetApp Backup and Recovery 與SnapCenter一起使用。
-** 請參閱link:prev-ontap-protect-overview.html["保護ONTAP卷"] 。
+** 將NetApp Backup and Recovery與SnapCenter一起使用。
+** 參考link:prev-ontap-protect-overview.html["保護ONTAP卷"]。
 
 
 * *Microsoft SQL Server 工作負載*：
@@ -40,25 +40,25 @@ NOTE: 有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件�
 ** 從本機ONTAP、 Cloud Volumes ONTAP或Amazon FSx for NetApp ONTAP備份 Microsoft SQL Server 執行個體和資料庫。
 ** 還原 Microsoft SQL Server 資料庫。
 ** 克隆 Microsoft SQL Server 資料庫。
-** 不使用SnapCenter即可使用NetApp Backup and Recovery。
-** 請參閱link:br-use-mssql-protect-overview.html["保護 Microsoft SQL Server 工作負載"] 。
+** 不使用SnapCenter即可使用NetApp Backup and Recovery 。
+** 參考link:br-use-mssql-protect-overview.html["保護 Microsoft SQL Server 工作負載"]。
 
 
 * VMware 工作負載（使用新 UI 預覽，無需SnapCenter Plug-in for VMware vSphere）*：
 +
-** 使用NetApp備份和復原保護您的 VMware VM 和資料儲存。
+** 使用NetApp Backup and Recovery保護您的 VMware VM 和資料儲存。
 ** 將 VMware 工作負載備份到 Amazon Web Services S3 或StorageGRID （預覽版）。
 ** 將 VMware 資料從雲端還原到本機 vCenter。
 ** 使用NetApp Backup and Recovery，無需SnapCenter Plug-in for VMware vSphere。
-** 請參閱link:br-use-vmware-protect-overview.html["保護 VMware 工作負載"] 。
+** 參考link:br-use-vmware-protect-overview.html["保護 VMware 工作負載"]。
 
 
 * VMware 工作負載（使用SnapCenter Plug-in for VMware vSphere）
 +
 ** 將虛擬機器和資料儲存備份到 Amazon Web Services S3、Microsoft Azure Blob、Google Cloud Platform 和StorageGRID ，並將虛擬機器還原回SnapCenter Plug-in for VMware vSphere。
-** 使用NetApp備份和還原將虛擬機器資料從雲端還原到本機 vCenter。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。
-** 將NetApp Backup and Recovery 與適用於SnapCenter Plug-in for VMware vSphere一起使用。
-** 請參閱link:prev-vmware-protect-overview.html["保護 VMware 工作負載"] 。
+** 使用NetApp Backup and Recovery將虛擬機器資料從雲端還原到本機 vCenter。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。
+** 將NetApp Backup and Recovery與適用於SnapCenter Plug-in for VMware vSphere一起使用。
+** 參考link:prev-vmware-protect-overview.html["保護 VMware 工作負載"]。
 
 
 * KVM 工作負載（預覽版）
@@ -66,17 +66,17 @@ NOTE: 有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件�
 ** 備份和還原虛擬機
 ** 備份 KVM 儲存池
 ** 使用保護組管理備份任務
-** 請參閱link:br-use-kvm-protect-overview.html["保護KVM工作負載"] 。
+** 參考link:br-use-kvm-protect-overview.html["保護KVM工作負載"]。
 
 
 * Hyper-V 工作負載（預覽版）
 +
 ** 備份和還原虛擬機
 ** 使用保護組管理備份任務
-** 請參閱link:br-use-hyperv-protect-overview.html["保護 Hyper-V 工作負載"] 。
+** 參考link:br-use-hyperv-protect-overview.html["保護 Hyper-V 工作負載"]。
 
 
-* Oracle 工作負載（預覽）
+* Oracle 工作負載（預覽版）
 +
 ** 備份和還原資料庫和日誌
 ** 使用保護組管理備份任務
@@ -84,7 +84,7 @@ NOTE: 有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件�
 ** 使用 3-2-1 備份架構保護資料庫
 ** 配置備份保留
 ** 掛載和卸載 ARCHIVELOG 備份
-** 請參閱link:br-use-oracle-protect-overview.html["保護 Oracle 工作負載"] 。
+** 參考link:br-use-oracle-protect-overview.html["保護 Oracle 工作負載"]。
 
 
 * Kubernetes 工作負載（預覽版）
@@ -92,23 +92,23 @@ NOTE: 有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件�
 ** 在一個地方管理和保護您的 Kubernetes 應用程式和資源。
 ** 使用保護策略來建立增量備份。
 ** 將應用程式和資源恢復到相同或不同的叢集和命名空間。
-** 不使用SnapCenter即可使用NetApp Backup and Recovery。
-** 請參閱link:br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載"] 。
+** 不使用SnapCenter即可使用NetApp Backup and Recovery 。
+** 參考link:br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載"]。
 
 
 
 
 
 
-== 使用NetApp備份和復原的優勢
+== 使用NetApp Backup and Recovery的優勢
 
-NetApp Backup and Recovery 有以下優勢：
+NetApp Backup and Recovery有以下優勢：
 
-* **高效率**： NetApp Backup and Recovery 執行區塊級、永久增量複製，從而顯著減少複製和儲存的資料量。這有助於最大限度地減少網路流量和儲存成本。
-* **安全性**： NetApp Backup and Recovery 對傳輸中和靜止的資料進行加密，並使用安全通訊協定來保護您的資料。
-* **經濟高效**： NetApp Backup and Recovery 使用您的雲端帳戶中可用的成本最低的儲存層，有助於降低成本。
-* **自動化**： NetApp Backup and Recovery 根據預先定義的計畫自動產生備份，這有助於確保您的資料受到保護。
-* **靈活**： NetApp Backup and Recovery 使您能夠將資料恢復到相同或不同的系統，從而為資料恢復提供了靈活性。
+* **高效率**： NetApp Backup and Recovery執行區塊級、永久增量複製，從而顯著減少複製和儲存的資料量。這有助於最大限度地減少網路流量和儲存成本。
+* **安全性**： NetApp Backup and Recovery對傳輸中和靜止的資料進行加密，並使用安全通訊協定來保護您的資料。
+* **經濟高效**： NetApp Backup and Recovery使用您的雲端帳戶中可用的成本最低的儲存層，有助於降低成本。
+* **自動化**： NetApp Backup and Recovery根據預先定義的計畫自動產生備份，這有助於確保您的資料受到保護。
+* **靈活**： NetApp Backup and Recovery使您能夠將資料恢復到相同或不同的系統，從而為資料恢復提供了靈活性。
 
 
 
@@ -117,7 +117,7 @@ NetApp Backup and Recovery 有以下優勢：
 
 NetApp不會向您收取試用版的使用費用。但是，您需要承擔與您使用的雲端資源相關的費用，例如儲存和資料傳輸費用。
 
-使用NetApp Backup and Recovery 與ONTAP系統的備份到物件功能有兩種類型的成本：
+使用NetApp Backup and Recovery與ONTAP系統的備份到物件功能有兩種類型的成本：
 
 * 資源費用
 * 服務費
@@ -131,7 +131,7 @@ NetApp不會向您收取試用版的使用費用。但是，您需要承擔與�
 
 * 對於備份到對象存儲，您需要向雲端提供者支付對象存儲費用。
 +
-由於NetApp Backup and Recovery 保留了來源磁碟區的儲存效率，因此您需要向雲端提供者物件儲存支付ONTAP效率之後的資料費用（針對應用程式重複資料刪除和壓縮後的較少量的資料）。
+由於NetApp Backup and Recovery保留了來源磁碟區的儲存效率，因此您需要向雲端提供者物件儲存支付ONTAP效率之後的資料費用（針對應用程式重複資料刪除和壓縮後的較少量的資料）。
 
 * 對於使用「搜尋和還原」還原數據，您的雲端提供者會提供某些資源，並且您的搜尋要求掃描的數據量會產生每 TiB 成本。  （瀏覽和恢復不需要這些資源。）
 +
@@ -184,9 +184,9 @@ NOTE: 對於 Microsoft SQL Server，當您啟動將快照複製到輔助ONTAP目
 
 == 授權
 
-NetApp Backup and Recovery 可免費試用。您可以在有限的時間內無需許可證金鑰使用該服務。
+NetApp Backup and Recovery可免費試用。您可以在有限的時間內無需許可證金鑰使用該服務。
 
-NetApp Backup and Recovery 適用於以下消費模式：
+NetApp Backup and Recovery適用於以下消費模式：
 
 * *自帶許可證 (BYOL)*：從NetApp購買的許可證，可與任何雲端提供者一起使用。
 * *即用即付 (PAYGO)*：從雲端供應商的市場按小時訂閱。
@@ -199,13 +199,13 @@ NetApp Backup and Recovery 適用於以下消費模式：
 
 BYOL 是基於期限（1、2 或 3 年）和容量的，以 1 TiB 為增量。您向NetApp付費以使用該服務一段時間（例如 1 年）以及最大容量（例如 10 TiB）。
 
-您將收到一個序號，請在NetApp控制台中輸入該序號以啟用該服務。當達到任一限制時，您都需要更新許可證。備份 BYOL 授權適用於與您的NetApp控制台組織或帳號關聯的所有來源系統。
+您將收到一個序號，請在NetApp Console中輸入該序號以啟用該服務。當達到任一限制時，您都需要更新許可證。備份 BYOL 授權適用於與您的NetApp Console組織或帳號關聯的所有來源系統。
 
-link:br-start-licensing.html["了解如何設定許可證"] 。
+link:br-start-licensing.html["了解如何設定許可證"]。
 
 *按需付費訂閱*
 
-NetApp Backup and Recovery 以按需付費模式提供基於消費的授權。透過雲端供應商的市場訂閱後，您需要按 GiB 為備份資料付費 - 無需預付款。您的雲端提供者將透過每月帳單向您收費。
+NetApp Backup and Recovery以按需付費模式提供基於消費的授權。透過雲端供應商的市場訂閱後，您需要按 GiB 為備份資料付費 - 無需預付款。您的雲端提供者將透過每月帳單向您收費。
 
 請注意，當您首次註冊 PAYGO 訂閱時，可以享受 30 天的免費試用。
 
@@ -229,14 +229,14 @@ ifdef::azure[]
 
 ifdef::gcp[]
 
-使用 GCP 時，您可以向NetApp要求私人優惠，然後在NetApp Backup and Recovery 啟用期間從 Google Cloud Marketplace 訂閱時選擇該方案。 endif::gcp[]
+使用 GCP 時，您可以向NetApp要求私人優惠，然後在NetApp Backup and Recovery啟動期間從 Google Cloud Marketplace 訂閱時選擇該計劃。 endif::gcp[]
 
 
 
 == 支援的資料來源、系統和備份目標
 
 .支援的工作負載資料來源
-NetApp Backup and Recovery 可保護下列工作負載：
+NetApp Backup and Recovery可保護下列工作負載：
 
 * ONTAP卷
 * 用於實體、VMware 虛擬機器檔案系統 (VMFS) 和 VMware 虛擬機器磁碟 (VMDK) NFS 的 Microsoft SQL Server 執行個體和資料庫
@@ -264,13 +264,13 @@ NetApp Backup and Recovery 可保護下列工作負載：
 
 
 
-== NetApp備份與復原的工作原理
+== NetApp Backup and Recovery的工作原理
 
-當您啟用NetApp備份和復原時，本服務會為您的資料執行完整備份。初始備份之後，所有附加備份都是增量備份。這使得網路流量保持最低限度。
+當您啟用NetApp Backup and Recovery，本服務會為您的資料執行完整備份。初始備份之後，所有附加備份都是增量備份。這使得網路流量保持最低限度。
 
 下圖顯示了組件之間的關係。
 
-image:diagram-br-321-aff-a.png["展示NetApp Backup and Recovery 如何使用 3-2-1 保護策略的圖表"]
+image:diagram-br-321-aff-a.png["展示NetApp Backup and Recovery如何使用 3-2-1 保護策略的圖表"]
 
 
 NOTE: 還支援從主存儲到對象存儲，而不僅僅是從二級存儲到對象存儲。
@@ -279,16 +279,16 @@ NOTE: 還支援從主存儲到對象存儲，而不僅僅是從二級存儲到�
 
 === 備份在物件儲存位置的位置
 
-備份副本儲存在NetApp控制台在您的雲端帳戶中建立的物件儲存中。每個叢集或系統都有一個物件存儲，控制台以如下方式命名物件存儲： `netapp-backup-clusteruuid` 。請確保不要刪除此物件存儲。
+備份副本儲存在NetApp Console在您的雲端帳戶中建立的物件儲存中。每個叢集或系統都有一個物件存儲，控制台以如下方式命名該物件存儲： `netapp-backup-clusteruuid` 。請確保不要刪除此物件存儲。
 
 ifdef::aws[]
 
-* 在 AWS 中， NetApp控制台支援 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 阻止公共存取功能"^]在 S3 儲存桶上。 endif::aws[]
+* 在 AWS 中， NetApp Console支援 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 阻止公共存取功能"^]在 S3 儲存桶上。 endif::aws[]
 
 
 ifdef::azure[]
 
-* 在 Azure 中， NetApp控制台使用新的或現有的資源群組以及 Blob 容器的儲存帳戶。主機 https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["阻止公眾存取您的 Blob 數據"]預設情況下。 endif::azure[]
+* 在 Azure 中， NetApp Console使用新的或現有的資源群組以及 Blob 容器的儲存帳戶。主機 https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["阻止公眾存取您的 Blob 數據"]預設情況下。 endif::azure[]
 
 
 ifdef::gcp[]
@@ -301,18 +301,18 @@ endif::gcp[]
 
 
 
-=== 備份副本與您的NetApp控制台組織相關聯
+=== 備份副本與您的NetApp Console組織相關聯
 
-備份副本與控制台代理程式所在的NetApp控制台組織相關聯。 https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html["了解NetApp控制台身份和訪問"^] 。
+備份副本與控制台代理程式所在的NetApp Console組織相關聯。 https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html["了解NetApp Console身份和訪問"^] 。
 
-如果同一個NetApp控制台組織中有多個控制台代理，則每個控制台代理都會顯示相同的備份清單。
+如果同一個NetApp Console組織中有多個控制台代理，則每個控制台代理都會顯示相同的備份清單。
 
 
 
-== 可能對您使用NetApp備份和復原有幫助的術語
+== 可能對您使用NetApp Backup and Recovery有幫助的術語
 
 了解一些與保護相關的術語可能會對您有所幫助。
 
-* *保護*： NetApp備份和復原中的保護意味著確保使用保護策略定期將快照和不可變備份傳送到不同的安全域。
-* *工作負載*： NetApp Backup and Recovery 中的工作負載可以包括ONTAP磁碟區、Microsoft SQL Server 執行個體和資料庫；VMware VM 和資料儲存區；或 Kubernetes 叢集和應用程式。
+* *保護*： NetApp Backup and Recovery中的保護意味著確保使用保護策略定期將快照和不可變備份傳送到不同的安全域。
+* *工作負載*： NetApp Backup and Recovery中的工作負載可以包括ONTAP磁碟區、Microsoft SQL Server 執行個體和資料庫；VMware VM 和資料儲存區；或 Kubernetes 叢集和應用程式。
 

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-policy-object-options.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= NetApp備份與復原中的備份到物件原則選項
+= NetApp Backup and Recovery中的備份到物件原則選項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,23 +14,23 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-NetApp Backup and Recovery 讓您能夠為本機ONTAP和Cloud Volumes ONTAP系統建立具有各種設定的備份策略。
+NetApp Backup and Recovery讓您能夠為本機ONTAP和Cloud Volumes ONTAP系統建立具有各種設定的備份策略。
 
 
 NOTE: 這些策略設定僅與備份到物件儲存相關。這些設定都不會影響您的快照或複製策略。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 
 
 == 備份計畫選項
 
-NetApp Backup and Recovery 讓您能夠為每個系統（叢集）建立具有唯一方案的多個備份策略。您可以為具有不同復原點目標 (RPO) 的磁碟區指派不同的備份策略。
+NetApp Backup and Recovery使您能夠為每個系統（叢集）建立具有唯一計劃的多個備份策略。您可以為具有不同復原點目標 (RPO) 的磁碟區指派不同的備份策略。
 
-每個備份策略都提供了一個「標籤和保留」部分，您可以將其套用至備份檔案。請注意，應用於磁碟區的 Snapshot 策略必須是NetApp Backup and Recovery 識別的策略之一，否則將不會建立備份檔案。
+每個備份策略都提供了一個「標籤和保留」部分，您可以將其套用至備份檔案。請注意，應用於磁碟區的 Snapshot 策略必須是NetApp Backup and Recovery識別的策略之一，否則將不會建立備份檔案。
 
 該計劃分為兩部分：標籤和保留值：
 
@@ -57,17 +57,17 @@ NetApp Backup and Recovery 讓您能夠為每個系統（叢集）建立具有�
 
 == DataLock 和勒索軟體保護選項
 
-NetApp Backup and Recovery 為您的磁碟區備份提供 DataLock 和勒索軟體保護支援。這些功能使您能夠鎖定備份檔案並對其進行掃描以偵測備份檔案上可能存在的勒索軟體。這是一個可選設置，當您希望為叢集的磁碟區備份提供額外保護時，可以在備份策略中定義它。
+NetApp Backup and Recovery為您的磁碟區備份提供 DataLock 和勒索軟體保護支援。這些功能使您能夠鎖定備份檔案並對其進行掃描以偵測備份檔案上可能存在的勒索軟體。這是一個可選設置，當您希望為叢集的磁碟區備份提供額外保護時，可以在備份策略中定義它。
 
-這兩個功能都可以保護您的備份文件，以便在您的備份遭受勒索軟體攻擊時，您始終擁有一個有效的備份文件來恢復資料。滿足某些監管要求也很有幫助，在這些要求中，備份需要被鎖定並保留一段時間。啟用 DataLock 和勒索軟體復原選項後，作為NetApp Backup 和 Recovery 啟動的一部分配置的雲端儲存桶將啟用物件鎖定和物件版本控制。
+這兩個功能都可以保護您的備份文件，以便在您的備份遭受勒索軟體攻擊時，您始終擁有一個有效的備份文件來恢復資料。滿足某些監管要求也很有幫助，在這些要求中，備份需要被鎖定並保留一段時間。啟用 DataLock 和勒索軟體復原選項後，作為NetApp Backup and Recovery啟動的一部分配置的雲端儲存桶將啟用物件鎖定和物件版本控制。
 
-https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-from-ransomware["請參閱 DataLock 和勒索軟體保護部落格以了解更多詳細信息"^] 。
+https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-from-ransomware["請參閱 DataLock 和勒索軟體保護部落格以了解更多詳細信息"^]。
 
 此功能不會為您的來源磁碟區提供保護；僅為這些來源磁碟區的備份提供保護。使用一些 https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAP提供的反勒索軟體保護"^]保護您的來源磁碟區。
 
 [CAUTION]
 ====
-* 如果您打算使用 DataLock 和勒索軟體保護，則可以在建立第一個備份策略並為該叢集啟動NetApp Backup and Recovery 時啟用它。您可以稍後使用NetApp Backup and Recovery 進階設定啟用或停用勒索軟體掃描。
+* 如果您打算使用 DataLock 和勒索軟體保護，則可以在建立第一個備份策略並為該叢集啟動NetApp Backup and Recovery時啟用它。您可以稍後使用NetApp Backup and Recovery進階設定啟用或停用勒索軟體掃描。
 * 當控制台在恢復磁碟區資料時掃描備份檔案中的勒索軟體時，您將產生來自雲端提供者的額外出口成本以存取備份檔案的內容。
 
 
@@ -80,7 +80,7 @@ https://bluexp.netapp.com/blog/cbs-blg-the-bluexp-feature-that-protects-backups-
 
 DataLock 可保護您的備份檔案在一定時間內不被修改或刪除 - 也稱為_不可變儲存_。此功能使用物件儲存提供者的技術進行「物件鎖定」。
 
-雲端提供者使用保留截止日期 (RUD)，該日期是根據快照保留期計算的。快照保留期是根據備份策略中定義的標籤和保留計數計算的。
+雲端提供者使用保留截止日期 (RUD)，它是根據快照保留期計算的。快照保留期是根據備份策略中定義的標籤和保留計數計算的。
 
 最短快照保留期為 30 天。讓我們看一些例子來了解它的工作原理：
 
@@ -103,7 +103,7 @@ DataLock 可保護您的備份檔案在一定時間內不被修改或刪除 - �
 以下是一些範例：
 
 * 如果您建立具有 12 個保留的每月備份計劃，則您的備份將被鎖定 12 個月（加 31 天），然後才會被刪除（由下一個備份檔案取代）。
-* 如果您建立的備份策略建立了 30 個每日備份、7 個每週備份和 12 個每月備份，則有三個鎖定保留期：
+* 如果您建立的備份策略建立 30 個每日備份、7 個每週備份和 12 個每月備份，則有三個鎖定保留期：
 +
 ** 「每日 30 次」備份將保留 61 天（30 天加上 31 天緩衝），
 ** 「每週 7 次」備份保留 11 週（7 週加 31 天），且
@@ -134,7 +134,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 
 
 
-請參閱link:prev-ontap-policy-object-advanced-settings.html["如何在「進階設定」頁面中更新勒索軟體防護選項"] 。
+參考link:prev-ontap-policy-object-advanced-settings.html["如何在「進階設定」頁面中更新勒索軟體防護選項"]。
 
 
 
@@ -144,7 +144,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 
 掃描發生在以下情況：
 
-* 雲端備份物件傳輸到雲端物件儲存後，很快就會啟動雲端備份物件的掃描。當備份檔案首次寫入雲端儲存時，不會執行掃描，而是在寫入下一個備份檔案時執行。
+* 雲端備份物件傳輸到雲端物件儲存後，很快就會啟動雲端備份物件的掃描。當備份檔案首次寫入雲端儲存時，不會執行掃描，而是在寫入下一個備份檔案時執行掃描。
 * 當選擇備份進行復原程序時，可以啟動勒索軟體掃描。
 * 可以隨時按需進行掃描。
 
@@ -228,7 +228,7 @@ ifdef::aws[]
 
 ====
 +
-https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["查看策略的完整 JSON 格式，您可以在其中複製並貼上所需的權限"^] 。
+https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["查看策略的完整 JSON 格式，您可以在其中複製並貼上所需的權限"^]。
 
 
 
@@ -307,7 +307,7 @@ endif::gcp[]
 === 限制
 
 * 如果您在備份策略中配置了檔案存儲，則 DataLock 和勒索軟體保護功能不可用。
-* 啟動NetApp Backup and Recovery 時選擇的 DataLock 選項必須用於該叢集的所有備份策略。
+* 啟動NetApp Backup and Recovery時選擇的 DataLock 選項必須用於該叢集的所有備份策略。
 * 您無法在單一叢集上使用多種 DataLock 模式。
 * 如果啟用 DataLock，所有磁碟區備份都將被鎖定。您不能為單一叢集混合鎖定和非鎖定磁碟區備份。
 * DataLock 和勒索軟體保護適用於使用啟用了 DataLock 和勒索軟體保護的備份策略的新磁碟區備份。您可以稍後使用進階設定選項啟用或停用這些功能。
@@ -334,12 +334,12 @@ NOTE: Microsoft Azure 使用鎖定和解鎖模式。
 
 
 
-* *具有勒索軟體掃描的 DataLock*：為您的資料提供額外的安全保護。此功能有助於檢測任何更改備份副本的嘗試。如果有任何嘗試，則會謹慎地建立新版本的資料。掃描頻率可以變更為 1、2、3、4、5、6 或 7 天。如果將掃描設定為每 7 天一次，則成本會顯著降低。
+* *具有勒索軟體掃描的 DataLock*：為您的資料提供額外的安全保護。此功能有助於檢測任何更改備份副本的嘗試。如果進行任何嘗試，則會謹慎地建立新版本的資料。掃描頻率可以變更為 1、2、3、4、5、6 或 7 天。如果將掃描設定為每 7 天一次，則成本會顯著降低。
 
 
 有關降低 DataLock 成本的更多提示，請參閱https://community.netapp.com/t5/Tech-ONTAP-Blogs/Understanding-NetApp-Backup-and-Recovery-DataLock-and-Ransomware-Feature-TCO/ba-p/453475[]
 
-此外，您還可以造訪以下網站以取得與 DataLock 相關成本的估算： https://bluexp.netapp.com/cloud-backup-service-tco-calculator["NetApp備份與還原總擁有成本 (TCO) 計算器"] 。
+此外，您還可以造訪以下網站以取得與 DataLock 相關的成本估算： https://bluexp.netapp.com/cloud-backup-service-tco-calculator["NetApp Backup and Recovery總擁有成本 (TCO) 計算器"] 。
 
 
 
@@ -363,10 +363,10 @@ ifdef::aws[]
 
 * 在 AWS 中，備份從「標準」儲存類別開始，並在 30 天後轉換到「標準-不頻繁存取」儲存類別。
 +
-如果您的叢集使用的是ONTAP 9.10.1 或更高版本，您可以將較舊的備份分層到 _S3 Glacier_ 或 _S3 Glacier Deep Archive_ 儲存。link:prev-reference-aws-archive-storage-tiers.html["了解有關 AWS 檔案儲存的更多信息"] 。
+如果您的叢集使用的是ONTAP 9.10.1 或更高版本，您可以將較舊的備份分層到 _S3 Glacier_ 或 _S3 Glacier Deep Archive_ 儲存。link:prev-reference-aws-archive-storage-tiers.html["了解有關 AWS 檔案儲存的更多信息"]。
 
 +
-** 如果您在啟動NetApp Backup and Recovery 時在第一個備份策略中未選擇任何存檔層，那麼 _S3 Glacier_ 將是您未來策略的唯一存檔選項。
+** 如果您在啟動NetApp Backup and Recovery時在第一個備份策略中未選擇任何存檔層，那麼 _S3 Glacier_ 將是您未來策略的唯一存檔選項。
 ** 如果您在第一個備份策略中選擇了“S3 Glacier”，那麼您可以將該叢集的未來備份策略變更為“S3 Glacier Deep Archive”層。
 ** 如果您在第一個備份策略中選擇“S3 Glacier Deep Archive”，則該層將是該叢集未來備份策略唯一可用的存檔層。
 
@@ -379,7 +379,7 @@ ifdef::azure[]
 
 * 在 Azure 中，備份與 _Cool_ 存取層相關聯。
 +
-如果您的叢集使用的是ONTAP 9.10.1 或更高版本，則可以將舊備份分層到_Azure Archive_儲存。link:prev-reference-azure-archive-storage-tiers.html["了解有關 Azure 檔案儲存的更多信息"] 。
+如果您的叢集使用的是ONTAP 9.10.1 或更高版本，則可以將舊備份分層到_Azure Archive_儲存。link:prev-reference-azure-archive-storage-tiers.html["了解有關 Azure 檔案儲存的更多信息"]。
 
 
 
@@ -389,7 +389,7 @@ ifdef::gcp[]
 
 * 在 GCP 中，備份與 _Standard_ 儲存類別相關聯。
 +
-如果您的本地叢集使用的是ONTAP 9.12.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and Recovery UI 中的「_Archive_」儲存中，以進一步最佳化成本。link:prev-reference-gcp-archive-storage-tiers.html["詳細了解 Google 歸檔存儲"] 。
+如果您的本地叢集使用的是ONTAP 9.12.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and Recovery UI 中的「_Archive_」儲存中，以進一步最佳化成本。link:prev-reference-gcp-archive-storage-tiers.html["詳細了解 Google 歸檔存儲"]。
 
 
 
@@ -403,12 +403,12 @@ endif::gcp[]
 
 ifdef::aws[]
 
-+ ** 對於 AWS，您可以將備份分層到 AWS _S3 Glacier_ 或 _S3 Glacier Deep Archive_ 儲存。link:prev-reference-aws-archive-storage-tiers.html["了解有關 AWS 檔案儲存的更多信息"^] 。
++ ** 對於 AWS，您可以將備份分層到 AWS _S3 Glacier_ 或 _S3 Glacier Deep Archive_ 儲存。link:prev-reference-aws-archive-storage-tiers.html["了解有關 AWS 檔案儲存的更多信息"^]。
 
 endif::aws[]
 
 ifdef::azure[]
 
-+ ** 對於 Azure，您可以將舊備份分層到_Azure Archive_儲存體。link:prev-reference-azure-archive-storage-tiers.html["了解有關 Azure 檔案儲存的更多信息"^] 。
++ ** 對於 Azure，您可以將舊備份分層到_Azure Archive_儲存體。link:prev-reference-azure-archive-storage-tiers.html["了解有關 Azure 檔案儲存的更多信息"^]。
 
 endif::azure[]

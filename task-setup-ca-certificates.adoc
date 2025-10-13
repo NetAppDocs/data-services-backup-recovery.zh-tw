@@ -52,7 +52,7 @@ local service-manager-2_cloudmanager_cbs_volume"
 ----
 +
 
-NOTE: 標準、私有和受限部署模式的磁碟區名稱不同。本範例使用標準模式。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp控制台部署模式"]。
+NOTE: 標準、私有和受限部署模式的磁碟區名稱不同。本範例使用標準模式。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
 . 找到NetApp Backup and Recovery磁碟區的掛載點。跑步：
 +
@@ -70,7 +70,7 @@ docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoin
 ----
 +
 
-NOTE: 標準、私有和受限部署模式的掛載點有所不同。此範例展示了標準雲端部署。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp控制台部署模式"]。
+NOTE: 標準、私有和受限部署模式的掛載點有所不同。此範例展示了標準雲端部署。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
 . 變更為 MountPoint 目錄。跑步：
 +
@@ -104,7 +104,7 @@ cd cbs_config
 ** `production-customer.json`用於標準模式和限制模式部署。
 ** `darksite-customer.json`用於私人模式部署。
 +
-參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp控制台部署模式"]。
+參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
 +
 設定檔
@@ -162,7 +162,7 @@ cd cbs_catalog_config
 ** `production-customer.json`用於標準模式和限制模式部署。
 ** `darksite-customer.json`用於私人模式部署。
 +
-參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp控制台部署模式"]。
+參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
 +
 *目錄設定檔*
@@ -287,7 +287,7 @@ local service-manager-2_cloudmanager_cbs_volume
 ----
 +
 
-NOTE: 標準、私有和受限部署模式的磁碟區名稱不同。此範例展示了標準雲端部署。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp控制台部署模式"]。
+NOTE: 標準、私有和受限部署模式的磁碟區名稱不同。此範例展示了標準雲端部署。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
 . 取得卷的掛載。跑步：
 +
@@ -305,7 +305,7 @@ docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoin
 ----
 +
 
-NOTE: 標準、私有和受限部署模式的掛載點有所不同。此範例展示了標準雲端部署。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp控制台部署模式"]。
+NOTE: 標準、私有和受限部署模式的掛載點有所不同。此範例展示了標準雲端部署。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
 . 變更為掛載點目錄。跑步：
 +
@@ -344,7 +344,7 @@ cd cbs_config
 ** `production-customer.json`用於標準模式和限制模式部署。
 ** `darksite-customer.json`用於私人模式部署。
 +
-參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp控制台部署模式"]。
+參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
 +
 設定檔
@@ -400,7 +400,7 @@ cd cbs_catalog_config
 ** `production-customer.json`用於標準模式和限制模式部署。
 ** `darksite-customer.json`用於私人模式部署。
 +
-參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp控制台部署模式"]。
+參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
 +
 設定檔

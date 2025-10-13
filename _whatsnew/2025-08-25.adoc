@@ -11,7 +11,7 @@
 
 NOTE: 有關保護 VMware 工作負載的文件以技術預覽的形式提供。對於此預覽版產品， NetApp保留在正式發布之前修改產品詳細資訊、內容和時間表的權利。
 
-link:br-use-vmware-protect-overview.html["了解有關使用NetApp備份和恢復保護 VMware 工作負載的更多信息"] 。
+link:br-use-vmware-protect-overview.html["了解有關使用NetApp Backup and Recovery保護 VMware 工作負載的更多信息"]。
 
 
 

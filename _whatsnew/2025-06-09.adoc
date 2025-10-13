@@ -15,17 +15,17 @@
 
 索引目錄可以追蹤每個捲和備份文件，使您的搜尋快速且有效率。
 
-有關更多信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["啟用搜尋和還原索引"] 。
+更多信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.html["啟用搜尋和還原索引"]。
 
 
 
 === Azure 專用連結終結點與服務終點
 
-通常， NetApp Backup and Recovery 會與雲端提供者建立一個私有端點來處理保護任務。此版本引入了一個可選設置，可讓您啟用或停用NetApp Backup and Recovery 自動建立私有端點。如果您想要更好地控制私有端點建立流程，這可能對您有用。
+通常， NetApp Backup and Recovery會與雲端提供者建立一個私有端點來處理保護任務。此版本引入了一個可選設置，可讓您啟用或停用NetApp Backup and Recovery自動建立私有端點。如果您想要更好地控制私有端點建立流程，這可能對您有用。
 
 您可以在啟用保護或開始復原程序時啟用或停用此選項。
 
-如果停用此設置，則必須手動建立私有端點以使NetApp Backup and Recovery 正常運作。如果沒有適當的連接，您可能無法成功執行備份和還原任務。
+如果停用此設置，則必須手動建立私有端點以使NetApp Backup and Recovery正常運作。如果沒有適當的連接，您可能無法成功執行備份和還原任務。
 
 
 
@@ -37,6 +37,6 @@
 
 === 為StorageGRID帶來您自己的儲存桶
 
-當您在物件儲存中為工作環境建立備份檔案時，預設情況下， NetApp Backup and Recovery 會為您設定的物件儲存帳戶中的備份檔案建立容器（儲存體桶或儲存帳戶）。以前，您可以覆寫此功能並為 Amazon S3、Azure Blob Storage 和 Google Cloud Storage 指定自己的容器。透過此版本，您現在可以攜帶自己的StorageGRID物件儲存容器。
+當您在物件儲存中為工作環境建立備份檔案時，預設情況下， NetApp Backup and Recovery會為您設定的物件儲存帳戶中的備份檔案建立容器（儲存體桶或儲存帳戶）。以前，您可以覆寫此功能並為 Amazon S3、Azure Blob Storage 和 Google Cloud Storage 指定自己的容器。透過此版本，您現在可以攜帶自己的StorageGRID物件儲存容器。
 
 看 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html["建立您自己的物件儲存容器"]。

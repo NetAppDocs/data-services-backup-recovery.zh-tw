@@ -4,7 +4,7 @@ permalink: br-use-mssql-clone-overview.html
 keywords: backing up, restoring, back up, backup, clone, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: 複製 Microsoft SQL Server 應用程式以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。 
 ---
-= 使用NetApp備份和還原複製 Microsoft SQL 伺服器工作負載概述
+= 使用NetApp Backup and RecoveryMicrosoft SQL 伺服器工作負載概述
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 複製 Microsoft SQL Server 應用程式以用於開發、測試或保�
 
 
 [role="lead"]
-使用NetApp Backup and Recovery 將 Microsoft SQL Server 應用程式資料複製到相同或不同的 VM，以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。
+使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料複製到相同或不同的 VM，以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。
 
 * 創建克隆
 * 刷新克隆

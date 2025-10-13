@@ -1,26 +1,26 @@
-= BlueXP backup and recovery現已更名NetApp備份與復原
+= BlueXP backup and recovery現已更名NetApp Backup and Recovery
 :allow-uri-read: 
 
 
 
 
-=== BlueXP backup and recovery現已更名NetApp備份與復原
+=== BlueXP backup and recovery現已更名NetApp Backup and Recovery
 
-BlueXP backup and recovery已重新命名為NetApp備份和復原。
+BlueXP backup and recovery已重新命名為NetApp Backup and Recovery。
 
 
 
-=== BlueXP現在是NetApp控制台
+=== BlueXP現在是NetApp Console
 
-NetApp控制台建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp資料服務，提供即時洞察、更快的工作流程以及高度安全且合規的簡化管理。
+NetApp Console建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp Data Services，提供即時洞察、更快的工作流程以及高度安全且合規的簡化管理。
 
-有關更改的詳細信息，請參閱link:https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp控制台發行說明。"]
+有關更改的詳細信息，請參閱link:https://docs.netapp.com/us-en/console-relnotes/index.html["NetApp Console發行說明。"]
 
 
 
 === Hyper-V 工作負載支援作為私人預覽版
 
-此版本的NetApp Backup and Recovery 引入了對發現和管理 Hyper-V 工作負載的支援：
+此版本的NetApp Backup and Recovery引入了對發現和管理 Hyper-V 工作負載的支援：
 
 * 在獨立實例以及故障轉移群集實例 (FCI) 上備份和還原虛擬機
 * 保護儲存在 SMB3 共用上的虛擬機
@@ -36,7 +36,7 @@ NetApp控制台建立在增強和重組的BlueXP基礎之上，可在企業級�
 
 === KVM 工作負載支援作為私人預覽
 
-此版本的NetApp Backup and Recovery 引入了對發現和管理 KVM 工作負載的支援：
+此版本的NetApp Backup and Recovery引入了對發現和管理 KVM 工作負載的支援：
 
 * 備份和還原儲存在 NFS 共享上的 qcow2 VM 映像
 * 備份儲存池
@@ -69,7 +69,7 @@ Kubernetes 工作負載的預覽版引入了以下增強功能：
 * 多重儲存桶支援：現在，您可以跨不同的雲端供應商，透過每個系統多個儲存桶來保護系統內的捲
 
 
-有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"] 。
+有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"]。
 
 
 
@@ -93,7 +93,7 @@ VMware 工作負載預覽版引入了以下增強功能：
 
 === Oracle 資料庫工作負載支援作為私人預覽
 
-此版本的NetApp Backup and Recovery 引進了對發現和管理 Oracle 資料庫工作負載的支援：
+此版本的NetApp Backup and Recovery引進了對發現和管理 Oracle 資料庫工作負載的支援：
 
 * 發現獨立的 Oracle 資料庫
 * 僅針對資料或資料和日誌備份建立保護策略

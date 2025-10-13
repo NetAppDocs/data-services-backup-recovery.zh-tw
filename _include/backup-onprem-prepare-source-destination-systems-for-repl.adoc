@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-如果您打算使用NetApp Backup and Recovery 在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
+如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
 
 
 

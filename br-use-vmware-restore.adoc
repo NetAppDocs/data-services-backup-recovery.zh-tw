@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-vmware-restore.html 
 keywords: restore, vmware, vm, virtual machine, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和還原 VMware 工作負載
+= 使用NetApp Backup and RecoveryVMware 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-使用NetApp備份和還原從快照副本、複製到二級儲存的工作負載備份或儲存在物件儲存中的備份還原 VMware 工作負載。
+使用NetApp Backup and Recovery and Recovery從快照副本、複製到二級儲存的工作負載備份或儲存在物件儲存中的備份還原 VMware 工作負載。
 
 .從這些位置恢復
 您可以從不同的起始位置恢復工作負載：
@@ -42,7 +42,7 @@ TIP: 您將需要向雲端提供者支付額外的出口費用才能存取備份
 
 恢復工作負載時，會發生以下情況：
 
-* 當您從本機備份檔案還原工作負載時， NetApp Backup and Recovery 會使用備份中的資料建立一個_新_資源。
+* 當您從本機備份檔案還原工作負載時， NetApp Backup and Recovery and Recovery會使用備份中的資料建立一個_新_資源。
 * 從複製的工作負載復原時，您可以將工作負載還原到原始系統或本機ONTAP系統。
 +
 image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的圖表"]
@@ -58,10 +58,10 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 
 使用復原選項還原 VMware 工作負載。您可以按名稱或使用篩選器來搜尋快照。
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員、備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 從NetApp備份與復原選單中，選擇 *復原*。
+. 從NetApp Backup and Recovery選單中，選擇 *復原*。
 . 從名稱搜尋欄位右側的下拉清單中，選擇「*虛擬機器*」。
 . 輸入要還原的資源的名稱，或篩選要還原的資源所在的 vCenter、資料中心或資料儲存。
 +

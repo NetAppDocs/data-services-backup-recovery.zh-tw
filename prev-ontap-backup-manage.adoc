@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-manage.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 透過NetApp備份和恢復，您可以透過變更備份計畫、啟用磁碟區備份、暫停備份、刪除備份等作業來管理Cloud Volumes ONTAP和本機ONTAP系統的備份。您也可以取消註冊NetApp Backup and Recovery。 
+summary: 透過NetApp Backup and Recovery，您可以透過變更備份計畫、啟用磁碟區備份、暫停備份、刪除備份等方式管理Cloud Volumes ONTAP和本機ONTAP系統的備份。您也可以取消註冊NetApp Backup and Recovery。 
 ---
-= 使用NetApp備份和還原管理ONTAP系統的備份
+= 使用NetApp Backup and Recovery管理ONTAP系統的備份
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: 透過NetApp備份和恢復，您可以透過變更備份計畫、啟�
 
 
 [role="lead"]
-透過NetApp備份和恢復，您可以透過變更備份計畫、啟用/停用磁碟區備份、暫停備份、刪除備份、強制刪除備份等來管理Cloud Volumes ONTAP和本機ONTAP系統的備份。這包括所有類型的備份，包括快照副本、複製磁碟區和物件儲存中的備份檔案。您也可以取消註冊NetApp Backup and Recovery。
+透過NetApp Backup and Recovery，您可以透過變更備份計畫、啟用/停用磁碟區備份、暫停備份、刪除備份、強制刪除備份等方式管理Cloud Volumes ONTAP和本機ONTAP系統的備份。這包括所有類型的備份，包括快照副本、複製磁碟區和物件儲存中的備份檔案。您也可以取消註冊NetApp Backup and Recovery。
 
 
 CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更備份檔案。這可能會損壞檔案並導致不受支援的配置。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 
@@ -47,7 +47,7 @@ CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更�
 
 == 啟動系統中附加磁碟區的備份
 
-如果您在首次啟用NetApp Backup and Recovery 時僅在系統中的某些磁碟區上啟動了備份，則可以稍後在其他磁碟區上啟用備份。
+如果您在首次啟用NetApp Backup and Recovery時僅在系統中的某些磁碟區上啟動了備份，則可以稍後在其他磁碟區上啟用備份。
 
 .步驟
 . 從「卷」標籤中，找到要啟動備份的捲，選擇「操作」選單image:icon-action.png["操作圖示"]在行尾，然後選擇*啟動備份*。
@@ -69,7 +69,7 @@ CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更�
 . 從「*卷*」標籤中，找到要進行策略變更的捲，選擇「操作」選單image:icon-action.png["操作圖示"]在行尾，選擇*編輯備份策略*。
 . 在「編輯備份策略」頁面中，對本機快照副本、複製磁碟區和備份檔案的現有備份策略進行更改，然後選擇「下一步」。
 +
-如果在為此叢集啟動NetApp Backup and Recovery 時，在初始備份策略中為雲端備份啟用了 _DataLock 和 Ransomware Resilience_，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp備份和復原時未啟用“DataLock 和勒索軟體復原”，您將只會看到未配置 DataLock 的其他雲端備份策略。
+如果在為此叢集啟動NetApp Backup and Recovery時，在初始備份原則中為雲端備份啟用了 _DataLock 和 Ransomware Resilience_，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp Backup and Recovery時未啟用“DataLock 和 Ransomware Resilience”，您將只會看到未配置 DataLock 的其他雲端備份策略。
 
 . 檢查此卷的備份設置，然後選擇*啟動備份*。
 
@@ -87,7 +87,7 @@ CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更�
 * 相同類型（讀寫或資料保護卷）
 
 
-當啟用五個以上的磁碟區進行備份時， NetApp Backup and Recovery 一次僅初始化五個磁碟區。完成後，它會建立下一批五個子作業來啟動下一組，並繼續，直到所有磁碟區都初始化。
+當啟用五個以上的磁碟區進行備份時， NetApp Backup and Recovery一次只初始化五個磁碟區。完成後，它會建立下一批五個子作業來啟動下一組，並繼續，直到所有磁碟區都初始化。
 
 .步驟
 . 從「*卷*」標籤中，按磁碟區所在的系統進行篩選。
@@ -112,7 +112,7 @@ CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更�
 |===
 . 在出現的備份頁面中，對本機快照副本、複製磁碟區或備份檔案的現有備份策略進行更改，然後選擇*儲存*。
 +
-如果在為此叢集啟動NetApp Backup and Recovery 時，在初始備份策略中為雲端備份啟用了 _DataLock 和 Ransomware Resilience_，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp備份和復原時未啟用“DataLock 和勒索軟體復原”，您將只會看到未配置 DataLock 的其他雲端備份策略。
+如果在為此叢集啟動NetApp Backup and Recovery時，在初始備份原則中為雲端備份啟用了 _DataLock 和 Ransomware Resilience_，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp Backup and Recovery時未啟用“DataLock 和 Ransomware Resilience”，您將只會看到未配置 DataLock 的其他雲端備份策略。
 
 
 
@@ -126,7 +126,7 @@ CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更�
 
 備份名稱包含時間戳，以便您可以從其他計畫備份中識別出您的按需備份。
 
-如果在為此叢集啟動NetApp Backup and Recovery 時啟用了“DataLock 和 Ransomware Resilience”，則按需備份也將配置 DataLock，保留期為 30 天。臨時備份不支援勒索軟體掃描。link:prev-ontap-policy-object-options.html["了解有關 DataLock 和勒索軟體保護的更多信息"^] 。
+如果在為此叢集啟動NetApp Backup and Recovery時啟用了“DataLock 和 Ransomware Resilience”，則按需備份也將配置 DataLock，保留期為 30 天。臨時備份不支援勒索軟體掃描。link:prev-ontap-policy-object-options.html["了解有關 DataLock 和勒索軟體保護的更多信息"^]。
 
 當您建立臨時備份時，會在來源磁碟區上建立快照。由於此快照不是正常快照計劃的一部分，因此它不會旋轉。備份完成後，您可能會想要從來源磁碟區手動刪除此快照。這將允許釋放與此快照相關的區塊。快照名稱將以 `cbs-snapshot-adhoc-`。 https://docs.netapp.com/us-en/ontap/san-admin/delete-all-existing-snapshot-copies-volume-task.html["了解如何使用ONTAP CLI 刪除快照"^] 。
 
@@ -157,7 +157,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 
 == 對物件儲存中的磁碟區備份執行勒索軟體掃描
 
-當建立目標檔案備份時以及還原備份檔案中的資料時， NetApp Backup and Recovery 會掃描您的備份檔案以尋找勒索軟體攻擊的證據。您也可以隨時執行按需掃描，以驗證物件儲存中特定備份檔案的可用性。如果您在特定磁碟區上遇到勒索軟體問題並且想要驗證該磁碟區的備份不受影響，這將很有用。
+當建立目標檔案備份時以及還原備份檔案中的資料時， NetApp Backup and Recovery and Recovery會掃描您的備份檔案以尋找勒索軟體攻擊的證據。您也可以隨時執行按需掃描，以驗證物件儲存中特定備份檔案的可用性。如果您在特定磁碟區上遇到勒索軟體問題並且想要驗證該磁碟區的備份不受影響，這將很有用。
 
 只有當磁碟區備份是從具有ONTAP 9.11.1 或更高版本的系統建立的，並且在備份到物件策略中啟用了_DataLock 和 Ransomware Resilience_ 時，此功能才可用。
 
@@ -224,8 +224,8 @@ NOTE: 資料保護卷不支援按需卷備份。
 
 [NOTE]
 ====
-* 如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Resilience_，則您編輯的任何策略都必須配置相同的 DataLock 設定（治理或合規性）。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和 Ransomware Resilience”，則現在無法啟用 DataLock。
-* 在 AWS 上建立備份時，如果您在啟動NetApp Backup and Recovery 時在第一個備份策略中選擇了 _S3 Glacier_ 或 _S3 Glacier Deep Archive_，那麼該層將是編輯備份策略時唯一可用的存檔層。如果您在第一個備份策略中未選擇存檔層，那麼在編輯策略時，_S3 Glacier_ 將是您唯一的存檔選項。
+* 如果在為此叢集啟動NetApp Backup and Recovery時在初始原則中啟用了_DataLock 和 Ransomware Resilience_，則您編輯的任何策略都必須配置相同的 DataLock 設定（治理或合規性）。如果您在啟動NetApp Backup and Recovery時未啟用“DataLock 和 Ransomware Resilience”，則現在無法啟用 DataLock。
+* 在 AWS 上建立備份時，如果您在啟動NetApp Backup and Recovery時在第一個備份策略中選擇了 _S3 Glacier_ 或 _S3 Glacier Deep Archive_，則該層將是編輯備份策略時唯一可用的存檔層。如果您在第一個備份策略中未選擇存檔層，那麼在編輯策略時，_S3 Glacier_ 將是您唯一的存檔選項。
 
 
 ====
@@ -242,19 +242,19 @@ ifdef::aws[]
 
 
 
-link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔案儲存的更多信息"] 。
+link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔案儲存的更多信息"]。
 
 endif::aws[]
 
 ifdef::azure[]
 
-link:prev-reference-azure-archive-storage-tiers.html["了解有關使用 Azure 檔案儲存的詳細信息"] 。
+link:prev-reference-azure-archive-storage-tiers.html["了解有關使用 Azure 檔案儲存的詳細信息"]。
 
 endif::azure[]
 
 ifdef::gcp[]
 
-link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何使用 Google 歸檔存儲"] 。（需ONTAP 9.12.1。）
+link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何使用 Google 歸檔存儲"]。（需ONTAP 9.12.1。）
 
 endif::gcp[]
 
@@ -264,14 +264,14 @@ endif::gcp[]
 
 == 新增新的備份到雲端策略
 
-當您為系統啟用NetApp Backup and Recovery 時，您最初選擇的所有磁碟區都會使用您定義的預設備份策略進行備份。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，您可以為該叢集建立其他策略並將這些原則指派給其他磁碟區。
+當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您定義的預設備份策略進行備份。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，您可以為該叢集建立其他策略並將這些原則指派給其他磁碟區。
 
 如果要將新的備份策略套用到系統中的某些卷，首先需要將備份策略新增到系統中。然後你可以<<更改分配給現有磁碟區的備份設置,將策略應用於該系統中的捲>>。
 
 [NOTE]
 ====
-* 如果在為此叢集啟動NetApp Backup and Recovery 時在初始原則中啟用了_DataLock 和 Ransomware Resilience_，則您建立的任何其他策略都必須使用相同的 DataLock 設定（治理或合規性）進行設定。如果您在啟動NetApp Backup and Recovery 時未啟用“DataLock 和 Ransomware Resilience”，則無法建立使用 DataLock 的新政策。
-* 在 AWS 上建立備份時，如果您在啟動NetApp Backup and Recovery 時在第一個備份策略中選擇了 _S3 Glacier_ 或 _S3 Glacier Deep Archive_，則該層將是該叢集未來備份策略可用的唯一存檔層。如果您在第一個備份策略中未選擇存檔層，那麼_S3 Glacier_ 將是您未來策略的唯一存檔選項。
+* 如果在為此叢集啟動NetApp Backup and Recovery時在初始原則中啟用了_DataLock 和 Ransomware Resilience_，則您建立的任何其他策略都必須使用相同的 DataLock 設定（治理或合規性）進行設定。如果您在啟動NetApp Backup and Recovery時未啟用“DataLock 和 Ransomware Resilience”，則無法建立使用 DataLock 的新政策。
+* 在 AWS 上建立備份時，如果您在啟動NetApp Backup and Recovery時在第一個備份策略中選擇了 _S3 Glacier_ 或 _S3 Glacier Deep Archive_，則該層將是該叢集未來備份策略可用的唯一存檔層。如果您在第一個備份策略中未選擇存檔層，那麼_S3 Glacier_ 將是您未來策略的唯一存檔選項。
 
 
 ====
@@ -288,19 +288,19 @@ ifdef::aws[]
 
 
 
-link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔案儲存的更多信息"] 。
+link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔案儲存的更多信息"]。
 
 endif::aws[]
 
 ifdef::azure[]
 
-link:prev-reference-azure-archive-storage-tiers.html["了解有關使用 Azure 檔案儲存的詳細信息"] 。
+link:prev-reference-azure-archive-storage-tiers.html["了解有關使用 Azure 檔案儲存的詳細信息"]。
 
 endif::azure[]
 
 ifdef::gcp[]
 
-link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何使用 Google 歸檔存儲"] 。（需ONTAP 9.12.1。）
+link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何使用 Google 歸檔存儲"]。（需ONTAP 9.12.1。）
 
 endif::gcp[]
 
@@ -308,12 +308,12 @@ endif::gcp[]
 
 == 刪除備份
 
-NetApp Backup and Recovery 讓您能夠刪除單一備份檔案、刪除磁碟區的所有備份或刪除系統中所有磁碟區的所有備份。如果您不再需要備份，或者您刪除了來源磁碟區並想要刪除所有備份，則可能需要刪除所有備份。
+NetApp Backup and Recovery讓您能夠刪除單一備份檔案、刪除磁碟區的所有備份或刪除系統中所有磁碟區的所有備份。如果您不再需要備份，或者您刪除了來源磁碟區並想要刪除所有備份，則可能需要刪除所有備份。
 
 您無法刪除使用 DataLock 和勒索軟體保護鎖定的備份檔案。如果您選擇了一個或多個鎖定的備份文件，則 UI 中的「刪除」選項將不可用。
 
 
-CAUTION: 如果您打算刪除具有備份的系統或集群，則必須在刪除系統之前刪除備份。當您刪除系統時， NetApp Backup and Recovery 不會自動刪除備份，且 UI 中目前不支援在刪除系統後刪除備份。您將繼續為任何剩餘的備份支付對象儲存費用。
+CAUTION: 如果您打算刪除具有備份的系統或集群，則必須在刪除系統之前刪除備份。當您刪除系統時， NetApp Backup and Recovery不會自動刪除備份，且 UI 中目前不支援在刪除系統後刪除備份。您將繼續為任何剩餘的備份支付對象儲存費用。
 
 
 
@@ -330,11 +330,11 @@ CAUTION: 如果您打算刪除具有備份的系統或集群，則必須在刪�
 . 選擇“進階設定”。
 . *強制刪除備份*：指示是否要強制刪除所有備份。
 +
-在某些極端情況下，您可能會想要NetApp Backup and Recovery 不再存取備份。例如，如果服務不再有權存取備份儲存桶或備份受到 DataLock 保護但您不再需要它們，則可能會發生這種情況。以前，您無法自行刪除這些內容，而需要致電NetApp支援。在此版本中，您可以使用選項強制刪除備份（在磁碟區和工作環境層級）。
+在某些極端情況下，您可能會想要NetApp Backup and Recovery不再存取備份。例如，如果服務不再有權存取備份儲存桶或備份受到 DataLock 保護但您不再需要它們，則可能會發生這種情況。以前，您無法自行刪除這些內容，而需要致電NetApp支援。在此版本中，您可以使用選項強制刪除備份（在磁碟區和工作環境層級）。
 
 +
 
-CAUTION: 請謹慎使用此選項，並且僅在極端清理需要時使用。即使這些備份未被從物件儲存中刪除， NetApp Backup and Recovery 也將無法再存取它們。您需要前往雲端提供者並手動刪除備份。
+CAUTION: 請謹慎使用此選項，並且僅在極端清理需要時使用。即使這些備份未被從物件儲存中刪除， NetApp Backup and Recovery也將無法再存取它們。您需要前往雲端提供者並手動刪除備份。
 
 . 選擇*刪除*。
 
@@ -355,11 +355,11 @@ CAUTION: 請謹慎使用此選項，並且僅在極端清理需要時使用。�
 . 選擇“進階設定”。
 . *強制刪除備份*：指示是否要強制刪除所有備份。
 +
-在某些極端情況下，您可能會想要NetApp Backup and Recovery 不再存取備份。例如，如果服務中沒有下級有權存取備份儲存桶或備份受到 DataLock 保護但您不再需要它們，則可能會發生這種情況。以前，您無法自行刪除這些內容，而需要致電NetApp支援。在此版本中，您可以使用選項強制刪除備份（在磁碟區和工作環境層級）。
+在某些極端情況下，您可能會想要NetApp Backup and Recovery不再存取備份。例如，如果服務中沒有下級有權存取備份儲存桶或備份受到 DataLock 保護但您不再需要它們，則可能會發生這種情況。以前，您無法自行刪除這些內容，而需要致電NetApp支援。在此版本中，您可以使用選項強制刪除備份（在磁碟區和工作環境層級）。
 
 +
 
-CAUTION: 請謹慎使用此選項，並且僅在極端清理需要時使用。即使這些備份未被從物件儲存中刪除， NetApp Backup and Recovery 也將無法再存取它們。您需要前往雲端提供者並手動刪除備份。
+CAUTION: 請謹慎使用此選項，並且僅在極端清理需要時使用。即使這些備份未被從物件儲存中刪除， NetApp Backup and Recovery也將無法再存取它們。您需要前往雲端提供者並手動刪除備份。
 
 . 選擇*刪除*。
 
@@ -388,11 +388,11 @@ CAUTION: 請謹慎使用此選項，並且僅在極端清理需要時使用。�
 
 如果您想停止建立新的備份文件並刪除來源卷，但保留所有現有的備份文件，則刪除卷的備份關係為您提供了一種存檔機制。這樣，您就可以在將來需要時從備份檔案中還原卷，同時清除來源儲存系統中的空間。
 
-您不一定需要刪除來源磁碟區。您可以刪除磁碟區的備份關係並保留來源磁碟區。在這種情況下，您可以稍後在磁碟區上「啟動」備份。在這種情況下，將繼續使用原始基線備份副本 - 不會建立新的基線備份副本並將其匯出到雲端。請注意，如果您重新啟動備份關係，則會為磁碟區指派預設備份策略。
+您不一定需要刪除來源磁碟區。您可以刪除磁碟區的備份關係並保留來源磁碟區。在這種情況下，您可以稍後在磁碟區上「啟動」備份。在這種情況下，將繼續使用原始基線備份副本 - 不會建立新的基線備份副本並將其匯出到雲端。請注意，如果您重新啟動備份關係，則會為該磁碟區指派預設備份策略。
 
 只有當您的系統運行ONTAP 9.12.1 或更高版本時，此功能才可用。
 
-您無法從NetApp Backup and Recovery 使用者介面刪除來源磁碟區。但是，您可以開啟控制台*系統*頁面上的磁碟區詳細資料頁面，然後 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-volumes.html#manage-volumes["從那裡刪除卷"]。
+您無法從NetApp Backup and Recovery使用者介面刪除來源磁碟區。但是，您可以開啟控制台*系統*頁面上的磁碟區詳細資料頁面，然後 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-volumes.html#manage-volumes["從那裡刪除卷"]。
 
 
 NOTE: 一旦關係被刪除，您就無法刪除單一磁碟區備份檔案。但是，您可以刪除該磁碟區的所有備份。
@@ -405,7 +405,7 @@ NOTE: 一旦關係被刪除，您就無法刪除單一磁碟區備份檔案。�
 
 == 停用系統的NetApp Backup and Recovery
 
-停用系統的NetApp Backup and Recovery 會停用系統上每個磁碟區的備份，也會停用還原磁碟區的功能。任何現有的備份都不會被刪除。這不會從系統中取消註冊備份服務 - 它基本上允許您暫停所有備份和還原活動一段時間。
+停用系統的NetApp Backup and Recovery會停用系統上每個磁碟區的備份，也會停用還原磁碟區的功能。任何現有的備份都不會被刪除。這不會從系統中取消註冊備份服務 - 它基本上允許您暫停所有備份和還原活動一段時間。
 
 請注意，除非您<<刪除備份,刪除備份>>。
 
@@ -422,11 +422,11 @@ NOTE: 當備份被停用時，該系統會出現一個「啟動備份」按鈕�
 
 == 取消註冊系統的NetApp Backup and Recovery
 
-如果您不再想使用備份功能並且不想再為該系統的備份付費，則可以取消註冊NetApp Backup and Recovery。通常，當您計劃刪除系統並想要取消備份服務時使用此功能。
+如果您不再想使用備份功能且不想再為該系統的備份付費，則可以取消NetApp Backup and Recovery and Recovery 。通常，當您計劃刪除系統並想要取消備份服務時使用此功能。
 
-如果您想更改儲存叢集備份的目標物件存儲，也可以使用此功能。取消註冊系統的NetApp Backup and Recovery 後，您可以使用新的雲端供應商資訊為此叢集啟用NetApp Backup and Recovery。
+如果您想更改儲存叢集備份的目標物件存儲，也可以使用此功能。取消註冊系統的NetApp Backup and Recovery後，您可以使用新的雲端供應商資訊為該叢集啟用NetApp Backup and Recovery 。
 
-在取消註冊NetApp Backup and Recovery 之前，您必須依序執行以下步驟：
+在取消註冊NetApp Backup and Recovery之前，您必須依序執行以下步驟：
 
 * 停用系統的NetApp Backup and Recovery
 * 刪除該系統的所有備份

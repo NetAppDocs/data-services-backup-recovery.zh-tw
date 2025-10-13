@@ -14,13 +14,13 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 
 
 [role="lead"]
-使用NetApp備份和復原保護您的 KVM VM 和儲存池。  NetApp Backup and Recovery 提供快速、節省空間、崩潰一致和 VM 一致的備份和復原作業。
+使用NetApp Backup and Recovery保護您的 KVM VM 和儲存池。  NetApp Backup and Recovery提供快速、節省空間、崩潰一致和 VM 一致的備份和復原作業。
 
 您可以將 KVM 工作負載備份到 Amazon Web Services S3、 Azure NetApp Files或StorageGRID ，並將 KVM 工作負載還原到本機 KVM 主機。
 
 image:../media/diagram-backup-recovery-general.png["備份與復原的整體架構圖"]
 
-使用NetApp Backup and Recovery 實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：
+使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：
 
 * 多個資料副本可提供多層保護，抵禦內部（內部）和外部網路安全威脅。
 * 多種媒體類型可確保在一種媒體類型發生實體或邏輯故障時能夠進行故障轉移。
@@ -28,9 +28,9 @@ image:../media/diagram-backup-recovery-general.png["備份與復原的整體架�
 
 
 
-NOTE: 若要切換至NetApp Backup and Recovery UI 版本或從 NetApp Backup and Recovery UI 版本切換，請參閱link:br-start-switch-ui.html["切換到先前的NetApp備份與還原 UI"]。
+NOTE: 若要切換至NetApp Backup and Recovery UI 版本或從 NetApp Backup and Recovery UI 版本切換，請參閱link:br-start-switch-ui.html["切換到先前的NetApp Backup and RecoveryUI"]。
 
-您可以使用NetApp Backup and Recovery 執行與 KVM 工作負載相關的下列任務：
+您可以使用NetApp Backup and Recovery執行與 KVM 工作負載相關的下列任務：
 
 * link:br-start-discover-kvm.html["發現 KVM 工作負載"]
 * link:br-use-kvm-protection-groups.html["為 KVM 工作負載建立和管理保護群組"]

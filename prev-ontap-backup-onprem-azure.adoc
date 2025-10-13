@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-azure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp備份和還原將本機ONTAP資料備份到 Azure Blob 存儲
+= 使用NetApp Backup and Recovery將本機ONTAP資料備份到 Azure Blob 存儲
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-完成NetApp備份和復原中的幾個步驟，開始將磁碟區資料從本機ONTAP系統備份到二級儲存系統和 Azure Blob 儲存體。
+完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從本機ONTAP系統備份到二級儲存系統和 Azure Blob 儲存體。
 
 
 NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 
@@ -38,17 +38,17 @@ NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
 
 下圖顯示了*公共連接*方法以及您需要在組件之間準備的連接。您可以使用已在本機安裝的控制台代理，或已在 Azure VNet 中部署的控制台代理程式。
 
-image:diagram_cloud_backup_onprem_azure_public.png["此圖顯示了NetApp Backup and Recovery 如何透過公用連線與叢集上的磁碟區以及備份檔案所在的 Azure Blob 儲存體進行通訊。"]
+image:diagram_cloud_backup_onprem_azure_public.png["此圖顯示了NetApp Backup and Recovery如何透過公用連線與叢集上的磁碟區以及備份檔案所在的 Azure Blob 儲存體進行通訊。"]
 
 下圖顯示了*私有連接*方法以及您需要在元件之間準備的連接。您可以使用已在本機安裝的控制台代理，或已在 Azure VNet 中部署的控制台代理程式。
 
-image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backup and Recovery 如何透過私有連線與叢集上的磁碟區以及備份檔案所在的 Azure Blob 儲存體進行通訊。"]
+image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backup and Recovery如何透過私有連線與叢集上的磁碟區以及備份檔案所在的 Azure Blob 儲存體進行通訊。"]
 
 
 
 == 準備控制台代理
 
-控制台代理程式是NetApp控制台功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
+控制台代理程式是NetApp Console功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
 
 
 
@@ -63,7 +63,7 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在您的場所安裝控制台代理"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html["在 Azure 政府區域安裝控制台代理"^]
 +
-當控制台代理部署在雲端時（而不是安裝在您的場所），Azure 政府區域支援NetApp備份和復原。此外，您必須從 Azure 市場部署控制台代理程式。您無法從 Console SaaS 網站在政府區域部署 Console 代理程式。
+當控制台代理部署在雲端時（而不是安裝在您的場所），Azure 政府區域支援NetApp Backup and Recovery。此外，您必須從 Azure 市場部署控制台代理程式。您無法從 Console SaaS 網站在政府區域部署 Console 代理程式。
 
 
 
@@ -76,9 +76,9 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 .步驟
 . 確保安裝控制台代理程式的網路啟用以下連線：
 +
-** 透過連接埠 443 建立到NetApp Backup and Recovery 以及 Blob 物件儲存的 HTTPS 連接(https://docs.netapp.com/us-en/console-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["查看端點列表"^]）
+** 透過連接埠 443 建立到NetApp Backup and Recovery以及 Blob 物件儲存的 HTTPS 連接(https://docs.netapp.com/us-en/console-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["查看端點列表"^]）
 ** 透過連接埠 443 建立到ONTAP叢集管理 LIF 的 HTTPS 連接
-** 為了讓NetApp備份和復原搜尋與還原功能正常運作，必須開啟連接埠 1433 以便控制台代理程式和 Azure Synapse SQL 服務之間進行通訊。
+** 為了讓NetApp Backup and Recovery搜尋與還原功能正常運作，必須開啟連接埠 1433 以便控制台代理程式和 Azure Synapse SQL 服務之間進行通訊。
 ** Azure 和 Azure 政府部署需要額外的入站安全性群組規則。看 https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Azure 中的控制台代理程式規則"^]了解詳情。
 
 
@@ -89,7 +89,7 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 
 === 驗證或新增控制台代理的權限
 
-要使用NetApp備份和還原搜尋和還原功能，您需要在控制台代理程式的角色中擁有特定權限，以便它可以存取 Azure Synapse 工作區和資料湖儲存帳戶。請參閱下面的權限，如果需要修改策略，請依照下列步驟操作。
+要使用NetApp Backup and Recovery搜尋和還原功能，您需要在控制台代理程式的角色中擁有特定權限，以便它可以存取 Azure Synapse 工作區和資料湖儲存帳戶。請參閱下面的權限，如果需要修改策略，請依照下列步驟操作。
 
 .開始之前
 您必須向您的訂閱註冊 Azure Synapse Analytics 資源提供者（稱為「Microsoft.Synapse」）。 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["了解如何為您的訂閱註冊此資源提供程序"^] 。您必須是訂閱*擁有者*或*貢獻者*才能註冊資源提供者。
@@ -167,10 +167,10 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 您需要驗證 Azure 和控制台的授權需求：
 
-* 在為叢集啟動NetApp Backup and Recovery 之前，您需要訂閱 Azure 提供的即用即付 (PAYGO) 控制台市場，或從NetApp購買並啟用NetApp Backup and Recovery BYOL 授權。這些許可證適用於您的帳戶，可以在多個系統中使用。
+* 在為叢集啟動NetApp Backup and Recovery之前，您需要訂閱 Azure 提供的即用即付 (PAYGO) 主機市場，或從NetApp購買並啟用NetApp Backup and Recovery BYOL 授權。這些許可證適用於您的帳戶，可以在多個系統中使用。
 +
-** 對於NetApp Backup and Recovery PAYGO 許可，您需要訂閱 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure 市場提供的NetApp控制台"^]。  NetApp Backup and Recovery 的計費透過此訂閱完成。
-** 對於NetApp備份和還原 BYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"] 。
+** 對於NetApp Backup and Recovery PAYGO 許可，您需要訂閱 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure 市場提供的NetApp Console"^]。  NetApp Backup and Recovery的計費透過此訂閱完成。
+** 對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。
 
 
 * 您需要對用於儲存備份的物件儲存空間進行 Azure 訂閱。
@@ -188,7 +188,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 準備ONTAP集群涉及以下步驟：
 
-* 在NetApp控制台中發現您的ONTAP系統
+* 在NetApp Console中發現您的ONTAP系統
 * 驗證ONTAP系統要求
 * 驗證ONTAP網路要求以將資料備份到對象存儲
 * 驗證ONTAP複製卷的網路要求
@@ -196,11 +196,11 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 
 
-=== 在NetApp控制台中發現您的ONTAP系統
+=== 在NetApp Console中發現您的ONTAP系統
 
-您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp控制台 *系統* 頁面上可用。
+您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。
 
-您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現集群"^] 。
+您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現集群"^]。
 
 
 
@@ -211,7 +211,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 * 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
 * SnapMirror許可證（包含在高級捆綁包或資料保護捆綁包中）。
 +
-*注意：*使用NetApp備份和復原時不需要「混合雲端捆綁包」。
+*注意：*使用NetApp Backup and Recovery時不需要「混合雲端捆綁包」。
 
 +
 了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["管理您的叢集許可證"^]。
@@ -219,7 +219,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 * 時間和時區設定正確。了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["配置叢集時間"^]。
 * 如果要複製數據，則應在複製資料之前驗證來源系統和目標系統是否運行相容的ONTAP版本。
 +
-https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^] 。
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^]。
 
 
 
@@ -242,19 +242,19 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 * ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。控制台代理程式可以駐留在 Azure VNet 中。
 * 每個託管要備份的磁碟區的ONTAP節點上都需要一個叢集間 LIF。  LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有關 IP 空間的更多信息"^] 。
 +
-設定NetApp Backup and Recovery 時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
+當您設定NetApp Backup and Recovery時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
 
 * 節點和叢集間 LIF 能夠存取物件儲存。
 * 已為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["為 SVM 配置 DNS 服務"^]。
 * 如果您使用的 IP 空間與預設 IP 空間不同，則可能需要建立靜態路由才能存取物件儲存。
-* 如有必要，請更新防火牆規則，以允許NetApp備份和恢復服務透過連接埠 443 從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
+* 如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery服務透過連接埠 443 從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
 
 
 
 
 === 驗證ONTAP複製卷的網路要求
 
-如果您打算使用NetApp Backup and Recovery 在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
+如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
 
 
 
@@ -291,7 +291,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 預設情況下，該服務會為您建立儲存帳戶。如果您想使用自己的儲存帳戶，您可以在啟動備份啟動精靈之前建立它們，然後在精靈中選擇這些儲存帳戶。
 
-link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的更多信息"] 。
+link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的更多信息"]。
 
 
 
@@ -328,7 +328,7 @@ link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的
 . 繼續以下選項：
 +
 ** 如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。
-** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。請參閱<<準備控制台代理>> 。
+** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。參考<<準備控制台代理>>。
 
 
 
@@ -497,7 +497,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 
 
 .結果
-NetApp Backup and Recovery 開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存系統資料的差異副本。
+NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存系統資料的差異副本。
 
 在目標群集中建立一個複製卷，該複製卷將與主卷同步。
 

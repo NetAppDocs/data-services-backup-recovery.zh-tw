@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-limitations-kvm.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, KVM, SAP HANA database, virtual machine, vm 
-summary: 此版本的NetApp Backup and Recovery 具有以下已知限制。 
+summary: 此版本的NetApp Backup and Recovery具有以下已知限制。 
 ---
-= NetApp Backup and Recovery 針對 KVM 工作負載的已知限制
+= NetApp Backup and Recovery針對 KVM 工作負載的已知限制
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: 此版本的NetApp Backup and Recovery 具有以下已知限制。
 [role="lead"]
 此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
 
-NetApp Backup and Recovery 中的 KVM 工作負載的私人預覽版不支援以下操作和設定：
+NetApp Backup and Recovery中的 KVM 工作負載的私人預覽版不支援以下操作和設定：
 
 
 
@@ -30,7 +30,7 @@ NetApp Backup and Recovery 中的 KVM 工作負載的私人預覽版不支援以
 * 保護應用程式
 * 編輯保護群組
 * 使用來自多個 KVM 主機的虛擬機器建立保護群組
-* 建立使用者定義的備份（僅支援從NetApp控制台啟動的備份）
+* 建立使用者定義的備份（僅支援從NetApp Console啟動的備份）
 
 
 

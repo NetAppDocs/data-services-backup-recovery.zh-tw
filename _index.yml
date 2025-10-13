@@ -1,22 +1,24 @@
 ---
 indexpage:
-  title: NetApp備份和還原文檔
-  summary: NetApp備份和復原是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。
+  title: NetApp Backup and Recovery文檔
+  summary: NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes
+    工作負載）提供高效率、安全且經濟高效的資料保護。
   keywords: netapp console, netapp backup recovery, ontap, on-premises, data protection,
     sql, workloads, backup,
-  lead: NetApp備份和復原是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。
+  lead: NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes
+    工作負載）提供高效率、安全且經濟高效的資料保護。
   tiles:
   - title: 開始
     links:
-    - title: 了解NetApp備份與復原
+    - title: 了解NetApp Backup and Recovery
       url: concept-backup-to-cloud.html
     - title: 什麼是新的
       url: whats-new.html
     - title: 先決條件
       url: concept-start-prereq.html
-    - title: 在使用NetApp Backup and Recovery 之前設定備份目標
+    - title: 在使用NetApp Backup and Recovery之前設定備份目標
       url: br-start-setup.html
-    - title: 配置NetApp備份與復原設定
+    - title: 配置NetApp Backup and Recovery設置
       url: br-start-configure.html
   - title: 保護ONTAP磁碟區工作負載
     links:
@@ -106,9 +108,9 @@ indexpage:
       url: br-use-restore-kubernetes-applications.html
   - title: 部落格和社區
     links:
-    - title: NetApp控制台
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: NetApp資料服務
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: NetApp社群
       url: https://community.netapp.com/

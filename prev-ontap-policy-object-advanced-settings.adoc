@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-policy-object-advanced-settings.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 在NetApp備份和還原進階設定中管理備份到物件儲存選項
+= 在NetApp Backup and Recovery和還原進階設定中管理備份到物件儲存選項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-您可以使用「進階設定」頁面變更在為每個ONTAP系統啟動NetApp Backup and Recovery 時設定的叢集等級、備份到物件儲存設定。您也可以修改一些作為「預設」備份設定的設定。這包括更改備份到物件儲存的傳輸速率、是否將歷史 Snapshot 副本匯出為備份檔案以及啟用或停用系統的勒索軟體掃描。
+您可以使用「進階設定」頁面變更在為每個ONTAP系統啟動NetApp Backup and Recovery時設定的叢集等級、備份到物件儲存設定。您也可以修改一些作為「預設」備份設定的設定。這包括更改備份到物件儲存的傳輸速率、是否將歷史 Snapshot 副本匯出為備份檔案以及啟用或停用系統的勒索軟體掃描。
 
 
 NOTE: 這些設定僅適用於備份到物件儲存。這些設定都不會影響您的快照或複製設定。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 您可以在進階設定頁面中變更以下選項：
@@ -60,7 +60,7 @@ _進階設定_頁面顯示該系統的目前設定。
 
 == 變更可用於將備份上傳到物件儲存的網路頻寬
 
-當您為系統啟動NetApp Backup and Recovery 時，預設情況下， ONTAP可以使用無限量的頻寬將備份資料從系統中的磁碟區傳送到物件儲存。如果您注意到備份流量影響了正常的使用者工作負載，您可以使用「進階設定」頁面中的最大傳輸速率選項來限制傳輸過程中使用的網路頻寬量。
+當您為系統啟動NetApp Backup and Recovery時，預設情況下， ONTAP可以使用無限量的頻寬將備份資料從系統中的磁碟區傳送到物件儲存。如果您注意到備份流量影響了正常的使用者工作負載，您可以使用「進階設定」頁面中的最大傳輸速率選項來限制傳輸過程中使用的網路頻寬量。
 
 .步驟
 . 從*Volumes*選項卡中，選擇*Backup Settings*。

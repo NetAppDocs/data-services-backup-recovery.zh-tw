@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-storagegrid.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 完成NetApp備份與復原中的幾個步驟，開始將磁碟區資料從本機主ONTAP系統備份到二級儲存系統以及NetApp StorageGRID系統中的物件儲存。 
+summary: 完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從本機主ONTAP系統備份到二級儲存系統以及NetApp StorageGRID系統中的物件儲存。 
 ---
-= 使用NetApp備份和還原將本地ONTAP資料備份到StorageGRID
+= 使用NetApp Backup and Recovery將本機ONTAP資料備份到StorageGRID
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: 完成NetApp備份與復原中的幾個步驟，開始將磁碟區資�
 
 
 [role="lead"]
-完成NetApp備份與復原中的幾個步驟，開始將磁碟區資料從本機主ONTAP系統備份到二級儲存系統以及NetApp StorageGRID系統中的物件儲存。
+完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從本機主ONTAP系統備份到二級儲存系統以及NetApp StorageGRID系統中的物件儲存。
 
 
 NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 
@@ -32,7 +32,7 @@ NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
 
 或者，您可以連接到相同本機位置的輔助ONTAP系統來複製磁碟區。
 
-image:diagram_cloud_backup_onprem_storagegrid.png["此圖顯示了NetApp Backup and Recovery 如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
+image:diagram_cloud_backup_onprem_storagegrid.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
 當控制台代理程式和本機ONTAP系統安裝在沒有網際網路存取的本機位置（「暗站」）時， StorageGRID系統必須位於同一個本機資料中心。暗站配置不支援將舊備份檔案存檔到公有雲。
 
@@ -46,7 +46,7 @@ image:diagram_cloud_backup_onprem_storagegrid.png["此圖顯示了NetApp Backup 
 
 === 建立或切換控制台代理
 
-當您將資料備份到StorageGRID時，您的場所必須有控制台代理。您需要安裝新的控制台代理或確保目前選擇的控制台代理位於本機。控制台代理可以安裝在有或沒有網路存取的網站。
+當您將資料備份到StorageGRID時，您的場所必須有控制台代理。您需要安裝新的控制台代理程式或確保目前選定的控制台代理程式位於本機。控制台代理可以安裝在有或沒有網路存取的網站。
 
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解控制台代理"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在具有網際網路存取權限的 Linux 主機上安裝控制台代理"^]
@@ -69,20 +69,20 @@ image:diagram_cloud_backup_onprem_storagegrid.png["此圖顯示了NetApp Backup 
 
 ==== 私人模式（暗站）注意事項
 
-* NetApp備份和復原功能內建於控制台代理程式中。以私人模式安裝時，您需要定期更新控制台代理軟體才能存取新功能。檢查link:whats-new.html["NetApp備份與還原新功能"]查看每個NetApp Backup and Recovery 版本中的新功能。當您想要使用新功能時，請按照以下步驟操作 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["升級控制台代理軟體"^]。
+* NetApp Backup and Recovery功能內建於控制台代理程式中。以私人模式安裝時，您需要定期更新控制台代理軟體才能存取新功能。檢查link:whats-new.html["NetApp Backup and Recovery新功能"]查看每個NetApp Backup and Recovery版本中的新功能。當您想要使用新功能時，請按照以下步驟操作 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["升級控制台代理軟體"^]。
 +
-NetApp Backup and Recovery 的新版本除了可以建立物件儲存備份外，還具有安排和建立 Snapshot 副本和複製卷的功能，要求您使用控制台代理的 3.9.31 或更高版本。因此建議您取得此最新版本來管理所有備份。
+NetApp Backup and Recovery的新版本除了可以建立物件儲存備份外，還具有安排和建立 Snapshot 副本和複製卷的功能，要求您使用控制台代理的 3.9.31 或更高版本。因此建議您取得此最新版本來管理所有備份。
 
-* 當您在 SaaS 環境中使用NetApp Backup and Recovery 時， NetApp Backup and Recovery 設定資料將會備份到雲端。當您在沒有網路存取的網站中使用NetApp Backup and Recovery 時， NetApp Backup and Recovery 設定資料將備份到儲存備份的StorageGRID桶中。
+* 當您在 SaaS 環境中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將會備份到雲端。當您在沒有網路存取的網站中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID桶中。
 
 
 
 
 == 驗證許可證要求
 
-在為叢集啟動NetApp Backup and Recovery 之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此許可證適用於該帳戶，可跨多個系統使用。
+在為叢集啟動NetApp Backup and Recovery之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此許可證適用於該帳戶，可跨多個系統使用。
 
-您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用本服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"] 。
+您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用本服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。
 
 
 TIP: 將檔案備份到StorageGRID時不支援 PAYGO 授權。
@@ -95,7 +95,7 @@ TIP: 將檔案備份到StorageGRID時不支援 PAYGO 授權。
 
 準備ONTAP集群涉及以下步驟：
 
-* 在NetApp控制台中發現您的ONTAP系統
+* 在NetApp Console中發現您的ONTAP系統
 * 驗證ONTAP系統要求
 * 驗證ONTAP網路要求以將資料備份到對象存儲
 * 驗證ONTAP複製卷的網路要求
@@ -103,11 +103,11 @@ TIP: 將檔案備份到StorageGRID時不支援 PAYGO 授權。
 
 
 
-=== 在NetApp控制台中發現您的ONTAP系統
+=== 在NetApp Console中發現您的ONTAP系統
 
-您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp控制台 *系統* 頁面上可用。
+您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。
 
-您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現集群"^] 。
+您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["了解如何發現集群"^]。
 
 
 
@@ -118,7 +118,7 @@ TIP: 將檔案備份到StorageGRID時不支援 PAYGO 授權。
 * 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
 * SnapMirror許可證（包含在高級捆綁包或資料保護捆綁包中）。
 +
-*注意：*使用NetApp備份和復原時不需要「混合雲端捆綁包」。
+*注意：*使用NetApp Backup and Recovery時不需要「混合雲端捆綁包」。
 
 +
 了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["管理您的叢集許可證"^]。
@@ -126,7 +126,7 @@ TIP: 將檔案備份到StorageGRID時不支援 PAYGO 授權。
 * 時間和時區設定正確。了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["配置叢集時間"^]。
 * 如果要複製數據，則應在複製資料之前驗證來源系統和目標系統是否運行相容的ONTAP版本。
 +
-https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^] 。
+https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^]。
 
 
 
@@ -149,19 +149,19 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 * ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。控制台代理必須位於您的場所。
 * 每個託管要備份的磁碟區的ONTAP節點上都需要一個叢集間 LIF。  LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有關 IP 空間的更多信息"^] 。
 +
-設定NetApp Backup and Recovery 時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
+當您設定NetApp Backup and Recovery時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
 
 * 節點的群集間 LIF 能夠存取物件儲存（當控制台代理安裝在「暗」站點時不需要）。
 * 已為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["為 SVM 配置 DNS 服務"^]。
 * 如果您使用的 IP 空間與預設 IP 空間不同，則可能需要建立靜態路由才能存取物件儲存。
-* 如有必要，請更新防火牆規則，以允許NetApp備份和復原服務透過您指定的連接埠（通常為連接埠 443）從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
+* 如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery服務透過您指定的連接埠（通常為連接埠 443）從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
 
 
 
 
 === 驗證ONTAP複製卷的網路要求
 
-如果您打算使用NetApp Backup and Recovery 在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
+如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
 
 
 
@@ -204,7 +204,7 @@ StorageGRID必須符合以下要求。查看 https://docs.netapp.com/us-en/stora
 S3 憑證:: 您必須建立 S3 租用戶帳戶來控制對StorageGRID儲存的存取。 https://docs.netapp.com/us-en/storagegrid-117/admin/creating-tenant-account.html["有關詳細信息，請參閱StorageGRID文檔"^] 。
 +
 --
-當您設定備份到StorageGRID時，備份精靈會提示您輸入租用戶帳戶的 S3 存取金鑰和金鑰。租用戶帳戶使NetApp Backup and Recovery 能夠驗證和存取用於儲存備份的StorageGRID桶。需要金鑰，以便StorageGRID知道誰在發出請求。
+當您設定備份到StorageGRID時，備份精靈會提示您輸入租用戶帳戶的 S3 存取金鑰和金鑰。租用戶帳戶使NetApp Backup and Recovery能夠驗證並存取用於儲存備份的StorageGRID桶。需要金鑰，以便StorageGRID知道誰在發出請求。
 
 這些存取金鑰必須與具有以下權限的使用者相關聯：
 
@@ -243,7 +243,7 @@ S3 憑證:: 您必須建立 S3 租用戶帳戶來控制對StorageGRID儲存的�
 *Amazon S3 要求*
 
 * 您需要註冊一個 Amazon S3 帳戶，用於儲存存檔備份所在的儲存空間。
-* 您可以選擇將備份分層到 AWS S3 Glacier 或 S3 Glacier Deep Archive 儲存。link:prev-reference-aws-archive-storage-tiers.html["了解有關 AWS 存檔層的更多信息"] 。
+* 您可以選擇將備份分層到 AWS S3 Glacier 或 S3 Glacier Deep Archive 儲存。link:prev-reference-aws-archive-storage-tiers.html["了解有關 AWS 存檔層的更多信息"]。
 * StorageGRID應該對儲存桶具有完全控制存取權限(`s3:*`）；但是，如果這不可能，則儲存桶策略必須向StorageGRID授予以下 S3 權限：
 +
 ** `s3:AbortMultipartUpload`
@@ -264,11 +264,11 @@ Azure Blob 需求
 * 啟動精靈可讓您使用現有的資源群組來管理將儲存備份的 Blob 容器，或者您可以建立新的資源群組。
 
 
-在為叢集的備份策略定義存檔設定時，您將輸入雲端提供者憑證並選擇要使用的儲存類別。當您啟動叢集備份時， NetApp Backup and Recovery 會建立雲端儲存桶。  AWS 和 Azure 檔案儲存所需的資訊如下所示。
+在為叢集的備份策略定義存檔設定時，您將輸入雲端提供者憑證並選擇要使用的儲存類別。當您啟動叢集備份時，NetApp Backup and Recovery會建立雲端儲存桶。  AWS 和 Azure 檔案儲存所需的資訊如下所示。
 
 image:screenshot_sg_archive_to_cloud.png["將備份檔案從StorageGRID到 AWS S3 或 Azure Blob 所需資訊的螢幕截圖。"]
 
-您選擇的歸檔策略設定將在StorageGRID中產生資訊生命週期管理 (ILM) 策略，並將這些設定新增為「規則」。
+您選擇的歸檔策略設定將在StorageGRID中產生資訊生命週期管理 (ILM) 策略，並將設定新增為「規則」。
 
 * 如果存在現有的活動 ILM 策略，則會將新規則新增至 ILM 策略以將資料移至存檔層。
 * 如果存在處於「建議」狀態的現有 ILM 策略，則無法建立和啟動新的 ILM 策略。 https://docs.netapp.com/us-en/storagegrid-117/ilm/index.html["了解有關StorageGRID ILM 策略和規則的更多信息"^] 。
@@ -309,7 +309,7 @@ image:screenshot_sg_archive_to_cloud.png["將備份檔案從StorageGRID到 AWS S
 . 繼續以下選項：
 +
 ** 如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。
-** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。請參閱<<準備控制台代理>> 。
+** 如果您還沒有控制台代理，則會出現「新增控制台代理」選項。參考<<準備控制台代理>>。
 
 
 
@@ -419,7 +419,7 @@ TIP: 若要建立自訂策略，請參閱link:br-use-policies-create.html["創�
 ** *網路*：選擇要備份的磁碟區所在的ONTAP叢集中的 IP 空間。此 IP 空間的群集間 LIF 必須具有出站網際網路存取權限（當控制台代理安裝在「暗站」時不需要）。
 +
 
-TIP: 選擇正確的 IP 空間可確保NetApp Backup and Recovery 可以建立從ONTAP到StorageGRID物件儲存的連線。
+TIP: 選擇正確的 IP 空間可確保NetApp Backup and Recovery可以建立從ONTAP到StorageGRID物件儲存的連線。
 
 ** *備份策略*：選擇現有的備份到物件儲存策略或建立一個。
 +
@@ -442,7 +442,7 @@ TIP: 若要建立自訂策略，請參閱link:br-use-policies-create.html["創�
 
 
 +
-如果您的叢集使用的是ONTAP 9.12.1 或更高版本，而您的StorageGRID系統使用的是 11.4 或更高版本，您可以選擇在一定天數後將舊備份分層到公有雲存檔層。目前支援 AWS S3 Glacier/S3 Glacier Deep Archive 或 Azure Archive 儲存層。<<準備將較舊的備份文件存檔到公有雲存儲,了解如何配置您的系統以實現此功能>> 。
+如果您的叢集使用的是ONTAP 9.12.1 或更高版本，而您的StorageGRID系統使用的是 11.4 或更高版本，您可以選擇在一定天數後將舊備份分層到公有雲存檔層。目前支援 AWS S3 Glacier/S3 Glacier Deep Archive 或 Azure Archive 儲存層。<<準備將較舊的備份文件存檔到公有雲存儲,了解如何配置您的系統以實現此功能>>。
 
 +
 ** *分層備份到公有雲*：選擇您想要分層備份的雲端提供者並輸入提供者詳細資料。
@@ -468,7 +468,7 @@ TIP: 若要建立自訂策略，請參閱link:br-use-policies-create.html["創�
 
 
 .結果
-NetApp Backup and Recovery 開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括來源資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存資料的差異副本。
+NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括來源資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存資料的差異副本。
 
 在目標叢集中建立一個複製卷，該卷將與主儲存卷同步。
 

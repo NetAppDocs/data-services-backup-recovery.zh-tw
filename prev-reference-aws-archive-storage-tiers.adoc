@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-reference-aws-archive-storage-tiers.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery 支援兩種 S3 存檔儲存類別和大多數區域。 
+summary: NetApp Backup and Recovery支援兩種 S3 存檔儲存類別和大多數區域。 
 ---
-= NetApp備份和復原支援的 AWS 存檔儲存層
+= NetApp Backup and Recovery支援的 AWS 存檔儲存層
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ summary: NetApp Backup and Recovery 支援兩種 S3 存檔儲存類別和大多�
 
 
 [role="lead"]
-NetApp Backup and Recovery 支援兩種 S3 存檔儲存類別和大多數區域。
+NetApp Backup and Recovery支援兩種 S3 存檔儲存類別和大多數區域。
 
 []
 ====
-*注意* 若要切換到NetApp Backup and Recovery UI 版本，請參閱link:br-start-switch-ui.html["切換到先前的NetApp備份與還原 UI"]。
+*注意* 若要切換到NetApp Backup and Recovery UI 版本，請參閱link:br-start-switch-ui.html["切換到先前的NetApp Backup and RecoveryUI"]。
 
 ====
 
 
-== NetApp備份與復原支援的 S3 歸檔儲存類
+== NetApp Backup and Recovery支援的 S3 歸檔儲存類
 
 最初建立備份檔案時，它們會儲存在 S3 _Standard_ 儲存中。此層針對儲存不經常存取的資料進行了最佳化；但也允許您立即存取它。  30 天后，備份將轉換為 S3_標準-不頻繁存取_儲存類別以節省成本。
 
@@ -31,14 +31,14 @@ NetApp Backup and Recovery 支援兩種 S3 存檔儲存類別和大多數區域�
 
 這些層中的資料在需要時無法立即訪問，並且需要更高的檢索成本，因此您需要考慮可能需要多久從這些存檔的備份檔案中恢復資料。請參閱此頁面上有關從檔案儲存復原資料的部分。
 
-* 如果您在啟動NetApp Backup and Recovery 時在第一個備份策略中未選擇任何存檔層，那麼 _S3 Glacier_ 將是您未來策略的唯一存檔選項。
+* 如果您在啟動NetApp Backup and Recovery時在第一個備份策略中未選擇任何存檔層，那麼 _S3 Glacier_ 將是您未來策略的唯一存檔選項。
 * 如果您在第一個備份策略中選擇了“S3 Glacier”，那麼您可以將該叢集的未來備份策略變更為“S3 Glacier Deep Archive”層。
 * 如果您在第一個備份策略中選擇“S3 Glacier Deep Archive”，則該層將是該叢集未來備份策略唯一可用的存檔層。
 
 
-請注意，當您使用此類生命週期規則配置NetApp Backup and Recovery 時，在 AWS 帳戶中設定儲存桶時不得配置任何生命週期規則。
+請注意，當您使用此類生命週期規則配置NetApp Backup and Recovery時，在 AWS 帳戶中設定儲存桶時不得配置任何生命週期規則。
 
-https://aws.amazon.com/s3/storage-classes/["了解 S3 儲存類別"^] 。
+https://aws.amazon.com/s3/storage-classes/["了解 S3 儲存類別"^]。
 
 
 

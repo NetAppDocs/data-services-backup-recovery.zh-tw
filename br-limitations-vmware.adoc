@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-limitations-vmware.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, vmware, vcenter 
-summary: NetApp備份和復原服務需要先發現數據，您才能使用該服務。在發現過程中， NetApp Backup and Recovery 會分析組織內系統中的所有磁碟區和檔案。 
+summary: NetApp Backup and Recovery服務需要先發現數據，您才能使用該服務。在發現過程中， NetApp Backup and Recovery會分析組織內系統中的所有磁碟區和檔案。 
 ---
-= NetApp Backup and Recovery 針對 VMware 工作負載的已知限制
+= NetApp Backup and Recovery針對 VMware 工作負載的已知限制
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: NetApp備份和復原服務需要先發現數據，您才能使用該�
 [role="lead"]
 此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
 
-NetApp Backup and Recovery 中的 VMware 工作負載預覽版不支援下列操作：
+NetApp Backup and Recovery中的 VMware 工作負載預覽版不支援下列操作：
 
 * 山
 * 解除安裝

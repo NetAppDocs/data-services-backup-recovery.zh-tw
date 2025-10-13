@@ -1,12 +1,12 @@
-= NetApp備份與還原預覽版
+= NetApp Backup and Recovery預覽版
 :allow-uri-read: 
 
 
 
 
-=== NetApp備份與還原預覽版
+=== NetApp Backup and Recovery預覽版
 
-NetApp Backup and Recovery 的此預覽版提供了更新的使用者介面，可讓您使用NetApp Backup and Recovery 中熟悉的 3-2-1 保護原則來管理 Microsoft SQL Server 工作負載。使用此新版本，您可以將這些工作負載備份到主存儲，將其複製到輔助存儲，然後將其備份到雲端物件儲存。
+NetApp Backup and Recovery的此預覽版提供了更新的使用者介面，使您能夠使用NetApp Backup and Recovery中熟悉的 3-2-1 保護策略來管理 Microsoft SQL Server 工作負載。使用此新版本，您可以將這些工作負載備份到主存儲，將其複製到輔助存儲，然後將其備份到雲端物件儲存。
 
 
 NOTE: 本文檔作為技術預覽提供。對於此預覽版產品， NetApp保留在正式發布之前修改產品詳細資訊、內容和時間表的權利。
@@ -14,7 +14,7 @@ NOTE: 本文檔作為技術預覽提供。對於此預覽版產品， NetApp保�
 此版本的NetApp Backup and Recovery Preview 2025 包含以下更新。
 
 * 重新設計的使用者介面為管理備份和復原任務提供了更直覺的體驗。
-* 預覽版可讓您備份和還原 Microsoft SQL Server 資料庫。  （未來版本將添加對其他工作負載的支援。）
-* 此版本整合了SnapCenter功能，使您能夠透過NetApp備份和還原使用者介面使用 3-2-1 資料保護策略來管理和保護您的SnapCenter資源。
+* 預覽版可讓您備份和還原 Microsoft SQL Server 資料庫。（未來版本將添加對其他工作負載的支援。）
+* 此版本整合了SnapCenter功能，使您能夠透過NetApp Backup and Recovery使用者介面使用 3-2-1 資料保護策略來管理和保護您的SnapCenter資源。
 * 此版本可讓您將SnapCenter工作負載匯入NetApp Backup and Recovery。
 

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-reference-gcp-archive-storage-tiers.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery 支援一個 Google 歸檔儲存類別和大多數區域。 
+summary: NetApp Backup and Recovery支援一個 Google 歸檔儲存類別和大多數區域。 
 ---
-= NetApp備份與復原支援 Google 歸檔儲存層
+= NetApp Backup and Recovery支援 Google 歸檔儲存層
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ summary: NetApp Backup and Recovery 支援一個 Google 歸檔儲存類別和大
 
 
 [role="lead"]
-NetApp Backup and Recovery 支援一個 Google 歸檔儲存類別和大多數區域。
+NetApp Backup and Recovery支援一個 Google 歸檔儲存類別和大多數區域。
 
 []
 ====
-*注意* 若要切換到NetApp Backup and Recovery UI 版本，請參閱link:br-start-switch-ui.html["切換到先前的NetApp備份與還原 UI"]。
+*注意* 若要切換到NetApp Backup and Recovery UI 版本，請參閱link:br-start-switch-ui.html["切換到先前的NetApp Backup and RecoveryUI"]。
 
 ====
 
 
-== NetApp備份和還原支援的 Google 歸檔儲存類
+== NetApp Backup and Recovery支援的 Google 歸檔儲存類
 
 最初建立備份檔案時，它們儲存在_標準_儲存中。此層針對儲存不經常存取的資料進行了最佳化；但也允許您立即存取它。
 
-如果您的本地叢集使用的是ONTAP 9.12.1 或更高版本，您可以選擇在一定天數（通常超過 30 天）後將舊備份分層到NetApp備份和還原 UI 中的「_Archive_」儲存中，以進一步最佳化成本。此層中的資料將需要更高的檢索成本，因此您需要考慮可能需要多久從這些存檔的備份檔案中還原資料。請參閱此頁面上有關從檔案儲存復原資料的部分。
+如果您的本地叢集使用的是ONTAP 9.12.1 或更高版本，您可以選擇在一定天數（通常超過 30 天）後將舊備份分層到NetApp Backup and RecoveryUI 中的「_Archive_」儲存中，以進一步最佳化成本。此層中的資料將需要更高的檢索成本，因此您需要考慮可能需要多久從這些存檔的備份檔案中還原資料。請參閱此頁面上有關從檔案儲存復原資料的部分。
 
-請注意，當您使用此類生命週期規則配置NetApp Backup and Recovery 時，在 Google 帳戶中設定儲存桶時不得配置任何生命週期規則。
+請注意，當您使用此類生命週期規則配置NetApp Backup and Recovery時，在 Google 帳戶中設定儲存桶時不得配置任何生命週期規則。
 
-https://cloud.google.com/storage/docs/storage-classes["了解 Google 儲存類別"^] 。
+https://cloud.google.com/storage/docs/storage-classes["了解 Google 儲存類別"^]。
 
 
 

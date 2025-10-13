@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-login.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 您使用NetApp Console 登入NetApp Backup and Recovery 服務。 
+summary: 您使用NetApp Console登入NetApp Backup and Recovery服務。 
 ---
-= 登入NetApp備份與復原
+= 登入NetApp Backup and Recovery
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,27 +14,27 @@ summary: 您使用NetApp Console 登入NetApp Backup and Recovery 服務。
 
 
 [role="lead"]
-您可以使用NetApp控制台登入NetApp Backup and Recovery。
+您可以使用NetApp Console登入NetApp Backup and Recovery。
 
 NetApp Backup and Recovery使用身分和存取管理來控制每個使用者可以做什麼。
 
-有關每個角色可以執行的操作的詳細信息，請參閱link:reference-roles.html["NetApp備份與還原使用者角色"]。
+有關每個角色可以執行的操作的詳細信息，請參閱link:reference-roles.html["NetApp Backup and Recovery使用者角色"]。
 
-若要登入NetApp控制台，您可以使用您的NetApp支援網站憑證，也可以使用您的電子郵件和密碼註冊NetApp控制台登入。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["了解有關登入的更多信息"^] 。
+若要登入NetApp Console，您可以使用您的NetApp支援網站憑證，也可以使用您的電子郵件和密碼註冊NetApp Console登入。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["了解有關登入的更多信息"^] 。
 
-*所需的NetApp控制台角色* 備份和還原超級管理員或備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 備份和還原超級管理員或備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 要新增控制台代理，您必須具有備份和還原超級管理員角色。
 
 .步驟
-. 開啟 Web 瀏覽器並前往 https://console.netapp.com/["NetApp控制台"^]。
+. 開啟 Web 瀏覽器並前往 https://console.netapp.com/["NetApp Console"^]。
 +
-出現NetApp控制台登入頁面。
+出現NetApp Console登入頁面。
 
 . 登入控制台。
 . 從控制台左側導覽中，選擇*保護*>*備份和還原*。
 +
-** 如果這是您第一次登入“備份和還原”，並且尚未將系統新增至“*系統*”頁面，則“備份和還原”將顯示“歡迎使用新的NetApp Backup and Recovery”登入頁面並提供新增系統的選項。有關將系統添加到*系統*頁面的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp控制台標準模式入門"^]。
+** 如果這是您第一次登入“備份和還原”，並且尚未將系統新增至“*系統*”頁面，則“備份和還原”將顯示“歡迎使用新的NetApp Backup and Recovery”登入頁面並提供新增系統的選項。有關將系統添加到*系統*頁面的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Console標準模式入門"^]。
 ** 如果這是您第一次登入“備份和復原”，並且已經將系統新增至“*系統*”頁面，但尚未發現任何資源，則會出現“歡迎使用新的NetApp Backup and Recovery”登入頁面並顯示“*發現資源*”選項。
 
 

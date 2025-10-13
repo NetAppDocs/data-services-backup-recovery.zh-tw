@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-vmware-backup-aws.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web, services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, bluexp 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 在NetApp備份和復原中將資料儲存備份到 Amazon Web Services
+= 在NetApp Backup and Recovery中將資料儲存備份到 Amazon Web Services
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-您可以使用NetApp Backup and Recovery 將一個或多個資料儲存庫備份並歸檔到 Amazon Web Services，以提高儲存效率和雲端轉換。
+您可以使用NetApp Backup and Recovery將一個或多個資料儲存庫備份並歸檔到 Amazon Web Services，以提高儲存效率和雲端轉換。
 
 如果資料儲存與歸檔策略相關聯，您可以選擇歸檔層。支援的存檔層是 Glacier 和 Glacier Deep。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 .開始之前

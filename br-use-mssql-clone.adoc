@@ -4,7 +4,7 @@ permalink: br-use-mssql-clone.html
 keywords: backing up, restoring, back up, backup, clone, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。 
 ---
-= 使用NetApp備份和還原複製 Microsoft SQL Server 工作負載
+= 使用NetApp Backup and RecoveryMicrosoft SQL Server 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 
 
 [role="lead"]
-使用NetApp備份和還原將 Microsoft SQL Server 應用程式資料複製到相同或不同的 VM，以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。
+使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料複製到相同或不同的 VM，以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。
 
 從以下克隆類型中進行選擇：
 
@@ -30,7 +30,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 * 刪除克隆
 
 
-*所需的NetApp控制台角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 
 
@@ -41,7 +41,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 您可以從現有快照或即時快照建立複製。即時快照是根據備份建立的來源資料的時間點副本。如果資料遺失或損壞，您可以使用克隆來恢復您的工作負載。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *克隆*。
+. 從NetApp Backup and Recovery選單中，選擇 *複製*。
 . 選擇*建立新克隆*。
 . 選擇克隆類型：
 +
@@ -112,7 +112,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 您可以選擇變更資料庫名稱、使用最新的即時快照或從現有生產快照刷新。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *克隆*。
+. 從NetApp Backup and Recovery選單中，選擇 *複製*。
 . 選擇要刷新的克隆。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *刷新克隆*。
 . 完成“進階設定”部分：
@@ -140,7 +140,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 如果您不想使用來源工作負載中的最新資料更新克隆，則可能需要跳過克隆刷新。跳過克隆刷新允許您保持克隆原樣而不進行更新。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *克隆*。
+. 從NetApp Backup and Recovery選單中，選擇 *複製*。
 . 選擇您想要跳過刷新的克隆。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *跳過刷新*。
 . 在「跳過刷新確認」對話方塊中，執行以下操作：
@@ -155,14 +155,14 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 
 == 分裂克隆
 
-您可以拆分 Microsoft SQL Server 工作負載的複製。拆分克隆將從克隆中建立新的備份。新的備份可用於恢復工作負載。
+您可以拆分 Microsoft SQL Server 工作負載的複製。拆分克隆將從克隆中建立一個新的備份。新的備份可用於恢復工作負載。
 
-您可以選擇將克隆拆分為獨立克隆或長期克隆。精靈會顯示 SVM 的聚合清單、其大小以及複製磁碟區的位置。 NetApp Backup and Recovery 也會指示是否有足夠的空間來分割克隆。克隆分裂後，克隆成為一個獨立的資料庫進行保護。
+您可以選擇將克隆拆分為獨立克隆或長期克隆。精靈會顯示 SVM 的聚合清單、其大小以及複製磁碟區的位置。 NetApp Backup and Recovery也會指示是否有足夠的空間來分割克隆。克隆分裂後，克隆成為一個獨立的資料庫進行保護。
 
 克隆作業不會被刪除，並且可以再次用於其他克隆。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *克隆*。
+. 從NetApp Backup and Recovery選單中，選擇 *複製*。
 . 選擇一個克隆。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *分裂克隆*。
 . 查看拆分克隆詳細資訊並選擇*拆分*。
@@ -178,7 +178,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 如果克隆受到策略保護，則會刪除克隆，包括作業。
 
 .步驟
-. 從NetApp備份和還原選單中，選擇 *克隆*。
+. 從NetApp Backup and Recovery選單中，選擇 *複製*。
 . 選擇一個克隆。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *刪除克隆*。
 . 在複製刪除確認對話方塊中，查看刪除詳細資訊。

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-manage-execution-hook-templates.html 
 keywords: hooks, execution hooks, exec hooks, hook, execution, script, postscript, prescript, post, pre, run, backup, snapshot, freeze 
-summary: NetApp Backup and Recovery 可讓您管理執行掛鉤，以便在應用程式保護作業之前或之後採取行動。 
+summary: NetApp Backup and Recovery使您能夠管理執行掛鉤，以便在應用程式保護作業之前或之後採取行動。 
 ---
-= 管理適用於 Kubernetes 工作負載的NetApp備份與復原執行掛鉤模板
+= 管理適用於 Kubernetes 工作負載的NetApp Backup and Recovery執行掛鉤模板
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -25,14 +25,14 @@ summary: NetApp Backup and Recovery 可讓您管理執行掛鉤，以便在應�
 
 
 ====
-.所需的NetApp控制台角色
-組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp備份與還原存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp控制台存取角色"^] 。
+.所需的NetApp Console角色
+組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 
 
 == 執行鉤子的類型
 
-NetApp Backup and Recovery 根據運行時間支援以下類型的執行掛鉤：
+NetApp Backup and Recovery根據運行時間支援以下類型的執行掛鉤：
 
 * 預快照
 * 快照後
@@ -77,7 +77,7 @@ NOTE: 如果快照前執行鉤子新增、變更或刪除 Kubernetes 資源，�
 * 執行鉤子必須使用腳本來執行操作。許多執行鉤子可以引用同一個腳本。
 * 執行鉤子需要以可執行shell腳本的格式編寫。
 * 腳本大小限制為 96KB。
-* 執行掛鉤設定和任何匹配標準用於確定哪些掛鉤適用於快照、備份或還原操作。
+* 執行掛鉤設定和任何符合條件用於確定哪些掛鉤適用於快照、備份或還原操作。
 
 
 
@@ -89,7 +89,7 @@ NOTE: 由於執行鉤子通常會減少或完全停用其所針對的應用程�
 
 當您為應用程式新增或編輯執行掛鉤時，您可以向執行掛鉤添加過濾器來管理該掛鉤將匹配哪些容器。過濾器對於在所有容器上使用相同容器鏡像但可能將每個鏡像用於不同目的的應用程式（例如 Elasticsearch）很有用。過濾器可讓您建立執行掛鉤在某些（但不一定是所有）相同的容器上運行的場景。如果為單一執行掛鉤建立多個篩選器，它們將透過邏輯 AND 運算子組合在一起。每個執行掛鉤最多可以有 10 個活動過濾器。
 
-新增到執行掛鉤的每個過濾器都使用正規表示式來匹配叢集中的容器。當鉤子與容器匹配時，鉤子將在該容器上運行其關聯的腳本。過濾器的正規表示式使用正規表示式 2 (RE2) 語法，該語法不支援建立從符合清單中排除容器的過濾器。有關NetApp Backup and Recovery 在執行鉤子過濾器中支援的正規表示式的語法的信息，請參見 https://github.com/google/re2/wiki/Syntax["正規表示式 2 (RE2) 語法支持"^]。
+新增到執行掛鉤的每個過濾器都使用正規表示式來匹配叢集中的容器。當鉤子與容器匹配時，鉤子將在該容器上運行其關聯的腳本。過濾器的正規表示式使用正規表示式 2 (RE2) 語法，該語法不支援建立從符合清單中排除容器的過濾器。有關NetApp Backup and Recovery在執行鉤子過濾器中支援的正規表示式的語法的信息，請參見 https://github.com/google/re2/wiki/Syntax["正規表示式 2 (RE2) 語法支持"^]。
 
 
 NOTE: 如果將命名空間過濾器新增至在復原或複製作業後執行的執行掛鉤，且復原或複製來源和目標位於不同的命名空間中，則命名空間篩選器僅適用於目標命名空間。
@@ -113,7 +113,7 @@ NOTE: 如果將命名空間過濾器新增至在復原或複製作業後執行�
 . 選擇*建立執行鉤子模板*。
 . 輸入執行掛鉤的名稱。
 . （可選）選擇一種鉤子類型。例如，還原後鉤子會在還原作業完成後執行。
-. 在 *Script* 文字方塊中，輸入要作為執行掛鉤範本的一部分執行的可執行 shell 腳本。或者，您可以選擇*上傳腳本*來上傳腳本檔案。
+. 在 *Script* 文字方塊中，輸入要作為執行掛鉤範本的一部分執行的可執行 shell 腳本。或者，您可以選擇“*上傳腳本*”來上傳腳本檔案。
 . 選擇“*創建*”。
 +
 模板已建立並出現在*執行掛鉤模板*部分的模板清單中。

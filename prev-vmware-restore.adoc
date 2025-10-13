@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-vmware-restore.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載。 
+summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
-= 使用NetApp Backup and Recovery 恢復虛擬機器數據
+= 使用NetApp Backup and Recovery恢復虛擬機器數據
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: 使用NetApp NetApp備份和還原來保護您的 VMware 工作負載�
 
 
 [role="lead"]
-您可以使用NetApp備份和還原將虛擬機器資料從雲端還原到本機 vCenter。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。如果虛擬機器是使用存檔原則備份的，那麼您可以設定存檔還原優先權。
+您可以使用NetApp Backup and Recovery將虛擬機器資料從雲端還原到本機 vCenter。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。如果虛擬機器是使用存檔原則備份的，那麼您可以設定存檔還原優先權。
 
 
 NOTE: 您無法還原跨資料儲存的虛擬機器。
 
 []
 ====
-*注意* 若要切換至NetApp備份與復原工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp備份與復原工作負載"]。
+*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
 ====
 .開始之前
@@ -29,8 +29,8 @@ NOTE: 您無法還原跨資料儲存的虛擬機器。
 * 如果您要恢復到備用位置：
 +
 ** 確保來源 vCenter 和目標 vCenter 處於連結模式。
-** 確保在NetApp控制台 *系統* 頁面和SnapCenter Plug-in for VMware vSphere中的連結模式 vCenter 中新增了來源和目標叢集詳細資料。
-** 確保系統已新增至控制台*系統*頁面中與備用位置相對應的位置。
+** 確保在NetApp Console*系統* 頁面和SnapCenter Plug-in for VMware vSphere中的連結模式 vCenter 中新增了來源和目標叢集詳細資訊。
+** 確保已將系統新增至控制台*系統*頁面中與備用位置相對應的位置。
 
 
 
