@@ -273,8 +273,6 @@
   <block id="01edc88c05b373b3f7ebaedf025e6c66" category="list-text">備份和還原基於 KVM 的虛擬機器和虛擬機器資料的指導流程</block>
   <block id="4cfb069ae88ce34afb281a4bbf65ac6e" category="inline-link">保護 KVM 工作負載概述</block>
   <block id="79fcd951f792f60f767e44b5011c7851" category="paragraph">有關保護 KVM 工作負載的詳細信息，請參閱<block ref="e92217b78da768e08fd669e597378b8f" category="inline-link-rx"></block>。</block>
-  <block id="7f72a27277a7289e66ee8f5e8c51ffe5" category="section-title">Kubernetes 預覽改進</block>
-  <block id="0de024d994558b5d82bfea2474dcdb5a" category="paragraph">Kubernetes 工作負載的預覽版引入了以下增強功能：</block>
   <block id="7f6a04aadde1854e173d7668132da89b" category="list-text">3-2-1 扇出備份架構支持</block>
   <block id="b3b9066f003af6e4047de0ee6690e863" category="list-text">支援ONTAP S3 作為備份目標</block>
   <block id="e35ded7c45cf2f4d4c707e6aeb803b42" category="list-text">新的 Kubernetes 儀表板，更易於管理</block>
@@ -324,7 +322,6 @@
   <block id="020a36deb114af1bb518c70d5975e940" category="list-text">建立資源組</block>
   <block id="5ae6a8a06c30125d00a57910609856cf" category="list-text">跨磁碟（跨多個 CIFS 共用）</block>
   <block id="5cb642b37b3102019402cbd3b93a5693" category="list-text">透過 SAN 保護虛擬機</block>
-  <block id="9450dff5efb3139ece9422b6c372527d" category="list-text">從物件儲存恢復</block>
   <block id="0fffe3f2fb1497b9e344ba8dceac922b" category="list-text">保護使用 System Center Virtual Machine Manager (SCVMM) 叢集的 Hyper-V 主機</block>
   <block id="4a03732927298c2d8d1492b3d08bb831" category="summary">此版本的NetApp Backup and Recovery 具有以下已知限制。</block>
   <block id="5050c99de0a6e1bcf02e7ce66edabd97" category="doc">NetApp Backup and Recovery 針對 KVM 工作負載的已知限制</block>
@@ -335,7 +332,6 @@
   <block id="e2b26238e3aec34978fbb465dfd6baff" category="list-text">將虛擬機器還原到備用位置</block>
   <block id="fe8e9fc813c1e8a639c0cadb6115589f" category="list-text">保護儲存在 SAN 上的虛擬機</block>
   <block id="ca73b42f56baa81e1c83e31ee5c53d42" category="list-text">保護應用程式</block>
-  <block id="58bfd5253f13fe06cafc37225664e506" category="list-text">從物件儲存備份或還原</block>
   <block id="41bfa1316b52f6772c1921990bc34f69" category="list-text">編輯保護群組</block>
   <block id="d5598f128bb28f962fcd8574013f2a43" category="list-text">使用來自多個 KVM 主機的虛擬機器建立保護群組</block>
   <block id="2fbb28a0f1560254b88f56b3632cf88b" category="list-text">建立使用者定義的備份（僅支援從NetApp控制台啟動的備份）</block>
@@ -5000,4 +4996,15 @@
   <block id="ee885caa95dc922f4f4ba9860f7342f6" category="admonition">若要使用備份和復原建立自訂策略，請參閱<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block>。</block>
   <block id="854bc156a37cbbf040c040fbef53bdec" category="paragraph">NetApp Backup and Recovery 讓您能夠建立最多三個來源磁碟區副本來保護您的資料。在磁碟區上啟用備份和還原時，您可以選擇許多選項，因此您應該檢查您的選擇以做好準備。</block>
   <block id="460a4c33ada7a6581872d15b96a4344b" category="sidebar">保護 VMware 工作負載（預覽版）</block>
+  <block id="c95af44ddc098359d1a302a271aa883b" category="section-title">Kubernetes 預覽增強功能</block>
+  <block id="a9db09b7be48f8631739b57e73f48cd3" category="paragraph">Kubernetes 工作負載的預覽版引入了以下增強功能：</block>
+  <block id="80aadfb002c0fe2115f71c7aeb012ab4" category="section-title">VMware 預覽增強功能</block>
+  <block id="307d24114a1eea93601b6d95cac55bcb" category="paragraph">VMware 工作負載預覽版引入了以下增強功能：</block>
+  <block id="52c7fc54a0416d5bc7625cf3e154f5ee" category="list-text">支援從對象儲存恢復</block>
+  <block id="729609f8890f70080c4290c1a64f6901" category="list-text">NetApp Console儀表板現在顯示 VMware 工作負載狀態資訊</block>
+  <block id="e0aea66343c11d9c167af3537c61eac6" category="list-text">演示模式支援：無需新增 VMware vCenter Server 環境即可探索 VMware 工作負載的功能</block>
+  <block id="48286fbde233324a7f7880389e103924" category="list-text">工作事件的電子郵件警報和通知支持</block>
+  <block id="7c0ae68b454f9ff601ed1bdd5dcc3c30" category="list-text">支援備份和還原到基於 NVMe 的存儲</block>
+  <block id="dfa4b5c6b997823449e673db12ef526d" category="list-text">編輯保護策略</block>
+  <block id="c54d53d5c9b9527bb4d1e1020b2a04ec" category="paragraph">有關保護 VMware 工作負載的詳細信息，請參閱<block ref="81bdea79654f29d88dbffb87457fe1f5" category="inline-link-rx"></block>。</block>
 </blocks>
