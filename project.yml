@@ -49,6 +49,8 @@ sidebar:
       url: "/concept-start-prereq.html"
     - title: 設定NetApp Backup and Recovery 的許可
       url: "/br-start-licensing.html"
+    - title: 為ONTAP和StorageGRID設定安全證書
+      url: "/task-setup-ca-certificates.html"
     - title: 在使用NetApp Backup and Recovery 之前設定備份目標
       url: "/br-start-setup.html"
     - title: 登入NetApp備份與復原
