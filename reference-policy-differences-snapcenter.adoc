@@ -21,9 +21,9 @@ SnapCenter中使用的策略與NetApp Backup and Recovery中使用的策略之�
 SnapCenter使用以下計劃層：
 
 * *每小時*：多小時和分鐘，任意小時（0-23）和任意分鐘（0-60）。
-* *每日*：包括每隔幾天重複一次的選項，例如每 3 天。
+* *每日*：選擇每隔一定天數重複一次，例如每 3 天。
 * *每週*：週日至週一，可選擇在一周的第一天或一周中的多天執行快照。
-* *每月*：一月至十二月，可選擇在每月的特定日期執行，例如每月 7 號，甚至每月的多天。
+* *每月*：一月至十二月，可選擇每月特定日期或多日演出，例如 7 號。
 
 
 NetApp Backup and Recovery使用以下計劃層，它們略有不同：
@@ -49,13 +49,13 @@ NetApp Backup and Recovery使用以下計劃層，它們略有不同：
 
 NetApp Backup and Recovery如下調整SnapCenter方案：
 
-* 如果SnapCenter計劃設定為小於或等於 7 天，NetApp Backup and Recovery會將計畫設定為每週。本週內將會跳過一些快照。
+* 如果SnapCenter計劃設定為小於或等於 7 天，NetApp Backup and Recovery會將計畫設定為每週。本週內有些快照被跳過。
 +
 *範例*：如果您有一個SnapCenter每日策略，從星期一開始每 3 天重複一次，NetApp Backup and Recovery會將計劃設定為每週一、週四和週日。由於並非每 3 天一次，因此有些日子會被跳過。
 
 * 如果SnapCenter計劃設定為超過 7 天， NetApp Backup and Recovery會將方案設定為每月。該月將跳過一些快照。
 +
-*範例*：如果您有一個SnapCenter每日策略，從每月 2 號開始每 10 天重複一次，則NetApp Backup and Recovery （遷移後）會將計畫設定為每月 2 日、12 日和 22 日。下個月有些日子將會被跳過。
+*範例*：如果您有一個SnapCenter每日策略，其重複間隔為從每月 2 號開始每 10 天一次，則NetApp Backup and Recovery在遷移後會將計劃設定為每月 2 日、12 日和 22 日執行。  NetApp Backup and Recovery會在下個月跳過某些天。
 
 
 
@@ -85,7 +85,7 @@ NetApp Backup and Recovery如下調整SnapCenter方案：
 
 == 日誌備份保留
 
-使用SnapCenter，您可以在附加到資源的多個政策中設定多個保留值。但是， NetApp Backup and Recovery僅支援與資源相關的所有策略使用單一保留值。
+SnapCenter支援資源策略的多個保留值。  NetApp Backup and Recovery僅支援每個資源一個保留值。
 
 
 
@@ -99,6 +99,6 @@ NetApp Backup and Recovery如下調整SnapCenter方案：
 
 == SnapCenter策略中的SnapMirror標籤
 
-即使層級發生變化， SnapCenter中每個策略的SnapMirror標籤在遷移後仍保持不變。
+即使層級發生變化， SnapCenter也會在遷移後保留每個策略的SnapMirror標籤。
 
 *範例*： SnapCenter的每小時策略可能會在NetApp Backup and Recovery中變更為每日。但是，遷移後SnapMirror標籤保持不變。

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="98c5259ac207f8df01dc5381304dbe70" category="doc">在NetApp Console中發現您的ONTAP系統</block>
-  <block id="95bc7edd3ae3a36dfff6877129e7a78f" category="paragraph">您需要準備來源本機ONTAP系統以及任何輔助本機ONTAP或Cloud Volumes ONTAP系統。</block>
   <block id="a1e789284d8b0f8747dff3a88926e796" category="paragraph">準備ONTAP集群涉及以下步驟：</block>
   <block id="39f5ad38d5cd94a80509176827fd079c" category="list-text">驗證ONTAP系統要求</block>
   <block id="57e8975a7eaa4709d161b3eb03e22178" category="list-text">驗證ONTAP網路要求以將資料備份到對象存儲</block>
@@ -9,7 +8,6 @@
   <block id="c7a52dbc36fc702281b9045431e9d77c" category="paragraph">您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。</block>
   <block id="b020365bc471630c977d9fcc2c5ea1d1" category="inline-link">了解如何發現集群</block>
   <block id="65c75361fc7a8b558047f800f80facef" category="paragraph">您需要知道叢集管理 IP 位址和管理員使用者帳戶的密碼才能新增叢集。<block ref="05808bfa0505e1bf6ea9b1bffc01f78e" category="inline-link-rx"></block>。</block>
-  <block id="7d0648c1daae70297d4efd0289700985" category="paragraph">確保滿足以下ONTAP要求：</block>
   <block id="787afd9bf2f77b6cb254f842dc7bd357" category="list-text">最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。</block>
   <block id="be2a4307ac15130326b39aa20133d5ed" category="list-text">SnapMirror許可證（包含在高級捆綁包或資料保護捆綁包中）。</block>
   <block id="eacc5b49b582597e31dc61206923ddec" category="paragraph">*注意：*使用NetApp Backup and Recovery時不需要「混合雲端捆綁包」。</block>
@@ -17,12 +15,9 @@
   <block id="5fa813291c3d8485eb4eb5256c7b7d2e" category="paragraph">了解如何<block ref="0375b5449ee87be3e15b8392834ec255" category="inline-link-rx"></block>。</block>
   <block id="de2909ab4fc1a949075aa38ec0c0de83" category="inline-link">配置叢集時間</block>
   <block id="3cf888fcb0635e16e2f108c3a527e9a6" category="list-text">時間和時區設定正確。了解如何<block ref="9f61e0b7caa7b15265f460d001a365b9" category="inline-link-rx"></block>。</block>
-  <block id="7c64a8974603fc8da30f9c21db8be0c0" category="list-text">如果要複製數據，則應在複製資料之前驗證來源系統和目標系統是否運行相容的ONTAP版本。</block>
   <block id="49a1e754247eba0034ec2a2b3dea46b0" category="inline-link">查看與SnapMirror關係相容的ONTAP版本</block>
   <block id="8cc8f909068bf43fda15e12e79a0c805" category="paragraph"><block ref="b8c6e83fa255fcfab352a5b54339fdb8" category="inline-link-rx"></block>。</block>
   <block id="0736192094f1dc9a582442df0a017527" category="doc">本地ONTAP網路需求</block>
-  <block id="898017b78f41d024b76598353e2bf49e" category="paragraph">如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。</block>
-  <block id="49245543ad6be948bdde6584e5642a93" category="list-text">如果叢集位於您的場所，您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。</block>
   <block id="1fbce003d68708feb24931b9e6366f50" category="list-text">ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。</block>
   <block id="d7bb556723e915c43fe4fd9b0f90d545" category="inline-link">查看ONTAP文件中的叢集對等前提條件</block>
   <block id="e9926e61defd3a286477d3a785a7fd6a" category="paragraph">由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。<block ref="f62b93c20d5bac3c11ab8a3b52ce12c9" category="inline-link-rx"></block> 。</block>
@@ -287,7 +282,6 @@
   <block id="69fc5d74b4cae1d8411c6e1ef7fef337" category="list-text">備份和還原備份管理員</block>
   <block id="e7ccdca9cb72dcc628612957211d3e80" category="list-text">備份和還原復原管理員</block>
   <block id="2865d4b5e918de90349087089aeb52d0" category="list-text">備份和還原檢視器</block>
-  <block id="96b3cdda555459aef6cfc365956ed0b8" category="list-text">支援 SUSE Rancher Kubernetes 發行版</block>
   <block id="ba6bb9bc1bfb2e864cfaaa2229f7e2d8" category="list-text">多重儲存桶支援：現在，您可以跨不同的雲端供應商，透過每個系統多個儲存桶來保護系統內的捲</block>
   <block id="80aadfb002c0fe2115f71c7aeb012ab4" category="section-title">VMware 預覽增強功能</block>
   <block id="307d24114a1eea93601b6d95cac55bcb" category="paragraph">VMware 工作負載預覽版引入了以下增強功能：</block>
@@ -302,7 +296,6 @@
   <block id="79d4e4bc94bda2b257f4190786069be1" category="inline-link">保護 VMware 工作負載概述</block>
   <block id="c54d53d5c9b9527bb4d1e1020b2a04ec" category="paragraph">有關保護 VMware 工作負載的詳細信息，請參閱<block ref="81bdea79654f29d88dbffb87457fe1f5" category="inline-link-rx"></block>。</block>
   <block id="5454583dc62ad7e77c5ba8c488ba6d58" category="section-title">Oracle 資料庫工作負載支援作為私人預覽</block>
-  <block id="e43c46b8feaf8eb93753d791ff5f0c4f" category="paragraph">此版本的NetApp Backup and Recovery引進了對發現和管理 Oracle 資料庫工作負載的支援：</block>
   <block id="ef788408f77a6fc39041c0a817c65602" category="list-text">發現獨立的 Oracle 資料庫</block>
   <block id="30b7966bb7dc1aa9438906ea08ff7f3a" category="list-text">僅針對資料或資料和日誌備份建立保護策略</block>
   <block id="7c04ebe00ea4e3919d3a0db1523941c4" category="list-text">使用 3-2-1 備份方案保護 Oracle 資料庫</block>
@@ -798,47 +791,7 @@
   <block id="628bc160a519e5ae69b6c8aa88610900" category="list-text">*新增叢集中的所有主機*：選取此方塊可在發現期間將叢集中的所有主機新增至NetApp Backup and Recovery 。</block>
   <block id="b7dfb6860d9af743a7d3f0fe2adfde3d" category="list-text">*跳過選購的預安裝檢查*：勾選此方塊可跳過選購的預安裝檢查。例如，如果您知道記憶體或空間考慮因素將在不久的將來發生變化，並且您想立即安裝插件，那麼您可能想要這樣做。</block>
   <block id="413f1bdf68093f037d6630a5904e6a17" category="list-text">若要顯示NetApp Backup and Recovery儀表板，請從備份和復原選單中選擇 *儀表板*。</block>
-  <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">如果您只是想快速找到問題的答案，此常見問題解答可以為您提供協助。</block>
-  <block id="fcbc9d0b7e989e0961b6bdcb55502b4d" category="doc">NetApp Backup and Recovery常見問題解答</block>
-  <block id="ea355214fd4bc7c57f471bd92918879b" category="section-title">部署</block>
-  <block id="b865f8bea78dcad42e96ed798f510398" category="paragraph">*您需要許可證才能使用NetApp Backup and Recovery預覽版嗎？ *</block>
-  <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">您可以使用以下許可證類型：</block>
-  <block id="63f202b7fcd80e9277a9e585cd35c7ae" category="list-text">註冊 30 天免費試用。</block>
-  <block id="a4a4b80b06aca5ddf495d088f79e9824" category="paragraph">*如何啟用NetApp Backup and Recovery？ * NetApp Backup and Recovery不需要任何支援。備份和復原選項在控制台左側導覽中自動啟用。</block>
-  <block id="2d46761bc551e15a780126270187f754" category="paragraph">要開始使用，您需要註冊或聯絡您的NetApp銷售代表來試用備份和復原。然後，當您使用控制台代理時，它將包含適合該服務的功能。</block>
-  <block id="21309928cc72944c6c8c863389d043d7" category="paragraph">若要開始使用NetApp Backup and Recovery，請從其初始登入頁面選擇「開始發現工作負載」。</block>
-  <block id="3f3402ceee4504bb73638f6111dffad2" category="paragraph">* NetApp Backup and Recovery是否提供標準、限制和私有模式？ *目前， NetApp Backup and Recovery僅在標準模式下可用。敬請關注。</block>
   <block id="2a9ab4f690bade887dade42f4a0f412b" category="inline-link">NetApp Console部署模式</block>
-  <block id="4cebc30733ea9d8edb38766c837308c0" category="paragraph">有關所有NetApp資料服務中這些模式的說明，請參閱<block ref="9b1c9f23ced4bc12396bbe50ae116f54" category="inline-link-rx"></block>。</block>
-  <block id="bf733d8a933c1601697f364223fc7ecb" category="section-title">使用權</block>
-  <block id="ac5dd76e69a861df1cfc020509f94dac" category="inline-link"><block ref="ac5dd76e69a861df1cfc020509f94dac" category="inline-link-rx"></block></block>
-  <block id="55518afec8ad26f2d8dbe53160460810" category="paragraph">* NetApp Backup and RecoveryURL 是什麼？ *對於 URL，在瀏覽器中輸入：<block ref="a408a005dd22e5752669018517454576" category="inline-link-rx"></block>存取NetApp Console。</block>
-  <block id="6b95918551f87e6ece870e17dd0bb85f" category="paragraph">*如何處理存取權限？ *只有組織管理員才有能力啟動服務並發現工作負載（因為這涉及承諾使用資源）。後續互動可以由任何角色完成。</block>
-  <block id="8432b3fb33d1ec2e4a068fdeef6e82ab" category="paragraph">*什麼設備解析度最好？ *NetApp Backup and Recovery的建議設備解析度為 1920x1080 或更高。</block>
-  <block id="3462920d936c74204339015d2f24872a" category="paragraph">*我該使用哪種瀏覽器？ *任何現代瀏覽器都可以使用。</block>
-  <block id="cf49c80b52a1cb095928d387f3ae47ed" category="section-title">與其他服務的交互</block>
-  <block id="26b7f9e5fc21bc244eda67dabcd65cfb" category="paragraph">* NetApp Backup and Recovery是否知道NetApp ONTAP中所做的保護設定？ *是的， NetApp Backup and Recovery發現了在ONTAP中設定的快照計畫。</block>
-  <block id="9d74da34ef1c70391495f1797aa69926" category="paragraph">*如果您使用NetApp Backup and Recovery設定策略，那麼將來是否只需在備份和復原中進行變更？ *我們建議您從NetApp Backup and Recovery進行策略變更。</block>
-  <block id="35084d885dea7b061e6894c1cf3036d9" category="section-title">工作負載</block>
-  <block id="d402524aad46e7fd520fcc6819d646ba" category="paragraph">*工作量由什麼組成？ *工作負載是 2025 預覽版的應用程式。工作負載包括單一應用程式執行個體所使用的所有磁碟區。例如，部署在 mssql3.host.com 上的 Microsoft SQL Server DB 執行個體可以分別使用 vol1 和 vol2 來儲存其資料和日誌。這些磁碟區共同構成了資料庫執行個體的特定執行個體的工作負載。</block>
-  <block id="dd53fd2a784c4561d8b6866079ecff5e" category="paragraph">* NetApp Backup and Recovery支援哪些工作負載？ *</block>
-  <block id="553249a50803c74bcc7e726301cb04d3" category="paragraph">對於預覽版 2025， NetApp Backup and Recovery可以辨識下列工作負載：Microsoft SQL Server 應用程式。</block>
-  <block id="dc1104749c87cc0e9af03a0e476d1a2d" category="paragraph">*什麼是「受保護」的工作負載？ *在NetApp Backup and Recovery中，當啟用主要偵測策略時，工作負載將顯示「受保護」狀態。</block>
-  <block id="29e0e28df2606fb09f029badd7eb5d51" category="paragraph">*什麼是「有風險」的工作負載？ *如果工作負載沒有啟用主要偵測策略，那麼即使啟用了備份和快照策略，它仍然「處於危險之中」。</block>
-  <block id="e4244b45de1484571df7257e76a4102e" category="paragraph">*新增了新的工作負載，但尚未出現* 如果您在環境中新增了新的工作負載，請再次啟動發現並套用保護策略來保護該新資源。</block>
-  <block id="5d1184f76781faaf229c6b885314bcd3" category="section-title">保護策略</block>
-  <block id="5fe63b5e0d4049168b245142d9cab07c" category="paragraph">* NetApp Backup and Recovery是否知道NetApp ONTAP中所做的保護設定？ *</block>
-  <block id="84be861d63fae34f2b382931196f99e6" category="paragraph">是的， NetApp Backup and Recovery會發現在ONTAP中設定的快照計畫以及在發現的工作負載中是否啟用了 ARP 和 FPolicy。您最初在儀表板中看到的資訊是從其他NetApp解決方案和產品匯總而來的。</block>
-  <block id="fe087eb7da64d85ddce60fbceef3a892" category="paragraph">* NetApp Backup and Recovery是否知道SnapCenter中已經制定的策略？ *</block>
-  <block id="7999ac069ad005ef607d3416ca477a2f" category="paragraph">是的，如果您在SnapCenter中管理工作負載，則這些產品管理的策略將納入NetApp Backup and Recovery。</block>
-  <block id="65b1c67f533e18ce83c9880a7f09c9a7" category="paragraph">*您可以修改從SnapCenter繼承的策略嗎？ *</block>
-  <block id="0b3266536de2ef3da25662107259bbe8" category="paragraph">是的，您可以修改NetApp Backup and Recovery中由SnapCenter管理的策略。</block>
-  <block id="998e9c21cf771f050de1e6426def3807" category="paragraph">*如果ONTAP中存在策略（已在系統管理員中啟用，例如 ARP、FPolicy 和快照），那麼這些策略是否會在NetApp Backup and Recovery中發生變更？ *</block>
-  <block id="e1ec6ca6ef62d27b30753c8e5e010729" category="paragraph">不會。 NetApp NetApp Backup and Recovery不會修改ONTAP中的任何現有偵測策略（ARP、FPolicy 設定）。</block>
-  <block id="1bbf7e6eae5f11625646b96258731637" category="paragraph">*註冊NetApp Backup and Recovery後，如果在SnapCenter中新增政策會發生什麼情況？ *</block>
-  <block id="5d889c2e56170fc0190fe39d725b0ac1" category="paragraph">NetApp Backup and Recovery可辨識在SnapCenter中建立的任何新政策。</block>
-  <block id="518f0b9f41f0f038466364ab7781803f" category="paragraph">*您可以從ONTAP更改策略嗎？ *</block>
-  <block id="57244fdd507268483a03554561749b76" category="paragraph">是的，您可以在NetApp Backup and Recovery中從ONTAP更改策略。您也可以在NetApp Backup and Recovery中建立新策略並將其套用至工作負載。此操作將使用在NetApp Backup and Recovery中建立的策略來取代現有的ONTAP策略。</block>
   <block id="02a0978d1df3ca052a64d05249709cc3" category="summary">您可以透過從雲端供應商購買按使用量付費或年度市場訂閱來獲得NetApp Backup and Recovery 的許可，或透過從NetApp購買自帶許可證來獲得許可。需要有效的許可證才能在系統上啟動NetApp Backup and Recovery and Recovery 、建立生產資料的備份以及將備份資料還原到生產系統。</block>
   <block id="d44c500b8ff5c565a7d3b02d14def6a3" category="paragraph">您可以透過從雲端供應商購買按使用量付費 (PAYGO) 或年度市場訂閱 * NetApp Intelligent Services* 來獲得NetApp Backup and Recovery許可，或透過從NetApp購買自帶許可 (BYOL)。需要有效的許可證才能在系統上啟動NetApp Backup and Recovery and Recovery 、建立生產資料的備份以及將備份資料還原到生產系統。</block>
   <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">在您繼續閱讀之前，請注意以下幾點：</block>
@@ -1008,28 +961,7 @@
   <block id="6796afb2b33620293536ad9e235fd848" category="list-text">從頁面右上角，選擇*切換工作負載*下拉清單。</block>
   <block id="3f5d7ae35edb009a3d087f86f41de009" category="list-text">選擇您想要切換到的工作負載。</block>
   <block id="ec1f12f5fcff6b31a922c258991d141c" category="paragraph">頁面刷新並顯示所選的工作負載。</block>
-  <block id="077dddd38f710f37503017ef72b0aa0c" category="summary">開始或結束NetApp Backup and Recovery的免費試用。在雲端供應商的市場中註冊NetApp Intelligent Services的按使用量付費訂閱後，您可以享受 30 天的免費試用。</block>
-  <block id="4cc2c1cdb3df5424de041a859ac208ab" category="doc">開始免費試用NetApp Backup and Recovery</block>
-  <block id="d23f00deab77a3c07a0aec8d285bb928" category="paragraph">免費試用結束後，您將自動切換至 PAYGO 訂閱，不會中斷。如果您決定不再繼續使用NetApp Backup and Recovery，只需結束免費試用即可。</block>
-  <block id="742afb2e96739678f763dadcdb2f7a1f" category="paragraph">登入控制台後，您可以開始NetApp Backup and Recovery的免費試用。</block>
-  <block id="6576c82ece30ba8badaba07725a88bff" category="list-text">從控制台左側導覽中，選擇*保護*&gt;*備份和還原*。</block>
-  <block id="9f34250a4d87916db9ed33c5d2d34c38" category="list-text">如果這是您第一次登入備份和恢復，並且您已經在NetApp Console中擁有一個系統，但尚未開始免費試用，則會出現「歡迎使用新的NetApp Backup and Recovery」登入頁面並顯示*開始免費試用*選項。</block>
-  <block id="fd5d4fdb3a7823114db7b2aec630b26b" category="inline-image-macro">NetApp Backup and Recovery的登入頁面螢幕截圖（非免費試用）</block>
-  <block id="9c25a3d40f8fd83d6fcf47748f98c818" category="paragraph"><block ref="9c25a3d40f8fd83d6fcf47748f98c818" category="inline-image-macro-rx" type="image"></block></block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="section-title">下一步是什麼？</block>
-  <block id="39ce54293426a39177e483eb92bf1911" category="paragraph">開始免費試用後，您可以發現工作負載並建立策略來備份工作負載。</block>
-  <block id="bf3a1d15798f522d544f2ef360c8e903" category="paragraph">如果這是您第一次登入備份和恢復，您已經在NetApp Console中擁有一個系統，並且您開始了免費試用，但尚未發現任何資源，則會出現「歡迎使用新的NetApp Backup and Recovery」登入頁面並顯示*發現資源*的選項。</block>
-  <block id="bd03ede87c82adb65c788a5ae08c50b6" category="inline-link-macro">發現工作負載</block>
-  <block id="0971d67fb02bb147fd1791733a18b3c9" category="paragraph">有關發現工作負載的詳細信息，請參閱<block ref="991a0b33787378c36abd8e87e3fe062d" category="inline-link-macro-rx"></block>。</block>
-  <block id="e0ab1bd403439a64346ca02a27b258a4" category="inline-image-macro">NetApp Backup and Recovery的登入頁面螢幕截圖</block>
-  <block id="478ec8f379aa8546c74dab31ee76ae17" category="paragraph"><block ref="478ec8f379aa8546c74dab31ee76ae17" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c88fa3ec91be80907f96a2cd8ea42e19" category="paragraph">您可以隨時結束免費試用。如果您結束免費試用，則不會向您收取服務費用。</block>
-  <block id="68d1e9215d49a650b2fb8020bf5e3aed" category="list-text">從控制台左側導覽中，選擇*保護*&gt;*備份和還原*。</block>
-  <block id="e195d5ae967ab2c76ac6812094999e87" category="list-text">從「歡迎使用新的NetApp Backup and Recovery」登入頁面，選擇 *查看詳細資訊 - 免費試用* 或從頁面右上角選擇 *免費試用*。</block>
-  <block id="4c1f410e28db7ede2889d0363cb1390b" category="inline-image-macro">NetApp Backup and Recovery免費試用版登入頁面截圖</block>
-  <block id="629bfd4e06063a857faa1455508c21d2" category="paragraph"><block ref="629bfd4e06063a857faa1455508c21d2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f35b37deace9686f36d0fc2865384afa" category="list-text">在結束免費試用確認對話方塊中，輸入*結束試用*。</block>
-  <block id="44a320573c319d1f30b840c2d11a4e26" category="list-text">選擇*結束*。</block>
   <block id="d65e3c349db2ba76702d9c5bd1ade27f" category="summary">監控工作負載的健康狀況可確保您了解工作負載保護的問題並採取措施解決這些問題。查看備份和復原的狀態並對NetApp Backup and Recovery儀表板上出現的任何警報做出回應。您可以查看保護摘要、復原摘要、系統摘要等。</block>
   <block id="a160325dcdf365b6a979dfed5c7d50f7" category="doc">在NetApp Backup and Recovery儀表板上查看保護健康狀況</block>
   <block id="2da92f995ab136dd344c314ba2b4eed1" category="paragraph">監控工作負載的健康狀況可確保您了解工作負載保護的問題並採取措施解決這些問題。在NetApp Backup and Recovery儀表板上查看備份和復原的狀態。您可以查看系統摘要、保護摘要、作業摘要、復原摘要等。</block>
@@ -1226,8 +1158,6 @@
   <block id="7f95c9104d9c5d062c442ee5aade255c" category="paragraph">不適用於 KVM 預覽。</block>
   <block id="67833cdc3e0f9b5bea226d3734262615" category="summary">NetApp Backup and Recovery使您能夠管理執行掛鉤，以便在應用程式保護作業之前或之後採取行動。</block>
   <block id="3d932cbb71cd117a65669b165e078b5b" category="doc">管理適用於 Kubernetes 工作負載的NetApp Backup and Recovery執行掛鉤模板</block>
-  <block id="cf1efa56f611411b6426b3cf4ae8b4ea" category="paragraph">執行掛鉤是一種自訂操作，您可以將其配置為與託管 Kubernetes 應用程式的資料保護操作一起執行。例如，如果您有一個資料庫應用程序，則可以使用執行掛鉤在快照之前暫停所有資料庫事務，並在快照完成後恢復事務。這確保了應用程式一致的快照。建立執行鉤子模板時，您可以指定鉤子的類型、要執行的腳本以及確定鉤子適用於哪些容器的任何過濾器。然後，您可以使用模板將執行掛鉤與您的應用程式關聯起來。</block>
-  <block id="681575e078ff8d0f7388ab20fe174908" category="paragraph">預設情況下， NetApp Backup and Recovery 會在資料保護作業期間自動凍結和解凍某些應用程式（例如 KubeVirt）的檔案系統。您可以選擇根據Trident保護文件中的說明全域或針對特定應用程式停用此行為：</block>
   <block id="ac84b7596169ab3fb6c24e8a5c85c234" category="inline-link">使用 KubeVirt 虛擬機器保護數據</block>
   <block id="e71db3dcefde23f3505bd780d11437a6" category="list-text">若要為所有應用程式停用此行為，請參閱<block ref="cdee12d0fdecb470fee17a09aa7ec297" category="inline-link-rx"></block>。</block>
   <block id="2fd92693952062fc00d949899370185d" category="inline-link">定義應用程式</block>
@@ -1244,17 +1174,13 @@
   <block id="349b93d2884e6ca3d41d0d9dab41dcd8" category="list-text">恢復後</block>
   <block id="a9f57378169166a88acf61a71442e5fb" category="section-title">執行順序</block>
   <block id="e8132483e0cae3565c87c193b3fd8f57" category="paragraph">當執行資料保護操作時，執行掛鉤事件會依照下列順序發生：</block>
-  <block id="4a6ccf1757fd10978b3fb28d81187dcc" category="list-text">任何適用的自訂預操作執行掛鉤都在適當的容器上運行。您可以根據需要建立和運行任意數量的自訂預操作掛鉤，但這些掛鉤在操作之前的執行順序既無法保證也無法配置。</block>
   <block id="33ad6af3ec854239e33add8d3a454567" category="list-text">如果適用，則會發生檔案系統凍結。</block>
   <block id="cfbed2286711be0cf6dbc12aba602709" category="list-text">執行資料保護操作。</block>
   <block id="caf47630bbafdc416f6b6ecdb585e83e" category="list-text">如果適用，凍結的檔案系統將被解凍。</block>
-  <block id="9465fae733e0b5fdcd6e532ef8a78b08" category="list-text">任何適用的自訂後操作執行掛鉤都在適當的容器上運行。您可以根據需要建立和運行任意數量的自訂後操作掛鉤，但操作後這些掛鉤的執行順序既無法保證也無法配置。</block>
-  <block id="a4ce4f522b635b3063f4af5d138933cc" category="paragraph">如果您建立多個相同類型的執行掛鉤（例如，預快照），則無法保證這些掛鉤的執行順序。但是，不同類型的鉤子的執行順序是有保證的。例如，以下是具有所有不同類型鉤子的配置的執行順序：</block>
   <block id="25fcbdcc7c9fb7d2e1db9e64ef06804c" category="list-text">快照前鉤子執行</block>
   <block id="f098e888afa8ccb3f1ad3337c3b6eea1" category="list-text">快照後鉤子執行</block>
   <block id="59b50be8e9e2ed1b0e1bccae54c76036" category="list-text">執行備份前掛鉤</block>
   <block id="1f374d287bf615eef6eb9afd92b862f2" category="list-text">執行備份後鉤子</block>
-  <block id="b74efcc6eafe1d8dec6ade34cfa13365" category="admonition">在生產環境中啟用執行掛鉤腳本之前，您應該始終對其進行測試。您可以使用“kubectl exec”命令方便地測試腳本。在生產環境中啟用執行掛鉤後，測試產生的快照和備份以確保它們一致。您可以透過將應用程式複製到臨時命名空間、還原快照或備份，然後測試應用程式來執行此操作。</block>
   <block id="3094ed24e92fa43f93a063b74aba1810" category="admonition">如果快照前執行鉤子新增、變更或刪除 Kubernetes 資源，則這些變更將包含在快照或備份以及任何後續復原作業中。</block>
   <block id="f99748fb4b1cf592516b60937743c52d" category="section-title">關於自訂執行鉤子的重要說明</block>
   <block id="6b8e88c5f4231fbc6994f3a29dd893af" category="paragraph">在為您的應用程式規劃執行掛鉤時，請考慮以下事項。</block>
@@ -1262,7 +1188,6 @@
   <block id="d48136f4ba02445fcfbd5b5dec8ff441" category="list-text">執行鉤子需要以可執行shell腳本的格式編寫。</block>
   <block id="6a7d60379bb9015c0bfe02adcc54d0b5" category="list-text">腳本大小限制為 96KB。</block>
   <block id="635fb14be15c7e9019a30c91aa4aaa97" category="list-text">執行掛鉤設定和任何符合條件用於確定哪些掛鉤適用於快照、備份或還原操作。</block>
-  <block id="6b988caf78b1aa60f0402c611a1c8e2a" category="admonition">由於執行鉤子通常會減少或完全停用其所針對的應用程式的功能，因此您應該始終嘗試盡量減少自訂執行鉤子的運行時間。如果您啟動具有相關執行掛鉤的備份或快照操作，但隨後取消它，則如果備份或快照操作已經開始，則仍允許掛鉤運行。這意味著備份後執行掛鉤中使用的邏輯不能假定備份已完成。</block>
   <block id="99dc882fc0f61d1db87631ed9f156913" category="section-title">執行鉤子過濾器</block>
   <block id="44db75fbdb91be494665aebf40107fcf" category="paragraph">當您為應用程式新增或編輯執行掛鉤時，您可以向執行掛鉤添加過濾器來管理該掛鉤將匹配哪些容器。過濾器對於在所有容器上使用相同容器鏡像但可能將每個鏡像用於不同目的的應用程式（例如 Elasticsearch）很有用。過濾器可讓您建立執行掛鉤在某些（但不一定是所有）相同的容器上運行的場景。如果為單一執行掛鉤建立多個篩選器，它們將透過邏輯 AND 運算子組合在一起。每個執行掛鉤最多可以有 10 個活動過濾器。</block>
   <block id="7caae75448dbc59fcadd621099e170b3" category="inline-link">正規表示式 2 (RE2) 語法支持</block>
@@ -1281,7 +1206,6 @@
   <block id="157e2474b5e10c9143fb5843d68a82e1" category="list-text">（可選）選擇一種鉤子類型。例如，還原後鉤子會在還原作業完成後執行。</block>
   <block id="568e240ce60c5111628400e9a73d1b19" category="list-text">在 *Script* 文字方塊中，輸入要作為執行掛鉤範本的一部分執行的可執行 shell 腳本。或者，您可以選擇“*上傳腳本*”來上傳腳本檔案。</block>
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">選擇“*創建*”。</block>
-  <block id="2d25ab95e435f153440ab9d3233adfc9" category="paragraph">模板已建立並出現在*執行掛鉤模板*部分的模板清單中。</block>
   <block id="909eae293e55e9fb02681b3c1668c555" category="summary">NetApp Backup and Recovery讓您能夠管理工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。</block>
   <block id="1923fb9432a776bac3edea16865917a7" category="doc">使用NetApp Backup and Recovery管理 Microsoft SQL Server 庫存</block>
   <block id="2d9b7a32eaf0657975c7a926a06dfff1" category="paragraph">NetApp Backup and Recovery讓您能夠管理 Microsoft SQL Server 工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。</block>
@@ -1304,7 +1228,6 @@
   <block id="30a4c00b1d59e760020a5a1e5d3e6210" category="list-text">刪除主機</block>
   <block id="51929aa5ac08be2aca8dda46b9a095b1" category="section-title">管理主機</block>
   <block id="c1b699a50a4bda0565d1e967c632b8da" category="paragraph">您可以管理系統中發現的主機。您可以單獨或作為一個群組來管理它們。</block>
-  <block id="7d74372f5aaa444e827cb875729219e2" category="admonition">您只能管理主機列中顯示「未管理」狀態的主機。如果狀態為“Managed”，則表示該主機已由NetApp Backup and Recovery管理。</block>
   <block id="25766f02d9d8c870ca51e8b39ef38dcb" category="paragraph">在NetApp Backup and Recovery中管理主機後， SnapCenter不再管理這些主機上的資源。</block>
   <block id="773cf16e18760a45e76c513e8459874c" category="paragraph">*所需的NetApp Console角色* 儲存檢視器，或備份和還原超級管理員。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="dd41653a412227c2091e7d71ec5fd28f" category="list-text">選擇“*主機*”標籤。</block>
@@ -1315,7 +1238,6 @@
   <block id="174524211c88ebf80713c05b286e2eb5" category="list-text">如果您新增了 vCenter，您也必須透過選擇「註冊 vCenter」來註冊 vCenter。</block>
   <block id="1c7a710864a7ca8b07853f7e2944e316" category="list-text">選擇*驗證設定*來測試您的設定。</block>
   <block id="78c18bb0836191387029ae159fd8689c" category="list-text">選擇*管理*來管理主機。</block>
-  <block id="40d9d294f5336fef9bd3edce7d6a5743" category="paragraph">您可以暫停計劃以停止主機的備份和還原作業。如果您需要在主機上執行維護活動，您可能需要這樣做。</block>
   <block id="4e3bd0acc5f6322ab80072f1473897b3" category="list-text">選擇要暫停計劃的主機。</block>
   <block id="77a9d3d54ffd43084d88a31afcd0f181" category="list-text">選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*暫停計劃*。</block>
   <block id="87d6d7682f904398c53acb506e1b170f" category="list-text">在確認對話方塊中，選擇*暫停*。</block>
@@ -1327,7 +1249,6 @@
   <block id="e79b09ccd71d6ad6a875ff845cdd5212" category="list-text">選擇要刪除的主機。</block>
   <block id="a6813e29accbdb806f57adf1488d7074" category="list-text">選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*刪除主機*。</block>
   <block id="60236960f2f05ecefb35232cfdffeedc" category="list-text">查看確認訊息並選擇*刪除*。</block>
-  <block id="a2cc0134786d50649590ff3da4eb7f0a" category="paragraph">您可以管理實例資訊以確保資源具有適當的保護憑證，並且可以透過以下方式備份資源：</block>
   <block id="ffd56ce7295b58fa8452730aa5bc6ae3" category="list-text">保護實例</block>
   <block id="40596958221d9e7275ed2d84874e8433" category="list-text">關聯憑證</block>
   <block id="8e991c6ccf41cea57080dd6b693e3d7c" category="list-text">取消關聯憑證</block>
@@ -1357,7 +1278,6 @@
   <block id="e6c1b24de65a09f16b9020e54199a29e" category="list-text">使用現有憑證或建立新憑證。</block>
   <block id="dab04bcdf3dbab8cad7d24f10005a380" category="paragraph">您可以變更策略、建立新策略、設定時間表和設定保留設定。</block>
   <block id="9d0ddc6d62863436148ee8279afbc731" category="list-text">選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*編輯保護*。</block>
-  <block id="5274ca7228a09c382e8000fa1003dcad" category="paragraph">現在您可以備份您的數據，以確保您的資料受到立即保護。</block>
   <block id="79064230f1547dd6bc5159addaf911a9" category="list-text">選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*立即備份*。</block>
   <block id="2964961fd5cbcaafbf51ed405dd16932" category="list-text">選擇備份類型並設定計劃。</block>
   <block id="596f14319a92590e9615b473355d4ed5" category="paragraph">有關建立臨時備份的詳細信息，請參閱<block ref="7751e1b33ec16426dc5fef7b097a39f9" category="inline-link-macro-rx"></block>。</block>
@@ -1365,11 +1285,9 @@
   <block id="01017242cb102de16a629eedd0683b56" category="list-text">查看保護詳細信息</block>
   <block id="ad6ac298077f67c060156edbddf13a36" category="list-text">選擇“*資料庫*”標籤。</block>
   <block id="11e13a2f33d440e2a7175548ecae015f" category="list-text">選擇資料庫。</block>
-  <block id="b187bbdd6d92681752ab0c888ceb0a61" category="paragraph">您可以恢復資料庫以確保您的資料受到保護。</block>
   <block id="82d24ac31bb8fa36d0295a6dd13d463f" category="list-text">選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*恢復*。</block>
   <block id="c409a3e47d938438e42a5584a8b20068" category="inline-link-macro">恢復工作負載</block>
   <block id="07810c2ff996b9e258f73ec1e93a4b1d" category="paragraph">有關恢復工作負載的信息，請參閱<block ref="62e2cc937cfdf889c63d65a36a05b5ee" category="inline-link-macro-rx"></block>。</block>
-  <block id="c4c777723be13a16e4277a51201e6ecb" category="paragraph">現在您可以備份您的 Microsoft SQL Server 執行個體和資料庫，以確保您的資料受到立即保護。</block>
   <block id="4853389deec9b1ee2dd392ded61fb375" category="list-text">選擇“*實例*”或“*資料庫*”選項卡。</block>
   <block id="70c2224d92fad32ea2b3d68fcf62837b" category="list-text">選擇實例或資料庫。</block>
   <block id="92750a33eae9652caec1f377ec685432" category="summary">NetApp Backup and Recovery讓您能夠取消保護並刪除 Kubernetes 應用程式及相關資源。</block>
@@ -2035,57 +1953,7 @@
   <block id="8d7c9cf5b15032c441cad2d538d90368" category="floating-title">目的地設定</block>
   <block id="5d49eb458c546b4f70a99f4b37bbcc20" category="list-text">選擇恢復到預設儲存類別或其他儲存類別。</block>
   <block id="12c3c958b266fff57134abb1c9649419" category="list-text">或者，如果您選擇還原到不同的儲存類，請選擇一個目標儲存類別來符合每個來源儲存類別。</block>
-  <block id="c98c13337e16cd6efd0d5944bba7c3be" category="summary">一些進階設定可能有助於維護您的備份和復原環境。您可以設定進階設定來管理庫存、刪除備份、取消註冊資源、刪除關係、取消保護資源以停止服務費用、設定SnapMirror關係的最大傳輸速率、將快照副本匯出到物件儲存、啟用自動年度快照刪除、啟用維護模式以及更新應用程式外掛程式。</block>
-  <block id="1c6e423758be4522af8a4ae1bd57fb34" category="doc">在NetApp Backup and Recovery中配置進階設置</block>
-  <block id="946c74987ea2269a9a551cbe4de44e2f" category="paragraph">透過以下方式配置NetApp Backup and Recovery進階設定：</block>
-  <block id="011dec5a8cc48afc8bfa80cee0dd51e1" category="list-text">刪除備份。</block>
-  <block id="e16b902664d5194fba70107badab4b6a" category="list-text">取消註冊備份、資料庫、執行個體或應用程式主機。</block>
-  <block id="3bbc7e972edbb415f436e17cfa09274d" category="list-text">刪除關係。</block>
-  <block id="e2762a2a6b01e6f5ecd6f8dabbfb1368" category="list-text">取消保護資料庫、執行個體、應用程式主機和工作環境以停止服務費用。</block>
-  <block id="e01742f78fa3bad95b0ffb927d4ade8c" category="list-text">設定SnapMirror關係的最大傳輸速率 - 管理頻寬使用情況，確保SnapMirror操作不會幹擾其他網路活動。</block>
-  <block id="8b68f29913b7946a655a98fc6c889f29" category="list-text">將快照副本匯出到物件存儲，透過將較舊的快照副本移至基線備份副本來初始化雲端中的備份。</block>
-  <block id="d00306e6e5f6d669b666d187666b788d" category="list-text">啟用每年自動刪除快照</block>
-  <block id="29017ddd9543eb6b187e2e0a4e5921b8" category="list-text">啟用維護模式以便可以執行更新或維護任務。</block>
-  <block id="c58981a8a32e0da03fa6bb3d88bcef9e" category="list-text">更新應用程式插件。</block>
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">刪除備份</block>
-  <block id="11ac5246ea2c022c3f3e08c88f8be2bc" category="paragraph">您可以刪除備份以釋放儲存空間。</block>
-  <block id="4caadfec63c4a5cbe7e277db8d1cff78" category="list-text">在NetApp Backup and Recovery控制台中，選擇**設定**。</block>
-  <block id="aae8df17daa044a782a65bb684b17b07" category="list-text">選擇**進階設定**。</block>
-  <block id="8625f3bf33d0348ec8f4dff9c148f010" category="list-text">選擇**刪除備份**。</block>
-  <block id="a75c11de79cc7b12e80226090420f931" category="list-text">選擇要刪除的備份。</block>
-  <block id="2d477c9520cd76fd7b39824f522a4a9b" category="list-text">選擇**刪除**。</block>
-  <block id="74560c75d11dce967672a4e64ee1e3b2" category="section-title">取消註冊備份、資料庫、執行個體或應用程式主機</block>
-  <block id="c322d264d22c4c47cf2ac2ef806600d5" category="paragraph">您可以取消註冊備份、資料庫、執行個體或應用程式主機以將其從清單中刪除。</block>
-  <block id="53d5af7a2b23c32522c93a5e9c777e97" category="list-text">選擇**取消註冊資源**。</block>
-  <block id="09326b4db8bff875fca1fc019cf83152" category="list-text">選擇要取消註冊的資源。</block>
-  <block id="13784541a62e6b7bdcca03e20e2d24e8" category="list-text">選擇**取消註冊**。</block>
-  <block id="76db6b34fbbc30a6bf267e7b8d4ded4b" category="section-title">刪除關係</block>
-  <block id="6b1ca0187b7fe0abb4eb95fd6ce69348" category="paragraph">您可以刪除關係以將其從庫存中移除。</block>
-  <block id="c1360173aa2941b676e600081daa83c9" category="list-text">選擇**刪除關係**。</block>
-  <block id="92c1e517f955375faa0e268ac915fe6e" category="list-text">選擇要刪除的關係。</block>
-  <block id="4ef084902b39835e060b2d5747116032" category="section-title">取消保護資料庫、執行個體、應用程式主機和工作環境</block>
-  <block id="5eb831fbdb294cde62b58477e8025e7d" category="paragraph">您可以取消保護資料庫、執行個體、應用程式主機和工作環境以停止服務費用。</block>
-  <block id="7058a088374284c19a1f358fd4b24ce9" category="list-text">選擇**取消保護資源**。</block>
-  <block id="d2cd1ec3c52b3b1ac52c70ed417ef977" category="section-title">設定SnapMirror關係的最大傳輸速率</block>
-  <block id="de47087073d3ce8e2e300fe90521bce1" category="paragraph">您可以設定SnapMirror關係的最大傳輸速率來管理頻寬使用情況，確保SnapMirror操作不會幹擾其他網路活動。</block>
-  <block id="97fe6bbc33e021205247d9cd99718d84" category="list-text">選擇**設定SnapMirror關係的最大傳輸速率**。</block>
-  <block id="ff886c4b184552729432d62553752850" category="list-text">輸入最大傳輸速率。</block>
-  <block id="8d5311b8775f8a9ea8945d76095bb698" category="list-text">選擇**儲存**。</block>
-  <block id="60e684bbdb7a3e8fb3115e2669ccad43" category="section-title">將快照副本匯出到物件存儲</block>
-  <block id="89b4add7207919cbfa8db8badd3d971c" category="paragraph">您可以將快照副本匯出到物件存儲，透過將較舊的快照副本移至基線備份副本來初始化雲端中的備份。</block>
-  <block id="30c2e2e5b22111e9a2f0fd85e6d82616" category="list-text">選擇**將快照副本匯出到物件儲存**。</block>
-  <block id="8e065ae33fdeff3a430cee55db450db1" category="list-text">選擇要匯出的快照副本。</block>
-  <block id="800b2085aca80e243196645dffb68cd6" category="list-text">選擇**匯出**。</block>
-  <block id="929797f8900f34a99ff1c07de112051c" category="paragraph">您可以啟用自動年度快照刪除功能來刪除一年前的快照。</block>
-  <block id="5ef2209c7310b14517f8cb719cb85709" category="list-text">選擇**啟用自動年度快照刪除**。</block>
-  <block id="426dbde8a434cb02e7baac0b033389e7" category="list-text">選擇**啟用**。</block>
-  <block id="fa9cad4db511fd46f4fab74e820f5223" category="section-title">啟用維護模式</block>
-  <block id="73c993bacad7f819ba819e84757e2c8e" category="paragraph">您可以啟用維護模式，以便執行更新或維護任務。</block>
-  <block id="d50b3f2cc592f79b32ddb493bf0397ee" category="list-text">選擇**啟用維護模式**。</block>
-  <block id="c7af503bd5b02463ac452f20128c18f4" category="section-title">更新應用程式插件</block>
-  <block id="f6681b1089814725e0fc9d704fa17ae8" category="paragraph">您可以更新應用程式外掛程式以確保最新功能可用。</block>
-  <block id="099a1bae3e76960bd80f39b4fdd3f780" category="list-text">選擇**更新應用程式插件**。</block>
-  <block id="b7b284ffcc14ef04cba0609819bc5974" category="list-text">選擇**更新**。</block>
   <block id="f34f3b4d83a98c1f03d57b6ce4176300" category="summary">使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。</block>
   <block id="d1980609675dd3ea40abaebd4a0989d8" category="doc">使用NetApp Backup and RecoveryVMware 工作負載</block>
   <block id="30a409f022898dd26f006e04486b81e0" category="paragraph">將 VMware VM 和資料儲存區從本機ONTAP系統備份到 Amazon Web Services、 Azure NetApp Files或StorageGRID，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。</block>
@@ -2178,7 +2046,6 @@
   <block id="ae6771902a8163ff6ab3c15cf2e407b0" category="doc">使用NetApp Backup and RecoveryVMware 工作負載</block>
   <block id="4a3d619c8f5571cf4de02c83e47aed31" category="paragraph">使用NetApp Backup and Recovery and Recovery從快照副本、複製到二級儲存的工作負載備份或儲存在物件儲存中的備份還原 VMware 工作負載。</block>
   <block id="ba48c3305320f5df1a8db5cbd6fed75a" category="paragraph">您可以將資料還原到以下點：</block>
-  <block id="7979de06740fd39ab039421367c0315f" category="paragraph">從「恢復」頁面（也稱為「搜尋和恢復」），您可以恢復資源，即使您不記得確切的名稱、它所在的位置或它最後處於良好狀態的日期。您可以使用過濾器搜尋快照。</block>
   <block id="600582313b42616fbf96d317e8033ef9" category="paragraph">使用復原選項還原 VMware 工作負載。您可以按名稱或使用篩選器來搜尋快照。</block>
   <block id="1ca9578c25474d5cfeaa6c44bdbaa9b2" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="71032b474c00a68ab57e3f805cdf5d61" category="list-text">從名稱搜尋欄位右側的下拉清單中，選擇「*虛擬機器*」。</block>
@@ -2187,7 +2054,6 @@
   <block id="eb58d19c210547f2e0cbe6a7689d6a12" category="list-text">選擇要還原快照的還原位置：</block>
   <block id="c318ddc11c1d9b56e2cfda2af9351a42" category="list-text">本機：將快照還原到原始位置。</block>
   <block id="e4e4935a5dbb6b2200b975d599e683e4" category="list-text">二級儲存：將快照還原到二級儲存位置。</block>
-  <block id="dde4605b1517896bb91ab0500e44ec76" category="paragraph">如果選擇二級存儲，請輸入來源和目標位置資訊以及日誌的來源和二級位置。</block>
   <block id="33a039fcca21669940ad7ee10455c43d" category="list-text">物件儲存：將快照還原到物件儲存位置。</block>
   <block id="6fa9a019160376f2b85947c9116180fb" category="paragraph">如果選擇物件存儲，請在恢復之前檢查是否要再次掃描快照。</block>
   <block id="0bff45ae654663c7b091c0f6dd70d653" category="paragraph">在「還原目標詳細資料」頁面中，輸入以下資訊：</block>
@@ -2479,7 +2345,6 @@
   <block id="362363dccd2cc68b02c87c4b9e577f91" category="list-text">確保 Kubernetes 叢集、 Trident保護連接器和Trident保護代理程式之間的出站方向的 TCP 連接埠 443 未經過濾。</block>
   <block id="e33a9836e18ab4c7f01ac49f666c4e33" category="section-title">保護 Hyper-V 工作負載的要求</block>
   <block id="7e75f7658d8e69b52e07a066a4510af5" category="paragraph">確保您的 Hyper-V 執行個體符合發現和保護虛擬機器的特定要求。</block>
-  <block id="a7c47f6d32d474ae9cfa5f31f5a78398" category="list-text">Hyper-V 主機的軟體需求：</block>
   <block id="99fcf7547e608c33c370f1d5fe54e0a9" category="list-text">Microsoft Hyper-V 2019、2022 及 2025 年版本</block>
   <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2 或更高版本</block>
   <block id="4c0e33820cc2625f20df7d75a7db2a90" category="list-text">確保 Windows 防火牆設定中允許下列連接埠進行雙向 HTTPS 通訊：</block>
@@ -4091,7 +3956,6 @@
   <block id="880c04d29288ca6dbdf8598c75af755f" category="list-text">備份檔案 -&gt; 還原卷</block>
   <block id="385ec83416d2acacbf83c42099e5828e" category="list-text">複製卷 -&gt; 恢復卷</block>
   <block id="294431832876ce9e39076e7ab6f99361" category="list-text">快照副本 -&gt; 復原卷</block>
-  <block id="569af965dbd3ebb866de69518b576d23" category="admonition">如果還原操作未完成，請不要再次嘗試還原過程，直到作業監視器顯示還原操作失敗。如果在作業監視器顯示還原操作失敗之前再次嘗試還原過程，則還原操作將再次失敗。當您看到作業監視器狀態為「失敗」時，您可以再次嘗試復原程序。</block>
   <block id="0039af36cdd68741c89e8c730e7b7442" category="admonition">有關還原ONTAP資料的限制，請參閱<block ref="c27bda4e85978f510ddf0a64d91a61ea" category="inline-link-macro-rx"></block>。</block>
   <block id="65fba989fe7e3d4f06e7b1a4c8b66ff0" category="section-title">恢復儀表板</block>
   <block id="024205acf9405311336c02bbd2193b70" category="inline-image-macro">更多按鈕</block>
@@ -4569,14 +4433,11 @@
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*完成後*</block>
   <block id="b6ee3dd78c315fa7dfd1bfa66181a1c2" category="paragraph">選擇「*備份和復原*」&gt;「*虛擬機器*」以查看使用已註冊的SnapCenter Plug-in for VMware vSphere保護的所有資料儲存和虛擬機器。</block>
   <block id="4f42130e8cfb9f713223107cb029a735" category="doc">使用NetApp Backup and Recovery恢復虛擬機器數據</block>
-  <block id="64a4a5e15139f5ee47eb4c463e9d3bbe" category="paragraph">您可以使用NetApp Backup and Recovery將虛擬機器資料從雲端還原到本機 vCenter。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。如果虛擬機器是使用存檔原則備份的，那麼您可以設定存檔還原優先權。</block>
   <block id="b9f7c26581cad3cbd789c6d293692814" category="admonition">您無法還原跨資料儲存的虛擬機器。</block>
   <block id="1c79f8653ccf267be1bce47f8ccf3d2f" category="list-text">如果您要恢復到備用位置：</block>
   <block id="0bd63162a36deb15bb735dfc68ec0b84" category="list-text">確保來源 vCenter 和目標 vCenter 處於連結模式。</block>
   <block id="ccea797bbf5eba8cc950fa05c806cd76" category="list-text">確保在NetApp Console*系統* 頁面和SnapCenter Plug-in for VMware vSphere中的連結模式 vCenter 中新增了來源和目標叢集詳細資訊。</block>
-  <block id="3135a48aa8b3c658362638fd866a5886" category="list-text">確保已將系統新增至控制台*系統*頁面中與備用位置相對應的位置。</block>
   <block id="52bda1d8d40e82cef23f0197a5e0c990" category="list-text">在控制台 UI 中，選擇 *保護* &gt; *備份和還原* &gt; *虛擬機器* &gt; *SnapCenter Plug-in for VMware vSphere*，然後選擇SnapCenter Plug-in for VMware vSphere。</block>
-  <block id="803db951c139f08627d63e2f8c8e5cf0" category="admonition">如果來源虛擬機器被移動到另一個位置（vMotion），並且如果使用者從控制台觸發該虛擬機器的還原，則虛擬機器將還原到進行備份的來源位置。</block>
   <block id="d180a4da8965c4cd5488cd05903774f0" category="list-text">您可以將虛擬機器從資料儲存或虛擬機器還原到原始位置或備用位置：</block>
   <block id="db5366d69994d30376d1a970dcebb9ce" category="cell">如果您想恢復虛擬機器...</block>
   <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">這樣做...</block>
@@ -4586,7 +4447,6 @@
   <block id="ce924f0dcf910e34ec23b7b7ca88af8d" category="list-text">選擇要從備份中還原的虛擬機，然後選擇「下一步」。</block>
   <block id="8cc375f4ce3601a663a600c7d8e620e5" category="list-text">確保選擇了*Original*並選擇*Continue*。</block>
   <block id="793f88b02160a70ac96d346b799dd570" category="list-text">如果使用設定了存檔設定的政策來保護虛擬機，請選擇*存檔還原優先權*並選擇*下一步*。</block>
-  <block id="4064eae8789a1dea97cfc09ac17d017a" category="paragraph">Amazon Web Services 支援的檔案還原優先權為高、標準和低，Microsoft Azure 支援的檔案還原優先權為高和標準。</block>
   <block id="5f6a823289f7bbe90f46815d77f2f0f9" category="list-text">查看詳細資訊並選擇*恢復*。</block>
   <block id="c0df5d97adcf3825af806d990e658e67" category="paragraph">從資料儲存區到備用位置</block>
   <block id="1be093b2878514e1a668a6557e0fa48f" category="list-text">選擇“操作”圖標<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>對應您要復原的資料儲存並選擇*查看詳細資料*。</block>
@@ -4601,20 +4461,16 @@
   <block id="a215e32a572a4f73138eb57df3fb494d" category="doc">在暗站中恢復NetApp Backup and Recovery配置數據</block>
   <block id="e49ea1690cc473e646cdffd861381cbc" category="paragraph">在沒有網際網路存取的網站（稱為_私有模式_）中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID或ONTAP S3 儲存桶中。如果控制台代理主機系統出現問題，您可以部署新的控制台代理並還原關鍵的NetApp Backup and Recovery資料。</block>
   <block id="701ba6e125e8ce791098165f107eb472" category="admonition">此過程僅適用於ONTAP磁碟區資料。</block>
-  <block id="ed99d5c971ad6ede0ad54ed27d7e4cca" category="paragraph">當您在 SaaS 環境中使用NetApp Backup and Recovery時，其中控制台代理部署在雲端供應商處，或在您自己的具有網際網路存取權限的主機系統上，所有重要的NetApp Backup and Recovery設定資料都會在雲端中備份和保護。如果您遇到控制台代理問題，只需建立新的控制台代理並新增您的系統，備份詳細資訊就會自動還原。</block>
   <block id="28f81c5bbd7730901f36546c0e51e06f" category="paragraph">備份的資料有兩種類型：</block>
   <block id="8ad7c680cb0d9e95e7294cf3e192be1f" category="list-text">NetApp Backup and Recovery資料庫 - 包含所有磁碟區、備份檔案、備份策略和設定資訊的清單。</block>
   <block id="ae429398e7a8cba2d2c57d308c8ed88a" category="list-text">索引目錄檔案 - 包含用於搜尋和復原功能的詳細索引，可讓您在尋找要復原的磁碟區資料時搜尋非常快速且有效。</block>
-  <block id="4d5c5b1c54bcfa96a32863a0f2b08637" category="paragraph">這些資料每天午夜備份一次，每個檔案最多保留 7 份副本。如果控制台代理程式正在管理多個本機ONTAP系統，則NetApp Backup and Recovery檔案將位於首先啟動的系統的儲存桶中。</block>
   <block id="8b5b24743ff6eed2a5b1b5e999a4084e" category="admonition">NetApp Backup and Recovery資料庫或索引目錄檔案中從未包含任何磁碟區資料。</block>
   <block id="53722b1764c96b40868db34aca9fb672" category="section-title">將NetApp Backup and Recovery資料還原到新的控制台代理</block>
-  <block id="7838c7159abe94eca22c3339678480bf" category="paragraph">如果您的內部控制台代理發生災難性故障，您將需要安裝新的控制台代理，然後將NetApp Backup and Recovery資料還原到新的控制台代理。</block>
   <block id="b6df6aa40ab9d5addc390fa2ef8f7541" category="paragraph">您需要執行下列任務才能讓NetApp Backup and Recovery系統還原工作狀態：</block>
   <block id="667b30dbcfd5254c4d408afb34f0c0ea" category="list-text">安裝新的控制台代理</block>
   <block id="fda70bacadbe6c38a59ecf221015132d" category="list-text">還原NetApp Backup and Recovery資料庫</block>
   <block id="bac8f03e2f29846dbab5b2b784213272" category="list-text">恢復索引目錄文件</block>
   <block id="ba480a5b3ea4b399c6bb7a5179682ccd" category="list-text">將所有本機ONTAP系統和StorageGRID系統重新發現到NetApp ConsoleUI</block>
-  <block id="f19661624edbf73361ae75955e672733" category="paragraph">一旦您確認系統恢復正常運作，我們建議您建立新的備份檔案。</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">你需要什麼</block>
   <block id="e4cf85fe9c170bcb24ec06be023db892" category="paragraph">您需要從儲存備份檔案的StorageGRID或ONTAP S3 儲存桶存取最新的資料庫和索引備份：</block>
   <block id="27a3ea4dafb6c439053c78d40cdba58d" category="list-text">NetApp Backup and RecoveryMySQL 資料庫文件</block>
@@ -4623,7 +4479,6 @@
   <block id="a4981f0083fe431764b930206324bfe8" category="paragraph">該檔案位於儲存桶中的以下位置<block ref="9abc3fd112ebf9d8d228e5c5b3b930a4" prefix=" " category="inline-code"></block>，它被命名為<block ref="5f3198716099b7e0c9df490b9dd7b132" prefix=" " category="inline-code"></block>。</block>
   <block id="d52a11dd89b88bb6c8ef2d496aaad340" category="section-title">在新的本機 Linux 主機上安裝新的控制台代理</block>
   <block id="48726a93e8d2335c78eb17aef16db85c" category="inline-link">恢復備份資料庫後，將控制台代理軟體升級至最新版本</block>
-  <block id="95cbdf41b4c33eaa7c3ff2baf533c3d3" category="paragraph">安裝新的控制台代理程式時，請確保下載與原始控制台代理程式上安裝的相同版本的軟體。 NetApp Backup and Recovery資料庫結構的定期變更可能會導致較新的軟體版本與原始資料庫備份不相容。你可以<block ref="cf9f37e0e8c15b290b50a2dd76357649" category="inline-link-rx"></block>。</block>
   <block id="ae2cecab86d7e6c1dfcbc5178afc5703" category="inline-link">在新的本機 Linux 主機上安裝控制台代理</block>
   <block id="0d35665d937ab3bef3f225a1630c6d81" category="list-text"><block ref="0d35665d937ab3bef3f225a1630c6d81" category="inline-link-rx"></block></block>
   <block id="5ab06edf86f1226766491752e7e1ba31" category="list-text">使用您剛剛建立的管理員使用者憑證登入控制台。</block>
@@ -4658,7 +4513,6 @@
   <block id="a4ddbfbfc264442f0caa0e287fd13674" category="list-text">使用與系統關聯的StorageGRID系統的詳細資訊更新NetApp Backup and Recovery資料庫。確保輸入StorageGRID的完全限定網域名稱以及存取金鑰和儲存金鑰，如下所示：</block>
   <block id="6268365698d37d49ef06a2ddcd6e5c63" category="section-title">驗證NetApp Backup and Recovery設置</block>
   <block id="b28018924587e2db04c50adc8a77a736" category="list-text">選擇每個ONTAP系統，然後點擊右側面板中備份和還原服務旁邊的「檢視備份」。</block>
-  <block id="36c688567530141607520ff8f371abad" category="paragraph">您應該能夠看到為您的捲創建的所有備份。</block>
   <block id="ca58572920332b0113296b57e60a56de" category="list-text">在「恢復儀表板」的「搜尋與復原」部分下，按一下「*索引設定*」。</block>
   <block id="0af45eefd2b61e8f05a526f4cacf0adf" category="paragraph">確保先前啟用了索引編目的系統仍然保持啟用狀態。</block>
   <block id="080b8dd3f3323a86a22c3af13ee1c495" category="list-text">在「搜尋和復原」頁面中，執行一些目錄搜尋以確認索引目錄復原已成功完成。</block>
@@ -4667,9 +4521,7 @@
   <block id="aa029ba3399a1aa8daaa58567b0e0a96" category="section-title">計劃層級</block>
   <block id="23f9c52e4c2d311c3072f509e50b4d03" category="paragraph">SnapCenter使用以下計劃層：</block>
   <block id="b8d71d1c739c4b9834c70d9c7beec28e" category="list-text">*每小時*：多小時和分鐘，任意小時（0-23）和任意分鐘（0-60）。</block>
-  <block id="88695f8ce2149aa505995ad3f760a282" category="list-text">*每日*：包括每隔幾天重複一次的選項，例如每 3 天。</block>
   <block id="e60510d6c402846a7217a2dc3a448975" category="list-text">*每週*：週日至週一，可選擇在一周的第一天或一周中的多天執行快照。</block>
-  <block id="4a2d0b40173a2ecaa2f250efdd92bb46" category="list-text">*每月*：一月至十二月，可選擇在每月的特定日期執行，例如每月 7 號，甚至每月的多天。</block>
   <block id="72b4e4a7ac7b3bcf3997bdeb09565fc0" category="paragraph">NetApp Backup and Recovery使用以下計劃層，它們略有不同：</block>
   <block id="a14d5db59dc4eea718fee72e71b308c1" category="list-text">*每小時*：僅以 15 分鐘為間隔執行快照，例如 1 小時或 15 分鐘間隔小於 60。</block>
   <block id="f213928c21d8b99681a1612afd9f9684" category="list-text">*每日*：一天中的小時數（0-23），開始時間例如為上午 10:00，並可選擇每隔幾小時執行一次。</block>
@@ -4681,10 +4533,8 @@
   <block id="cb5cede372013a460e250e3523d4d64e" category="paragraph">*範例*：如果您在SnapCenter中使用三個政策（用於資料、日誌和快照日誌），則從SnapCenter遷移後， NetApp Backup and Recovery將使用單一原則而不是全部三個政策。</block>
   <block id="ff6cbd3287f545a89d1e5e58f0d17bd4" category="section-title">導入的SnapCenter每日計劃</block>
   <block id="61ed4c8e3ffbc53bcf1724532421e782" category="paragraph">NetApp Backup and Recovery如下調整SnapCenter方案：</block>
-  <block id="933eecf21b204f4600dbc4c8cb00faa4" category="list-text">如果SnapCenter計劃設定為小於或等於 7 天，NetApp Backup and Recovery會將計畫設定為每週。本週內將會跳過一些快照。</block>
   <block id="c08c2154284f4af8503c116de1e73d16" category="paragraph">*範例*：如果您有一個SnapCenter每日策略，從星期一開始每 3 天重複一次，NetApp Backup and Recovery會將計劃設定為每週一、週四和週日。由於並非每 3 天一次，因此有些日子會被跳過。</block>
   <block id="9f6a1fee7b57b18f64bf8bca4ad36e30" category="list-text">如果SnapCenter計劃設定為超過 7 天， NetApp Backup and Recovery會將方案設定為每月。該月將跳過一些快照。</block>
-  <block id="f1d919676b3d4e95ec582e14f78206a5" category="paragraph">*範例*：如果您有一個SnapCenter每日策略，從每月 2 號開始每 10 天重複一次，則NetApp Backup and Recovery （遷移後）會將計畫設定為每月 2 日、12 日和 22 日。下個月有些日子將會被跳過。</block>
   <block id="9430705db67f982f601f840df3cc16d6" category="section-title">導入的SnapCenter每小時計劃</block>
   <block id="3002d82ef196f81026a4e21905803959" category="paragraph">重複間隔大於一小時的SnapCenter每小時策略將轉換為NetApp Backup and Recovery中的每日策略。</block>
   <block id="a3e76bcb5e859bfa4430da805976f2bd" category="paragraph">任何重複間隔不是 24 倍（例如 5、7 等）的每小時策略都會跳過一天中的某些快照。</block>
@@ -4696,16 +4546,13 @@
   <block id="4a34495d73cf6e0ef7422e89ecd18fc2" category="list-text">對於SnapCenter中的“完整備份和日誌”加上“完整備份”， NetApp Backup and Recovery使用“完整備份和日誌”保留值。</block>
   <block id="d3bffe5c53144301e84c431c8850f79b" category="list-text">如果您在SnapCenter中只有完整備份，NetApp Backup and Recovery不會啟用日誌備份。</block>
   <block id="572e4e930a93aaf8ecb497410b31bcae" category="section-title">日誌備份保留</block>
-  <block id="87fe501cd83921365f57302b81f17998" category="paragraph">使用SnapCenter，您可以在附加到資源的多個政策中設定多個保留值。但是， NetApp Backup and Recovery僅支援與資源相關的所有策略使用單一保留值。</block>
   <block id="0ed617a2b12fab18c454c76ed40f5974" category="section-title">SnapCenter策略的保留計數</block>
   <block id="e8b9d2fbb967bbf13e9d28b16907da1b" category="paragraph">如果您在SnapCenter中啟用了二級保護的資源具有多個來源磁碟區、多個目標磁碟區和多個SnapMirror關係，NetApp Backup and Recovery僅使用第一個原則的保留計數。</block>
   <block id="8b8ac1e2cabdbaad24e0631f1c8acd68" category="paragraph">*範例*：如果您有一個保留計數為 5 的SnapCenter政策和另一個保留計數為 10 的政策，NetApp Backup and Recovery將使用保留計數 5。</block>
   <block id="de58b25fd8c93ec9c4c26f42b69938b1" category="section-title">SnapCenter策略中的SnapMirror標籤</block>
-  <block id="7ae9d255342ff5c9bd5ce17d65056f80" category="paragraph">即使層級發生變化， SnapCenter中每個策略的SnapMirror標籤在遷移後仍保持不變。</block>
   <block id="19120a69a66ec3fe2d0636d3e558cdb2" category="paragraph">*範例*： SnapCenter的每小時策略可能會在NetApp Backup and Recovery中變更為每日。但是，遷移後SnapMirror標籤保持不變。</block>
   <block id="6ec37458ffc22db1fefc5c00538aff17" category="summary">在某些情況下，您可能需要重新啟動NetApp Backup and Recovery。</block>
   <block id="bda42789779ecfa8fe482a5fcf7defb7" category="doc">重新啟動NetApp Backup and Recovery</block>
-  <block id="2e0d49ad4ffce66e75b5ec96f653f135" category="paragraph">NetApp Backup and Recovery功能內建於控制台代理程式中。</block>
   <block id="838f3f7ce97a00d0af23653815ea8b20" category="list-text">連接到控制台代理正在運行的 Linux 系統。</block>
   <block id="c0633ad6dd2e88e85a85812ff38cf3e0" category="cell">控制台代理位置</block>
   <block id="8c4271e6faf2cea4cfc8e5b7108d8ee9" category="cell">程式</block>
@@ -4728,107 +4575,6 @@
   <block id="628ffac7ede42e0edae88edd9f769e8b" category="paragraph">NetApp Backup and Recovery and Recovery採用身分識別和存取管理 (IAM) 來管理每個使用者對特定功能和操作的存取權限。</block>
   <block id="d8242f460ba07545cc4fc280abc24dfd" category="inline-link">NetApp Console中的NetApp Backup and Recovery角色</block>
   <block id="b7ce2fa7e7dfbfcf006c177bd9507fe6" category="paragraph">若要了解位於NetApp Backup and Recovery特定的IAM 角色，請參閱<block ref="00765778411880d6fabcf7f493ef0db6" category="inline-link-rx"></block>。</block>
-  <block id="a99fab69b8aa9775fe1767ce605ae8bd" category="summary">NetApp以多種方式為NetApp Console提供支援。全天候提供廣泛的免費自助支援選項，例如知識庫 (KB) 文章和社群論壇。您的支援註冊包含透過網路工單取得的遠端技術支援。</block>
-  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">獲取協助</block>
-  <block id="2feeca48692986e9cc471ec61f847fca" category="paragraph">NetApp以多種方式為NetApp Console及其雲端服務提供支援。全天候提供廣泛的免費自助支援選項，例如知識庫 (KB) 文章和社群論壇。您的支援註冊包含透過網路工單取得的遠端技術支援。</block>
-  <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">獲取雲端提供者文件服務的支持</block>
-  <block id="317cbd2c4fdbfd06a6c66bcd3f57d7ad" category="paragraph">有關雲端提供者文件服務、其基礎設施或使用該服務的任何解決方案的技術支持，請參閱該產品的文檔。</block>
-  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">適用於ONTAP 的Amazon FSx</block>
-  <block id="359d8b16e442ffaa72e03c95fcd60448" category="list-text"><block ref="359d8b16e442ffaa72e03c95fcd60448" category="inline-link-macro-rx"></block></block>
-  <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
-  <block id="153836c062a78213f2aa165322254aa4" category="list-text"><block ref="153836c062a78213f2aa165322254aa4" category="inline-link-macro-rx"></block></block>
-  <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
-  <block id="0d592360c983f234b130127efee38805" category="list-text"><block ref="0d592360c983f234b130127efee38805" category="inline-link-macro-rx"></block></block>
-  <block id="68e6fe8cde496154d24fd032b4262070" category="paragraph">要獲得特定於NetApp及其儲存解決方案和資料服務的技術支持，請使用下面所述的支援選項。</block>
-  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">使用自助選項</block>
-  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">這些選項每週 7 天、每天 24 小時免費提供：</block>
-  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
-  <block id="5bb94d173380c00577f5e04b6f26bb94" category="paragraph">您目前正在檢視的NetApp Console文件。</block>
-  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
-  <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
-  <block id="0e20091afcea2d83d0033a933ba85092" category="paragraph">搜尋NetApp知識庫以尋找有助於解決問題的文章。</block>
-  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社群</block>
-  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="777d75a90b107e4f18469f82c4f81fe2" category="paragraph">加入NetApp Console社區，關注正在進行的討論或創建新的討論。</block>
-  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">向NetApp支援建立案例</block>
-  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述自助支援選項之外，您還可以在啟動支援後與NetApp支援專家合作解決任何問題。</block>
-  <block id="8fece025a1a8fef7018449bf104a2527" category="list-title">開始之前</block>
-  <block id="c406bf0ac8ac87bc5bb7132a7351b2ae" category="inline-link">了解如何管理與控制台登入相關的憑證</block>
-  <block id="377118f28487e70bd456993144b72fc7" category="list-text">若要使用「建立案例」功能，您必須先將您的NetApp支援網站憑證與您的控制台登入關聯。<block ref="68c4321a756e3ffe955b62cff6fea46d" category="inline-link-rx"></block> 。</block>
-  <block id="e49aa971c20ec071f1b5bbc3c7266769" category="list-text">如果您要為具有序號的ONTAP系統開啟案例，那麼您的 NSS 帳戶必須與該系統的序號相關聯。</block>
-  <block id="0ab80a63088581d58dcf067051f4c894" category="list-text">在NetApp Console中，選擇「說明」&gt;「支援」。</block>
-  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">在「*資源*」頁面上，選擇「技術支援」下的可用選項之一：</block>
-  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">如果您想透過電話與某人交談，請選擇「致電我們」。您將被引導至 netapp.com 上的一個頁面，其中列出了您可以撥打的電話號碼。</block>
-  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">選擇「建立案例」向NetApp支援專家開立票據：</block>
-  <block id="a1123cd59d7bd876c080c33906ae65ce" category="list-text">*服務*：選擇與問題相關的服務。例如，* NetApp Console* 特定於控制台內的工作流程或功能的技術支援問題。</block>
-  <block id="987df7518e2afb50a860647c832afd13" category="list-text">*系統*：如果適用於存儲，請選擇* Cloud Volumes ONTAP* 或 *On-Prem*，然後選擇相關的工作環境。</block>
-  <block id="8f8e8a86e5f52b6186a37bdf266c4320" category="paragraph">系統清單位於控制台組織範圍內，並且您在頂部橫幅中選擇了控制台代理。</block>
-  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*個案優先級*：選擇個案的優先級，可以是低、中、高或嚴重。</block>
-  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">要了解有關這些優先事項的更多詳細信息，請將滑鼠懸停在欄位名稱旁邊的資訊圖示上。</block>
-  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*問題描述*：提供問題的詳細描述，包括任何適用的錯誤訊息或您執行的故障排除步驟。</block>
-  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*其他電子郵件地址*：如果您想讓其他人知道此問題，請輸入其他電子郵件地址。</block>
-  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*附件（選購）*：一次最多上傳五個附件。</block>
-  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">每個附件檔案大小限制為 25 MB。支援以下檔案副檔名：txt、log、pdf、jpg/jpeg、rtf、doc/docx、xls/xlsx 和 csv。</block>
-  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">建立案例表單的螢幕截圖，可讓您向NetApp支援建立案例。</block>
-  <block id="77c89527ec8a9f89b24c5579d19b3b4b" category="paragraph"><block ref="77c89527ec8a9f89b24c5579d19b3b4b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">完成後</block>
-  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">將會出現一個彈出窗口，其中顯示您的支援案例編號。NetApp支援專家將審查您的案例並儘快回覆您。</block>
-  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">若要查看支援案例的歷史記錄，您可以選擇*設定&gt;時間軸*並尋找名為「建立支援案例」的操作。最右邊的按鈕可讓您展開操作以查看詳細資訊。</block>
-  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">嘗試建立案例時，您可能會遇到以下錯誤訊息：</block>
-  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">“您無權針對所選服務建立案例”</block>
-  <block id="178fdaf97b1d1577437f11ee9d5e5229" category="paragraph">此錯誤可能表示 NSS 帳戶及其關聯的記錄公司與NetApp Console帳戶序號的記錄公司不同（即。960xxxx）或工作環境序號。您可以使用以下選項之一尋求協助：</block>
-  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">提交非技術案例<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
-  <block id="e1100b46295d42ed50ba7a4630710164" category="section-title">管理您的支援案例</block>
-  <block id="316508a3483178100806a9d44b49aba2" category="paragraph">您可以直接從控制台檢視和管理活動和已解決的支援案例。您可以管理與您的 NSS 帳戶和公司相關的案例。</block>
-  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">請注意以下事項：</block>
-  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">頁面頂部的案例管理儀表板提供兩種視圖：</block>
-  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">左側視圖顯示了您提供的使用者 NSS 帳戶在過去 3 個月內開啟的案件總數。</block>
-  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">右側的視圖根據您的使用者 NSS 帳戶顯示了過去 3 個月內貴公司層級開設的案件總數。</block>
-  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">表中的結果反映了與您選擇的視圖相關的案例。</block>
-  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">您可以新增或刪除感興趣的列，並且可以過濾優先順序和狀態等列的內容。其他欄位僅提供排序功能。</block>
-  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">請查看以下步驟以了解更多詳細資訊。</block>
-  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">在每個案件級別，我們提供更新案件記錄或關閉尚未關閉或待關閉狀態的案件的功能。</block>
-  <block id="9163e8bca6fd93c080d35ab49e3efdfa" category="list-text">在NetApp Console中，選擇「說明」&gt;「支援」。</block>
-  <block id="2019fd19051c3ef493dbbb9ca65bab87" category="list-text">選擇*案例管理*，如果出現提示，請將您的 NSS 帳戶新增至控制台。</block>
-  <block id="75e54e3a6fdbf43ed890669e079d7594" category="paragraph">*案例管理*頁面顯示與您的控制台使用者帳戶關聯的 NSS 帳戶相關的未結案例。這與出現在 *NSS 管理* 頁面頂部的 NSS 帳戶相同。</block>
-  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">（可選）修改表中顯示的資訊：</block>
-  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">在「組織的案例」下，選擇「查看」以查看與您的公司相關的所有案例。</block>
-  <block id="059e856250b59be3069246887b74a23c" category="list-text">透過選擇精確的日期範圍或選擇不同的時間範圍來修改日期範圍。</block>
-  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">過濾列的內容。</block>
-  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">表格中出現的加號圖標</block>
-  <block id="8ac6be88c1aa79062825a147fb263b0e" category="list-text">透過選擇<block ref="500a336e7ba1c54bcffba4e27bda4eb6" category="inline-image-macro-rx" type="image"></block>然後選擇您想要顯示的列。</block>
-  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">表格最後一列出現的帶有三個點的圖標</block>
-  <block id="049b7b9fab1242f5e715952973c9474d" category="list-text">透過選擇管理現有案例<block ref="7381d9baeaf62eb099ce84f1a21ed5ca" category="inline-image-macro-rx" type="image"></block>並選擇其中一個可用選項：</block>
-  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*查看案例*：查看有關特定案例的完整詳細資訊。</block>
-  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*更新案例說明*：提供有關您的問題的更多詳細信息，或選擇*上傳文件*以附加最多五個文件。</block>
-  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*結案*：提供有關結案原因的詳細信息，然後選擇*結案*。</block>
-  <block id="1ea06868db269f34b7f5ba14e699c11f" category="summary">完成幾個步驟即可開始將磁碟區資料從本機ONTAP系統備份到二級儲存系統和 Google Cloud Storage。</block>
-  <block id="0d66295f8d62d6f8ee303e26ae1451a8" category="doc">使用SnapMirror將磁碟區遷移到使用NetApp Backup and Recovery的Cloud Resync</block>
-  <block id="fac60f72c9d6f7e8667a6580772577de" category="section-title">NetApp Backup and RecoverySnapMirror到雲端重新同步的工作原理</block>
-  <block id="f97138a90cb6e21eabb198d42ed0387e" category="list-text">從選單中選擇*重新同步備份*。</block>
-  <block id="4801c867904fa8b9b667edbeec55d188" category="paragraph">NetApp Backup and Recovery驗證選擇重新同步的每個磁碟區是否至少有一個通用快照。這可確保磁碟區已準備好進行SnapMirror到 Cloud Resync 操作。</block>
-  <block id="125ba11f83659b86acb7de1fbe8050df" category="list-text">檢查容量是否合格。系統檢查磁碟區是否符合重新同步的條件。如果磁碟區不符合條件，則表示未找到通用快照。</block>
-  <block id="a76b942eff6c38201458980a134c56db" category="list-text">選擇*重新同步*以開始重新同步操作。系統使用普通快照只傳輸增量變化，保證備份的連續性。</block>
-  <block id="6271b2e5ee34db655c152c41d48231ca" category="list-text">在 Job Monitor 頁面中監控 resyn 進程。</block>
-  <block id="c65aae5e08770b7014a25eeed294c73a" category="summary">您可以監控您啟動或排程的本機快照、複製和備份到物件儲存作業的狀態，以及您啟動或排程的還原作業。您可以查看已完成、正在進行或失敗的作業，以便診斷和解決問題。使用通知中心，您可以啟用透過電子郵件發送通知，這樣即使您未登入系統也可以了解重要的系統活動。使用時間軸，您可以查看透過 UI 或 API 發起的所有操作的詳細資訊。</block>
-  <block id="7f53c2c0210bcf951b2011882c226242" category="doc">在NetApp Backup and Recovery中啟用預覽功能</block>
-  <block id="7ed566e59308a0e6a7d4d726800c1cc1" category="paragraph">NetApp Backup and Recovery提供預覽功能，讓您可以在新功能全面發布之前進行測試。這些功能旨在增強您的備份和復原體驗，但它們可能無法完全支援或不穩定。</block>
-  <block id="8d74125454a4a39b93746a76a1b5e057" category="admonition">這些功能處於預覽模式，不應在生產環境中使用。它們僅用於測試和反饋目的。</block>
-  <block id="5760817f42cfdcd9c310ec63890ecb27" category="section-title">啟用預覽功能</block>
-  <block id="69cc5a2398bfb8188c41d7d10de2bead" category="paragraph">若要啟用NetApp Backup and Recovery中的預覽功能，您需要在控制台代理程式上設定一個標誌。此標誌可讓您存取和測試服務中可用的預覽功能。</block>
-  <block id="979dd83da13c26493f17b45c593aed22" category="list-text">登入控制台代理。</block>
-  <block id="85769ba297548addfe4d17f9afba9cf8" category="list-text">切換到超級用戶。運行以下命令：</block>
-  <block id="e2f3c27d6024b2532f8b2a5d75141be2" category="paragraph"><block ref="e73620038e8b54deb176b2581c7558a7" prefix="" category="inline-code"></block></block>
-  <block id="1d75718e1e494b5b2501c494ae510c09" category="list-text">列出 Docker 磁碟區並識別 CBS 磁碟區。運行以下命令：</block>
-  <block id="d15e02bf0c54e008af2e8212aa7c7d4f" category="paragraph">預期輸出：</block>
-  <block id="c24450f0e1e6fcc2fa6e6c07c79dd3a8" category="list-text">檢查磁碟區以取得掛載點。運行以下命令：</block>
-  <block id="606ba6d5810c04f45a2192f720b50a14" category="list-text">運行以下命令：</block>
-  <block id="28ef99c245e63819b305d93c19d29f91" category="list-text">導航至 Docker Volumes 目錄。將目錄更改為上一步所獲得的掛載點：</block>
-  <block id="22cb8a711fd0104b48dede469158201f" category="list-text">找到並編輯<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>文件。</block>
-  <block id="01a012e7a0034b3146903c769f34f576" category="list-text">確保您位於正確的目錄和<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>文件存在。</block>
-  <block id="a8875bf0b902f4f3971e9caa99280a9f" category="list-text">打開<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>在您喜歡的文字編輯器中開啟檔案並新增以下 JSON 程式碼片段，確保正確維護 JSON 結構：</block>
-  <block id="5a0dfd405c0424a01f42cdb7e596d91c" category="list-text">儲存對文件的變更。</block>
-  <block id="4511f135f3de56841c11286adab39689" category="list-text">重新啟動NetApp Backup and Recovery Cloud Manager CBS 服務。運行以下命令：</block>
   <block id="cbeefab9985d18cf649d85c32d79d188" category="summary">建立安全性憑證以啟用NetApp Backup and Recovery與StorageGRID或ONTAP之間的通訊。</block>
   <block id="63b31af683f5a728cbf36267c289589f" category="doc">在NetApp Backup and Recovery中為StorageGRID和ONTAP設定安全性證書</block>
   <block id="67fc617cb862496da73f0d13f68e5e84" category="section-title">為StorageGRID建立安全性證書</block>
@@ -4900,77 +4646,6 @@
   <block id="d695edb19e936217c197c4df1f739de8" category="section-title">為ONTAP和StorageGRID建立證書</block>
   <block id="017050da36669c0fe1d6ef36a222f1fb" category="paragraph">如果您需要為ONTAP和StorageGRID啟用證書，則設定檔如下所示：</block>
   <block id="956f7db1760826e0d78fce0504e6bc36" category="paragraph">ONTAP和StorageGRID的設定檔</block>
-  <block id="df3d826b639dd614f0fae940d9ebee78" category="summary">在向NetApp技術支援提交支援案例之前，您需要將NetApp支援網站帳戶新增至NetApp Console，然後註冊以取得支援。</block>
-  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以獲得支持</block>
-  <block id="776abbf4d80cbef17bd3c86ff37b2257" category="paragraph">需要進行支援註冊才能獲得針對NetApp Console及其儲存解決方案和資料服務的技術支援。還需要支援註冊才能啟用Cloud Volumes ONTAP系統的關鍵工作流程。</block>
-  <block id="ba4e23e03f4354a0f1ef2781272c8477" category="paragraph">註冊支援並不能使NetApp獲得雲端提供者文件服務的支援。有關雲端提供者文件服務、其基礎設施或使用該服務的任何解決方案的技術支持，請參閱該產品文件中的「取得協助」。</block>
-  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支援註冊概述</block>
-  <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">啟動支持權利的註冊方式有兩種：</block>
-  <block id="869a868c87f6fb61410cfd773b4f1bab" category="list-text">註冊您的NetApp Console帳戶序號（您的 20 位元 960xxxxxxxxx 序號位於控制台中的「支援資源」頁面上）。</block>
-  <block id="be0b51de4268d87101344aa0368b4403" category="paragraph">這可作為控制台內任何服務的單一支援訂閱 ID。每個控制台帳戶都必須註冊。</block>
-  <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">在您的雲端供應商市場中註冊與訂閱相關的Cloud Volumes ONTAP序號（這些是 20 位元 909201xxxxxxxx 序號）。</block>
-  <block id="3cf9fb70d6921dd90583621f028a395f" category="paragraph">這些序號通常稱為_PAYGO 序號_，由NetApp Console在Cloud Volumes ONTAP部署時產生。</block>
-  <block id="bf516b6498e37e816d29ae43ae132f74" category="paragraph">註冊兩種類型的序號可以實現開立支援票和自動產生案例等功能。透過將NetApp支援網站 (NSS) 帳戶新增至控制台即可完成註冊，如下所述。</block>
-  <block id="ba5983207e417797fefd5b9374ab4a97" category="section-title">註冊NetApp Console以取得NetApp支持</block>
-  <block id="dcb7105ba6e3d9411b05e726848feb80" category="paragraph">要註冊支援並啟動支援權利，您的NetApp Console帳戶中的一名使用者必須將NetApp支援網站帳戶與其控制台登入名稱關聯。如何註冊NetApp支援取決於您是否已經擁有NetApp支援網站 (NSS) 帳號。</block>
-  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">擁有 NSS 帳戶的現有客戶</block>
-  <block id="ed5bddb699a442b85bc1bb8e1516fe57" category="paragraph">如果您是擁有 NSS 帳戶的NetApp客戶，只需透過控制台註冊即可獲得支援。</block>
-  <block id="76bc427c3d9c4b81dc353078b942f991" category="list-text">選擇“*管理*”&gt;“*憑證*”。</block>
-  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">選擇*使用者憑證*。</block>
-  <block id="e9451600769b4bf4b20ca941ba9e6d19" category="list-text">選擇*新增 NSS 憑證*並依照NetApp支援網站 (NSS) 驗證提示進行操作。</block>
-  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">若要確認註冊過程是否成功，請選擇「幫助」圖標，然後選擇「*支援*」。</block>
-  <block id="1d4ea9fd10f6cfcd6f6fe1f861d354a4" category="paragraph">*資源*頁面應顯示您的控制台帳戶已註冊以獲得支援。</block>
-  <block id="afe8240ca62f4b72006980ff64d371b8" category="paragraph">請注意，如果其他控制台使用者尚未將NetApp支援網站帳戶與其登入名稱關聯，他們將看不到相同的支援註冊狀態。但是，這並不意味著您的帳戶沒有註冊支援。只要組織中的一名使用者遵循了這些步驟，您的帳戶就已註冊。</block>
-  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">現有客戶但沒有 NSS 帳戶</block>
-  <block id="42eaca1e1c2d9e1f04e932eeaa6d129d" category="paragraph">如果您是現有的NetApp客戶，擁有現有授權和序號但沒有 NSS 帳戶，則需要建立 NSS 帳戶並將其與您的控制台登入關聯。</block>
-  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">NetApp支援網站使用者註冊表</block>
-  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">透過完成以下操作建立NetApp支援網站帳戶<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
-  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">請務必選擇適當的使用者級別，通常為* NetApp客戶/最終使用者*。</block>
-  <block id="bd33c4539c7d6985f6edafd4a4f2ba1d" category="list-text">請務必複製上面用於序號欄位的控制台帳戶序號（960xxxx）。這將加快帳戶處理速度。</block>
-  <block id="9b1f48f88cd439b7a50fe3e76eb8a853" category="list-text">完成以下步驟，將您的新 NSS 帳戶與您的控制台登入名稱關聯<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
-  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">NetApp全新產品</block>
-  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">如果您是NetApp新使用者且沒有 NSS 帳戶，請依照下列步驟操作。</block>
-  <block id="e7e9f49f4584c68b9d97c578e73b7583" category="list-text">在控制台的右上角，選擇「幫助」圖標，然後選擇「*支援*」。</block>
-  <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">從支援註冊頁面找到您的帳戶 ID 序號。</block>
-  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">幫助選單的螢幕截圖，其中支援是第一個選項</block>
-  <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">NetApp 的支援註冊網站</block>
-  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">導航至<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block>並選擇*我不是註冊的NetApp客戶*。</block>
-  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">填寫必填欄位（帶有紅色星號的欄位）。</block>
-  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">在*產品線*欄位中，選擇*雲端管理員*，然後選擇適用的計費提供者。</block>
-  <block id="50a1dc01b7312307c34a888071586955" category="list-text">從上面的步驟 2 複製您的帳戶序號，完成安全性檢查，然後確認您已閱讀 NetApp 的全球資料隱私政策。</block>
-  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">一封電子郵件會立即發送到提供的郵箱以完成此安全交易。如果幾分鐘內沒有收到驗證電子郵件，請務必檢查您的垃圾郵件資料夾。</block>
-  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">從電子郵件中確認操作。</block>
-  <block id="201080500e946070a2e4873042507c77" category="paragraph">確認向NetApp提交您的請求並建議您建立NetApp支援網站帳戶。</block>
-  <block id="a2454703f88e5bf5b433ae850a87151b" category="list-text">請務必複製上面用於序號欄位的帳戶序號（960xxxx）。這將加快處理速度。</block>
-  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp應該在過程中與您聯繫。這是針對新用戶的一次性入職培訓。</block>
-  <block id="629757336278be576456cf315303b178" category="paragraph">擁有NetApp支援網站帳號後，請依照下列步驟將該帳號與您的控制台登入關聯<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
-  <block id="3e616bae81890a6c8fae17c9b45af152" category="section-title">關聯 NSS 憑證以獲得Cloud Volumes ONTAP支持</block>
-  <block id="f22d1a855e255746a6b925a3b22f7838" category="paragraph">需要將NetApp支援網站憑證與您的控制台帳戶關聯，才能為Cloud Volumes ONTAP啟用以下關鍵工作流程：</block>
-  <block id="a0518a10626dc11fd00e2d20265ad240" category="list-text">註冊即用即付Cloud Volumes ONTAP系統以獲得支持</block>
-  <block id="321aadf78ef73521712291b7aba6411f" category="paragraph">需要提供您的 NSS 帳戶才能啟動對您的系統的支援並獲得NetApp技術支援資源的存取權限。</block>
-  <block id="d51b2b497db445a16b1c9583c1abbb59" category="list-text">自帶授權 (BYOL) 時部署Cloud Volumes ONTAP</block>
-  <block id="f3cd224f9506684fa3b5e2b89b2a566c" category="paragraph">需要提供您的 NSS 帳戶，以便控制台可以上傳您的許可證金鑰並啟用您購買的期限的訂閱。這包括期限續訂的自動更新。</block>
-  <block id="f5135b68b75a8404803a1eb438e40c5e" category="list-text">將Cloud Volumes ONTAP軟體升級至最新版本</block>
-  <block id="daf104544b5203a46e1580e1b8583f1f" category="paragraph">將 NSS 憑證與您的NetApp Console帳戶關聯與將 NSS 帳戶與控制台使用者登入相關聯。</block>
-  <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">這些 NSS 憑證與您的特定控制台帳戶 ID 相關聯。屬於控制台組織的使用者可以從*支援 &gt; NSS 管理*存取這些憑證。</block>
-  <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">如果您有客戶級帳戶，則可以新增一個或多個 NSS 帳戶。</block>
-  <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">如果您有合作夥伴或經銷商帳戶，則可以新增一個或多個 NSS 帳戶，但不能與客戶級帳戶一起新增。</block>
-  <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">選擇*NSS 管理 &gt; 新增 NSS 帳號*。</block>
-  <block id="85b9386ed443776127e099931d73448a" category="list-text">當出現提示時，選擇「*繼續*」以重新導向至 Microsoft 登入頁面。</block>
-  <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp使用 Microsoft Entra ID 作為特定於支援和授權的身份驗證服務的身份提供者。</block>
-  <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">在登入頁面，提供您的NetApp支援網站註冊的電子郵件地址和密碼以執行驗證程序。</block>
-  <block id="7687b0a57d5cb728d9fb892dfc814715" category="paragraph">這些操作使控制台能夠使用您的 NSS 帳戶進行許可證下載、軟體升級驗證和未來支援註冊等操作。</block>
-  <block id="ec084bb25ed5b934c09b361069c246b2" category="list-text">NSS 帳戶必須是客戶級帳戶（不是訪客或臨時帳戶）。您可以擁有多個客戶級 NSS 帳戶。</block>
-  <block id="27387009488fe78dcc7cb7e3e432792f" category="list-text">如果該帳戶是合作夥伴等級帳戶，則只能有一個 NSS 帳戶。如果您嘗試新增客戶級 NSS 帳戶且合作夥伴級帳戶已存在，您將收到以下錯誤訊息：</block>
-  <block id="d926847e4634e19a1aa7358becc0fa27" category="paragraph">“此帳戶不允許使用 NSS 客戶類型，因為已經存在不同類型的 NSS 用戶。”</block>
-  <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">如果您已有客戶級 NSS 帳戶並嘗試新增合作夥伴級帳戶，情況也是如此。</block>
-  <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">成功登入後， NetApp將儲存 NSS 使用者名稱。</block>
-  <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">三個水平點的圖標</block>
-  <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">這是系統產生的映射到您的電子郵件的 ID。在*NSS 管理*頁面上，您可以顯示來自<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block>菜單。</block>
-  <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">如果您需要刷新登入憑證令牌，還有一個*更新憑證*選項<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block>菜單。</block>
-  <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">使用此選項會提示您再次登入。請注意，這些帳戶的令牌將在 90 天後過期。我們將發布通知來提醒您此事。</block>
   <block id="6787850a4ea9b3a4dba07fdb711fb596" category="summary">了解NetApp Backup and Recovery的新功能。</block>
   <block id="441af08fd33d210b079342896edf5070" category="doc">NetApp Backup and Recovery的新功能</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025年10月6日</block>
@@ -5079,4 +4754,54 @@
   <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
   <block id="879701946bb2bc7241d0f85fd843455a" category="paragraph">endif::azure[]</block>
   <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
+  <block id="6fc478198b32debce80454c7af87f2a6" category="paragraph">準備來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統。</block>
+  <block id="9d6517026ceae75d40ad31bbce85a01f" category="paragraph">確保您的ONTAP系統符合以下要求：</block>
+  <block id="412575a7231cf720dd454d12218d97e8" category="list-text">如果您複製數據，請檢查來源系統和目標系統是否要執行相容的ONTAP版本。</block>
+  <block id="77dccdded3a358636b285f308dae34da" category="paragraph">如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。</block>
+  <block id="6e26086c4ba1c5fd323fbf59cfa2bd2d" category="list-text">如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。</block>
+  <block id="96804f828cf944ce68e80e74ae8d7cc0" category="list-text">支援 SUSE Rancher Kubernetes 發行版</block>
+  <block id="7d6928dd953d625f33fbfd89243bf778" category="paragraph">此版本的NetApp Backup and Recovery引進了對發現和管理 Oracle 資料庫工作負載的支援：</block>
+  <block id="d2ce5b8a55f10a315816f6647894815f" category="paragraph">執行鉤子是一種自訂操作，它與託管 Kubernetes 應用程式中的資料保護操作一起運行。例如，透過使用執行掛鉤在快照之前暫停資料庫事務並在之後恢復它們來建立應用程式一致的快照。建立執行鉤子模板時，指定鉤子類型、要執行的腳本以及目標容器的過濾器。使用模板將執行掛鉤連結到您的應用程式。</block>
+  <block id="404af526c79edf2284a92604e83b4a45" category="paragraph">NetApp Backup and Recovery在資料保護期間凍結和解凍 KubeVirt 等應用程式的檔案系統。您可以使用Trident保護文件全域或針對特定應用程式停用此行為：</block>
+  <block id="d77282c03df8b10c2c7ca1ca7deb9f52" category="list-text">任何適用的自訂預操作執行掛鉤都在適當的容器上運行。您可以建立多個自訂預操作掛鉤，但它們的執行順序無法保證或配置。</block>
+  <block id="8ae86463dd99c66d5a9ac9fadaa7dbd9" category="list-text">NetApp Backup and Recovery在適當的容器上執行任何適用的自訂操作前執行掛鉤。您可以建立多個自訂後操作掛鉤，但它們的執行順序無法保證或配置。</block>
+  <block id="fa277bc4215bc063ac5d9134fd68a383" category="paragraph">如果建立多個相同類型的鉤子，則無法保證它們的執行順序。不同類型的鉤子總是按照指定的順序運行。例如，以下是具有所有不同類型鉤子的配置的執行順序：</block>
+  <block id="12611acdf667fa46771b16ce2dac9b8a" category="admonition">在生產中啟用執行掛鉤腳本之前對其進行測試。使用“kubectl exec”測試腳本，然後透過將應用程式複製到臨時命名空間並還原來驗證快照和備份。</block>
+  <block id="371c0a34edd4228ff47cf9a471606218" category="admonition">執行掛鉤可以減少或停用應用程式功能。讓您的自訂鉤子盡快運行。如果您啟動具有相關執行掛鉤的備份或快照操作，但隨後取消它，則如果備份或快照操作已經開始，則仍允許掛鉤運行。這意味著備份後執行掛鉤中使用的邏輯不能假定備份已完成。</block>
+  <block id="ea8e438a1ce17bd7804407d5eb1bbb8b" category="paragraph">建立模板後，它將出現在*執行掛鉤模板*部分的模板清單中。</block>
+  <block id="ede2ba61bdddf5238d25face4bf435fd" category="admonition">您可以在「主機」欄位中管理狀態為「未管理」的主機。  NetApp Backup and Recovery已經管理具有「託管」狀態的主機。</block>
+  <block id="b805af62914270ecc325efd1f211fa3c" category="paragraph">暫停計劃以在主機維護期間停止備份和復原作業。</block>
+  <block id="f3b772771fc6d09845e11742c43e7fdb" category="paragraph">您可以透過以下方式管理實例訊息，分配適當的憑證來保護資源並備份資源：</block>
+  <block id="a08a1e6a1f964b7941dd14205238bfcb" category="paragraph">立即備份您的資料以立即保護它。</block>
+  <block id="b4ae20208d5c757b694d673276341786" category="paragraph">恢復資料庫以保護您的資料。</block>
+  <block id="3f6fab6bedfff19150a3d6ab054b0391" category="paragraph">現在您可以備份您的 Microsoft SQL Server 執行個體和資料庫，以立即保護您的資料。</block>
+  <block id="fc7c1a6c328c3622bdd68b73c548bb4f" category="paragraph">如果為物件儲存中的備份檔案啟用了勒索軟體復原功能，則要求您在復原之前執行額外的檢查。我們建議進行掃描。</block>
+  <block id="2b2261b532e949e52edc443eb38fcb1c" category="admonition">您可能需要向雲端提供者支付額外費用才能存取備份檔案。</block>
+  <block id="d4356e3242caba9699bd9bc147a04798" category="paragraph">在「恢復」頁面（搜尋和恢復）中，您可以透過使用篩選器搜尋快照來恢復資源，即使您不記得其確切名稱、位置或最後已知日期。</block>
+  <block id="167f8fde1782c144b38a4f581246608e" category="paragraph">如果您選擇二級存儲，請輸入資料和日誌的來源位置和目標位置。</block>
+  <block id="9908b0e588dc1ce9587bfb1206e3118e" category="paragraph">接下來，選擇目標設定和恢復前和恢復後選項。</block>
+  <block id="299981ed6b0aaf1c2eed2a8e35151313" category="list-text">*啟用快速復原*：選擇此選項可執行快速復原作業。您可以立即使用已復原的磁碟區和資料。請勿在需要高效能的磁碟區上使用此功能，因為在快速復原過程中，存取資料的速度可能會比平常慢。</block>
+  <block id="ca9d8ef3573c04098ddeb120eb1f19e5" category="list-text">*啟用電子郵件通知*：選擇取得有關復原作業的電子郵件通知並選擇您想要的通知類型。</block>
+  <block id="63751d750873479f94855f0a16fc63d8" category="list-text">Hyper-V Windows Server 主機的軟體需求：</block>
+  <block id="1acabacd9fabb89313b2019250c36913" category="inline-link">Microsoft Windows Server 文件</block>
+  <block id="a05b36aea5976933f3daab44cd5602a1" category="list-text">確保已安裝主機監護服務角色（請參閱<block ref="48d767cc816bb4d4b129a75bf7c81af1" category="inline-link-rx"></block> （取得說明）</block>
+  <block id="fd7bb5c3777005321645f38a2d07ea27" category="admonition">如果還原作業未完成，請等到作業監視器顯示「失敗」後再重試還原作業。</block>
+  <block id="df3ee99c8171743d8bd35d65cf62b2ed" category="paragraph">您可以使用NetApp Backup and Recovery將虛擬機器資料從雲端還原到本機 vCenter Server。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。如果虛擬機器是使用存檔原則備份的，那麼您可以設定存檔還原優先權。</block>
+  <block id="51e153ee1aa6cdb4ca7796e926180b53" category="admonition">若要切換至NetApp Backup and Recovery工作負載，請參閱<block ref="e56b09183f5489111204017fecace77e" category="inline-link-macro-rx"></block>。</block>
+  <block id="2f3b7eef1cf7df43dea1233ed03f5f42" category="list-text">確保將系統新增至控制台*系統*頁面中的其他位置。</block>
+  <block id="870482577443f708a74b9dbe9b8fe928" category="admonition">如果您使用 VMware vSphere vMotion 移動虛擬機器並從控制台還原它，則備份和還原會將其還原到原始備份位置。</block>
+  <block id="6e6630b7443f8dd6eade1b55e3c59141" category="paragraph">對於 Amazon Web Services，支援的存檔還原優先權為高、標準和低；對於 Microsoft Azure，支援的存檔還原優先權為高和標準。</block>
+  <block id="2f52181b09a7c053aed22699e227b9db" category="paragraph">當您在 SaaS 環境中使用NetApp Backup and Recovery，並在雲端供應商或您自己的網際網路連線主機上部署控制台代理程式時，系統會備份並保護雲端中所有重要的設定資料。如果您遇到控制台代理問題，請建立新的控制台代理並新增您的系統。備份詳細資訊將自動恢復。</block>
+  <block id="361cc78877d7de2ea952f510e7626ad4" category="paragraph">這些資料每天午夜備份一次，每個檔案最多保留 7 份副本。如果控制台代理程式正在管理多個本機ONTAP系統，則NetApp Backup and Recovery檔案將儲存在首先啟動的系統的儲存桶中。</block>
+  <block id="2be5ff28599e1447ad26486d058560b3" category="paragraph">如果您的內部控制台代理停止運作，您將需要安裝新的控制台代理，然後將NetApp Backup and Recovery資料還原到新的控制台代理。</block>
+  <block id="af0d8358ca0559646ed05a1f70fb056c" category="paragraph">檢查系統正常運作後，建立新的備份檔案。</block>
+  <block id="05eb9ffbcd3a4a40092374a3d60d7ac2" category="paragraph">安裝新的控制台代理程式時，請下載與原始代理程式相同的軟體版本。 NetApp Backup and Recovery資料庫的變更可能會導致較新的軟體版本無法與舊的資料庫備份一起使用。你可以<block ref="cf9f37e0e8c15b290b50a2dd76357649" category="inline-link-rx"></block>。</block>
+  <block id="5d1e43ba5c03c383925fef923fa745db" category="paragraph">您應該會看到為您的磁碟區建立的所有備份。</block>
+  <block id="6e16e42b061f3ee3519b7b870fdcf125" category="list-text">*每日*：選擇每隔一定天數重複一次，例如每 3 天。</block>
+  <block id="e8aab330f851827afe9d27b0aec63d26" category="list-text">*每月*：一月至十二月，可選擇每月特定日期或多日演出，例如 7 號。</block>
+  <block id="fca87a8e81eb200987f6ad66783b8b19" category="list-text">如果SnapCenter計劃設定為小於或等於 7 天，NetApp Backup and Recovery會將計畫設定為每週。本週內有些快照被跳過。</block>
+  <block id="6324e3f762b4a79759edccd834edcb2d" category="paragraph">*範例*：如果您有一個SnapCenter每日策略，其重複間隔為從每月 2 號開始每 10 天一次，則NetApp Backup and Recovery在遷移後會將計劃設定為每月 2 日、12 日和 22 日執行。  NetApp Backup and Recovery會在下個月跳過某些天。</block>
+  <block id="ba74bff4c4deec01ccafcf5a160089e4" category="paragraph">SnapCenter支援資源策略的多個保留值。  NetApp Backup and Recovery僅支援每個資源一個保留值。</block>
+  <block id="524363c64fff15aa09ef827516a023c0" category="paragraph">即使層級發生變化， SnapCenter也會在遷移後保留每個策略的SnapMirror標籤。</block>
+  <block id="16a81293ba902fc66da927551f9b54a7" category="paragraph">控制台代理程式包括NetApp Backup and Recovery功能。</block>
 </blocks>

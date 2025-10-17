@@ -183,7 +183,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 ==== 本地ONTAP網路需求
 
-* 如果叢集位於您的場所，您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
+* 如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
 * ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
 +
 由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。

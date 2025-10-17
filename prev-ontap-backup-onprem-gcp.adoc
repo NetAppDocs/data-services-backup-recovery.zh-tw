@@ -131,7 +131,7 @@ bigquery.tables.create
 
 == 準備ONTAP集群
 
-您需要準備來源本機ONTAP系統以及任何輔助本機ONTAP或Cloud Volumes ONTAP系統。
+準備來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統。
 
 準備ONTAP集群涉及以下步驟：
 
@@ -153,7 +153,7 @@ bigquery.tables.create
 
 === 驗證ONTAP系統要求
 
-確保滿足以下ONTAP要求：
+確保您的ONTAP系統符合以下要求：
 
 * 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
 * SnapMirror許可證（包含在高級捆綁包或資料保護捆綁包中）。
@@ -164,7 +164,7 @@ bigquery.tables.create
 了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["管理您的叢集許可證"^]。
 
 * 時間和時區設定正確。了解如何 https://docs.netapp.com/us-en/ontap/system-admin/manage-cluster-time-concept.html["配置叢集時間"^]。
-* 如果要複製數據，則應在複製資料之前驗證來源系統和目標系統是否運行相容的ONTAP版本。
+* 如果您複製數據，請檢查來源系統和目標系統是否要執行相容的ONTAP版本。
 +
 https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["查看與SnapMirror關係相容的ONTAP版本"^]。
 
@@ -210,7 +210,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 ==== 本地ONTAP網路需求
 
-* 如果叢集位於您的場所，您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
+* 如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
 * ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
 +
 由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。

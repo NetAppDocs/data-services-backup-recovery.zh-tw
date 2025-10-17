@@ -16,7 +16,7 @@ summary: 在某些情況下，您可能需要重新啟動NetApp Backup and Recov
 [role="lead"]
 在某些情況下，您可能需要重新啟動NetApp Backup and Recovery。
 
-NetApp Backup and Recovery功能內建於控制台代理程式中。
+控制台代理程式包括NetApp Backup and Recovery功能。
 
 .步驟
 . 連接到控制台代理正在運行的 Linux 系統。

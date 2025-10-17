@@ -190,11 +190,12 @@ vCenter 管理員帳號必須具有所需的 vCenter 權限。
 
 確保您的 Hyper-V 執行個體符合發現和保護虛擬機器的特定要求。
 
-* Hyper-V 主機的軟體需求：
+* Hyper-V Windows Server 主機的軟體需求：
 +
 ** Microsoft Hyper-V 2019、2022 及 2025 年版本
 ** ASP.NET Core Runtime 8.0.12 託管包（以及所有後續 8.0.x 修補程式）
 ** PowerShell 7.4.2 或更高版本
+** 確保已安裝主機監護服務角色（請參閱 https://learn.microsoft.com/en-us/windows-server/administration/server-manager/add-remove-roles-features?tabs=gui#add-roles-and-features-to-windows-server["Microsoft Windows Server 文件"^] （取得說明）
 ** 確保 Windows 防火牆設定中允許下列連接埠進行雙向 HTTPS 通訊：
 +
 *** 8144（適用於 Hyper-V 的NetApp插件）

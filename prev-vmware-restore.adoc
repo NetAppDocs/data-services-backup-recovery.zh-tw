@@ -14,23 +14,21 @@ summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載
 
 
 [role="lead"]
-您可以使用NetApp Backup and Recovery將虛擬機器資料從雲端還原到本機 vCenter。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。如果虛擬機器是使用存檔原則備份的，那麼您可以設定存檔還原優先權。
+您可以使用NetApp Backup and Recovery將虛擬機器資料從雲端還原到本機 vCenter Server。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。如果虛擬機器是使用存檔原則備份的，那麼您可以設定存檔還原優先權。
 
 
 NOTE: 您無法還原跨資料儲存的虛擬機器。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 .開始之前
 * 確保你已經滿足了所有link:prev-vmware-prereqs.html["虛擬機器保護要求"]在將資料儲存備份到雲端之前。
 * 如果您要恢復到備用位置：
 +
 ** 確保來源 vCenter 和目標 vCenter 處於連結模式。
 ** 確保在NetApp Console*系統* 頁面和SnapCenter Plug-in for VMware vSphere中的連結模式 vCenter 中新增了來源和目標叢集詳細資訊。
-** 確保已將系統新增至控制台*系統*頁面中與備用位置相對應的位置。
+** 確保將系統新增至控制台*系統*頁面中的其他位置。
 
 
 
@@ -40,7 +38,7 @@ NOTE: 您無法還原跨資料儲存的虛擬機器。
 
 
 
-NOTE: 如果來源虛擬機器被移動到另一個位置（vMotion），並且如果使用者從控制台觸發該虛擬機器的還原，則虛擬機器將還原到進行備份的來源位置。
+NOTE: 如果您使用 VMware vSphere vMotion 移動虛擬機器並從控制台還原它，則備份和還原會將其還原到原始備份位置。
 
 . 您可以將虛擬機器從資料儲存或虛擬機器還原到原始位置或備用位置：
 
@@ -58,7 +56,7 @@ NOTE: 如果來源虛擬機器被移動到另一個位置（vMotion），並且�
 . 確保選擇了*Original*並選擇*Continue*。
 . 如果使用設定了存檔設定的政策來保護虛擬機，請選擇*存檔還原優先權*並選擇*下一步*。
 +
-Amazon Web Services 支援的檔案還原優先權為高、標準和低，Microsoft Azure 支援的檔案還原優先權為高和標準。
+對於 Amazon Web Services，支援的存檔還原優先權為高、標準和低；對於 Microsoft Azure，支援的存檔還原優先權為高和標準。
 
 . 查看詳細資訊並選擇*恢復*。
 
@@ -76,7 +74,7 @@ Amazon Web Services 支援的檔案還原優先權為高、標準和低，Micros
 . 為復原後的虛擬機器提供名稱，然後選擇「繼續」。
 . 如果使用設定了存檔設定的政策來保護虛擬機，請選擇*存檔還原優先權*並選擇*下一步*。
 +
-Amazon Web Services 支援的檔案還原優先權為高、標準和低，Microsoft Azure 支援的檔案還原優先權為高和標準。
+對於 Amazon Web Services，支援的存檔還原優先權為高、標準和低；對於 Microsoft Azure，支援的存檔還原優先權為高和標準。
 
 . 查看詳細資訊並選擇*恢復*。
 
@@ -91,7 +89,7 @@ Amazon Web Services 支援的檔案還原優先權為高、標準和低，Micros
 . 確保選擇了*Original*並選擇*Continue*。
 . 如果使用設定了存檔設定的政策來保護虛擬機，請選擇*存檔還原優先權*並選擇*下一步*。
 +
-Amazon Web Services 支援的檔案還原優先權為高、標準和低，Microsoft Azure 支援的檔案還原優先權為高和標準。
+對於 Amazon Web Services，支援的存檔還原優先權為高、標準和低；對於 Microsoft Azure，支援的存檔還原優先權為高和標準。
 
 . 查看詳細資訊並選擇*恢復*。
 
@@ -108,11 +106,11 @@ Amazon Web Services 支援的檔案還原優先權為高、標準和低，Micros
 . 為復原後的虛擬機器提供名稱，然後選擇「繼續」。
 . 如果使用設定了存檔設定的政策來保護虛擬機，請選擇*存檔還原優先權*並選擇*下一步*。
 +
-Amazon Web Services 支援的檔案還原優先權為高、標準和低，Microsoft Azure 支援的檔案還原優先權為高和標準。
+對於 Amazon Web Services，支援的存檔還原優先權為高、標準和低；對於 Microsoft Azure，支援的存檔還原優先權為高和標準。
 
 . 查看詳細資訊並選擇*恢復*。
 
 
 |===
 
-NOTE: 如果還原操作未完成，請不要再次嘗試還原過程，直到作業監視器顯示還原操作失敗。如果在作業監視器顯示還原操作失敗之前再次嘗試還原過程，則還原操作將再次失敗。當您看到作業監視器狀態為「失敗」時，您可以再次嘗試復原程序。
+NOTE: 如果還原作業未完成，請等到作業監視器顯示「失敗」後再重試還原作業。
