@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-mssql-protect-overview.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: 您可以將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 Amazon Web Services、Microsoft Azure 和StorageGRID，確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。 
+summary: 使用NetApp Backup and Recovery保護您的 Microsoft SQL Server 應用程式數據，從本機ONTAP系統到 Amazon Web Services、Microsoft Azure 或StorageGRID 。 
 ---
 = 使用NetApp Backup and Recovery保護 Microsoft SQL 工作負載概述
 :hardbreaks:
@@ -14,18 +14,18 @@ summary: 您可以將 Microsoft SQL Server 應用程式資料從本機ONTAP系�
 
 
 [role="lead"]
-使用NetApp Backup and Recovery保護您的 Microsoft SQL Server 應用程式數據，從本機ONTAP系統到 Amazon Web Services、Microsoft Azure 或StorageGRID 。根據您建立的策略，備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。
+使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 AWS、Azure 或StorageGRID 。系統會根據您的政策自動在您的雲端帳戶中建立並儲存備份。使用 3-2-1 策略：在兩個儲存系統上保留資料的三個副本，在雲端中保留一個副本。
 
 3-2-1 方法的優點包括：
 
-* 多個資料副本可提供多層保護，抵禦內部（內部）和外部網路安全威脅。
-* 多種媒體類型可確保在一種媒體類型發生實體或邏輯故障時能夠進行故障轉移。
-* 現場副本有助於快速恢復，而異地副本則可在現場副本受損時使用。
+* 多個資料副本可防止內部和外部網路安全威脅。
+* 如果一種媒體發生故障，使用不同類型的媒體可以幫助您恢復。
+* 您可以從現場副本快速恢復，如果現場副本受到損害，則可以使用異地副本。
 
 
-NetApp Backup and Recovery利用NetApp SnapMirror資料複製技術，透過建立快照副本並將其傳輸到備份位置來確保所有備份完全同步。
+NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照副本並將其傳輸到備份位置來同步備份。
 
-您可以實現以下保護目標：
+您可以執行以下操作來保護您的資料：
 
 * link:concept-start-prereq-snapcenter-import.html["如果從SnapCenter匯入，則配置其他項目"]
 * link:br-start-discover.html["發現 Microsoft SQL Server 工作負載並選擇性地匯入SnapCenter資源"]
@@ -39,7 +39,7 @@ NetApp Backup and Recovery利用NetApp SnapMirror資料複製技術，透過建�
 * link:br-use-manage-snapshots.html["管理快照"]
 
 
-要備份工作負載，通常需要建立管理備份和復原作業的策略。看link:br-use-policies-create.html["創建策略"]了解更多。
+若要備份工作負載，您需要建立管理備份和復原作業的策略。看link:br-use-policies-create.html["創建策略"]了解更多。
 
 .支援的備份目標
 NetApp Backup and Recovery可讓您將 Microsoft SQL Server 執行個體和資料庫從下列來源系統備份到公有和私有雲供應商中的下列輔助系統和物件儲存。快照副本駐留在來源系統上。

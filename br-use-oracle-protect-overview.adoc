@@ -14,15 +14,15 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 
 
 [role="lead"]
-使用NetApp Backup and Recovery保護您的 Oracle 資料庫和日誌。 NetApp Backup and Recovery提供快速、節省空間、崩潰一致和資料庫一致的備份和復原作業。您可以將 Oracle 工作負載備份到 Amazon Web Services S3、 NetApp StorageGRID、Microsoft Azure Blob Storage 或ONTAP S3，然後將其還原至本機 Oracle 主機。
+使用NetApp Backup and Recovery保護 Oracle 資料庫和日誌。獲得快速、節省空間、崩潰一致和資料庫一致的備份和還原。將 Oracle 工作負載備份到 AWS S3、 NetApp StorageGRID、Azure Blob Storage 或ONTAP S3。將備份還原到本機 Oracle 主機。
 
 image:../media/diagram-backup-recovery-general.png["備份與復原的整體架構圖"]
 
 使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：
 
-* 多個資料副本可提供多層保護，抵禦內部（內部）和外部網路安全威脅。
-* 多種媒體類型可確保在一種媒體類型發生實體或邏輯故障時能夠進行故障轉移。
-* 現場副本有助於快速恢復，而異地副本則可在現場副本受損時使用。
+* 多個資料副本可防止內部和外部網路安全威脅。
+* 如果一種媒體發生故障，使用不同類型的媒體可以幫助您恢復。
+* 您可以從現場副本快速恢復，如果現場副本受到損害，則可以使用異地副本。
 
 
 

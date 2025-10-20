@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-manage-inventory.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
-summary: NetApp Backup and Recovery讓您能夠管理工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。 
+summary: NetApp Backup and Recovery可協助您管理 Microsoft SQL Server 主機、資料庫和執行個體。 
 ---
 = 使用NetApp Backup and Recovery管理 Microsoft SQL Server 庫存
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery讓您能夠管理工作負載主機資訊、
 
 
 [role="lead"]
-NetApp Backup and Recovery讓您能夠管理 Microsoft SQL Server 工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。
+NetApp Backup and Recovery可協助您管理 Microsoft SQL Server 主機、資料庫和執行個體。您可以查看、變更或刪除庫存的保護設定。
 
 您可以完成以下與管理庫存相關的任務：
 

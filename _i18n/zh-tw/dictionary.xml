@@ -886,34 +886,6 @@
   <block id="8ea9fd29df4eb58092d8258c6ccf3ad8" category="inline-link-macro">發現 Hyper-V 工作負載</block>
   <block id="3b97616ae538f454d8812a77c84392d1" category="list-text">對於 Hyper-V 工作負載，請參閱<block ref="e853aa4eb98908dd4b95a8cc80d9972f" category="inline-link-macro-rx"></block>。</block>
   <block id="e5dd8794e7e239a004607625309c03bb" category="list-text">有關 Kubernetes 工作負載，請參閱<block ref="bdf340f843cf54500673f62df22d5070" category="inline-link-macro-rx"></block>。</block>
-  <block id="a88e44059c42ea669c8e082925b4f685" category="summary">透過參與NetApp Backup and Recovery預覽，您將在完善和增強NetApp Backup and Recovery發揮關鍵作用。對於NetApp Backup and Recovery的預覽版，我們將協助進行設定。過程如下。</block>
-  <block id="d962dd4a2dd136e11ea9e6b1fc4f0231" category="doc">設定NetApp Backup and Recovery預覽版</block>
-  <block id="44c9fe33d945a811c980c2222cb4a7f4" category="paragraph">透過參與NetApp Backup and Recovery預覽版之一，您將在完善和增強NetApp Backup and Recovery發揮關鍵作用。對於NetApp Backup and Recovery的預覽版，我們將協助進行設定。過程如下。</block>
-  <block id="1df25d83dcd96998ab1214f0f596e625" category="list-text">*註冊*：如果您還沒有NetApp Console帳戶，請註冊一個。方法如下：</block>
-  <block id="03b9d18619003b0462fbb22e0f737c14" category="inline-link">NetApp Console網站</block>
-  <block id="fe522e0e492bdfc81fd85fe149b3e2f3" category="list-text">訪問<block ref="761f9c2f831126887f2401ade5ba082a" category="inline-link-rx"></block>。</block>
-  <block id="c994e4babe23a451bef9eb9c4e6ae1bd" category="list-text">選擇*開始*。</block>
-  <block id="89cbd307e3a030d88901f3a0b6db05f9" category="inline-image-macro">登入入口網站螢幕</block>
-  <block id="a36f36cea71dbb3ece06859026f2a219" category="paragraph"><block ref="a36f36cea71dbb3ece06859026f2a219" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7408a50737fd936622eeec54bbeb439c" category="list-text">選擇*註冊*。</block>
-  <block id="4a5516994f808f657f563e4c644704a8" category="inline-image-macro">註冊控制台螢幕</block>
-  <block id="bd85572698ab218980e4334fbaad7780" category="paragraph"><block ref="bd85572698ab218980e4334fbaad7780" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="49a7eb06443c6823da67cb30105865cb" category="list-text">輸入您的姓名、電子郵件地址、組織名稱和其他詳細信息，然後選擇*下一步*。</block>
-  <block id="62e103a9bdfbc60da8d1a6cd84c64574" category="paragraph">您將收到一封帶有連結的電子郵件，用於驗證您的電子郵件地址。</block>
-  <block id="42435fc392a09cfc52a784c811f725c8" category="list-text">選擇電子郵件中的連結來驗證您的電子郵件地址。</block>
-  <block id="67d948af642d80e01ae49095566abfc0" category="list-text">登入控制台入口網站。</block>
-  <block id="09b34a6d0f4d291f84f3e8f79dde8d4c" category="list-text">輸入以下資訊以完成您的個人資料：</block>
-  <block id="1e9e8ba34e717628d41f149382680873" category="list-text">*組織ID*：註冊後，您將收到一個組織名稱和ID。在此輸入。</block>
-  <block id="4d9ae5d322cb8c8f7adf9b48949b1bc8" category="list-text">*共用 ID*：與NetApp產品團隊共用組織名稱和 ID。</block>
-  <block id="7c22ebb7979774c7df05585903c12d01" category="paragraph">*存取時間範圍*：48-72 小時內，您將可存取NetApp Backup and Recovery。</block>
-  <block id="81b6fb15733ca902602c664fabd1e467" category="list-text">*探索*該服務，測試其功能，並將其與您現有的 SQL Server 工作負載整合。</block>
-  <block id="93e2a47a6514ac40751d124a8f1f46b3" category="list-text">*保持定期聯繫*。在整個預覽會議期間，與NetApp產品團隊一起定期進行檢查。這些會議可協助您了解服務並提供回饋：</block>
-  <block id="f8ff994376a64d4d3d6d193d64f1da36" category="list-text">*了解最新消息*：您將了解與預覽相關的最新進展。</block>
-  <block id="63ad8c7fe181c1240348c85b7b859e2b" category="list-text">*提出問題*並從NetApp Console團隊獲得即時答案。</block>
-  <block id="e7528011261fdc65206ea9ab08e68144" category="list-text">向NetApp產品團隊提供*回饋*以改善服務。</block>
-  <block id="1ebf3d019af1cc6cd51eaefe85900b86" category="list-text">*分享最佳實務*和有效使用本服務的技巧。</block>
-  <block id="e85274cf54ca4909a650a11dc227ee47" category="list-text">*促進合作*：與其他使用者合作，分享經驗，互相學習。</block>
-  <block id="3ccfc5136e3977900273dfda295aa615" category="list-text">向NetApp產品團隊*提供回饋*。</block>
   <block id="47531513e36377c6a5c78be39708d962" category="summary">在使用NetApp Backup and Recovery之前，請執行幾個步驟來設定備份目標。</block>
   <block id="e902bc2010ef35580633bf1114aee5b3" category="doc">在使用NetApp Backup and Recovery之前設定備份目標</block>
   <block id="8a0933307f827fb9f8c7b526a219880b" category="paragraph">在使用NetApp Backup and Recovery之前，請執行幾個步驟來設定備份目標。</block>
@@ -1004,7 +976,6 @@
   <block id="0c1d62f4779d7aef54687bd64095f6b0" category="list-text">選擇「*保護群組*」、「*資料儲存*」或「*虛擬機器*」標籤。</block>
   <block id="758c66b3945b48ce4d666362f0f4cb3e" category="list-text">選擇要備份的保護群組或虛擬機器。</block>
   <block id="bbddd84df8379f7ccf7c6beb918fb121" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *立即備份*。</block>
-  <block id="8a48c0ede0c153ed05c127d90e727be5" category="admonition">應用於備份的政策與指派給保護群組或虛擬機器的策略相同。</block>
   <block id="85ec80b493e6765547d2b4489252b82e" category="list-text">選擇計劃層級。</block>
   <block id="ff4d762e1ab6dd75731a4f97e66ec902" category="list-text">選擇*備份*。</block>
   <block id="4efc134fd5130564588a4806f9c977f0" category="summary">您可以保護 Hyper-V 虛擬機，從本機ONTAP系統到主儲存和二級存儲，確保您的資料受到保護。</block>
@@ -1013,9 +984,7 @@
   <block id="27bf4d1e94a4188d82244d997deb945d" category="inline-image-macro">備份與復原的整體架構圖</block>
   <block id="a25193bbdff09f58ab1dcb4151b659ec" category="paragraph"><block ref="a25193bbdff09f58ab1dcb4151b659ec" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b7bf580752a61d71227184a60f0fbfd3" category="paragraph">使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：</block>
-  <block id="b192cd10ae3edf138508f051bb99fba2" category="list-text">多個資料副本可提供多層保護，抵禦內部（內部）和外部網路安全威脅。</block>
   <block id="79c28420811a3b277df19fdd38cd10e0" category="list-text">多種媒體類型可確保在一種媒體類型發生實體或邏輯故障時能夠進行故障轉移。</block>
-  <block id="a4a3ea8ff455067664e384b62470a7a9" category="list-text">現場副本有助於快速恢復，而異地副本則可在現場副本受損時使用。</block>
   <block id="532ee325506687dccb969b2e88d92b32" category="inline-link-macro">切換到先前的NetApp Backup and RecoveryUI</block>
   <block id="9847581c7ebe97c62f71ab1d90ed1696" category="admonition">若要切換至NetApp Backup and Recovery UI 版本或從 NetApp Backup and Recovery UI 版本切換，請參閱<block ref="3a517a59babeb4a2a4c0dc21bafb9259" category="inline-link-macro-rx"></block>。</block>
   <block id="124a0ee1a6efcb80b27fc999fe308e62" category="paragraph">您可以使用NetApp Backup and Recovery執行與 Hyper-V 工作負載相關的下列任務：</block>
@@ -1035,7 +1004,6 @@
   <block id="bdeee485153f055707f0a73a8af513ba" category="list-text">立即備份保護組。看<block ref="d41aaac62fb0d74a0e59fc21f102f78e" category="inline-link-macro-rx"></block>。</block>
   <block id="75fd7259089ff0f83a33c40dd073fef1" category="list-text">刪除保護組。</block>
   <block id="d3bc7420d7e89fa51ba74ffa21c65564" category="section-title">建立保護組</block>
-  <block id="65c7327c98e288c3f5e4a2ae048a02df" category="paragraph">將您想要保護的工作負載分組到一個保護群組。您可以為想要一起備份和還原的一組工作負載建立一個保護群組。</block>
   <block id="9c6ace0005a93555e47af40a4cdea531" category="list-text">選擇*保護群組*標籤。</block>
   <block id="8ff0bca3a887fcf730ec3c488508786c" category="list-text">選擇*建立保護組*。</block>
   <block id="ef84603df71c48cb6dcebd2e9e3fcb87" category="list-text">為保護組提供名稱。</block>
@@ -1208,7 +1176,6 @@
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">選擇“*創建*”。</block>
   <block id="909eae293e55e9fb02681b3c1668c555" category="summary">NetApp Backup and Recovery讓您能夠管理工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。</block>
   <block id="1923fb9432a776bac3edea16865917a7" category="doc">使用NetApp Backup and Recovery管理 Microsoft SQL Server 庫存</block>
-  <block id="2d9b7a32eaf0657975c7a926a06dfff1" category="paragraph">NetApp Backup and Recovery讓您能夠管理 Microsoft SQL Server 工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。</block>
   <block id="f49c5e3d566ad0a23180a96b0ec02d6a" category="paragraph">您可以完成以下與管理庫存相關的任務：</block>
   <block id="366cb36384bed83fd20b39e6a1c107e6" category="list-text">管理主機資訊</block>
   <block id="e03dfc11cf3bf9f6353b24940f428fe8" category="list-text">暫停時間表</block>
@@ -1300,7 +1267,6 @@
   <block id="36f0283cb14ad41f5a35341825d6cb8f" category="list-text">選擇*取消保護*。</block>
   <block id="8896e71a8de95cbfa7c12f414c5bf926" category="list-text">閱讀通知，準備好後，選擇*取消保護*。</block>
   <block id="f0b8c712a2979155a90a4d45542f57f1" category="section-title">刪除 Kubernetes 應用程式</block>
-  <block id="5b37d656b7480a0d1ba63c0ceeb91543" category="paragraph">如果您不再需要某個應用程序，可以將其刪除。當您刪除應用程式時， NetApp Backup and Recovery將停止保護應用程式並刪除所有相關的備份和快照。</block>
   <block id="e9f066e195a46d59f447e0e9faed2a72" category="list-text">在應用程式清單中，選擇要刪除的應用程式並選擇相關的操作選單。</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">選擇*刪除*。</block>
   <block id="ef50a59af25c08fa4e4c545948dd656e" category="list-text">啟用*刪除快照和備份*以刪除應用程式的所有快照和備份。</block>
@@ -1315,12 +1281,9 @@
   <block id="539e1806cdbd1431ba6cb6b4b84fc393" category="list-text">選擇*編輯集群*。</block>
   <block id="9d5bb9ed8ea1b49d007ac97a59fc2f73" category="list-text">對叢集名稱進行任何必要的更改。叢集名稱需要與您在發現過程中使用 Helm 命令的名稱相符。</block>
   <block id="f23e3ed54ae928c06add368fe4fe5a66" category="section-title">刪除 Kubernetes 集群</block>
-  <block id="8a4712efb642c0cdfd6db07aa95e5ba4" category="paragraph">如果您不再需要保護 Kubernetes 叢集託管的資源，則可以將其從NetApp Backup and Recovery中刪除。刪除叢集並不會刪除叢集或其資源；它只會從NetApp Console清單中刪除叢集。在刪除叢集之前，您需要停用保護並從NetApp Backup and Recovery中刪除關聯的應用程式。</block>
   <block id="884dae5f1c15db330f66f8e2866510c1" category="list-text">選擇*刪除群集*。</block>
   <block id="19ce5318fcc2968a80a3d2213a7120af" category="list-text">查看確認對話方塊中的信息，然後選擇*刪除*。</block>
-  <block id="36739fba3e0e2771f42b08419cec5110" category="summary">您可以將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID，確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。</block>
   <block id="6e464deab83d8eb0500f0c27ef47c58b" category="doc">使用NetApp Backup and Recovery管理資源概述</block>
-  <block id="6b901ae8359d24ec75c2ee3adc79920a" category="paragraph">管理NetApp Backup and Recovery中的資源對於確保您的資料受到保護至關重要。您可以管理備份、資料庫、執行個體、應用程式主機和工作環境等資源。您可以檢視、編輯和刪除資源的保護設定。</block>
   <block id="1391797a0b30576f1f116202d3da3a46" category="paragraph">您可以完成與管理資源相關的以下任務：</block>
   <block id="ccc9658d0f980f24634bf5ef6aaceb3d" category="inline-link-macro">管理庫存</block>
   <block id="9517c8b5ba697f22d1982a7a6950dbce" category="list-text"><block ref="84e97f55697cdae80cb35f3f0e373346" category="inline-link-macro-rx"></block>。</block>
@@ -1334,13 +1297,9 @@
   <block id="597dd5cc22a8db7fa97336df9ce2dcf7" category="list-text">選擇要刪除快照的資料庫。</block>
   <block id="d72708af931281c83921470bca8a42e3" category="list-text">從操作選單中，選擇*查看保護詳情*。</block>
   <block id="d04ac725754632fa49ee2c8d7b662bd5" category="list-text">選擇要刪除的本機快照。</block>
-  <block id="33a51da1985a56a71a1ed4ec0b77b967" category="admonition">該行*位置*列中的本機快照圖示必須顯示為藍色。</block>
   <block id="35422d2db629b4a63ca95691f2286539" category="list-text">選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*刪除本機快照*。</block>
   <block id="ed09f3ce9d7f603634c8b3a4750cc390" category="list-text">在確認對話方塊中，選擇*刪除*。</block>
-  <block id="bbcb762ce62661d50d1870856602096d" category="summary">使用NetApp Backup and Recovery，監控您啟動的本機快照、複製和備份到物件儲存作業的狀態，以及您啟動的還原作業。</block>
   <block id="c6e625be6eb278b391f109fa71a2563b" category="doc">監控NetApp Backup and Recovery中的作業</block>
-  <block id="2aba4bf12650545f167b338115bff248" category="paragraph">使用NetApp Backup and Recovery，監控您啟動的本機快照、複製和備份到物件儲存作業的狀態，以及您啟動的還原作業。您可以查看已完成、正在進行或失敗的作業，以便診斷和解決問題。使用NetApp Console通知中心，您可以啟用透過電子郵件傳送通知，這樣即使您未登入系統也可以了解重要的系統活動。使用控制台時間軸，您可以查看透過 UI 或 API 啟動的所有操作的詳細資訊。</block>
-  <block id="7d7877165e305d5d9166908f3d8e07c5" category="paragraph">NetApp Backup and Recovery會將作業資訊保留 15 天，之後會被清除，並且不再顯示在作業監視器中。</block>
   <block id="06bf7dd6f0ab94d87f59e43fc93b6d3c" category="section-title">在作業監視器上查看作業狀態</block>
   <block id="7189b993e1f29567a55606a3a2b812ad" category="paragraph">您可以在「作業監控」標籤中查看所有快照、複製、備份到物件儲存和復原作業的清單及其目前狀態。這包括來自您的Cloud Volumes ONTAP、本地ONTAP、應用程式和虛擬機器的操作。每個操作或作業都有唯一的 ID 和狀態。</block>
   <block id="402bab7d605cd8ea629df214c4351f69" category="paragraph">狀態可以是：</block>
@@ -1351,7 +1310,6 @@
   <block id="d7c8c85bf79bbe1b7188497c32c3b0ca" category="list-text">失敗的</block>
   <block id="f5c50f0f405ba073846066df149c9150" category="paragraph">您從NetApp Backup and RecoveryUI 和 API 啟動的快照、複製、物件儲存備份和還原作業均可在「作業監控」標籤中找到。</block>
   <block id="d263c7d70394e4465e07f91a7cda636c" category="inline-link-macro">了解如何重新啟動NetApp Backup and Recovery</block>
-  <block id="dc761c5722384bd8a68caf5410677414" category="admonition">如果您已將ONTAP系統升級至 9.13.x，但在作業監視器中沒有看到正在進行的排程備份操作，則需要重新啟動NetApp Backup and Recovery。<block ref="bfa346a5b4e1ecd443201d95eab54eb4" category="inline-link-macro-rx"></block>。</block>
   <block id="f12cc055f626f9974e07168ee36fc2b6" category="list-text">從NetApp Backup and Recovery選單中，選擇 *監控*。</block>
   <block id="e81a8bad1be4be12a837fcfb49f51617" category="list-text">若要顯示其他欄位（系統、SVM、使用者名稱、工作負載、政策名稱、快照標籤），請選擇加號。</block>
   <block id="87aa191eff82d3ce3518c07577f209bd" category="section-title">搜尋並過濾職位列表</block>
@@ -1360,7 +1318,6 @@
   <block id="a466bc110c2ee16333fcf19f4e7b5dc2" category="list-text">若要對結果進行不同的排序，請選擇每個列標題以按狀態、開始時間、資源名稱等進行排序。</block>
   <block id="abfa7a0ebf0068a9c8b2a22cab7ee2b3" category="list-text">如果您正在尋找特定的工作，請選擇「進階搜尋和過濾」區域以開啟「搜尋」面板。</block>
   <block id="f55acf819cf64faf595e14da13d54f0b" category="paragraph">使用此面板可以輸入任何資源的自由文字搜尋；例如“卷 1”或“應用程式 3”。您也可以根據下拉式選單中的項目過濾作業清單。</block>
-  <block id="327b66d091add79b859ef84933343b9b" category="paragraph">大多數的過濾器都是不言自明。透過「工作量」篩選器，您可以查看以下類別的作業：</block>
   <block id="5695919edc7944640ed4ec81a9a36f71" category="list-text">ONTAP磁碟區（Cloud Volumes ONTAP和本機ONTAP磁碟區）</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">微軟 SQL 伺服器</block>
   <block id="76b0fa668c1cd016096eb9bc1bfde44a" category="list-text">虛擬機</block>
@@ -1377,12 +1334,10 @@
   <block id="a338f0236c9cd90b94c866169e207597" category="list-text">選擇“操作”選單<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>並選擇“查看詳細資料”。</block>
   <block id="a2f820f1e803ccce8bb7aecd68c2172d" category="list-text">展開每個部分以查看詳細資訊。</block>
   <block id="8b512d5ba4f8158f9bbde90865caba8c" category="section-title">下載作業監控結果報告</block>
-  <block id="e58d30d472d33acd3100a5f519e69afe" category="paragraph">您可以在完善主作業監控頁面的內容後下載為報表。 NetApp Backup and Recovery會產生並下載一個 .CSV 文件，您可以根據需要查看該文件並傳送給其他群組。.CSV 檔案包含最多 10,000 行資料。</block>
   <block id="4ef79a32c3fec53a7c7441bdc6ef7cd0" category="paragraph">從作業監控詳細資訊中，您可以下載包含單一作業詳細資訊的 JSON 檔案。</block>
   <block id="2b0ecb40cc305f7af9fe7f986b5bb2dd" category="list-text">若要下載所有作業的 CSV 文件，請選擇「下載」按鈕並在下載目錄中找到該文件。</block>
   <block id="1dc45daaf063a4c51a123d4f491b6b42" category="list-text">若要下載單一作業的 JSON 文件，請選擇「操作」選單<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>對於該作業，選擇*下載 JSON 檔案*，然後在下載目錄中找到該檔案。</block>
   <block id="f1a15f873b659fefcf2800c9489b580b" category="section-title">檢討保留（備份生命週期）作業</block>
-  <block id="97ed68d89be18084aed5cb3445ac40c1" category="paragraph">監控保留（或備份生命週期）流程有助於您審核完整性、責任感和備份安全性。為了幫助您追蹤備份生命週期，您可能需要確定所有備份副本的到期時間。</block>
   <block id="86fa0897ffcce46e8eca8c43e8684ef8" category="paragraph">備份生命週期作業追蹤所有已刪除或待刪除佇列中的 Snapshot 副本。從ONTAP 9.13 開始，您可以在「作業監控」頁面上查看所有稱為「保留」的作業類型。</block>
   <block id="5168f75ce01db43e41309dbb9ba106a7" category="paragraph">「保留」作業類型會擷取在受NetApp Backup and Recovery保護的磁碟區上啟動的所有快照刪除作業。</block>
   <block id="9304f305aa89a02039b5cb4ac930f498" category="list-text">選擇“進階搜尋和過濾”區域以開啟搜尋面板。</block>
@@ -1390,7 +1345,6 @@
   <block id="1c3cccbea914c20304f63319b99fb585" category="section-title">在NetApp Console通知中心查看備份和還原警報</block>
   <block id="bacd9783e91bb01896a4e564be2f9207" category="paragraph">NetApp Console通知中心追蹤您啟動的備份和復原作業的進度，以便您可以驗證作業是否成功。</block>
   <block id="44d4deb8868ac8159ee85f4a8e68725c" category="inline-link">了解有關通知中心以及如何發送備份和恢復作業警報電子郵件的更多信息</block>
-  <block id="13e610b9aab0d9b0b45bb4a37586af8b" category="paragraph">除了查看通知中心的警報之外，您還可以配置控制台透過電子郵件發送某些類型的通知作為警報，這樣即使您未登入系統也可以了解重要的系統活動。<block ref="a993635cface3018acf75d15a7289e44" category="inline-link-rx"></block> 。</block>
   <block id="3b27991b1aa229f52835df236ba4b917" category="paragraph">通知中心顯示大量快照、複製、備份到雲端和復原事件，但只有某些事件會觸發電子郵件警報：</block>
   <block id="9e35f94818feb2156d0744e4be9fb2ea" category="cell">操作類型</block>
   <block id="a4ecfc70574394990cf17bd83df499f7" category="cell">事件</block>
@@ -1412,7 +1366,6 @@
   <block id="93d1a6c01d156e393187858c16c5c626" category="cell">NetApp Backup and Recovery反向重新同步作業失敗</block>
   <block id="594e604651fd901124d237d8caf5c86f" category="cell">NetApp Backup and Recovery複製刪除作業失敗</block>
   <block id="910e8697aa5e0e59e920af3a4cf26b12" category="admonition">從ONTAP 9.13.0 開始，所有警報都會出現在Cloud Volumes ONTAP和本地ONTAP系統中。對於具有Cloud Volumes ONTAP 9.13.0 和本機ONTAP 的系統，僅出現與「復原作業已完成，但有警告」相關的警報。</block>
-  <block id="4c84697ea11760e260e11cbcfa89f1d5" category="paragraph">預設情況下， NetApp Console組織和帳戶管理員會收到所有「嚴重」和「建議」警報的電子郵件。預設情況下，所有其他使用者和收件者均設定為不接收任何通知電子郵件。電子郵件可以傳送給屬於您的NetApp雲端帳戶的任何控制台用戶，或任何其他需要了解備份和復原活動的收件者。</block>
   <block id="4e1654b110548c12172bd1f4aa2a9b85" category="paragraph">若要接收NetApp Backup and Recovery電子郵件警報，您需要在通知設定頁面中選擇通知嚴重性類型「嚴重」、「警告」和「錯誤」。</block>
   <block id="ac92ec63bcc51fd7fbdc332411a1c313" category="inline-link">了解如何傳送備份和復原作業的警報電子郵件</block>
   <block id="3b47f916b2f443d824df44877447d71b" category="paragraph"><block ref="79adfec10aebf964dc5e4c3b78205ffe" category="inline-link-rx"></block>。</block>
@@ -1423,22 +1376,15 @@
   <block id="63e8201dff1eb0f61fc15408465cb6b1" category="paragraph">您可以在控制台時間軸中查看備份和復原作業的詳細資訊以進行進一步調查。控制台時間軸提供每個事件的詳細信息，無論是用戶發起的還是系統發起的，並顯示在 UI 中或透過 API 發起的操作。</block>
   <block id="b47bbc8022db13f22970dc58a89f44a2" category="inline-link">了解時間軸和通知中心之間的區別</block>
   <block id="7c9a9551a82f974f54945fe3abbeec59" category="paragraph"><block ref="be62b15feb39ec16dcb7570febe101f2" category="inline-link-rx"></block>。</block>
-  <block id="096522687dff045b7ad64a12bd783789" category="summary">將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID ，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。</block>
   <block id="d3c6745f840c2a30a5e3e9367ddd315a" category="doc">使用NetApp Backup and RecoveryMicrosoft SQL Server 工作負載</block>
-  <block id="1f24b8f05d126b4e6981228bbcf414a6" category="paragraph">將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 Amazon Web Services、Microsoft Azure 和StorageGRID ，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。</block>
-  <block id="67fee12a630a39f3a2419ba00890580f" category="list-text">在啟動備份之前配置已發現主機的日誌目錄。</block>
   <block id="7f9f81d01b7164c9af904c1ddc62367d" category="section-title">查看工作負載保護狀態</block>
-  <block id="98dae635da462d2ed6a530fba52f89b8" category="paragraph">在啟動備份之前，請先查看工作負載的保護狀態。</block>
   <block id="9ba224f0573e42a55a47b26c40bae95c" category="list-text">查看主機、保護群組、可用性群組、執行個體和資料庫標籤上的詳細資訊。</block>
   <block id="3c440e2fe11de8b0c9ba750fb038f088" category="section-title">配置發現主機的日誌目錄</block>
-  <block id="32e9ec0558b517ab2c691dae389cf40a" category="paragraph">在備份工作負載之前，請設定已發現主機的活動日誌的路徑。這有助於您追蹤操作狀態。</block>
   <block id="0e7efc08a39aef2e4e81084cfd484cde" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員或備份和還原還原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="f664fa7f8e8f64dd3b179d0894c484df" category="list-text">選擇主機。</block>
   <block id="75d216d45ee5cd87dedb6c923b7ac199" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *配置日誌目錄*。</block>
-  <block id="1e0bff2c91c15e182127000ba2a1a851" category="list-text">提供主機路徑或瀏覽主機上的主機或節點主機列表，以找到您想要儲存主機日誌的位置。</block>
   <block id="c90f3128927fb9082f339e01f74e41df" category="list-text">選擇您想要儲存日誌的那些。</block>
   <block id="f6a597cfb62c5f7cf588253ccc058cc4" category="admonition">顯示的欄位會根據所選的部署模型而有所不同，例如故障轉移群集實例或獨立實例。</block>
-  <block id="8ae6648bb93b53d7957fdb87eb19a53c" category="paragraph">您可以建立一個保護群組來管理一組工作負載的備份和還原作業。保護群組是您想要一起保護的工作負載的邏輯分組。</block>
   <block id="8d20c84ae4e022fee3ea1139418904bc" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員或備份和還原備份管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="6b653f8c4346a4566e361ada95367bb5" category="list-text">選擇要包含在保護組中的執行個體或資料庫。</block>
   <block id="488ea583abd404c5855a27397f193fbe" category="paragraph">如果要建立策略，請選擇*建立新策略*並依照指示建立策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>了解更多。</block>
@@ -1448,7 +1394,6 @@
   <block id="17b12279059c23fe5c84e8a845d07595" category="list-text">選擇要套用於備份的策略。</block>
   <block id="9a7eb301acc1f194e9e93fc439819834" category="list-text">選擇*立即備份*。</block>
   <block id="d9913a0b510a8288a50990315eb1bf1a" category="section-title">暫停備份計劃</block>
-  <block id="591200027d004fef90874849895023dc" category="paragraph">暫停計畫會暫時阻止備份在預定的時間運作。如果您正在對系統進行維護或遇到備份問題，您可能需要執行此操作。</block>
   <block id="25c71a87678c86f2cc5bd3e9fb6b141a" category="list-text">選擇要暫停的保護群組、執行個體或資料庫。</block>
   <block id="26e2e85490e0359c71f79e8496ccac21" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *暫停*。</block>
   <block id="3fc0db42b81a7ffcf33f957b455005fa" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *刪除保護群組*。</block>
@@ -1458,18 +1403,11 @@
   <block id="e06e5b57a1ecbd92fac84b5373930c7c" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *移除保護*。</block>
   <block id="8c994cb58807d04791298c103bd8eeba" category="list-text">在「刪除保護」對話方塊中，選擇是否要保留備份和元資料或刪除它們。</block>
   <block id="a126c201103ea34a2e266dd030d47028" category="list-text">選擇*刪除*以確認操作。</block>
-  <block id="d6b2c7fe6cfaf9e8fbb20cdf55e97309" category="summary">複製 Microsoft SQL Server 應用程式以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。</block>
-  <block id="77ba0160716d8682ae13dff6d21afaf7" category="doc">使用NetApp Backup and RecoveryMicrosoft SQL 伺服器工作負載概述</block>
-  <block id="db45e2afb836e1acca3688f68f7a2864" category="paragraph">使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料複製到相同或不同的 VM，以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。</block>
   <block id="8b7fbced126fee3a3d3fdb0185af6396" category="list-text">創建克隆</block>
   <block id="1170d6f09309cb8dc382034a34680937" category="list-text">刷新克隆</block>
   <block id="d91a0b52cfc5d0c3e4b59e8544b3c61d" category="list-text">分裂克隆</block>
   <block id="9ceb80285d65a64605bf06f35da2e5cb" category="list-text">刪除克隆</block>
-  <block id="efe0a5bd1ee267cf1eec471f081d02ac" category="summary">複製 Microsoft SQL Server 應用程式資料以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。</block>
-  <block id="5cca8c2d9bf5f6aa48a19d4032df28ff" category="doc">使用NetApp Backup and RecoveryMicrosoft SQL Server 工作負載</block>
-  <block id="93d5078699842e380bbf3d48df8dff3e" category="paragraph">使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料複製到相同或不同的 VM，以用於開發、測試或保護目的。您可以從 Microsoft SQL Server 工作負載的即時快照或現有快照建立複製。</block>
   <block id="9623ff55868a27048ab1f8af19865a58" category="paragraph">從以下克隆類型中進行選擇：</block>
-  <block id="0cd667209ba1928bb0427b9c34fccc5c" category="list-text">*即時快照和複製*：您可以從即時快照建立 Microsoft SQL Server 工作負載的複製。即時快照是根據備份建立的來源資料的時間點副本。克隆儲存在您的公有或私有雲帳戶的物件儲存中。如果資料遺失或損壞，您可以使用克隆來恢復您的工作負載。</block>
   <block id="24e1f95a50968c8afba32ada56159269" category="list-text">*從現有快照複製*：您可以從可用於工作負載的快照清單中選擇現有快照。如果您想從特定時間點建立克隆，此選項很有用。克隆到主存儲或輔助存儲。</block>
   <block id="442c1f9989df3374284c4930ad61deca" category="paragraph">您可以實現以下保護目標：</block>
   <block id="1266af1011cfb1f4a1155423d32259d6" category="paragraph">您可以建立 Microsoft SQL Server 工作負載的複製。克隆是從備份建立的來源資料的副本。克隆儲存在您的公有或私有雲帳戶的物件儲存中。如果資料遺失或損壞，您可以使用克隆來恢復您的工作負載。</block>
@@ -1477,17 +1415,14 @@
   <block id="2a1d395bc8ea4d34d2d0de653b0ca483" category="list-text">從NetApp Backup and Recovery選單中，選擇 *複製*。</block>
   <block id="b24b65db988f919f27863b57062418df" category="list-text">選擇*建立新克隆*。</block>
   <block id="fc3c9ac07c83f451e74212c9c611b0cd" category="list-text">選擇克隆類型：</block>
-  <block id="263c8565a56fc9cee1338445e2ecd218" category="list-text">*從現有快照克隆和刷新資料庫*：選擇克隆的快照並配置克隆的選項。如果您想選擇克隆的快照並配置選項，這將很有幫助。</block>
   <block id="22a9747df4fcda6600928f010255f13d" category="list-text">*即時快照和克隆*：立即對來源資料進行快照並從該快照建立克隆。如果您想要從來源工作負載中的最新資料建立克隆，此選項很有用。</block>
   <block id="a4ff90b0c32ccdad935e744d34c444fd" category="list-text">完成*資料庫來源*部分：</block>
   <block id="695f4384f95690fc983fbdce3ff6e9d6" category="list-text">*單一克隆或批次克隆*：選擇建立單一克隆或多個克隆。如果您選擇*批次複製*，則可以使用已建立的保護群組一次建立多個克隆。如果您想為不同的工作負載建立多個克隆，此選項很有用。</block>
   <block id="cb774ddad741e39d5eac8293855ed186" category="list-text">*來源資料庫主機、執行個體和名稱*：選擇複製的來源資料庫主機、執行個體和名稱。來源資料庫是將建立克隆的資料庫。</block>
   <block id="2f7d350d3fe65b8cb52912184bc13eb7" category="list-text">完成*資料庫目標*部分：</block>
   <block id="7f38a98dca4e28d50ffdd4e70d1272fb" category="list-text">*目標資料庫主機、執行個體和名稱*：選擇複製的目標資料庫主機、執行個體和名稱。目標資料庫是將建立克隆的位置。</block>
-  <block id="37ad09b5fc9eac0f3e23c1c4f9e317fb" category="paragraph">或者，從目標名稱下拉清單中選擇 *Suffix*，並將後綴附加到克隆的資料庫名稱。如果不指定後綴，克隆的資料庫名稱將與來源資料庫名稱相同。</block>
   <block id="33c7a9f80e0270738b2f53f0d17dc32a" category="list-text">*QoS（最大吞吐量）*：為複製選擇服務品質（QoS）最大吞吐量（MBps）。  QoS 定義了克隆的效能特徵，例如最大吞吐量和 IOPS。</block>
   <block id="37b49273c9a13926dac916abd3204dc6" category="list-text">完成*Mount*部分：</block>
-  <block id="87ab5c708e198be9797861286f2d81c4" category="list-text">*自動指派掛載點*：選擇此選項可自動為複製指派掛載點。掛載點是克隆將在物件儲存中掛載的位置。</block>
   <block id="ba8b4d3f86d22c66cce9496f01f41360" category="list-text">*定義掛載點路徑*：輸入複製的掛載點。掛載點是克隆將在物件儲存中掛載的位置。選擇磁碟機號，輸入資料檔路徑，輸入日誌檔案路徑。</block>
   <block id="81e1b4393ce5a82bf9236d29d949e252" category="list-text">選擇還原點：</block>
   <block id="de3839b8d125e88adfb277a547882fa6" category="list-text">*現有快照*：從可用於工作負載的快照清單中選擇現有快照。如果您想從特定時間點建立克隆，此選項很有用。</block>
@@ -1501,9 +1436,7 @@
   <block id="4de1eb06fca003a6a62865125c06ed51" category="list-text">*克隆刷新計劃和到期時間*：如果您選擇*即時複製*，請輸入開始刷新克隆的日期。克隆計劃定義了何時建立克隆。</block>
   <block id="70cf932d9292bbd69ded2413914416ee" category="list-text">*如果計劃到期則刪除克隆*：如果您想在克隆到期日時刪除克隆。</block>
   <block id="42c8d79897e584888df9def8b2398ceb" category="list-text">*刷新克隆頻率*：選擇克隆的刷新頻率。您可以選擇每小時、每天、每週、每月或每季刷新克隆。如果您希望克隆與來源工作負載保持同步，則此選項很有用。</block>
-  <block id="9afe7218901464aef836f1f00288c5ef" category="list-text">*前言和後記*：可選地，指定在創建克隆之前和之後運行的克隆前和克隆後腳本。這些腳本可用於執行其他任務，例如配置複製或發送通知。</block>
   <block id="6f3ec318a7d03c1c478b8a78c38cb19e" category="list-text">*通知*：可選地，指定電子郵件地址以接收有關複製建立狀態以及作業報告的通知。您也可以指定一個 webhook URL 來接收有關複製建立狀態的通知。您可以指定是否需要成功和失敗通知，或只需要其中一個。</block>
-  <block id="b46751469d66299eb9d9677c4e065141" category="list-text">*標籤*：選擇一個或多個標籤，以協助您稍後搜尋資源組，然後選擇*應用程式*。例如，如果您將「HR」作為標籤新增至多個資源群組，則以後可以找到與 HR 標籤關聯的所有資源群組。</block>
   <block id="2d97727e427122b709150b5f4a1cbcbc" category="list-text">當克隆創建完成後，您可以在*庫存*頁面中查看它。</block>
   <block id="81cf121adb942b1ee3a232dfbd071787" category="paragraph">您可以刷新 Microsoft SQL Server 工作負載的克隆。刷新克隆會使用來源工作負載中的最新資料來更新克隆。如果您希望使克隆與來源工作負載保持同步，這將非常有用。</block>
   <block id="b55bb5e4d643379b3f1e865f8af81a9e" category="paragraph">您可以選擇變更資料庫名稱、使用最新的即時快照或從現有生產快照刷新。</block>
@@ -1515,7 +1448,6 @@
   <block id="30d826de8ef0821df1383cf392c54866" category="list-text">*標籤*：輸入一個或多個標籤，以協助您稍後搜尋資源組。例如，如果您將「HR」作為標籤新增至多個資源群組，則以後可以找到與 HR 標籤關聯的所有資源群組。</block>
   <block id="7ae396d8697569c4da682196e15a598f" category="list-text">在刷新確認對話方塊中，若要繼續，請選擇*刷新*。</block>
   <block id="2e7a2fe6aba8a77893665dc04b468dbf" category="section-title">跳過克隆刷新</block>
-  <block id="7d41efc2d32f9ec60952d826d03f219e" category="paragraph">如果您不想使用來源工作負載中的最新資料更新克隆，則可能需要跳過克隆刷新。跳過克隆刷新允許您保持克隆原樣而不進行更新。</block>
   <block id="71625decb35c7e43fdb5deae9f939931" category="list-text">選擇您想要跳過刷新的克隆。</block>
   <block id="acdc6d8215bdc39a7c6ac48e5ff4b6f5" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *跳過刷新*。</block>
   <block id="c613ef03cc363aefacc22f329f86876b" category="list-text">在「跳過刷新確認」對話方塊中，執行以下操作：</block>
@@ -1529,16 +1461,11 @@
   <block id="91a9421f27cf61e52bea5d9c90e7f79e" category="list-text">查看拆分克隆詳細資訊並選擇*拆分*。</block>
   <block id="e249edf19fe073ddd9570fbd4ae541d6" category="list-text">當分裂克隆創建完成後，您可以在*庫存*頁面中查看它。</block>
   <block id="8a65745379abeb0cfae60a1c9411fbf7" category="paragraph">您可以刪除 Microsoft SQL Server 工作負載的複製。刪除克隆會從物件儲存中移除該複製並釋放儲存空間。</block>
-  <block id="0dcbaebd2d0c67351c93ea429ff57403" category="paragraph">如果克隆受到策略保護，則會刪除克隆，包括作業。</block>
   <block id="7d96331ecc4c49d8309c629c038259b6" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *刪除克隆*。</block>
   <block id="443b1721520eef28b9df0cfca4b895f7" category="list-text">在複製刪除確認對話方塊中，查看刪除詳細資訊。</block>
   <block id="6bf252e4479008373232d625cc16f3f0" category="list-text">若要從SnapCenter中刪除克隆的資源，即使複製或其儲存不可訪問，也請選擇「強制刪除」。</block>
   <block id="071238f352b79bf42fc764c1c3e7a672" category="list-text">當克隆被刪除時，它將從*庫存*頁面中刪除。</block>
-  <block id="d53f53fc30ebcedcac10bb63c84a7334" category="summary">您可以將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 Amazon Web Services、Microsoft Azure 和StorageGRID，確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。</block>
-  <block id="970704c6c31da44d60a09e434504ddef" category="doc">使用NetApp Backup and Recovery保護 Microsoft SQL 工作負載概述</block>
-  <block id="26637088d9fc088395262f4cadc1d551" category="paragraph">使用NetApp Backup and Recovery保護您的 Microsoft SQL Server 應用程式數據，從本機ONTAP系統到 Amazon Web Services、Microsoft Azure 或StorageGRID 。根據您建立的策略，備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。</block>
   <block id="920a86bab58426e670d364756915fe89" category="paragraph">3-2-1 方法的優點包括：</block>
-  <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery利用NetApp SnapMirror資料複製技術，透過建立快照副本並將其傳輸到備份位置來確保所有備份完全同步。</block>
   <block id="90611cad8ce642f37b020e9f74335606" category="inline-link-macro">如果從SnapCenter匯入，則配置其他項目</block>
   <block id="4be4857ddf5f778e68cf136f6d4a1b8f" category="list-text"><block ref="4be4857ddf5f778e68cf136f6d4a1b8f" category="inline-link-macro-rx"></block></block>
   <block id="d15c46d418dcb12c5418f755f162b739" category="list-text"><block ref="d15c46d418dcb12c5418f755f162b739" category="inline-link-macro-rx"></block></block>
@@ -1557,7 +1484,6 @@
   <block id="50becc4bb7baee84bd10aa757aaa2048" category="inline-link-macro">管理工作負載清單</block>
   <block id="e5c866c0e49172f48184bec3e11aa6b9" category="list-text"><block ref="e5c866c0e49172f48184bec3e11aa6b9" category="inline-link-macro-rx"></block></block>
   <block id="d66ed6d81bd70c133ddb80e0d8285080" category="list-text"><block ref="d66ed6d81bd70c133ddb80e0d8285080" category="inline-link-macro-rx"></block></block>
-  <block id="8b387432a535fb4b84f9acc0531a283f" category="paragraph">要備份工作負載，通常需要建立管理備份和復原作業的策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>了解更多。</block>
   <block id="3f7e0c8d0c7fc98faaf4d36a5bb06680" category="paragraph-title">支援的備份目標</block>
   <block id="124dee118a2923f54724c274f69ca91a" category="paragraph">NetApp Backup and Recovery可讓您將 Microsoft SQL Server 執行個體和資料庫從下列來源系統備份到公有和私有雲供應商中的下列輔助系統和物件儲存。快照副本駐留在來源系統上。</block>
   <block id="48a431e7da72cf4ddb716b44e3bd3022" category="cell">來源系統</block>
@@ -1588,29 +1514,19 @@
   <block id="7a27f6aeca7faa30d91e24a0b044228e" category="cell">本地ONTAP系統ONTAP S3</block>
   <block id="d4cd0dabcf4caa22ad92fab40844c786" category="cell">不適用</block>
   <block id="046252999ea760a859cd9ed58c250005" category="admonition">「本地ONTAP系統」包括FAS和AFF系統。</block>
-  <block id="b1064fed29b0dc7e3aa35001b7aa5fe8" category="summary">您可以從建立備份的位置還原資料備份，其中包含快照、複製和物件儲存中的備份。檢查要還原的還原位置、還原點和資源類型。</block>
-  <block id="03a7e475e1c12b2c6d0164d66fc949cf" category="doc">使用NetApp Backup and RecoveryMicrosoft SQL 工作負載概述</block>
-  <block id="93538a05b075f118ed03b0213f47df07" category="paragraph">您可以從NetApp Backup and Recovery中移動備份的位置還原 Microsoft SQL Server 資料：快照、複製或物件儲存中的備份。您可以將工作負載還原到原始系統、使用相同雲端帳戶的其他系統或本機ONTAP系統。檢查要還原的還原位置、還原點和資源類型。</block>
   <block id="a1a24114f8ff152b1eaa793979cceb31" category="list-text">從主要位置還原</block>
   <block id="214aa1c07261842a0c66c9807fb461a5" category="list-text">從複製的資源還原</block>
   <block id="cba441d877fe3c83dc3240cc40b07914" category="list-text">從物件儲存備份還原</block>
   <block id="41850d3e69864b055a26374069c9dbda" category="paragraph">您可以將資料還原到最新快照或以下點：</block>
   <block id="66b1424fe6641f4697268af9ed07b5e0" category="list-text">從快照還原</block>
-  <block id="a0310fc93942385f0bbe33726461ece4" category="list-text">恢復到特定時間點。如果您知道文件的名稱和位置以及文件最後處於良好狀態的日期，這將很有幫助。</block>
   <block id="c1f62c4a8bd3bfc797c0a4be8f29b273" category="list-text">還原到最新備份</block>
-  <block id="01e12de62fa77fda2815719aed8ff892" category="section-title">下一步</block>
-  <block id="957b594a5345d19dcb7aee8617ab18dd" category="paragraph">有關如何恢復工作負載的詳細信息，請參閱<block ref="62e2cc937cfdf889c63d65a36a05b5ee" category="inline-link-macro-rx"></block>。</block>
   <block id="9c53b2dcf4ff2026b3d9b30dfa263b65" category="summary">從快照副本、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原資料庫工作負載。</block>
   <block id="4a2c019e4f44d11b6cc64ba3161fb171" category="doc">使用NetApp Backup and RecoveryMicrosoft SQL Server 工作負載</block>
-  <block id="12d4e9f9d243b572a971e5529456a50b" category="paragraph">使用NetApp Backup and Recovery and Recovery從快照副本、複製到二級儲存的工作負載備份或儲存在物件儲存中的備份還原 Microsoft SQL Server 工作負載。您可以將工作負載還原到原始系統、使用相同雲端帳戶的其他系統或本機ONTAP系統。</block>
   <block id="42ace45b519d448bedf9ce14d8cc4c23" category="paragraph">如果您在物件儲存中選擇了備份文件，並且該備份的勒索軟體復原功能處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體復原功能），那麼系統會提示您在復原資料之前對備份檔案執行額外的完整性檢查。我們建議您執行掃描。</block>
   <block id="52386b1f1b11ed7ab3350096c7964c69" category="list-text">當您從備份檔案還原工作負載時， NetApp Backup and Recovery and Recovery會使用備份中的資料建立一個_新_資源。</block>
   <block id="b70369c3c6532f77755358e7ea82a3d2" category="inline-image-macro">顯示恢復資源的流程的圖表</block>
   <block id="2ce2b4590446a5b67b1664d9a59c0e14" category="paragraph"><block ref="2ce2b4590446a5b67b1664d9a59c0e14" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0b4e33e7622acc9618ace6e8ff3afc69" category="section-title">恢復方法</block>
-  <block id="a4e9043cd0d08a3604d4fa5900f2b6c6" category="paragraph">您可以使用下列方法之一來恢復工作負載。通常，根據您的恢復需求選擇以下方法之一：</block>
-  <block id="ab93af0ba0fbf755cb83f2b85d489b69" category="list-text">*從恢復頁面*：當您需要恢復資源但不記得確切名稱或所在位置，或上次處於良好狀態的日期時，請使用此功能。您可以使用過濾器搜尋快照。</block>
-  <block id="4eade6c0159669915da700f6eafaf549" category="list-text">*從庫存頁面*：當您需要從上週或上個月恢復特定資源時使用此選項 - 並且您知道該資源的名稱和位置，以及它最後處於良好狀態的日期。您瀏覽資源清單以找到要復原的資源。</block>
   <block id="c156ce96487fbc2d3146c1025eeb814e" category="section-title">從“恢復”選項恢復工作負載數據</block>
   <block id="ff5f9394e9c4c274ba276dbd8baa7e78" category="paragraph">使用復原選項復原資料庫工作負載。</block>
   <block id="284d26c101f9b764ac03ab9ee1f7d9cc" category="list-text">選擇要還原的資料庫。使用過濾器進行搜尋。</block>
@@ -1650,14 +1566,10 @@
   <block id="a5b572eff428c980edb20994fe7c49f1" category="list-text">選擇要復原的資源所在的主機。</block>
   <block id="c9aaadacbb7ccfbb21c9167dc0b06cb2" category="list-text">選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*查看詳細資訊*。</block>
   <block id="917bc4b9739215b75cd62f3d93879136" category="list-text">在 Microsoft SQL Server 頁面上，選擇「*資料庫*」標籤。</block>
-  <block id="d69ca0b6bfa475ff327b8d26bb282775" category="list-text">在「資料庫」標籤上，選擇顯示「受保護」狀態的資料庫，表示存在可復原的備份。</block>
   <block id="f467c6231a57911e62401cfb0159d95b" category="paragraph">與從「恢復」頁面恢復時出現的三個選項相同：</block>
   <block id="3cc2b93a80a97a7cacb8c0d4f5da6c20" category="list-text">恢復到特定時間點</block>
   <block id="d25e9ce84a1050d163d601d4bd2fa073" category="list-text">繼續執行與「復原」頁面中的復原選項相同的步驟</block>
   <block id="7b588dfa65a0573a51e5ab0e2d3023e9" category="summary">使用NetApp備份和復原保護您的 Oracle 工作負載。</block>
-  <block id="84686185827208a5aa3cd73e8914c726" category="doc">使用NetApp Backup and RecoveryOracle 工作負載</block>
-  <block id="4870aee82774514f58cbe0b5e13295c6" category="paragraph">將 Oracle 資料庫保護群組或資料庫從本機ONTAP系統備份至 Amazon Web Services S3、 NetApp StorageGRID、Microsoft Azure Blob Storage 或ONTAP S3，以確保您的資料受到保護。備份保護群組時， NetApp Console會備份保護群組中包含的資料庫和日誌資料。</block>
-  <block id="256e34b5265109a270fa88b84b389445" category="admonition">若要按排程備份保護群組或單一資料庫，請建立管理備份和還原作業的策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>以取得說明。</block>
   <block id="2fb29b6c97ac2109b4c3d3537ae25b9d" category="inline-link-macro">使用NetApp Backup and Recovery為 Oracle 工作負載建立和管理保護群組</block>
   <block id="02cdaf324b33a661330ff286d04c61aa" category="list-text">建立保護組來管理一組資源的備份和還原作業。看<block ref="c9c15450fe1a04e77c0be05f7471779a" category="inline-link-macro-rx"></block>了解更多。</block>
   <block id="5a232101cd6b911084269b39726e0f05" category="list-text">立即備份保護群組（立即建立按需備份）。</block>
@@ -1669,7 +1581,6 @@
   <block id="77b7ee08ed330c77cd76797cc7019357" category="doc">使用NetApp Backup and Recovery掛載和解除安裝 Oracle 資料庫復原點</block>
   <block id="797c8d8b5a0f5a880bd15fd855682db6" category="paragraph">如果您需要以受控狀態存取資料庫來執行復原操作，則可能需要安裝 Oracle 資料庫復原點。</block>
   <block id="079a3f8ec0bb95d8f0ae5d36f04de7c4" category="section-title">安裝 Oracle 資料庫還原點</block>
-  <block id="3fc01e05055881fda72e906971695293" category="paragraph">如果您將資料庫的保護策略配置為保留存檔日誌，則可以掛載資料庫的復原點來查看對資料庫所做的所有變更的歷史記錄。</block>
   <block id="027d1aa00ef27e7ff911f7a3ecb49c5d" category="list-text">選擇 Oracle 圖塊。</block>
   <block id="3fe9c6f0345265378a65d07de3e0456f" category="list-text">在備份和還原選單中，選擇*Inventory*。</block>
   <block id="872dd4524336673d42ecaa46bc8eb4a9" category="list-text">對於清單中的 Oracle 資料庫工作負載，選擇「*檢視*」。</block>
@@ -1690,7 +1601,6 @@
   <block id="504b4d4156c8604edbbda8b908e689cf" category="list-text">選擇“卸載”確認操作。</block>
   <block id="bb205d6469d1d38895fc74e5fe58b024" category="summary">您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID 的Oracle 虛擬機，確保您的資料受到保護。</block>
   <block id="3e4addf457cac6e6f2f337996275bb1f" category="doc">保護 Oracle 資料庫工作負載概述</block>
-  <block id="5272953587a56b79833b0c22e9ec015b" category="paragraph">使用NetApp Backup and Recovery保護您的 Oracle 資料庫和日誌。 NetApp Backup and Recovery提供快速、節省空間、崩潰一致和資料庫一致的備份和復原作業。您可以將 Oracle 工作負載備份到 Amazon Web Services S3、 NetApp StorageGRID、Microsoft Azure Blob Storage 或ONTAP S3，然後將其還原至本機 Oracle 主機。</block>
   <block id="e58749f44abd3f2817fad6c2ae87fb45" category="paragraph">您可以使用NetApp Backup and Recovery執行與 Oracle 工作負載相關的下列任務：</block>
   <block id="0ef9d15a5323698b079164a26f451715" category="list-text"><block ref="0ef9d15a5323698b079164a26f451715" category="inline-link-macro-rx"></block></block>
   <block id="f7f66fefaac908c86a635d80ae33c9ef" category="inline-link-macro">為 Oracle 工作負載建立和管理保護群組</block>
@@ -1859,7 +1769,6 @@
   <block id="87bf438f6aafcccba8118644c7f4ed8b" category="list-text">* SnapMirror磁碟區和快照格式*：（選用）在管理 Microsoft SQL Server 工作負載備份的政策中輸入您自己的快照名稱。輸入格式和自訂文字。如果您選擇備份到二級存儲，您還可以添加SnapMirror卷前綴和後綴。</block>
   <block id="fb6e9d876191a4c0c156e739e377be59" category="section-title">編輯策略</block>
   <block id="1f5ec7f8a8c15e5d3277be8ae844a249" category="paragraph">您可以編輯備份架構、備份頻率、保留策略和策略的其他設定。</block>
-  <block id="ecee2fc394ac60057e7928bb6138339d" category="admonition">此功能不適用於 VMware Preview 工作負載。</block>
   <block id="f985f1951686384a15ea5ddf855b3cab" category="paragraph">您可以在編輯策略時新增另一個保護級別，但不能刪除保護級別。例如，如果策略僅保護本機快照，則可以將複製新增至輔助儲存或將備份新增至物件儲存。如果您有本機快照和複製，則可以新增物件儲存。但是，如果您有本機快照、複製和物件存儲，則不能刪除其中一個層級。</block>
   <block id="f28c1acceb60dde3fa2b864db8f83957" category="paragraph">如果您正在編輯備份到物件儲存的策略，則可以啟用存檔。</block>
   <block id="eeef4d21ae9c8e573641508f4902329d" category="paragraph">如果您從SnapCenter匯入資源，您可能會遇到SnapCenter中使用的政策與NetApp Backup and Recovery中使用的策略之間的一些差異。看<block ref="323b251497d754074219cdf246ce74d7" category="inline-link-macro-rx"></block>。</block>
@@ -2033,7 +1942,6 @@
   <block id="29881d0b044ceba86593dcfef30e0573" category="list-text">暫停和恢復保護組的備份計畫。</block>
   <block id="99ea4945ef61f5a29b7463a5d1480fe7" category="list-text">選擇要包含在保護群組中的虛擬機器或資料庫。</block>
   <block id="224efd4fdb5f19c474ab2b6ea6b4132b" category="section-title">暫停保護組的備份計劃</block>
-  <block id="8ea08fb46b36f3cd2195756f05e3b2d7" category="paragraph">暫停保護組將暫停該保護組的計畫備份。如果您想暫時停止該群組中工作負載的備份，您可能需要暫停該保護群組。</block>
   <block id="67671aa34b0789a08ab7d6954bfb7122" category="paragraph">當您暫停保護群組時，保護狀態將變更為「維護中」。您可以隨時還原備份計畫。</block>
   <block id="e18d539be2570002127583bafd748cad" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *暫停保護組*。</block>
   <block id="e1bdaded4d7fd6d9209905a6b9ce591a" category="list-text">查看確認訊息並選擇*暫停*。</block>
@@ -2873,7 +2781,6 @@
   <block id="5eb0ad26e5b73df4b25640fc4cecc8b5" category="list-text">在確認對話方塊中，輸入系統的名稱。</block>
   <block id="b2efc38b6f353a6ab5275e1b97a3207b" category="list-text">選擇“進階設定”。</block>
   <block id="faf054b5001a252d9df902ee16e53f79" category="list-text">*強制刪除備份*：指示是否要強制刪除所有備份。</block>
-  <block id="985c6503d77bf7e7b0a1cdf7cb2f8dcc" category="paragraph">在某些極端情況下，您可能會想要NetApp Backup and Recovery不再存取備份。例如，如果服務不再有權存取備份儲存桶或備份受到 DataLock 保護但您不再需要它們，則可能會發生這種情況。以前，您無法自行刪除這些內容，而需要致電NetApp支援。在此版本中，您可以使用選項強制刪除備份（在磁碟區和工作環境層級）。</block>
   <block id="22f12d99e813b34048e25ac4a5f568f3" category="section-title">刪除卷的所有備份文件</block>
   <block id="a8ba6304562632a6eb4762aebfe0d175" category="paragraph">刪除磁碟區的所有備份也會停用該磁碟區的未來備份。</block>
   <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">更多圖標</block>
@@ -2881,7 +2788,6 @@
   <block id="782b223a2a5766a12495d35a0f0fc4a1" category="paragraph">顯示所有備份檔案的清單。</block>
   <block id="2c9220461da540ceac8b243e96929a74" category="list-text">選擇*動作* &gt; *刪除所有備份*。</block>
   <block id="125aa7ed80cb288006b134021f74ae4d" category="list-text">輸入卷名稱。</block>
-  <block id="eb1f707d55b4ea05ecb250f1ee6bee84" category="paragraph">在某些極端情況下，您可能會想要NetApp Backup and Recovery不再存取備份。例如，如果服務中沒有下級有權存取備份儲存桶或備份受到 DataLock 保護但您不再需要它們，則可能會發生這種情況。以前，您無法自行刪除這些內容，而需要致電NetApp支援。在此版本中，您可以使用選項強制刪除備份（在磁碟區和工作環境層級）。</block>
   <block id="0c7a693eba5a0f2f80ac9cdb747411a8" category="section-title">刪除卷的單一備份文件</block>
   <block id="e300bd32052d102b8a28f9965281effd" category="paragraph">如果您不再需要單一備份文件，可以將其刪除。這包括刪除磁碟區 Snapshot 副本的單一備份或物件儲存中的備份。</block>
   <block id="0f077fe78e4dac585cd0607f12f1a2b3" category="paragraph">您無法刪除複製的磁碟區（資料保護磁碟區）。</block>
@@ -3808,7 +3714,6 @@
   <block id="f21e38c1a38f1c4f4e956d882bff761e" category="inline-image-macro">此圖表顯示了備份檔案如何作為 Snapshot 副本存在於來源系統上、作為輔助儲存系統上的複製磁碟區存在以及作為物件儲存中的備份檔案存在。</block>
   <block id="58ead0698b2403892dd8d82de5be7c29" category="paragraph"><block ref="58ead0698b2403892dd8d82de5be7c29" category="inline-image-macro-rx" type="image"></block></block>
   <block id="69cf282ad2d2af37ce5b061e5f12b928" category="paragraph">NetApp Backup and Recovery利用 NetApp 的SnapMirror資料複製技術，透過建立 Snapshot 副本並將其傳輸到備份位置來確保所有備份完全同步。</block>
-  <block id="544723094263b1778fa9139a8dc94c28" category="list-text">現場副本有助於快速恢復，而異地副本則隨時準備著，以防現場副本受到損害。</block>
   <block id="094fa5b5a02089cb6ef9dcfe3de478b1" category="paragraph">必要時，您可以將整個磁碟區、資料夾或一個或多個檔案從任何備份副本還原到相同或不同的系統。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">特徵</block>
   <block id="d7b479d32340f96732225021d096cc62" category="paragraph">*複製功能：*</block>
@@ -4804,4 +4709,73 @@
   <block id="ba74bff4c4deec01ccafcf5a160089e4" category="paragraph">SnapCenter支援資源策略的多個保留值。  NetApp Backup and Recovery僅支援每個資源一個保留值。</block>
   <block id="524363c64fff15aa09ef827516a023c0" category="paragraph">即使層級發生變化， SnapCenter也會在遷移後保留每個策略的SnapMirror標籤。</block>
   <block id="16a81293ba902fc66da927551f9b54a7" category="paragraph">控制台代理程式包括NetApp Backup and Recovery功能。</block>
+  <block id="5023c4ac532ec0c4d3bcb45ab912017b" category="paragraph">使用按需備份，以便在進行系統變更之前保護您的資料。</block>
+  <block id="2d7b174d15c513f1d3517bf8118a70aa" category="admonition">備份使用指派給保護群組或虛擬機器的相同原則。</block>
+  <block id="135489daff067c8c0689c51f8f9dfa0f" category="list-text">多個資料副本可防止內部和外部網路安全威脅。</block>
+  <block id="d6948cb4b08b9cf746550052f3ca9a7d" category="list-text">現場副本可幫助您快速恢復數據，如果現場副本受到損害，您可以使用異地副本。</block>
+  <block id="a7ac7524a020a5d14426a370db992e91" category="paragraph">將您想要保護的工作負載分組到一個保護群組。建立保護組來一起備份和還原工作負載。</block>
+  <block id="5352ebde938dbfee2e240093091d21b6" category="list-text">如果一種媒體發生故障，使用不同類型的媒體可以幫助您恢復。</block>
+  <block id="10a12f1b238b4aca3eea0e189209f95f" category="list-text">您可以從現場副本快速恢復，如果現場副本受到損害，則可以使用異地副本。</block>
+  <block id="04946e97d5c9879a750d6fbb35c8c54a" category="summary">NetApp Backup and Recovery可協助您管理 Microsoft SQL Server 主機、資料庫和執行個體。</block>
+  <block id="e7a5ac87e73475a462d4dc0b02fe041a" category="paragraph">NetApp Backup and Recovery可協助您管理 Microsoft SQL Server 主機、資料庫和執行個體。您可以查看、變更或刪除庫存的保護設定。</block>
+  <block id="cfdfd7a1b72e8e723d4b5a0b7e6afbf5" category="paragraph">刪除不再需要的應用程式。  NetApp Backup and Recovery停止保護並刪除已刪除應用程式的所有備份和快照。</block>
+  <block id="f211d824587f775c16c5bded7ee65614" category="paragraph">若要停止保護 Kubernetes 集群，請停用保護並刪除相關應用程序，然後從NetApp Backup and Recovery中刪除該集群。  NetApp Backup and Recovery不會刪除叢集或其資源；它只會從NetApp Console清單中刪除叢集。</block>
+  <block id="2bba4a20b069f20b81f5d7e00bb55ee1" category="summary">管理NetApp Backup and Recovery中的資源以保護您的資料。</block>
+  <block id="5a32edb5240e680dd91847bce7538e99" category="paragraph">管理NetApp Backup and Recovery中的資源以保護您的資料。控制備份、資料庫、實例、應用程式主機和系統。查看、編輯或刪除資源保護設定。</block>
+  <block id="76be0aa5e848bc95ef63cb71a62a4a8c" category="admonition">驗證該行*位置*列中的本機快照圖示是否顯示為藍色。</block>
+  <block id="c9ba59160e2a933914b5eb21420c64e0" category="summary">使用NetApp Backup and Recovery作業。</block>
+  <block id="e10e8c5d47314e650f29f8a9e66e579f" category="paragraph">使用NetApp Backup and Recovery作業。追蹤您啟動的恢復作業。查看已完成、正在進行或失敗的作業以協助診斷問題。在NetApp Console通知中心啟用電子郵件通知，以便在未登入時隨時了解系統活動。使用控制台時間軸查看從 UI 或 API 啟動的所有操作的詳細資訊。</block>
+  <block id="62d96e21fc365a7f9d8b078e4d5ed7eb" category="paragraph">NetApp Backup and Recovery會將作業資訊保留 15 天，然後刪除作業資訊並將其從作業監視器移除。</block>
+  <block id="c06e8b3ad6c2a4bcf247b5b6ff031cbf" category="admonition">如果您已將ONTAP系統升級至 9.13.x，但在作業監視器中沒有看到正在進行的排程備份作業，請重新啟動NetApp Backup and Recovery。<block ref="bfa346a5b4e1ecd443201d95eab54eb4" category="inline-link-macro-rx"></block>。</block>
+  <block id="2d7e91b503470d39f08e98b06f5d7864" category="paragraph">大多數的過濾器都是不言自明。透過「工作量」篩選器，您可以查看以下類別的作業：</block>
+  <block id="fd5a28f02b854b31443e6f70095cf97f" category="paragraph">您可以在篩選或排序結果後將主作業監控頁面的內容下載為報表。NetApp Backup and Recovery會產生並下載一個 .CSV 文件，您可以根據需要查看該文件並傳送給其他群組。.CSV 檔案包含最多 10,000 行資料。</block>
+  <block id="28309eee9c974a9a7f8e577ac89552ad" category="paragraph">監控保留（備份生命週期）流程以檢查備份、確保其安全並支援稽核。確定備份副本何時過期以追蹤生命週期。</block>
+  <block id="9535df3e89123a36d140c06cf83471aa" category="paragraph">您可以在通知中心查看警報，並配置控制台以發送重要係統活動的電子郵件警報，即使您未登入。<block ref="a993635cface3018acf75d15a7289e44" category="inline-link-rx"></block> 。</block>
+  <block id="63369edef3fcbf27a13a1f4394250d9b" category="paragraph">預設情況下， NetApp Console組織和帳戶管理員會收到所有「嚴重」和「建議」警報的電子郵件。預設情況下，系統不會設定其他使用者和收件者接收通知郵件。為NetApp雲端帳戶中的任何控制台使用者或需要了解備份和復原活動的其他收件者配置電子郵件警報。</block>
+  <block id="5f5f4cee6315d890fa94bb1a326b0d96" category="summary">將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 Amazon Web Services、Microsoft Azure 和StorageGRID ，以確保您的資料受到保護。</block>
+  <block id="e37ce4efad7ee552a69ced8294691e5b" category="paragraph">將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 Amazon Web Services、Microsoft Azure 或StorageGRID。系統會自動建立備份並將其儲存在您的雲端帳戶的物件儲存中以保護資料。</block>
+  <block id="24fa20750f9318bf02e6c8dece85f94d" category="list-text">若要按排程備份工作負載，請建立管理備份和復原作業的策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>以取得說明。</block>
+  <block id="31aacaea95ea11818f2629af38fa3f2c" category="list-text">在開始備份之前配置已發現主機的日誌目錄。</block>
+  <block id="6f74e6b5a59cfaab5656a1be6c164a0a" category="paragraph">在開始備份之前，請先查看工作負載的保護狀態。</block>
+  <block id="457aa988b8eb5473cac5e0469be1df6a" category="paragraph">設定已發現主機的活動日誌路徑，以便在備份工作負載之前追蹤操作狀態。</block>
+  <block id="080eb3bfa30dcebe4f464b99c543203f" category="list-text">輸入主機路徑或瀏覽主機或節點清單以找到要儲存主機日誌的位置。</block>
+  <block id="689e7d0d3bec77daaa3e898a325feb08" category="paragraph">建立保護組來管理多個工作負載的備份和還原作業。保護組是工作負載的邏輯分組。</block>
+  <block id="bfd48fbe75694adad47437674f096479" category="paragraph">在對系統進行變更之前執行按需備份，以確保您的資料受到保護。</block>
+  <block id="cf51cc5e19834617c83934c7925ac274" category="paragraph">暫停計劃以在維護或故障排除期間暫時停止備份。</block>
+  <block id="a46532f4ef2f48598210a6371a54ce44" category="summary">複製 Microsoft SQL Server 應用程式資料以用於開發、測試或保護目的。</block>
+  <block id="634a07db17d43ffa48b0833d4d8ae675" category="doc">使用NetApp Backup and RecoveryMicrosoft SQL Server 工作負載</block>
+  <block id="9a9ce4cb3209a16c6920e90538eadbc2" category="paragraph">使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料複製到 VM 以進行開發、測試或保護。從 SQL Server 工作負載的即時或現有快照建立複製。</block>
+  <block id="4f01a6cf229c637b4b35854f4d232241" category="list-text">*即時快照和複製*：您可以從即時快照建立 Microsoft SQL Server 工作負載的克隆，即時快照是從備份建立的來源資料的時間點副本。克隆儲存在您的公有或私有雲帳戶的物件儲存中。如果資料遺失或損壞，您可以使用克隆來恢復您的工作負載。</block>
+  <block id="4b958757c89a83492b7bbd549a07ee21" category="list-text">*從現有快照克隆和刷新資料庫*：選擇快照並配置克隆選項。</block>
+  <block id="50154417ec4f040ce30712cfee50f7b4" category="paragraph">或者，從目標名稱下拉清單中選擇 *Suffix*，並為克隆的資料庫名稱加上後綴。如果不加入後綴，克隆的資料庫名稱與來源資料庫名稱相同。</block>
+  <block id="58f2d89bc55d8ef8651af1e18e4acfb4" category="list-text">*自動分配掛載點*：自動為物件儲存中的克隆分配掛載點。</block>
+  <block id="13f642fe7002963c8cf22b63ae21a0e6" category="list-text">*前言和後記*：可選地，添加在克隆創建之前和之後運行的腳本。這些腳本可以執行額外的任務，例如設定複製或發送通知。</block>
+  <block id="0bf69b5671c7c924972463627bd22a70" category="list-text">*標籤*：選擇標籤以協助您稍後搜尋資源組，然後選擇*應用程式*。例如，如果您將「HR」作為標籤新增至多個資源群組，則以後可以找到與「HR」標籤關聯的所有資源群組。</block>
+  <block id="8b44463d6dea841eba5655fcddf2d308" category="paragraph">跳過克隆刷新以保持克隆不變。</block>
+  <block id="9c56aad86b05797af73b468bb579fca1" category="paragraph">如果策略保護克隆，則克隆及其作業都會被刪除。</block>
+  <block id="ba0363fe48f14ee1de2dc51cf57a540a" category="summary">使用NetApp Backup and Recovery保護您的 Microsoft SQL Server 應用程式數據，從本機ONTAP系統到 Amazon Web Services、Microsoft Azure 或StorageGRID 。</block>
+  <block id="f67bd1ebeb2e1458c18ee1bfe3a0d5e2" category="doc">使用NetApp Backup and Recovery保護 Microsoft SQL 工作負載概述</block>
+  <block id="a355bd32745a1495313545b192a3533f" category="paragraph">使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 AWS、Azure 或StorageGRID 。系統會根據您的政策自動在您的雲端帳戶中建立並儲存備份。使用 3-2-1 策略：在兩個儲存系統上保留資料的三個副本，在雲端中保留一個副本。</block>
+  <block id="8c08de76609beebf11bb1d984d12384e" category="paragraph">NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照副本並將其傳輸到備份位置來同步備份。</block>
+  <block id="d23f996c9926f1f022cbe22d0fcae8e8" category="paragraph">您可以執行以下操作來保護您的資料：</block>
+  <block id="f59023f77e90026f16f584d31820eb90" category="paragraph">若要備份工作負載，您需要建立管理備份和復原作業的策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>了解更多。</block>
+  <block id="a54794387a0e725b2c0a86422f5c42f4" category="paragraph">使用NetApp Backup and Recovery還原 Microsoft SQL Server 工作負載。使用快照副本、複製到輔助儲存的備份或物件儲存中的備份。將工作負載還原到原始系統、具有相同雲端帳戶的不同系統或本機ONTAP系統。</block>
+  <block id="5f0d7635bc31258066861934b2abce44" category="list-text">如果您知道檔案名稱、位置和最後有效日期，則還原到特定時間點</block>
+  <block id="045eae722cda03b00d9ad8dfdd4cbe51" category="admonition">您需要向雲端提供者支付額外費用才能存取備份檔案。</block>
+  <block id="2215c4c479bee2e93b68b2a226280019" category="paragraph">使用下列方法之一恢復工作負載：</block>
+  <block id="3d1e74249acc11e215f68c784ae29e1f" category="list-text">*從恢復頁面*：當您不知道資源的名稱、位置或最後有效日期時，使用此選項可恢復資源。使用過濾器搜尋快照。</block>
+  <block id="925339af26e35afc6f5984d691aa25af" category="list-text">*從庫存頁面*：當您知道特定資源的名稱、位置和最後有效日期時，使用此選項可恢復該資源。瀏覽清單以尋找資源。</block>
+  <block id="bf094c6c5fccca6c427a43080edf5833" category="list-text">在資料庫選單中，選擇具有「受保護」狀態的資料庫。</block>
+  <block id="ce2efe5d519e4c1242177b404520665a" category="doc">使用NetApp Backup and RecoveryOracle 工作負載</block>
+  <block id="b3b9d779c6c22d1258ffcbda438336c1" category="paragraph">使用NetApp Backup and Recovery將 Oracle 資料庫保護群組或資料庫從本機ONTAP系統備份到雲端存儲，包括 Amazon S3、 NetApp StorageGRID、Microsoft Azure Blob Storage 或ONTAP S3。  NetApp Backup and Recovery每個保護群組中的資料庫和日誌資料。</block>
+  <block id="fe390808083985de8172887380a80c5e" category="admonition">若要按排程備份保護群組或單一資料庫，請建立管理備份和還原作業的策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>以取得說明。</block>
+  <block id="26bbb7b442740e80ed850d884bef0605" category="paragraph">在進行系統變更之前執行按需備份以確保您的資料受到保護。</block>
+  <block id="0dd484dd2e82385c156b95d98fd2f3fa" category="admonition">NetApp Backup and Recovery使用相同的策略。</block>
+  <block id="b5ba243769c03b5476a2b6c06b8c5b5a" category="paragraph">如果您將資料庫的保護策略配置為保留存檔日誌，則可以掛載復原點來查看資料庫變更歷史記錄。</block>
+  <block id="d038c8bfa872280d5c1a567bff169d05" category="paragraph">使用NetApp Backup and Recovery保護 Oracle 資料庫和日誌。獲得快速、節省空間、崩潰一致和資料庫一致的備份和還原。將 Oracle 工作負載備份到 AWS S3、 NetApp StorageGRID、Azure Blob Storage 或ONTAP S3。將備份還原到本機 Oracle 主機。</block>
+  <block id="21214671e7222d24ea30444729853d36" category="paragraph">將您想要保護的工作負載分組到保護群組中，以便一起備份和還原它們。</block>
+  <block id="e1a8b67cb61fcb0e0a3b88e66f93f4cd" category="paragraph">暫停保護組以暫停其計劃的備份。</block>
+  <block id="2efbc86f2f62c8819af426f268c543d5" category="paragraph">刪除保護群組時，也會刪除該群組以及該群組的所有備份計畫。如果不再需要某個保護群組，請將其刪除。</block>
+  <block id="d0be562abb07ac98b80cbaa51990f79d" category="paragraph">在某些極端情況下，您可能會想要NetApp Backup and Recovery不再存取備份。例如，如果服務不再有權存取備份儲存桶或備份受到 DataLock 保護但您不再需要它們，則可能會發生這種情況。以前，您無法自行刪除這些內容，而需要致電NetApp支援。在此版本中，您可以使用選項強制刪除備份（在磁碟區和系統層級）。</block>
+  <block id="fb744a1324313d70fed478c851dab696" category="paragraph">在某些極端情況下，您可能會想要NetApp Backup and Recovery不再存取備份。例如，如果服務中沒有下級有權存取備份儲存桶或備份受到 DataLock 保護但您不再需要它們，則可能會發生這種情況。以前，您無法自行刪除這些內容，而需要致電NetApp支援。在此版本中，您可以使用選項強制刪除備份（在磁碟區和系統層級）。</block>
 </blocks>

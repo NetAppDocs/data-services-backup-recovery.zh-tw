@@ -38,7 +38,7 @@ NetApp Backup and Recovery讓您能夠取消保護並刪除 Kubernetes 應用程
 
 == 刪除 Kubernetes 應用程式
 
-如果您不再需要某個應用程序，可以將其刪除。當您刪除應用程式時， NetApp Backup and Recovery將停止保護應用程式並刪除所有相關的備份和快照。
+刪除不再需要的應用程式。  NetApp Backup and Recovery停止保護並刪除已刪除應用程式的所有備份和快照。
 
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory*。
