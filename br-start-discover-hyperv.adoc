@@ -62,6 +62,8 @@ NetApp Backup and Recovery發現資源後，「清單」頁面會在工作負載
 == 繼續存取NetApp Backup and Recovery儀表板
 
 .步驟
-. 若要顯示NetApp Backup and Recovery儀表板，請從NetApp Console選單中選擇 *儀表板*。
+. 從NetApp Console選單中，選擇 *保護* > *備份和還原*。
+. 選擇一個工作負載圖塊（例如，Microsoft SQL Server）。
+. 從備份和還原選單中，選擇*儀表板*。
 . 檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。
 

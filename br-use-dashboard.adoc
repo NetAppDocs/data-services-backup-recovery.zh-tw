@@ -19,7 +19,12 @@ summary: 監控工作負載的健康狀況可確保您了解工作負載保護�
 *所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員或備份和還原檢視器角色。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .步驟
-. 從NetApp Backup and Recovery選單中，選擇 *儀表板*。
+. 從NetApp Console選單中，選擇 *保護* > *備份和還原*。
+. 選擇一個工作負載圖塊（例如，Microsoft SQL Server）。
+. 從備份和還原選單中，選擇*儀表板*。
++
+您可以查看以下類型的信息：
+
 +
 ** 發現的主機或虛擬機器的數量
 ** 發現的 Kubernetes 叢集數量

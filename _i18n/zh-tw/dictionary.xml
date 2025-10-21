@@ -682,7 +682,6 @@
   <block id="98ab4e23cce41ca38b39c7baf6ef4567" category="admonition">此過程可能需要幾分鐘。</block>
   <block id="d4908a7dd622060706f5e0df98a716da" category="paragraph">NetApp Backup and Recovery發現資源後，「清單」頁面會在工作負載清單中顯示 Hyper-V 工作負載。</block>
   <block id="8c75bc4aab98ebfa4607c6737296d0fa" category="section-title">繼續存取NetApp Backup and Recovery儀表板</block>
-  <block id="4a94cfaf243c22ac5a3b2acf1849db11" category="list-text">若要顯示NetApp Backup and Recovery儀表板，請從NetApp Console選單中選擇 *儀表板*。</block>
   <block id="8c0d3ed018f04fbf259db34d9167eae7" category="list-text">檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。</block>
   <block id="dd9e4491810d247bd97912faae187a39" category="summary">NetApp Backup and Recovery需要先發現工作負載，以便您使用該服務。</block>
   <block id="dfbbf83657db8e9ef8d6ee3a468873c2" category="doc">探索NetApp Backup and Recovery中的 Kubernetes 工作負載</block>
@@ -705,7 +704,6 @@
   <block id="6b3946603d5588826f1cd3f2695b8542" category="paragraph">該集群已新增至清單。</block>
   <block id="95f06f6ac101b19d86ae2a17fb3eb848" category="list-text">在關聯的 Kubernetes 工作負載中選擇「檢視」以查看該工作負載的應用程式、叢集和命名空間清單。</block>
   <block id="b0719c20a836424f725e51c9b181748d" category="paragraph">請依照以下步驟查看NetApp Backup and Recovery儀表板。</block>
-  <block id="0023e6c28000b2b0e540612bd4511db3" category="list-text">從頂部選單中選擇*儀表板*。</block>
   <block id="09799d4864834161536cca195023364b" category="inline-link-macro">了解儀表板顯示的內容</block>
   <block id="d5292ed1370bb405095587cd10827f95" category="paragraph"><block ref="2a35d34f81dbac907e6068b45b5d538a" category="inline-link-macro-rx"></block>。</block>
   <block id="a8d8543f27c131c1d9b3ca0cf9f1f4ea" category="summary">NetApp Backup and Recovery需要先發現工作負載，以便您保護它們。</block>
@@ -721,7 +719,6 @@
   <block id="4eefc3e53a1cd35eca7d32b6b2c550f5" category="list-text">選擇使用根憑證或非根憑證。</block>
   <block id="87f459dd6c99dc89040246d5ef818100" category="list-text">*主機註冊*：新增的 KVM 主機。輸入主機的 FQDN 或 IP 位址、憑證、控制台代理程式和連接埠號碼。</block>
   <block id="238fb750ebdea9faf36668536aaa8b42" category="paragraph">KVM 工作負載顯示在「庫存」頁面的工作負載清單中。</block>
-  <block id="bcfa92e95d27d2c808d23768de744fd9" category="list-text">若要顯示NetApp Backup and Recovery儀表板，請從頂部選單中選擇「*儀表板*」。</block>
   <block id="0a6dc8ac33152480a18098d8eb98ccb6" category="doc">發現NetApp Backup and Recovery中的 Oracle 工作負載</block>
   <block id="945f74309f719db5d0fb0d1bb5a31781" category="paragraph">NetApp Backup and Recovery需要先發現您的 Oracle 資料庫，以便您可以保護它們。</block>
   <block id="bf36d800e1bbaf0ef44cd361867e4e09" category="section-title">新增 Oracle 主機並發現資源</block>
@@ -788,7 +785,6 @@
   <block id="80be79a75ac4a79f740ad2838c734534" category="list-text">*使用手動安裝*：勾選此方塊可手動安裝插件。</block>
   <block id="628bc160a519e5ae69b6c8aa88610900" category="list-text">*新增叢集中的所有主機*：選取此方塊可在發現期間將叢集中的所有主機新增至NetApp Backup and Recovery 。</block>
   <block id="b7dfb6860d9af743a7d3f0fe2adfde3d" category="list-text">*跳過選購的預安裝檢查*：勾選此方塊可跳過選購的預安裝檢查。例如，如果您知道記憶體或空間考慮因素將在不久的將來發生變化，並且您想立即安裝插件，那麼您可能想要這樣做。</block>
-  <block id="413f1bdf68093f037d6630a5904e6a17" category="list-text">若要顯示NetApp Backup and Recovery儀表板，請從備份和復原選單中選擇 *儀表板*。</block>
   <block id="2a9ab4f690bade887dade42f4a0f412b" category="inline-link">NetApp Console部署模式</block>
   <block id="02a0978d1df3ca052a64d05249709cc3" category="summary">您可以透過從雲端供應商購買按使用量付費或年度市場訂閱來獲得NetApp Backup and Recovery 的許可，或透過從NetApp購買自帶許可證來獲得許可。需要有效的許可證才能在系統上啟動NetApp Backup and Recovery and Recovery 、建立生產資料的備份以及將備份資料還原到生產系統。</block>
   <block id="d44c500b8ff5c565a7d3b02d14def6a3" category="paragraph">您可以透過從雲端供應商購買按使用量付費 (PAYGO) 或年度市場訂閱 * NetApp Intelligent Services* 來獲得NetApp Backup and Recovery許可，或透過從NetApp購買自帶許可 (BYOL)。需要有效的許可證才能在系統上啟動NetApp Backup and Recovery and Recovery 、建立生產資料的備份以及將備份資料還原到生產系統。</block>
@@ -936,7 +932,6 @@
   <block id="a160325dcdf365b6a979dfed5c7d50f7" category="doc">在NetApp Backup and Recovery儀表板上查看保護健康狀況</block>
   <block id="2da92f995ab136dd344c314ba2b4eed1" category="paragraph">監控工作負載的健康狀況可確保您了解工作負載保護的問題並採取措施解決這些問題。在NetApp Backup and Recovery儀表板上查看備份和復原的狀態。您可以查看系統摘要、保護摘要、作業摘要、復原摘要等。</block>
   <block id="f8dd3e1869946d83a9dde01dd1d1532b" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員或備份和還原檢視器角色。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
-  <block id="cb8f96f7586f61e5cb6878a228c22371" category="list-text">從NetApp Backup and Recovery選單中，選擇 *儀表板*。</block>
   <block id="786dc54a357443785ac613f07c08cc8f" category="list-text">發現的主機或虛擬機器的數量</block>
   <block id="6393f4da4761be4d85c7778d5e5ebdea" category="list-text">發現的 Kubernetes 叢集數量</block>
   <block id="54b82ae02ee9c233cf025fb2566edaf9" category="list-text">物件儲存上的備份目標數量</block>
@@ -4776,4 +4771,7 @@
   <block id="96de4b90f5864c84829fbe7735879827" category="list-text">*iGroup 設定*：選擇克隆的 iGroup。iGroup 是用於存取複製的啟動器的邏輯分組。您可以選擇現有的 iGroup 或建立一個新的 iGroup。從主或輔助ONTAP儲存系統中選擇 iGroup。</block>
   <block id="5261c1383d98ed2b1e8b4a1fd943a918" category="list-text">*如果還原前的交易日誌備份失敗，則退出還原*：如果交易日誌備份失敗，則停止還原作業。</block>
   <block id="8f40cc47127edbc609e36af0ad86f259" category="list-text">輸入報告發送詳情：如果您希望透過電子郵件發送報告，請選取*透過電子郵件發送報告*。輸入您想要接收報告的電子郵件地址。</block>
+  <block id="e666fdc6314d0f6cb22614788075b3bc" category="list-text">選擇一個工作負載圖塊（例如，Microsoft SQL Server）。</block>
+  <block id="55398f7948e83c03d38dfb4b136d75ee" category="list-text">從備份和還原選單中，選擇*儀表板*。</block>
+  <block id="4837f0befea6b35d3b9827d282853ed9" category="paragraph">您可以查看以下類型的信息：</block>
 </blocks>
