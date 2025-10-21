@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: prev-vmware-backup-aws.html 
-keywords: backing up, back up, backup, backup application data, Amazon Web, services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, bluexp 
+keywords: backing up, back up, backup, backup application data, Amazon Web, services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
 ---
 = 在NetApp Backup and Recovery中將資料儲存備份到 Amazon Web Services
