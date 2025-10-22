@@ -4774,4 +4774,6 @@
   <block id="e666fdc6314d0f6cb22614788075b3bc" category="list-text">選擇一個工作負載圖塊（例如，Microsoft SQL Server）。</block>
   <block id="55398f7948e83c03d38dfb4b136d75ee" category="list-text">從備份和還原選單中，選擇*儀表板*。</block>
   <block id="4837f0befea6b35d3b9827d282853ed9" category="paragraph">您可以查看以下類型的信息：</block>
+  <block id="70cc82710208295496c70c203368aaf9" category="paragraph">此版本的ONTAP磁碟區工作負載引入了以下增強功能：</block>
+  <block id="bb13349ac4c9ef7d368732d3a4fdabed" category="paragraph">從ONTAP 9.17.1 及更新版本開始，DataLock 現已受 Google Cloud Platform 支援。這補充了 Amazon AWS、Microsoft Azure 和NetApp StorageGRID現有的 DataLock 支援。</block>
 </blocks>
