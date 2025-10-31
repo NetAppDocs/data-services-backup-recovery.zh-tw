@@ -135,6 +135,27 @@ vCenter 管理員帳號必須具有所需的 vCenter 權限。
 * libvirt 版本 10.5.0 或更高版本
 
 
+[NOTE]
+====
+若要啟用對非 root 使用者管理的 KVM 虛擬機器的保護，請依照下列步驟操作：
+
+. 將磁碟區掛載為 NFS3 類型，以避免使用 `nobody` 使用者和群組。
+. 使用以下命令將非root使用者新增至 `qemu` 在保留現有群體的同時，組成新的群體：
++
+[source, console]
+----
+usermod -aG qemu <non-root-user>
+----
+. 使用以下命令將掛載路徑的所有權授予… `qemu` 使用者和群組，並更改掛載路徑的權限：
++
+[source, console]
+----
+chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
+----
+. 如果存在 NetApp_SnapCenter_Backups 目錄，請將其刪除。
+
+
+====
 
 
 == 保護 Oracle 工作負載的要求

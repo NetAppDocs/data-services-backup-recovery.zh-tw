@@ -4776,4 +4776,9 @@
   <block id="4837f0befea6b35d3b9827d282853ed9" category="paragraph">您可以查看以下類型的信息：</block>
   <block id="70cc82710208295496c70c203368aaf9" category="paragraph">此版本的ONTAP磁碟區工作負載引入了以下增強功能：</block>
   <block id="bb13349ac4c9ef7d368732d3a4fdabed" category="paragraph">從ONTAP 9.17.1 及更新版本開始，DataLock 現已受 Google Cloud Platform 支援。這補充了 Amazon AWS、Microsoft Azure 和NetApp StorageGRID現有的 DataLock 支援。</block>
+  <block id="a0fe305acb95f37513221f1fa15cc736" category="paragraph">若要啟用對非 root 使用者管理的 KVM 虛擬機器的保護，請依照下列步驟操作：</block>
+  <block id="7038d2812762c5a3340bd687f860b041" category="list-text">將磁碟區掛載為 NFS3 類型，以避免使用<block ref="6e854442cd2a940c9e95941dce4ad598" prefix=" " category="inline-code"></block> 使用者和群組。</block>
+  <block id="36d8cadfad50f92ea039929a8bfc7450" category="list-text">使用以下命令將非root使用者新增至<block ref="5b015a9aa658c93e9ef31fbd0e83d2b9" prefix=" " category="inline-code"></block> 在保留現有群體的同時，組成新的群體：</block>
+  <block id="aa1cd3801b770b27b2d088367602a652" category="list-text">使用以下命令將掛載路徑的所有權授予…<block ref="5b015a9aa658c93e9ef31fbd0e83d2b9" prefix=" " category="inline-code"></block> 使用者和群組，並更改掛載路徑的權限：</block>
+  <block id="fba88ec9b188c84767bd0e321c7662a9" category="list-text">如果存在 NetApp_SnapCenter_Backups 目錄，請將其刪除。</block>
 </blocks>
