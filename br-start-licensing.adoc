@@ -111,11 +111,9 @@ ifdef::aws[]
 查看 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP授權主題"^]了解有關此許可選項的更多資訊。
 
 +
-如果您想使用此選項，您可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 AWS Marketplace。 endif::aws[]
+如果您想使用此選項，可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 AWS Marketplace。
 
 
-
-ifdef::azure[]
 
 使用 Azure 時，有兩種年度合約可供選擇 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp["Azure 市集頁面"^]對於Cloud Volumes ONTAP和本機ONTAP系統：
 
@@ -128,15 +126,13 @@ ifdef::azure[]
 查看 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP授權主題"^]了解有關此許可選項的更多資訊。
 
 +
-如果您想使用此選項，您可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 Azure 市場。 endif::azure[]
+如果您想使用此選項，可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 Azure Marketplace。
 
 
-
-ifdef::gcp[]
 
 當您使用 GCP 時，請聯絡您的NetApp銷售代表購買年度合約。該合約在 Google Cloud Marketplace 中以私人優惠形式提供。
 
-NetApp與您分享專屬優惠後，您可以在NetApp Backup and Recovery啟動期間從 Google Cloud Marketplace 訂閱時選擇年度方案。 endif::gcp[]
+NetApp提供您專屬優惠後，您可以在啟動NetApp Backup and Recovery時透過 Google Cloud Marketplace 訂閱並選擇年度方案。
 
 
 

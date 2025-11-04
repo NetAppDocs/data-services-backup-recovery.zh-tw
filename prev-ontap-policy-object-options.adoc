@@ -19,11 +19,9 @@ NetApp Backup and Recovery讓您能夠為本機ONTAP和Cloud Volumes ONTAP系統
 
 NOTE: 這些策略設定僅與備份到物件儲存相關。這些設定都不會影響您的快照或複製策略。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 
 
 == 備份計畫選項

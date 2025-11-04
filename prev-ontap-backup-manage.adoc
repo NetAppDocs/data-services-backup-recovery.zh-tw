@@ -19,11 +19,9 @@ summary: 透過NetApp Backup and Recovery，您可以透過變更備份計畫、
 
 CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更備份檔案。這可能會損壞檔案並導致不受支援的配置。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 
 
 == 查看系統中磁碟區的備份狀態

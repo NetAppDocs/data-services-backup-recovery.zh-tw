@@ -16,11 +16,9 @@ summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載
 [role="lead"]
 NetApp Backup and Recovery使您能夠建立最多三個來源磁碟區副本來保護您的資料。在磁碟區上啟用備份和還原時，您可以選擇許多選項，因此您應該檢查您的選擇以做好準備。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 我們將討論以下選項：
 
 * 您將使用哪些保護功能：快照副本、複製磁碟區和/或備份到雲

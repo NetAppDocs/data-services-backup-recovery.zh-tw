@@ -16,11 +16,9 @@ summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載
 [role="lead"]
 完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從Cloud Volumes ONTAP系統備份到 Google Cloud Storage。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 
 
 == 驗證對您的配置的支持
@@ -74,7 +72,7 @@ NOTE: 啟用NetApp Backup and Recovery來存取 Google Cloud Storage 儲存桶�
 . 選擇*編輯角色*來更新角色的權限。
 . 選擇*新增權限*為角色新增下列新權限。
 +
-[source, json]
+[source, console]
 ----
 bigquery.jobs.get
 bigquery.jobs.list
@@ -100,7 +98,7 @@ bigquery.tables.create
 * 您需要驗證控制台代理程式的角色是否包含這些必要的權限：
 
 
-[source, json]
+[source, console]
 ----
 cloudkms.cryptoKeys.get
 cloudkms.cryptoKeys.getIamPolicy
@@ -226,7 +224,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 . 在 https://console.cloud.google.com["Google 雲端控制台"^]，轉到*角色*頁面。
 . https://cloud.google.com/iam/docs/creating-custom-roles#creating_a_custom_role["創建新角色"^]具有以下權限：
 +
-[source, json]
+[source, console]
 ----
 storage.buckets.create
 storage.buckets.delete
@@ -280,7 +278,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 * 您需要有密鑰環和密鑰名稱，以便可以在啟動精靈中新增此資訊。 https://cloud.google.com/kms/docs/cmek["了解有關客戶管理加密金鑰的更多信息"^] 。
 * 您需要驗證控制台代理程式的角色是否包含這些必要的權限：
 +
-[source, json]
+[source, console]
 ----
 cloudkms.cryptoKeys.get
 cloudkms.cryptoKeys.getIamPolicy

@@ -18,11 +18,9 @@ summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載
 
 您可以將資料儲存備份至 Amazon Web Services S3、Microsoft Azure Blob、Google Cloud Platform 和StorageGRID ，並將虛擬機器還原回SnapCenter Plug-in for VMware vSphere。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 有關保護虛擬機器工作負載的說明，請參閱以下主題：
 
 * link:prev-vmware-policy-create.html["為 VMware 工作負載建立策略"]

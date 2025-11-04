@@ -16,11 +16,9 @@ summary: 使用NetApp Backup and Recovery，可以從備份文件還原整個ONT
 [role="lead"]
 您可以從建立備份的位置取得ONTAP磁碟區資料的備份：Snapshot 副本、複製的磁碟區以及儲存在物件儲存中的備份。您可以從這些備份位置中的任何一個還原特定時間點的資料。使用NetApp Backup and Recovery，可以從備份文件還原整個ONTAP卷，或者如果只需要還原幾個文件，則可以還原資料夾或單一文件。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 * 您可以將*磁碟區*（作為新磁碟區）還原到原始系統、使用相同雲端帳戶的其他系統或本機ONTAP系統。
 * 您可以將*資料夾*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區或本機ONTAP系統上的磁碟區。
 * 您可以將*檔案*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區或本機ONTAP系統上的磁碟區。

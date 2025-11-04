@@ -16,11 +16,9 @@ summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載
 [role="lead"]
 NetApp Backup and Recovery功能，用於保護和長期存檔您的ONTAP磁碟區資料。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 啟動後，備份和復原會建立區塊級、增量永久備份，這些備份儲存在另一個ONTAP叢集和雲端中的物件儲存中。除了來源磁碟區之外，您還將擁有：
 
 * 來源系統上磁碟區的快照副本

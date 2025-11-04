@@ -834,14 +834,11 @@
   <block id="c6b7de80c7a26cff06eecf17f7d3c273" category="list-text">「CVO Professional」計畫可讓您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery。這包括使用許可證對Cloud Volumes ONTAP系統進行無限制備份（備份容量不計入許可容量）。此選項不允許您備份本機ONTAP資料。</block>
   <block id="5f0364e373bcb99c02ad1b8359683908" category="inline-link">Cloud Volumes ONTAP授權主題</block>
   <block id="8bf40ad9f866315020ec4fdd4f65701a" category="paragraph">查看<block ref="efcb71a951fd69a7db06309cdcce3842" category="inline-link-rx"></block>了解有關此許可選項的更多資訊。</block>
-  <block id="0b97613d452c304bdd00b00b89019bd9" category="paragraph">如果您想使用此選項，您可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 AWS Marketplace。 endif::aws[]</block>
   <block id="bd0202b4a5e368ede75c41822527f8dd" category="inline-link">Azure 市集頁面</block>
   <block id="ba52c601f575024f72fb5f7ac8154b76" category="paragraph">使用 Azure 時，有兩種年度合約可供選擇<block ref="d5a65c1c4876b0fa6968c9e08ffea7e8" category="inline-link-rx"></block>對於Cloud Volumes ONTAP和本機ONTAP系統：</block>
   <block id="f201c550f444b5128aeb063bf930d1e2" category="inline-link">將訂閱與您的 Azure 憑證關聯</block>
   <block id="bb2a4ab21c5ccf409e44b59faacde869" category="paragraph">如果您想使用此選項，請從 Marketplace 頁面設定您的訂閱，然後<block ref="ee52880e3726e54668f91a4b65aa4b29" category="inline-link-rx"></block>。請注意，您還需要使用此年度合約訂閱來支付您的Cloud Volumes ONTAP系統的費用，因為您只能在控制台中為您的 Azure 憑證指派有效訂閱。</block>
-  <block id="3171104ba9fba92f7a3e17caa85af873" category="paragraph">如果您想使用此選項，您可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 Azure 市場。 endif::azure[]</block>
   <block id="78cb5753f269296b8cbe81558d864e4f" category="paragraph">當您使用 GCP 時，請聯絡您的NetApp銷售代表購買年度合約。該合約在 Google Cloud Marketplace 中以私人優惠形式提供。</block>
-  <block id="855947b446550d6dbeba8337db6ee4ab" category="paragraph">NetApp與您分享專屬優惠後，您可以在NetApp Backup and Recovery啟動期間從 Google Cloud Marketplace 訂閱時選擇年度方案。 endif::gcp[]</block>
   <block id="f795b2e1a1434e0b0c432d97df55b423" category="section-title">使用NetApp Backup and RecoveryBYOL 許可證</block>
   <block id="70af97100aa32faf0090b5c729f50df0" category="paragraph">NetApp提供的自備授權的有效期限為 1 年、2 年或 3 年。您只需為您保護的資料付費，該費用根據正在備份的來源ONTAP磁碟區的邏輯使用容量（任何效率之前）計算。此容量也稱為前端兆位元組 (FETB)。</block>
   <block id="b323a5cd735592858ae199d4fb24a0ed" category="paragraph">BYOL NetApp Backup and Recovery許可證是一種浮動許可證，其總容量在與您的NetApp Console組織或帳戶關聯的所有系統之間共用。對於ONTAP系統，您可以透過執行 CLI 命令來粗略估計所需的容量<block ref="2a47fed7b3c4b7d59e03f10c018cf5cc" prefix=" " category="inline-code"></block>對於您計劃備份的磁碟區。</block>
@@ -1912,7 +1909,6 @@
   <block id="9f292a76282f4f6731d03460bcd3b924" category="doc">使用NetApp Backup and Recovery保護 VMware 工作負載概述</block>
   <block id="c59e55a8f797ea977bb075c0da4e3733" category="paragraph">使用NetApp Backup and Recovery保護您的 VMware VM 和資料儲存。 NetApp Backup and Recovery提供快速、節省空間、崩潰一致和 VM 一致的備份和復原作業。您可以將 VMware 工作負載備份到 Amazon Web Services S3 或StorageGRID ，並將 VMware 工作負載還原至本機 VMware 主機。</block>
   <block id="13a7ab00fe9ae146021f5c5ab40ca443" category="paragraph">使用NetApp Backup and Recovery實作 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端保留 1 個副本。3-2-1 方法的優點包括：</block>
-  <block id="ba84ec6936d5a457a5ab6e919e49c77e" category="paragraph">*注意* 若要切換到NetApp Backup and Recovery UI 版本，請參閱<block ref="3a517a59babeb4a2a4c0dc21bafb9259" category="inline-link-macro-rx"></block>。</block>
   <block id="eb2d112b017e683992cc9b9b338c90a1" category="paragraph">您可以使用NetApp Backup and Recovery執行與 VMware 工作負載相關的下列任務：</block>
   <block id="4c90ef6c5dc037251bf65afdeeb1ee6c" category="list-text"><block ref="4c90ef6c5dc037251bf65afdeeb1ee6c" category="inline-link-macro-rx"></block></block>
   <block id="fa3a5087c48da1a523ef45fa2253ea19" category="inline-link-macro">為 VMware 工作負載建立和管理保護群組</block>
@@ -2302,7 +2298,6 @@
   <block id="88c51ea85ad6413ada0a99db3150b7ad" category="list-text"><block ref="88c51ea85ad6413ada0a99db3150b7ad" category="inline-link-macro-rx"></block></block>
   <block id="2290b2de6091d65659ff672552a33073" category="doc">使用NetApp Backup and Recovery將Cloud Volumes ONTAP資料備份到 Amazon S3</block>
   <block id="6dd5730fa3cd9ee8d3ed7531a2a5d9be" category="paragraph">完成NetApp Backup and Recovery中的幾個步驟即可開始將磁碟區資料從Cloud Volumes ONTAP系統備份到 Amazon S3。</block>
-  <block id="0011ab0d93b0c9ad9321732a590a280b" category="paragraph">*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱<block ref="e56b09183f5489111204017fecace77e" category="inline-link-macro-rx"></block>。</block>
   <block id="b70f6a951e89b0cf19d78de39f9fd2ce" category="section-title">驗證對您的配置的支持</block>
   <block id="f540dcb6244343752d809a32f46fe48c" category="paragraph">在開始將磁碟區備份到 S3 之前，請閱讀以下要求以確保您具有受支援的配置。</block>
   <block id="61e795ce0fde928ad06964786c5284cb" category="paragraph">下圖顯示了每個組件以及您需要在它們之間準備的連接。</block>
@@ -2861,7 +2856,6 @@
   <block id="16b737dd94da3821905b2064f8068f45" category="inline-link">為 SVM 配置 DNS 服務</block>
   <block id="e30347a67bfdcb246f056cfd9aa4efbd" category="list-text">必須為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何<block ref="f1c08d303d78e879204468f0ff96d977" category="inline-link-rx"></block>。</block>
   <block id="35668631a609fe2e8e53c6ff298d9d50" category="list-text">如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery透過連接埠 443 從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。</block>
-  <block id="e37afd2469ef3f0bffe0633c97d91c16" category="list-text">如果您在 AWS 中使用私有 VPC 介面端點進行 S3 連接，那麼為了使用 HTTPS/443，您需要將 S3 端點憑證載入到ONTAP叢集中。<block ref="a9add63f8269701d766cf4e98ddd02f6" category="inline-xref-macro-rx"></block>。  *[確保您的ONTAP叢集有權存取 S3 儲存桶。</block>
   <block id="85c59068ab95a15b1e1949adae268196" category="section-title">準備 Amazon S3 作為備份目標</block>
   <block id="a8b807b8ea1b15db459046c0c0aae9df" category="paragraph">準備 Amazon S3 作為備份目標涉及以下步驟：</block>
   <block id="cf9f41217020d9194c2e913c73ab3139" category="list-text">設定 S3 權限。</block>
@@ -4361,7 +4355,6 @@
   <block id="1a26e136f07c381d3ef8cb588918beec" category="list-text">使用下列命令還原NetApp Backup and RecoveryMySQL DB：</block>
   <block id="9dec29ea058162b5bb29413e333f6c4c" category="list-text">使用下列 SQL 指令驗證NetApp Backup and Recovery MySQL DB 是否已正確還原：</block>
   <block id="1a411806f1f54597b7259137d2e753db" category="paragraph">輸入密碼。</block>
-  <block id="3ec8f556a760c1ea438f0c8012517d09" category="paragraph">檢查顯示的捲是否與原始環境中存在的捲相同。</block>
   <block id="83760b08057d3103fac3ba1635b60ee2" category="list-text">將 Indexed Catalog 備份 zip 檔案（我們將使用範例檔案名稱「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」）從備份位置複製到「/opt/application/netapp/cbs」資料夾中的新控制台代理主機。</block>
   <block id="39ba61f148a69dbb1215b6b10c98b11a" category="list-text">使用下列命令解壓縮「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」檔案：</block>
   <block id="3b3267745861675e9a5e88b689b4cda8" category="list-text">執行 *ls* 命令以確保已建立資料夾“catalogdb1”，其下有子資料夾“changes”和“snapshots”。</block>
@@ -4781,4 +4774,10 @@
   <block id="22d1aa2ecc719d7521d0a8859fe171f9" category="paragraph">若要還原卷，您需要來源系統名稱、儲存虛擬機器、磁碟區名稱和備份檔案日期。</block>
   <block id="0e9332d24e8223d33f0f13c12dc28e78" category="list-text">選擇“恢復”返回恢復儀表板並查看恢復操作的進度。</block>
   <block id="dc48f529dae728780c55fde51597adee" category="paragraph">之後<block ref="d2ec4e5679d82dbce801a1d23c311912" category="inline-xref-macro-rx"></block>，您可以使用「搜尋和還原」還原磁碟區、資料夾和檔案。這使您可以使用廣泛的過濾器從所有備份檔案中找到要還原的確切檔案或磁碟區。</block>
+  <block id="b28e4b1f62c3596ace4ffe33a5315f55" category="paragraph">如果您想使用此選項，可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 AWS Marketplace。</block>
+  <block id="4f3497b4ac779d63c0943697b51c6c4c" category="paragraph">如果您想使用此選項，可以在建立Cloud Volumes ONTAP系統時設定年度合同，控制台會提示您訂閱 Azure Marketplace。</block>
+  <block id="d192426871b83b5c662b0cfa51cfd2e6" category="paragraph">NetApp提供您專屬優惠後，您可以在啟動NetApp Backup and Recovery時透過 Google Cloud Marketplace 訂閱並選擇年度方案。</block>
+  <block id="60c015b8ddd8d831a4c02882c86d1b96" category="list-text">如果您在 AWS 中使用私有 VPC 介面端點進行 S3 連接，那麼為了使用 HTTPS/443，您需要將 S3 端點憑證載入到ONTAP叢集中。<block ref="a9add63f8269701d766cf4e98ddd02f6" category="inline-xref-macro-rx"></block>。</block>
+  <block id="7f04f32c4656d50b5019019cf54c568c" category="list-text">確保您的ONTAP叢集有權存取 S3 儲存桶。</block>
+  <block id="8caf5a345895253ff6b6c49a438599d4" category="list-text">請確保顯示的磁碟區與原始環境中的磁碟區相同。</block>
 </blocks>

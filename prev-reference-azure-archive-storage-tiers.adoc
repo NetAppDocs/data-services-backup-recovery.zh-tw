@@ -18,7 +18,8 @@ NetApp Backup and Recovery支援一個 Azure 存檔存取層和大多數區域�
 
 []
 ====
-*注意* 若要切換到NetApp Backup and Recovery UI 版本，請參閱link:br-start-switch-ui.html["切換到先前的NetApp Backup and RecoveryUI"]。
+
+NOTE: 若要切換至NetApp Backup and Recovery UI 版本或從 NetApp Backup and Recovery UI 版本切換，請參閱link:br-start-switch-ui.html["切換到先前的NetApp Backup and RecoveryUI"]。
 
 ====
 

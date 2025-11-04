@@ -23,11 +23,9 @@ NOTE: 此功能從 2025 年 5 月發布的NetApp Backup and Recovery版本 4.0.3
 
 SnapMirror到 Cloud Resync 可跨環境保持備份連續性，因此更容易在混合雲和多雲環境中管理資料。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 .開始之前
 確保滿足以下先決條件：
 

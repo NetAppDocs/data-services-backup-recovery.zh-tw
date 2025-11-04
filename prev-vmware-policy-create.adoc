@@ -16,11 +16,9 @@ summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載
 [role="lead"]
 您可以建立一個策略或使用NetApp Backup and Recovery中提供的以下預定義策略之一。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 .開始之前
 * 如果您不想編輯預定義策略，則應該建立策略。
 * 要將備份從物件儲存移至歸檔存儲，您應該執行ONTAP 9.10.1 或更高版本，並且 Amazon Web Services 或 Microsoft Azure 應該是雲端提供者。

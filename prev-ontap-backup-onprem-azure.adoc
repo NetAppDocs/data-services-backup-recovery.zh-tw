@@ -19,11 +19,9 @@ summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載
 
 NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 
 
 == 識別連接方法
@@ -113,7 +111,7 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 +
 [%collapsible]
 ====
-[source, json]
+[source, console]
 ----
 "Microsoft.Storage/storageAccounts/listkeys/action",
 "Microsoft.Storage/storageAccounts/read",

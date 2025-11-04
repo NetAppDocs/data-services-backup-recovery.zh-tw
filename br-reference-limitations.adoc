@@ -56,14 +56,10 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 +
 有關這些加密類型的說明，請參閱https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["配置NetApp卷加密概述"^]。
 
-
-
 * 如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery備份這些卷，因為這些快照不會移動到物件儲存。
 * 備份資料時， NetApp Backup and Recovery將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
 +
 有關這些加密類型的說明，請參閱https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["配置NetApp卷加密概述"^]。
-
-
 
 * 如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery備份這些卷，因為這些快照不會移動到物件儲存。
 * 當您建立或編輯備份策略但未向該策略指派任何磁碟區時，保留的備份數量最多可為 1018。將磁碟區指派給策略後，您可以編輯該策略以建立最多 4000 個備份。
@@ -80,8 +76,6 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 ** 僅支援從ONTAP輔助節點進行備份。
 ** 應用於磁碟區的快照策略必須是NetApp Backup and Recovery可識別的策略之一，包括每日、每週、每月等。預設的「sm_created」策略（用於*鏡像所有快照*）無法識別，且 DP 磁碟區不會顯示在可備份的磁碟區清單中。
 ** 當從來源或目標進行備份時，SVM-DR 和磁碟區備份和還原完全獨立工作。唯一的限制是 SVM-DR 不會複製SnapMirror雲端關係。在 DR 場景中，當 SVM 在輔助位置上線時，您必須手動更新SnapMirror雲端關係。
-
-
 
 
 * MetroCluster支援：

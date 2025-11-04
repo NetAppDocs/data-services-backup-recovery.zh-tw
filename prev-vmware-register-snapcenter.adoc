@@ -16,11 +16,9 @@ summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載
 [role="lead"]
 您應該在NetApp Backup and Recovery中註冊SnapCenter Plug-in for VMware vSphere，以便顯示資料儲存區和虛擬機器。只有具有管理權限的使用者才能註冊SnapCenter Plug-in for VMware vSphere。
 
-[]
-====
-*注意* 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-====
+NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
+
 .步驟
 . 在NetApp ConsoleUI 中，選擇 *保護* > *備份與還原* > *虛擬機器*。
 . 從「*設定*」下拉式選單中，選擇「SnapCenter Plug-in for VMware vSphere*」。
