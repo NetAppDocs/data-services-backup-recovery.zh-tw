@@ -33,7 +33,7 @@ NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照副本並將�
 * link:br-use-mssql-backup.html["將工作負載複製到ONTAP二級存儲"]
 * link:br-use-mssql-backup.html["將工作負載備份到物件儲存位置"]
 * link:br-use-mssql-backup.html["立即備份工作負載"]
-* link:br-use-mssql-restore-overview.html["恢復工作負載"]
+* link:br-use-mssql-restore.html["恢復工作負載"]
 * link:br-use-mssql-clone.html["克隆工作負載"]
 * link:br-use-manage-inventory.html["管理工作負載清單"]
 * link:br-use-manage-snapshots.html["管理快照"]

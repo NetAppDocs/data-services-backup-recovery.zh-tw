@@ -99,7 +99,7 @@ NetApp Backup and Recovery支援ONTAP系統以及公有和私有雲供應商。
 
 NetApp Backup and Recovery在許多 Amazon Web Services、Microsoft Azure 和 Google Cloud 區域中均支援Cloud Volumes ONTAP 。
 
-https://bluexp.netapp.com/cloud-volumes-global-regions?__hstc=177456119.0da05194dc19e7d38fcb4a4d94f105bc.1583956311718.1592507347473.1592829225079.52&__hssc=177456119.1.1592838591096&__hsfp=76784061&hsCtaTracking=c082a886-e2e2-4ef0-8ef2-89061b2b1955%7Cd07def13-e88c-40a0-b2a1-23b3b4e7a6e7#cvo["使用全球區域地圖了解更多信息"^]
+https://bluexp.netapp.com/cloud-volumes-global-regions["使用全球區域地圖了解更多信息"^]
 
 
 

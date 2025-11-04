@@ -281,20 +281,8 @@ NOTE: 還支援從主存儲到對象存儲，而不僅僅是從二級存儲到�
 
 備份副本儲存在NetApp Console在您的雲端帳戶中建立的物件儲存中。每個叢集或系統都有一個物件存儲，控制台以如下方式命名該物件存儲： `netapp-backup-clusteruuid` 。請確保不要刪除此物件存儲。
 
-ifdef::aws[]
-
-* 在 AWS 中， NetApp Console支援 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 阻止公共存取功能"^]在 S3 儲存桶上。 endif::aws[]
-
-
-ifdef::azure[]
-
-* 在 Azure 中， NetApp Console使用新的或現有的資源群組以及 Blob 容器的儲存帳戶。主機 https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["阻止公眾存取您的 Blob 數據"]預設情況下。 endif::azure[]
-
-
-ifdef::gcp[]
-
-endif::gcp[]
-
+* 在 AWS 中， NetApp Console可以實現以下功能： https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 阻止公共存取功能"^]在 S3 鏟斗上。
+* 在 Azure 中， NetApp Console使用包含 Blob 容器儲存帳戶的新建或現有資源群組。 https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["阻止公眾存取您的 Blob 數據"]預設情況下。
 * 在StorageGRID中，控制台使用現有的儲存帳戶作為物件儲存桶。
 * 在ONTAP S3 中，控制台使用 S3 儲存桶的現有使用者帳戶。
 

@@ -17,7 +17,7 @@ summary: 使用NetApp備份並復原保護您的 Hyper-V 工作負載。
 將 Hyper-V VM 從本機ONTAP系統備份到 Amazon Web Services、 Azure NetApp Files或StorageGRID，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。
 
 * 若要按排程備份工作負載，請建立管理備份和還原作業的策略。看link:br-use-policies-create.html["創建策略"]以取得說明。
-* 建立保護組來管理一組資源的備份和還原作業。看link:br-use-hyper-v-protection-groups.html["使用NetApp Backup and Recovery為 Hyper-V 工作負載建立和管理保護群組"]了解更多。
+* 建立保護組來管理一組資源的備份和還原作業。看link:br-use-hyperv-protection-groups.html["使用NetApp Backup and Recovery為 Hyper-V 工作負載建立和管理保護群組"]了解更多。
 * 立即備份工作負載（立即建立按需備份）。
 
 
