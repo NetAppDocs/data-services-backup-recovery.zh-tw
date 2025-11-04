@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: prev-ontap-migrate-resync.html 
-keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, migrate volumes, SnapMirror to Cloud Resync, ONTAP, NetApp, NetApp ONTAP, NetApp Cloud Volumes ONTAP, NetApp Cloud Volumes Service, FlexVols, FlexGroups 
+keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, migrate volumes, SnapMirror to Cloud Resync, ONTAP, NetApp, NetApp ONTAP, NetApp Cloud Volumes ONTAP, FlexVols, FlexGroups 
 summary: NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。 
 ---
 = 在NetApp Backup and Recovery中使用SnapMirror將磁碟區遷移到 Cloud Resync
@@ -14,14 +14,14 @@ summary: NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能�
 
 
 [role="lead"]
-NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本機NetApp部署遷移到另一個本機 NetApp 部署或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP或Cloud Volumes Service）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可運行。
+NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本地NetApp部署遷移到另一個部署，或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可正常運作。
 
-此功能無需耗時且耗費資源的重新基線操作，使備份操作能夠在遷移後繼續進行。此功能在工作負載遷移場景中很有價值，支援 FlexVols 和 FlexGroups，並且從ONTAP版本 9.16.1 開始可用。
+此功能無需重新建立基線，即可在遷移後繼續備份。此功能在工作負載遷移場景中很有價值，支援 FlexVols 和 FlexGroups，並且從ONTAP版本 9.16.1 開始可用。
 
 
 NOTE: 此功能從 2025 年 5 月發布的NetApp Backup and Recovery版本 4.0.3 開始提供。
 
-透過維持跨環境的備份連續性， SnapMirror to Cloud Resync 提高了營運效率並降低了混合和多雲資料管理的複雜性。
+SnapMirror到 Cloud Resync 可跨環境保持備份連續性，因此更容易在混合雲和多雲環境中管理資料。
 
 []
 ====
@@ -34,8 +34,8 @@ NOTE: 此功能從 2025 年 5 月發布的NetApp Backup and Recovery版本 4.0.3
 * 目標ONTAP叢集必須執行ONTAP 9.16.1 或更高版本。
 * 必須使用NetApp Backup and Recovery保護舊的來源ONTAP叢集。
 * SnapMirror到雲端重新同步功能從 2025 年 5 月發布的NetApp Backup and Recovery版本 4.0.3 開始提供。
-* 物件儲存中的最新備份必須是跨舊來源、新來源和物件儲存的公共快照。公共快照不能早於備份到物件儲存的最新快照。
-* 在開始重新同步操作之前，必須在新ONTAP叢集上建立在舊ONTAP上使用的快照和SnapMirror策略。如果要在重新同步過程中使用任何策略，則也必須建立該策略。重新同步操作不會建立策略。
+* 確保物件儲存中的最新備份是舊來源、新來源和物件儲存的通用快照。不要使用比備份到物件儲存的最新快照更舊的通用快照。
+* 在開始重新同步操作之前，必須在新ONTAP叢集上建立舊ONTAP叢集上使用的快照策略和SnapMirror策略。如果在重新同步過程中使用任何策略，則也必須建立該策略。重新同步操作不會建立策略。
 * 確保應用於遷移卷SnapMirror關係的SnapMirror策略包含雲端關係使用的相同標籤。為避免問題，請使用管理磁碟區和所有快照的精確鏡像的策略。
 
 
@@ -50,7 +50,7 @@ NOTE: 目前不支援使用 SVM-Migrate、SVM-DR 或 Head Swap 方法遷移後�
 
 以下是一個例子：
 
-假設您有一個名為 Vol1a 的本機磁碟區。該卷有三個快照：S1、S2 和 S3。這些快照就像還原點。 Vol1 已經使用SnapMirror to Cloud (SM-C) 備份到雲端物件儲存端點。但是，到目前為止只有 S1 和 S2 已備份到物件儲存。
+假設您有一個名為 Vol1a 的本機磁碟區。該卷有三個快照：S1、S2 和 S3。這些快照就是還原點。  Vol1 使用SnapMirror to Cloud (SM-C) 備份到雲端，但物件儲存中只有 S1 和 S2。
 
 現在，您想要將 Vol1 遷移到另一個ONTAP叢集。為此，您需要建立與名為 Vol1b 的新雲端磁碟區的SnapMirror邏輯複製 (LRSE) 關係。這會將所有三個快照（S1、S2 和 S3）從 Vol1a 傳輸到 Vol1b。
 
@@ -71,7 +71,7 @@ NOTE: 目前不支援使用 SVM-Migrate、SVM-DR 或 Head Swap 方法遷移後�
 
 這意味著只有 S2 之後添加的新資料被發送到物件存儲，而不是整個磁碟區。
 
-此過程避免重新發送已備份的數據，節省頻寬，並確保您的備份鏈在遷移後繼續順利進行。
+此過程可防止重複備份，節省頻寬，並在遷移後保持備份運作。
 
 image:diagram-snapmirror-cloud-resync-migration.png["NetApp Backup and RecoverySnapMirror到雲端重新同步"]
 
@@ -80,7 +80,7 @@ image:diagram-snapmirror-cloud-resync-migration.png["NetApp Backup and RecoveryS
 == 程式說明
 
 * 不使用NetApp Backup and Recovery執行遷移和技術更新。它們應該由專業服務團隊或合格的儲存管理員來執行。
-* NetApp遷移團隊負責在來源 ONTAP 叢集和目標ONTAP叢集之間建立SnapMirror關係，以促進磁碟區遷移。
+* NetApp遷移團隊會在來源 ONTAP 叢集和目標ONTAP叢集之間建立SnapMirror關係，以協助遷移磁碟區。
 * 確保技術更新期間的遷移是基於基於SnapMirror的遷移。
 
 
@@ -101,7 +101,7 @@ image:diagram-snapmirror-cloud-resync-migration-steps.png["使用SnapMirror到 C
 
 === 遵循遷移前檢查清單
 
-在開始遷移之前， NetApp技術更新團隊會確保滿足以下先決條件，以避免資料遺失並確保遷移過程順利進行。
+在遷移之前， NetApp技術更新團隊會檢查這些先決條件，以防止資料遺失並確保流程順利進行。
 
 . 確保所有要遷移的磁碟區都使用NetApp Backup and Recovery進行保護。
 . 記錄卷實例 UUID。在開始遷移之前，記下所有磁碟區的實例 UUID。這些標識符對於稍後的映射和重新同步操作至關重要。
