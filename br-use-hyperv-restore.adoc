@@ -14,7 +14,7 @@ summary: 使用NetApp Backup and Recovery保護您的 Hyper-V 工作負載。
 
 
 [role="lead"]
-使用NetApp Backup and Recovery and Recovery從快照副本、複製到二級儲存的工作負載備份或儲存在物件儲存中的備份還原 Hyper-V 工作負載。
+使用NetApp Backup and Recovery從快照、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原 Hyper-V 工作負載。
 
 .從這些位置恢復
 您可以從不同的起始位置恢復工作負載：

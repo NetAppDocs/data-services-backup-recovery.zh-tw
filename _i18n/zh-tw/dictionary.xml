@@ -731,7 +731,6 @@
   <block id="cd6726508604886a0b7b678ad4f6a2b8" category="paragraph">NetApp Backup and Recovery需要先發現 Microsoft SQL Server 工作負載，您才能使用該服務。如果您已經安裝了SnapCenter ，則可以選擇從SnapCenter匯入備份資料和原則。</block>
   <block id="da39a7712232603b7b60f32ff70cea25" category="section-title">發現 Microsoft SQL Server 工作負載並選擇性地匯入SnapCenter資源</block>
   <block id="c3c491309ae5a0dc1e917949dbce3a2d" category="paragraph">在發現過程中， NetApp Backup and Recovery會分析組織內系統中的 Microsoft SQL Server 執行個體和資料庫。</block>
-  <block id="9e14ee6e25eb212c5eab3fb4b2f1d2ea" category="paragraph">NetApp Backup and Recovery評估 Microsoft SQL Server 應用程式。此服務評估現有的保護級別，包括目前的備份保護策略、快照副本以及備份和還原選項。</block>
   <block id="bf184a96d410b4704d25049f36c78720" category="paragraph">發現以下列方式發生：</block>
   <block id="822dada5711404421b3ad03cb9601709" category="list-text">如果您已有SnapCenter ，請使用NetApp Backup and Recovery and Recovery UI 將SnapCenter資源匯入NetApp Backup and Recovery and Recovery。</block>
   <block id="6140d44536dc7afba283e304997341e8" category="inline-link-macro">從SnapCenter匯入資源的先決條件</block>
@@ -819,10 +818,7 @@
   <block id="015af6eddd6b75dc43fff454de1ee680" category="paragraph"><block ref="4167d6981fc6619a0d8f5d6e353e481b" category="inline-link-rx"></block>。</block>
   <block id="7744fc20060f2753538eb1cbe03db4f0" category="paragraph">使用這些連結從您的雲端供應商市場訂閱NetApp Backup and Recovery ：</block>
   <block id="14c403304e8650321be08c9edd75c486" category="inline-link">前往NetApp Intelligent Services市場了解定價詳情</block>
-  <block id="edb466d68f36c5d8f76ba746b949c72f" category="list-text">AWS：<block ref="e5469c6686b5a2c86b78502f7ea8c335" category="inline-link-rx"></block> .endif::aws[]</block>
   <block id="782af9afc0728a9389fd837476a88107" category="inline-link">前往NetApp Intelligent Services市場了解定價詳情</block>
-  <block id="b294dc3d09aa4c3ad03432d6c8b3cb18" category="list-text">Azure：<block ref="211ed702bd160a1aa192248c846136e5" category="inline-link-rx"></block> .endif::azure[]</block>
-  <block id="617b0d322000b6ccc4c1b2e0ca18611c" category="list-text">Google雲端：<block ref="5aa99f120ab43d5669622268ca1e3fd1" category="inline-link-rx"></block> .endif::gcp[]</block>
   <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">使用年度合約</block>
   <block id="e8081693b5a02447f0b48df91b9f65d8" category="paragraph">透過購買年度合約每年支付NetApp Backup and Recovery的費用。期限分為 1 年、2 年或 3 年。</block>
   <block id="ba3a3b81b7867cbfec5cb03d1bbc6d9a" category="paragraph">如果您與市場簽訂了年度合同，則所有NetApp Backup and Recovery消費均根據該合約收費。您不能將年度市場合約與 BYOL 混合搭配。</block>
@@ -1006,7 +1002,6 @@
   <block id="725673b0a06edab1f72366f95cac31d6" category="list-text">查看有關刪除相關備份的確認訊息並確認刪除。</block>
   <block id="36ccaf20340ab2265ab95f5a1b0da632" category="summary">使用NetApp Backup and Recovery保護您的 Hyper-V 工作負載。</block>
   <block id="4d5f8949076d70b843ef7586496cfbd1" category="doc">使用NetApp Backup and Recovery復原 Hyper-V 工作負載</block>
-  <block id="d44fa1de9a60a5400a1be1a9818710a3" category="paragraph">使用NetApp Backup and Recovery and Recovery從快照副本、複製到二級儲存的工作負載備份或儲存在物件儲存中的備份還原 Hyper-V 工作負載。</block>
   <block id="c94de744a34e573fc1502f60b252bde0" category="paragraph-title">從這些位置恢復</block>
   <block id="9af59aa30e320dfa8526246a9b94ba25" category="paragraph">您可以從不同的起始位置恢復工作負載：</block>
   <block id="ce5b3e5e52619a3c4bbedee0586f057a" category="list-text">從主位置還原（本地快照）</block>
@@ -1098,7 +1093,6 @@
   <block id="9c2fae8ab9610727167de6adcf83385e" category="paragraph">有關建立備份策略的更多信息，請參閱<block ref="cd0fe2184bcc128231bc74042531d5e7" category="inline-link-macro-rx"></block>。</block>
   <block id="42b3c9b2282ae6b4644cee5b5995979d" category="summary">使用NetApp Backup and Recovery保護您的 KVM 工作負載。</block>
   <block id="02055854e5f8d7c0a2161503c5645d5a" category="doc">使用NetApp Backup and Recovery和還原還原 KVM 虛擬機</block>
-  <block id="505a00eea193c85b618202cede0a5964" category="paragraph">使用NetApp Backup and Recovery and Recovery從快照副本、複製到二級儲存的保護群組備份或儲存在物件儲存中的備份還原 KVM 虛擬機器。</block>
   <block id="4ebed5b1ff5b9230bfba78b5f3751082" category="paragraph">您可以從不同的起始位置還原虛擬機器：</block>
   <block id="2003d1dd0ff605a8b0183ae69c3823f3" category="paragraph">您可以將資料還原到原始位置；在此預覽版中不提供恢復到備用位置的功能。</block>
   <block id="c149f6b4ccbdba8011de4b1e3579b42f" category="list-text">恢復到原始位置</block>
@@ -1175,7 +1169,6 @@
   <block id="dcfab68c581d6599e850b96e241636d0" category="list-text">管理資料庫資訊</block>
   <block id="9ce5968862f805302d5e98cf0c20ffe4" category="list-text">保護資料庫</block>
   <block id="c2c5db1d1d2621038f3f8eed4c38e455" category="list-text">還原資料庫</block>
-  <block id="9a2a68b035095269a7f1c0aacc3d668e" category="list-text">配置日誌目錄（從庫存 &gt; 主機）。如果要在快照中備份資料庫主機的日誌，請先在NetApp Backup and Recovery中設定日誌。有關詳細信息，請參閱<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block>。</block>
   <block id="25ef121f0e7b6c2bccdb92c9ee0c85f2" category="paragraph">您可以管理主機資訊以確保正確的主機受到保護。您可以查看、編輯和刪除主機資訊。</block>
   <block id="d34a310043a97652f9151b93c8ee3473" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員或備份和還原複製管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="a53b0f7c5740f1ddf0d66520bf53e285" category="list-text">配置日誌目錄。有關詳細信息，請參閱<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block>。</block>
@@ -1326,7 +1319,6 @@
   <block id="2b0ecb40cc305f7af9fe7f986b5bb2dd" category="list-text">若要下載所有作業的 CSV 文件，請選擇「下載」按鈕並在下載目錄中找到該文件。</block>
   <block id="1dc45daaf063a4c51a123d4f491b6b42" category="list-text">若要下載單一作業的 JSON 文件，請選擇「操作」選單<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>對於該作業，選擇*下載 JSON 檔案*，然後在下載目錄中找到該檔案。</block>
   <block id="f1a15f873b659fefcf2800c9489b580b" category="section-title">檢討保留（備份生命週期）作業</block>
-  <block id="86fa0897ffcce46e8eca8c43e8684ef8" category="paragraph">備份生命週期作業追蹤所有已刪除或待刪除佇列中的 Snapshot 副本。從ONTAP 9.13 開始，您可以在「作業監控」頁面上查看所有稱為「保留」的作業類型。</block>
   <block id="5168f75ce01db43e41309dbb9ba106a7" category="paragraph">「保留」作業類型會擷取在受NetApp Backup and Recovery保護的磁碟區上啟動的所有快照刪除作業。</block>
   <block id="9304f305aa89a02039b5cb4ac930f498" category="list-text">選擇“進階搜尋和過濾”區域以開啟搜尋面板。</block>
   <block id="67e8772c27eee052c978af0d5760e36a" category="list-text">選擇“保留”作為工作類型。</block>
@@ -1471,7 +1463,6 @@
   <block id="e5c866c0e49172f48184bec3e11aa6b9" category="list-text"><block ref="e5c866c0e49172f48184bec3e11aa6b9" category="inline-link-macro-rx"></block></block>
   <block id="d66ed6d81bd70c133ddb80e0d8285080" category="list-text"><block ref="d66ed6d81bd70c133ddb80e0d8285080" category="inline-link-macro-rx"></block></block>
   <block id="3f7e0c8d0c7fc98faaf4d36a5bb06680" category="paragraph-title">支援的備份目標</block>
-  <block id="124dee118a2923f54724c274f69ca91a" category="paragraph">NetApp Backup and Recovery可讓您將 Microsoft SQL Server 執行個體和資料庫從下列來源系統備份到公有和私有雲供應商中的下列輔助系統和物件儲存。快照副本駐留在來源系統上。</block>
   <block id="48a431e7da72cf4ddb716b44e3bd3022" category="cell">來源系統</block>
   <block id="ceca89b59e8a39253f91a2e1640ba29e" category="cell">輔助系統（複製）</block>
   <block id="01d7442dea4ae392305c30e31fbcf649" category="cell">目標物件儲存（備份）</block>
@@ -1485,9 +1476,7 @@
   <block id="98400e25853b9557e8e4820e3839eefc" category="cell">Cloud Volumes ONTAP本地ONTAP系統</block>
   <block id="abd2f027d3fc68343aa027c16d5dbc39" category="cell">Amazon S3 Azure Blob NetApp StorageGRID ONTAP S3</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="cell">Amazon FSx for NetApp ONTAP</block>
-  <block id="70698e1f6287a5fbf5ebd7a7402a40ab" category="cell">不適用 ifdef::gcp[] endif::gcp[] ifdef::gcp[] endif::gcp[]</block>
   <block id="d5f38a7a202d0755d6fe62d10aa0f70c" category="paragraph-title">支援的還原目標</block>
-  <block id="0fbf32686960c8d8b26d8d75b58d8a8b" category="paragraph">您可以將 Microsoft SQL Server 執行個體和資料庫從駐留在主儲存或輔助系統（複製磁碟區）或物件儲存（備份檔案）中的備份還原到下列系統。快照副本駐留在來源系統上，並且只能還原到同一系統。</block>
   <block id="e0893da01d668b23122f21e47097eb86" category="cell">從備份檔案位置</block>
   <block id="f4c21749a38da8f3dc983e46edd28a64" category="cell">至目的地系統</block>
   <block id="46243f69a1d8c01c30626c78c1a61418" category="cell">*物件儲存（備份）*</block>
@@ -1495,7 +1484,6 @@
   <block id="270fcb785810d0206945029bb05f4e97" category="cell">亞馬遜 S3</block>
   <block id="79275132ce20ef3de2a8b64113eb6892" category="cell">AWS 本機ONTAP系統ONTAP S3 中的雲端磁碟區</block>
   <block id="52745271323ee9ea30e3a37d0338d118" category="cell">Azure Blob</block>
-  <block id="b4db18c26e935cf1968a4373b28c553e" category="cell">Azure 中的Cloud Volumes ONTAP本地ONTAP系統ONTAP S3 ifdef::gcp[] endif::gcp[]</block>
   <block id="392d70ca39f31f10bd637936769788df" category="cell">StorageGRID</block>
   <block id="7a27f6aeca7faa30d91e24a0b044228e" category="cell">本地ONTAP系統ONTAP S3</block>
   <block id="d4cd0dabcf4caa22ad92fab40844c786" category="cell">不適用</block>
@@ -1506,7 +1494,6 @@
   <block id="41850d3e69864b055a26374069c9dbda" category="paragraph">您可以將資料還原到最新快照或以下點：</block>
   <block id="66b1424fe6641f4697268af9ed07b5e0" category="list-text">從快照還原</block>
   <block id="c1f62c4a8bd3bfc797c0a4be8f29b273" category="list-text">還原到最新備份</block>
-  <block id="9c53b2dcf4ff2026b3d9b30dfa263b65" category="summary">從快照副本、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原資料庫工作負載。</block>
   <block id="4a2c019e4f44d11b6cc64ba3161fb171" category="doc">使用NetApp Backup and RecoveryMicrosoft SQL Server 工作負載</block>
   <block id="42ace45b519d448bedf9ce14d8cc4c23" category="paragraph">如果您在物件儲存中選擇了備份文件，並且該備份的勒索軟體復原功能處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體復原功能），那麼系統會提示您在復原資料之前對備份檔案執行額外的完整性檢查。我們建議您執行掃描。</block>
   <block id="52386b1f1b11ed7ab3350096c7964c69" category="list-text">當您從備份檔案還原工作負載時， NetApp Backup and Recovery and Recovery會使用備份中的資料建立一個_新_資源。</block>
@@ -1599,7 +1586,6 @@
   <block id="30549a9efedf2c08f7e3c1070d0ec4a4" category="inline-link-macro">立即備份 Oracle 工作負載</block>
   <block id="9d2eb7298d6b079511014afa9fcf74b8" category="list-text">立即備份保護組。看<block ref="6391799ae7a331a8ab5f8579820481db" category="inline-link-macro-rx"></block>。</block>
   <block id="4d11952e83e906d7c1c3bb7b8d814881" category="doc">使用NetApp Backup and RecoveryOracle 資料庫</block>
-  <block id="1da1f96085164d7f248d5a759fa71412" category="paragraph">使用NetApp Backup and Recovery從快照副本、複製到二級儲存的備份或儲存在物件儲存中的備份還原 Oracle 資料庫。</block>
   <block id="79f77d8cbb1beb81481eb9b45d453a34" category="paragraph">您可以從不同的起始位置還原資料庫：</block>
   <block id="d69f96cdc13d3a1e25929628b856adfc" category="section-title">Oracle 資料庫復原的工作原理</block>
   <block id="adbdf0278700ecb3a3aedab26748cd0c" category="paragraph">還原 Oracle 資料庫時，會發生以下情況：</block>
@@ -1656,7 +1642,6 @@
   <block id="eacf7361c754b5087b6ade2e010c1a1f" category="list-text">*架構*：範例包括本機快照、扇出、級聯、磁碟到磁碟和磁碟到物件儲存。</block>
   <block id="292fca252d0ac5aa32931919e05e3331" category="list-text">*受保護的資源*：顯示該工作負載的總資源中有多少資源受到保護。</block>
   <block id="817b82403aa370acb5f863d3bd73073f" category="list-text">*勒索軟體保護*：顯示策略是否包含本機快照上的快照鎖定、二級儲存上的快照鎖定或物件儲存上的 DataLock 鎖定。</block>
-  <block id="b417d2acd31069ff006d3ac9b48de072" category="paragraph">您可以建立策略來管理本機快照、複製到二級儲存以及備份到物件儲存。  3-2-1 策略的一部分涉及在*主*儲存系統上建立實例、資料庫、應用程式或虛擬機器的快照副本。</block>
   <block id="5e116320ce28dcfdae299c1ab1e1d47b" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="253d0e4a062daad466aad4fa375b12c0" category="paragraph">如果您打算複製到二級儲存並希望在本機快照或遠端ONTAP二級儲存上使用快照鎖定，則首先需要在叢集層級初始化ONTAP合規時脈。這是在政策中啟用快照鎖定的要求。</block>
   <block id="6e8754ff907c91289017110ca55a88ae" category="inline-link">在ONTAP中初始化合規性時鐘</block>
@@ -1857,7 +1842,6 @@
   <block id="f1e9f00ae199ca6520d1d2e98102cd84" category="doc">使用NetApp Backup and Recovery發現 VMware 工作負載</block>
   <block id="7ac2807cf305b6eed9abb3096eafd7b5" category="paragraph">NetApp Backup and Recovery服務需要先發現在ONTAP系統上執行的 VMware 資料儲存和虛擬機，以便您可以使用該服務。如果您已安裝SnapCenter Plug-in for VMware vSphere匯入備份資料和政策。</block>
   <block id="dcd2ed119bd25caa1d2e5fbbadd0e260" category="section-title">發現 VMware 工作負載並選擇性地匯入SnapCenter資源</block>
-  <block id="7e9d0096f9cba430fd3294ab281c1c54" category="paragraph">在發現過程中， NetApp Backup and Recovery會分析組織內的 VMware 工作負載，並評估和匯入現有的保護策略、快照副本以及備份和復原選項。</block>
   <block id="20224d78d1f591aa6ed092cd19c23642" category="paragraph">您可以將 VMware NFS 和 VMFS 資料儲存庫和虛擬機器從其內部部署的SnapCenter Plug-in for VMware vSphereNetApp Backup and Recovery庫存。</block>
   <block id="02bff5613eedf1bcc6846345d0b55fbd" category="admonition">此版本的NetApp Backup and Recovery僅支援 VMware vCenter，且無法發現vVols或vVols上的 VM。</block>
   <block id="fee320715a193861e4f6dc2068899465" category="paragraph">在匯入過程中， NetApp Backup and Recovery執行下列任務：</block>
@@ -1866,7 +1850,6 @@
   <block id="9f59193f9c9e33c893e85e7a65ff421d" category="list-text">準備 vCenter 的元資料並在NetApp Console中將其標記為不受管理。</block>
   <block id="f3cd1cfa60b70ab3833f6ec373ec8327" category="list-text">配置資料庫存取。</block>
   <block id="ed39d64277006cf603e473c457526c25" category="list-text">發現 VMware vCenter、資料儲存區和虛擬機器。</block>
-  <block id="cacf184d61110918ea81e29a46df1f55" category="list-text">從SnapCenter Plug-in for VMware vSphere現有的保護策略、快照副本以及備份和還原選項。</block>
   <block id="9ebd805e73003051d15b45a35a4e54e5" category="list-text">顯示在NetApp Backup and Recovery清單頁面中發現的資源。</block>
   <block id="48f6d5cbb866129c890c2677a75d46eb" category="list-text">如果您已經擁有SnapCenter Plug-in for VMware vSphere，請使用NetApp Backup and Recovery UI 將SnapCenter資源匯入NetApp Backup and Recovery 。</block>
   <block id="b758229c4311907d27297d6e3812db06" category="admonition">如果您已有SnapCenter插件，請確保在從SnapCenter匯入之前已滿足先決條件。例如，您應該先在NetApp Console中為所有本機SnapCenter叢集儲存體建立系統，然後再從SnapCenter匯入。看<block ref="29f325191bf25e28eb924274ef794dd1" category="inline-link-macro-rx"></block>。</block>
@@ -1934,7 +1917,6 @@
   <block id="5b760b98c14fddaa18f5b88edb9ca3f6" category="list-text">查看確認訊息並選擇*恢復*。</block>
   <block id="bc36e4718e22660ffc6a870feaf65f3a" category="paragraph">如果計劃有效，系統將驗證計劃，並將保護狀態變更為「已保護」。如果計劃無效，系統將顯示錯誤訊息並且不會恢復保護群組。</block>
   <block id="ae6771902a8163ff6ab3c15cf2e407b0" category="doc">使用NetApp Backup and RecoveryVMware 工作負載</block>
-  <block id="4a3d619c8f5571cf4de02c83e47aed31" category="paragraph">使用NetApp Backup and Recovery and Recovery從快照副本、複製到二級儲存的工作負載備份或儲存在物件儲存中的備份還原 VMware 工作負載。</block>
   <block id="ba48c3305320f5df1a8db5cbd6fed75a" category="paragraph">您可以將資料還原到以下點：</block>
   <block id="600582313b42616fbf96d317e8033ef9" category="paragraph">使用復原選項還原 VMware 工作負載。您可以按名稱或使用篩選器來搜尋快照。</block>
   <block id="1ca9578c25474d5cfeaa6c44bdbaa9b2" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
@@ -2011,7 +1993,6 @@
   <block id="679ef0fa66aaa020c22367d226f81f55" category="paragraph">使用NetApp Backup and Recovery與ONTAP系統的備份到物件功能有兩種類型的成本：</block>
   <block id="fb0fa008eff995c2ab3bdbedb2b9753f" category="list-text">資源費用</block>
   <block id="7b134b802c9d8174603567006b38e1c0" category="list-text">服務費</block>
-  <block id="27449a17856cd9d923ceb08cfbc9bff7" category="paragraph">除了儲存快照副本和複製磁碟區所需的磁碟空間外，建立快照副本或複製磁碟區是免費的。</block>
   <block id="d14d70754e8322b819c6bc86af6beefd" category="paragraph">*資源費用*</block>
   <block id="fe66ea47b1e195d0a8f311d62ee027d8" category="paragraph">資源費用是向雲端提供者支付的，用於物件儲存容量以及將備份檔案寫入和讀取到雲端。</block>
   <block id="da8845e5304a59d7d37af79e23b5072b" category="list-text">對於備份到對象存儲，您需要向雲端提供者支付對象存儲費用。</block>
@@ -2040,7 +2021,6 @@
   <block id="9db5c387eb2c1a4533c42a082e094d13" category="list-text">*自帶許可證 (BYOL)*：從NetApp購買的許可證，可與任何雲端提供者一起使用。</block>
   <block id="467e5d512a9162ad6d144008e41f967e" category="list-text">*即用即付 (PAYGO)*：從雲端供應商的市場按小時訂閱。</block>
   <block id="146cb6145f5238f0a019636047844250" category="list-text">*年度*：來自雲端提供者市場的年度合約。</block>
-  <block id="6aea87da9521ec65982cf1cd716dd84e" category="paragraph">僅當從物件儲存進行備份和還原時才需要備份許可證。建立 Snapshot 副本和複製卷不需要許可證。</block>
   <block id="2d800cbdf9ba7a82c10657f2a93b18b5" category="paragraph">*自備駕照*</block>
   <block id="e030c8eecbfc992cc68549bf0348d474" category="paragraph">BYOL 是基於期限（1、2 或 3 年）和容量的，以 1 TiB 為增量。您向NetApp付費以使用該服務一段時間（例如 1 年）以及最大容量（例如 10 TiB）。</block>
   <block id="b81dcdb5e6cec4dda0b7fdf2110e5d48" category="paragraph">您將收到一個序號，請在NetApp Console中輸入該序號以啟用該服務。當達到任一限制時，您都需要更新許可證。備份 BYOL 授權適用於與您的NetApp Console組織或帳號關聯的所有來源系統。</block>
@@ -2433,13 +2413,11 @@
   <block id="2283ed1c2d2204e889a93d07486e3a8b" category="list-text">*備份策略*：選擇現有的備份到物件儲存策略或建立一個。</block>
   <block id="37c981be270bef0d7503a46e3ee55d35" category="admonition">若要在啟動備份之前建立自訂策略，請參閱<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block>。</block>
   <block id="72c9277e73379a7669bea5aea529fe2e" category="list-text">對於備份到物件策略，設定 DataLock 和 Ransomware Resilience 設定。有關 DataLock 和勒索軟體恢復的詳細信息，請參閱<block ref="7a234b4add653baca92b7b8d8c25d2af" category="inline-link-macro-rx"></block>。</block>
-  <block id="cd6dcf8587329d56e9a684f1fcc33d0e" category="list-text">*將現有的 Snapshot 副本匯出到物件儲存作為備份副本*：如果此系統中磁碟區的任何本機 Snapshot 副本與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相匹配，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
   <block id="1637762bf8b62862e92c5779dd292872" category="section-title">檢查您的選擇</block>
   <block id="6ff9dd41947ac05f6484a120fb4310b2" category="paragraph">這是審查您的選擇並在必要時進行調整的機會。</block>
   <block id="5e60167ed1d8120de85b8b38a5697af4" category="list-text">在「審核」頁面中，審核您的選擇。</block>
   <block id="37e3df2e25134f80025a985e8dd1d807" category="list-text">（可選）選取核取方塊*自動將快照原則標籤與複製和備份策略標籤同步*。這將建立具有與複製和備份策略中的標籤相符的標籤的快照。</block>
   <block id="577f80967f06665724436706ec1290b9" category="list-text">選擇*啟動備份*。</block>
-  <block id="ac5a7f58b30d346978bf16a38b72c4c1" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存系統資料的差異副本。</block>
   <block id="a3e7bf097fa92851593d1a4d3d8a1dd5" category="paragraph">在目標叢集中建立一個複製卷，該卷將與主儲存卷同步。</block>
   <block id="3c18340bbb79b0ca736442b5eb3d21e5" category="paragraph">在您輸入的 S3 存取金鑰和金鑰指示的服務帳戶中建立一個 S3 儲存桶，並將備份檔案儲存在那裡。</block>
   <block id="cd7c9421cd0c5fe113ed01f9335a65d3" category="paragraph">顯示磁碟區備份儀表板，以便您可以監控備份的狀態。</block>
@@ -2527,9 +2505,7 @@
   <block id="397c2eb57e908a7a0dfd7a5b9a549eb3" category="inline-link">了解如何使用 Azure 專用終結點</block>
   <block id="d141f0c2447307010bfe69b567dcec15" category="list-text">或者，選擇是否使用先前設定的 Azure 專用終端點。<block ref="8692a626a666ec68cdf3ab557e9f55c0" category="inline-link-rx"></block> 。</block>
   <block id="6f016177210af1e863aa59b8f2e97752" category="list-text">*備份策略*：選擇現有的備份到物件儲存策略。</block>
-  <block id="6a4e7f88a55688bb72e7d13096b62242" category="list-text">*將現有的 Snapshot 副本匯出到物件儲存作為備份副本*：如果此系統中有任何磁碟區的本機快照副本與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相匹配，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
   <block id="dfa0e65275e79a512c005617a18e8851" category="list-text">（可選）選取核取方塊*自動將快照原則標籤與複製和備份策略標籤同步*。這將建立具有與複製和備份策略中的標籤相符的標籤的快照。</block>
-  <block id="c30195f276d4dee1d7b03414b727d032" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存資料的差異副本。</block>
   <block id="ffec7ec0cd271a5f8e4f646a0028cabb" category="paragraph">在目標群集中建立一個複製卷，該複製卷將與主卷同步。</block>
   <block id="fd8e00004c8fa188a1fbd959a0eb17ba" category="paragraph">在您輸入的資源組中建立一個 Blob 儲存容器，並將備份檔案儲存在那裡。</block>
   <block id="a384f6970ddbfebee596f46795e91c90" category="paragraph">預設情況下， NetApp Backup and Recovery為 Blob 容器提供本機冗餘 (LRS) 以優化成本。如果您想確保資料在不同區域之間複製，則可以將此設定變更為區域冗餘（ZRS）。請參閱 Microsoft 說明<block ref="c549763665cfbb93dbccfdbf667aa0f2" category="inline-link-rx"></block>。</block>
@@ -2636,26 +2612,20 @@
   <block id="db6c06ba70bb540dceaa13d8dd243987" category="paragraph">預設情況下，備份與_Standard_儲存類別相關聯。您可以使用成本較低的_Nearline_、_Coldline_或_Archive_儲存類別。但是，您透過 Google 設定儲存類，而不是透過NetApp Backup and Recovery UI。請參閱 Google 主題<block ref="d037ca255a8eefed8e879939d65bfbbd" category="inline-link-rx"></block>了解詳情。</block>
   <block id="3b7cf6250a1252161dd5b8b3328243ca" category="summary">透過NetApp Backup and Recovery，您可以透過變更備份計畫、啟用磁碟區備份、暫停備份、刪除備份等方式管理Cloud Volumes ONTAP和本機ONTAP系統的備份。您也可以取消註冊NetApp Backup and Recovery。</block>
   <block id="da96e180bd899c512c50d9b0318270ce" category="doc">使用NetApp Backup and Recovery管理ONTAP系統的備份</block>
-  <block id="fa24d84cb38a69fe000e95a2350584f1" category="paragraph">透過NetApp Backup and Recovery，您可以透過變更備份計畫、啟用/停用磁碟區備份、暫停備份、刪除備份、強制刪除備份等方式管理Cloud Volumes ONTAP和本機ONTAP系統的備份。這包括所有類型的備份，包括快照副本、複製磁碟區和物件儲存中的備份檔案。您也可以取消註冊NetApp Backup and Recovery。</block>
   <block id="f60a029ad87a896d979011a7be077ccc" category="admonition">請勿直接在儲存系統或雲端提供者環境中管理或變更備份檔案。這可能會損壞檔案並導致不受支援的配置。</block>
   <block id="85864bf37adc93b72e0338ca257eb3a1" category="section-title">查看系統中磁碟區的備份狀態</block>
-  <block id="77994bb78f0dae3510ff3af319a1334f" category="paragraph">您可以在磁碟區備份儀表板中查看目前正在備份的所有磁碟區的清單。這包括所有類型的備份，包括快照副本、複製磁碟區和物件儲存中的備份檔案。您也可以查看系統中目前未備份的磁碟區。</block>
   <block id="d6f479583cad4e67680c447abd8ba269" category="list-text">從控制台選單中，選擇*保護&gt;備份和還原*。</block>
   <block id="fa72bd720d056e7babef4250c9f04a78" category="list-text">選擇「*磁碟區*」選單以查看Cloud Volumes ONTAP和本機ONTAP系統的備份磁碟區清單。</block>
   <block id="e44fc1f1184fad322f753d2fd49e065b" category="list-text">如果您正在尋找特定係統中的特定磁碟區，您可以按系統和磁碟區優化清單。您也可以使用搜尋過濾器，或者可以根據磁碟區樣式（FlexVol或FlexGroup）、磁碟區類型等對列進行排序。</block>
   <block id="967a559f8463f8584f05c86c2fe8737e" category="paragraph">若要顯示其他欄位（聚合、安全性樣式（Windows 或 UNIX）、快照原則、複製原則和備份策略），請選擇加號。</block>
-  <block id="18d077b55630f941e172475576116494" category="list-text">查看「現有保護」欄位中保護選項的狀態。這 3 個圖示代表「本機快照副本」、「複製磁碟區」和「物件儲存中的備份」。</block>
   <block id="994d86579a5334a5d4b1d409d5976ee7" category="paragraph">當備份類型啟動時，每個圖示都顯示為藍色；當備份類型不活動時，每個圖示都顯示為灰色。您可以將遊標停留在每個圖示上，查看正在使用的備份策略以及每種備份類型的其他相關資訊。</block>
   <block id="7a5095d2213da4d8d8d6f7835126440e" category="section-title">啟動系統中附加磁碟區的備份</block>
   <block id="8d9e236023d48edfbb8546d1322f938b" category="paragraph">如果您在首次啟用NetApp Backup and Recovery時僅在系統中的某些磁碟區上啟動了備份，則可以稍後在其他磁碟區上啟用備份。</block>
   <block id="350cebc09a12734c052df1349098314b" category="list-text">從「卷」標籤中，找到要啟動備份的捲，選擇「操作」選單<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>在行尾，然後選擇*啟動備份*。</block>
-  <block id="4e2b2dce8472a108a762fba565953ce7" category="list-text">在「定義備份策略」頁面中，選擇備份架構，然後定義本機快照副本、複製磁碟區和備份檔案的策略和其他詳細資訊。查看您在此系統中啟動的初始磁碟區的備份選項的詳細資訊。然後選擇“下一步”。</block>
   <block id="40a7b9f9f8520270d9a6a6f8c3b155e3" category="list-text">檢查此卷的備份設置，然後選擇*啟動備份*。</block>
   <block id="617bf089a60793ed8197f15849023ab0" category="section-title">更改分配給現有磁碟區的備份設置</block>
-  <block id="7269f6d1693137deca5f8c1b619981ef" category="paragraph">您可以變更指派給已指派原則的現有磁碟區的備份策略。您可以變更本機快照副本、複製磁碟區和備份檔案的政策。您想要套用於磁碟區的任何新快照、複製或備份策略都必須已經存在。</block>
   <block id="6c143468a72ae48b392ccaf6bfdab3dd" category="section-title">編輯單一磁碟區上的備份設置</block>
   <block id="6783230016acdea3f2efff067c9f0ae2" category="list-text">從「*卷*」標籤中，找到要進行策略變更的捲，選擇「操作」選單<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>在行尾，選擇*編輯備份策略*。</block>
-  <block id="6ec852eec1715258286ed981ae615b37" category="list-text">在「編輯備份策略」頁面中，對本機快照副本、複製磁碟區和備份檔案的現有備份策略進行更改，然後選擇「下一步」。</block>
   <block id="28d4180de7948c969ad2c178ab5ac2ba" category="paragraph">如果在為此叢集啟動NetApp Backup and Recovery時，在初始備份原則中為雲端備份啟用了 _DataLock 和 Ransomware Resilience_，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp Backup and Recovery時未啟用“DataLock 和 Ransomware Resilience”，您將只會看到未配置 DataLock 的其他雲端備份策略。</block>
   <block id="ed3685aa06ca7db640e77339c669a75e" category="section-title">編輯多個卷上的備份設置</block>
   <block id="90d35772fb2c0d1903fd5cb179fca792" category="paragraph">如果您想在多個磁碟區上使用相同的備份設置，您可以同時在多個磁碟區上啟用或編輯備份設定。您可以選擇沒有備份設定、只有快照設定、只有備份到雲端設定等的捲，並使用不同的備份設定對所有這些磁碟區進行批次變更。</block>
@@ -2677,10 +2647,8 @@
   <block id="8c3d1570ebf5aa31ec7a06f9c1d61144" category="cell">*管理備份*</block>
   <block id="5bd93cee59ad710a10e8571eb3dc88f0" category="cell">管理多種類型的備份設定。此選項還使您能夠更改備份架構。</block>
   <block id="f267cda93e6efd257f0820df08e7ba96" category="cell">*管理備份和復原*</block>
-  <block id="ad42328811d8644b8f83f21e31a99935" category="list-text">在出現的備份頁面中，對本機快照副本、複製磁碟區或備份檔案的現有備份策略進行更改，然後選擇*儲存*。</block>
   <block id="b375649be7fa816f6d56f9db0ecc29b6" category="section-title">隨時建立手動卷備份</block>
   <block id="2df585918dfe79cb1c0f8dfb403b8933" category="paragraph">您可以隨時建立按需備份來擷取磁碟區的當前狀態。如果對磁碟區進行了非常重要的更改並且您不想等待下一次計劃的備份來保護該數據，這將非常有用。您也可以使用此功能為目前未備份且想要擷取其目前狀態的磁碟區建立備份。</block>
-  <block id="9097ffd4045af3a3ae322b0f719b20c9" category="paragraph">您可以建立臨時快照副本或備份到磁碟區的物件。您無法建立臨時複製磁碟區。</block>
   <block id="75f0ab2aa06321fc5a92c205273b43b6" category="paragraph">備份名稱包含時間戳，以便您可以從其他計畫備份中識別出您的按需備份。</block>
   <block id="6ee3062ac668cf28f71bf489fd741bcd" category="inline-link-macro">了解有關 DataLock 和勒索軟體保護的更多信息</block>
   <block id="b6488996839d3ef81eaf4ab204a7cf5a" category="paragraph">如果在為此叢集啟動NetApp Backup and Recovery時啟用了“DataLock 和 Ransomware Resilience”，則按需備份也將配置 DataLock，保留期為 30 天。臨時備份不支援勒索軟體掃描。<block ref="17481ecd9087b2947e2c31f934c4a716" category="inline-link-macro-rx"></block>。</block>
@@ -2692,7 +2660,6 @@
   <block id="9803985aa2d019cb1230ddfd51b0a626" category="section-title">查看每個卷的備份列表</block>
   <block id="38bf6532d289335e780251f9c177e17b" category="paragraph">您可以查看每個磁碟區的所有備份檔案的清單。此頁面顯示有關來源磁碟區、目標位置和備份詳細資訊（例如上次備份、目前備份策略、備份檔案大小等）。</block>
   <block id="85e3a28228b1d1821dc533a7d19751f7" category="list-text">從「卷」標籤中選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於來源磁碟區並選擇*查看磁碟區詳細資料*。</block>
-  <block id="8bd68d83695f8c9260fa24649f5daeca" category="paragraph">將顯示磁碟區的詳細資訊和快照副本清單。</block>
   <block id="b1cb92c2a23b4cbaa76face717d899cf" category="list-text">選擇「*快照*」、「*複製*」或「*備份*」以查看每種備份類型的所有備份檔案清單。</block>
   <block id="c3da5f4c5e9e366bce0761355a7a32b9" category="section-title">對物件儲存中的磁碟區備份執行勒索軟體掃描</block>
   <block id="76d4ec74983530f8007b9dfb9961f585" category="paragraph">當建立目標檔案備份時以及還原備份檔案中的資料時， NetApp Backup and Recovery and Recovery會掃描您的備份檔案以尋找勒索軟體攻擊的證據。您也可以隨時執行按需掃描，以驗證物件儲存中特定備份檔案的可用性。如果您在特定磁碟區上遇到勒索軟體問題並且想要驗證該磁碟區的備份不受影響，這將很有用。</block>
@@ -2713,7 +2680,6 @@
   <block id="e683957c73101b7eb5117854ffc5c0a0" category="cell">更新複製</block>
   <block id="c553894546b4640e57eebbc7d4672bf6" category="cell">啟動增量傳輸來更新目標卷，使其與來源卷同步。</block>
   <block id="ddba96748b79c779661c8b679a82809e" category="cell">暫停複製</block>
-  <block id="323d318991c337f981313e51297e76a7" category="cell">暫停 Snapshot 副本的增量傳輸以更新目標磁碟區。如果您想重新開始增量更新，可以稍後再恢復。</block>
   <block id="40310e31b252ba141cc31d7583db7bbe" category="cell">中斷複製</block>
   <block id="f0cd8087559cf56fb0d34726dbd85d38" category="inline-link">了解如何在ONTAP文件中配置目標磁碟區以進行資料存取並重新啟動來源磁碟區</block>
   <block id="2c6c2d97ef0a1cb4ab12e45a4ef02721" category="cell">打破來源磁碟區和目標磁碟區之間的關係，並啟動目標磁碟區進行資料存取 - 使其可讀寫。當來源磁碟區因資料損壞、意外刪除或離線狀態等事件而無法提供資料時，通常會使用此選項。<block ref="7a7ac6ccb9be4e5f4f0b719a95b68333" category="inline-link-rx"></block></block>
@@ -2755,7 +2721,6 @@
   <block id="62fcab4349f4ca0402c709f1892d15bf" category="section-title">刪除系統的所有備份文件</block>
   <block id="990222def8053839fd07dd4a3c81e9dc" category="inline-xref">如這裡所述</block>
   <block id="390711dbf9b1194e9b19351d96031550" category="paragraph">刪除系統物件儲存上的所有備份並不會停用該系統中磁碟區的未來備份。如果要停止建立系統中所有磁碟區的備份，您可以停用備份<block ref="f79da60ab60aec0656411209a64eca6e" category="inline-xref-macro-rx"></block>。</block>
-  <block id="b7726bf807f669806d064d7e428c02fc" category="paragraph">請注意，此操作不會影響 Snapshot 副本或複製的磁碟區 - 這些類型的備份檔案不會被刪除。</block>
   <block id="29e9cf7ef22475594ad87c1e6e2499e4" category="list-text">選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於要刪除所有備份的系統，然後選擇*刪除所有備份*。</block>
   <block id="5eb0ad26e5b73df4b25640fc4cecc8b5" category="list-text">在確認對話方塊中，輸入系統的名稱。</block>
   <block id="b2efc38b6f353a6ab5275e1b97a3207b" category="list-text">選擇“進階設定”。</block>
@@ -2768,10 +2733,8 @@
   <block id="2c9220461da540ceac8b243e96929a74" category="list-text">選擇*動作* &gt; *刪除所有備份*。</block>
   <block id="125aa7ed80cb288006b134021f74ae4d" category="list-text">輸入卷名稱。</block>
   <block id="0c7a693eba5a0f2f80ac9cdb747411a8" category="section-title">刪除卷的單一備份文件</block>
-  <block id="e300bd32052d102b8a28f9965281effd" category="paragraph">如果您不再需要單一備份文件，可以將其刪除。這包括刪除磁碟區 Snapshot 副本的單一備份或物件儲存中的備份。</block>
   <block id="0f077fe78e4dac585cd0607f12f1a2b3" category="paragraph">您無法刪除複製的磁碟區（資料保護磁碟區）。</block>
   <block id="c6f11bef049f9978b6acc052d17daf5a" category="list-text">從「卷」標籤中選擇<block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block>對於來源磁碟區並選擇*查看磁碟區詳細資料*。</block>
-  <block id="720c9e00fafd4e708d8298f7f3cc89cd" category="paragraph">顯示卷的詳細信息，您可以選擇*快照*、*複製*或*備份*來查看該卷的所有備份文件的列表。預設情況下，顯示可用的快照副本。</block>
   <block id="f92abbb1e1dd381a84bc092e3bc1232f" category="list-text">選擇「*快照*」或「*備份*」來查看要刪除的備份檔案類型。</block>
   <block id="8dac01775d5cf014de7509d0b8b228e4" category="list-text">選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於要刪除的磁碟區備份文件，然後選擇*刪除*。</block>
   <block id="471249ebfaeaa3824bfa8f102a312106" category="list-text">在確認對話方塊中，選擇*刪除*。</block>
@@ -2901,8 +2864,6 @@
   <block id="a08b285fd78cf03936887841fbc87805" category="inline-link">查看有關將 AWS PrivateLink 用於 Amazon S3 的詳細信息</block>
   <block id="da6211c797a89720b6883bacdc774e98" category="list-text">或者，選擇是否使用您先前配置的 AWS PrivateLink。<block ref="4b288ecb11624923e7ee69f96a59c546" category="inline-link-rx"></block> 。</block>
   <block id="f840f9756698d2642c682c57635ce422" category="list-text">*備份策略*：選擇現有的備份策略或建立策略。</block>
-  <block id="5deff6c2be51ef1dacb5d79ad864d0d7" category="list-text">*將現有的 Snapshot 副本匯出到物件儲存作為備份副本*：如果此系統中有任何磁碟區的本機快照副本與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相匹配，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
-  <block id="01fbd55edfb2a3051bbc565a6cf73db5" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含 Snapshot 副本中所含主資料的差異副本。</block>
   <block id="fab7b62aef677a7dfc0c2e880e574c3e" category="paragraph">S3 儲存桶在您輸入的 S3 存取金鑰和金鑰指示的服務帳戶中創建，並且備份檔案儲存在那裡。顯示磁碟區備份儀表板，以便您可以監控備份的狀態。</block>
   <block id="26d69f43fddc5c2bcb70609e2dca79ff" category="paragraph">您也可以使用<block ref="c9b7a5ec15675760150fc860d9b68ff4" category="inline-link-macro-rx"></block>。</block>
   <block id="c3f60ccbc7d01616ad2cb7705e425bc4" category="doc">使用NetApp Backup and Recovery將本機ONTAP資料備份到 Azure Blob 存儲</block>
@@ -3033,7 +2994,6 @@
   <block id="fdfde9e0b311ff5fac1cb59718becd99" category="inline-link">升級控制台代理軟體</block>
   <block id="ec30666e80cfd436428146ff15b8cd86" category="paragraph">NetApp Backup and Recovery功能內建於控制台代理程式中。以私人模式安裝時，您需要定期更新控制台代理軟體才能存取新功能。檢查<block ref="4f503e3438aa28bc2c8e70f6f3ca470a" category="inline-link-macro-rx"></block>查看每個NetApp Backup and Recovery版本中的新功能。當您想要使用新功能時，請按照以下步驟操作<block ref="fe15289ddf0b41ec634abd6111ef3db4" category="inline-link-rx"></block>。</block>
   <block id="2b3a52e7d48b516f3751583e2d7f6d87" category="paragraph">當您在標準 SaaS 環境中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將會備份到雲端。當您在沒有網路存取的網站中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的ONTAP S3 儲存桶中。</block>
-  <block id="406b3d4cdd893cbefe3f97c24e0dabd1" category="paragraph">在為叢集啟動NetApp Backup and Recovery之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此許可證用於備份和恢復物件儲存 - 無需許可證即可建立 Snapshot 副本或複製磁碟區。此許可證適用於該帳戶，可跨多個系統使用。</block>
   <block id="697b86f7e988fa09258b45f4602902bd" category="paragraph">您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用本服務。<block ref="706a4c6b2a498be3949e082e6d4f63b6" category="inline-link-macro-rx"></block>。</block>
   <block id="6693ad1f879b89cff96414a6cbe91add" category="admonition">將檔案備份到ONTAP S3 時不支援 PAYGO 授權。</block>
   <block id="cb37d999576786c4642b70e73ab52a62" category="paragraph">您必須確保連接到物件儲存的系統符合以下要求。</block>
@@ -3066,7 +3026,6 @@
   <block id="bfdcb4c8994c35ddcbf57b86b98f3f35" category="list-text">保護選項：您是否要實施一個或所有備份選項：本機快照、複製和備份到物件存儲</block>
   <block id="46a34e4ec1b576e981a1d3de1e6efb19" category="list-text">架構：您是否要使用扇出式或級聯備份架構</block>
   <block id="a293331e4a15a1bd7c5ea3a447d9e130" category="list-text">在「定義備份策略」頁面中，選擇以下一項或全部。預設情況下，所有三個都被選中：</block>
-  <block id="b74d253e4a199789a7d19f6040694e04" category="list-text">*本機快照*：建立本機快照副本。</block>
   <block id="f97ad73f017e5e9a85a2ba4d7f9f0e1c" category="list-text">*備份*：將磁碟區備份到為 S3 設定的ONTAP系統上的儲存桶。</block>
   <block id="757ddf3a67f3bb933e1f0daa98d655c1" category="list-text">*架構*：如果您同時選擇了複製和備份，請選擇下列資訊流之一：</block>
   <block id="114e1e484d37f8ec51f8c9bd144982c0" category="list-text">*級聯*：備份資料從主系統流向輔助系統，然後從輔助系統流向物件儲存。</block>
@@ -3083,9 +3042,7 @@
   <block id="bb248f7221f98ec46ba72866b8f97fb1" category="admonition">選擇正確的 IP 空間可確保NetApp Backup and Recovery可以建立從ONTAP到ONTAP S3 物件儲存的連線。</block>
   <block id="0773e77bb0db21a781b5bbb39f7a4ee7" category="list-text">*備份策略*：選擇現有的備份策略或建立新的備份策略。</block>
   <block id="c14db437f776a13459f3d49279cc036d" category="admonition">您可以使用 System Manager 或ONTAP CLI 建立政策。使用ONTAP CLI 建立自訂策略<block ref="21daf815c4decbf3cba733c88297587b" prefix=" " category="inline-code"></block>命令，請參閱<block ref="ec3ed4692ea8e2ea03ef1cb28143229e" category="inline-link-rx"></block>。</block>
-  <block id="9fc7eb00f9b92c6517ac1c668a33a50e" category="list-text">*將現有的 Snapshot 副本作為備份檔案匯出到物件儲存*：如果此系統中有任何磁碟區的本機快照副本與您剛剛選擇的備份計畫標籤（例如，每日、每週等）相匹配，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
   <block id="682f8e921eb37ddb3e47689c62db0a2e" category="list-text">（可選）選取核取方塊*自動將快照原則標籤與複製和備份策略標籤同步*。這將建立具有與複製和備份策略中的標籤相符的標籤的快照。如果策略不匹配，則不會建立備份。</block>
-  <block id="6027b21041fbbf14fdd0e5f8d1e5b8bb" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括來源資料的完整副本。後續傳輸包含快照副本中包含的主儲存資料的差異副本。</block>
   <block id="da89f84b672c457d24c04269e668b99b" category="summary">完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從本機主ONTAP系統備份到二級儲存系統以及NetApp StorageGRID系統中的物件儲存。</block>
   <block id="7118c1a3bbb6dabf070fc402ff8a9fd3" category="doc">使用NetApp Backup and Recovery將本機ONTAP資料備份到StorageGRID</block>
   <block id="3fa08464a9a599a3c36d5915624e40cf" category="paragraph">下圖顯示了將本機ONTAP系統備份到StorageGRID時的每個元件以及您需要在它們之間準備的連線。</block>
@@ -3094,7 +3051,6 @@
   <block id="5e4344df99920e524cfb6d919eb4a494" category="paragraph">當控制台代理程式和本機ONTAP系統安裝在沒有網際網路存取的本機位置（「暗站」）時， StorageGRID系統必須位於同一個本機資料中心。暗站配置不支援將舊備份檔案存檔到公有雲。</block>
   <block id="334180f7df5c8324d128afe54273063b" category="paragraph">當您將資料備份到StorageGRID時，您的場所必須有控制台代理。您需要安裝新的控制台代理程式或確保目前選定的控制台代理程式位於本機。控制台代理可以安裝在有或沒有網路存取的網站。</block>
   <block id="92a508a0037c85cca367ecb3e92a0fde" category="list-text">透過連接埠 443 到StorageGRID網關節點的 HTTPS 連接</block>
-  <block id="a95b23a2cdaf127b085474599d441fb2" category="paragraph">NetApp Backup and Recovery的新版本除了可以建立物件儲存備份外，還具有安排和建立 Snapshot 副本和複製卷的功能，要求您使用控制台代理的 3.9.31 或更高版本。因此建議您取得此最新版本來管理所有備份。</block>
   <block id="cb850fad5e1fad8d32e7eb265ae3906e" category="list-text">當您在 SaaS 環境中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將會備份到雲端。當您在沒有網路存取的網站中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID桶中。</block>
   <block id="5f9f04c739428b05a64b13f60000d391" category="paragraph">在為叢集啟動NetApp Backup and Recovery之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此許可證適用於該帳戶，可跨多個系統使用。</block>
   <block id="60a2dc1fd82db84a092db92c95942712" category="admonition">將檔案備份到StorageGRID時不支援 PAYGO 授權。</block>
@@ -3162,7 +3118,6 @@
   <block id="43f4c1811765abf291168aea7f16a205" category="paragraph">如果您的叢集使用的是ONTAP 9.12.1 或更高版本，而您的StorageGRID系統使用的是 11.4 或更高版本，您可以選擇在一定天數後將舊備份分層到公有雲存檔層。目前支援 AWS S3 Glacier/S3 Glacier Deep Archive 或 Azure Archive 儲存層。<block ref="bf8884094e353a761ed88341de6eaf54" category="inline-xref-macro-rx"></block>。</block>
   <block id="1f56b8f69150cdfb9829cf942c51a8d3" category="list-text">*分層備份到公有雲*：選擇您想要分層備份的雲端提供者並輸入提供者詳細資料。</block>
   <block id="e2a74f20d433c85025a6f5807d74682d" category="paragraph">選擇或建立一個新的StorageGRID叢集。有關建立StorageGRID叢集以便控制台可以發現它的詳細信息，請參閱<block ref="babf3072d9403ab5e1ffb9e4bb9a27cb" category="inline-link-rx"></block>。</block>
-  <block id="dff128be4d6710494db3e76f65383ab0" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括來源資料的完整副本。後續傳輸包含 Snapshot 副本中包含的主儲存資料的差異副本。</block>
   <block id="85ffdbd09ff5b2ecfdcbea6cb8697013" category="summary">NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。</block>
   <block id="254385f2eec62c0f2399c9da13dde7f6" category="doc">在NetApp Backup and Recovery中使用SnapMirror將磁碟區遷移到 Cloud Resync</block>
   <block id="ee9ee6fb5d3eb14594205c52636211ec" category="admonition">此功能從 2025 年 5 月發布的NetApp Backup and Recovery版本 4.0.3 開始提供。</block>
@@ -3254,12 +3209,10 @@
   <block id="5d4ed65e56adaf2c1b70e5e97ddbe2b5" category="list-text">從備份設定頁面，選擇系統，選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*策略管理*。</block>
   <block id="5bf9959b9f847b53c7772e7dc90d3a04" category="paragraph">出現「策略管理」頁面。預設顯示快照策略。</block>
   <block id="c74f8ecec1da944cebb96c4d6493ef7f" category="list-text">若要查看系統中存在的其他策略，請選擇「複製策略」或「備份策略」。如果現有策略可用於您的備份計劃，則一切就緒。如果您需要具有不同特徵的策略，您可以從此頁面建立新策略。</block>
-  <block id="7aa02d1490041a6267fc77bf9b4232c2" category="paragraph">您可以建立策略來管理快照副本、複製和備份到物件儲存：</block>
   <block id="896b5143341e108efeca5446e0008eeb" category="list-text"><block ref="b92b977610ec95f89ddb2711a418bfb2" category="inline-xref-macro-rx"></block></block>
   <block id="8c93ad30ee0d14353ceadd8305690a2f" category="list-text"><block ref="0116f7fb14fa9b1ea4004469c89c7378" category="inline-xref-macro-rx"></block></block>
   <block id="4d1e42c53c197b9eec9ce78b1832dc8c" category="list-text"><block ref="4b4395fe768c3ae3b25642d7a52ea888" category="inline-xref-macro-rx"></block></block>
   <block id="7947d73fa73ec5c50e39c84f93a38c5a" category="section-title">啟動快照之前建立快照策略</block>
-  <block id="aeb01d4a73a6e0541b2da03a87828d08" category="paragraph">3-2-1 策略的一部分涉及在*主*儲存系統上建立磁碟區的快照副本。</block>
   <block id="166d942d7c3fa0fdf526bdef845eebef" category="paragraph">策略創建過程的一部分涉及識別表示計劃和保留的快照和SnapMirror標籤。您可以使用預定義標籤或建立自己的標籤。</block>
   <block id="ad1858c9b18af8cbe0b4325833b61ce0" category="paragraph">出現「策略管理」頁面。</block>
   <block id="f2d390fa1db9923459b003140db5abec" category="list-text">在策略頁面中，選擇*建立策略* &gt; *建立快照策略*。</block>
@@ -3318,11 +3271,9 @@
   <block id="fb258284d7569744ca758873d339532b" category="inline-link">使用ONTAP CLI 建立物件儲存策略備份</block>
   <block id="bc7ba4c7d62d6d4917e638edbc43dbb5" category="paragraph"><block ref="1d5508fcd8027e26b48962bd984558d5" category="inline-link-rx"></block> <block ref="25d9216966497b44f1274c2fdc3f62ee" category="inline-link-rx"></block> <block ref="6a671fae687ae09ed6ec2eb759a70329" category="inline-link-rx"></block> <block ref="76f9b86225921137bc166f71caebf3f1" category="inline-link-rx"></block> <block ref="ab2445e139747cf732d46d877cc62a64" category="inline-link-rx"></block> <block ref="9c225a8772c7b3c40b62701739b123cf" category="inline-link-rx"></block></block>
   <block id="d6b2f75c5e7cc6c2d5da7268c117d88e" category="doc">在NetApp Backup and Recovery和還原進階設定中管理備份到物件儲存選項</block>
-  <block id="7f1c17ad86ed1874be7a9a51049ab485" category="paragraph">您可以使用「進階設定」頁面變更在為每個ONTAP系統啟動NetApp Backup and Recovery時設定的叢集等級、備份到物件儲存設定。您也可以修改一些作為「預設」備份設定的設定。這包括更改備份到物件儲存的傳輸速率、是否將歷史 Snapshot 副本匯出為備份檔案以及啟用或停用系統的勒索軟體掃描。</block>
   <block id="2f5538c2e34ba12aae307adeb8e9361f" category="admonition">這些設定僅適用於備份到物件儲存。這些設定都不會影響您的快照或複製設定。</block>
   <block id="c7097337eab210464618620268aa80bc" category="paragraph">您可以在進階設定頁面中變更以下選項：</block>
   <block id="6d1da260b80b103438f3aedda67c1b8e" category="list-text">使用最大傳輸速率選項 ifdef::aws[] 變更指派給將備份上傳到物件儲存的網路頻寬</block>
-  <block id="0b1a1078de1b2e72b07bf2ffac16d26d" category="list-text">更改是否將歷史 Snapshot 副本匯出為備份檔案並包含在未來磁碟區的初始基線備份檔案中</block>
   <block id="90262b49b516aea0770d54c5389860ab" category="list-text">更改是否從來源系統中刪除“年度”快照</block>
   <block id="6866e75c6eebeffef8ecc7e577b86a5c" category="list-text">啟用或停用系統的勒索軟體掃描，包括計畫掃描</block>
   <block id="0b1dbe1ca2e686301ad63250cc03207d" category="section-title">查看叢集等級備份設定</block>
@@ -3339,24 +3290,17 @@
   <block id="057d6c600d485e4ee55de2a7a7001dc5" category="list-text">選擇*Limited*單選按鈕並輸入可使用的最大頻寬，或選擇*Unlimited*表示沒有限制。</block>
   <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">選擇*應用*。</block>
   <block id="d6fbc65447ac5ec301ff9302b857a824" category="paragraph">此設定不會影響分配給系統中磁碟區配置的任何其他複製關係的頻寬。</block>
-  <block id="814fcb42fca8be942e3018ecb7509457" category="section-title">變更是否將歷史快照副本匯出為備份文件</block>
-  <block id="77c498376f900ba05c47aab2ca4f1632" category="paragraph">如果有任何與您在此系統中使用的備份計畫標籤（例如，每日、每周等）相符的磁碟區的本機快照副本，您可以將這些歷史快照作為備份檔案匯出到物件儲存。這使您能夠透過將較舊的快照副本移至基線備份副本來初始化雲端中的備份。</block>
   <block id="65fd1c000589ff36a794229f1987490d" category="paragraph">請注意，此選項僅適用於新讀/寫卷的新備份文件，並且不支援資料保護 (DP) 磁碟區。</block>
-  <block id="d76835a7e29bfba07068479c7f8fe1c9" category="list-text">在「進階設定」頁面中，展開「匯出現有 Snapshot 副本」部分。</block>
-  <block id="5ded7f0f282abee3856eb702a71c490f" category="list-text">選擇是否要匯出現有的 Snapshot 副本。</block>
   <block id="cef9bbe98866aa24765a5c6e51e5daa5" category="section-title">更改是否從來源系統中刪除“年度”快照</block>
-  <block id="8577d7fd44fe39164228bbbe19ab37b5" category="paragraph">當您為任何磁碟區的備份策略選擇「年度」備份標籤時，建立的 Snapshot 副本非常大。預設情況下，這些年度快照在傳輸到物件儲存後會自動從來源系統中刪除。您可以從「年度快照刪除」部分變更此預設行為。</block>
   <block id="69ef3b07789885abe39838d3bdd565ae" category="list-text">在進階設定頁面中，展開*年度快照刪除*部分。</block>
   <block id="550e2d4456467c22193939aa0029676d" category="inline-image-macro">進階設定頁面中年度快照條目的螢幕截圖。</block>
   <block id="824924c3b132c056f8e7a92e2b64399e" category="paragraph"><block ref="824924c3b132c056f8e7a92e2b64399e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="906f0c83e11579cff84ef8bb2602e8ee" category="list-text">選擇“*停用*”以在來源系統上保留年度快照。</block>
   <block id="32a5c26baa0363b9a3a4a05896b16fd9" category="section-title">啟用或停用勒索軟體掃描</block>
-  <block id="c8677ee89c299128bf83f5ed7ce0b535" category="paragraph">預設啟用勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照副本上。您可以使用「進階設定」頁面上的選項在最新快照副本上啟用或停用勒索軟體掃描。如果啟用它，則預設每 7 天執行一次掃描。</block>
   <block id="4451065c28f2079aa69e4b099c64d39a" category="inline-link-macro">DataLock 和勒索軟體復原選項</block>
   <block id="653a7bec9106146215db26707b6bc097" category="paragraph">有關 DataLock 和勒索軟體恢復選項的詳細信息，請參閱<block ref="9598f959fcd7486a6e0c3ffa9bbb6de9" category="inline-link-macro-rx"></block>。</block>
   <block id="823af9cc6541e49164fb4b1c88f90a63" category="paragraph">您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。</block>
   <block id="c000460328529e6cc52a2a89e3a697dc" category="admonition">根據雲端提供者的不同，啟用勒索軟體掃描將產生額外費用。</block>
-  <block id="564c5feaa7f154c02296acfa87cd72f2" category="paragraph">計劃的勒索軟體掃描僅在最新的快照副本上運行。</block>
   <block id="753626f8e1f5bd64d141de3a2128da9a" category="paragraph">如果停用計劃的勒索軟體掃描，您仍然可以執行按需掃描，並且恢復操作期間的掃描仍會發生。</block>
   <block id="e7326f303b8abf78625da7d8f22fa0b4" category="inline-link-macro">管理政策</block>
   <block id="53f2e5824456fc72fcf46ed59f0055b0" category="paragraph">參考<block ref="413884571f4d053a53a019b431cecdb2" category="inline-link-macro-rx"></block>有關管理實施勒索軟體檢測的政策的詳細資訊。</block>
@@ -3523,7 +3467,6 @@
   <block id="bb4d18abee2ac1ac9616f24e56d8201d" category="doc">使用NetApp Backup and Recovery規劃您的保護之旅</block>
   <block id="854bc156a37cbbf040c040fbef53bdec" category="paragraph">NetApp Backup and Recovery使您能夠建立最多三個來源磁碟區副本來保護您的資料。在磁碟區上啟用備份和還原時，您可以選擇許多選項，因此您應該檢查您的選擇以做好準備。</block>
   <block id="abb8243f73c63e089a9cc6cdf95785b2" category="paragraph">我們將討論以下選項：</block>
-  <block id="79bf4ea3e9cb2d13a5d787f30856e1de" category="list-text">您將使用哪些保護功能：快照副本、複製磁碟區和/或備份到雲</block>
   <block id="85c221c528aa48303ce42bd715536fcc" category="list-text">您將使用哪種備份架構：磁碟區的級聯備份還是磁軌備份</block>
   <block id="ac2c17b7d9121a38bd0676675759e2d0" category="list-text">您是否會使用預設備份策略，還是需要建立自訂策略</block>
   <block id="f53a4fccf3f0875b00c8fa67a6206306" category="list-text">您希望服務為您建立雲端儲存桶，還是希望在開始之前建立物件儲存容器</block>
@@ -3532,18 +3475,11 @@
   <block id="66d3fadb53e8ad6e337ef250060f45d9" category="paragraph">在您選擇要使用的功能之前，這裡先簡單介紹一下每個功能的作用以及它提供的保護類型。</block>
   <block id="a3c82f66d39159c3e9d428cd534beb34" category="cell">備份類型</block>
   <block id="d4e2713d1b1725a1592f9268589f990d" category="cell">快照</block>
-  <block id="e7d16b4cd92faa6bebd0c1d15ea1bfbf" category="cell">在來源磁碟區內建立磁碟區的唯讀、時間點映像作為快照副本。您可以使用快照副本來還原單一文件，或還原磁碟區的全部內容。</block>
   <block id="a23b9135121ccd8c6b9cf5a020774e95" category="cell">在另一個ONTAP儲存系統上建立資料的輔助副本並不斷更新輔助資料。您的資料將保持最新狀態，並在您需要時隨時可用。</block>
   <block id="0861d887e6d95fe35a1ca67b5f5e81b5" category="cell">雲端備份</block>
   <block id="a17b29813f2c46cd9491d767baf0ff23" category="cell">將您的資料備份到雲端，以進行保護並用於長期存檔。如果需要，您可以將磁碟區、資料夾或單一檔案從備份還原到相同或不同的系統。</block>
-  <block id="0d822d10f9dce62d035fd0a19a7fca01" category="paragraph">快照是所有備份方法的基礎，是使用備份和還原服務的必要條件。快照副本是磁碟區的唯讀、時間點映像。此影像所佔用的儲存空間極小，且產生的效能開銷可以忽略不計，因為它僅記錄自上次快照複製以來對檔案的變更。在您的磁碟區上建立的快照副本用於使複製的磁碟區和備份檔案與對來源磁碟區所做的變更保持同步 - 如圖所示。</block>
-  <block id="fba7073e7b9f0ebbf2a16aba03def013" category="inline-image-macro">此圖表顯示了備份檔案如何作為快照副本存在於來源系統上、作為輔助儲存系統上的複製磁碟區存在以及作為物件儲存中的備份檔案存在。</block>
-  <block id="3fe18b5afee65e24db0af46c099ee28b" category="paragraph"><block ref="3fe18b5afee65e24db0af46c099ee28b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="112d5b2e7f70a350b739f08063ce85af" category="paragraph">您可以選擇在另一個ONTAP儲存系統上建立複製卷，並在雲端中建立備份檔案。或者您可以選擇僅建立複製磁碟區或備份檔案 - 這是您的選擇。</block>
   <block id="e6be33e5c4b92c8fe5ab63510eedf003" category="paragraph">總而言之，這些是您可以為ONTAP系統中的磁碟區建立的有效保護流程：</block>
-  <block id="f46d552561904382654668028ef332b7" category="list-text">來源磁碟區 -&gt; 快照副本 -&gt; 複製磁碟區 -&gt; 備份文件</block>
-  <block id="6e0f3f7af71dbdcd66969d229d562636" category="list-text">來源磁碟區 -&gt; Snapshot 副本 -&gt; 備份文件</block>
-  <block id="416d6dba97115e0823c4346a7315efbf" category="list-text">來源卷 -&gt; 快照副本 -&gt; 複製卷</block>
   <block id="8b6929ad62460b55df90661f6ce3447e" category="admonition">複製磁碟區或備份檔案的初始建立包括來源資料的完整副本 - 這稱為_基線傳輸_。後續傳輸僅包含來源資料的差異副本（快照）。</block>
   <block id="72d6d7225fde1dafbc05317df9f5b442" category="paragraph">*不同備份方法的比較*</block>
   <block id="8d4622541c56b47641b741cdbe4f8ddf" category="paragraph">下表顯示了三種備份方法的總體比較。雖然物件儲存空間通常比本地磁碟儲存便宜，但如果您認為您可能會頻繁地從雲端恢復數據，那麼雲端提供者的出口費用可能會減少您的一些節省。您需要確定需要多久從雲端中的備份檔案還原資料。</block>
@@ -3566,24 +3502,14 @@
   <block id="2b769a9268eb2aee4276cba6c57ef0e9" category="cell">高（提供者費用）</block>
   <block id="f20b3ca4032bc39e75089941e59da9ae" category="section-title">您將使用哪種備份架構</block>
   <block id="df2734a3248ea58d4bd1131a234481c4" category="paragraph">在建立複製磁碟區和備份檔案時，您可以選擇磁軌或級聯架構來備份磁碟區。</block>
-  <block id="a2a9ac91325c0db29e163fbc9e667a11" category="paragraph">*扇出*架構將快照副本獨立傳輸到目標儲存系統和雲端中的備份物件。</block>
-  <block id="adf84925b2895a3bd5ae0a120cb8ad17" category="inline-image-macro">此圖表顯示如何使用磁碟區的快照副本來建立和更新複製磁碟區和備份檔案。</block>
-  <block id="ad4c3469af64746e775ed7115a090081" category="paragraph"><block ref="ad4c3469af64746e775ed7115a090081" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f7a44c472b4d89a85927c5b659923abb" category="paragraph">*級聯*架構首先將快照副本傳輸到目標儲存系統，然後該系統將副本傳輸到雲端中的備份物件。</block>
-  <block id="0e75839fe626c68e31622d428c4d570a" category="paragraph"><block ref="0e75839fe626c68e31622d428c4d570a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="38a76ea4648b1e59685f3787ddf9021d" category="paragraph">*不同架構選擇的比較*</block>
   <block id="688c41a4a08a3e0f4011a51649a5a459" category="paragraph">此表提供了扇出型和級聯型架構的比較。</block>
   <block id="3bd4e18208001e378e54469a0b8e5993" category="cell">扇出</block>
   <block id="2dc2b15e8b0ee7ed3fdd4cf53ad0a8c3" category="cell">級聯</block>
-  <block id="87c81224d48d741dfbd247952615fc4e" category="cell">對來源系統的效能影響較小，因為它將快照副本傳送到 2 個不同的系統</block>
-  <block id="478c6c161866c8e1ddab01aa9b106fc3" category="cell">由於僅發送一次快照副本，因此對來源儲存系統效能的影響較小</block>
   <block id="ec56411e6ab7919a698db099e7ce9d99" category="cell">更易於設置，因為所有策略、網路和ONTAP配置都在來源系統上完成</block>
   <block id="2de573829fbd9b8bb14cbeb57e049422" category="cell">還需要從輔助系統完成一些網路和ONTAP配置。</block>
   <block id="6a56b6ee195df37efb9dcd54ebb245de" category="section-title">您是否會使用快照、複製和備份的預設策略</block>
   <block id="db24e99a2622697aa035e5706aff38ea" category="paragraph">您可以使用NetApp提供的預設策略來建立備份，也可以建立自訂策略。當您使用啟動精靈為您的磁碟區啟用備份和復原服務時，您可以從預設原則和系統中已經存在的任何其他策略（Cloud Volumes ONTAP或本機ONTAP系統）中進行選擇。如果您想使用與現有策略不同的策略，您可以在開始之前或使用啟動精靈時建立該策略。</block>
-  <block id="1301be7ec7ade67f5147fdcccd80fa2a" category="list-text">預設快照策略按小時、天、週建立快照副本，保留每小時 6 個、每天 2 個、每週 2 個快照副本。</block>
-  <block id="c1d5bf3c2ec7b585c447b9b4cea582ac" category="list-text">預設複製策略複製每日和每週的快照副本，保留 7 個每日快照副本和 52 個每週快照副本。</block>
-  <block id="840e2f78c01f1959c64c8f5ecd750690" category="list-text">預設備份策略複製每日和每週的快照副本，保留 7 個每日快照副本和 52 個每週快照副本。</block>
   <block id="307fac06deb7cfd0fa48e676ffc86224" category="paragraph">如果您為複製或備份建立自訂策略，則策略標籤（例如「每日」或「每週」）必須與快照策略中存在的標籤匹配，否則將不會建立複製的磁碟區和備份檔案。</block>
   <block id="8cb2e913decbf9b532c186901104e076" category="inline-link-macro">新增新的備份策略</block>
   <block id="ee49cee7c44ccb04a139f40fb9f4a214" category="paragraph">您可以在NetApp Backup and RecoveryUI 中建立快照、複製和備份到物件儲存策略。請參閱<block ref="0559f444e8f88edb894615ec30a1d00b" category="inline-link-macro-rx"></block>了解詳情。</block>
@@ -3676,12 +3602,8 @@
   <block id="8116cbee5887b07b452fecf9c1836d5c" category="doc">使用NetApp Backup and Recovery保護您的ONTAP卷數據</block>
   <block id="f147568c086732bd86eb443dc52d5e33" category="paragraph">NetApp Backup and Recovery功能，用於保護和長期存檔您的ONTAP磁碟區資料。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。</block>
   <block id="80281310e7f1753680348f039d61ece0" category="paragraph">啟動後，備份和復原會建立區塊級、增量永久備份，這些備份儲存在另一個ONTAP叢集和雲端中的物件儲存中。除了來源磁碟區之外，您還將擁有：</block>
-  <block id="4dfb74d83687d8ca40ab05bac1885b0a" category="list-text">來源系統上磁碟區的快照副本</block>
   <block id="00b4fe156d0b170f5196995dd8889b0d" category="list-text">不同儲存系統上的複製卷</block>
   <block id="809b026ec469d1b8bfa79721e15f539b" category="list-text">物件儲存中的磁碟區備份</block>
-  <block id="f21e38c1a38f1c4f4e956d882bff761e" category="inline-image-macro">此圖表顯示了備份檔案如何作為 Snapshot 副本存在於來源系統上、作為輔助儲存系統上的複製磁碟區存在以及作為物件儲存中的備份檔案存在。</block>
-  <block id="58ead0698b2403892dd8d82de5be7c29" category="paragraph"><block ref="58ead0698b2403892dd8d82de5be7c29" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="69cf282ad2d2af37ce5b061e5f12b928" category="paragraph">NetApp Backup and Recovery利用 NetApp 的SnapMirror資料複製技術，透過建立 Snapshot 副本並將其傳輸到備份位置來確保所有備份完全同步。</block>
   <block id="094fa5b5a02089cb6ef9dcfe3de478b1" category="paragraph">必要時，您可以將整個磁碟區、資料夾或一個或多個檔案從任何備份副本還原到相同或不同的系統。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">特徵</block>
   <block id="d7b479d32340f96732225021d096cc62" category="paragraph">*複製功能：*</block>
@@ -3708,7 +3630,6 @@
   <block id="bd72e14abd3526a8879e36ff21989129" category="list-text">使用您自己的客戶管理金鑰進行資料加密，而不是使用雲端提供者提供的預設加密金鑰。</block>
   <block id="31225c51d46e8620e15eeda9d9aede1c" category="list-text">支援單一磁碟區最多 4,000 個備份。</block>
   <block id="2ef86679dc81862bbea0ea37e255ca59" category="paragraph">*恢復功能：*</block>
-  <block id="ba8be4a78d73005d396b001c480790d5" category="list-text">從本機 Snapshot 副本、複製的磁碟區或物件儲存中的備份磁碟區還原特定時間點的資料。</block>
   <block id="ca636232aaf17fe5d8fef3b105b4363c" category="list-text">將磁碟區、資料夾或單一檔案還原到來源系統或其他系統。</block>
   <block id="e4dccda809ca16eca6edfd9c690a62ee" category="list-text">將資料還原到使用不同訂閱/帳戶或位於不同區域的系統。</block>
   <block id="4c83a0fb55b796cfb06bd7c5684420d7" category="list-text">將磁碟區從雲端儲存快速還原到Cloud Volumes ONTAP系統或本機系統；非常適合需要盡快提供對磁碟區的存取的災難復原情況。</block>
@@ -3719,13 +3640,11 @@
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">支持的區域</block>
   <block id="c120c4e2a5b4e4e9674aa4b23a31ab0a" category="paragraph">NetApp Backup and Recovery在許多 Amazon Web Services、Microsoft Azure 和 Google Cloud 區域中均支援Cloud Volumes ONTAP 。</block>
   <block id="6c6a0225cb0a619d8872981b7be0ac95" category="inline-link">使用全球區域地圖了解更多信息</block>
-  <block id="9f91fcd773ad2a225e5e66714c4ab412" category="paragraph">NetApp Backup and Recovery使您能夠將ONTAP磁碟區從下列來源系統備份到下列輔助系統以及公有和私有雲供應商中的物件儲存。快照副本駐留在來源系統上。</block>
   <block id="1d85e7a2656bd01575d59e1548bbed4b" category="cell">目標物件儲存（備份）ifdef::aws[]</block>
   <block id="c373a9aa878db8431d1195796e8e6695" category="cell">Google 的Cloud Volumes ONTAP</block>
   <block id="9ecea76e21268445d7d03aec4130ba29" category="cell">Google 本機ONTAP系統中的Cloud Volumes ONTAP</block>
   <block id="c0b279eeed106351906f95aa546f2ffa" category="cell">Google 雲端儲存 endif::gcp[]</block>
   <block id="54ae5f645a65dd82ea439de20806bd9f" category="cell">ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud Storage endif::gcp[] NetApp StorageGRID ONTAP S3</block>
-  <block id="839ea92fa23f691822ce0135ecd8e9ed" category="paragraph">您可以將ONTAP資料從位於二級系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照副本駐留在來源系統上，並且只能還原到同一系統。</block>
   <block id="85970a97aacb509bbf4ce9364724b494" category="cell">備份檔案位置</block>
   <block id="1f7c54e25f65414cece608c8f0604e55" category="cell">目的地系統</block>
   <block id="bc7aa7434d0ca9752e2c02b4ffee9953" category="cell">AWS 本機ONTAP系統中的Cloud Volumes ONTAP endif::aws[] ifdef::azure[]</block>
@@ -3744,7 +3663,6 @@
   <block id="aa0373aa24c3795f9860b49e074ec0b5" category="inline-link-macro">ONTAP磁碟區的備份和還原限制</block>
   <block id="ebdfb969c44f2d0deea1007cbf186b81" category="paragraph">請參閱<block ref="c27bda4e85978f510ddf0a64d91a61ea" category="inline-link-macro-rx"></block>了解其他要求和限制。</block>
   <block id="9b228e8142c1f49c9a7b1365505bc5d5" category="paragraph">使用NetApp Backup and Recovery與ONTAP系統相關的成本有兩種：資源費用和服務費用。這兩項費用均針對服務的對象部分備份。</block>
-  <block id="1854bdaf3ded217ffdff52794b6c84fc" category="paragraph">除了儲存 Snapshot 副本和複製磁碟區所需的磁碟空間外，建立 Snapshot 副本或複製磁碟區是免費的。</block>
   <block id="dd49bc28723be22ffdd3f04630c122df" category="paragraph">由於NetApp Backup and Recovery保留了來源磁碟區的儲存效率，因此您需要向雲端提供者物件儲存支付ONTAP效率之後的資料費用（針對應用程式重複資料刪除和壓縮後的較少量的資料）。</block>
   <block id="fedaab8c05c476a14c09d3ad41bf9a22" category="list-text">在 Google 中，部署了一個新的儲存桶，並且<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>在帳戶/項目層級進行配置。</block>
   <block id="1cd41d0d05820bca7b344cb3376a61e1" category="list-text">如果您打算在恢復磁碟區資料的過程中掃描備份檔案中的勒索軟體（如果您已為雲端備份啟用了 DataLock 和勒索軟體復原功能），那麼您還將產生來自雲端提供者的額外出口成本。</block>
@@ -3774,7 +3692,6 @@
   <block id="39895b41edb7cf3963dcb646a1e20553" category="paragraph">此圖顯示磁碟區被複製到Cloud Volumes ONTAP系統，但磁碟區也可以複製到本機ONTAP系統。</block>
   <block id="57739bc049ff58f3d3db6f5281e84b85" category="section-title">備份所在位置</block>
   <block id="19fe226921eb8023a05c222ee84c5db8" category="paragraph">根據備份類型，備份位於不同的位置：</block>
-  <block id="f063a288d9f943a1ba418ca3e5c0631e" category="list-text">_快照副本_駐留在來源系統中的來源磁碟區上。</block>
   <block id="84b23b52a16a2d456b93cfcd37a9fb17" category="list-text">_複製磁碟區_駐留在二級儲存系統上 - Cloud Volumes ONTAP或本機ONTAP系統。</block>
   <block id="9b1fec5e0f334c7c6734500536c26eec" category="list-text">_備份副本_儲存在控制台在您的雲端帳戶中建立的物件儲存中。每個集群/系統有一個物件存儲，控制台將物件存儲命名為：「netapp-backup-clusteruuid」。請確保不要刪除此物件存儲。</block>
   <block id="6dd0453948f319bf0e93a8760cf57765" category="paragraph">+ ** 在 AWS 中，控制台啟用<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block>在 S3 儲存桶上。</block>
@@ -3785,16 +3702,13 @@
   <block id="ce6bd8b7e44a144f2c3eefb8fb43c028" category="inline-link-macro">取消註冊系統的NetApp Backup and Recovery</block>
   <block id="dde7812a2b64115f166d47da097a615f" category="paragraph">如果您將來想要更改叢集的目標物件存儲，則需要<block ref="4b0267ab70996ada4858bf6db6495e68" category="inline-link-macro-rx"></block>，然後使用新的雲端供應商資訊啟用NetApp Backup and Recovery 。</block>
   <block id="47c63e2d9d67be358326c1eff2c87d12" category="section-title">可自訂的備份計劃和保留設置</block>
-  <block id="88c69def3d7b1f25782ddaba85be2909" category="paragraph">當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您選擇的策略進行備份。您可以為 Snapshot 副本、複製磁碟區和備份檔案選擇單獨的政策。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，則可以為該叢集建立其他策略，並在啟動NetApp Backup and Recovery後將這些原則指派給其他磁碟區。</block>
   <block id="2e15d79bbec0c847d20d0f428a238b39" category="paragraph">您可以選擇所有捲的每小時、每天、每週、每月和每年備份的組合。對於物件備份，您還可以選擇系統定義的策略之一，提供 3 個月、1 年和 7 年的備份和保留。您使用ONTAP System Manager 或ONTAP CLI 在叢集上建立的備份保護原則也會作為選擇出現。這包括使用自訂SnapMirror標籤建立的策略。</block>
-  <block id="3ded04ab14e3868e7d9393ed137519a9" category="admonition">應用於磁碟區的快照策略必須具有您在複製策略和備份到物件策略中使用的標籤之一。如果未找到符合的標籤，則不會建立備份檔案。例如，如果您要建立「每週」複製的捲和備份文件，則必須使用建立「每週」 Snapshot 副本的 Snapshot 策略。</block>
   <block id="27f4e7945442348457ec28cf1aa6eefd" category="paragraph">一旦達到某個類別或間隔的最大備份數量，較舊的備份就會被刪除，以便您始終擁有最新的備份（因此過時的備份不會繼續佔用空間）。</block>
   <block id="c1855e2778d4090a158417283de29dbc" category="admonition">資料保護磁碟區備份的保留期與來源SnapMirror關係中定義的保留期相同。如果您願意，可以使用 API 來變更此設定。</block>
   <block id="01ec9d3adb6b85775aeeda0d6d533e54" category="section-title">備份檔案保護設定</block>
   <block id="03159d4daf48846363441f62acc89b17" category="paragraph">如果您的叢集使用ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份免於刪除和勒索軟體攻擊。每個備份策略都為_DataLock 和勒索軟體復原_提供了一個部分，可以在特定時間段（即_保留期_）內應用於您的備份檔案。</block>
   <block id="8756c7c925830c8c39d9804961d7d40b" category="list-text">_DataLock_ 保護您的備份檔案不被修改或刪除。</block>
   <block id="c73b2d161daabc3a9a53d6dd0c4df263" category="list-text">_勒索軟體保護_會在建立備份檔案時以及恢復備份檔案中的資料時掃描您的備份檔案以查找勒索軟體攻擊的證據。</block>
-  <block id="e3414eaea3759c338f18072fbecaa19f" category="paragraph">預設啟用計劃的勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的 Snapshot 副本上。可以停用計劃掃描以降低成本。您可以使用「進階設定」頁面上的選項在最新的 Snapshot 副本上啟用或停用計劃的勒索軟體掃描。如果啟用它，則預設每週執行一次掃描。您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。</block>
   <block id="78505512ebd89d20931322ac265d9153" category="paragraph">備份保留期與備份計畫保留期相同，再加上最多 31 天的緩衝期。例如，每週備份保留 5 份副本，每個備份檔案將鎖定 5 週。每月備份保留 6 份副本，每個備份檔案將鎖定 6 個月。</block>
   <block id="4df1a85d32abc942958400f1bc79add0" category="paragraph">當您的備份目標是 Amazon S3、Azure Blob 或NetApp StorageGRID時，目前可獲得支援。未來版本中將新增其他儲存提供者目的地。</block>
   <block id="0518809725b483d8fb74affb68a52a55" category="paragraph">欲了解更多詳細信息，請參閱以下信息：</block>
@@ -3819,7 +3733,6 @@
   <block id="75968f9094e000b12da4b2ead555a058" category="list-text">在分配之前考慮備份的影響<block ref="a181a603769c1f98ad927e7367c7aa51" prefix=" " category="inline-code"></block>對磁碟區進行分層策略。由於資料是立即分層的，NetApp Backup and Recovery將從雲層而不是本地層讀取資料。由於並發備份操作共享與雲端物件儲存的網路鏈接，因此如果網路資源飽和，可能會出現效能下降。在這種情況下，您可能需要主動配置多個網路介面 (LIF) 來減少這種類型的網路飽和。</block>
   <block id="c5a5bd782e20196933e5157112eab21c" category="summary">使用NetApp Backup and Recovery，可以從備份文件還原整個ONTAP卷，或者如果只需要還原幾個文件，則可以還原資料夾或單一文件。</block>
   <block id="0d5740d6083fb9ac304bfaa4bb99e957" category="doc">使用NetApp Backup and Recovery從備份檔案還原ONTAP數據</block>
-  <block id="87a4832d04243d1148150c025b69d9b6" category="paragraph">您可以從建立備份的位置取得ONTAP磁碟區資料的備份：Snapshot 副本、複製的磁碟區以及儲存在物件儲存中的備份。您可以從這些備份位置中的任何一個還原特定時間點的資料。使用NetApp Backup and Recovery，可以從備份文件還原整個ONTAP卷，或者如果只需要還原幾個文件，則可以還原資料夾或單一文件。</block>
   <block id="bbf0b1b9c16dc904da9a8179519e7e31" category="list-text">您可以將*磁碟區*（作為新磁碟區）還原到原始系統、使用相同雲端帳戶的其他系統或本機ONTAP系統。</block>
   <block id="da7f5e5f2be2e4063a41a28fbb91f494" category="list-text">您可以將*資料夾*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區或本機ONTAP系統上的磁碟區。</block>
   <block id="a4883a32493cbf65048c6ba0d655088d" category="list-text">您可以將*檔案*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區或本機ONTAP系統上的磁碟區。</block>
@@ -3827,7 +3740,6 @@
   <block id="d92c1fbc11ff9a4d0db37653e35a2e52" category="paragraph">總而言之，這些是可用於將磁碟區資料還原到ONTAP系統的有效流程：</block>
   <block id="880c04d29288ca6dbdf8598c75af755f" category="list-text">備份檔案 -&gt; 還原卷</block>
   <block id="385ec83416d2acacbf83c42099e5828e" category="list-text">複製卷 -&gt; 恢復卷</block>
-  <block id="294431832876ce9e39076e7ab6f99361" category="list-text">快照副本 -&gt; 復原卷</block>
   <block id="0039af36cdd68741c89e8c730e7b7442" category="admonition">有關還原ONTAP資料的限制，請參閱<block ref="c27bda4e85978f510ddf0a64d91a61ea" category="inline-link-macro-rx"></block>。</block>
   <block id="65fba989fe7e3d4f06e7b1a4c8b66ff0" category="section-title">恢復儀表板</block>
   <block id="024205acf9405311336c02bbd2193b70" category="inline-image-macro">更多按鈕</block>
@@ -3854,7 +3766,6 @@
   <block id="cdabcc59f5dffd726bced2c44fc05f05" category="cell">*恢復音量*</block>
   <block id="45b00b8867e09fe86605e260afbdb0e5" category="cell">*恢復檔案*</block>
   <block id="d65d23f3099e6017c3c2569abf596741" category="cell">*恢復資料夾*</block>
-  <block id="e9fc6e7f6ec31fec53528f9b89ee0dcc" category="cell">快照副本</block>
   <block id="68295476c4bddb2040705057bdff61c0" category="cell">複製卷</block>
   <block id="6b8f9734c5bdfb71d16a6d3d8a40513c" category="cell">備份文件</block>
   <block id="8425d41c6f9d3b6f077b56c4d49651a4" category="paragraph">在使用任一復原方法之前，請確保您已針對獨特的資源需求配置了環境。這些要求在以下章節中描述。</block>
@@ -3898,7 +3809,6 @@
   <block id="97df4568ca8321a997d9ed32ea75ab0a" category="list-text">選擇“*恢復*”選項卡，將顯示“恢復儀表板”。</block>
   <block id="00e49e17372cc54391186a012dcec566" category="list-text">從「瀏覽和復原」部分，選擇「恢復磁碟區」。</block>
   <block id="7eccde2a14cd84f78dde1af09cf04af9" category="list-text">在「選擇來源」頁面中，導覽至要還原的磁碟區的備份檔案。選擇具有要還原的日期/時間戳記的*系統*、*磁碟區*和*備份*檔案。</block>
-  <block id="c884a3e70e8bce1d15f993ac9cb50a73" category="paragraph">*位置*列顯示備份檔案（快照）是*本機*（來源系統上的 Snapshot 副本）、*輔助*（輔助ONTAP系統上的複製磁碟區）還是*物件儲存*（物件儲存中的備份檔案）。選擇您想要恢復的檔案。</block>
   <block id="2dbe24936b99777ea029c253c6887625" category="paragraph">請注意，如果您選擇物件儲存中的備份文件，並且該備份的勒索軟體復原功能處於活動狀態（如果您在備份策略中啟用了 DataLock 和勒索軟體復原功能），則系統會提示您在復原資料之前對備份檔案執行額外的勒索軟體掃描。我們建議您掃描備份檔案以尋找勒索軟體。  （您將需要向雲端提供者支付額外的出口費用才能存取備份檔案的內容。）</block>
   <block id="ec4f513ca338429ab9e381b2d0283d04" category="list-text">在「選擇目標」頁面中，選擇要恢復磁碟區的*系統*。</block>
   <block id="4f77ec7cb4d938e815d515d86daf431e" category="list-text">從物件儲存還原備份檔案時，如果您選擇本機ONTAP系統且尚未配置與物件儲存的叢集連接，系統將提示您輸入其他資訊：</block>
@@ -3919,7 +3829,6 @@
   <block id="db4e4a49003b7dd44bc5766a32164bcb" category="paragraph">請注意，從駐留在檔案儲存中的備份檔案還原磁碟區可能需要幾分鐘或幾小時，具體取決於檔案層和復原優先權。您可以選擇「作業監控」標籤來查看恢復進度。</block>
   <block id="310dbba96c4cb79d0f5f822051257fc8" category="section-title">使用“瀏覽和還原”還原資料夾和文件</block>
   <block id="a391d0d3fdfe2f62007fc5c6a836f776" category="paragraph">如果您只需要從ONTAP磁碟區備份中還原幾個文件，則可以選擇還原資料夾或單一文件，而不是還原整個磁碟區。您可以將資料夾和檔案還原到原始系統中的現有捲，或還原到使用相同雲端帳戶的其他系統。您也可以將資料夾和檔案還原到本機ONTAP系統上的磁碟區。</block>
-  <block id="b05475d66d7cbbe07fdea29b594c209b" category="admonition">目前，您只能從物件儲存中的備份檔案還原資料夾或單一檔案。目前不支援從本機快照副本或駐留在輔助系統（複製磁碟區）中的備份檔案還原檔案和資料夾。</block>
   <block id="5a583661a8908e9d0eb4e2adb7e14660" category="paragraph">使用ONTAP 9.13.0 或更高版本時，您可以還原資料夾以及其中的所有檔案和子資料夾。使用 9.13.0 之前的ONTAP版本時，僅還原該資料夾中的檔案 - 不會還原子資料夾或子資料夾中的檔案。</block>
   <block id="c2d4eb2ee4a0b78ea11dd0bb39d93ab0" category="list-text">如果備份檔案已配置 DataLock 和勒索軟體保護，則僅當ONTAP版本為 9.13.1 或更高版本時才支援資料夾級還原。如果您使用的是早期版本的ONTAP，則可以從備份檔案還原整個卷，然後存取所需的資料夾和檔案。</block>
   <block id="df253d89e3119a8555e39eb63655c32c" category="list-text">如果備份檔案駐留在檔案儲存中，則僅當ONTAP版本為 9.13.1 或更高版本時才支援資料夾層級還原。如果您使用的是早期版本的ONTAP，則可以從尚未存檔的較新備份檔案中還原資料夾，也可以從已存檔的備份中還原整個磁碟區，然後存取所需的資料夾和檔案。</block>
@@ -3966,7 +3875,6 @@
   <block id="09fa58168e9af9ca1cd785d08f1c7401" category="list-text">如果您選擇了與來源資料夾/檔案相同的目標系統和磁碟區，則可以選擇*維護來源資料夾路徑*將資料夾或檔案還原到來源結構中存在的相同資料夾。所有相同的資料夾和子資料夾必須已經存在；不會建立資料夾。將檔案還原到原始位置時，您可以選擇覆蓋來源檔案或建立新檔案。</block>
   <block id="8ba7d24c75d9a4c060c33cf7a127b666" category="section-title">使用“搜尋和還原”還原ONTAP數據</block>
   <block id="4647e43883c439381a72ddb443f378a3" category="paragraph">您可以使用「搜尋和還原」從ONTAP備份檔案還原磁碟區、資料夾或檔案。搜尋和還原可讓您從所有備份中搜尋特定的磁碟區、資料夾或文件，然後執行還原。您不需要知道確切的系統名稱、磁碟區名稱或檔案名稱—搜尋會查看所有磁碟區備份檔案。</block>
-  <block id="bf802d832421f119f7634686c468943a" category="paragraph">搜尋操作會查看ONTAP磁碟區中存在的所有本機快照副本、二級儲存系統上的所有複製磁碟區以及物件儲存中存在的所有備份檔案。由於從本機 Snapshot 副本或複製磁碟區復原資料比從物件儲存中的備份檔案還原資料更快且成本更低，因此您可能會想要從這些其他位置還原資料。</block>
   <block id="852fc25af352236327df0d0cfcc56af6" category="paragraph">當您從備份檔案還原_完整磁碟區_時， NetApp Backup and Recovery會使用備份中的資料建立一個_新_磁碟區。您可以將資料作為原始系統中的磁碟區還原到與來源系統位於相同雲端帳戶的其他系統或本機ONTAP系統。</block>
   <block id="1c207467db02af6d5369de8a352a5deb" category="paragraph">您可以將資料夾或檔案還原到原始磁碟區位置、同一系統中的不同磁碟區、使用相同雲端帳戶的不同系統或本機ONTAP系統上的磁碟區。</block>
   <block id="20f2d0bb5e696b331efc736ffadbb3f3" category="paragraph">如果要還原的磁碟區的備份檔案位於檔案儲存中（從ONTAP 9.10.1 開始可用），則還原作業將花費更長的時間並產生額外的費用。請注意，目標叢集也必須執行ONTAP 9.10.1 或更高版本才能進行磁碟區還原、9.11.1 才能進行檔案還原、9.12.1 才能進行 Google Archive 和StorageGRID，以及 9.13.1 才能進行資料夾還原。</block>
@@ -3982,7 +3890,6 @@
   <block id="042e2868bd27cf0f2d07239f80a976dd" category="list-text">ONTAP版本必須為 9.8 或更高版本。</block>
   <block id="6f0cd96277bd61a1a3f4c2504033ded7" category="list-text">磁碟區所在的儲存虛擬機器 (SVM) 必須具有配置的資料 LIF。</block>
   <block id="aba6991b1b269dad52e52cd4c3998779" category="list-text">必須在磁碟區上啟用 NFS（支援 NFS 和 SMB/CIFS 磁碟區）。</block>
-  <block id="2c8d83a35f8a30eb4b51cf39268742ac" category="list-text">必須在 SVM 上啟動 SnapDiff RPC 伺服器。當您在系統上啟用索引時，控制台會自動執行此操作。  （SnapDiff 是一種快速識別 Snapshot 副本之間檔案和目錄差異的技術。）</block>
   <block id="b08d607bff755a82c8c9d9351d968b4a" category="list-text">AWS 需求：</block>
   <block id="69822c6d3eec5c2a5b83f578217d08ce" category="inline-link-macro">確保所有權限均已正確配置</block>
   <block id="1e7dbc6a754183195338f872192f2c45" category="list-text">必須將特定的 Amazon Athena、AWS Glue 和 AWS S3 權限新增至為控制台提供權限的使用者角色。<block ref="06b194663576cd6f267595be51223fa0" category="inline-link-macro-rx"></block>。</block>
@@ -4049,11 +3956,9 @@
   <block id="2d11ad8508024a513d6b7186c8a38a23" category="list-text">從「搜尋和還原」頁面：</block>
   <block id="50804d8e3eafe9323d24fb2bfd7d13dc" category="list-text">在「搜尋欄」中，輸入完整或部分磁碟區名稱、資料夾名稱或檔案名稱。</block>
   <block id="46937cc6416c5746cc8a700eea0e8703" category="list-text">選擇資源類型：*磁碟區*、*檔案*、*資料夾*或*全部*。</block>
-  <block id="a07004effbfedc37a717427224dfdff0" category="list-text">在「過濾依據」區域中，選擇過濾條件。例如，您可以選擇資料所在的系統和檔案類型，例如 .JPEG 檔案。或者，如果您只想在物件儲存中可用的 Snapshot 副本或備份檔案中搜尋結果，則可以選擇備份位置的類型。</block>
   <block id="85a46e33aff0f68ce9ba52bf07ca5bc7" category="list-text">選擇*搜尋*，搜尋結果區域將顯示所有具有與您的搜尋相符的文件、資料夾或磁碟區的資源。</block>
   <block id="78406c28c28b069751b1b5a8f5dea6f8" category="list-text">尋找包含您要復原的資料的資源，然後選擇「檢視所有備份」以顯示包含符合磁碟區、資料夾或檔案的所有備份檔案。</block>
   <block id="2990ab511029f6c10e696e43177d4fdd" category="list-text">找到您想要用於還原資料的備份檔案並選擇*復原*。</block>
-  <block id="406385bac6b7601aab1eff5d8a317cc3" category="paragraph">請注意，結果會識別包含搜尋到的檔案的本機磁碟區 Snapshot 副本和遠端複製磁碟區。您可以選擇從雲端備份檔案、Snapshot 副本或複製磁碟區進行還原。</block>
   <block id="4d1f1dc63841491797cde0fde7dec31d" category="list-text">選擇要還原磁碟區、資料夾或檔案的目標位置，然後選擇*復原*。</block>
   <block id="01b01daa5325b920936f5377a7aac296" category="list-text">對於卷，您可以選擇原始目標系統，也可以選擇備用系統。還原FlexGroup磁碟區時，您需要選擇多個聚合。</block>
   <block id="41fa550da57731d6e696f924a00a377f" category="list-text">對於資料夾，您可以還原到原始位置，也可以選擇備用位置；包括系統、磁碟區和資料夾。</block>
@@ -4715,10 +4620,8 @@
   <block id="ba0363fe48f14ee1de2dc51cf57a540a" category="summary">使用NetApp Backup and Recovery保護您的 Microsoft SQL Server 應用程式數據，從本機ONTAP系統到 Amazon Web Services、Microsoft Azure 或StorageGRID 。</block>
   <block id="f67bd1ebeb2e1458c18ee1bfe3a0d5e2" category="doc">使用NetApp Backup and Recovery保護 Microsoft SQL 工作負載概述</block>
   <block id="a355bd32745a1495313545b192a3533f" category="paragraph">使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 AWS、Azure 或StorageGRID 。系統會根據您的政策自動在您的雲端帳戶中建立並儲存備份。使用 3-2-1 策略：在兩個儲存系統上保留資料的三個副本，在雲端中保留一個副本。</block>
-  <block id="8c08de76609beebf11bb1d984d12384e" category="paragraph">NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照副本並將其傳輸到備份位置來同步備份。</block>
   <block id="d23f996c9926f1f022cbe22d0fcae8e8" category="paragraph">您可以執行以下操作來保護您的資料：</block>
   <block id="f59023f77e90026f16f584d31820eb90" category="paragraph">若要備份工作負載，您需要建立管理備份和復原作業的策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>了解更多。</block>
-  <block id="a54794387a0e725b2c0a86422f5c42f4" category="paragraph">使用NetApp Backup and Recovery還原 Microsoft SQL Server 工作負載。使用快照副本、複製到輔助儲存的備份或物件儲存中的備份。將工作負載還原到原始系統、具有相同雲端帳戶的不同系統或本機ONTAP系統。</block>
   <block id="5f0d7635bc31258066861934b2abce44" category="list-text">如果您知道檔案名稱、位置和最後有效日期，則還原到特定時間點</block>
   <block id="045eae722cda03b00d9ad8dfdd4cbe51" category="admonition">您需要向雲端提供者支付額外費用才能存取備份檔案。</block>
   <block id="2215c4c479bee2e93b68b2a226280019" category="paragraph">使用下列方法之一恢復工作負載：</block>
@@ -4767,7 +4670,6 @@
   <block id="e527fef252b77845c6d10efb41d3077b" category="list-text">在 Azure 中， NetApp Console使用包含 Blob 容器儲存帳戶的新建或現有資源群組。<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block>預設情況下。</block>
   <block id="ec0d6793cc0295c832eb8da5d335a0c2" category="paragraph">此外，您還可以造訪以下網站以取得與 DataLock 相關的成本估算：<block ref="b1f8c55788f886bad3d3eaf7350ac38f" category="inline-link-rx"></block> 。</block>
   <block id="4bcdbd17280f1741e2f9e78f6f376421" category="paragraph"><block ref="4bcdbd17280f1741e2f9e78f6f376421" category="inline-link-rx"></block></block>
-  <block id="cb447a62b60246b3a0d4eebb0e7236e4" category="paragraph">在復原之前，請記下來源磁碟區名稱、來源系統和 SVM 以及備份檔案日期。您可以從 Snapshot 副本、複製的磁碟區或儲存在物件儲存中的備份中還原ONTAP資料。</block>
   <block id="7eb5606462668a7d8775b600838f4f32" category="admonition">如果您要復原的備份檔案位於歸檔雲端儲存中（從ONTAP 9.10.1 開始），則復原作業需要更長時間並會產生費用。對於磁碟區恢復，目標叢集必須執行ONTAP 9.10.1 或更高版本；對於檔案恢復，目標叢集必須執行 ONTAP 9.11.1 或更高版本；對於 Google Archive 和StorageGRID，目標叢集必須執行 ONTAP 9.12.1 或更高版本；對於資料夾恢復，目標必須執行 ONTAP 9.13.13.13.13.</block>
   <block id="5b386dd69a6743085be6c1e524866fb5" category="paragraph">如果選擇多個文件，它們將還原到同一目標磁碟區。若要將檔案還原到不同的捲，請多次執行該過程。</block>
   <block id="b46b886ddef2fe81123875f2839d0892" category="list-text">若要從磁碟區備份中還原資料夾或文件，請選擇「還原」選單，然後在「瀏覽與還原」下選擇「復原檔案或資料夾」。</block>
@@ -4780,4 +4682,99 @@
   <block id="60c015b8ddd8d831a4c02882c86d1b96" category="list-text">如果您在 AWS 中使用私有 VPC 介面端點進行 S3 連接，那麼為了使用 HTTPS/443，您需要將 S3 端點憑證載入到ONTAP叢集中。<block ref="a9add63f8269701d766cf4e98ddd02f6" category="inline-xref-macro-rx"></block>。</block>
   <block id="7f04f32c4656d50b5019019cf54c568c" category="list-text">確保您的ONTAP叢集有權存取 S3 儲存桶。</block>
   <block id="8caf5a345895253ff6b6c49a438599d4" category="list-text">請確保顯示的磁碟區與原始環境中的磁碟區相同。</block>
+  <block id="432f26fda10ddec4232e210d763f233e" category="paragraph">NetApp Backup and Recovery評估 Microsoft SQL Server 應用程式。該服務評估現有保護級別，包括目前的備份保護策略、快照以及備份和還原選項。</block>
+  <block id="1bf1acc6c6a3e3af639e9ae129364ba0" category="paragraph">第一步從SnapCenter匯入主機資源，並在NetApp Backup and Recovery清單頁面中顯示這些資源。此時，資源尚未由NetApp Backup and Recovery管理。</block>
+  <block id="f0b87199311bf1c15f240b666518084c" category="list-text">AWS：<block ref="e5469c6686b5a2c86b78502f7ea8c335" category="inline-link-rx"></block> 。</block>
+  <block id="6d641e087ca9cbb2e0778a492ac1066a" category="list-text">Azure：<block ref="211ed702bd160a1aa192248c846136e5" category="inline-link-rx"></block> 。</block>
+  <block id="80720981863bfe0c9cc6702701d24f18" category="list-text">Google Cloud：<block ref="5aa99f120ab43d5669622268ca1e3fd1" category="inline-link-rx"></block> 。</block>
+  <block id="35521e84b87db7ff299e3d292854a426" category="paragraph">使用NetApp Backup and Recovery從快照、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原 Hyper-V 工作負載。</block>
+  <block id="c71707f07223923dbaab7d7f94cf956b" category="paragraph">使用NetApp Backup and Recovery從快照、複製到輔助儲存的保護群組備份或儲存在物件儲存中的備份還原 KVM 虛擬機器。</block>
+  <block id="c4a9fad82bfaa655d1dc063df314c9ed" category="list-text">配置日誌目錄（從 *清單* &gt; *主機*）。如果要在快照中備份資料庫主機的日誌，請先在NetApp Backup and Recovery中設定日誌。有關詳細信息，請參閱<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block>。</block>
+  <block id="d4269b8b09864c01c1c86fd8fbf36f7e" category="paragraph">備份生命週期作業追蹤所有已刪除或正在排隊等待刪除的快照。從ONTAP 9.13 開始，您可以在「作業監控」頁面上查看所有稱為「保留」的作業類型。</block>
+  <block id="e55271e37b053fabbe06b3671cfb3c48" category="paragraph">NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照並將其傳輸到備份位置來同步備份。</block>
+  <block id="ac953870175731881060585a6b9ee690" category="paragraph">NetApp Backup and Recovery可讓您將下列來源系統中的 Microsoft SQL Server 執行個體和資料庫備份到下列輔助系統以及公有雲和私有雲供應商中的物件儲存。快照保留在來源系統上。</block>
+  <block id="d07d19d5986209f0a00db1f8289e73d2" category="paragraph">您可以將 Microsoft SQL Server 執行個體和資料庫從駐留在主儲存或輔助系統（複製磁碟區）或物件儲存（備份檔案）中的備份還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。</block>
+  <block id="4c0cc18e33fa07512d511f9a04e0629a" category="cell">Azure 中的Cloud Volumes ONTAP本機ONTAP系統ONTAP S3</block>
+  <block id="c60e36349d596cf0c1aa6f81af07e331" category="summary">從快照、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原資料庫工作負載。</block>
+  <block id="5a2a139323e6d5500103ef2022ae2f1b" category="paragraph">使用NetApp Backup and Recovery還原 Microsoft SQL Server 工作負載。使用快照、複製到輔助儲存的備份或物件儲存中的備份。將工作負載還原到原始系統、具有相同雲端帳戶的不同系統或本機ONTAP系統。</block>
+  <block id="f9bef19f0d38828a9a73a3af229a72d5" category="paragraph">使用NetApp Backup and Recovery從快照、複製到輔助儲存的備份或儲存在物件儲存中的備份還原 Oracle 資料庫。</block>
+  <block id="e6e260ceb36a63c5c858a5939aa0a093" category="paragraph">您可以建立策略來管理本機快照、複製到二級儲存以及備份到物件儲存。3-2-1 策略的一部分包括建立主儲存系統上的實例、資料庫、應用程式或虛擬機器的快照。</block>
+  <block id="6401b61f7f56a390f004be1c6e52452f" category="paragraph">在發現過程中， NetApp Backup and Recovery會分析您組織內的 VMware 工作負載，並評估和匯入現有的保護策略、快照以及備份和復原選項。</block>
+  <block id="bd45d990ee6243026d43e7ba09d9dcc7" category="list-text">從SnapCenter Plug-in for VMware vSphere匯入現有的保護策略、快照以及備份和復原選項。</block>
+  <block id="738f5e601244316981f42d0e0d74788f" category="list-text">若要顯示儀表板，請從「備份與還原」功能表中選擇「儀表板」。</block>
+  <block id="52e10d37ef7bbcf001c2af25b92aaa07" category="paragraph">使用NetApp Backup and Recovery從快照、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原 VMware 工作負載。</block>
+  <block id="c7216ade1ce2641cd0b5ceae5c192aea" category="paragraph">建立快照或複製磁碟區不收取任何費用—除了儲存快照和複製磁碟區所需的磁碟空間。</block>
+  <block id="ec5903fe264ba75792e588ee687f9158" category="paragraph">僅當從物件儲存進行備份和還原時才需要備份許可證。建立快照和複製磁碟區不需要許可證。</block>
+  <block id="0f3f39435676ffeef4ba4ef82d2d4b94" category="list-text">*將現有快照匯出至物件儲存作為備份副本*：如果此系統中存在與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
+  <block id="b26fafb8754488cba5d1c6f4c35f4b89" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含快照中包含的主儲存系統資料的差異副本。</block>
+  <block id="bb5dc31143cea02e04349aa386dc4c27" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含快照中包含的主儲存資料的差異副本。</block>
+  <block id="d04d7ffd1d421df13a11259032d9191e" category="paragraph">透過NetApp Backup and Recovery，您可以透過變更備份計畫、啟用/停用磁碟區備份、暫停備份、刪除備份、強制刪除備份等方式管理Cloud Volumes ONTAP和本機ONTAP系統的備份。這包括所有類型的備份，包括快照、複製磁碟區和物件儲存中的備份檔案。您也可以取消註冊NetApp Backup and Recovery。</block>
+  <block id="294441075d63ebaf575b2bea27e26a8b" category="paragraph">您可以在磁碟區備份儀表板中查看目前正在備份的所有磁碟區的清單。這包括所有類型的備份，包括快照、複製磁碟區和物件儲存中的備份檔案。您也可以查看系統中目前未備份的磁碟區。</block>
+  <block id="16733ccec61246c84b6ccea8b096ea96" category="list-text">查看「現有保護」欄位中保護選項的狀態。這 3 個圖示分別代表「本機快照」、「複製磁碟區」和「物件儲存中的備份」。</block>
+  <block id="41164544ff8c92dec6c6202f3c48b888" category="list-text">在「定義備份策略」頁面中，選擇備份架構，然後定義本機快照、複製磁碟區和備份檔案的策略和其他詳細資訊。查看您在此系統中啟動的初始磁碟區的備份選項的詳細資訊。然後選擇“下一步”。</block>
+  <block id="6c93c0ee904d580923385784899b59a3" category="paragraph">您可以變更指派給已指派原則的現有磁碟區的備份策略。您可以變更本機快照、複製磁碟區和備份檔案的策略。您想要套用於磁碟區的任何新快照、複製或備份策略都必須已經存在。</block>
+  <block id="257aa7f9d15bc46fa7c45edeac5b1ab7" category="list-text">在「編輯備份策略」頁面中，對本機快照、複製磁碟區和備份檔案的現有備份策略進行更改，然後選擇「下一步」。</block>
+  <block id="96f9f5071945e75714c9ffbe54f80851" category="list-text">在出現的備份頁面中，對本機快照、複製磁碟區或備份檔案的現有備份策略進行更改，然後選擇「儲存」。</block>
+  <block id="c394a26f3d6de3615a172a12e31a16e4" category="paragraph">您可以建立磁碟區物件的臨時快照或備份。您無法建立臨時複製磁碟區。</block>
+  <block id="44b2c63b1441a7eef6175bc2818c45c0" category="paragraph">顯示磁碟區的詳細資訊和快照清單。</block>
+  <block id="2e3f296276fc537735df961d32dd7d12" category="cell">暫停快照的增量傳輸，以更新目標磁碟區。如果您想重新開始增量更新，可以稍後再恢復。</block>
+  <block id="695fbf9213e2d5d1e929e9356fa04c37" category="paragraph">請注意，此操作不會影響快照或複製磁碟區—這些類型的備份檔案不會被刪除。</block>
+  <block id="241f8ce89369b1ae16481599cd708881" category="paragraph">如果您不再需要單一備份文件，可以將其刪除。這包括刪除磁碟區快照的單一備份或物件儲存中的備份。</block>
+  <block id="9c01aed76561204d094a863f38d38ad2" category="paragraph">顯示卷的詳細信息，您可以選擇*快照*、*複製*或*備份*來查看該卷的所有備份文件的列表。預設情況下，會顯示可用的快照。</block>
+  <block id="d525060e9ad215c3aa2a00862d266e25" category="list-text">*將現有快照匯出至物件儲存作為備份副本*：如果此系統中存在與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
+  <block id="7c5de50c41f0a8634817597808c6df4b" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含快照中所含主資料的差異副本。</block>
+  <block id="d35a77cfe575d13394b221b746fe1f0b" category="paragraph">在為叢集啟動NetApp Backup and Recovery之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此授權用於備份和還原物件儲存 - 建立快照或複製磁碟區不需要授權。此許可證適用於該帳戶，可跨多個系統使用。</block>
+  <block id="4ae0ae424ac8104b3b6379720f5d11c7" category="list-text">*本機快照*：建立本機快照。</block>
+  <block id="45f89ff96066abe8d4fab644a72cff53" category="list-text">*將現有快照匯出至物件儲存作為備份檔案*：如果此系統中存在與您剛剛選擇的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
+  <block id="3a4f7228272f3d796e47dc3105df1408" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括來源資料的完整副本。後續傳輸包含快照中包含的主儲存資料的差異副本。</block>
+  <block id="d8521ea0d293cfc6440bf09453cebbd9" category="paragraph">新版NetApp Backup and Recovery除了可以建立物件儲存備份外，還增加了規劃和建立快照及複製磁碟區的功能，但需要使用 3.9.31 或更高版本的控制台代理。因此建議您取得此最新版本來管理所有備份。</block>
+  <block id="33b4029bcdc81d3d05791f1403584ca0" category="paragraph">您可以建立策略來管理物件儲存的快照、複製和備份：</block>
+  <block id="6a765f5fb9e687173df4e2b03937673d" category="paragraph">3-2-1 策略的一部分包括建立主儲存系統上磁碟區的快照。</block>
+  <block id="ac82d5df0fb83f5f0530ce8aa4d94a15" category="paragraph">您可以使用「進階設定」頁面變更在為每個ONTAP系統啟動NetApp Backup and Recovery時設定的叢集等級、備份到物件儲存設定。您也可以修改一些作為「預設」備份設定的設定。這包括更改備份到物件儲存的傳輸速率、是否將歷史快照匯出為備份文件，以及啟用或停用系統的勒索軟體掃描。</block>
+  <block id="1b22a10a2875f8854738412fd55a7964" category="list-text">更改是否將歷史快照匯出為備份檔案並將其包含在未來磁碟區的初始基線備份檔案中</block>
+  <block id="8590a86fff0fbd8d0c19bac8d47c9fe1" category="section-title">更改是否將歷史快照匯出為備份文件</block>
+  <block id="20cf918510f72844a04ae68981e61c14" category="paragraph">如果存在與本系統中使用的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則可以將這些歷史快照匯出到物件儲存作為備份檔案。這樣，您就可以透過將較舊的快照移至基準備份副本中來初始化雲端備份。</block>
+  <block id="5f73887604eb5a0b44550e5a1371b94d" category="list-text">在「進階設定」頁面中，展開「匯出現有快照」部分。</block>
+  <block id="7eb825e7b5e7636a29150410089bcbf5" category="list-text">選擇是否要匯出現有快照。</block>
+  <block id="98d551107f1d17645e2b050fe333480b" category="paragraph">當您為任何磁碟區選擇「年度」備份策略標籤時，建立的快照將非常大。預設情況下，這些年度快照在傳輸到物件儲存後會自動從來源系統中刪除。您可以從「年度快照刪除」部分變更此預設行為。</block>
+  <block id="9d667c05d0d18216605cbb0bc59a1281" category="paragraph">預設啟用勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照上。您可以透過「進階設定」頁面上的選項，啟用或停用最新快照上的勒索軟體掃描。如果啟用它，則預設每 7 天執行一次掃描。</block>
+  <block id="b337f362b39ae43e2ecb969af7243145" category="paragraph">計劃的勒索軟體掃描僅在最新快照上運行。</block>
+  <block id="da251788f86e521e7d3714c723201b4e" category="list-text">您將使用哪些保護功能：快照、複製磁碟區和/或雲端備份</block>
+  <block id="55aeb9ffe6571ee026c3aced844fd2a8" category="cell">建立來源磁碟區中某個磁碟區的唯讀、時間點映像作為快照。您可以使用快照來還原單一文件，或還原整個磁碟區的內容。</block>
+  <block id="df0b18dcdaa591155a9eed6206daef89" category="paragraph">快照是所有備份方法的基礎，是使用備份和還原服務的必要條件。快照是磁碟區的唯讀、時間點影像。此映像佔用極少的儲存空間，由於它只記錄自上次快照建立以來檔案發生的更改，因此效能開銷可以忽略不計。在磁碟區上建立的快照用於保持複製磁碟區和備份檔案與來源磁碟區所做的變更保持同步—如圖所示。</block>
+  <block id="f657f3a24ce036c104527afcc922edf3" category="inline-image-macro">一張圖表顯示了備份檔案在來源系統中以快照形式存在，在輔助儲存系統中以複製磁碟區形式存在，以及在物件儲存中以備份檔案形式存在。</block>
+  <block id="dcbf20d88463ce5fd2bc493556922c47" category="paragraph"><block ref="dcbf20d88463ce5fd2bc493556922c47" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2776758e5e8aebbda8cfb9befc94e487" category="list-text">來源磁碟區 -&gt; 快照 -&gt; 複製磁碟區 -&gt; 備份文件</block>
+  <block id="804e9de66928797cdc078acab1089abf" category="list-text">來源磁碟區 -&gt; 快照 -&gt; 備份文件</block>
+  <block id="3c66f6c34fa4c46a8e7745dfec597ca4" category="list-text">來源卷 -&gt; 快照 -&gt; 複製卷</block>
+  <block id="1cecb337312aeb1c06c561eedd94effd" category="paragraph">扇出式架構將快照獨立傳輸到目標儲存系統和雲端備份物件。</block>
+  <block id="e86b3ba1e8d7c819fe8eb9abc1c4c695" category="inline-image-macro">圖示說明如何使用磁碟區的快照來建立和更新複製磁碟區和備份檔案。</block>
+  <block id="e275cc404d288505406ea21d6353319e" category="paragraph"><block ref="e275cc404d288505406ea21d6353319e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cfa9ed0e82f69a09befb3dbb6cfec828" category="paragraph">級聯架構首先將快照傳輸到目標儲存系統，然後該系統將副本傳輸到雲端的備份物件。</block>
+  <block id="94ca58d677a1508cb37719aa6942c1fb" category="paragraph"><block ref="94ca58d677a1508cb37719aa6942c1fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a15375a7b3327e9590f9cabdb3323373" category="cell">由於來源系統需要向兩個不同的系統發送快照，因此對來源系統的效能影響很小。</block>
+  <block id="44031357b6c3b154b9d96f1c9344912c" category="cell">對來源儲存系統的效能影響較小，因為它只發送一次快照。</block>
+  <block id="27633467a4d084c1ae2d149610df116e" category="list-text">預設快照策略會建立每小時、每天和每週快照，保留 6 個每小時快照、2 個每天快照和 2 個每週快照。</block>
+  <block id="479879a0a56a65760a613ed57fb23158" category="list-text">預設複製策略複製每日和每週快照，保留 7 個每日快照和 52 個每週快照。</block>
+  <block id="4781e0ae3fa76dcbea28b4037c95437d" category="list-text">預設備份策略複製每日和每週快照，保留 7 個每日快照和 52 個每週快照。</block>
+  <block id="4505d5dc59ca341c8aa8ef2c0fac02a6" category="list-text">來源系統上磁碟區的快照</block>
+  <block id="caec39d67e86a9c850947c8f558df9b9" category="paragraph"><block ref="caec39d67e86a9c850947c8f558df9b9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="aad04fb15ee44595658c033dd06ddac1" category="paragraph">NetApp Backup and Recovery利用 NetApp 的SnapMirror資料複製技術，透過建立快照並將其傳輸到備份位置，確保所有備份完全同步。</block>
+  <block id="4d9a28db017266e35e5d4203c8c74098" category="list-text">從物件儲存中的本機快照、複製磁碟區或備份磁碟區還原特定時間點的資料。</block>
+  <block id="80833b701d0227f13b23b9e423eb6766" category="paragraph">NetApp Backup and Recovery讓您能夠將ONTAP磁碟區從下列來源系統備份到下列輔助系統以及公有雲和私有雲供應商中的物件儲存。快照保留在來源系統上。</block>
+  <block id="1bbb6529f158f1043f5462af251a4d8d" category="paragraph">您可以將ONTAP資料從位於輔助系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照位於來源系統上，並且只能還原到同一系統。</block>
+  <block id="45374e4c2372e5efe029c3622265209a" category="list-text">快照儲存在來源系統的來源磁碟區上。</block>
+  <block id="30e07a9dd02dd98f372bd162ec8456ef" category="paragraph">當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您選擇的策略進行備份。您可以為快照、複製磁碟區和備份檔案選擇不同的策略。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，則可以為該叢集建立其他策略，並在啟動NetApp Backup and Recovery後將這些原則指派給其他磁碟區。</block>
+  <block id="fa3dd3bcafecb630044b7d1eddb7cd43" category="admonition">應用於磁碟區的快照策略必須具有您在複製策略和備份到物件策略中使用的標籤之一。如果未找到符合的標籤，則不會建立備份檔案。例如，如果您想要建立「每週」複製磁碟區和備份文件，則必須使用建立「每週」快照的快照策略。</block>
+  <block id="9e813756b5af6bc196c66209061d9d1a" category="paragraph">預設啟用計劃的勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照上。可以停用計劃掃描以降低成本。您可以透過「進階設定」頁面上的選項，啟用或停用最新快照上的計畫勒索軟體掃描。如果啟用它，則預設每週執行一次掃描。您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。</block>
+  <block id="c379b9e8581a6fd59a6755037f41a617" category="paragraph">ONTAP磁碟區資料的備份可以從您建立備份的位置取得：快照、複製磁碟區和儲存在物件儲存中的備份。您可以從這些備份位置中的任何一個還原特定時間點的資料。使用NetApp Backup and Recovery，可以從備份文件還原整個ONTAP卷，或者如果只需要還原幾個文件，則可以還原資料夾或單一文件。</block>
+  <block id="02c75a95538b43e9e819f0d1b0cc19f2" category="list-text">快照 -&gt; 已恢復磁碟區</block>
+  <block id="2630c5e201ef46189b621a683ffbc8dc" category="paragraph">在復原之前，請記下來源磁碟區名稱、來源系統和 SVM 以及備份檔案日期。您可以從快照、複製磁碟區或儲存在物件儲存中的備份還原ONTAP資料。</block>
+  <block id="68601916ccf016a3cbb9b91a847005f5" category="paragraph">您可以將ONTAP資料從位於二級系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。</block>
+  <block id="2b3e9f7492129e1cad66eb9ef0df47d2" category="paragraph">「位置」欄位顯示備份檔案（快照）是「本機」（來源系統上的快照）、「輔助」（輔助ONTAP系統上的複製磁碟區）或「物件儲存」（物件儲存中的備份檔案）。選擇您想要恢復的檔案。</block>
+  <block id="8ba8feef9dc91a81337c3e1c3f636d2e" category="admonition">目前，您只能從物件儲存中的備份檔案還原資料夾或單一檔案。目前不支援從本機快照或位於輔助系統（複製磁碟區）中的備份檔案還原檔案和資料夾。</block>
+  <block id="0c33ea8397b0b32c84a3332e9860b200" category="paragraph">搜尋操作會尋找ONTAP磁碟區的所有本機快照、輔助儲存系統上的所有複製磁碟區以及物件儲存中存在的所有備份檔案。由於從本機快照或複製磁碟區還原資料比從物件儲存中的備份檔案還原資料速度更快、成本更低，因此您可能需要從這些其他位置還原資料。</block>
+  <block id="0b7639e600f1d3ff92ed788a9be2c0dd" category="list-text">必須在 SVM 上啟動 SnapDiff RPC 伺服器。當您在系統上啟用索引時，控制台會自動執行此操作。（SnapDiff 是一種能夠快速識別快照之間檔案和目錄差異的技術。）</block>
+  <block id="dff115c532ece3121746427a98f68318" category="list-text">在「過濾依據」區域中，選擇過濾條件。例如，您可以選擇資料所在的系統和檔案類型，例如 .JPEG 檔案。或者，如果您只想在物件儲存中的可用快照或備份檔案中搜尋結果，則可以選擇備份位置類型。</block>
+  <block id="4fbc8584021c60a153dbf213f698df58" category="paragraph">請注意，搜尋結果會識別包含您搜尋檔案的本機磁碟區快照和遠端複製磁碟區。您可以選擇從雲端備份檔案、快照或複製磁碟區中還原。</block>
 </blocks>

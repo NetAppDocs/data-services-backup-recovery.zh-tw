@@ -75,19 +75,9 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 
 使用這些連結從您的雲端供應商市場訂閱NetApp Backup and Recovery ：
 
-ifdef::aws[]
-
-* AWS： https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["前往NetApp Intelligent Services市場了解定價詳情"^] .endif::aws[]
-
-
-ifdef::azure[]
-
-* Azure： https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["前往NetApp Intelligent Services市場了解定價詳情"^] .endif::azure[]
-
-
-ifdef::gcp[]
-
-* Google雲端： https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["前往NetApp Intelligent Services市場了解定價詳情"^] .endif::gcp[]
+* AWS： https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["前往NetApp Intelligent Services市場了解定價詳情"^] 。
+* Azure： https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["前往NetApp Intelligent Services市場了解定價詳情"^] 。
+* Google Cloud： https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["前往NetApp Intelligent Services市場了解定價詳情"^] 。
 
 
 
@@ -97,8 +87,6 @@ ifdef::gcp[]
 透過購買年度合約每年支付NetApp Backup and Recovery的費用。期限分為 1 年、2 年或 3 年。
 
 如果您與市場簽訂了年度合同，則所有NetApp Backup and Recovery消費均根據該合約收費。您不能將年度市場合約與 BYOL 混合搭配。
-
-ifdef::aws[]
 
 當您使用 AWS 時，有兩種年度合約可供選擇 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace 頁面"^]對於Cloud Volumes ONTAP和本機ONTAP系統：
 

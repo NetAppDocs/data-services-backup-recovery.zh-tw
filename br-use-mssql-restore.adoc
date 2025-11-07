@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-mssql-restore.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: 從快照副本、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原資料庫工作負載。 
+summary: 從快照、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原資料庫工作負載。 
 ---
 = 使用NetApp Backup and RecoveryMicrosoft SQL Server 工作負載
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 從快照副本、複製到輔助儲存的工作負載備份或儲存�
 
 
 [role="lead"]
-使用NetApp Backup and Recovery還原 Microsoft SQL Server 工作負載。使用快照副本、複製到輔助儲存的備份或物件儲存中的備份。將工作負載還原到原始系統、具有相同雲端帳戶的不同系統或本機ONTAP系統。
+使用NetApp Backup and Recovery還原 Microsoft SQL Server 工作負載。使用快照、複製到輔助儲存的備份或物件儲存中的備份。將工作負載還原到原始系統、具有相同雲端帳戶的不同系統或本機ONTAP系統。
 
 .從這些位置恢復
 您可以從不同的起始位置恢復工作負載：
