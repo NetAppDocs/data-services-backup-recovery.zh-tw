@@ -4777,4 +4777,17 @@
   <block id="0b7639e600f1d3ff92ed788a9be2c0dd" category="list-text">必須在 SVM 上啟動 SnapDiff RPC 伺服器。當您在系統上啟用索引時，控制台會自動執行此操作。（SnapDiff 是一種能夠快速識別快照之間檔案和目錄差異的技術。）</block>
   <block id="dff115c532ece3121746427a98f68318" category="list-text">在「過濾依據」區域中，選擇過濾條件。例如，您可以選擇資料所在的系統和檔案類型，例如 .JPEG 檔案。或者，如果您只想在物件儲存中的可用快照或備份檔案中搜尋結果，則可以選擇備份位置類型。</block>
   <block id="4fbc8584021c60a153dbf213f698df58" category="paragraph">請注意，搜尋結果會識別包含您搜尋檔案的本機磁碟區快照和遠端複製磁碟區。您可以選擇從雲端備份檔案、快照或複製磁碟區中還原。</block>
+  <block id="8cb59bcb28ab4d28eff3f32b41c1619f" category="paragraph">您首先需要掛載一個單獨的磁碟區來存放目錄檔案。這樣可以防止因保存快照的檔案過大而導致資料遺失。並非每個叢集都需要這樣做；您可以從環境中的任何叢集掛載任何一個磁碟區。如果不這樣做，索引可能無法正常工作。</block>
+  <block id="49b1bd86131611255094bea2f77118b7" category="paragraph">裝訂體積，請參考以下尺寸指南：</block>
+  <block id="0207db4ce855854d816d06443ff062ea" category="list-text">使用NetApp NVS 卷</block>
+  <block id="aa45cf8d923bfb8185fed2178e78d921" category="list-text">建議使用磁碟吞吐量為 300 MB/s 的AFF儲存。吞吐量降低會影響搜尋和其他操作。</block>
+  <block id="076bea46cdc896921ec2687cf3f345bb" category="list-text">啟用NetApp快照功能，除了保護目錄備份 zip 檔案外，還可以保護目錄元資料。</block>
+  <block id="1c3669c2099ac1b271c6bc4f19601ca5" category="list-text">每10億個檔案佔用50GB空間</block>
+  <block id="d8f2f459c62a4c272bc182a3bf83e97d" category="list-text">目錄資料佔用 20 GB 空間，另有空間用於建立 zip 檔案和存放臨時檔案。</block>
+  <block id="e40baf893187a4f380031521e09aab99" category="list-title">掛載磁碟區以重新索引目錄的步驟</block>
+  <block id="f0b22c7460655890a4c18c0545153bae" category="list-text">將卷掛載到<block ref="f454c0203410fcd923445c6d0fd3fe90" prefix=" " category="inline-code"></block> 輸入以下命令，其中：</block>
+  <block id="a644d6f5b4a74fc5834ee2f4deceeb0a" category="list-text"><block ref="9e631ecdc775968f0a566931df27c2eb" prefix="" category="inline-code"></block> 這是在叢集上用於儲存目錄檔案的磁碟區。</block>
+  <block id="de272d4987aa96a00ccf6441ad353c0e" category="list-text"><block ref="f454c0203410fcd923445c6d0fd3fe90" prefix="" category="inline-code"></block> 這是它安裝的路徑。</block>
+  <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">範例：</block>
+  <block id="67e93e04234f9801960d3d563faf4619" category="list-title">啟用索引的步驟</block>
 </blocks>
