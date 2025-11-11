@@ -18,8 +18,6 @@ summary: 您可以保護 Hyper-V 虛擬機，從本機ONTAP系統到主儲存和
 
 您可以將 Hyper-V 工作負載備份到 Amazon Web Services S3 或StorageGRID ，並將 Hyper-V 工作負載還原為本機 Hyper-V 主機。
 
-image:../media/diagram-backup-recovery-general.png["備份與復原的整體架構圖"]
-
 使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：
 
 * 多個資料副本可防止內部和外部網路安全威脅。
