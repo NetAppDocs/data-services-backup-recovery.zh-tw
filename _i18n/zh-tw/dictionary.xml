@@ -965,8 +965,6 @@
   <block id="4efc134fd5130564588a4806f9c977f0" category="summary">您可以保護 Hyper-V 虛擬機，從本機ONTAP系統到主儲存和二級存儲，確保您的資料受到保護。</block>
   <block id="997367baf18d147848dcf07ba10d7d8d" category="paragraph">使用NetApp Backup and Recovery保護您的 Hyper-V VM。  NetApp Backup and Recovery為獨立實例和 FCI 叢集實例提供快速、節省空間、崩潰一致和 VM 一致的備份和復原作業。</block>
   <block id="9772979b1b90e72fc3981d222d55243a" category="paragraph">您可以將 Hyper-V 工作負載備份到 Amazon Web Services S3 或StorageGRID ，並將 Hyper-V 工作負載還原為本機 Hyper-V 主機。</block>
-  <block id="27bf4d1e94a4188d82244d997deb945d" category="inline-image-macro">備份與復原的整體架構圖</block>
-  <block id="a25193bbdff09f58ab1dcb4151b659ec" category="paragraph"><block ref="a25193bbdff09f58ab1dcb4151b659ec" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b7bf580752a61d71227184a60f0fbfd3" category="paragraph">使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：</block>
   <block id="79c28420811a3b277df19fdd38cd10e0" category="list-text">多種媒體類型可確保在一種媒體類型發生實體或邏輯故障時能夠進行故障轉移。</block>
   <block id="532ee325506687dccb969b2e88d92b32" category="inline-link-macro">切換到先前的NetApp Backup and RecoveryUI</block>
@@ -2016,25 +2014,13 @@
   <block id="a426b39cc5038676b39d2265b22cebec" category="list-text">第二種選擇是簽訂年度合約。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="inline-xref">授權</block>
   <block id="8426d45850b9ec06adef93652db54080" category="list-text">第三種選擇是直接從NetApp購買授權。閱讀<block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block>部分了解詳情。</block>
-  <block id="72097de9125a66d03bbdf7bf977af276" category="paragraph">NetApp Backup and Recovery可免費試用。您可以在有限的時間內無需許可證金鑰使用該服務。</block>
   <block id="30c887a11915f5c1adb97321b93a9e39" category="paragraph">NetApp Backup and Recovery適用於以下消費模式：</block>
-  <block id="9db5c387eb2c1a4533c42a082e094d13" category="list-text">*自帶許可證 (BYOL)*：從NetApp購買的許可證，可與任何雲端提供者一起使用。</block>
-  <block id="467e5d512a9162ad6d144008e41f967e" category="list-text">*即用即付 (PAYGO)*：從雲端供應商的市場按小時訂閱。</block>
   <block id="146cb6145f5238f0a019636047844250" category="list-text">*年度*：來自雲端提供者市場的年度合約。</block>
-  <block id="2d800cbdf9ba7a82c10657f2a93b18b5" category="paragraph">*自備駕照*</block>
-  <block id="e030c8eecbfc992cc68549bf0348d474" category="paragraph">BYOL 是基於期限（1、2 或 3 年）和容量的，以 1 TiB 為增量。您向NetApp付費以使用該服務一段時間（例如 1 年）以及最大容量（例如 10 TiB）。</block>
   <block id="b81dcdb5e6cec4dda0b7fdf2110e5d48" category="paragraph">您將收到一個序號，請在NetApp Console中輸入該序號以啟用該服務。當達到任一限制時，您都需要更新許可證。備份 BYOL 授權適用於與您的NetApp Console組織或帳號關聯的所有來源系統。</block>
   <block id="6e26156d53b8aed5293cf52d74acb49c" category="inline-link-macro">了解如何設定許可證</block>
   <block id="520d2c423b38acf3262d3f1e93b53d8a" category="paragraph"><block ref="5f449dd4c94fd29d3e3b83e45dd58382" category="inline-link-macro-rx"></block>。</block>
-  <block id="3e0c229baf295106907effcb0c861fcc" category="paragraph">*按需付費訂閱*</block>
   <block id="0f3691e0fad1edbca841aabd38ddfc42" category="paragraph">NetApp Backup and Recovery以按需付費模式提供基於消費的授權。透過雲端供應商的市場訂閱後，您需要按 GiB 為備份資料付費 - 無需預付款。您的雲端提供者將透過每月帳單向您收費。</block>
   <block id="9757bd87f9a5ff6758600430092b3955" category="paragraph">請注意，當您首次註冊 PAYGO 訂閱時，可以享受 30 天的免費試用。</block>
-  <block id="9cb9e2f871f88a22d8fe4b82590901c6" category="paragraph">*年度合約*</block>
-  <block id="d53b530085f1dc3e3526eed96fa256d8" category="paragraph">使用 AWS 時，有兩種年度合約可供選擇，分別為 1 年、2 年或 3 年：</block>
-  <block id="5987d4056acac19af6f78703bc378427" category="list-text">「CVO Professional」計畫可讓您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery。這包括根據此許可證收費的Cloud Volumes ONTAP磁碟區的無限備份（備份容量不計入許可證）。 endif::aws[]</block>
-  <block id="365c46b758ba93d5bfe4bf6066ae85d9" category="paragraph">使用 Azure 時，有兩種年度合約可供選擇，分別為 1 年、2 年或 3 年：</block>
-  <block id="c2031f4f264e0d58f523db5c7a98efbb" category="list-text">「CVO Professional」計畫可讓您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery。這包括根據此許可證收費的Cloud Volumes ONTAP磁碟區的無限備份（備份容量不計入許可證）。 endif::azure[]</block>
-  <block id="565e9b99ea730c02b444af9641d863c0" category="paragraph">使用 GCP 時，您可以向NetApp要求私人優惠，然後在NetApp Backup and Recovery啟動期間從 Google Cloud Marketplace 訂閱時選擇該計劃。 endif::gcp[]</block>
   <block id="8d76c3c56611813110af76c5eca39835" category="section-title">支援的資料來源、系統和備份目標</block>
   <block id="cec0c370d9c2ef0dbbf7f89c16ef1a90" category="paragraph-title">支援的工作負載資料來源</block>
   <block id="471bdf4d52cdd0764f463e7010138e3f" category="paragraph">NetApp Backup and Recovery可保護下列工作負載：</block>
@@ -4790,4 +4776,19 @@
   <block id="de272d4987aa96a00ccf6441ad353c0e" category="list-text"><block ref="f454c0203410fcd923445c6d0fd3fe90" prefix="" category="inline-code"></block> 這是它安裝的路徑。</block>
   <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">範例：</block>
   <block id="67e93e04234f9801960d3d563faf4619" category="list-title">啟用索引的步驟</block>
+  <block id="7c8150e957629e4f178e1453b244de4e" category="paragraph">NetApp Backup and Recovery提供免費試用版，讓您在限定時間內無需許可證金鑰即可使用。</block>
+  <block id="9b337326626f108661db15ede8612161" category="paragraph">只有涉及物件儲存的備份和復原作業才需要備份許可證。建立快照和複製磁碟區不需要許可證。</block>
+  <block id="38791ac6dfcab3a4a150d9b40eb83c4b" category="paragraph">您可以從三種授權選項中進行選擇：</block>
+  <block id="24a3699faa66664ca496b9a5bd124662" category="list-text">*自帶授權 (BYOL)*：從NetApp購買基於期限（1 年、2 年或 3 年）和基於容量（以 1-TiB 為增量）的授權。在NetApp Console中輸入提供的序號進行啟動。該許可證涵蓋您組織中的所有來源系統。當期限或容量達到限制時，需要續約。</block>
+  <block id="248848332301b53df791d76f885827be" category="inline-link">使用NetApp Backup and Recovery按需付費訂閱</block>
+  <block id="365539ae3de2669e3c6cab548aad4d26" category="list-text">*按需付費 (PAYGO)*：透過雲端服務供應商的市場訂閱，並按備份資料的 GiB 數量付費，按月計費。無需預付任何費用。首次註冊即可享 30 天免費試用。更多信息，請參閱<block ref="8edaf8cd3966d935673fb34ac864f172" category="inline-link-rx"></block>。</block>
+  <block id="b2756926bee4401109074cd37d6bbfc7" category="list-text">*年度合約*：可透過 AWS 和 Azure Marketplace 購買，期限為 1 年、2 年或 3 年。現有兩份年度合約可供選擇：</block>
+  <block id="56a16935ca4475c6ad8f6940bbbaa577" category="list-text">*雲端備份*：備份Cloud Volumes ONTAP和本地ONTAP資料。</block>
+  <block id="5051cac88a3b9ad2e2baad101b5e4862" category="list-text">*CVO 專業版*：捆綁了Cloud Volumes ONTAP和NetApp Backup and Recovery， Cloud Volumes ONTAP磁碟區可進行無限備份（備份容量不計入許可證）。</block>
+  <block id="c85bf80350e3e2b3024a57e3e63f42af" category="list-text">CVO 專業版方案包含兩種收費方式：</block>
+  <block id="b11cbf7b17a0a28de648a14bc329d754" category="inline-link">Cloud Volumes ONTAP的許可</block>
+  <block id="3e2ef02026c97d7e5a6f8783f142b8ca" category="list-text">資源費用：依儲存使用情況而定。更多信息，請參閱<block ref="fb7e1562747222c6aa716c91aa0ab813" category="inline-link-rx"></block>。</block>
+  <block id="b341302252cb59acb02da2074d4fe6c4" category="list-text">*服務費用*： NetApp Backup and Recovery費用。但是，如果來源磁碟區位於使用 CVO 專業方案的儲存系統中，則NetApp Backup and Recovery是免費提供的。</block>
+  <block id="40d372f97e4d897da51bc1fa5978329b" category="paragraph">當您使用 Google Cloud Platform 時，請向NetApp申請私有報價，並在 Google Cloud Marketplace 啟用時選擇您的套餐。</block>
+  <block id="3cd3cc23191003954a83615e7dc619e1" category="list-text">Oracle 工作負載（預覽版）</block>
 </blocks>
