@@ -216,7 +216,6 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 ** Microsoft Hyper-V 2019、2022 及 2025 年版本
 ** ASP.NET Core Runtime 8.0.12 託管包（以及所有後續 8.0.x 修補程式）
 ** PowerShell 7.4.2 或更高版本
-** 確保已安裝主機監護服務角色（請參閱 https://learn.microsoft.com/en-us/windows-server/administration/server-manager/add-remove-roles-features?tabs=gui#add-roles-and-features-to-windows-server["Microsoft Windows Server 文件"^] （取得說明）
 ** 確保 Windows 防火牆設定中允許下列連接埠進行雙向 HTTPS 通訊：
 +
 *** 8144（適用於 Hyper-V 的NetApp插件）
