@@ -346,7 +346,6 @@
   <block id="a9ad02ebb13f3d9fa3cb4a1b59be6548" category="paragraph">此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。</block>
   <block id="0e32e31adc232e70ce479856e16c7f00" category="section-title">不支援的操作</block>
   <block id="57a114780f98fd4bb0b06506b0ca9577" category="paragraph">NetApp Backup and Recovery中的 Hyper-V 工作負載的私人預覽版不支援以下操作：</block>
-  <block id="020a36deb114af1bb518c70d5975e940" category="list-text">建立資源組</block>
   <block id="5ae6a8a06c30125d00a57910609856cf" category="list-text">跨磁碟（跨多個 CIFS 共用）</block>
   <block id="5cb642b37b3102019402cbd3b93a5693" category="list-text">透過 SAN 保護虛擬機</block>
   <block id="0fffe3f2fb1497b9e344ba8dceac922b" category="list-text">保護使用 System Center Virtual Machine Manager (SCVMM) 叢集的 Hyper-V 主機</block>
@@ -677,7 +676,6 @@
   <block id="6fa0f470d5826983538c3b3091b8d4f3" category="list-text">選擇與該主機一起使用的控制台代理程式。</block>
   <block id="f536637d4867fa48ae5f42ffcabb3da0" category="list-text">輸入此憑證的名稱。</block>
   <block id="c7312d0cf4cda8f78a6f1769e7958906" category="list-text">輸入該帳戶的使用者名稱和密碼。</block>
-  <block id="5cf90f1e7bb7c40d89ed2ddaf928978f" category="list-text">*主機註冊*：新增的 Hyper-V 主機。輸入主機的 FQDN 或 IP 位址、憑證、控制台代理程式和連接埠號碼。</block>
   <block id="98ab4e23cce41ca38b39c7baf6ef4567" category="admonition">此過程可能需要幾分鐘。</block>
   <block id="d4908a7dd622060706f5e0df98a716da" category="paragraph">NetApp Backup and Recovery發現資源後，「清單」頁面會在工作負載清單中顯示 Hyper-V 工作負載。</block>
   <block id="8c75bc4aab98ebfa4607c6737296d0fa" category="section-title">繼續存取NetApp Backup and Recovery儀表板</block>
@@ -4538,8 +4536,6 @@
   <block id="299981ed6b0aaf1c2eed2a8e35151313" category="list-text">*啟用快速復原*：選擇此選項可執行快速復原作業。您可以立即使用已復原的磁碟區和資料。請勿在需要高效能的磁碟區上使用此功能，因為在快速復原過程中，存取資料的速度可能會比平常慢。</block>
   <block id="ca9d8ef3573c04098ddeb120eb1f19e5" category="list-text">*啟用電子郵件通知*：選擇取得有關復原作業的電子郵件通知並選擇您想要的通知類型。</block>
   <block id="63751d750873479f94855f0a16fc63d8" category="list-text">Hyper-V Windows Server 主機的軟體需求：</block>
-  <block id="1acabacd9fabb89313b2019250c36913" category="inline-link">Microsoft Windows Server 文件</block>
-  <block id="a05b36aea5976933f3daab44cd5602a1" category="list-text">確保已安裝主機監護服務角色（請參閱<block ref="48d767cc816bb4d4b129a75bf7c81af1" category="inline-link-rx"></block> （取得說明）</block>
   <block id="fd7bb5c3777005321645f38a2d07ea27" category="admonition">如果還原作業未完成，請等到作業監視器顯示「失敗」後再重試還原作業。</block>
   <block id="df3ee99c8171743d8bd35d65cf62b2ed" category="paragraph">您可以使用NetApp Backup and Recovery將虛擬機器資料從雲端還原到本機 vCenter Server。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。如果虛擬機器是使用存檔原則備份的，那麼您可以設定存檔還原優先權。</block>
   <block id="51e153ee1aa6cdb4ca7796e926180b53" category="admonition">若要切換至NetApp Backup and Recovery工作負載，請參閱<block ref="e56b09183f5489111204017fecace77e" category="inline-link-macro-rx"></block>。</block>
@@ -4791,4 +4787,9 @@
   <block id="b341302252cb59acb02da2074d4fe6c4" category="list-text">*服務費用*： NetApp Backup and Recovery費用。但是，如果來源磁碟區位於使用 CVO 專業方案的儲存系統中，則NetApp Backup and Recovery是免費提供的。</block>
   <block id="40d372f97e4d897da51bc1fa5978329b" category="paragraph">當您使用 Google Cloud Platform 時，請向NetApp申請私有報價，並在 Google Cloud Marketplace 啟用時選擇您的套餐。</block>
   <block id="3cd3cc23191003954a83615e7dc619e1" category="list-text">Oracle 工作負載（預覽版）</block>
+  <block id="14e2c3c5d70d421449af52fed7355245" category="list-text">使用來自多個 Hyper-V 主機的虛擬機器建立資源組</block>
+  <block id="c224c03fd1f5cab444913dab60a8d013" category="list-text">*主機註冊*：透過輸入主機的 FQDN 或 IP 位址、憑證、控制台代理程式和連接埠號碼來新增新的 Hyper-V 主機。如果控制台代理無法解析 FQDN，則改用 IP 位址。對於 FCI 集群，請輸入 FCI 集群管理 IP 位址。</block>
+  <block id="36c0d00755a4d8daae367144e5daca38" category="list-text">如果非管理員網域使用者要保護 Hyper-V 虛擬機，請確保使用者擁有下列權限：</block>
+  <block id="57d2171dbc8d8d7a864a60de1ab4656c" category="list-text">請確保該使用者是本機管理員群組成員。</block>
+  <block id="27bc296e867cae2ef33b5cac51392cb2" category="list-text">確保使用者已加入「以服務身分登入」本機安全性原則。</block>
 </blocks>
