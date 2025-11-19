@@ -111,7 +111,7 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 +
 [%collapsible]
 ====
-[source, console]
+[source, text]
 ----
 "Microsoft.Storage/storageAccounts/listkeys/action",
 "Microsoft.Storage/storageAccounts/read",

@@ -2811,8 +2811,6 @@
   <block id="12486a40437a6b66be9b1d2eaf68dacb" category="list-text">（可選）使用 VPC 終端節點介面配置系統以進行私人連接。</block>
   <block id="0d0602824136f714807f54069c6d5a89" category="paragraph">您需要設定兩組權限：</block>
   <block id="7ae76139c799959d1409fade800fdde1" category="list-text">確保控制台代理具有所需的權限。有關詳細信息，請參閱<block ref="e7a931c701625a10dc7f3233361e94bd" category="inline-link-rx"></block>。</block>
-  <block id="7ce349bd25d973c660fddbe184efffb5" category="paragraph">如果您建立自己的儲存桶，則應使用儲存桶名稱「netapp-backup」。如果您需要使用自訂名稱，請編輯<block ref="36f2cf0d90ddea374df0d9a8b6aa6300" prefix=" " category="inline-code"></block>IAMRole 用於現有的 CVO，並將下列清單新增至 S3 權限。您需要包括<block ref="87307b2ef4c880d061c68a6a4277d9a9" prefix=" " category="inline-code"></block>並分配與儲存桶關聯的所有必要權限。</block>
-  <block id="3bf9e0d7d11ed7ade49f8eabd71927c8" category="paragraph">「操作」：[「S3：ListBucket」「S3：GetBucketLocation」]「資源」：「arn：aws：s3 ::: *”，“效果”：“允許”}，{“操作”：[“S3：GetObject”，“S3：PutObject”，“S3：DeleteObject”，“S3：ListAllMyBuckets”，“S3：PutObjectTagging”，“S3：GetObjectTagging”，“S3：RestoreOO bject”，“S3：GetBucketObjectLockConfiguration”，“S3：GetObjectRetention”，“S3：PutBucketObjectLockConfiguration”，“S3：PutObjectRetention”]“資源”：“arn：aws：s3 ::: *”，</block>
   <block id="868fb9c55d4ddac7523d9c4697eb9d9f" category="section-title">設定客戶管理的 AWS 金鑰以進行資料加密</block>
   <block id="72828ef5ab3d5aa027bfcdd1a9224f67" category="paragraph">如果您想使用預設的 Amazon S3 加密金鑰來加密您的本機叢集和 S3 儲存桶之間傳遞的數據，那麼您已經完成了所有設置，因為預設安裝使用這種類型的加密。</block>
   <block id="aa9f769e3ac07b6605a7c510f6467b0d" category="paragraph">如果您想使用自己的客戶管理金鑰進行資料加密而不是使用預設金鑰，那麼您需要在啟動NetApp Backup and Recovery精靈之前設定加密管理金鑰。</block>
@@ -3715,19 +3713,16 @@
   <block id="3b4f7847e0c80a6665d11cb27ec353f5" category="list-text">後續備份是增量的，不會產生這種影響。</block>
   <block id="418dfdb508c036c09d2c850937665491" category="list-text">如果在最初建立磁碟區時將分層策略指派給磁碟區，則您將不會看到此問題。</block>
   <block id="75968f9094e000b12da4b2ead555a058" category="list-text">在分配之前考慮備份的影響<block ref="a181a603769c1f98ad927e7367c7aa51" prefix=" " category="inline-code"></block>對磁碟區進行分層策略。由於資料是立即分層的，NetApp Backup and Recovery將從雲層而不是本地層讀取資料。由於並發備份操作共享與雲端物件儲存的網路鏈接，因此如果網路資源飽和，可能會出現效能下降。在這種情況下，您可能需要主動配置多個網路介面 (LIF) 來減少這種類型的網路飽和。</block>
-  <block id="c5a5bd782e20196933e5157112eab21c" category="summary">使用NetApp Backup and Recovery，可以從備份文件還原整個ONTAP卷，或者如果只需要還原幾個文件，則可以還原資料夾或單一文件。</block>
   <block id="0d5740d6083fb9ac304bfaa4bb99e957" category="doc">使用NetApp Backup and Recovery從備份檔案還原ONTAP數據</block>
   <block id="bbf0b1b9c16dc904da9a8179519e7e31" category="list-text">您可以將*磁碟區*（作為新磁碟區）還原到原始系統、使用相同雲端帳戶的其他系統或本機ONTAP系統。</block>
   <block id="da7f5e5f2be2e4063a41a28fbb91f494" category="list-text">您可以將*資料夾*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區或本機ONTAP系統上的磁碟區。</block>
   <block id="a4883a32493cbf65048c6ba0d655088d" category="list-text">您可以將*檔案*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區或本機ONTAP系統上的磁碟區。</block>
-  <block id="c963f9a0ecc1066aa41c689730948ba3" category="paragraph">需要有效的NetApp Backup and Recovery許可證才能將資料從備份檔案還原到生產系統。</block>
   <block id="d92c1fbc11ff9a4d0db37653e35a2e52" category="paragraph">總而言之，這些是可用於將磁碟區資料還原到ONTAP系統的有效流程：</block>
   <block id="880c04d29288ca6dbdf8598c75af755f" category="list-text">備份檔案 -&gt; 還原卷</block>
   <block id="385ec83416d2acacbf83c42099e5828e" category="list-text">複製卷 -&gt; 恢復卷</block>
   <block id="0039af36cdd68741c89e8c730e7b7442" category="admonition">有關還原ONTAP資料的限制，請參閱<block ref="c27bda4e85978f510ddf0a64d91a61ea" category="inline-link-macro-rx"></block>。</block>
   <block id="65fba989fe7e3d4f06e7b1a4c8b66ff0" category="section-title">恢復儀表板</block>
   <block id="024205acf9405311336c02bbd2193b70" category="inline-image-macro">更多按鈕</block>
-  <block id="c0a30a4e0cad41bfc465528739121146" category="paragraph">您可以使用還原儀表板執行磁碟區、資料夾和檔案還原作業。您可以透過點擊控制台選單中的“備份和還原”，然後按一下“還原”標籤來存取復原儀表板。您也可以點擊<block ref="d1d86609a9d4211430bd00b714af288b" category="inline-image-macro-rx" type="image"></block>&gt; 從服務面板的備份和還原服務*查看恢復儀表板*。</block>
   <block id="c699c3ab8b3b70442456dfc7e6c2d402" category="admonition">NetApp Backup and Recovery必須已為至少一個系統激活，並且必須存在初始備份檔案。</block>
   <block id="5795e107f70b1fe309798439187a0470" category="paragraph">復原儀表板提供了兩種從備份檔案還原資料的不同方法：*瀏覽和還原*和*搜尋和還原*。</block>
   <block id="6b0b2f1ade447e93ec60561aec84daae" category="section-title">比較“瀏覽和還原”與“搜尋和還原”</block>
@@ -3752,13 +3747,9 @@
   <block id="d65d23f3099e6017c3c2569abf596741" category="cell">*恢復資料夾*</block>
   <block id="68295476c4bddb2040705057bdff61c0" category="cell">複製卷</block>
   <block id="6b8f9734c5bdfb71d16a6d3d8a40513c" category="cell">備份文件</block>
-  <block id="8425d41c6f9d3b6f077b56c4d49651a4" category="paragraph">在使用任一復原方法之前，請確保您已針對獨特的資源需求配置了環境。這些要求在以下章節中描述。</block>
   <block id="91679e5e03d41aefa89ddfa7649b05d2" category="paragraph">請參閱要使用的還原操作類型的要求和還原步驟：</block>
   <block id="ab298a1df9e049ac3ba4c02e893cc475" category="inline-xref">使用「瀏覽和恢復」恢復卷</block>
-  <block id="8c10b03d547a79f12e4be387cd008855" category="list-text"><block ref="64106766a0115c58ac1976a627dae78e" category="inline-xref-macro-rx"></block></block>
-  <block id="657950c649165660c2b1df5994cc6ea1" category="list-text"><block ref="0198cacb5a3b3b848a16a5896a6b781e" category="inline-xref-macro-rx"></block></block>
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">使用「搜尋和還原」功能還原磁碟區、資料夾和文件</block>
-  <block id="c3c8ae924b0105406a696e4e3b08bd56" category="list-text"><block ref="28c71e441e3fed1e54d5e765ca1c9c87" category="inline-xref-macro-rx"></block></block>
   <block id="685a6ba7b83ab5e286920feb961c08bb" category="section-title">使用“瀏覽和還原”功能還原ONTAP數據</block>
   <block id="b23bca1a2a7f2ec270c7be93eb3d5720" category="inline-link-macro">了解有關從 AWS 檔案儲存恢復的更多信息</block>
   <block id="b03a3a022eb328afd14c51f9d25fd0aa" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block>。</block>
@@ -3789,7 +3780,6 @@
   <block id="8e602d0d71734b6cf234a5890bf1241a" category="paragraph">從複製磁碟區還原時，您可以將磁碟區還原到原始系統或Cloud Volumes ONTAP或本機ONTAP系統。</block>
   <block id="9336df9a96bed9adb0f67170b2dad2b3" category="inline-image-macro">此圖顯示了使用瀏覽和還原執行磁碟區還原操作的流程。</block>
   <block id="38aad7ac8bd6898064d142472e3e7624" category="paragraph"><block ref="7d27a3070fb1dce60f7cb72cb7d60b55" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e024fe06d4f879196d3e62343aa21b12" category="paragraph">如您所見，您需要知道來源系統名稱、儲存虛擬機器、磁碟區名稱和備份檔案日期才能執行磁碟區還原。</block>
   <block id="97df4568ca8321a997d9ed32ea75ab0a" category="list-text">選擇“*恢復*”選項卡，將顯示“恢復儀表板”。</block>
   <block id="00e49e17372cc54391186a012dcec566" category="list-text">從「瀏覽和復原」部分，選擇「恢復磁碟區」。</block>
   <block id="7eccde2a14cd84f78dde1af09cf04af9" category="list-text">在「選擇來源」頁面中，導覽至要還原的磁碟區的備份檔案。選擇具有要還原的日期/時間戳記的*系統*、*磁碟區*和*備份*檔案。</block>
@@ -3823,13 +3813,7 @@
   <block id="502b9bcf8737b06b486f332278870bbf" category="list-text">ONTAP版本必須為 9.6 或更高版本才能執行_檔_復原操作。</block>
   <block id="06e9f92e3090a798bd44efa87250ce22" category="list-text">ONTAP版本必須為 9.11.1 或更高版本才能執行_資料夾_還原操作。如果資料位於檔案儲存中，或備份檔案使用 DataLock 和勒索軟體保護，則需要ONTAP版本 9.13.1。</block>
   <block id="57bb710d517f010c4fce20687ec1c6ff" category="list-text">ONTAP版本必須為 9.15.1 p2 或更高版本才能使用瀏覽和還原選項還原FlexGroup目錄。</block>
-  <block id="cee5f78cfda5fc2f3b24ce19bdf5119a" category="section-title">資料夾和檔案還原過程</block>
   <block id="01a85f08913124872d9b17dfdb08959a" category="paragraph">這個過程如下：</block>
-  <block id="b85ced4f441572e957c29b3e74a4335e" category="list-text">選擇資料夾或檔案所在的來源系統、磁碟區和備份檔案。</block>
-  <block id="ecbf4074e5725b458774aa56add04b4e" category="list-text">NetApp Backup and Recovery顯示所選備份檔案中存在的資料夾和檔案。</block>
-  <block id="f253b383194bb98b3c6ad49105cca717" category="list-text">選擇要從該備份中還原的資料夾或檔案。</block>
-  <block id="af40ce2fd276ed07b36265ad3349591a" category="list-text">選擇要還原資料夾或檔案的目標位置（系統、磁碟區和資料夾），然後按一下「*復原*」。</block>
-  <block id="77a738d7362cefd8d0f8a59020626e57" category="list-text">文件已恢復。</block>
   <block id="983985e7b5c6473861f79292288f8649" category="inline-image-macro">此圖顯示了使用瀏覽和復原執行檔復原操作的流程。</block>
   <block id="a86b95296a5e8660c2661d4c0fdd6403" category="paragraph"><block ref="b8616ef8bcb9351aff887ce7eb6910c4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7f3b049ad5900157b661c3f11e45c18c" category="section-title">還原資料夾和文件</block>
@@ -3857,11 +3841,6 @@
   <block id="3f25e82b6a6ddd7bce8047cf9c5eb6cf" category="list-text">您可以選擇任意資料夾。</block>
   <block id="8abf03f0afbcb37f53707147d7dc79ef" category="list-text">您可以將滑鼠懸停在資料夾上，然後按一下行尾以深入查看子資料夾，然後選擇一個資料夾。</block>
   <block id="09fa58168e9af9ca1cd785d08f1c7401" category="list-text">如果您選擇了與來源資料夾/檔案相同的目標系統和磁碟區，則可以選擇*維護來源資料夾路徑*將資料夾或檔案還原到來源結構中存在的相同資料夾。所有相同的資料夾和子資料夾必須已經存在；不會建立資料夾。將檔案還原到原始位置時，您可以選擇覆蓋來源檔案或建立新檔案。</block>
-  <block id="8ba7d24c75d9a4c060c33cf7a127b666" category="section-title">使用“搜尋和還原”還原ONTAP數據</block>
-  <block id="4647e43883c439381a72ddb443f378a3" category="paragraph">您可以使用「搜尋和還原」從ONTAP備份檔案還原磁碟區、資料夾或檔案。搜尋和還原可讓您從所有備份中搜尋特定的磁碟區、資料夾或文件，然後執行還原。您不需要知道確切的系統名稱、磁碟區名稱或檔案名稱—搜尋會查看所有磁碟區備份檔案。</block>
-  <block id="852fc25af352236327df0d0cfcc56af6" category="paragraph">當您從備份檔案還原_完整磁碟區_時， NetApp Backup and Recovery會使用備份中的資料建立一個_新_磁碟區。您可以將資料作為原始系統中的磁碟區還原到與來源系統位於相同雲端帳戶的其他系統或本機ONTAP系統。</block>
-  <block id="1c207467db02af6d5369de8a352a5deb" category="paragraph">您可以將資料夾或檔案還原到原始磁碟區位置、同一系統中的不同磁碟區、使用相同雲端帳戶的不同系統或本機ONTAP系統上的磁碟區。</block>
-  <block id="20f2d0bb5e696b331efc736ffadbb3f3" category="paragraph">如果要還原的磁碟區的備份檔案位於檔案儲存中（從ONTAP 9.10.1 開始可用），則還原作業將花費更長的時間並產生額外的費用。請注意，目標叢集也必須執行ONTAP 9.10.1 或更高版本才能進行磁碟區還原、9.11.1 才能進行檔案還原、9.12.1 才能進行 Google Archive 和StorageGRID，以及 9.13.1 才能進行資料夾還原。</block>
   <block id="123d4cc43e1a5345167ea23371a1a2c3" category="list-text">如果物件儲存中的備份檔案已配置 DataLock 和勒索軟體保護，則僅當ONTAP版本為 9.13.1 或更高版本時才支援資料夾級還原。如果您使用的是早期版本的ONTAP，則可以從備份檔案還原整個卷，然後存取所需的資料夾和檔案。</block>
   <block id="151be02e2bd1749a3dd2015c36005736" category="list-text">如果物件儲存中的備份檔案駐留在檔案儲存中，則僅當ONTAP版本為 9.13.1 或更高版本時才支援資料夾層級還原。如果您使用的是早期版本的ONTAP，則可以從尚未存檔的較新備份檔案中還原資料夾，也可以從已存檔的備份中還原整個磁碟區，然後存取所需的資料夾和檔案。</block>
   <block id="3ddfa13cbce20cc68cd19aca6f181eb0" category="list-text">將資料從 Azure 檔案儲存還原到StorageGRID系統時，不支援「高」還原優先權。</block>
@@ -3904,29 +3883,9 @@
   <block id="35823b9a43e6a86ef9fc8613d01ca7e0" category="list-text">磁碟區、資料夾或檔案已恢復。</block>
   <block id="03a6f07a65b68a9b91d1456b096d425e" category="inline-image-macro">此圖顯示了使用「搜尋和還原」執行磁碟區、資料夾或檔案還原操作的流程。</block>
   <block id="326eb26933ce22b49d0c6ddf7a6e6180" category="paragraph"><block ref="1d155a4bab8461674fe4d884066d77ce" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2a88d3ad33e6ade48c9940511206948e" category="paragraph">如您所見，您實際上只需要知道部分名稱， NetApp Backup and Recovery就會搜尋與您的搜尋相符的所有備份檔案。</block>
   <block id="5b9c355299c911b3f66ca50a1acb17d6" category="section-title">為每個系統啟用索引目錄</block>
   <block id="f5b73dece12edcdf156fa7e3afdcb5ac" category="paragraph">在使用搜尋和還原之前，您需要在計劃還原磁碟區或檔案的每個來源系統上啟用「索引」。這使得索引目錄可以追蹤每個捲和每個備份檔案 - 使您的搜尋非常快速和有效率。</block>
   <block id="ba56376909400e0d6a0546d3b85498ef" category="paragraph">索引目錄是一個資料庫，用於儲存系統中所有磁碟區和備份檔案的元資料。搜尋和復原功能使用它來快速找到包含要復原的資料的備份檔案。</block>
-  <block id="ace26ef20d7de77728de7522bd26d7de" category="paragraph-title">索引目錄 v2 功能</block>
-  <block id="eb3e11343b7aaea59c83d36c6e8c8591" category="paragraph">索引目錄 v2 於 2025 年 2 月發布，並於 2025 年 6 月更新，其功能使其更有效率、更易於使用。此版本具有顯著的效能增強，並且預設為所有新客戶啟用。</block>
-  <block id="e45e80a3aa32c47a9d6ef311dd8f2980" category="paragraph">回顧 v2 的以下注意事項：</block>
-  <block id="b98d519952606f96dcc615efa4f4e85c" category="list-text">索引目錄 v2 處於預覽模式。</block>
-  <block id="951398abbe6e1c3079efe911a6951621" category="list-text">如果您是現有客戶並且想要使用 Catalog v2，則需要完全重新索引您的環境。</block>
-  <block id="eb720e0effbb1828841ea62695a758b9" category="list-text">Catalog v2 僅索引具有快照標籤的快照。</block>
-  <block id="0823f8728ac8dd7f06c41db39f3c9e79" category="list-text">NetApp Backup and Recovery不會使用「每小時」 SnapMirror標籤對快照進行索引。如果您想使用「每小時」 SnapMirror標籤索引快照，則需要在 v2 處於預覽模式時手動啟用它。</block>
-  <block id="7d130cb45fabc3f14e6b9b7f4708d18d" category="list-text">NetApp Backup and Recovery將僅使用 Catalog v2 為受NetApp Backup and Recovery保護的系統關聯的磁碟區和快照編製索引。在控制台平台上發現的其他系統將不會被編入索引。</block>
-  <block id="d018a9ab185158e1903377238af640ce" category="list-text">使用 Catalog v2 進行資料索引發生在本機環境以及 Amazon Web Services、Microsoft Azure 和 Google Cloud Platform (GCP) 環境中。</block>
-  <block id="cba8da890b429c54fa89c60426136832" category="paragraph">索引目錄 v2 支援以下內容：</block>
-  <block id="d0ddbbe5ee1059ccc8adc742a7b4fc17" category="paragraph-title">為系統啟用索引目錄</block>
-  <block id="9f0efd5842b284741e756914a3653c06" category="paragraph">當您使用 Indexed Catalog v2 時，該服務不會提供單獨的儲存桶。相反，對於儲存在 AWS、Azure、Google Cloud Platform、 StorageGRID或ONTAP S3 中的備份，該服務會在控制台代理或雲端提供者環境上提供空間。</block>
-  <block id="13873715cccde14b864681e744f0f6e5" category="paragraph">如果您在 v2 版本之前啟用了索引目錄，系統會出現下列情況：</block>
-  <block id="1bf27db2b6cddc0bbfeb50bd92d954d2" category="inline-link">Amazon Athena 互動式查詢服務</block>
-  <block id="304514e0e009199a95060650dbf9337e" category="inline-link">AWS Glue 無伺服器資料整合服務</block>
-  <block id="7f55f1ead15a67b08eea9e732f6ed59d" category="list-text">對於儲存在 AWS 中的備份，它會提供一個新的 S3 bucket 和<block ref="d5a117e0ffd0e43cc6657792905f20d6" category="inline-link-rx"></block>和<block ref="101f211ea2a04b6a9a7d1de9342390c3" category="inline-link-rx"></block>。</block>
-  <block id="1a57137c00ac13558ef22f60c946d8b3" category="list-text">對於儲存在 Azure 中的備份，它會提供一個 Azure Synapse 工作區和一個 Data Lake 檔案系統作為儲存工作區資料的容器。</block>
-  <block id="b3cf2a0723236b8965edb17a6adc8bf5" category="list-text">對於儲存在 Google Cloud 中的備份，它會配置一個新的儲存桶，並且<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>在帳戶/項目層級進行配置。</block>
-  <block id="5452e61fa37cd56c55cfda6a5bbda2d3" category="list-text">對於儲存在StorageGRID或ONTAP S3 中的備份，它會在控制台代理或雲端提供者環境中提供空間。</block>
   <block id="b72b787d86099aed222777bb2de8b6b5" category="paragraph">如果您的系統已啟用索引，請前往下一部分以還原您的資料。</block>
   <block id="851644a4a48fea1ac5cc79f5c9d8277e" category="list-title">為系統啟用索引的步驟：</block>
   <block id="e539a0c2cd27f449c2afc370c19cfb8a" category="list-text">如果沒有系統被索引，請在「復原儀表板」的「搜尋與復原」下，選擇「啟用系統索引」。</block>
@@ -4652,9 +4611,7 @@
   <block id="e527fef252b77845c6d10efb41d3077b" category="list-text">在 Azure 中， NetApp Console使用包含 Blob 容器儲存帳戶的新建或現有資源群組。<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block>預設情況下。</block>
   <block id="ec0d6793cc0295c832eb8da5d335a0c2" category="paragraph">此外，您還可以造訪以下網站以取得與 DataLock 相關的成本估算：<block ref="b1f8c55788f886bad3d3eaf7350ac38f" category="inline-link-rx"></block> 。</block>
   <block id="4bcdbd17280f1741e2f9e78f6f376421" category="paragraph"><block ref="4bcdbd17280f1741e2f9e78f6f376421" category="inline-link-rx"></block></block>
-  <block id="7eb5606462668a7d8775b600838f4f32" category="admonition">如果您要復原的備份檔案位於歸檔雲端儲存中（從ONTAP 9.10.1 開始），則復原作業需要更長時間並會產生費用。對於磁碟區恢復，目標叢集必須執行ONTAP 9.10.1 或更高版本；對於檔案恢復，目標叢集必須執行 ONTAP 9.11.1 或更高版本；對於 Google Archive 和StorageGRID，目標叢集必須執行 ONTAP 9.12.1 或更高版本；對於資料夾恢復，目標必須執行 ONTAP 9.13.13.13.13.</block>
   <block id="5b386dd69a6743085be6c1e524866fb5" category="paragraph">如果選擇多個文件，它們將還原到同一目標磁碟區。若要將檔案還原到不同的捲，請多次執行該過程。</block>
-  <block id="b46b886ddef2fe81123875f2839d0892" category="list-text">若要從磁碟區備份中還原資料夾或文件，請選擇「還原」選單，然後在「瀏覽與還原」下選擇「復原檔案或資料夾」。</block>
   <block id="22d1aa2ecc719d7521d0a8859fe171f9" category="paragraph">若要還原卷，您需要來源系統名稱、儲存虛擬機器、磁碟區名稱和備份檔案日期。</block>
   <block id="0e9332d24e8223d33f0f13c12dc28e78" category="list-text">選擇“恢復”返回恢復儀表板並查看恢復操作的進度。</block>
   <block id="dc48f529dae728780c55fde51597adee" category="paragraph">之後<block ref="d2ec4e5679d82dbce801a1d23c311912" category="inline-xref-macro-rx"></block>，您可以使用「搜尋和還原」還原磁碟區、資料夾和檔案。這使您可以使用廣泛的過濾器從所有備份檔案中找到要還原的確切檔案或磁碟區。</block>
@@ -4749,13 +4706,10 @@
   <block id="30e07a9dd02dd98f372bd162ec8456ef" category="paragraph">當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您選擇的策略進行備份。您可以為快照、複製磁碟區和備份檔案選擇不同的策略。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，則可以為該叢集建立其他策略，並在啟動NetApp Backup and Recovery後將這些原則指派給其他磁碟區。</block>
   <block id="fa3dd3bcafecb630044b7d1eddb7cd43" category="admonition">應用於磁碟區的快照策略必須具有您在複製策略和備份到物件策略中使用的標籤之一。如果未找到符合的標籤，則不會建立備份檔案。例如，如果您想要建立「每週」複製磁碟區和備份文件，則必須使用建立「每週」快照的快照策略。</block>
   <block id="9e813756b5af6bc196c66209061d9d1a" category="paragraph">預設啟用計劃的勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照上。可以停用計劃掃描以降低成本。您可以透過「進階設定」頁面上的選項，啟用或停用最新快照上的計畫勒索軟體掃描。如果啟用它，則預設每週執行一次掃描。您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。</block>
-  <block id="c379b9e8581a6fd59a6755037f41a617" category="paragraph">ONTAP磁碟區資料的備份可以從您建立備份的位置取得：快照、複製磁碟區和儲存在物件儲存中的備份。您可以從這些備份位置中的任何一個還原特定時間點的資料。使用NetApp Backup and Recovery，可以從備份文件還原整個ONTAP卷，或者如果只需要還原幾個文件，則可以還原資料夾或單一文件。</block>
   <block id="02c75a95538b43e9e819f0d1b0cc19f2" category="list-text">快照 -&gt; 已恢復磁碟區</block>
-  <block id="2630c5e201ef46189b621a683ffbc8dc" category="paragraph">在復原之前，請記下來源磁碟區名稱、來源系統和 SVM 以及備份檔案日期。您可以從快照、複製磁碟區或儲存在物件儲存中的備份還原ONTAP資料。</block>
   <block id="68601916ccf016a3cbb9b91a847005f5" category="paragraph">您可以將ONTAP資料從位於二級系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。</block>
   <block id="2b3e9f7492129e1cad66eb9ef0df47d2" category="paragraph">「位置」欄位顯示備份檔案（快照）是「本機」（來源系統上的快照）、「輔助」（輔助ONTAP系統上的複製磁碟區）或「物件儲存」（物件儲存中的備份檔案）。選擇您想要恢復的檔案。</block>
   <block id="8ba8feef9dc91a81337c3e1c3f636d2e" category="admonition">目前，您只能從物件儲存中的備份檔案還原資料夾或單一檔案。目前不支援從本機快照或位於輔助系統（複製磁碟區）中的備份檔案還原檔案和資料夾。</block>
-  <block id="0c33ea8397b0b32c84a3332e9860b200" category="paragraph">搜尋操作會尋找ONTAP磁碟區的所有本機快照、輔助儲存系統上的所有複製磁碟區以及物件儲存中存在的所有備份檔案。由於從本機快照或複製磁碟區還原資料比從物件儲存中的備份檔案還原資料速度更快、成本更低，因此您可能需要從這些其他位置還原資料。</block>
   <block id="0b7639e600f1d3ff92ed788a9be2c0dd" category="list-text">必須在 SVM 上啟動 SnapDiff RPC 伺服器。當您在系統上啟用索引時，控制台會自動執行此操作。（SnapDiff 是一種能夠快速識別快照之間檔案和目錄差異的技術。）</block>
   <block id="dff115c532ece3121746427a98f68318" category="list-text">在「過濾依據」區域中，選擇過濾條件。例如，您可以選擇資料所在的系統和檔案類型，例如 .JPEG 檔案。或者，如果您只想在物件儲存中的可用快照或備份檔案中搜尋結果，則可以選擇備份位置類型。</block>
   <block id="4fbc8584021c60a153dbf213f698df58" category="paragraph">請注意，搜尋結果會識別包含您搜尋檔案的本機磁碟區快照和遠端複製磁碟區。您可以選擇從雲端備份檔案、快照或複製磁碟區中還原。</block>
@@ -4792,4 +4746,37 @@
   <block id="36c0d00755a4d8daae367144e5daca38" category="list-text">如果非管理員網域使用者要保護 Hyper-V 虛擬機，請確保使用者擁有下列權限：</block>
   <block id="57d2171dbc8d8d7a864a60de1ab4656c" category="list-text">請確保該使用者是本機管理員群組成員。</block>
   <block id="27bc296e867cae2ef33b5cac51392cb2" category="list-text">確保使用者已加入「以服務身分登入」本機安全性原則。</block>
+  <block id="6d397139779cf4483cf1c4693e7f6cfc" category="paragraph">如果您建立自己的儲存桶，則應使用儲存桶名稱「netapp-backup」。如果需要使用自訂名稱，請編輯<block ref="36f2cf0d90ddea374df0d9a8b6aa6300" prefix=" " category="inline-code"></block>為現有 CVO 新增 IAMRole，並將下列 JSON 區塊新增至 S3 權限中<block ref="2af6fd9ec72aee193ee7ffe09638e08f" prefix=" " category="inline-code"></block>大批。您需要包括<block ref="87307b2ef4c880d061c68a6a4277d9a9" prefix=" " category="inline-code"></block>並分配與儲存桶關聯的所有必要權限。</block>
+  <block id="3f05712ac311679f5293cdeca4b95c4a" category="summary">使用NetApp Backup and Recovery and Recovery ，透過瀏覽和復原功能恢復ONTAP資料。</block>
+  <block id="a9069e9a58042b9bc7056398756845ee" category="paragraph">使用NetApp Backup and Recovery and Recovery ，透過瀏覽和復原功能恢復ONTAP資料。在復原之前，請記下來源磁碟區名稱、來源系統和 SVM 以及備份檔案日期。您可以從快照、複製磁碟區或儲存在物件儲存中的備份還原ONTAP資料。</block>
+  <block id="05347845672273f3cffd76e4077cdb51" category="paragraph">復原功能取決於您的ONTAP版本：</block>
+  <block id="a03a5900281bf25c93cb811180bba191" category="list-text">*資料夾：* 使用ONTAP 9.13.0 或更高版本，您可以還原包含所有檔案和子資料夾的資料夾；使用早期版本，您只能還原資料夾中的檔案。</block>
+  <block id="781858cefae9b60efaca9b16a3878de8" category="list-text">*歸檔儲存：*從歸檔儲存復原（ ONTAP 9.10.1 或更高版本可用）速度較慢，並且可能會產生額外費用。</block>
+  <block id="39ec579fcc2df5001dd753b681b0b968" category="list-text">*目標群集需求：*</block>
+  <block id="40a94f15cd6f305f18348e67a7079bb0" category="list-text">磁碟區恢復： ONTAP 9.10.1 或更高版本</block>
+  <block id="093fffba6528268e08d16655a00408c0" category="list-text">檔案復原： ONTAP 9.11.1 或更高版本</block>
+  <block id="e2a690f8f0185ec41067ba5b3b30a529" category="list-text">Google Archive 和StorageGRID： ONTAP 9.12.1 或更高版本</block>
+  <block id="8ca6fb4bb5529d6adfde15cbdb57e634" category="list-text">資料夾恢復： ONTAP 9.13.1 或更高版本</block>
+  <block id="be0215992cfd3511d910e845d0356599" category="summary">您可以使用搜尋和復原功能從ONTAP備份檔案中還原磁碟區、資料夾或檔案。</block>
+  <block id="7e1d8ccd1392087c63490394612a8c15" category="doc">使用搜尋和恢復功能從ONTAP備份中恢復</block>
+  <block id="e7831cd0e41fd9e35bee516b706fabdd" category="paragraph">您可以使用搜尋和復原功能從ONTAP備份檔案中還原磁碟區、資料夾或檔案。搜尋和復原功能可讓您搜尋所有備份（包括本機快照、複製磁碟區和物件儲存），而無需提供確切的系統、磁碟區或檔案名稱。</block>
+  <block id="ac7a11fed1e42e0aabdca6e9d3df239d" category="paragraph">從本機快照或複製磁碟區復原通常比從物件儲存復原更快、更便宜。</block>
+  <block id="84c030a8c3b510739684721f83cf4004" category="paragraph">還原整個磁碟區時， NetApp Backup and Recovery會使用備份資料建立一個新磁碟區。您可以還原到原始系統、同一雲端帳戶內的另一個系統或本機ONTAP系統。資料夾和檔案可以恢復到其原始位置、同一系統中的不同磁碟區、同一雲端帳戶中的另一個系統或本機系統。</block>
+  <block id="1a7f268901b8ff64a74ae8d0296ce039" category="section-title">搜尋與恢復的先決條件</block>
+  <block id="baa8edebfac5781913655070b19655c8" category="inline-xref">掛載磁碟區以重新索引目錄</block>
+  <block id="dca45b6ea4888774fa36a0cd7a4b4e66" category="list-text">NetApp建議在控制台代理上掛載單獨的捲，以提高搜尋和復原的彈性。有關說明，請參閱<block ref="dc95f46ff7385c77f28ead631c4ffc28" category="inline-xref-macro-rx"></block>。</block>
+  <block id="cafaac51a733b2507a0934e42ab1b5de" category="section-title">舊版搜尋與復原的先決條件（使用索引目錄 v1）</block>
+  <block id="d3373e3f2429c68c0bce2afd2ff81bea" category="paragraph">您只需要知道部分名稱， NetApp Backup and Recovery就會搜尋所有與您的搜尋相符的備份檔案。</block>
+  <block id="a6e55f722772b5f4e23c95969086688d" category="paragraph-title">索引目錄功能</block>
+  <block id="d828defb287ef7f6ab63c8e2aa939f7c" category="paragraph">使用索引目錄時， NetApp Backup and Recovery不會配置單獨的儲存桶。相反，對於儲存在 AWS、Azure、Google Cloud Platform、 StorageGRID或ONTAP S3 中的備份，該服務會在控制台代理或雲端提供者環境上提供空間。</block>
+  <block id="489e35e793accc52ca3476061b2e9092" category="paragraph">索引目錄支援以下功能：</block>
+  <block id="bb5d5c858e67c64d78268e97ef8e801d" category="paragraph">ONTAP磁碟區資料的備份以快照的形式儲存在複製磁碟區上，或儲存在物件儲存中。您可以從這些位置中的任何一個位置還原特定時間點的資料。使用NetApp Backup and Recovery，您可以根據需要還原整個磁碟區、資料夾或單一檔案。</block>
+  <block id="e59ea42c20b1c148846a0526ff44c47a" category="paragraph">您需要有效的NetApp Backup and Recovery許可證才能將資料還原到生產系統。</block>
+  <block id="d3d7e7b22ee5c56584493699998d9117" category="paragraph">您可以使用還原儀表板執行磁碟區、資料夾和檔案還原作業。若要存取復原儀表板，請從控制台選單中選擇“備份和還原”，然後選擇“還原”標籤。您也可以選擇<block ref="d1d86609a9d4211430bd00b714af288b" category="inline-image-macro-rx" type="image"></block>從「服務」面板的「備份和復原服務」中查看「復原儀表板」。</block>
+  <block id="25578ef4f1298f0ec4e133f88caee125" category="paragraph">在使用任何一種復原方法之前，請先配置您的環境以滿足資源需求。詳情請見以下章節。</block>
+  <block id="a8c20c3f2c501cda4b216ab5d3a59157" category="list-text"><block ref="f9cc88ea2514d9b9242d31770690af88" category="inline-link-macro-rx"></block></block>
+  <block id="5e763606a0239729deac991a560d57c0" category="list-text"><block ref="34e43cfade3963995cc048abf44b0989" category="inline-link-macro-rx"></block></block>
+  <block id="b72cbffce68718636e4f9c2f1c2a8173" category="list-text"><block ref="f0a1a1822bca6dd563c941cbc831d447" category="inline-link-macro-rx"></block></block>
+  <block id="cee41b55e417d2c681bd345802b719fd" category="sidebar">恢復概述</block>
+  <block id="a49488740a7ad2d76917598dae6b3fbb" category="sidebar">使用“瀏覽和恢復”功能從ONTAP備份中恢復數據</block>
 </blocks>

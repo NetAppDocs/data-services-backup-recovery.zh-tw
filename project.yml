@@ -104,7 +104,13 @@ sidebar:
       - title: 管理ONTAP備份
         url: "/prev-ontap-backup-manage.html"
       - title: 從ONTAP備份還原
-        url: "/prev-ontap-restore.html"
+        entries:
+        - title: 恢復概述
+          url: "/prev-ontap-restore.html"
+        - title: 使用搜尋和恢復功能從ONTAP備份中恢復
+          url: "/prev-ontap-restore-search.html"
+        - title: 使用“瀏覽和恢復”功能從ONTAP備份中恢復數據
+          url: "/prev-ontap-restore-browse.html"
     - title: 保護 Microsoft SQL Server 工作負載
       entries:
       - title: 保護 Microsoft SQL Server 工作負載概述

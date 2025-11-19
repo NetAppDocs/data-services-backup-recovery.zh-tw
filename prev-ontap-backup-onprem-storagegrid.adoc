@@ -206,7 +206,7 @@ S3 憑證:: 您必須建立 S3 租用戶帳戶來控制對StorageGRID儲存的�
 
 這些存取金鑰必須與具有以下權限的使用者相關聯：
 
-[source, console]
+[source, text]
 ----
 "s3:ListAllMyBuckets",
 "s3:ListBucket",
