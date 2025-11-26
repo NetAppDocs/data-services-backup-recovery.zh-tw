@@ -3734,10 +3734,6 @@
   <block id="c601431e32ca59eda5545781d799fc84" category="cell">透過部分或完整磁碟區名稱、部分或完整資料夾/檔案名稱、大小範圍和其他搜尋篩選器，在*所有備份檔案*中搜尋磁碟區、資料夾或檔案。</block>
   <block id="8042f6982b79849d158e3d7ac9190cc2" category="cell">如果檔案已被刪除或重新命名，且使用者不知道原始檔案名，則不處理檔案復原</block>
   <block id="609c9e9bd29468f2ba84839f3741b886" category="cell">處理新建立/刪除/重新命名的目錄和新建立/刪除/重新命名的文件</block>
-  <block id="c6df30fd69d443c5f65257f03e22d182" category="cell">無需額外的雲端提供者資源</block>
-  <block id="ba3b7ed6a9e20a17536af523c17d7d72" category="cell">當您從雲端恢復時，每個帳戶都需要額外的儲存桶和公有雲提供者資源。</block>
-  <block id="f487cfb88239842615093e7eb26153a0" category="cell">無需額外的雲端提供者成本</block>
-  <block id="e4da0c30ee3e36e87eec129bd901c319" category="cell">當您從雲端恢復時，掃描備份和磁碟區以取得搜尋結果需要額外的費用。</block>
   <block id="bc7f13477d0119c48bad565ccf971e6a" category="cell">支援快速恢復。</block>
   <block id="acf00c252198c9be0294aaf561c5d662" category="cell">不支援快速恢復。</block>
   <block id="36bce3524e4446bfe42ccad6f813430a" category="paragraph">此表根據備份檔案所在的位置提供了有效還原作業的清單。</block>
@@ -4715,7 +4711,6 @@
   <block id="4fbc8584021c60a153dbf213f698df58" category="paragraph">請注意，搜尋結果會識別包含您搜尋檔案的本機磁碟區快照和遠端複製磁碟區。您可以選擇從雲端備份檔案、快照或複製磁碟區中還原。</block>
   <block id="8cb59bcb28ab4d28eff3f32b41c1619f" category="paragraph">您首先需要掛載一個單獨的磁碟區來存放目錄檔案。這樣可以防止因保存快照的檔案過大而導致資料遺失。並非每個叢集都需要這樣做；您可以從環境中的任何叢集掛載任何一個磁碟區。如果不這樣做，索引可能無法正常工作。</block>
   <block id="49b1bd86131611255094bea2f77118b7" category="paragraph">裝訂體積，請參考以下尺寸指南：</block>
-  <block id="0207db4ce855854d816d06443ff062ea" category="list-text">使用NetApp NVS 卷</block>
   <block id="aa45cf8d923bfb8185fed2178e78d921" category="list-text">建議使用磁碟吞吐量為 300 MB/s 的AFF儲存。吞吐量降低會影響搜尋和其他操作。</block>
   <block id="076bea46cdc896921ec2687cf3f345bb" category="list-text">啟用NetApp快照功能，除了保護目錄備份 zip 檔案外，還可以保護目錄元資料。</block>
   <block id="1c3669c2099ac1b271c6bc4f19601ca5" category="list-text">每10億個檔案佔用50GB空間</block>
@@ -4779,4 +4774,7 @@
   <block id="b72cbffce68718636e4f9c2f1c2a8173" category="list-text"><block ref="f0a1a1822bca6dd563c941cbc831d447" category="inline-link-macro-rx"></block></block>
   <block id="cee41b55e417d2c681bd345802b719fd" category="sidebar">恢復概述</block>
   <block id="a49488740a7ad2d76917598dae6b3fbb" category="sidebar">使用“瀏覽和恢復”功能從ONTAP備份中恢復數據</block>
+  <block id="4db9a239be0f58f8e4742665ad2371e2" category="paragraph">在啟用搜尋和復原功能前，請確保您的環境符合以下要求：</block>
+  <block id="d0320c3b870d5944eb8c31ee83638872" category="paragraph">以下是使用傳統索引時搜尋和復原功能的要求：</block>
+  <block id="9078cbf758e0949f0dca426e9aa6c0ce" category="list-text">使用NetApp NFS 卷</block>
 </blocks>
