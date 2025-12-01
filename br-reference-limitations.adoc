@@ -46,6 +46,7 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 
 
 * 從本機ONTAP系統建立複製時，如果目標Cloud Volumes ONTAP系統上的ONTAP版本為 9.8、9.9 或 9.11，則只允許鏡像保管庫策略。
+* NetApp Backup & Recovery 不支援在維持雲端備份功能的同時，將具有活動雲端備份關係的FlexVol volume轉換為FlexGroup磁碟區。
 
 
 

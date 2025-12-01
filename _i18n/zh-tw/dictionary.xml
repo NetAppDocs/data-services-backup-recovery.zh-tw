@@ -4777,4 +4777,5 @@
   <block id="4db9a239be0f58f8e4742665ad2371e2" category="paragraph">在啟用搜尋和復原功能前，請確保您的環境符合以下要求：</block>
   <block id="d0320c3b870d5944eb8c31ee83638872" category="paragraph">以下是使用傳統索引時搜尋和復原功能的要求：</block>
   <block id="9078cbf758e0949f0dca426e9aa6c0ce" category="list-text">使用NetApp NFS 卷</block>
+  <block id="459af9b852bd375bac17fb30c8c1b979" category="list-text">NetApp Backup &amp; Recovery 不支援在維持雲端備份功能的同時，將具有活動雲端備份關係的FlexVol volume轉換為FlexGroup磁碟區。</block>
 </blocks>
