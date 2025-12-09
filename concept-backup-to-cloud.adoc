@@ -49,6 +49,7 @@ NOTE: 有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件�
 ** 使用NetApp Backup and Recovery保護您的 VMware VM 和資料儲存。
 ** 將 VMware 工作負載備份到 Amazon Web Services S3 或StorageGRID （預覽版）。
 ** 將 VMware 資料從雲端還原到本機 vCenter。
+** 您可以將虛擬機器還原到與備份完全相同的位置或其他位置。
 ** 使用NetApp Backup and Recovery，無需SnapCenter Plug-in for VMware vSphere。
 ** 參考link:br-use-vmware-protect-overview.html["保護 VMware 工作負載"]。
 

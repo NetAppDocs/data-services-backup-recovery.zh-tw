@@ -20,8 +20,6 @@ NetApp Backup and Recovery中的 VMware 工作負載預覽版不支援下列操�
 
 * 山
 * 解除安裝
-* 恢復至備用位置
-* 恢復 VMDK
 * 附加 VMDK
 * 分離 VMDK
 * vVol 支持

@@ -9,7 +9,11 @@
 VMware 工作負載預覽版引入了以下增強功能：
 
 * 現在您可以將備份和快照還原到備用位置。如果您想要管理不同 VMware vCenter 部署、VMware ESXi 主機或 VMware 資料儲存上的虛擬機器版本，這將非常有用。
+
+
+link:br-use-vmware-restore.html["了解更多關於使用NetApp Backup and Recovery恢復 VMware 虛擬機器的信息"]。
+
 * 現在您可以從主位置或輔助位置還原特定的 VMware 虛擬磁碟（VMDK 映像），從而實現對復原 VM 資料的更精細控制。
 
 
-link:br-use-vmware-restore.html["了解更多關於使用NetApp Backup and Recovery恢復 VMware 工作負載的信息"]。
+link:br-use-vmware-restore-vmdks-from-backups.html["了解更多關於使用NetApp Backup and Recovery恢復 VMware 虛擬磁碟的信息"]。
