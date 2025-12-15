@@ -12,7 +12,7 @@ summary: 在NetApp Backup and Recovery中，建立報告以查看備份狀態，
 
 
 [role="lead"]
-在NetApp Backup and Recovery中，為 Microsoft SQL Server 工作負載建立報告以查看備份狀態，包括備份數量、成功備份數量和失敗備份數量。您還可以查看每個備份的詳細信息，包括備份類型、備份使用的儲存系統以及備份的時間。
+在NetApp Backup and Recovery中，建立 Microsoft SQL Server 工作負載的報告，以查看備份狀態和詳細信息，包括成功和失敗的備份計數、備份類型、儲存系統和時間戳記。
 
 
 

@@ -1779,7 +1779,6 @@
   <block id="408156cb89b56d3b746dba5ade40b0e4" category="paragraph">控制台建立應用程式的備份並在備份和還原的*監控*區域中顯示進度。此備份是根據與應用程式關聯的保護策略建立的。</block>
   <block id="2f2fda22f167ad6c7dcc0ac3f92cd945" category="summary">在NetApp Backup and Recovery中，建立報告以查看備份狀態，包括備份數量、成功備份數量和失敗備份數量。您還可以查看每個備份的詳細信息，包括備份類型、備份使用的儲存系統以及備份的時間。</block>
   <block id="8e6f4a9d7c64e35859548854a52b145a" category="doc">在NetApp Backup and Recovery中為 Microsoft SQL Server 工作負載建立報告</block>
-  <block id="9192196558994f8d47c11797f2b33682" category="paragraph">在NetApp Backup and Recovery中，為 Microsoft SQL Server 工作負載建立報告以查看備份狀態，包括備份數量、成功備份數量和失敗備份數量。您還可以查看每個備份的詳細信息，包括備份類型、備份使用的儲存系統以及備份的時間。</block>
   <block id="df63e1970b7cb20512cb62b542bcd3f8" category="section-title">建立報告</block>
   <block id="391ccda3039974f5c4561d91d157e4be" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="a75db1c6ad7a6018f4076429dcb47fd8" category="list-text">從NetApp Backup and Recovery選單中，選擇 *報告* 選項。</block>
@@ -1910,7 +1909,6 @@
   <block id="1ca9578c25474d5cfeaa6c44bdbaa9b2" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="2aceb93307f82c2d88347faa7eaa4e71" category="list-text">輸入要還原的資源的名稱，或篩選要還原的資源所在的 vCenter、資料中心或資料儲存。</block>
   <block id="a5315c2927cf2b05876fdd6713fbd713" category="summary">NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。</block>
-  <block id="0541ead918a4013aad82336e0654ba53" category="paragraph">所有ONTAP系統都已內建備份和復原的支持，因此無需額外的硬體、軟體授權或媒體網關。這使得備份操作變得簡單且經濟高效。  NetApp控制台簡化了任何備份策略的實施，包括全方位的 3-2-1 備份變體，而無需多個資源管理器或專業人員。</block>
   <block id="8fa16cd18cf0722e85fe3e62f649f0c8" category="admonition">有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件以技術預覽的形式提供。對於此預覽版產品， NetApp保留在正式發布之前修改產品詳細資訊、內容和時間表的權利。</block>
   <block id="1f603af7daec690416eee590da3bda4c" category="section-title">NetApp Backup and Recovery</block>
   <block id="fa9b71fd6339baf1b1e8d4ce0528032e" category="paragraph">使用NetApp Backup and Recovery實現以下目標：</block>
@@ -1991,7 +1989,6 @@
   <block id="9b84371e23a14f93e2d9314a2599ac9a" category="admonition">對於 Microsoft SQL Server，當您啟動將快照複製到輔助ONTAP目標或物件儲存時，會產生費用。</block>
   <block id="032820ef020ebdcb4972d36db7394681" category="list-text">第一個選項是從您的雲端供應商訂閱，這樣您就可以按月付費。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="inline-xref">授權</block>
-  <block id="8426d45850b9ec06adef93652db54080" category="list-text">第三種選擇是直接從NetApp購買授權。閱讀<block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block>部分了解詳情。</block>
   <block id="30c887a11915f5c1adb97321b93a9e39" category="paragraph">NetApp Backup and Recovery適用於以下消費模式：</block>
   <block id="146cb6145f5238f0a019636047844250" category="list-text">*年度*：來自雲端提供者市場的年度合約。</block>
   <block id="b81dcdb5e6cec4dda0b7fdf2110e5d48" category="paragraph">您將收到一個序號，請在NetApp Console中輸入該序號以啟用該服務。當達到任一限制時，您都需要更新許可證。備份 BYOL 授權適用於與您的NetApp Console組織或帳號關聯的所有來源系統。</block>
@@ -4601,7 +4598,6 @@
   <block id="35521e84b87db7ff299e3d292854a426" category="paragraph">使用NetApp Backup and Recovery從快照、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原 Hyper-V 工作負載。</block>
   <block id="c71707f07223923dbaab7d7f94cf956b" category="paragraph">使用NetApp Backup and Recovery從快照、複製到輔助儲存的保護群組備份或儲存在物件儲存中的備份還原 KVM 虛擬機器。</block>
   <block id="c4a9fad82bfaa655d1dc063df314c9ed" category="list-text">配置日誌目錄（從 *清單* &gt; *主機*）。如果要在快照中備份資料庫主機的日誌，請先在NetApp Backup and Recovery中設定日誌。有關詳細信息，請參閱<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block>。</block>
-  <block id="e55271e37b053fabbe06b3671cfb3c48" category="paragraph">NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照並將其傳輸到備份位置來同步備份。</block>
   <block id="ac953870175731881060585a6b9ee690" category="paragraph">NetApp Backup and Recovery可讓您將下列來源系統中的 Microsoft SQL Server 執行個體和資料庫備份到下列輔助系統以及公有雲和私有雲供應商中的物件儲存。快照保留在來源系統上。</block>
   <block id="d07d19d5986209f0a00db1f8289e73d2" category="paragraph">您可以將 Microsoft SQL Server 執行個體和資料庫從駐留在主儲存或輔助系統（複製磁碟區）或物件儲存（備份檔案）中的備份還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。</block>
   <block id="4c0cc18e33fa07512d511f9a04e0629a" category="cell">Azure 中的Cloud Volumes ONTAP本機ONTAP系統ONTAP S3</block>
@@ -4846,4 +4842,11 @@
   <block id="985aacac93e75bfb41dca796dd136773" category="cell">按需恢復失敗</block>
   <block id="df660ed534483b04ecb1bf0371cdbe53" category="cell">系統操作</block>
   <block id="eb31ef8eb2f5dc2e91e3fc628c278047" category="cell">臨時磁碟區快照建立失敗</block>
+  <block id="d6c67ddd6689909f9ab7e453c230fd09" category="paragraph">NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照並將其傳輸到備份位置來同步備份。</block>
+  <block id="488ee5eee6409c61723daa55708c1c38" category="paragraph">在NetApp Backup and Recovery中，建立 Microsoft SQL Server 工作負載的報告，以查看備份狀態和詳細信息，包括成功和失敗的備份計數、備份類型、儲存系統和時間戳記。</block>
+  <block id="683c401da81ee8eab953d27954a799cf" category="paragraph">所有ONTAP系統都已內建備份和復原的支持，因此無需額外的硬體、軟體授權或媒體網關。這使得備份操作變得簡單且經濟高效。NetApp Console簡化了任何備份策略的實施，包括所有 3-2-1 備份變體，而無需多個資源管理器或專業人員。</block>
+  <block id="cf45f15c2dbe19bdbf9de3e329061b93" category="paragraph">服務費支付給NetApp ，涵蓋建立備份到物件儲存或ONTAP目標的成本，以及從這些備份還原磁碟區或檔案的成本。您只需為在物件儲存或ONTAP中保護的資料付費（這包括SnapMirror配置）。費用是根據備份到物件儲存或ONTAP目標的ONTAP磁碟區的來源邏輯已使用容量（在ONTAP效率之前）計算的。此容量也稱為前端兆位元組 (FETB)。</block>
+  <block id="1da151060a18e6460ac3d7eb0f913a37" category="paragraph">備份和復原服務有三種付費方式：</block>
+  <block id="6fa5c823869ff5f58a4f5dcaaa68d86d" category="list-text">第二種選擇是購買年度合約。</block>
+  <block id="41bda454559167e0de7967190676c8d0" category="list-text">第三種選擇是直接從NetApp購買授權。請參閱 <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 詳情請見相關章節。</block>
 </blocks>
