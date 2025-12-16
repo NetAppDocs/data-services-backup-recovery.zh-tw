@@ -1986,7 +1986,6 @@
   <block id="705d7d5204c001ada8d7869c065a6a70" category="list-text">如果您打算從已移動到檔案物件儲存的備份檔案中恢復磁碟區數據，則雲端提供者會收取額外的每 GiB 檢索費用和每個請求費用。</block>
   <block id="e44d61516574d94ce56af3468723e18a" category="list-text">如果您打算在恢復磁碟區資料的過程中掃描備份檔案中的勒索軟體（如果您為雲端備份啟用了 DataLock 和勒索軟體復原功能），那麼您還將產生來自雲端提供者的額外出口成本。</block>
   <block id="e1b4a0ddcd3124f71fd5c65649282433" category="paragraph">*服務費*</block>
-  <block id="9b84371e23a14f93e2d9314a2599ac9a" category="admonition">對於 Microsoft SQL Server，當您啟動將快照複製到輔助ONTAP目標或物件儲存時，會產生費用。</block>
   <block id="032820ef020ebdcb4972d36db7394681" category="list-text">第一個選項是從您的雲端供應商訂閱，這樣您就可以按月付費。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="inline-xref">授權</block>
   <block id="30c887a11915f5c1adb97321b93a9e39" category="paragraph">NetApp Backup and Recovery適用於以下消費模式：</block>
@@ -4845,8 +4844,9 @@
   <block id="d6c67ddd6689909f9ab7e453c230fd09" category="paragraph">NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照並將其傳輸到備份位置來同步備份。</block>
   <block id="488ee5eee6409c61723daa55708c1c38" category="paragraph">在NetApp Backup and Recovery中，建立 Microsoft SQL Server 工作負載的報告，以查看備份狀態和詳細信息，包括成功和失敗的備份計數、備份類型、儲存系統和時間戳記。</block>
   <block id="683c401da81ee8eab953d27954a799cf" category="paragraph">所有ONTAP系統都已內建備份和復原的支持，因此無需額外的硬體、軟體授權或媒體網關。這使得備份操作變得簡單且經濟高效。NetApp Console簡化了任何備份策略的實施，包括所有 3-2-1 備份變體，而無需多個資源管理器或專業人員。</block>
-  <block id="cf45f15c2dbe19bdbf9de3e329061b93" category="paragraph">服務費支付給NetApp ，涵蓋建立備份到物件儲存或ONTAP目標的成本，以及從這些備份還原磁碟區或檔案的成本。您只需為在物件儲存或ONTAP中保護的資料付費（這包括SnapMirror配置）。費用是根據備份到物件儲存或ONTAP目標的ONTAP磁碟區的來源邏輯已使用容量（在ONTAP效率之前）計算的。此容量也稱為前端兆位元組 (FETB)。</block>
   <block id="1da151060a18e6460ac3d7eb0f913a37" category="paragraph">備份和復原服務有三種付費方式：</block>
   <block id="6fa5c823869ff5f58a4f5dcaaa68d86d" category="list-text">第二種選擇是購買年度合約。</block>
   <block id="41bda454559167e0de7967190676c8d0" category="list-text">第三種選擇是直接從NetApp購買授權。請參閱 <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 詳情請見相關章節。</block>
+  <block id="6f2ce7f1231e53c03d29e2df6055acf0" category="paragraph">對於ONTAP磁碟區工作負載，您只需為受物件儲存保護的磁碟區付費。費用是根據來源ONTAP磁碟區在應用效率之前使用的邏輯容量計算的，也稱為前端 TB（FETB）。</block>
+  <block id="2e122fa1e06865f6dee3fd6d67ea1488" category="paragraph">對於所有其他工作負載，您需要為至少保護到一個輔助儲存目標或物件儲存目標的資源付費。費用是根據來源工作負載的邏輯大小計算的。對於資料庫而言，這意味著資料庫的大小；對於虛擬機器而言，這意味著虛擬機器的大小。</block>
 </blocks>
