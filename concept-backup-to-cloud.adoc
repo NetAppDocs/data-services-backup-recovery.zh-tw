@@ -215,31 +215,31 @@ link:br-start-licensing.html["了解如何設定許可證"]。
 
 
 
-== 支援的資料來源、系統和備份目標
+== 支援的工作負載、系統和備份目標
 
-.支援的工作負載資料來源
-NetApp Backup and Recovery可保護下列工作負載：
+.支援的工作負載
+NetApp Backup and Recovery可保護下列類型的工作負載：
 
 * ONTAP卷
-* 用於實體、VMware 虛擬機器檔案系統 (VMFS) 和 VMware 虛擬機器磁碟 (VMDK) NFS 的 Microsoft SQL Server 執行個體和資料庫
+* 儲存在實體磁碟和 VMware 虛擬機器磁碟 (VMDK) 上的 Microsoft SQL Server 執行個體和資料庫，透過 VMFS 或 NFS 檔案系統進行儲存。
 * VMware 虛擬機器與資料儲存區
 * KVM 工作負載（預覽）
 * Hyper-V 工作負載（預覽版）
-* Oracle 工作負載（預覽版）
+* Oracle 資料庫工作負載（預覽版）
 * Kubernetes 工作負載（預覽版）
 
 
 .支援的系統
-* 本地ONTAP SAN（iSCSI 協定）和 NAS（使用 NFS 和 CIFS 協定），採用ONTAP 9.8 及更高版本
+* 本地部署的ONTAP SAN（iSCSI 協定）和 NAS（使用 NFS 和 CIFS 協定）， ONTAP版本需為 9.8 或更高版本。
 * 適用於 AWS 的Cloud Volumes ONTAP 9.8 或更高版本（使用 SAN 和 NAS）
-
-
+* 適用於 Google Cloud Platform 的Cloud Volumes ONTAP 9.8 或更高版本（使用 NFS 和 CIFS 協定）
 * 適用於 Microsoft Azure 的Cloud Volumes ONTAP 9.8 或更高版本（使用 SAN 和 NAS）
-* Amazon FSx for NetApp ONTAP
+* Amazon FSx for NetApp ONTAP （僅限 Microsoft SQL Server 工作負載）
 
 
-.支援備份目標
+.支援的備份目標
 * 亞馬遜網路服務（AWS）S3
+* Google 雲端儲存
 * Microsoft Azure Blob（預覽版不適用於 VMware 工作負載）
 * StorageGRID
 * ONTAP S3（預覽版不適用於 VMware 工作負載）

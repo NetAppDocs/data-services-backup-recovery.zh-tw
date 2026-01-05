@@ -349,15 +349,6 @@
   <block id="5ae6a8a06c30125d00a57910609856cf" category="list-text">跨磁碟（跨多個 CIFS 共用）</block>
   <block id="5cb642b37b3102019402cbd3b93a5693" category="list-text">透過 SAN 保護虛擬機</block>
   <block id="0fffe3f2fb1497b9e344ba8dceac922b" category="list-text">保護使用 System Center Virtual Machine Manager (SCVMM) 叢集的 Hyper-V 主機</block>
-  <block id="a30c7324f4089fb51d237b923db4b02d" category="section-title">不受支援的舊版NetApp Console帳戶</block>
-  <block id="45cdae40d584305ee875a883ef9ba19e" category="paragraph">舊版NetApp Console帳號不支援保護 Hyper-V 工作負載所需的功能。檢查您是否在控制台 Web UI 中使用舊帳戶。如果您有舊版控制台帳戶，請在保護 Hyper-V 工作負載之前建立新帳戶。</block>
-  <block id="67d95bafb080d0463671b51cb30ed772" category="list-text">從NetApp Console選單中，選擇「管理」&gt;「身分和存取」。</block>
-  <block id="252a32da9415511e6633fdf05c3cbfc5" category="list-text">在「*組織*」下，檢查組織 ID 旁邊是否顯示「帳戶 ID」。</block>
-  <block id="d0052af1d0af270827e3db57cce81803" category="paragraph">如果顯示*帳號 ID*，則表示您正在使用舊帳戶。</block>
-  <block id="f4e4e58b8e27317b0286b2d7a6325bb0" category="list-text">如果您使用的是舊帳戶，請執行以下操作：</block>
-  <block id="e0c1910c886d7600a19660b88b3e28fb" category="inline-link">控制台登入頁面</block>
-  <block id="9708523b754b4574d7d943207eacd560" category="list-text">登出控制台，然後瀏覽到<block ref="5a8401fec198a207b346fd48bd2a9be6" category="inline-link-rx"></block>。</block>
-  <block id="9f4166fee581a8bb153eacc3c742daca" category="list-text">選擇“註冊”來建立新帳戶。</block>
   <block id="4a03732927298c2d8d1492b3d08bb831" category="summary">此版本的NetApp Backup and Recovery具有以下已知限制。</block>
   <block id="5050c99de0a6e1bcf02e7ce66edabd97" category="doc">NetApp Backup and Recovery針對 KVM 工作負載的已知限制</block>
   <block id="448a90c8bbb9415c292cb0e585249a04" category="paragraph">NetApp Backup and Recovery中的 KVM 工作負載的私人預覽版不支援以下操作和設定：</block>
@@ -375,7 +366,6 @@
   <block id="5131ec6f366fecc1e6e217f1cd4771d5" category="list-text">跨多個 NFS 掛載點或共享的磁碟</block>
   <block id="60cb90015b7d70207c84b5b4c09b1c4a" category="list-text">RAW磁碟格式</block>
   <block id="def5bb1c4fff047ce52153ac1f2ef9b5" category="list-text">NetFS 以外的儲存池類型（僅支援 NetFS）</block>
-  <block id="09c71875e3bb444ec63263da7bac4c16" category="paragraph">舊版NetApp Console帳號不支援保護 KVM 工作負載所需的功能。檢查您是否在控制台 Web UI 中使用舊帳戶。如果您有舊版控制台帳戶，請在保護 KVM 工作負載之前建立新帳戶。</block>
   <block id="43250e477f245ad8251ae2cf9a6044b5" category="doc">NetApp Backup and Recovery針對 Oracle 工作負載的已知限制</block>
   <block id="d905e8ea866675c3cf4643035604b776" category="paragraph">NetApp Backup and Recovery中的 Oracle Database 工作負載的私人預覽版不支援以下操作：</block>
   <block id="203b3a4b594fb28b853f0cb7e5561c26" category="list-text">離線備份</block>
@@ -1995,20 +1985,13 @@
   <block id="520d2c423b38acf3262d3f1e93b53d8a" category="paragraph"><block ref="5f449dd4c94fd29d3e3b83e45dd58382" category="inline-link-macro-rx"></block>。</block>
   <block id="0f3691e0fad1edbca841aabd38ddfc42" category="paragraph">NetApp Backup and Recovery以按需付費模式提供基於消費的授權。透過雲端供應商的市場訂閱後，您需要按 GiB 為備份資料付費 - 無需預付款。您的雲端提供者將透過每月帳單向您收費。</block>
   <block id="9757bd87f9a5ff6758600430092b3955" category="paragraph">請注意，當您首次註冊 PAYGO 訂閱時，可以享受 30 天的免費試用。</block>
-  <block id="8d76c3c56611813110af76c5eca39835" category="section-title">支援的資料來源、系統和備份目標</block>
-  <block id="cec0c370d9c2ef0dbbf7f89c16ef1a90" category="paragraph-title">支援的工作負載資料來源</block>
-  <block id="471bdf4d52cdd0764f463e7010138e3f" category="paragraph">NetApp Backup and Recovery可保護下列工作負載：</block>
   <block id="9504b35cbb481ca2332f36aedcf456c8" category="list-text">ONTAP卷</block>
-  <block id="42b12d53290c6e592a4d774a432752d6" category="list-text">用於實體、VMware 虛擬機器檔案系統 (VMFS) 和 VMware 虛擬機器磁碟 (VMDK) NFS 的 Microsoft SQL Server 執行個體和資料庫</block>
   <block id="5c1924f6230f429d87dfb7fd242478ba" category="list-text">VMware 虛擬機器與資料儲存區</block>
   <block id="d696f54a4219f10612b2a92868d7f533" category="list-text">KVM 工作負載（預覽）</block>
   <block id="ba244ce1386922db2aac58f9ea35cf82" category="list-text">Hyper-V 工作負載（預覽版）</block>
   <block id="339f6d69f0298e3d4bbd943ba3211c6c" category="list-text">Kubernetes 工作負載（預覽版）</block>
-  <block id="40b884bfd6c5c8664261a0673de09aeb" category="list-title">支援的系統</block>
-  <block id="60bbb47f4c25fbe48c0eaa18d9174d22" category="list-text">本地ONTAP SAN（iSCSI 協定）和 NAS（使用 NFS 和 CIFS 協定），採用ONTAP 9.8 及更高版本</block>
   <block id="d97ad1eba4f90ab1f835497c1e04b99f" category="list-text">適用於 AWS 的Cloud Volumes ONTAP 9.8 或更高版本（使用 SAN 和 NAS）</block>
   <block id="c5446f6574237d9a06e2a847d988c357" category="list-text">適用於 Microsoft Azure 的Cloud Volumes ONTAP 9.8 或更高版本（使用 SAN 和 NAS）</block>
-  <block id="d17b3abdd113c99dd97a58c22430220e" category="list-title">支援備份目標</block>
   <block id="736ca911d7d143d01bd8cbfe0d4afbca" category="list-text">亞馬遜網路服務（AWS）S3</block>
   <block id="fd986c9449acb5abd97bea849d50dc49" category="list-text">Microsoft Azure Blob（預覽版不適用於 VMware 工作負載）</block>
   <block id="2892aac222ad56500a9c836677137630" category="list-text">ONTAP S3（預覽版不適用於 VMware 工作負載）</block>
@@ -4705,7 +4688,6 @@
   <block id="3e2ef02026c97d7e5a6f8783f142b8ca" category="list-text">資源費用：依儲存使用情況而定。更多信息，請參閱<block ref="fb7e1562747222c6aa716c91aa0ab813" category="inline-link-rx"></block>。</block>
   <block id="b341302252cb59acb02da2074d4fe6c4" category="list-text">*服務費用*： NetApp Backup and Recovery費用。但是，如果來源磁碟區位於使用 CVO 專業方案的儲存系統中，則NetApp Backup and Recovery是免費提供的。</block>
   <block id="40d372f97e4d897da51bc1fa5978329b" category="paragraph">當您使用 Google Cloud Platform 時，請向NetApp申請私有報價，並在 Google Cloud Marketplace 啟用時選擇您的套餐。</block>
-  <block id="3cd3cc23191003954a83615e7dc619e1" category="list-text">Oracle 工作負載（預覽版）</block>
   <block id="14e2c3c5d70d421449af52fed7355245" category="list-text">使用來自多個 Hyper-V 主機的虛擬機器建立資源組</block>
   <block id="c224c03fd1f5cab444913dab60a8d013" category="list-text">*主機註冊*：透過輸入主機的 FQDN 或 IP 位址、憑證、控制台代理程式和連接埠號碼來新增新的 Hyper-V 主機。如果控制台代理無法解析 FQDN，則改用 IP 位址。對於 FCI 集群，請輸入 FCI 集群管理 IP 位址。</block>
   <block id="36c0d00755a4d8daae367144e5daca38" category="list-text">如果非管理員網域使用者要保護 Hyper-V 虛擬機，請確保使用者擁有下列權限：</block>
@@ -4849,4 +4831,14 @@
   <block id="41bda454559167e0de7967190676c8d0" category="list-text">第三種選擇是直接從NetApp購買授權。請參閱 <block ref="b839456cc57645a9392f4db60a4f044a" category="inline-xref-macro-rx"></block> 詳情請見相關章節。</block>
   <block id="6f2ce7f1231e53c03d29e2df6055acf0" category="paragraph">對於ONTAP磁碟區工作負載，您只需為受物件儲存保護的磁碟區付費。費用是根據來源ONTAP磁碟區在應用效率之前使用的邏輯容量計算的，也稱為前端 TB（FETB）。</block>
   <block id="2e122fa1e06865f6dee3fd6d67ea1488" category="paragraph">對於所有其他工作負載，您需要為至少保護到一個輔助儲存目標或物件儲存目標的資源付費。費用是根據來源工作負載的邏輯大小計算的。對於資料庫而言，這意味著資料庫的大小；對於虛擬機器而言，這意味著虛擬機器的大小。</block>
+  <block id="0d3a443ca8a1a321c3c002699cfc04c3" category="section-title">支援的工作負載、系統和備份目標</block>
+  <block id="e98d121a976b5b0869d0f6964c675ad8" category="paragraph-title">支援的工作負載</block>
+  <block id="3f4a151090dc4fc248f982a6f4be9919" category="paragraph">NetApp Backup and Recovery可保護下列類型的工作負載：</block>
+  <block id="23d6a9248d1083059233422499f3d2d5" category="list-text">儲存在實體磁碟和 VMware 虛擬機器磁碟 (VMDK) 上的 Microsoft SQL Server 執行個體和資料庫，透過 VMFS 或 NFS 檔案系統進行儲存。</block>
+  <block id="6619e379e3694efd4480482eee432681" category="list-text">Oracle 資料庫工作負載（預覽版）</block>
+  <block id="933247e0be7796a309cfa4c95bd34938" category="list-title">支援的系統</block>
+  <block id="6480be056b2a8398cb100f9a310f6040" category="list-text">本地部署的ONTAP SAN（iSCSI 協定）和 NAS（使用 NFS 和 CIFS 協定）， ONTAP版本需為 9.8 或更高版本。</block>
+  <block id="7a90fde5622dcca215688cd078d7dd01" category="list-text">適用於 Google Cloud Platform 的Cloud Volumes ONTAP 9.8 或更高版本（使用 NFS 和 CIFS 協定）</block>
+  <block id="6f1c9788058344e9232a35579eac91e2" category="list-text">Amazon FSx for NetApp ONTAP （僅限 Microsoft SQL Server 工作負載）</block>
+  <block id="0b115ac5b217f989a1fc7dd422161b82" category="list-title">支援的備份目標</block>
 </blocks>
