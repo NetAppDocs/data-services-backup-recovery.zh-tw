@@ -219,27 +219,3 @@ NetApp Backup and Recovery向您顯示可用於復原操作的快照。
 
 . 繼續執行與「復原」頁面中的復原選項相同的步驟
 
-
-ifdef::aws[]
-
-endif::aws[]
-
-ifdef::azure[]
-
-endif::azure[]
-
-ifdef::gcp[]
-
-endif::gcp[]
-
-ifdef::aws[]
-
-endif::aws[]
-
-ifdef::azure[]
-
-endif::azure[]
-
-ifdef::gcp[]
-
-endif::gcp[]

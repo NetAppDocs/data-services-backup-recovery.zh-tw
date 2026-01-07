@@ -1972,7 +1972,6 @@
   <block id="31f9c16bc3570a56499294176c354ee7" category="inline-link">Azure 資料湖儲存</block>
   <block id="82ba9e045163c7c72098c50671704351" category="list-text">在 Azure 中，<block ref="a3ff4de37e7a195a145416e9f02577ac" category="inline-link-rx"></block>和<block ref="47b506e6a2508a9b210c02fa89bbdc24" category="inline-link-rx"></block>在您的儲存帳戶中配置以儲存和分析您的資料。</block>
   <block id="9fece9ac1c7d50fbf1a1498b93cbeb15" category="inline-link">Google Cloud BigQuery 服務</block>
-  <block id="a9e0f848e6e51d1ca02fdbb4bf91773a" category="list-text">在 Google 中，部署了一個新的 bucket，並且<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>在帳戶/項目層級進行配置。 endif::gcp[]</block>
   <block id="705d7d5204c001ada8d7869c065a6a70" category="list-text">如果您打算從已移動到檔案物件儲存的備份檔案中恢復磁碟區數據，則雲端提供者會收取額外的每 GiB 檢索費用和每個請求費用。</block>
   <block id="e44d61516574d94ce56af3468723e18a" category="list-text">如果您打算在恢復磁碟區資料的過程中掃描備份檔案中的勒索軟體（如果您為雲端備份啟用了 DataLock 和勒索軟體復原功能），那麼您還將產生來自雲端提供者的額外出口成本。</block>
   <block id="e1b4a0ddcd3124f71fd5c65649282433" category="paragraph">*服務費*</block>
@@ -2643,12 +2642,8 @@
   <block id="1f2242e2c4c50f131ef13c9b0750cece" category="list-text">在「編輯策略」頁面中，選擇向下箭頭展開「標籤和保留」部分以變更計畫和/或備份保留，然後選擇「儲存」。</block>
   <block id="11424b9a70e420c1dd25a5c8dd143872" category="paragraph">如果您的叢集運行的是ONTAP 9.10.1 或更高版本，您也可以選擇在一定天數後啟用或停用備份分層到檔案儲存。</block>
   <block id="2ee1435ab41f69d919a20dc4c3d48cc8" category="inline-link-macro">了解有關使用 AWS 檔案儲存的更多信息</block>
-  <block id="c86e8102bf4f78e9feec6f5707740536" category="paragraph"><block ref="74169e9d6aed252bcfdf8c7b3af7403c" category="inline-link-macro-rx"></block>。</block>
   <block id="2a42635401c2f16c2080bd6994708fa1" category="inline-link-macro">了解有關使用 Azure 檔案儲存的詳細信息</block>
-  <block id="ba495708b905a450346e6127df6e1205" category="paragraph"><block ref="2ee7cc9e20761e67f0920429cf98cc54" category="inline-link-macro-rx"></block>。</block>
   <block id="0d1c0309cd5a222639167f043ad2659c" category="inline-link-macro">詳細了解如何使用 Google 歸檔存儲</block>
-  <block id="619556a98b7ce9c2609fd64276c45841" category="paragraph"><block ref="aba7d321ee8cc50f731dfdd9ecd7c01c" category="inline-link-macro-rx"></block>。（需ONTAP 9.12.1。）</block>
-  <block id="273a0c18ae7ae64c7f1016a71ed51d1e" category="paragraph">+ 請注意，如果您停止將備份分層到存檔，則任何已分層到存檔儲存的備份檔案都會留在該層中 - 它們不會自動移回標準層。只有新的磁碟區備份才會駐留在標準層。</block>
   <block id="d3b3f333837b21ed08dfd04c10e48346" category="section-title">新增新的備份到雲端策略</block>
   <block id="704cbb6a4b98702a1ff1e784b08e0bc1" category="paragraph">當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您定義的預設備份策略進行備份。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，您可以為該叢集建立其他策略並將這些原則指派給其他磁碟區。</block>
   <block id="ebef09b04d71dbdf490084193f232a2f" category="inline-xref">將策略應用於該系統中的捲</block>
@@ -3214,7 +3209,6 @@
   <block id="d6b2f75c5e7cc6c2d5da7268c117d88e" category="doc">在NetApp Backup and Recovery和還原進階設定中管理備份到物件儲存選項</block>
   <block id="2f5538c2e34ba12aae307adeb8e9361f" category="admonition">這些設定僅適用於備份到物件儲存。這些設定都不會影響您的快照或複製設定。</block>
   <block id="c7097337eab210464618620268aa80bc" category="paragraph">您可以在進階設定頁面中變更以下選項：</block>
-  <block id="6d1da260b80b103438f3aedda67c1b8e" category="list-text">使用最大傳輸速率選項 ifdef::aws[] 變更指派給將備份上傳到物件儲存的網路頻寬</block>
   <block id="90262b49b516aea0770d54c5389860ab" category="list-text">更改是否從來源系統中刪除“年度”快照</block>
   <block id="6866e75c6eebeffef8ecc7e577b86a5c" category="list-text">啟用或停用系統的勒索軟體掃描，包括計畫掃描</block>
   <block id="0b1dbe1ca2e686301ad63250cc03207d" category="section-title">查看叢集等級備份設定</block>
@@ -3275,7 +3269,6 @@
   <block id="9d6ba5ad698127fccb9f60a35f6f12bc" category="list-text">如果您打算使用 DataLock 和勒索軟體保護，則可以在建立第一個備份策略並為該叢集啟動NetApp Backup and Recovery時啟用它。您可以稍後使用NetApp Backup and Recovery進階設定啟用或停用勒索軟體掃描。</block>
   <block id="b786f06f750594e45a7a7ec6d9cf4ac2" category="list-text">當控制台在恢復磁碟區資料時掃描備份檔案中的勒索軟體時，您將產生來自雲端提供者的額外出口成本以存取備份檔案的內容。</block>
   <block id="921b747c1abfd997d26a273c0b62011b" category="section-title">什麼是DataLock</block>
-  <block id="8c5ed3c4325fc24dbf86bb370210fae8" category="paragraph">使用此功能，您可以將透過SnapMirror複製到雲端的雲端快照鎖定，還可以啟用該功能來偵測勒索軟體攻擊並恢復物件儲存上快照的一致副本。  AWS、Azure 和StorageGRID支援此功能。</block>
   <block id="1ba4a0b9c57fe8015ce8449413192339" category="paragraph">DataLock 可保護您的備份檔案在一定時間內不被修改或刪除 - 也稱為_不可變儲存_。此功能使用物件儲存提供者的技術進行「物件鎖定」。</block>
   <block id="4e596858d3955027bd4bc8cab9e72010" category="paragraph">雲端提供者使用保留截止日期 (RUD)，它是根據快照保留期計算的。快照保留期是根據備份策略中定義的標籤和保留計數計算的。</block>
   <block id="f50811813bbd72e21d2cb23e440692d9" category="paragraph">最短快照保留期為 30 天。讓我們看一些例子來了解它的工作原理：</block>
@@ -3320,12 +3313,7 @@
   <block id="1364637fafeabf3ff1cd69cc9cda6bcf" category="list-text">恢復過程涉及恢復到最後一個已知的良好副本。</block>
   <block id="b3f1b65a3c7ad581029671863ce84f3e" category="section-title">支援的系統和對象儲存提供者</block>
   <block id="04caa6fde87b21be8738fc7aac2130d5" category="paragraph">在下列公有和私有雲供應商中使用物件儲存時，您可以從下列系統在ONTAP磁碟區上啟用 DataLock 和勒索軟體保護。</block>
-  <block id="49930e1d4376887999c072bd91775525" category="cell">備份檔案目標 ifdef::aws[]</block>
-  <block id="8889077573d45691231050324d93b6a9" category="cell">亞馬遜 S3 endif::aws[] ifdef::azure[]</block>
-  <block id="0959a2f5eff65303771c49363a01d789" category="cell">Azure Blob endif::azure[] ifdef::gcp[]</block>
   <block id="155ec659cc4e13b84e26ac8a60d0983e" category="cell">Google Cloud 中的Cloud Volumes ONTAP</block>
-  <block id="a9a9ab6f27a7c96f41b3ea91feb1ef02" category="cell">Google雲 endif::gcp[]</block>
-  <block id="4e592a9288f7e548ef70784305002a5e" category="cell">ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud endif::gcp[] NetApp StorageGRID</block>
   <block id="f3ec603ab9c35660f371c0fc057b7fd1" category="list-text">您的叢集必須執行ONTAP 9.11.1 或更高版本</block>
   <block id="6eccb1b4300ae9587c674c0708c7ee79" category="list-text">控制台代理可以部署在雲端或您的本地</block>
   <block id="685a143757efe250c8c69c08616cbe33" category="list-text">以下 S3 權限必須是提供控制台代理權限的 IAM 角色的一部分。它們位於資源「arn:aws:s3:::netapp-backup-*」的「backupS3Policy」部分：</block>
@@ -3403,8 +3391,6 @@
   <block id="934b0a65e87eaa0952123591f2e40ba3" category="paragraph">如果您的本地叢集使用的是ONTAP 9.12.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and Recovery UI 中的「_Archive_」儲存中，以進一步最佳化成本。<block ref="a5f5ea528fdc4d7b7927a7bc5e75da85" category="inline-link-macro-rx"></block>。</block>
   <block id="c811e121a426ef27a318d7ddd351730d" category="list-text">在StorageGRID中，備份與 _Standard_ 儲存類別相關聯。</block>
   <block id="858f352aed10fc578bc936929dbfe50b" category="paragraph">如果您的本地叢集使用ONTAP 9.12.1 或更高版本，並且您的StorageGRID系統使用 11.4 或更高版本，則可以將較舊的備份檔案存檔到公有雲檔案儲存。</block>
-  <block id="8a63c8142c234622452551e194e08f2c" category="paragraph">+ ** 對於 AWS，您可以將備份分層到 AWS _S3 Glacier_ 或 _S3 Glacier Deep Archive_ 儲存。<block ref="da672f43205b0c90027c7dfb66aec892" category="inline-link-macro-rx"></block>。</block>
-  <block id="d9687428f28d3ac3ad41d545b8ad9fb3" category="paragraph">+ ** 對於 Azure，您可以將舊備份分層到_Azure Archive_儲存體。<block ref="378f4ee26769b0f22cf8e5c4c18a63bc" category="inline-link-macro-rx"></block>。</block>
   <block id="bb4d18abee2ac1ac9616f24e56d8201d" category="doc">使用NetApp Backup and Recovery規劃您的保護之旅</block>
   <block id="854bc156a37cbbf040c040fbef53bdec" category="paragraph">NetApp Backup and Recovery使您能夠建立最多三個來源磁碟區副本來保護您的資料。在磁碟區上啟用備份和還原時，您可以選擇許多選項，因此您應該檢查您的選擇以做好準備。</block>
   <block id="abb8243f73c63e089a9cc6cdf95785b2" category="paragraph">我們將討論以下選項：</block>
@@ -3539,7 +3525,6 @@
   <block id="c91b161e73b74151a87e57d1b478a8bf" category="admonition">BlueXP私有模式（傳統BlueXP介面）通常用於沒有網路連線的本機環境和安全雲端區域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。NetApp繼續透過傳統的BlueXP介面支援這些環境。有關舊版BlueXP介面中的私人模式文檔，請參閱<block ref="48f65378777d422181826aa490861bdb" category="inline-link-rx"></block>。</block>
   <block id="7d137c690fd8c0d815296a007443c889" category="list-text">您可以將資料從本機ONTAP系統備份到本機NetApp StorageGRID系統。<block ref="860e591e9b4ec768065d563e22bafdf4" category="inline-link-macro-rx"></block>。</block>
   <block id="02cb06ba88a3c5f99e8d4b475bd0ac1b" category="inline-link-macro">將本地ONTAP資料備份到ONTAP S3</block>
-  <block id="f64e5b9e38f4a83fb5814d4090a2cb6b" category="list-text">您可以將資料從本機ONTAP系統備份到本機ONTAP系統或為 S3 物件儲存配置的Cloud Volumes ONTAP系統。<block ref="61d8249673309599fa2a7a8b0c67a195" category="inline-link-macro-rx"></block> .ifdef::aws[]</block>
   <block id="8116cbee5887b07b452fecf9c1836d5c" category="doc">使用NetApp Backup and Recovery保護您的ONTAP卷數據</block>
   <block id="f147568c086732bd86eb443dc52d5e33" category="paragraph">NetApp Backup and Recovery功能，用於保護和長期存檔您的ONTAP磁碟區資料。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。</block>
   <block id="80281310e7f1753680348f039d61ece0" category="paragraph">啟動後，備份和復原會建立區塊級、增量永久備份，這些備份儲存在另一個ONTAP叢集和雲端中的物件儲存中。除了來源磁碟區之外，您還將擁有：</block>
@@ -3581,17 +3566,11 @@
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">支持的區域</block>
   <block id="c120c4e2a5b4e4e9674aa4b23a31ab0a" category="paragraph">NetApp Backup and Recovery在許多 Amazon Web Services、Microsoft Azure 和 Google Cloud 區域中均支援Cloud Volumes ONTAP 。</block>
   <block id="6c6a0225cb0a619d8872981b7be0ac95" category="inline-link">使用全球區域地圖了解更多信息</block>
-  <block id="1d85e7a2656bd01575d59e1548bbed4b" category="cell">目標物件儲存（備份）ifdef::aws[]</block>
   <block id="c373a9aa878db8431d1195796e8e6695" category="cell">Google 的Cloud Volumes ONTAP</block>
   <block id="9ecea76e21268445d7d03aec4130ba29" category="cell">Google 本機ONTAP系統中的Cloud Volumes ONTAP</block>
-  <block id="c0b279eeed106351906f95aa546f2ffa" category="cell">Google 雲端儲存 endif::gcp[]</block>
-  <block id="54ae5f645a65dd82ea439de20806bd9f" category="cell">ifdef::aws[] Amazon S3 endif::aws[] ifdef::azure[] Azure Blob endif::azure[] ifdef::gcp[] Google Cloud Storage endif::gcp[] NetApp StorageGRID ONTAP S3</block>
   <block id="85970a97aacb509bbf4ce9364724b494" category="cell">備份檔案位置</block>
   <block id="1f7c54e25f65414cece608c8f0604e55" category="cell">目的地系統</block>
-  <block id="bc7aa7434d0ca9752e2c02b4ffee9953" category="cell">AWS 本機ONTAP系統中的Cloud Volumes ONTAP endif::aws[] ifdef::azure[]</block>
-  <block id="b97f160a229c063bdce958beafa0f695" category="cell">Azure 中的Cloud Volumes ONTAP本地ONTAP系統 endif::azure[] ifdef::gcp[]</block>
   <block id="833c2c211a541e50ad94433664e4b5c1" category="cell">Google 雲端儲存</block>
-  <block id="a9f8eef7fdd18a9397fd96b661adbbf3" category="cell">Google 本地ONTAP系統中的Cloud Volumes ONTAP endif::gcp[]</block>
   <block id="8c7ae1ac5e93ce07c68e74f8dae54373" category="cell">本機ONTAP系統Cloud Volumes ONTAP</block>
   <block id="b1b998a9bc88754640934520205257d6" category="paragraph">請注意，「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。</block>
   <block id="8c9b6b8729507556572552d0d8f472e3" category="section-title">支持的捲</block>
@@ -3635,11 +3614,6 @@
   <block id="19fe226921eb8023a05c222ee84c5db8" category="paragraph">根據備份類型，備份位於不同的位置：</block>
   <block id="84b23b52a16a2d456b93cfcd37a9fb17" category="list-text">_複製磁碟區_駐留在二級儲存系統上 - Cloud Volumes ONTAP或本機ONTAP系統。</block>
   <block id="9b1fec5e0f334c7c6734500536c26eec" category="list-text">_備份副本_儲存在控制台在您的雲端帳戶中建立的物件儲存中。每個集群/系統有一個物件存儲，控制台將物件存儲命名為：「netapp-backup-clusteruuid」。請確保不要刪除此物件存儲。</block>
-  <block id="6dd0453948f319bf0e93a8760cf57765" category="paragraph">+ ** 在 AWS 中，控制台啟用<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block>在 S3 儲存桶上。</block>
-  <block id="49f986a30678b9238f4b6ca6f8da583b" category="paragraph">+ ** 在 Azure 中，控制台使用帶有 Blob 容器儲存帳戶的新資源群組或現有資源群組。主機<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block>預設情況下。</block>
-  <block id="57e10e6b47afffacbbee5d09e4bc9473" category="paragraph">+ ** 在 GCP 中，控制台使用具有儲存帳戶的新項目或現有項目作為 Google Cloud Storage 儲存桶。</block>
-  <block id="564b1e8b7bc04c9ca474231a3cbf4c49" category="paragraph">+ ** 在StorageGRID中，控制台使用現有的租用戶帳戶作為 S3 儲存桶。</block>
-  <block id="fc0acb7cce83e6633e2048efb8274cd6" category="paragraph">+ ** 在ONTAP S3 中，控制台使用 S3 儲存桶的現有使用者帳戶。</block>
   <block id="ce6bd8b7e44a144f2c3eefb8fb43c028" category="inline-link-macro">取消註冊系統的NetApp Backup and Recovery</block>
   <block id="dde7812a2b64115f166d47da097a615f" category="paragraph">如果您將來想要更改叢集的目標物件存儲，則需要<block ref="4b0267ab70996ada4858bf6db6495e68" category="inline-link-macro-rx"></block>，然後使用新的雲端供應商資訊啟用NetApp Backup and Recovery 。</block>
   <block id="47c63e2d9d67be358326c1eff2c87d12" category="section-title">可自訂的備份計劃和保留設置</block>
@@ -3707,20 +3681,14 @@
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">使用「搜尋和還原」功能還原磁碟區、資料夾和文件</block>
   <block id="685a6ba7b83ab5e286920feb961c08bb" category="section-title">使用“瀏覽和還原”功能還原ONTAP數據</block>
   <block id="b23bca1a2a7f2ec270c7be93eb3d5720" category="inline-link-macro">了解有關從 AWS 檔案儲存恢復的更多信息</block>
-  <block id="b03a3a022eb328afd14c51f9d25fd0aa" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block>。</block>
   <block id="f0a32293e7110abfd30f9402fa924815" category="inline-link-macro">了解有關從 Azure 檔案儲存還原的詳細信息</block>
-  <block id="4f7a7f0966b49199b4fcb96bfb027259" category="paragraph"><block ref="bf09a0f29ffa1dc0ee63da51e58f16ef" category="inline-link-macro-rx"></block>。</block>
   <block id="e57e5c06a7f562addb87315f013677ab" category="inline-link-macro">詳細了解如何從 Google 存檔儲存中恢復</block>
-  <block id="5257e1b4d697f8d8bc3d04bda6a273e8" category="paragraph"><block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block>。</block>
   <block id="e429a3dcdf9ca5d36834b72490aae784" category="admonition">將資料從 Azure 檔案儲存還原到StorageGRID系統時不支援高優先權。</block>
   <block id="598e51a2b37024d5f553af642c739db8" category="section-title">瀏覽並恢復支援的系統和物件儲存提供者</block>
   <block id="bc6bfb0b14fd7cced8ee62c645d8aa17" category="paragraph">*注意：*您可以從任何類型的備份檔案還原卷，但目前只能從物件儲存中的備份檔案還原資料夾或單一檔案。</block>
   <block id="4392d15c8884c7cc66b17ff794eb41d2" category="cell">*來自物件儲存（備份）*</block>
   <block id="a4e7ccecf7c1ff2d3e2de88d9f7559d4" category="cell">*來自主（快照）*</block>
   <block id="c1ad4111606308626e152e2bc5089a8b" category="cell">*來自輔助系統（複製）*</block>
-  <block id="aab3dd6e73e091e7f55c3e923a012dbb" category="cell">到目標系統 ifdef::aws[]</block>
-  <block id="508c69ac69618e417c42c1ec4f1802fe" category="cell">AWS 本機ONTAP系統中的Cloud Volumes ONTAP endif::aws[] ifdef::azure[]</block>
-  <block id="a57e78a7b424a1f155d5c251bf4bfe16" category="cell">Azure 中的Cloud Volumes ONTAP本地ONTAP系統 endif::azure[] ifdef::gcp[]</block>
   <block id="f6bc09197fbc5599ccf48032f3ead672" category="cell">到本地ONTAP系統</block>
   <block id="56a66e1fc15e989f40186eb5d1841f59" category="paragraph">對於瀏覽和恢復，控制台代理可以安裝在以下位置：</block>
   <block id="26b66b8e6541c0f2e46ee638955dab17" category="list-text">對於 Amazon S3，控制台代理可以部署在 AWS 或您的場所</block>
@@ -3749,7 +3717,6 @@
   <block id="2f7ffcf09fd8291d200be9f94baef41d" category="list-text">輸入要用於復原的磁碟區的名稱，然後選擇磁碟區所在的儲存虛擬機器和聚合。還原FlexGroup磁碟區時，您需要選擇多個聚合。預設情況下，*&lt;source_volume_name&gt;_restore* 用作磁碟區名。</block>
   <block id="7a2007148011e973184940a379d2cfeb" category="paragraph">當將備份從物件儲存還原到使用ONTAP 9.13.0 或更高版本的Cloud Volumes ONTAP系統或執行ONTAP 9.14.1 的本機ONTAP系統時，您可以選擇執行_快速還原_操作。</block>
   <block id="15c25e27b550e844257a7920d4c7a5ea" category="paragraph">如果您要從位於歸檔儲存層（從ONTAP 9.10.1 開始可用）中的備份檔案還原卷，則可以選擇還原優先權。</block>
-  <block id="05a3d8f98ebfb8438c88a925f984d2a0" category="paragraph"><block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block>。Google Archive 儲存層中的備份檔案幾乎可以立即恢復，並且不需要恢復優先順序。</block>
   <block id="f88c0e05820f08ba199e29b639f011b8" category="list-text">選擇「*下一步*」來選擇是否執行正常還原或快速還原程序：</block>
   <block id="2618b905cdc9e04055a7d6a5328eebfb" category="list-text">*正常還原*：在需要高效能的磁碟區上使用正常還原。還原過程完成之前，磁碟區將不可用。</block>
   <block id="64063115b259542737cce343064e3233" category="list-text">*快速恢復*：恢復的捲和資料將立即可用。請勿在需要高效能的磁碟區上使用此功能，因為在快速復原過程中，存取資料的速度可能會比平常慢。</block>
@@ -4408,19 +4375,7 @@
   <block id="0253148ca606e51aa3fdb4d9f8b84f32" category="sidebar">支援的 AWS 存檔儲存層</block>
   <block id="62967cdcfc7912e3c1a9b3870580fe3f" category="sidebar">支援的 Azure 存檔儲存層</block>
   <block id="6af2225d62ab9c4b0de4dfa7f9e852f5" category="sidebar">支援的 Google Cloud 歸檔儲存層</block>
-  <block id="e29d7c0b36af68edd13ebac84f15b44b" category="sidebar">雲端提供者</block>
-  <block id="46aef2e5080a5347df1ce7546e1be1df" category="sidebar">所有雲端提供者</block>
-  <block id="6beccc67ff905f7da0b29dece26b0485" category="sidebar">亞馬遜網路服務</block>
-  <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
   <block id="56ef2682280ac110060b881925a87b80" category="sidebar">Google雲</block>
-  <block id="1668ca1bd914c1d847f23b491319ac91" category="sidebar">微軟 Azure</block>
-  <block id="3a580f142203677f1f0bc30898f63f53" category="sidebar">Azure</block>
-  <block id="5a81378cdc7edd9ea960cf02d6ca78d2" category="paragraph">ifdef::aws[]</block>
-  <block id="6beb2fa01dc121194547db1bfbe03408" category="paragraph">endif::aws[]</block>
-  <block id="b010c7530103ef9947582474d65ff9a3" category="paragraph">ifdef::azure[]</block>
-  <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
-  <block id="879701946bb2bc7241d0f85fd843455a" category="paragraph">endif::azure[]</block>
-  <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
   <block id="6fc478198b32debce80454c7af87f2a6" category="paragraph">準備來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統。</block>
   <block id="9d6517026ceae75d40ad31bbce85a01f" category="paragraph">確保您的ONTAP系統符合以下要求：</block>
   <block id="412575a7231cf720dd454d12218d97e8" category="list-text">如果您複製數據，請檢查來源系統和目標系統是否要執行相容的ONTAP版本。</block>
@@ -4841,4 +4796,19 @@
   <block id="7a90fde5622dcca215688cd078d7dd01" category="list-text">適用於 Google Cloud Platform 的Cloud Volumes ONTAP 9.8 或更高版本（使用 NFS 和 CIFS 協定）</block>
   <block id="6f1c9788058344e9232a35579eac91e2" category="list-text">Amazon FSx for NetApp ONTAP （僅限 Microsoft SQL Server 工作負載）</block>
   <block id="0b115ac5b217f989a1fc7dd422161b82" category="list-title">支援的備份目標</block>
+  <block id="c1ff016c5b916007ee8f97689d0cf42d" category="paragraph"><block ref="74169e9d6aed252bcfdf8c7b3af7403c" category="inline-link-macro-rx"></block>。<block ref="2ee7cc9e20761e67f0920429cf98cc54" category="inline-link-macro-rx"></block>。<block ref="aba7d321ee8cc50f731dfdd9ecd7c01c" category="inline-link-macro-rx"></block>。（需ONTAP 9.12.1。）</block>
+  <block id="6d7ca5f3a62a8450cd1f9e559fa7f7d2" category="paragraph">請注意，如果您停止將備份分層到歸檔存儲，則任何已分層到歸檔存儲的備份文件仍將保留在該層中 - 它們不會自動移回標準層。只有新建立的磁碟區備份才會位於標準圖層。</block>
+  <block id="6fe3c37e727721914225ad76304d3726" category="list-text">使用「最大傳輸速率」選項變更指派給上傳備份到物件儲存的網路頻寬</block>
+  <block id="5b9be87b8cd311cb68b9eddc1c1d9d4b" category="paragraph">借助此功能，您可以鎖定透過SnapMirror複製到雲端的雲端快照，還可以啟用該功能來偵測勒索軟體攻擊並恢復物件儲存上快照的一致副本。此功能在 AWS、Azure、Google Cloud Platform 和StorageGRID上均支援。</block>
+  <block id="ed56c48eb3d77598d7dd71524f288c12" category="cell">備份檔案目標位置</block>
+  <block id="e6af6ec70c8f1f9b1b24a05417aae82a" category="cell">Amazon S3 Azure Blob Google Cloud NetApp StorageGRID</block>
+  <block id="31c25778a66dd9ff2087fb25f9f003e3" category="list-text">對於 AWS，您可以將備份分層儲存到 AWS _S3 Glacier_ 或 _S3 Glacier Deep Archive_ 儲存中。<block ref="da672f43205b0c90027c7dfb66aec892" category="inline-link-macro-rx"></block>。</block>
+  <block id="cf79bdcd3a75ca2aaf153bfbee77f91f" category="list-text">對於 Azure，您可以將較舊的備份分層儲存到 _Azure Archive_ 儲存體中。<block ref="378f4ee26769b0f22cf8e5c4c18a63bc" category="inline-link-macro-rx"></block>。</block>
+  <block id="55746a30fb9b4c5182484dec9b3600d3" category="list-text">您可以將資料從本機ONTAP系統備份到本機ONTAP系統或為 S3 物件儲存配置的Cloud Volumes ONTAP系統。<block ref="61d8249673309599fa2a7a8b0c67a195" category="inline-link-macro-rx"></block>。</block>
+  <block id="a99979a95e2c9dcb0b5768f80898dd11" category="cell">Amazon S3 Azure Blob Google Cloud Storage NetApp StorageGRID ONTAP S3</block>
+  <block id="5cbc97866d11e9b3160156a597fbd5bf" category="list-text">在 AWS 中，控制台可以實現<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block> 在 S3 鏟斗上。</block>
+  <block id="108d25df82fe933520bf967ad1d14b85" category="list-text">在 Azure 中，控制台使用新的或現有的資源群組，並為 Blob 容器指派儲存帳戶。主機<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block> 預設情況下。</block>
+  <block id="fc2c90af4df4de3a15611b7cf431a683" category="list-text">在 GCP 中，控制台使用具有 Google Cloud Storage 儲存桶儲存帳戶的新專案或現有專案。</block>
+  <block id="96e895b3970ec91a00e97afd2eb59250" category="list-text">在StorageGRID中，控制台使用現有的租用戶帳戶來管理 S3 儲存桶。</block>
+  <block id="836b4aa41fc8e9938df6b2350419d4f6" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block>。<block ref="bf09a0f29ffa1dc0ee63da51e58f16ef" category="inline-link-macro-rx"></block>。<block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block>。</block>
 </blocks>

@@ -34,23 +34,7 @@ summary: 您可以使用搜尋和復原功能從ONTAP備份檔案中還原磁碟
 
 
 
-ifdef::aws[]
-
-link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案儲存恢復的更多信息"]。
-
-endif::aws[]
-
-ifdef::azure[]
-
-link:prev-reference-azure-archive-storage-tiers.html["了解有關從 Azure 檔案儲存還原的詳細信息"]。
-
-endif::azure[]
-
-ifdef::gcp[]
-
-link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何從 Google 存檔儲存中恢復"]。
-
-endif::gcp[]
+link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案儲存恢復的更多信息"]。link:prev-reference-azure-archive-storage-tiers.html["了解有關從 Azure 檔案儲存還原的詳細信息"]。link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何從 Google 存檔儲存中恢復"]。
 
 [NOTE]
 ====
@@ -76,16 +60,16 @@ endif::gcp[]
 2+| 備份檔案位置 | 目的地系統 
 
 
-| *物件儲存（備份）* | *輔助系統（複製）* | ifdef::aws[] 
+| *物件儲存（備份）* | *輔助系統（複製）* |  
 
 
-| 亞馬遜 S3 | AWS 本機ONTAP系統中的Cloud Volumes ONTAP | AWS 本機ONTAP系統中的Cloud Volumes ONTAP endif::aws[] ifdef::azure[] 
+| 亞馬遜 S3 | AWS 本機ONTAP系統中的Cloud Volumes ONTAP | AWS 本機ONTAP系統中的Cloud Volumes ONTAP 
 
 
-| Azure Blob | Azure 本地端ONTAP系統中的Cloud Volumes ONTAP | Azure 中的Cloud Volumes ONTAP本地ONTAP系統 endif::azure[] ifdef::gcp[] 
+| Azure Blob | Azure 本地端ONTAP系統中的Cloud Volumes ONTAP | Azure 本地端ONTAP系統中的Cloud Volumes ONTAP 
 
 
-| Google 雲端儲存 | Google 本機ONTAP系統中的Cloud Volumes ONTAP | Google 本地ONTAP系統中的Cloud Volumes ONTAP endif::gcp[] 
+| Google 雲端儲存 | Google 本機ONTAP系統中的Cloud Volumes ONTAP | Google 本機ONTAP系統中的Cloud Volumes ONTAP 
 
 
 | NetAppStorageGRID | 本機ONTAP系統Cloud Volumes ONTAP | 本地ONTAP系統 
@@ -95,27 +79,9 @@ endif::gcp[]
 |===
 對於搜尋和還原，控制台代理可以安裝在以下位置：
 
-ifdef::aws[]
-
 * 對於 Amazon S3，控制台代理可以部署在 AWS 或您的場所
-
-
-endif::aws[]
-
-ifdef::azure[]
-
 * 對於 Azure Blob，控制台代理程式可以部署在 Azure 中或您的本機
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
 * 對於 Google Cloud Storage，控制台代理程式必須部署在您的 Google Cloud Platform VPC 中
-
-
-endif::gcp[]
-
 * 對於StorageGRID，控制台代理必須部署在您的場所；無論是否有網路存取
 * 對於ONTAP S3，控制台代理可以部署在您的場所（有或沒有網路存取）或雲端供應商環境中
 
@@ -147,8 +113,6 @@ endif::gcp[]
 
 [%collapsible]
 ====
-ifdef::aws[]
-
 * AWS 需求：
 +
 ** 必須將特定的 Amazon Athena、AWS Glue 和 AWS S3 權限新增至為控制台提供權限的使用者角色。link:prev-ontap-backup-onprem-aws.html["確保所有權限均已正確配置"]。
@@ -158,10 +122,6 @@ ifdef::aws[]
 
 
 
-
-endif::aws[]
-
-ifdef::azure[]
 
 * Azure 需求：
 +
@@ -175,10 +135,6 @@ ifdef::azure[]
 
 
 
-endif::azure[]
-
-ifdef::gcp[]
-
 * Google Cloud 需求：
 +
 ** 必須將特定的 Google BigQuery 權限新增至為NetApp Console提供權限的使用者角色。link:prev-ontap-backup-onprem-gcp.html["確保所有權限均已正確配置"]。
@@ -186,10 +142,6 @@ ifdef::gcp[]
 如果您已經使用NetApp Backup and Recovery以及您過去設定的控制台代理，現在需要將 BigQuery 權限新增至控制台使用者角色。它們是搜尋和恢復所必需的。
 
 
-
-
-
-endif::gcp[]
 
 * StorageGRID和ONTAP S3 需求：
 +
@@ -336,34 +288,15 @@ mount 10.192.24.17:/CATALOG_SCALE_234 /opt/application/netapp/cbs
 如果您選擇本機ONTAP系統，且尚未配置與物件儲存的叢集連接，系統將提示您輸入其他資訊：
 
 +
-ifdef::aws[]
-
-+
 *** 從 Amazon S3 還原時，選擇ONTAP叢集中目標磁碟區所在的 IP 空間，輸入您建立的使用者的存取金鑰和金鑰，以授予ONTAP叢集對 S3 儲存桶的存取權限，並可選擇選擇私有 VPC 端點以進行安全資料傳輸。link:prev-ontap-backup-onprem-aws.html["查看有關這些要求的詳細信息"]。
+*** 從 Azure Blob 還原時，選擇目標磁碟區所在的ONTAP叢集中的 IP 空間，並透過選擇 VNet 和子網路來選擇用於安全資料傳輸的私有端點。link:prev-ontap-backup-onprem-azure.html["查看有關這些要求的詳細信息"]。
+*** 從 Google Cloud Storage 復原時，選擇目標磁碟區所在的ONTAP叢集中的 IP 空間，以及用於存取物件儲存的存取金鑰和金鑰。link:prev-ontap-backup-onprem-gcp.html["查看有關這些要求的詳細信息"]。
+*** 從StorageGRID還原時，輸入StorageGRID伺服器的 FQDN 和ONTAP應用於與StorageGRID進行 HTTPS 通訊的端口，輸入存取物件儲存所需的存取金鑰和金鑰，以及目標磁碟區所在的ONTAP叢集中的 IP 空間。link:prev-ontap-backup-onprem-storagegrid.html["查看有關這些要求的詳細信息"]。
+*** 從ONTAP S3 還原時，輸入ONTAP S3 伺服器的 FQDN 和ONTAP應用於與ONTAP S3 進行 HTTPS 通訊的端口，選擇存取物件儲存所需的存取金鑰和金鑰，以及目標磁碟區所在的ONTAP叢集中的 IP 空間。link:prev-ontap-backup-onprem-ontaps3.html["查看有關這些要求的詳細信息"]。
 
 
 
 
-
-
-endif::aws[]
-
-ifdef::azure[]
-
-* 從 Azure Blob 還原時，選擇目標磁碟區所在的ONTAP叢集中的 IP 空間，並透過選擇 VNet 和子網路來選擇用於安全資料傳輸的私有端點。link:prev-ontap-backup-onprem-azure.html["查看有關這些要求的詳細信息"]。
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
-* 從 Google Cloud Storage 復原時，選擇目標磁碟區所在的ONTAP叢集中的 IP 空間，以及用於存取物件儲存的存取金鑰和金鑰。link:prev-ontap-backup-onprem-gcp.html["查看有關這些要求的詳細信息"]。
-
-
-endif::gcp[]
-
-* 從StorageGRID還原時，輸入StorageGRID伺服器的 FQDN 和ONTAP應用於與StorageGRID進行 HTTPS 通訊的端口，輸入存取物件儲存所需的存取金鑰和金鑰，以及目標磁碟區所在的ONTAP叢集中的 IP 空間。link:prev-ontap-backup-onprem-storagegrid.html["查看有關這些要求的詳細信息"]。
-* 從ONTAP S3 還原時，輸入ONTAP S3 伺服器的 FQDN 和ONTAP應用於與ONTAP S3 進行 HTTPS 通訊的端口，選擇存取物件儲存所需的存取金鑰和金鑰，以及目標磁碟區所在的ONTAP叢集中的 IP 空間。link:prev-ontap-backup-onprem-ontaps3.html["查看有關這些要求的詳細信息"]。
 
 
 .結果

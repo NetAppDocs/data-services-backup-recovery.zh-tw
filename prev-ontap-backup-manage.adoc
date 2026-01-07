@@ -236,27 +236,12 @@ NOTE: 資料保護卷不支援按需卷備份。
 如果您的叢集運行的是ONTAP 9.10.1 或更高版本，您也可以選擇在一定天數後啟用或停用備份分層到檔案儲存。
 
 +
-ifdef::aws[]
+link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔案儲存的更多信息"]。link:prev-reference-azure-archive-storage-tiers.html["了解有關使用 Azure 檔案儲存的詳細信息"]。link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何使用 Google 歸檔存儲"]。（需ONTAP 9.12.1。）
+
++
+請注意，如果您停止將備份分層到歸檔存儲，則任何已分層到歸檔存儲的備份文件仍將保留在該層中 - 它們不會自動移回標準層。只有新建立的磁碟區備份才會位於標準圖層。
 
 
-
-link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔案儲存的更多信息"]。
-
-endif::aws[]
-
-ifdef::azure[]
-
-link:prev-reference-azure-archive-storage-tiers.html["了解有關使用 Azure 檔案儲存的詳細信息"]。
-
-endif::azure[]
-
-ifdef::gcp[]
-
-link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何使用 Google 歸檔存儲"]。（需ONTAP 9.12.1。）
-
-endif::gcp[]
-
-+ 請注意，如果您停止將備份分層到存檔，則任何已分層到存檔儲存的備份檔案都會留在該層中 - 它們不會自動移回標準層。只有新的磁碟區備份才會駐留在標準層。
 
 
 
@@ -282,25 +267,9 @@ endif::gcp[]
 如果您的叢集運行的是ONTAP 9.10.1 或更高版本，您也可以選擇在一定天數後啟用或停用備份分層到檔案儲存。
 
 +
-ifdef::aws[]
+link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔案儲存的更多信息"]。link:prev-reference-azure-archive-storage-tiers.html["了解有關使用 Azure 檔案儲存的詳細信息"]。link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何使用 Google 歸檔存儲"]。（需ONTAP 9.12.1。）
 
 
-
-link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔案儲存的更多信息"]。
-
-endif::aws[]
-
-ifdef::azure[]
-
-link:prev-reference-azure-archive-storage-tiers.html["了解有關使用 Azure 檔案儲存的詳細信息"]。
-
-endif::azure[]
-
-ifdef::gcp[]
-
-link:prev-reference-gcp-archive-storage-tiers.html["詳細了解如何使用 Google 歸檔存儲"]。（需ONTAP 9.12.1。）
-
-endif::gcp[]
 
 
 

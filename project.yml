@@ -9,19 +9,6 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   rss_page: whats-new.html
-  filter:
-    label: 雲端提供者
-    default: 所有雲端提供者
-    options:
-    - name: 亞馬遜網路服務
-      alias: AWS
-      id: aws
-    - name: Google雲
-      alias: Google雲
-      id: gcp
-    - name: 微軟 Azure
-      alias: Azure
-      id: azure
   langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
 sidebar:
   entries:

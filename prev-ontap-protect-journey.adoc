@@ -257,19 +257,9 @@ https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解有�
 
 NetApp Backup and Recovery可用於網際網路連線受限的網站（也稱為「受限模式」）來備份磁碟區資料。在這種情況下，您需要在目標雲端區域部署控制台代理程式。
 
-ifdef::aws[]
-
 * 您可以將資料從本機ONTAP系統或安裝在 AWS 商業區域的Cloud Volumes ONTAP系統備份到 Amazon S3。link:prev-ontap-backup-cvo-aws.html["將Cloud Volumes ONTAP資料備份到 Amazon S3"]。
-
-
-endif::aws[]
-
-ifdef::azure[]
-
 * 您可以將資料從本機ONTAP系統或安裝在 Azure 商業區域中的Cloud Volumes ONTAP系統備份到 Azure Blob。link:prev-ontap-backup-cvo-azure.html["將Cloud Volumes ONTAP資料備份到 Azure Blob"]。
 
-
-endif::azure[]
 
 
 
@@ -281,11 +271,5 @@ NetApp Backup and Recovery可用於沒有網路連線的網站（也稱為_私�
 NOTE: BlueXP私有模式（傳統BlueXP介面）通常用於沒有網路連線的本機環境和安全雲端區域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。NetApp繼續透過傳統的BlueXP介面支援這些環境。有關舊版BlueXP介面中的私人模式文檔，請參閱 https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXP私人模式的 PDF 文檔"]。
 
 * 您可以將資料從本機ONTAP系統備份到本機NetApp StorageGRID系統。link:prev-ontap-backup-onprem-storagegrid.html["將本地ONTAP資料備份到StorageGRID"]。
-* 您可以將資料從本機ONTAP系統備份到本機ONTAP系統或為 S3 物件儲存配置的Cloud Volumes ONTAP系統。link:prev-ontap-backup-onprem-ontaps3.html["將本地ONTAP資料備份到ONTAP S3"] .ifdef::aws[]
+* 您可以將資料從本機ONTAP系統備份到本機ONTAP系統或為 S3 物件儲存配置的Cloud Volumes ONTAP系統。link:prev-ontap-backup-onprem-ontaps3.html["將本地ONTAP資料備份到ONTAP S3"]。
 
-
-endif::aws[]
-
-ifdef::azure[]
-
-endif::azure[]
