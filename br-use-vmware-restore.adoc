@@ -91,8 +91,8 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 
 
 
-. 選擇“下一步”。
-. 選擇目標設定以及恢復前和恢復後選項。
+. 選擇“下一步”繼續。
+. 選擇恢復目標位置和設定：
 
 
 [discrete]
