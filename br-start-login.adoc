@@ -34,8 +34,8 @@ NetApp Backup and Recovery使用身分和存取管理來控制每個使用者可
 . 登入控制台。
 . 從控制台左側導覽中，選擇*保護*>*備份和還原*。
 +
-** 如果這是您第一次登入“備份和還原”，並且尚未將系統新增至“*系統*”頁面，則“備份和還原”將顯示“歡迎使用新的NetApp Backup and Recovery”登入頁面並提供新增系統的選項。有關將系統添加到*系統*頁面的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Console標準模式入門"^]。
-** 如果這是您第一次登入“備份和復原”，並且已經將系統新增至“*系統*”頁面，但尚未發現任何資源，則會出現“歡迎使用新的NetApp Backup and Recovery”登入頁面並顯示“*發現資源*”選項。
+** 如果您是第一次登入備份和恢復，並且尚未將系統新增至「系統」頁面，則備份和恢復將顯示「歡迎使用新的NetApp Backup and Recovery」登入頁面，並提供新增系統的選項。有關向“系統”頁面添加系統的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Console標準模式入門"^]。
+** 如果您是第一次登入備份和恢復，並且在控制台中有一個系統但沒有發現任何資源，則會顯示「歡迎使用新的NetApp備份和恢復」頁面，其中包含「發現資源」選項。
 
 
 . 如果您還沒有這樣做，請選擇*發現和管理*選項。

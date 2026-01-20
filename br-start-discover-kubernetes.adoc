@@ -27,7 +27,7 @@ NetApp Backup and Recovery需要在保護 Kubernetes 工作負載之前發現它
 .步驟
 . 執行下列操作之一：
 +
-** 如果您是第一次發現 Kubernetes 工作負載，請在NetApp Backup and Recovery中選擇 Kubernetes 工作負載類型下的 *Discover and Manage*。
+** 如果您是第一次發現 Kubernetes 工作負載，請在NetApp Backup and Recovery中，在「工作負載」下，選擇「Kubernetes」磁貼。
 ** 如果您已經發現 Kubernetes 工作負載，請在NetApp Backup and Recovery中選擇 *Inventory* > *Workloads*，然後選擇 *Discover resources*。
 
 

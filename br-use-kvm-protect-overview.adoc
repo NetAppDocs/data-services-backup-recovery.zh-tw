@@ -14,7 +14,7 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 
 
 [role="lead"]
-使用NetApp Backup and Recovery保護您的 KVM VM 和儲存池。  NetApp Backup and Recovery提供快速、節省空間、崩潰一致和 VM 一致的備份和復原作業。
+使用NetApp Backup and Recovery保護您的託管 KVM 虛擬機器和儲存池。NetApp Backup and Recovery提供快速、節省空間、崩潰一致性和 VM 一致性的備份和復原作業。在使用備份和復原功能保護 KVM 主機和虛擬機器之前，必須先使用 Apache CloudStack 等管理平台來管理它們。
 
 您可以將 KVM 工作負載備份到 Amazon Web Services S3、 Azure NetApp Files或StorageGRID ，並將 KVM 工作負載還原到本機 KVM 主機。
 

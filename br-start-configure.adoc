@@ -16,9 +16,10 @@ summary: 完成幾個步驟來設定NetApp Backup and Recovery。
 [role="lead"]
 設定NetApp Console後，配置備份和復原設定。新增主機資源的憑證、匯入SnapCenter資源、設定日誌目錄以及設定 VMware vCenter 設定。在備份或還原資料之前完成這些步驟。
 
-* <<為主機資源新增憑證>>對於從SnapCenter匯入的 Windows 和 SQL Server 主機並新增憑證。  （僅限 Microsoft SQL Server 工作負載）
+* <<為主機資源新增憑證>> 適用於NetApp Backup and Recovery需要進行驗證的任何 Windows、Microsoft SQL Server、Oracle Database 或 Linux 主機。這包括恢復訪客檔案或資料夾時使用的 Windows 訪客作業系統憑證。
 * <<維護 VMware vCenter 設定>>。
 * <<匯入並管理SnapCenter主機資源>>。（僅限 Microsoft SQL Server 工作負載）
+* <<新增 KVM 管理平台>>。（僅限 KVM 工作負載）
 * <<在 Windows 主機的快照中設定日誌目錄>>。
 
 
@@ -28,7 +29,7 @@ summary: 完成幾個步驟來設定NetApp Backup and Recovery。
 
 == 為主機資源新增憑證
 
-新增要從SnapCenter匯入的主機資源的憑證。  NetApp Backup and Recovery使用這些憑證來發現工作負載並套用備份策略。
+新增主機資源憑證。NetApp Backup and Recovery使用這些憑證來發現工作負載並套用備份策略。
 
 如果您沒有憑證，請建立具有存取和管理主機工作負載的權限的憑證。
 
@@ -36,33 +37,76 @@ summary: 完成幾個步驟來設定NetApp Backup and Recovery。
 
 * Microsoft SQL Server 憑證
 * SnapCenter Windows 主機憑證
+* 復原用戶端檔案或資料夾時所使用的 Windows 用戶端作業系統憑證
+* Oracle 資料庫憑證
+* Linux 主機憑證
 
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *設定*。
 . 選擇“*憑證*”的向下箭頭。
 . 選擇*新增憑證*。
-. 輸入憑證資料。根據您選擇的身份驗證模式，會出現不同的欄位。選擇資訊 *i* 以取得有關欄位的更多資訊。
+. 請輸入登入憑證資訊。根據您選擇的身份驗證模式，會顯示不同的欄位。將滑鼠懸停在資訊 *i* 圖示上，以查看有關欄位的更多資訊。
 +
 ** *憑證名稱*：輸入憑證的名稱。
-** *驗證模式*：選擇*Windows*或*Microsoft SQL*。
+** *驗證模式*：選擇 *Windows*、*Microsoft SQL*、*Oracle Database* 或 *Linux*。
 +
 
-TIP: 您需要輸入 Windows 和 Microsoft SQL Server 的憑證，因此您需要新增兩組憑證。
+TIP: 對於 Microsoft SQL Server 工作負載，您需要輸入 Windows 和 Microsoft SQL Server 的憑證，因此您需要新增兩組憑證。
 
-
-
-. 如果您選擇了 *Windows*：
 +
-** *控制台代理*：輸入控制台代理 IP 位址。
-** *網域和使用者名稱*：輸入憑證的 NetBIOS 或網域 FQDN 和使用者名稱。
-** *密碼*：輸入憑證的密碼。
-
-
-. 如果您選擇了「Microsoft SQL」：
+[role="tabbed-block"]
+====
+.視窗
+--
+... 如果您選擇了 *Windows*：
 +
-** *主機*：選擇發現的 SQL Server 主機位址。
-** *SQL Server 執行個體*：選擇已發現的 SQL Server 執行個體。
+**** *代理*：從清單中選擇一個控制台代理。
+**** *網域和使用者名稱*：輸入憑證的 NetBIOS 或網域 FQDN 和使用者名稱。
+**** *密碼*：輸入憑證的密碼。
+
+
+
+
+--
+.微軟 SQL 伺服器
+--
+... 如果您選擇了 *Microsoft SQL Server*：
++
+**** *網域和使用者名稱*：輸入憑證的 NetBIOS 或網域 FQDN 和使用者名稱。
+**** *密碼*：輸入憑證的密碼。
+**** *主機*：選擇已發現的 SQL Server 主機位址。
+**** *SQL Server 執行個體*：選擇已發現的 SQL Server 執行個體。
+
+
+
+
+--
+.Oracle 資料庫
+--
+... 如果您選擇了*Oracle資料庫*：
++
+**** *代理*：從清單中選擇一個控制台代理。
+**** *使用者名稱*：請輸入用於登入憑證的使用者名稱。
+**** *密碼*：輸入憑證的密碼。
+
+
+
+
+--
+.Linux
+--
+... 如果您選擇了 *Linux*：
++
+**** *代理*：從清單中選擇一個控制台代理。
+**** *使用者名稱*：請輸入用於登入憑證的使用者名稱。
+**** *密碼*：輸入憑證的密碼。
+
+
+
+
+--
+====
 
 
 . 選擇“*新增*”。
@@ -72,7 +116,7 @@ TIP: 您需要輸入 Windows 和 Microsoft SQL Server 的憑證，因此您需�
 
 === 編輯主機資源的憑證
 
-您稍後可以編輯從SnapCenter匯入的主機資源的密碼。
+您之後可以編輯您建立的任何憑證的密碼。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *設定*。
@@ -187,6 +231,28 @@ NOTE: 如果SnapCenter伺服器已註冊，您可以更新現有的註冊詳細�
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *編輯*以更新資源。
 . 根據需要更新SnapCenter密碼和連接埠詳細資訊。
 . 選擇*導入*。
+
+
+
+
+== 新增 KVM 管理平台
+
+如果您使用 Apache CloudStack 管理平台來管理 KVM 資源，則需要將其與NetApp Backup and Recovery集成，以便 Backup and Recovery 可以發現和保護受管 KVM 主機和虛擬機器。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *設定*。
+. 選擇向下箭頭展開「管理平台」部分。
+. 選擇「新增管理平台憑證」。
+. 輸入以下資訊：
++
+** *管理平台 IP 位址或 FQDN*：輸入管理平台的 IP 位址或完全限定網域名稱。
+** *API金鑰*：輸入用於驗證API請求的API金鑰。
+** *金鑰*：輸入用於驗證 API 請求的金鑰。
+** *連接埠*：輸入備份和還原與管理平台之間通訊所使用的連接埠。
+** *代理*：選擇一個控制台代理，用於促進備份和還原與管理平台之間的通訊。
+
+
+. 完成後，選擇“新增”。
 
 
 

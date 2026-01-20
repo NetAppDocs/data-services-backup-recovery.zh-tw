@@ -348,7 +348,6 @@
   <block id="57a114780f98fd4bb0b06506b0ca9577" category="paragraph">NetApp Backup and Recovery中的 Hyper-V 工作負載的私人預覽版不支援以下操作：</block>
   <block id="5ae6a8a06c30125d00a57910609856cf" category="list-text">跨磁碟（跨多個 CIFS 共用）</block>
   <block id="5cb642b37b3102019402cbd3b93a5693" category="list-text">透過 SAN 保護虛擬機</block>
-  <block id="0fffe3f2fb1497b9e344ba8dceac922b" category="list-text">保護使用 System Center Virtual Machine Manager (SCVMM) 叢集的 Hyper-V 主機</block>
   <block id="4a03732927298c2d8d1492b3d08bb831" category="summary">此版本的NetApp Backup and Recovery具有以下已知限制。</block>
   <block id="5050c99de0a6e1bcf02e7ce66edabd97" category="doc">NetApp Backup and Recovery針對 KVM 工作負載的已知限制</block>
   <block id="448a90c8bbb9415c292cb0e585249a04" category="paragraph">NetApp Backup and Recovery中的 KVM 工作負載的私人預覽版不支援以下操作和設定：</block>
@@ -492,7 +491,6 @@
   <block id="aa02d2a98a082cacd35a10457e954436" category="doc">配置NetApp Backup and Recovery設置</block>
   <block id="5095bcec3e4370bbbc8bf8d7b47623c5" category="paragraph">設定NetApp Console後，配置備份和復原設定。新增主機資源的憑證、匯入SnapCenter資源、設定日誌目錄以及設定 VMware vCenter 設定。在備份或還原資料之前完成這些步驟。</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-xref"></block>
-  <block id="703c7afa8428dbb84a57f0e06749affb" category="list-text"><block ref="473bc5f1f9d293596a6cf3f7d880fe14" category="inline-xref-macro-rx"></block>對於從SnapCenter匯入的 Windows 和 SQL Server 主機並新增憑證。  （僅限 Microsoft SQL Server 工作負載）</block>
   <block id="07ede38140c5a0a6207121bf4f4767ef" category="list-text"><block ref="018d9e0f2fecc03b7f691fcb7f4f3055" category="inline-xref-macro-rx"></block>。</block>
   <block id="7913d727f9f60b520b623b3eb18a233d" category="list-text"><block ref="cc46040cc8e081b4419d0d89a46ecf93" category="inline-xref-macro-rx"></block>。（僅限 Microsoft SQL Server 工作負載）</block>
   <block id="d64cd0a27b28c206184fce8cc1e3a57f" category="list-text"><block ref="6b0c6b1a663fb4e7f1c7e667f6d83b77" category="inline-xref-macro-rx"></block>。</block>
@@ -500,7 +498,6 @@
   <block id="a5999c1155de9850d34ba60075be7171" category="inline-link">了解所有服務的NetApp Console存取角色</block>
   <block id="7dea1900c0a761205245e3263e1f1ebf" category="paragraph">*所需的NetApp Console角色* 備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="5c42b26269b60e99eac73f94a3585743" category="section-title">為主機資源新增憑證</block>
-  <block id="b65c7169cf8702ef1805f781de02bc69" category="paragraph">新增要從SnapCenter匯入的主機資源的憑證。  NetApp Backup and Recovery使用這些憑證來發現工作負載並套用備份策略。</block>
   <block id="c353deca6689f7e632a94f8d6f03f7ca" category="paragraph">如果您沒有憑證，請建立具有存取和管理主機工作負載的權限的憑證。</block>
   <block id="aedf3a488773fb9c60ee19cf684d0005" category="paragraph">您需要配置以下類型的憑證：</block>
   <block id="33597ea687793f3f614f3518b3d90ac4" category="list-text">Microsoft SQL Server 憑證</block>
@@ -508,20 +505,13 @@
   <block id="17fe4bc22a2a4e1640f40d1beb8728a8" category="list-text">從NetApp Backup and Recovery選單中，選擇 *設定*。</block>
   <block id="8437578ff6b68a46b9b27c74acdd6234" category="list-text">選擇“*憑證*”的向下箭頭。</block>
   <block id="83476bbdd229501eeabb850858a4024b" category="list-text">選擇*新增憑證*。</block>
-  <block id="1bedb2e0bc3060fea77e1dad6a206303" category="list-text">輸入憑證資料。根據您選擇的身份驗證模式，會出現不同的欄位。選擇資訊 *i* 以取得有關欄位的更多資訊。</block>
   <block id="009f47a3a44b93b6e8f3fe67db56cd8f" category="list-text">*憑證名稱*：輸入憑證的名稱。</block>
-  <block id="f3ed99da624b2f7878545820c05d42e5" category="list-text">*驗證模式*：選擇*Windows*或*Microsoft SQL*。</block>
-  <block id="de0578e6c3169b9a708c027941fd6217" category="admonition">您需要輸入 Windows 和 Microsoft SQL Server 的憑證，因此您需要新增兩組憑證。</block>
   <block id="ed6d922dadb294d54c3c4f844391207a" category="list-text">如果您選擇了 *Windows*：</block>
-  <block id="71c9fbfbc0367795ed316f4712cbbed6" category="list-text">*控制台代理*：輸入控制台代理 IP 位址。</block>
   <block id="89311de32f3a0314b08d05b9a13f35f6" category="list-text">*網域和使用者名稱*：輸入憑證的 NetBIOS 或網域 FQDN 和使用者名稱。</block>
   <block id="125391fb56ddee7b099041397ad56b37" category="list-text">*密碼*：輸入憑證的密碼。</block>
-  <block id="077032acd9dcd0fd78e046ae0752ee63" category="list-text">如果您選擇了「Microsoft SQL」：</block>
-  <block id="8db59c71868ea9a3a81d318f9b4c3078" category="list-text">*主機*：選擇發現的 SQL Server 主機位址。</block>
   <block id="b4edde7cbb09cfc80c7462166ca765c3" category="list-text">*SQL Server 執行個體*：選擇已發現的 SQL Server 執行個體。</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">選擇“*新增*”。</block>
   <block id="d67ce54df78cb91f71855151c15ee454" category="section-title">編輯主機資源的憑證</block>
-  <block id="d9ac15a6366f5d06e30d9e29eb6ecb31" category="paragraph">您稍後可以編輯從SnapCenter匯入的主機資源的密碼。</block>
   <block id="417df0a576ca3f73f1672955493c1371" category="list-text">選擇向下箭頭以展開“*Credentials*”部分。</block>
   <block id="dab40747af7b8b39dcb8cf68acb4f53e" category="inline-image-macro">操作選項</block>
   <block id="7c60bb16141be5fd1d4d7893307168fa" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *編輯憑證*。</block>
@@ -676,7 +666,6 @@
   <block id="f0338e38e7978ec30d1f5eb9b845e843" category="section-title">發現 Kubernetes 工作負載</block>
   <block id="a74bdf5d9abca25c000c1902f13999c8" category="paragraph">在備份和復原清單中，發現您環境中的 Kubernetes 工作負載。新增工作負載會將 Kubernetes 叢集新增至NetApp Backup and Recovery。然後，您可以新增應用程式並保護叢集資源。</block>
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">執行下列操作之一：</block>
-  <block id="c18324e4a97bb333a32ac23c81d62389" category="list-text">如果您是第一次發現 Kubernetes 工作負載，請在NetApp Backup and Recovery中選擇 Kubernetes 工作負載類型下的 *Discover and Manage*。</block>
   <block id="6226950d1b144f972ce9b5d3caea9b42" category="list-text">如果您已經發現 Kubernetes 工作負載，請在NetApp Backup and Recovery中選擇 *Inventory* &gt; *Workloads*，然後選擇 *Discover resources*。</block>
   <block id="e7c444e4a1d2f156d71a907145c8a598" category="list-text">選擇 *Kubernetes* 工作負載類型。</block>
   <block id="96c35fcba67cbf6710845bcca4668cc2" category="list-text">輸入叢集名稱並選擇與叢集一起使用的連接器。</block>
@@ -694,22 +683,14 @@
   <block id="d5292ed1370bb405095587cd10827f95" category="paragraph"><block ref="2a35d34f81dbac907e6068b45b5d538a" category="inline-link-macro-rx"></block>。</block>
   <block id="a8d8543f27c131c1d9b3ca0cf9f1f4ea" category="summary">NetApp Backup and Recovery需要先發現工作負載，以便您保護它們。</block>
   <block id="53b57e71ade6f566bc9a40b2d755856b" category="doc">發現NetApp Backup and Recovery中的 KVM 工作負載</block>
-  <block id="da99ef1e3a4655762878849b958b6339" category="paragraph">NetApp Backup and Recovery需要在保護 KVM 主機和虛擬機器之前發現它們。</block>
-  <block id="3f65dc3e5d8703153e9361635518dbf8" category="section-title">新增 KVM 主機並發現資源</block>
-  <block id="9c76ba797da429be427b4f5c78dbaf5b" category="paragraph">新增 KVM 主機資訊並讓NetApp Backup and Recovery發現工作負載。在每個控制台代理程式中，選擇您想要發現工作負載的系統。</block>
   <block id="eb843ea9168f30f329148ea12f95519f" category="list-text">從NetApp Console選單中，選擇「保護」&gt;「備份和復原」。</block>
   <block id="acaaf9de0e4071fe117da04dbbe9565d" category="list-text">在 KVM 圖塊中，選擇 *發現和管理*。</block>
-  <block id="1ab8ba690be124cf719dc3ecd310a339" category="paragraph">如果這是您第一次登入備份和恢復，且控制台中已經有一個系統，但尚未發現任何資源，則會出現「歡迎使用新的NetApp Backup and Recovery」登入頁面並顯示*發現資源*選項。</block>
   <block id="12d8eeba7e97739f6035cbec50bd2369" category="list-text">*工作負載類型*：選擇*KVM*。</block>
-  <block id="893154d2bbfb66474661f9a0545a1144" category="list-text">如果您尚未儲存此 KVM 主機的憑證，請選擇「新增憑證」。</block>
-  <block id="4eefc3e53a1cd35eca7d32b6b2c550f5" category="list-text">選擇使用根憑證或非根憑證。</block>
-  <block id="87f459dd6c99dc89040246d5ef818100" category="list-text">*主機註冊*：新增的 KVM 主機。輸入主機的 FQDN 或 IP 位址、憑證、控制台代理程式和連接埠號碼。</block>
   <block id="238fb750ebdea9faf36668536aaa8b42" category="paragraph">KVM 工作負載顯示在「庫存」頁面的工作負載清單中。</block>
   <block id="0a6dc8ac33152480a18098d8eb98ccb6" category="doc">發現NetApp Backup and Recovery中的 Oracle 工作負載</block>
   <block id="945f74309f719db5d0fb0d1bb5a31781" category="paragraph">NetApp Backup and Recovery需要先發現您的 Oracle 資料庫，以便您可以保護它們。</block>
   <block id="bf36d800e1bbaf0ef44cd361867e4e09" category="section-title">新增 Oracle 主機並發現資源</block>
   <block id="8160dc72c9473d18119ea3e52fe65572" category="paragraph">新增 Oracle 主機資訊並讓NetApp Backup and Recovery發現工作負載。在每個控制台代理程式中，選擇您想要發現工作負載的系統。</block>
-  <block id="83cc971ca0082d369a50f141f24d0974" category="list-text">在 Oracle 圖塊中，選擇 *發現與管理*。</block>
   <block id="bdd8003feffb3131de98b744d8d7e952" category="list-text">*工作負載類型*：選擇*Oracle*。</block>
   <block id="c758c27facd2d09f2ccc8fc60719f412" category="list-text">如果您尚未儲存此 Oracle 主機的憑證，請選擇「新增憑證」。</block>
   <block id="8bd91057b53c6035123596e5f2ba38ab" category="list-text">*主機註冊*：新增的 Oracle 主機。輸入主機的 FQDN 或 IP 位址、憑證、控制台代理程式和連接埠號碼。</block>
@@ -845,8 +826,6 @@
   <block id="0daac1b9cd4c3a240bf2f6b44ba178a1" category="paragraph">出現NetApp Console登入頁面。</block>
   <block id="4a43cddfeeabba4570c14c252dec0bd1" category="list-text">登入控制台。</block>
   <block id="4d2b18ba50dc1294ccb141fdc1041417" category="inline-link">NetApp Console標準模式入門</block>
-  <block id="2bee1e2711d556b1f1494117c663c95e" category="list-text">如果這是您第一次登入“備份和還原”，並且尚未將系統新增至“*系統*”頁面，則“備份和還原”將顯示“歡迎使用新的NetApp Backup and Recovery”登入頁面並提供新增系統的選項。有關將系統添加到*系統*頁面的詳細信息，請參閱<block ref="296443cffec903f0b2ef92c8eb1c49ba" category="inline-link-rx"></block>。</block>
-  <block id="22a84448d7c89870b25df89f9ffb2aea" category="list-text">如果這是您第一次登入“備份和復原”，並且已經將系統新增至“*系統*”頁面，但尚未發現任何資源，則會出現“歡迎使用新的NetApp Backup and Recovery”登入頁面並顯示“*發現資源*”選項。</block>
   <block id="bbad9a213d5f66b0be7b3560016ee386" category="list-text">如果您還沒有這樣做，請選擇*發現和管理*選項。</block>
   <block id="9caabb5d3f96fc2ff6ec322a90fc5dd7" category="inline-link-macro">發現 Microsoft SQL Server 工作負載</block>
   <block id="78ee359d959f46c3e9be3e03df6414b7" category="list-text">有關 Microsoft SQL Server 工作負載，請參閱<block ref="2ccdda391ff5985cd5dd52b5e1ae8139" category="inline-link-macro-rx"></block>。</block>
@@ -950,7 +929,6 @@
   <block id="85ec80b493e6765547d2b4489252b82e" category="list-text">選擇計劃層級。</block>
   <block id="ff4d762e1ab6dd75731a4f97e66ec902" category="list-text">選擇*備份*。</block>
   <block id="4efc134fd5130564588a4806f9c977f0" category="summary">您可以保護 Hyper-V 虛擬機，從本機ONTAP系統到主儲存和二級存儲，確保您的資料受到保護。</block>
-  <block id="997367baf18d147848dcf07ba10d7d8d" category="paragraph">使用NetApp Backup and Recovery保護您的 Hyper-V VM。  NetApp Backup and Recovery為獨立實例和 FCI 叢集實例提供快速、節省空間、崩潰一致和 VM 一致的備份和復原作業。</block>
   <block id="9772979b1b90e72fc3981d222d55243a" category="paragraph">您可以將 Hyper-V 工作負載備份到 Amazon Web Services S3 或StorageGRID ，並將 Hyper-V 工作負載還原為本機 Hyper-V 主機。</block>
   <block id="b7bf580752a61d71227184a60f0fbfd3" category="paragraph">使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：</block>
   <block id="79c28420811a3b277df19fdd38cd10e0" category="list-text">多種媒體類型可確保在一種媒體類型發生實體或邏輯故障時能夠進行故障轉移。</block>
@@ -1001,7 +979,6 @@
   <block id="68976f4a60a7e436e5b5aff0b5dabf41" category="paragraph">恢復工作負載時，會發生以下情況：</block>
   <block id="3850249b64193fae9627627088cec7a4" category="list-text">當您從本機備份檔案還原工作負載時， NetApp Backup and Recovery and Recovery會使用備份中的資料建立一個_新_資源。</block>
   <block id="b0ea04995bb7a05b4310a459f5315a78" category="list-text">從複製的工作負載復原時，您可以將工作負載還原到原始系統或本機ONTAP系統。</block>
-  <block id="0f4570eee3ca580a8c827d191240eb2b" category="paragraph">從「恢復」頁面（也稱為「搜尋和恢復」）*，您可以恢復資源，即使您不記得確切的名稱、它所在的位置或它最後處於良好狀態的日期。您可以使用過濾器搜尋快照。</block>
   <block id="4967eb3bddc1aeeafa7fa83be9252bb4" category="section-title">從恢復選項恢復工作負載資料（搜尋和恢復）</block>
   <block id="ef14b6cabf130697cc9bf71b74faf58b" category="paragraph">使用復原選項恢復 Hyper-V 工作負載。您可以按名稱或使用篩選器來搜尋快照。</block>
   <block id="d1e52fcdb63677c060eb2093a79135fe" category="paragraph">*所需的控制台角色* 備份和還原超級管理員或備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
@@ -1054,7 +1031,6 @@
   <block id="439c49409f66b996051132e75cb733a9" category="list-text">選擇要備份的保護組。</block>
   <block id="b6ae737eccbf79159084e585ff9b8d6d" category="admonition">應用於備份的策略與指派給保護組的策略相同。</block>
   <block id="83eee0f9c4eb954285e6843ba724717c" category="summary">您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID 的KVM 虛擬機，確保您的資料受到保護。</block>
-  <block id="b50d1c66e5cefa8210e3dfae785f5c80" category="paragraph">使用NetApp Backup and Recovery保護您的 KVM VM 和儲存池。  NetApp Backup and Recovery提供快速、節省空間、崩潰一致和 VM 一致的備份和復原作業。</block>
   <block id="da432308eb7dd348eae3f93d7993654d" category="paragraph">您可以將 KVM 工作負載備份到 Amazon Web Services S3、 Azure NetApp Files或StorageGRID ，並將 KVM 工作負載還原到本機 KVM 主機。</block>
   <block id="4e5ffc8b9d57dca3872ba7f107e09b39" category="paragraph">您可以使用NetApp Backup and Recovery執行與 KVM 工作負載相關的下列任務：</block>
   <block id="6343f6c391fb966ad325d76211a59524" category="list-text"><block ref="6343f6c391fb966ad325d76211a59524" category="inline-link-macro-rx"></block></block>
@@ -1698,7 +1674,6 @@
   <block id="73a43948bd7a3f1ff765863e2f49aceb" category="list-text">*最大傳輸速率*：若不設定頻寬使用限制，請選擇*無限制*。如果要限制傳輸速率，請選擇*限制*，並選擇指派給將備份上傳到物件儲存的 1 到 1,000 Mbps 之間的網路頻寬。預設情況下， ONTAP可以使用無限量的頻寬將備份資料從系統中的磁碟區傳輸到物件儲存。如果您注意到備份流量影響了正常的使用者工作負載，請考慮減少傳輸過程中使用的網路頻寬量。</block>
   <block id="1d9dcd5641a380621da1bad708aac2df" category="list-text">*備份重試*：（不適用於 VMware 工作負載）若要在發生故障或中斷時重試作業，請選擇*啟用故障期間的作業重試*。輸入快照和備份作業重試的最大次數以及重試時間間隔。重新計票數必須少於 10。如果您想要確保在發生故障或中斷時重試備份作業，此設定很有用。</block>
   <block id="ebc38593846bd56262189cdea41159c0" category="admonition">如果快照頻率設定為 1 小時，則最大延遲以及重試次數不應超過 45 分鐘。</block>
-  <block id="d3e01ad5d4c898032205d39244a2e9c6" category="list-text">*啟用 VM 一致性快照*：（僅適用於 VMware 工作負載）選擇是否要啟用 VM 一致性快照。這樣可以確保新建立的快照與快照時虛擬機器的狀態一致。這對於確保備份能夠成功復原並且資料處於一致狀態很有用。這不適用於現有快照。</block>
   <block id="febcf1de845ae5c111f7fe2fdf9a0023" category="list-text">*勒索軟體掃描*：選擇是否要在每個儲存桶上啟用勒索軟體掃描。這需要對物件儲存進行 DataLock 鎖定。輸入掃描頻率（以天為單位）。此選項適用於 AWS 和 Microsoft Azure 物件儲存。請注意，此選項可能會產生額外費用，具體取決於雲端提供者。</block>
   <block id="a276106fc685cb5d2acecf05047b555c" category="list-text">*備份驗證*：（不適用於 VMware 工作負載）選擇是否要啟用備份驗證以及是否立即或稍後進行。此功能可確保備份有效並可成功復原。我們建議您啟用此選項以確保備份的完整性。預設情況下，如果配置了輔助存儲，則備份驗證從輔助存儲運行。如果未配置輔助存儲，則備份驗證從主存儲運行。</block>
   <block id="5c9b86ff3ed09d60fd7e04707b95622a" category="paragraph">此外，配置以下選項：</block>
@@ -2122,7 +2097,6 @@
   <block id="82ede2f1cf5c1f154c5f0ccbd08838b2" category="section-title">保護 KVM 工作負載的要求</block>
   <block id="64bef292bab71a21d8b1fdfdc5e220aa" category="paragraph">您需要特定的要求來發現和保護 KVM 虛擬機器。</block>
   <block id="0e41245837200bd6043f82d33b20190c" category="list-text">運行核心版本 5.14.0-503.22.1.el9_5.x86_64（長期）或更高版本的現代 Linux 發行版</block>
-  <block id="981e418f547641ce3452aca04dd38475" category="list-text">確保允許從控制台代理到 KVM 主機的連接埠 22 的入站流量</block>
   <block id="c970c11004fdd5ce2f1cc065c0a6ad6b" category="list-text">QEMU Guest Agent 版本 9.0.0 或更高版本</block>
   <block id="1264706b848dd57765cb327cb40961af" category="list-text">libvirt 版本 10.5.0 或更高版本</block>
   <block id="a006e7e12c4a49555c6da7767f1640f2" category="section-title">保護 Oracle 工作負載的要求</block>
@@ -2295,7 +2269,6 @@
   <block id="9613bc876286a5238d733c45a18b6b2c" category="list-text">使用以下方式之一存取啟動備份和復原精靈：</block>
   <block id="60ba87f581e252f66351afe3c5b9dc13" category="list-text">從控制台*系統*頁面中，選擇系統，然後選擇右側面板中備份和還原旁邊的*啟用&gt;備份磁碟區*。</block>
   <block id="5b2b52549c07a8db3c4f8d8b697bdf2b" category="paragraph">如果備份的 AWS 目標作為系統存在於控制台 *系統* 頁面上，則可以將ONTAP叢集拖曳到 AWS 物件儲存上。</block>
-  <block id="4c013eef5eb36bcd99b1e7e68c7ab39f" category="list-text">在備份和復原欄中選擇*卷*。從磁碟區選項卡中，選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖示選項並選擇單一磁碟區（尚未啟用複製或備份到物件儲存）的*啟動備份*。</block>
   <block id="dece324f2a03458f6bcd8448505fb517" category="paragraph">精靈的介紹頁面顯示保護選項，包括本機快照、複製和備份。如果您在此步驟中選擇了第二個選項，則會出現「定義備份策略」頁面，其中選擇一個磁碟區。</block>
   <block id="6ac200dba9170b850fa322020c66c468" category="list-text">繼續以下選項：</block>
   <block id="279860fbcfaa6a21c8cc8d5f6caec531" category="list-text">如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。</block>
@@ -2345,7 +2318,6 @@
   <block id="ebe3e023565bd2cf134f2cd00a79842b" category="paragraph">選擇儲存備份的區域。這可能與Cloud Volumes ONTAP系統所在的區域不同。</block>
   <block id="f85a942eb2bd683f5253b7f3bebddea1" category="paragraph">建立新儲存桶或選擇現有儲存桶。</block>
   <block id="0ea4b8f8e49e76c407dc92eef3ef1c15" category="inline-link">了解如何使用您自己的加密金鑰</block>
-  <block id="e1873fb565e4b4215abdf8e3bd737274" category="list-text">*加密金鑰*：如果您建立了新的儲存桶，請輸入提供者提供給您的加密金鑰資訊。選擇是否使用預設 AWS 加密金鑰，或從您的 AWS 帳戶中選擇您自己的客戶管理金鑰來管理資料加密。<block ref="d92909932e1ff9d87b508ff8380d446c" category="inline-link-rx"></block> ）。</block>
   <block id="9d83a21cd37d72af555469c7ed0d2ec9" category="paragraph">如果您選擇使用自己的客戶管理金鑰，請輸入金鑰保管庫和金鑰資訊。</block>
   <block id="ec32f8eb7058323c02b13f59dd447a40" category="admonition">如果您選擇了現有的儲存桶，加密資訊已經可用，因此您現在無需輸入。</block>
   <block id="2283ed1c2d2204e889a93d07486e3a8b" category="list-text">*備份策略*：選擇現有的備份到物件儲存策略或建立一個。</block>
@@ -2556,14 +2528,11 @@
   <block id="fa72bd720d056e7babef4250c9f04a78" category="list-text">選擇「*磁碟區*」選單以查看Cloud Volumes ONTAP和本機ONTAP系統的備份磁碟區清單。</block>
   <block id="e44fc1f1184fad322f753d2fd49e065b" category="list-text">如果您正在尋找特定係統中的特定磁碟區，您可以按系統和磁碟區優化清單。您也可以使用搜尋過濾器，或者可以根據磁碟區樣式（FlexVol或FlexGroup）、磁碟區類型等對列進行排序。</block>
   <block id="967a559f8463f8584f05c86c2fe8737e" category="paragraph">若要顯示其他欄位（聚合、安全性樣式（Windows 或 UNIX）、快照原則、複製原則和備份策略），請選擇加號。</block>
-  <block id="994d86579a5334a5d4b1d409d5976ee7" category="paragraph">當備份類型啟動時，每個圖示都顯示為藍色；當備份類型不活動時，每個圖示都顯示為灰色。您可以將遊標停留在每個圖示上，查看正在使用的備份策略以及每種備份類型的其他相關資訊。</block>
   <block id="7a5095d2213da4d8d8d6f7835126440e" category="section-title">啟動系統中附加磁碟區的備份</block>
   <block id="8d9e236023d48edfbb8546d1322f938b" category="paragraph">如果您在首次啟用NetApp Backup and Recovery時僅在系統中的某些磁碟區上啟動了備份，則可以稍後在其他磁碟區上啟用備份。</block>
-  <block id="350cebc09a12734c052df1349098314b" category="list-text">從「卷」標籤中，找到要啟動備份的捲，選擇「操作」選單<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>在行尾，然後選擇*啟動備份*。</block>
   <block id="40a7b9f9f8520270d9a6a6f8c3b155e3" category="list-text">檢查此卷的備份設置，然後選擇*啟動備份*。</block>
   <block id="617bf089a60793ed8197f15849023ab0" category="section-title">更改分配給現有磁碟區的備份設置</block>
   <block id="6c143468a72ae48b392ccaf6bfdab3dd" category="section-title">編輯單一磁碟區上的備份設置</block>
-  <block id="6783230016acdea3f2efff067c9f0ae2" category="list-text">從「*卷*」標籤中，找到要進行策略變更的捲，選擇「操作」選單<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>在行尾，選擇*編輯備份策略*。</block>
   <block id="28d4180de7948c969ad2c178ab5ac2ba" category="paragraph">如果在為此叢集啟動NetApp Backup and Recovery時，在初始備份原則中為雲端備份啟用了 _DataLock 和 Ransomware Resilience_，您將只會看到已使用 DataLock 配置的其他策略。如果您在啟動NetApp Backup and Recovery時未啟用“DataLock 和 Ransomware Resilience”，您將只會看到未配置 DataLock 的其他雲端備份策略。</block>
   <block id="ed3685aa06ca7db640e77339c669a75e" category="section-title">編輯多個卷上的備份設置</block>
   <block id="90d35772fb2c0d1903fd5cb179fca792" category="paragraph">如果您想在多個磁碟區上使用相同的備份設置，您可以同時在多個磁碟區上啟用或編輯備份設定。您可以選擇沒有備份設定、只有快照設定、只有備份到雲端設定等的捲，並使用不同的備份設定對所有這些磁碟區進行批次變更。</block>
@@ -2571,7 +2540,6 @@
   <block id="7eaf859529ad561f910e542e5b3fb6be" category="list-text">同一系統</block>
   <block id="d3feb463acdba151ebb0b4b2c264db93" category="list-text">相同樣式（FlexVol或FlexGroup磁碟區）</block>
   <block id="dd58ff694012627b51f755db5b9e26a4" category="list-text">相同類型（讀寫或資料保護卷）</block>
-  <block id="71b5bee9d26480c15e9d32a1c5f12b8f" category="paragraph">當啟用五個以上的磁碟區進行備份時， NetApp Backup and Recovery一次只初始化五個磁碟區。完成後，它會建立下一批五個子作業來啟動下一組，並繼續，直到所有磁碟區都初始化。</block>
   <block id="a89ea423a899eff48cd02bf63ec8a4a7" category="list-text">從「*卷*」標籤中，按磁碟區所在的系統進行篩選。</block>
   <block id="8527adc5d092ab7a3143547ad5cb009b" category="list-text">選擇您想要管理備份設定的所有磁碟區。</block>
   <block id="239c515997387c56b8c4025161f4c6b9" category="list-text">根據您要設定的備份作業類型，按一下批次作業選單中的按鈕：</block>
@@ -3208,12 +3176,6 @@
   <block id="90262b49b516aea0770d54c5389860ab" category="list-text">更改是否從來源系統中刪除“年度”快照</block>
   <block id="6866e75c6eebeffef8ecc7e577b86a5c" category="list-text">啟用或停用系統的勒索軟體掃描，包括計畫掃描</block>
   <block id="0b1dbe1ca2e686301ad63250cc03207d" category="section-title">查看叢集等級備份設定</block>
-  <block id="3f7a9ad888e3a180f11e92f70141b6a7" category="paragraph">您可以查看每個系統的叢集等級備份設定。</block>
-  <block id="df103be8b9388b2bf0177177038233aa" category="list-text">在「備份設定」頁面中，按一下<block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block>對於系統並選擇*進階設定*。</block>
-  <block id="166ff8fdcfa38fc724852eb2f800e957" category="paragraph">_進階設定_頁面顯示該系統的目前設定。</block>
-  <block id="4620c3bb0f2d2d6609a91b73aef2a36b" category="list-text">展開選項並進行更改。</block>
-  <block id="c4f1313315ea53ba0324c17262762c44" category="paragraph">更改後的所有備份操作都將使用新值。</block>
-  <block id="f59fca00224a89098e0fdb00d310452d" category="paragraph">請注意，根據來源叢集上的ONTAP版本以及備份所在的雲端供應商目標，某些選項不可用。</block>
   <block id="5fb03dafd6274ec459f4ae7b73182f44" category="section-title">變更可用於將備份上傳到物件儲存的網路頻寬</block>
   <block id="22d415965913ef63161945f2e9b22fbd" category="paragraph">當您為系統啟動NetApp Backup and Recovery時，預設情況下， ONTAP可以使用無限量的頻寬將備份資料從系統中的磁碟區傳送到物件儲存。如果您注意到備份流量影響了正常的使用者工作負載，您可以使用「進階設定」頁面中的最大傳輸速率選項來限制傳輸過程中使用的網路頻寬量。</block>
   <block id="91732be5dbec4e6cd5795e6c9726f75b" category="list-text">在進階設定頁面中，展開*最大傳輸速率*部分。</block>
@@ -3224,8 +3186,6 @@
   <block id="65fd1c000589ff36a794229f1987490d" category="paragraph">請注意，此選項僅適用於新讀/寫卷的新備份文件，並且不支援資料保護 (DP) 磁碟區。</block>
   <block id="cef9bbe98866aa24765a5c6e51e5daa5" category="section-title">更改是否從來源系統中刪除“年度”快照</block>
   <block id="69ef3b07789885abe39838d3bdd565ae" category="list-text">在進階設定頁面中，展開*年度快照刪除*部分。</block>
-  <block id="550e2d4456467c22193939aa0029676d" category="inline-image-macro">進階設定頁面中年度快照條目的螢幕截圖。</block>
-  <block id="824924c3b132c056f8e7a92e2b64399e" category="paragraph"><block ref="824924c3b132c056f8e7a92e2b64399e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="906f0c83e11579cff84ef8bb2602e8ee" category="list-text">選擇“*停用*”以在來源系統上保留年度快照。</block>
   <block id="32a5c26baa0363b9a3a4a05896b16fd9" category="section-title">啟用或停用勒索軟體掃描</block>
   <block id="4451065c28f2079aa69e4b099c64d39a" category="inline-link-macro">DataLock 和勒索軟體復原選項</block>
@@ -3235,7 +3195,6 @@
   <block id="753626f8e1f5bd64d141de3a2128da9a" category="paragraph">如果停用計劃的勒索軟體掃描，您仍然可以執行按需掃描，並且恢復操作期間的掃描仍會發生。</block>
   <block id="e7326f303b8abf78625da7d8f22fa0b4" category="inline-link-macro">管理政策</block>
   <block id="53f2e5824456fc72fcf46ed59f0055b0" category="paragraph">參考<block ref="413884571f4d053a53a019b431cecdb2" category="inline-link-macro-rx"></block>有關管理實施勒索軟體檢測的政策的詳細資訊。</block>
-  <block id="0a9f76c05550ca3603727850b14e66c0" category="list-text">在進階設定頁面中，展開「勒索軟體掃描」部分。</block>
   <block id="aff5ff19f93c3791711602e8baa7587d" category="list-text">啟用或停用*勒索軟體掃描*。</block>
   <block id="e80157cb62f595a86effb45e1dfb4df2" category="list-text">選擇*計劃勒索軟體掃描*。</block>
   <block id="1491d983e19f493f0131d8289237002e" category="list-text">或者，將每週預設掃描更改為幾天或幾週。</block>
@@ -4554,7 +4513,6 @@
   <block id="6c93c0ee904d580923385784899b59a3" category="paragraph">您可以變更指派給已指派原則的現有磁碟區的備份策略。您可以變更本機快照、複製磁碟區和備份檔案的策略。您想要套用於磁碟區的任何新快照、複製或備份策略都必須已經存在。</block>
   <block id="257aa7f9d15bc46fa7c45edeac5b1ab7" category="list-text">在「編輯備份策略」頁面中，對本機快照、複製磁碟區和備份檔案的現有備份策略進行更改，然後選擇「下一步」。</block>
   <block id="96f9f5071945e75714c9ffbe54f80851" category="list-text">在出現的備份頁面中，對本機快照、複製磁碟區或備份檔案的現有備份策略進行更改，然後選擇「儲存」。</block>
-  <block id="c394a26f3d6de3615a172a12e31a16e4" category="paragraph">您可以建立磁碟區物件的臨時快照或備份。您無法建立臨時複製磁碟區。</block>
   <block id="44b2c63b1441a7eef6175bc2818c45c0" category="paragraph">顯示磁碟區的詳細資訊和快照清單。</block>
   <block id="2e3f296276fc537735df961d32dd7d12" category="cell">暫停快照的增量傳輸，以更新目標磁碟區。如果您想重新開始增量更新，可以稍後再恢復。</block>
   <block id="695fbf9213e2d5d1e929e9356fa04c37" category="paragraph">請注意，此操作不會影響快照或複製磁碟區—這些類型的備份檔案不會被刪除。</block>
@@ -4573,11 +4531,8 @@
   <block id="1b22a10a2875f8854738412fd55a7964" category="list-text">更改是否將歷史快照匯出為備份檔案並將其包含在未來磁碟區的初始基線備份檔案中</block>
   <block id="8590a86fff0fbd8d0c19bac8d47c9fe1" category="section-title">更改是否將歷史快照匯出為備份文件</block>
   <block id="20cf918510f72844a04ae68981e61c14" category="paragraph">如果存在與本系統中使用的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則可以將這些歷史快照匯出到物件儲存作為備份檔案。這樣，您就可以透過將較舊的快照移至基準備份副本中來初始化雲端備份。</block>
-  <block id="5f73887604eb5a0b44550e5a1371b94d" category="list-text">在「進階設定」頁面中，展開「匯出現有快照」部分。</block>
   <block id="7eb825e7b5e7636a29150410089bcbf5" category="list-text">選擇是否要匯出現有快照。</block>
   <block id="98d551107f1d17645e2b050fe333480b" category="paragraph">當您為任何磁碟區選擇「年度」備份策略標籤時，建立的快照將非常大。預設情況下，這些年度快照在傳輸到物件儲存後會自動從來源系統中刪除。您可以從「年度快照刪除」部分變更此預設行為。</block>
-  <block id="9d667c05d0d18216605cbb0bc59a1281" category="paragraph">預設啟用勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照上。您可以透過「進階設定」頁面上的選項，啟用或停用最新快照上的勒索軟體掃描。如果啟用它，則預設每 7 天執行一次掃描。</block>
-  <block id="b337f362b39ae43e2ecb969af7243145" category="paragraph">計劃的勒索軟體掃描僅在最新快照上運行。</block>
   <block id="da251788f86e521e7d3714c723201b4e" category="list-text">您將使用哪些保護功能：快照、複製磁碟區和/或雲端備份</block>
   <block id="55aeb9ffe6571ee026c3aced844fd2a8" category="cell">建立來源磁碟區中某個磁碟區的唯讀、時間點映像作為快照。您可以使用快照來還原單一文件，或還原整個磁碟區的內容。</block>
   <block id="df0b18dcdaa591155a9eed6206daef89" category="paragraph">快照是所有備份方法的基礎，是使用備份和還原服務的必要條件。快照是磁碟區的唯讀、時間點影像。此映像佔用極少的儲存空間，由於它只記錄自上次快照建立以來檔案發生的更改，因此效能開銷可以忽略不計。在磁碟區上建立的快照用於保持複製磁碟區和備份檔案與來源磁碟區所做的變更保持同步—如圖所示。</block>
@@ -4684,7 +4639,6 @@
   <block id="063090df0880212c0ba8eec878096a21" category="doc">VMware 工作負載預覽增強功能</block>
   <block id="24936fb650df7af8295e75a3667becef" category="list-text">現在您可以將備份和快照還原到備用位置。如果您想要管理不同 VMware vCenter 部署、VMware ESXi 主機或 VMware 資料儲存上的虛擬機器版本，這將非常有用。</block>
   <block id="99ee61e75520f174d08caa35e0ad294d" category="list-text">現在您可以從主位置或輔助位置還原特定的 VMware 虛擬磁碟（VMDK 映像），從而實現對復原 VM 資料的更精細控制。</block>
-  <block id="7689264f717abcf16a917111f707d7e0" category="paragraph">不適用於 Hyper-V 工作負載預覽。</block>
   <block id="77f252cb66af8ee7dab8b27bcf3851ca" category="paragraph">不適用於 KVM 工作負載預覽版。</block>
   <block id="516f1f530028d7905b72cd1b035c8a73" category="list-text">*恢復到原始位置*：虛擬機器將恢復到原始位置，即相同的 vCenter 部署、ESXi 主機和資料儲存。虛擬機器及其所有資料均被覆蓋。</block>
   <block id="d2f574e5e69d11881580660614b89ba3" category="list-text">*恢復到備用位置*：您可以選擇不同的 vCenter、ESXi 主機或資料儲存作為虛擬機器的復原目標。這對於管理位於不同位置和狀態的相同虛擬機器的不同副本非常有用。</block>
@@ -4809,5 +4763,216 @@
   <block id="38cf859695687379726e3ea14b05ddc1" category="list-text">選擇恢復目標位置和設定：</block>
   <block id="a30b9d9cd5fcd792454de596b4a70bbf" category="paragraph">恢復到原始位置後，您可以透過展開「目標設定」部分來查看目標設置，但您無法變更它們。</block>
   <block id="6ae1e8b4e49e0eb340bfe865ab9bf2be" category="list-text">在「恢復後選項」部分，請考慮以下選項：</block>
-  <block id="549fac1df4ed1f1a9ecf014524bf6245" category="paragraph">*重新啟動虛擬機器*：啟用此選項可在復原後啟動新的虛擬機器。</block>
+  <block id="48ddddb06a7cca979a8b0eb4de198113" category="doc">ONTAP磁碟區工作負載增強</block>
+  <block id="cbab7e5b614b876bebcce0c29fd1afb6" category="paragraph">*支援多個儲存桶*：（私有預覽）從ONTAP 9.17.1 及更高版本開始，您現在可以保護系統中的捲，每個系統最多可跨不同的雲端供應商使用 6 個儲存桶。</block>
+  <block id="695e42eb94aa8a143b557dc75e4cc65e" category="inline-link-macro">了解更多關於使用NetApp Backup and Recovery備份ONTAP卷資料的信息</block>
+  <block id="c380d2c239579706adcab966ccded39a" category="paragraph"><block ref="040f925aac1483fc9f3f6e8bd68d3888" category="inline-link-macro-rx"></block>。</block>
+  <block id="558e5aec99d772eb277c493188d3c607" category="section-title">VMware 工作負載增強功能</block>
+  <block id="d8cf45a94e57901a57764525baf2f9bf" category="paragraph">此版本的 VMware 工作負載引入了以下增強功能：</block>
+  <block id="0f685163e47b1dbc7208e24f5639ed4c" category="list-text">NetApp Backup and Recovery現已正式提供 VMware 工作負載支援 (GA)。</block>
+  <block id="3b2cdba7e0b9954f4d9e79b310fdbccd" category="list-text">現在您可以還原客戶作業系統檔案和資料夾。</block>
+  <block id="7646858e9d2b15a6ffb584e47fd5567e" category="paragraph"><block ref="4f4eca7ac15d647aeef99bf9ca19ff76" category="inline-link-rx"></block>。</block>
+  <block id="1ae0fe82c82eb100fa0d7221b899a229" category="inline-link">了解更多關於恢復訪客文件和資料夾的信息</block>
+  <block id="f73006a3da0451caefdac27f55b5a651" category="paragraph"><block ref="ec740e6f2b69e9d5eeb44cc6164f597c" category="inline-link-rx"></block>。</block>
+  <block id="2fcce708931d6d68e1d88fc4a46eef94" category="section-title">Hyper-V 工作負載預覽增強功能</block>
+  <block id="0c95402d3c8d84b27c1f2eb1f4757c29" category="paragraph">此版本的 Hyper-V 工作負載引入了以下增強功能：</block>
+  <block id="1bfaec2035ab816cb33f0b9264b08184" category="list-text">現在您可以將 Hyper-V VM 備份和快照還原到備用位置。如果您想管理不同 Hyper-V 主機上的虛擬機器版本，這將非常有用。</block>
+  <block id="86ef33bcd420761fa8d995a0d265b43f" category="list-text">NetApp Backup and Recovery現在支援由 System Center Virtual Machine Manager (SCVMM) 配置並託管在 CIFS 共用上的 Hyper-V 虛擬機器。</block>
+  <block id="3d0f94ed484d5b1224a05746eeef7916" category="list-text">現在您可以編輯保護群組了。</block>
+  <block id="33c7653a8f2aa564c4ccd96aaacf4f4f" category="admonition">僅在此版本中，您無法使用「操作」功能表中的「升級」選項升級 Hyper-V 或 Windows 的NetApp程式。相反，請刪除每個 Hyper-V 主機，然後重新新增以更新插件。</block>
+  <block id="2e9a0674716cf9fc0f20713c35ea7c92" category="inline-link">了解更多關於使用NetApp Backup and Recovery恢復 Hyper-V 虛擬機器的信息</block>
+  <block id="b6346010c4ef2da943c1c7fa6a17d974" category="paragraph"><block ref="7ec45f32ee1da46f6d69c07cb5d19e8e" category="inline-link-rx"></block>。</block>
+  <block id="4b39db76689788868bda30b97106ca4a" category="section-title">KVM工作負載預覽增強功能</block>
+  <block id="0daeca72fa8b0acaee6fea8ae743cb8c" category="paragraph">KVM 工作負載預覽版現在支援與 Apache CloudStack 管理平台集成，使您能夠保護由 Apache CloudStack 管理的 KVM 主機和虛擬機器。</block>
+  <block id="432d122bca6b826d0ff8b770008cb6da" category="list-text">即使 Hyper-V 中的「處理器相容性」設定正確，也無法在 CPU 廠商不同的系統之間（例如 Intel 和 AMD 或反向）還原虛擬機器或虛擬機器資料。此設定僅支援同一廠商不同世代產品之間的相容性（例如，Intel 到 Intel 或 AMD 到 AMD）。</block>
+  <block id="cbf60595828cc0c9aea61a13478c0526" category="admonition">在 2026 年 1 月 19 日發布的版本中，您無法使用「操作」功能表中的「升級」選項來升級 Hyper-V 或 Windows 的NetApp外掛程式。相反，請刪除每個 Hyper-V 主機，然後重新新增以更新插件。</block>
+  <block id="fa1b7fd0ad5ec372cdf9f907c6fbf709" category="section-title">故障排除說明</block>
+  <block id="9bd2877d70202ee3498597fbe9e5cc2f" category="paragraph">使用NetApp Backup and Recovery的 KVM 工作負載私有預覽版時，請注意下列事項：</block>
+  <block id="ac034a836e482984e927ce7aef3a7bcc" category="list-text">為確保 KVM 工作負載復原成功完成，請確保在用於 KVM 備份的保護策略中啟用「啟用 VM 一致性快照」設定。</block>
+  <block id="a9f8d95d40be1c757e5dddec176f49aa" category="list-text">除非將所有受管主機新增至NetApp Backup and Recovery，否則無法備份由 Apache CloudStack 管理的 KVM 主機的儲存池。作為一種變通方法，將每個 CloudStack 管理的 KVM 主機新增至NetApp Backup and Recovery。</block>
+  <block id="a08807a7feb533e9af18670f44dd0184" category="list-text">您無法備份屬於保護群組的已停止虛擬機器。作為一種變通方法，在開始備份之前，將已停止的虛擬機器從保護群組中移除。</block>
+  <block id="caf127224717f7d5605f4155b3a36376" category="list-text"><block ref="473bc5f1f9d293596a6cf3f7d880fe14" category="inline-xref-macro-rx"></block> 適用於NetApp Backup and Recovery需要進行驗證的任何 Windows、Microsoft SQL Server、Oracle Database 或 Linux 主機。這包括恢復訪客檔案或資料夾時使用的 Windows 訪客作業系統憑證。</block>
+  <block id="a22707a596fa8306e8d6a5944e2eda1e" category="list-text"><block ref="89ad28258fc3723b5b08e269206e91aa" category="inline-xref-macro-rx"></block>。（僅限 KVM 工作負載）</block>
+  <block id="e0981966cb393b67a49dfbe74acbcaa9" category="paragraph">新增主機資源憑證。NetApp Backup and Recovery使用這些憑證來發現工作負載並套用備份策略。</block>
+  <block id="53f563c80059cb500ae35dbc14632b31" category="list-text">復原用戶端檔案或資料夾時所使用的 Windows 用戶端作業系統憑證</block>
+  <block id="061d749919f42e07f2fd5b453fc9f869" category="list-text">Oracle 資料庫憑證</block>
+  <block id="5bce5986d99cf24ee658dd798a565317" category="list-text">Linux 主機憑證</block>
+  <block id="30129b68377c980a5b046dd8307f9c40" category="list-text">請輸入登入憑證資訊。根據您選擇的身份驗證模式，會顯示不同的欄位。將滑鼠懸停在資訊 *i* 圖示上，以查看有關欄位的更多資訊。</block>
+  <block id="bc62518159080c18eacbe3647ed36870" category="list-text">*驗證模式*：選擇 *Windows*、*Microsoft SQL*、*Oracle Database* 或 *Linux*。</block>
+  <block id="07672e93c417bae4731ac20b5c60c1b7" category="admonition">對於 Microsoft SQL Server 工作負載，您需要輸入 Windows 和 Microsoft SQL Server 的憑證，因此您需要新增兩組憑證。</block>
+  <block id="aea23489ce3aa9b6406ebb28e0cda430" category="open-title">視窗</block>
+  <block id="aa30bd4ba35532a1da46207d4d7c7a01" category="list-text">*代理*：從清單中選擇一個控制台代理。</block>
+  <block id="f6aab249c552b708ee4965a85a35d5c9" category="list-text">如果您選擇了 *Microsoft SQL Server*：</block>
+  <block id="4b0ada5e3746ad5c81b80a9d5bd7282a" category="list-text">*主機*：選擇已發現的 SQL Server 主機位址。</block>
+  <block id="c30dd1a85cf86d95b11c1a08f70130ce" category="open-title">Oracle 資料庫</block>
+  <block id="cd5d89e9518c748d54323c53d321ce4f" category="list-text">如果您選擇了*Oracle資料庫*：</block>
+  <block id="0bb131c45d988a961e3e1278ea79bebf" category="list-text">*使用者名稱*：請輸入用於登入憑證的使用者名稱。</block>
+  <block id="edc9f0a5a5d57797bf68e37364743831" category="open-title">Linux</block>
+  <block id="54d4c8f3914a24ebe783e9966db6fa15" category="list-text">如果您選擇了 *Linux*：</block>
+  <block id="a277ffecf5bfb010132309a2882f058f" category="paragraph">您之後可以編輯您建立的任何憑證的密碼。</block>
+  <block id="cfc365129f2bf6a0dc774cf0c8e279ce" category="section-title">新增 KVM 管理平台</block>
+  <block id="6505d7ba0cb4b5b363b0e258c7c6c830" category="paragraph">如果您使用 Apache CloudStack 管理平台來管理 KVM 資源，則需要將其與NetApp Backup and Recovery集成，以便 Backup and Recovery 可以發現和保護受管 KVM 主機和虛擬機器。</block>
+  <block id="908f42391bc11fe938651b8c7c03cfbb" category="list-text">選擇向下箭頭展開「管理平台」部分。</block>
+  <block id="6885472c6735eb1b868b48211eccb97f" category="list-text">選擇「新增管理平台憑證」。</block>
+  <block id="e9bb728917086f81d9458ae8f44eee8c" category="list-text">*管理平台 IP 位址或 FQDN*：輸入管理平台的 IP 位址或完全限定網域名稱。</block>
+  <block id="a102e68fcc16a49b53abc597c80d00ef" category="list-text">*API金鑰*：輸入用於驗證API請求的API金鑰。</block>
+  <block id="5ccad303f837a7c94b607467f12e6406" category="list-text">*金鑰*：輸入用於驗證 API 請求的金鑰。</block>
+  <block id="91c10b5bb9bf8dc1199095d6ba8c4af2" category="list-text">*連接埠*：輸入備份和還原與管理平台之間通訊所使用的連接埠。</block>
+  <block id="7f5e8a4c7ecae4d83608e658058d805d" category="list-text">*代理*：選擇一個控制台代理，用於促進備份和還原與管理平台之間的通訊。</block>
+  <block id="5e64bc473b36f5e9fee0f064962a0ca6" category="list-text">完成後，選擇“新增”。</block>
+  <block id="fa97453764f14ccf742ba27e3b9ffd70" category="list-text">如果您是第一次發現 Kubernetes 工作負載，請在NetApp Backup and Recovery中，在「工作負載」下，選擇「Kubernetes」磁貼。</block>
+  <block id="c6e9500362ca178210719b0b4670f0b7" category="paragraph">NetApp Backup and Recovery需要先發現 KVM 主機和虛擬機，然後才能對其進行保護。必須先使用 Apache CloudStack 等管理平台管理您的 KVM 主機和虛擬機，然後才能將其新增至備份和復原。</block>
+  <block id="335a1dcb45b3cddcd5ee1f36ea5908a4" category="section-title">新增管理平台、KVM 主機並發現資源</block>
+  <block id="390fac69b1d41991ae5f68a1ba3cbda4" category="paragraph">新增管理平台和 KVM 主機訊息，讓NetApp Backup and Recovery發現工作負載。</block>
+  <block id="24e30755a36f1f0fbf2585a3d6fcea00" category="list-text">在“工作負載”下，選擇“KVM”磁貼。</block>
+  <block id="99c78c9137cee80ce48d764854f4f37d" category="paragraph">如果您是第一次登入備份和恢復，並且在控制台中有一個系統但沒有發現任何資源，則會顯示「歡迎使用新的NetApp備份和恢復」頁面，其中包含「發現資源」選項。</block>
+  <block id="72caa651e04c375669fa47d6d7c97bd8" category="list-text">如果您尚未將管理平台與備份和復原功能集成，請選擇「新增管理平台」。</block>
+  <block id="e48c46f67dcc12e71756d8f1484fd1e5" category="list-text">*KVM 設定*：透過輸入下列資訊新增新的 KVM 主機：</block>
+  <block id="1379fbf6716203ac9b069e9dcb1b630e" category="list-text">*KVM FQDN 或 IP 位址*：輸入主機的 FQDN 或 IP 位址。</block>
+  <block id="a3b2bf747985ecc6d947647708117a50" category="list-text">*憑證*：輸入 KVM 主機的使用者名稱和密碼。</block>
+  <block id="9bf19b226e98ad82718a06ed1be0ccff" category="list-text">*控制台代理*：選擇用於備份和還原與 KVM 主機之間通訊的控制台代理程式。</block>
+  <block id="255d844db697f34dcf46b6abb2370218" category="list-text">*連接埠號碼*：輸入備份和復原與 KVM 主機之間通訊所使用的連接埠。</block>
+  <block id="cba87e6c48ee4064103429e66f87d737" category="list-text">*管理平台*：如果 KVM 主機是受管理的，並且您已將管理平台新增至備份和復原中，請從清單中選擇管理平台。</block>
+  <block id="1ab61c2a203a782ffd6293f052fa3198" category="list-text">在“工作負載”下，選擇“Oracle”磁貼。</block>
+  <block id="c189a17e1064cb3a5bd66a3609a81829" category="list-text">如果您是第一次登入備份和恢復，並且尚未將系統新增至「系統」頁面，則備份和恢復將顯示「歡迎使用新的NetApp Backup and Recovery」登入頁面，並提供新增系統的選項。有關向“系統”頁面添加系統的詳細信息，請參閱<block ref="296443cffec903f0b2ef92c8eb1c49ba" category="inline-link-rx"></block>。</block>
+  <block id="68e5fb66babe998c725422990c3addbf" category="paragraph">使用NetApp Backup and Recovery保護您的 Hyper-V 虛擬機器。NetApp Backup and Recovery。您也可以保護由 System Center Virtual Machine Manager (SCVMM) 配置並託管在 CIFS 共用上的 Hyper-V 虛擬機器。</block>
+  <block id="b7e2bfb3fcdb70bdfbdc97013b33db87" category="list-text">選擇“保護組”選單。</block>
+  <block id="7f924709b4be1415b21d2f13de8768fc" category="section-title">編輯保護群組</block>
+  <block id="d866b8b94a3e8b940c5c063a7cf79472" category="paragraph">編輯保護群組以變更其名稱或設定。如果保護群組中的資源發生了變化，您可能需要編輯該保護群組。</block>
+  <block id="2028d26ecaf3fcd5b07a86fe6beca923" category="list-text">選擇要編輯的保護群組。</block>
+  <block id="712a9492193e1ef0b35be30256c2d566" category="list-text">選擇“操作”圖標 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *編輯*。</block>
+  <block id="08483165aa1f33d41b512e87d0481649" category="list-text">變更保護群組的任何設置，例如名稱或群組中的虛擬機器。</block>
+  <block id="ad41a0253f0fa950ebd266549a680870" category="list-text">必要時更改保護策略。完成後，選擇“下一步”。</block>
+  <block id="c3db3d5055385cdff6f17b6bf22a7152" category="list-text">檢查配置並選擇“提交”。</block>
+  <block id="90f68f3e2b7c1b2173cf20adbaecd7aa" category="list-text">恢復到備用位置</block>
+  <block id="7979de06740fd39ab039421367c0315f" category="paragraph">從「恢復」頁面（也稱為「搜尋和恢復」），您可以恢復資源，即使您不記得確切的名稱、它所在的位置或它最後處於良好狀態的日期。您可以使用過濾器搜尋快照。</block>
+  <block id="20ca6e882fe3b588e30201e762f2131d" category="list-text">*啟動虛擬機器*：啟用此選項可在復原後啟動新的虛擬機器。</block>
+  <block id="e826f41c4b42c72f20eb65258162843d" category="list-text">在「目標設定」部分，輸入以下資訊：</block>
+  <block id="1b24040896cd5eefd580726b364e1b23" category="list-text">*Hyper-V FQDN 或 IP 位址*：輸入目標 Hyper-V 主機的完全限定網域名稱或 IP 位址。</block>
+  <block id="58f55695440dd00b2067cb992ebbfefd" category="list-text">*網路*：選擇要將快照還原到的目標網路。</block>
+  <block id="66a46a535a32ca1624cf944a50032f26" category="list-text">*虛擬機器名稱*：輸入要還原的虛擬機器的名稱。</block>
+  <block id="bfe700a949b5800613b9b6c35635602a" category="list-text">*目標位置*：輸入應包含已復原資料的目標資料夾或 CIFS 共用。</block>
+  <block id="46b4ed9b4dd033d33b169dedf1087069" category="list-text">在「恢復前選項」部分，請考慮以下選項：</block>
+  <block id="80ca63ba7d66f5d8a55a9817ee3bc137" category="list-text">*快速復原*：啟用此選項可使復原的虛擬機器立即可用。僅從物件儲存中恢復運行虛擬機器所需的文件，而不是整個磁碟區。</block>
+  <block id="286d76e7e91f5683e678b1a399bad3bd" category="list-text">在「恢復後選項」部分，請考慮以下選項：</block>
+  <block id="7510c6e86ae26f29103eade23948e7e7" category="paragraph">使用NetApp Backup and Recovery保護您的託管 KVM 虛擬機器和儲存池。NetApp Backup and Recovery提供快速、節省空間、崩潰一致性和 VM 一致性的備份和復原作業。在使用備份和復原功能保護 KVM 主機和虛擬機器之前，必須先使用 Apache CloudStack 等管理平台來管理它們。</block>
+  <block id="8ff035fa875da8ae8e1e252604570212" category="list-text">*啟用虛擬機器一致性快照*：選擇是否啟用虛擬機器一致性快照。這樣可以確保新建立的快照與建立快照時虛擬機器的狀態保持一致。這有助於確保備份能夠成功恢復，並且資料處於一致狀態。這不適用於現有快照。</block>
+  <block id="a6f4d54cf73e6e376bec67151132228e" category="summary">嘗試還原用戶端檔案時，您可能會遇到用戶端檔案還原工作階段為空白、用戶端檔案還原附加磁碟作業失敗或用戶端檔案還原工作階段停止後備份未分離的情況。</block>
+  <block id="b6b36b81e336437107eb237b1e03955e" category="doc">訪客文件恢復故障排除</block>
+  <block id="e186535e6f6fedaa3e8c07a0dda81d24" category="paragraph">嘗試恢復訪客文件時，您可能會遇到以下任一情況。</block>
+  <block id="e2b39c8b51a0a2a12e2e00f7bdd2127f" category="section-title">來賓文件恢復會話為空白</block>
+  <block id="db2dc5988d458b3d9d19d3a39d616e1f" category="paragraph">如果在建立用戶機檔案復原工作階段期間用戶機作業系統重啟，則會發生此問題。客戶作業系統中的 VMDK 可能處於離線狀態，因此客戶文件復原會話清單為空。</block>
+  <block id="efdc15efa02d496331c0b53a11beab72" category="paragraph">若要解決此問題，請在客戶作業系統中手動將 VMDK 重新置於連線狀態。當 VMDK 線上時，來賓文件恢復工作階段將顯示正確的內容。</block>
+  <block id="f9364c3689e8fa9d558080e005772cd1" category="section-title">來賓檔案恢復附加磁碟操作失敗</block>
+  <block id="95c259e43559e78a13dbc7969fdef7cf" category="paragraph">當您啟動用戶機檔案還原作業時會出現此問題，但即使 VMware 工具正在運作且用戶端作業系統憑證正確，連線磁碟操作也會失敗。如果發生這種情況，則會傳回下列錯誤：</block>
+  <block id="9b71c1817815e7cd4130bed94e2ea447" category="paragraph"><block ref="294cedeefde97d4fb81e2aaa200cfe43" prefix="" category="inline-code"></block></block>
+  <block id="359361098bd32a62519f56fcb0c584b3" category="paragraph">若要解決此問題，請在用戶端作業系統上重新啟動 VMware Tools Windows 服務，然後重試用戶端檔案還原作業。</block>
+  <block id="e2b253374500e2e93f1c334a2bb7ddd4" category="section-title">來賓檔案復原會話停止後，備份不會分離</block>
+  <block id="898c4d9cd797d45ca2066478fd269974" category="paragraph">當您從 VM 一致性備份執行來賓檔案還原作業時會發生此問題。當來賓檔案還原工作階段處於活動狀態時，將對相同 VM 執行另一個 VM 一致性備份。當客戶文件恢復會話斷開時（手動或 24 小時後自動斷開），該會話的備份不會被分離。</block>
+  <block id="5857a2699c75798b2ae21bc0b06aff95" category="paragraph">若要解決此問題，請手動分離從活動來賓檔案還原工作階段附加的 VMDK。</block>
+  <block id="0bf794e2b090829c5f342b426fa04d5c" category="summary">您可以從 Windows 用戶作業系統上的 VMDK 還原一個或多個檔案或資料夾。</block>
+  <block id="9cda0c7b074ab9336e54e5c799f32f1d" category="doc">從 VMDK 還原客戶機檔案和資料夾</block>
+  <block id="a26360f952d07b84e1088cc6c613eafe" category="admonition">在從NetApp Backup and Recovery中還原檔案和資料夾之前，您需要為來賓虛擬機器建立憑證。NetApp Backup and Recovery使用這些憑證在附加虛擬磁碟時對來賓虛擬機器進行驗證。</block>
+  <block id="50f6ae852890a51c1bdcbc5fa3074be0" category="paragraph">預設情況下， NetApp Backup and Recovery會將附加的虛擬磁碟保留 24 小時，然後自動將其分開。在精靈中，您可以選擇在復原作業完成後自動刪除來賓檔案復原工作階段，或手動刪除該會話。</block>
+  <block id="84768fbdedcb14c4c8dd78daf9604451" category="paragraph">來賓檔案或資料夾恢復效能取決於兩個因素：正在復原的檔案或資料夾的大小；以及正在復原的檔案或資料夾的數量。如果要恢復的資料集大小相同，則恢復大量小檔案可能比恢復少量大檔案花費的時間比預期的要長。</block>
+  <block id="851e8e79b33ecfa430d9ed62957e5cad" category="admonition">一台虛擬機器上同時只能執行一個連線或還原操作。您無法在同一台虛擬機器上執行並行連線或復原操作。</block>
+  <block id="7392d9ba3083cd42958684b4749d4c72" category="admonition">透過訪客恢復功能，您可以查看和恢復系統文件和隱藏文件，以及查看加密文件。請勿覆蓋現有系統檔案或將加密檔案還原到加密資料夾。在復原作業期間，訪客檔案的隱藏屬性、系統屬性和加密屬性不會保留在復原的檔案中。查看或瀏覽保留分割區可能會導致錯誤。</block>
+  <block id="b422ec3f16fdaa990ba1990cb6991810" category="list-text">選擇“虛擬機器”選單。</block>
+  <block id="c05c3e6e65adc438464f134095bf4d0b" category="list-text">從清單中選擇包含要復原的檔案的虛擬機器。</block>
+  <block id="53542a230db2440f13432651fe6b3487" category="list-text">選擇“操作”圖標 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> 針對該虛擬機器。</block>
+  <block id="c0bb93c6bec67d2385d257bd2f31eeb2" category="list-text">選擇“恢復檔案和資料夾”。</block>
+  <block id="08cc4acec34cca35a8c76fb3d615326d" category="list-text">選擇要從中復原的快照，然後選擇「下一步」。</block>
+  <block id="da8e304a7760412a8328c95f01373d11" category="list-text">選擇要從中復原的快照位置。如果選擇輔助位置，請從清單中選擇輔助快照。</block>
+  <block id="1e6ec30e7907b02414675ea9e2c04c5f" category="list-text">從清單中選擇要附加到虛擬機器的虛擬磁碟，然後選擇「下一步」。</block>
+  <block id="39538cdb3b7fefca1983a30c57bbf632" category="list-text">在「選擇虛擬機器憑證」頁面上，如果您尚未儲存客戶虛擬機器的憑證，請選擇「新增憑證」並執行下列操作：</block>
+  <block id="77d4955805adede5c1d4b622d127cfa3" category="list-text">*身份驗證模式*：選擇 *Windows*。</block>
+  <block id="a542c5909f4fe575b0d1bcb5a4350a01" category="list-text">*代理*：從清單中選擇一個控制台代理，該代理將處理NetApp Backup and Recovery與此主機之間的通訊。</block>
+  <block id="18de7c55432e8413c4ce2a56b3996ea8" category="list-text">*密碼*：請輸入憑證的密碼。</block>
+  <block id="60ec0884c18a5fb50c01015fd5a57742" category="list-text">選擇用於向客戶虛擬機器進行身份驗證的虛擬機器憑證。</block>
+  <block id="35f90aab6a0dab3fe0d57225980eb834" category="paragraph">NetApp Backup and Recovery將虛擬磁碟附加到虛擬機，並顯示所有檔案和資料夾，包括隱藏的檔案和資料夾。它會為每個分割區（包括系統保留分割區）分配一個磁碟機號碼。</block>
+  <block id="9d9478caad2fb1071aba58520617939e" category="paragraph">您選擇的檔案和資料夾會列在螢幕右側窗格中。</block>
+  <block id="e079f71e45cefb5cf18407d7fb49ea4e" category="list-text">輸入將復原所選檔案的來賓的 UNC 共用路徑。</block>
+  <block id="ae5705d13bba8928a397a3ac415b0498" category="list-text">IPv4 位址範例：<block ref="c1efda00eba14c667cfd89393b2be583" prefix=" " category="inline-code"></block></block>
+  <block id="b1e8bed47212dec25b77d52a670930a0" category="list-text">IPv6位址範例：<block ref="f7a108079a0dc952ef09921776f4796f" prefix=" " category="inline-code"></block></block>
+  <block id="568b266180f72a62a6b7a16e74fd7c84" category="paragraph">如果存在同名文件，您可以選擇覆蓋或跳過它們。</block>
+  <block id="9400685c82ef048826c1183065e6283e" category="paragraph">您可以在「作業監控」頁面上查看恢復進度。</block>
+  <block id="e4bfaed3f3210f4076310e841130f424" category="summary">您可以從 Windows 用戶作業系統上的虛擬機器磁碟 (VMDK) 還原檔案或資料夾。</block>
+  <block id="26dc9b7bc6b95362feca65c89dc39119" category="doc">恢復訪客文件和資料夾的要求和限制</block>
+  <block id="6682a5a344207b03b09bfb0798a193b6" category="section-title">來賓還原工作流程</block>
+  <block id="dfb5e1e797a80916627d17588b36ab12" category="paragraph">客戶作業系統還原操作包含以下步驟：</block>
+  <block id="7193518e6f5f0076ef05680742323f9c" category="list-text">附</block>
+  <block id="f02fee54a71e292fba6eea93ae620b05" category="paragraph">將虛擬磁碟附加到客戶虛擬機器或代理虛擬機器並啟動客戶檔案復原會話。</block>
+  <block id="0f68101772bd5397ef8eb1b632798652" category="list-text">等待</block>
+  <block id="75acbae837699c01fe86ee8a2c9fec00" category="paragraph">請等待附加操作完成，然後才能瀏覽和恢復。附加操作完成後，會自動建立訪客文件恢復工作階段。</block>
+  <block id="137bf66cd89f2d7f861099ca8519563c" category="list-text">選擇檔案或資料夾</block>
+  <block id="bc67d1c399dfdffa3650a08e1bbd1222" category="paragraph">瀏覽 VMDK 文件，選擇一個或多個文件或資料夾進行還原。</block>
+  <block id="2bd339d85ee3b33e513359ce781b60cc" category="list-text">恢復</block>
+  <block id="850eb27faf64ee4adf2b325fd847bf4d" category="paragraph">將選定的檔案或資料夾還原到指定位置。</block>
+  <block id="8584d390f3574a98d0772b42a6ba1d23" category="section-title">恢復訪客文件和資料夾的先決條件</block>
+  <block id="6a7a37bd722f9a7ebe568ae7d8778d8f" category="paragraph">在 Windows 用戶作業系統上從 VMDK 還原檔案或資料夾之前，請檢查所有要求。</block>
+  <block id="36139d788258b0f7f760e90a7e475cfb" category="list-text">必須安裝並執行 VMware 工具。</block>
+  <block id="9809213078fe536846ce61d52cfab742" category="paragraph">NetApp Backup and Recovery使用 VMware 工具的資訊來建立與 VMware 客戶作業系統的連線。</block>
+  <block id="1572f8be6f1646b62b5c0d4d4c380fe8" category="list-text">Windows 客戶作業系統必須執行 Windows Server 2008 R2 或更高版本。</block>
+  <block id="697ea025ecb303d4f40d1bf3a8b4bde0" category="inline-link">NetApp互通性矩陣工具 (IMT)</block>
+  <block id="95477275bd206a7fb98bf4a8ec799a0b" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
+  <block id="73e99419f23009b467a68b78510f24c7" category="list-text">目標虛擬機器的憑證使用使用者名稱為「Administrator」的內建網域或本機管理員帳號。在開始復原作業之前，請先設定要附加虛擬磁碟的虛擬機器的憑證。附加和恢復操作都需要憑證。工作群組使用者可以使用內建的本機管理員帳戶。</block>
+  <block id="ae010d54b0afb3a6e93783bbe5550d22" category="admonition">如果您必須使用非內建管理員帳戶但在 VM 內具有管理權限的帳戶，則必須在來賓 VM 上停用 UAC。</block>
+  <block id="8eb1b908e8b622c31068641ddc091252" category="list-text">您必須知道要從中還原的備份快照和 VMDK。</block>
+  <block id="3f4fed5ff0dc846844f8156e2545446d" category="paragraph">NetApp Backup and Recovery不支援搜尋檔案或資料夾進行還原。在開始之前，您必須知道快照中的檔案或資料夾以及對應的 VMDK 的位置。</block>
+  <block id="96fdba8a07d31243e627a47b806ee47d" category="list-text">要附加的虛擬磁碟必須位於NetApp Backup and Recovery備份中。</block>
+  <block id="3cb16855769c9ad83ad9563474e376db" category="paragraph">包含要還原的檔案或資料夾的虛擬磁碟必須位於使用NetApp Backup and Recovery執行的 VM 備份中。</block>
+  <block id="7f395b83396bafcd5e1d1206370ba67d" category="list-text">對於名稱非英文字母的文件，您必須將它們恢復到目錄中，而不是單一文件。</block>
+  <block id="ee1c70a48815e066082eefeebc34049f" category="paragraph">您可以透過恢復文件所在的目錄來恢復具有非字母名稱的文件，例如日語漢字。</block>
+  <block id="9229096468701d10aab6b30f546310c1" category="section-title">來賓檔案還原限制</block>
+  <block id="ce6cdc51d08da1519febc60a0e9593aa" category="paragraph">在從客戶作業系統還原檔案或資料夾之前，您應該了解其功能限制。</block>
+  <block id="0938c50db6a8d08637c074ab0c183305" category="list-text">您無法在來賓作業系統內還原動態磁碟類型。</block>
+  <block id="306e51cbbbbd449259f2c9a524080247" category="list-text">如果還原加密的檔案或資料夾，則不會保留加密屬性。您無法將檔案或資料夾還原到加密資料夾。</block>
+  <block id="631e06eeff5fdebb1ee6aaaa3f7502fd" category="list-text">訪客文件瀏覽頁面顯示隱藏的文件和資料夾，您無法過濾。</block>
+  <block id="21e6b4873654be153e3c8d0024f83773" category="list-text">您無法從 Linux 客戶作業系統復原。</block>
+  <block id="eccd74f81ec87affcad9c90ed7e1c714" category="paragraph">您無法從執行 Linux 客戶作業系統的 VM 還原檔案和資料夾。但是，您可以附加 VMDK，然後手動恢復檔案和資料夾。有關受支援的客戶作業系統的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
+  <block id="a24b5bfa95a0c9efe3023cae447296e6" category="list-text">您無法從 NTFS 檔案系統還原到 FAT 檔案系統。</block>
+  <block id="b4d6235f9c53c6f6c0666f45953094dc" category="paragraph">當您嘗試從 NTFS 格式還原為 FAT 格式時，不會複製 NTFS 安全性描述符，因為 FAT 檔案系統不支援 Windows 安全性屬性。</block>
+  <block id="a23a5720d2a1cff6970cbb72b31dc86c" category="list-text">您無法從克隆的 VMDK 或未初始化的 VMDK 恢復客戶檔案。</block>
+  <block id="fb0007811dddc85c888a6d43364c9f0e" category="list-text">您無法復原檔案的目錄結構。</block>
+  <block id="530b9ade1e2a76461a137de423d242c5" category="paragraph">從嵌套目錄恢復檔案時，系統只會恢復檔案本身，而不會恢復其目錄結構。若要復原整個目錄樹，請複製頂層目錄。</block>
+  <block id="35674b701e3b3620222acdb851b06f2b" category="list-text">您無法將客戶檔案從 vVol VM 還原到備用主機。</block>
+  <block id="629ec47b81132f329d4136880bd3bbde" category="list-text">您無法恢復加密的訪客檔案。</block>
+  <block id="eadac8b708c86a6a21a7335aed187216" category="list-text">您的 KVM 主機和虛擬機器必須由管理平台進行管理。NetApp Backup and Recovery支援以下管理平台：</block>
+  <block id="b806d8cdb5c8844efc0f6d0452537da7" category="list-text">Apache CloudStack 4.22.0.0</block>
+  <block id="c31a96b388ecbcb2a70d87cf34bcbd49" category="list-text">確保允許從控制台代理到 KVM 主機的入站網路流量到達連接埠 22。</block>
+  <block id="e2e0908f47e299507ed9dc85b603e9e3" category="list-text">在備份和復原欄中選擇“磁碟區”。在「卷」標籤中，選擇「操作」。 <block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block> 圖示選項，選擇“啟動 3-2-1 保護”，適用於單一磁碟區（尚未啟用複製或備份到物件儲存）。</block>
+  <block id="b2da82f32872fe2c684c43eda8ae1349" category="list-text">*備份*：將磁碟區備份到物件儲存。在選擇現有儲存桶或配置新儲存桶時，每個叢集最多可備份 6 個儲存桶中的磁碟區。</block>
+  <block id="cd582c730b547c14e66855897469242b" category="list-text">*複製目標*：選擇目標系統和儲存虛擬機器。（可選）選擇目標聚合或多個聚合，以及要新增至複製磁碟區名稱的前綴或後綴。</block>
+  <block id="c4768a212afc2577e900cf8706656602" category="list-text">*備份*：設定以下選項：</block>
+  <block id="59d7aa0f1f316dd1d14b5bbe02d4d985" category="list-text">*加密*：如果您建立了一個新的儲存桶，請輸入提供者提供給您的加密金鑰資訊。您可以選擇使用預設的 AWS 加密金鑰，或從您的 AWS 帳戶中選擇您自己的客戶管理金鑰來管理資料的加密。<block ref="d92909932e1ff9d87b508ff8380d446c" category="inline-link-rx"></block>）。</block>
+  <block id="5cf85684b99a8b0df0187c0fddfe9241" category="list-text">*網路*：配置此提供者的網路選項。</block>
+  <block id="5a3443bdabcca33a88f837ed431e4140" category="list-text">*匯出現有快照*：如果此系統中存在與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則會顯示此附加提示。選取此框，即可將所有歷史快照複製到物件儲存作為備份文件，以確保您的磁碟區得到最全面的保護。</block>
+  <block id="fd5c6f657b9b82dc2fc86f506dacc05d" category="list-text">（可選）選取此複選框可「自動修復本機快照、複製和備份中不符的標籤」。這將建立與快照、複製和備份策略中的標籤相符的標籤的快照。</block>
+  <block id="a85910c6eeb75a045489c2b16a61b922" category="paragraph">當此備份類型啟動時，對應的圖示會亮起；當該備份類型未啟動時，圖示會變為灰色。您可以將遊標停留在每個圖示上，查看正在使用的備份策略以及每種備份類型的其他相關資訊。</block>
+  <block id="ff171d855d9a99655f572a9bb5b1628f" category="list-text">在「卷」標籤中，找到要啟動備份的捲，然後選擇「操作」選單。 <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block> 在行尾，選擇「啟動 3-2-1 保護」。</block>
+  <block id="1ae9b0331f20d420feb95df3c5f492ec" category="list-text">從「卷」選單中，找到要修改策略設定的捲，然後選擇「操作」選單。 <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block> 在行尾，選擇「編輯備份策略」。</block>
+  <block id="7a8eafe0820d78646db0118a296f0af3" category="paragraph">當啟用備份的磁碟區超過五個時， NetApp Backup and Recovery一次只會初始化五個磁碟區。當這些完成後，它會以 5 個為一組繼續進行，直到所有捲都初始化完畢。</block>
+  <block id="a3836fe1cde887edc4dd8114527d3364" category="paragraph">您可以建立磁碟區的臨時快照或備份到物件儲存。您無法建立臨時複製磁碟區。</block>
+  <block id="b2e6e5cb6227ce1d5b6a363159209ac4" category="list-text">變更授予ONTAP系統存取物件儲存權限的儲存金鑰</block>
+  <block id="2774448b191c49f2e074a4d577568616" category="list-text">變更連接到物件儲存的ONTAP IP 空間</block>
+  <block id="d912fedf31ed28560d44791ec26922dd" category="paragraph">您可以查看每個系統的叢集級系統設定和提供者設定。</block>
+  <block id="c443374e0a3448722596473ffa46dfd7" category="list-text">在「備份設定」頁面中，選擇 <block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block> 選擇「配置進階設定 &gt; 系統設定」檢視系統設置，選擇「配置進階設定 &gt; 提供者設定」查看提供者設定。</block>
+  <block id="ab9786fed694b6c1095a21ead04e885c" category="paragraph">產生的頁面會顯示該系統的目前設定。查看提供者設定時，顯示的提供者設定與您在頁面頂部選擇的儲存桶相關。</block>
+  <block id="3526204a1f7b4d3e632bf0adbd48c9e8" category="paragraph">請注意，根據來源叢集上的ONTAP版本和備份所在的雲端供應商目標位置，某些選項不可用。</block>
+  <block id="3a93d61f0b77075a19993185ff1b011f" category="list-text">在「備份設定」頁面中，按一下 <block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block> 在系統中，選擇「配置進階設定 &gt; 系統設定」。</block>
+  <block id="308a95aee449ddd00629a9605caff608" category="list-text">在「進階設定」頁面中，展開「匯出現有快照副本」部分。</block>
+  <block id="64703cf7405da9314690af646cf94df8" category="paragraph">預設啟用勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照上。</block>
+  <block id="e34f27aaca6e297f80c1ee05c575f188" category="section-title">啟用或停用系統的勒索軟體掃描</block>
+  <block id="6e66997594a2573c888fb35b818bec11" category="paragraph">您可以為叢集啟用或停用勒索軟體掃描。</block>
+  <block id="269c74f89d19496b04459039d508e44d" category="list-text">在出現的頁面中，展開「*勒索軟體掃描*」部分。</block>
+  <block id="5299ea3429e3a9adb55b5ee3ed45db22" category="section-title">啟用或停用提供者的勒索軟體掃描</block>
+  <block id="b49e83f9693b48c2788f78f6c47d5a38" category="paragraph">您可以透過提供者設定頁面在提供者層級啟用或停用勒索軟體掃描。頁面上的設定與您在頁面頂部選擇的儲存桶相關。</block>
+  <block id="bfde028ef8efd6b608042bae922380e6" category="list-text">在「備份設定」頁面中，按一下 <block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block> 在系統中，選擇「配置進階設定 &gt; 提供者設定」。</block>
+  <block id="ac960be8ab0dada73edd8073df004280" category="list-text">在出現的頁面頂部，選擇需要變更設定的儲存桶。</block>
+  <block id="9255ea030351a8ee8402a7708baf0223" category="list-text">展開「勒索軟體掃描」部分。</block>
+  <block id="194a29c3464a05de3c32434145c0b5d6" category="section-title">2026年1月19日</block>
+  <block id="88009dbb638181324526010a9eff3c19" category="sidebar">復原 VMware 虛擬機</block>
+  <block id="9b7e5fddcf3e2a7a93fe6669de87fbc2" category="sidebar">恢復特定虛擬磁碟</block>
+  <block id="6d74a680eadd149117f584cf67b83c34" category="sidebar">恢復訪客檔案和資料夾</block>
+  <block id="3a4d751e404219df1dc6de0a13c8db55" category="sidebar">工作流程、先決條件與限制</block>
 </blocks>

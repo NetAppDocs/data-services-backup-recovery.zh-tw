@@ -36,7 +36,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
-. 選擇*保護群組*標籤。
+. 選擇“保護組”選單。
 . 選擇*建立保護組*。
 . 為保護組提供名稱。
 . 選擇要包含在保護群組中的虛擬機器。
@@ -45,6 +45,25 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 . 選擇“下一步”。
 . 檢查配置。
 . 選擇“*建立*”來建立保護組。
+
+
+
+
+== 編輯保護群組
+
+編輯保護群組以變更其名稱或設定。如果保護群組中的資源發生了變化，您可能需要編輯該保護群組。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
+. 選擇一個工作負載來查看保護詳細資訊。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
+. 選擇*保護群組*標籤。
+. 選擇要編輯的保護群組。
+. 選擇“操作”圖標 image:../media/icon-action.png["操作選項"] > *編輯*。
+. 變更保護群組的任何設置，例如名稱或群組中的虛擬機器。
+. 選擇“下一步”。
+. 必要時更改保護策略。完成後，選擇“下一步”。
+. 檢查配置並選擇“提交”。
 
 
 

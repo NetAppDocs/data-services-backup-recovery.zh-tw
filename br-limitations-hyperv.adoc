@@ -26,6 +26,8 @@ NetApp Backup and Recovery中的 Hyper-V 工作負載的私人預覽版不支援
 * 將虛擬機器還原到備用位置
 * 跨磁碟（跨多個 CIFS 共用）
 * 透過 SAN 保護虛擬機
-* 編輯保護群組
-* 保護使用 System Center Virtual Machine Manager (SCVMM) 叢集的 Hyper-V 主機
+* 即使 Hyper-V 中的「處理器相容性」設定正確，也無法在 CPU 廠商不同的系統之間（例如 Intel 和 AMD 或反向）還原虛擬機器或虛擬機器資料。此設定僅支援同一廠商不同世代產品之間的相容性（例如，Intel 到 Intel 或 AMD 到 AMD）。
 
+
+
+NOTE: 在 2026 年 1 月 19 日發布的版本中，您無法使用「操作」功能表中的「升級」選項來升級 Hyper-V 或 Windows 的NetApp外掛程式。相反，請刪除每個 Hyper-V 主機，然後重新新增以更新插件。
