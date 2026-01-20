@@ -4873,7 +4873,6 @@
   <block id="0bf794e2b090829c5f342b426fa04d5c" category="summary">您可以從 Windows 用戶作業系統上的 VMDK 還原一個或多個檔案或資料夾。</block>
   <block id="9cda0c7b074ab9336e54e5c799f32f1d" category="doc">從 VMDK 還原客戶機檔案和資料夾</block>
   <block id="a26360f952d07b84e1088cc6c613eafe" category="admonition">在從NetApp Backup and Recovery中還原檔案和資料夾之前，您需要為來賓虛擬機器建立憑證。NetApp Backup and Recovery使用這些憑證在附加虛擬磁碟時對來賓虛擬機器進行驗證。</block>
-  <block id="50f6ae852890a51c1bdcbc5fa3074be0" category="paragraph">預設情況下， NetApp Backup and Recovery會將附加的虛擬磁碟保留 24 小時，然後自動將其分開。在精靈中，您可以選擇在復原作業完成後自動刪除來賓檔案復原工作階段，或手動刪除該會話。</block>
   <block id="84768fbdedcb14c4c8dd78daf9604451" category="paragraph">來賓檔案或資料夾恢復效能取決於兩個因素：正在復原的檔案或資料夾的大小；以及正在復原的檔案或資料夾的數量。如果要恢復的資料集大小相同，則恢復大量小檔案可能比恢復少量大檔案花費的時間比預期的要長。</block>
   <block id="851e8e79b33ecfa430d9ed62957e5cad" category="admonition">一台虛擬機器上同時只能執行一個連線或還原操作。您無法在同一台虛擬機器上執行並行連線或復原操作。</block>
   <block id="7392d9ba3083cd42958684b4749d4c72" category="admonition">透過訪客恢復功能，您可以查看和恢復系統文件和隱藏文件，以及查看加密文件。請勿覆蓋現有系統檔案或將加密檔案還原到加密資料夾。在復原作業期間，訪客檔案的隱藏屬性、系統屬性和加密屬性不會保留在復原的檔案中。查看或瀏覽保留分割區可能會導致錯誤。</block>
@@ -4901,7 +4900,6 @@
   <block id="6682a5a344207b03b09bfb0798a193b6" category="section-title">來賓還原工作流程</block>
   <block id="dfb5e1e797a80916627d17588b36ab12" category="paragraph">客戶作業系統還原操作包含以下步驟：</block>
   <block id="7193518e6f5f0076ef05680742323f9c" category="list-text">附</block>
-  <block id="f02fee54a71e292fba6eea93ae620b05" category="paragraph">將虛擬磁碟附加到客戶虛擬機器或代理虛擬機器並啟動客戶檔案復原會話。</block>
   <block id="0f68101772bd5397ef8eb1b632798652" category="list-text">等待</block>
   <block id="75acbae837699c01fe86ee8a2c9fec00" category="paragraph">請等待附加操作完成，然後才能瀏覽和恢復。附加操作完成後，會自動建立訪客文件恢復工作階段。</block>
   <block id="137bf66cd89f2d7f861099ca8519563c" category="list-text">選擇檔案或資料夾</block>
@@ -4912,7 +4910,6 @@
   <block id="6a7a37bd722f9a7ebe568ae7d8778d8f" category="paragraph">在 Windows 用戶作業系統上從 VMDK 還原檔案或資料夾之前，請檢查所有要求。</block>
   <block id="36139d788258b0f7f760e90a7e475cfb" category="list-text">必須安裝並執行 VMware 工具。</block>
   <block id="9809213078fe536846ce61d52cfab742" category="paragraph">NetApp Backup and Recovery使用 VMware 工具的資訊來建立與 VMware 客戶作業系統的連線。</block>
-  <block id="1572f8be6f1646b62b5c0d4d4c380fe8" category="list-text">Windows 客戶作業系統必須執行 Windows Server 2008 R2 或更高版本。</block>
   <block id="697ea025ecb303d4f40d1bf3a8b4bde0" category="inline-link">NetApp互通性矩陣工具 (IMT)</block>
   <block id="95477275bd206a7fb98bf4a8ec799a0b" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
   <block id="73e99419f23009b467a68b78510f24c7" category="list-text">目標虛擬機器的憑證使用使用者名稱為「Administrator」的內建網域或本機管理員帳號。在開始復原作業之前，請先設定要附加虛擬磁碟的虛擬機器的憑證。附加和恢復操作都需要憑證。工作群組使用者可以使用內建的本機管理員帳戶。</block>
@@ -4926,8 +4923,6 @@
   <block id="9229096468701d10aab6b30f546310c1" category="section-title">來賓檔案還原限制</block>
   <block id="ce6cdc51d08da1519febc60a0e9593aa" category="paragraph">在從客戶作業系統還原檔案或資料夾之前，您應該了解其功能限制。</block>
   <block id="0938c50db6a8d08637c074ab0c183305" category="list-text">您無法在來賓作業系統內還原動態磁碟類型。</block>
-  <block id="306e51cbbbbd449259f2c9a524080247" category="list-text">如果還原加密的檔案或資料夾，則不會保留加密屬性。您無法將檔案或資料夾還原到加密資料夾。</block>
-  <block id="631e06eeff5fdebb1ee6aaaa3f7502fd" category="list-text">訪客文件瀏覽頁面顯示隱藏的文件和資料夾，您無法過濾。</block>
   <block id="21e6b4873654be153e3c8d0024f83773" category="list-text">您無法從 Linux 客戶作業系統復原。</block>
   <block id="eccd74f81ec87affcad9c90ed7e1c714" category="paragraph">您無法從執行 Linux 客戶作業系統的 VM 還原檔案和資料夾。但是，您可以附加 VMDK，然後手動恢復檔案和資料夾。有關受支援的客戶作業系統的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
   <block id="a24b5bfa95a0c9efe3023cae447296e6" category="list-text">您無法從 NTFS 檔案系統還原到 FAT 檔案系統。</block>
@@ -4975,4 +4970,9 @@
   <block id="9b7e5fddcf3e2a7a93fe6669de87fbc2" category="sidebar">恢復特定虛擬磁碟</block>
   <block id="6d74a680eadd149117f584cf67b83c34" category="sidebar">恢復訪客檔案和資料夾</block>
   <block id="3a4d751e404219df1dc6de0a13c8db55" category="sidebar">工作流程、先決條件與限制</block>
+  <block id="d85468613eebe17a50e2bf01c2bd42f5" category="paragraph">將虛擬磁碟附加到客戶虛擬機器並啟動客戶文件復原工作階段。</block>
+  <block id="b2c5a3b35bd8f72bf653aa42e54cc06c" category="list-text">Windows 客戶作業系統必須執行 Windows Server 2008 R2 或更高版本。</block>
+  <block id="367aa9be05b109b226ffbefe3981ac88" category="list-text">如果還原加密的檔案或資料夾，則不會保留加密屬性。</block>
+  <block id="34454c78e4e96cfe4c311b8ba072f6cd" category="list-text">您無法將檔案或資料夾還原到加密資料夾。</block>
+  <block id="86a44ece7a205cf4a21804522a9cd44a" category="list-text">隱藏的文件和資料夾會顯示在文件瀏覽頁面中，但您無法對其進行篩選。</block>
 </blocks>
