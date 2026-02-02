@@ -463,7 +463,6 @@
   <block id="27e92fcddc23071f7a376e1c06fa20d6" category="list-text">MetroCluster支援：</block>
   <block id="fa5ec1bbbde705a6b3fbd36d5f35b9f9" category="list-text">當您使用ONTAP 9.12.1 GA 或更高版本時，連接到主系統時支援備份。整個備份配置會傳輸到輔助系統，以便在切換後自動繼續備份到雲端。您不需要在輔助系統上設定備份（事實上，您被禁止這樣做）。</block>
   <block id="a1e9108dbd21ffa07a61d3c3e7ecf506" category="list-text">當您使用ONTAP 9.12.0 及更早版本時，僅支援從ONTAP輔助系統進行備份。</block>
-  <block id="6413e2887d9fc1bca42a1d8fa137281d" category="list-text">目前不支援FlexGroup磁碟區的備份。</block>
   <block id="ff65f252d2a0aa40e634cf2ad7eaa2d3" category="list-text">資料保護卷不支援使用「*立即備份*」按鈕進行臨時磁碟區備份。</block>
   <block id="3dd0180637528cde8671a0c957cf90da" category="list-text">不支援 SM-BC 配置。</block>
   <block id="28014e4f484f0639d9b0151965328912" category="list-text">ONTAP不支援從單一磁碟區到多個物件儲存的SnapMirror關係扇出；因此， NetApp Backup and Recovery不支援此配置。</block>
@@ -4974,4 +4973,5 @@
   <block id="f411222cfe4404b6e0b3d9790460b804" category="list-text">現在您可以將 Hyper-V VM 備份和快照還原到其他位置。使用此功能可以管理不同 Hyper-V 主機上的 VM 版本。</block>
   <block id="83de53928b74eea738d883969ca231fa" category="list-text">NetApp Backup and Recovery 現在支援由 System Center Virtual Machine Manager (SCVMM) 配置並託管在 CIFS 共用上的 Hyper-V 虛擬機器。</block>
   <block id="fe3a06f4a23ebd296fcaecd751b29ac6" category="paragraph">KVM 工作負載預覽版現在可以保護由 Apache CloudStack 管理的 KVM 主機和虛擬機器。</block>
+  <block id="e82f8585939ff44aeed4d4c863058cee" category="list-text">從 ONTAP 9.18.1 開始，FlexGroup 磁碟區備份已支援於 MetroCluster 組態中。</block>
 </blocks>
