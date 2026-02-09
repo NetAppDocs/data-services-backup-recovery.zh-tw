@@ -43,7 +43,7 @@ NetApp Backup and Recovery使用身分和存取管理來控制每個使用者可
 ** 有關 Microsoft SQL Server 工作負載，請參閱link:br-start-discover.html["發現 Microsoft SQL Server 工作負載"]。
 ** 有關 VMware 工作負載，請參閱link:br-use-vmware-discovery.html["發現 VMware 工作負載"]。
 ** 有關 KVM 工作負載，請參閱link:br-start-discover-kvm.html["發現 KVM 工作負載"]。
-** 有關 Oracle 工作負載，請參閱link:br-start-discover-oracle.html["發現 Oracle 工作負載"]。
+** 有關 Oracle Database 工作負載，請參閱 link:br-start-discover-oracle.html["探索 Oracle Database 工作負載"]。
 ** 對於 Hyper-V 工作負載，請參閱link:br-start-discover-hyperv.html["發現 Hyper-V 工作負載"]。
 ** 有關 Kubernetes 工作負載，請參閱link:br-start-discover-kubernetes.html["發現 Kubernetes 工作負載"]。
 

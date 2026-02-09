@@ -24,6 +24,11 @@ NetApp Backup and Recovery需要在保護 Kubernetes 工作負載之前發現它
 
 在備份和復原清單中，發現您環境中的 Kubernetes 工作負載。新增工作負載會將 Kubernetes 叢集新增至NetApp Backup and Recovery。然後，您可以新增應用程式並保護叢集資源。
 
+[NOTE]
+====
+當您發現目前受 Trident Protect 保護的叢集時，所有與 Trident Protect 一起使用的備份計畫都會在發現過程中停用（Trident Protect 備份計畫與 Backup and Recovery 不相容）。若要保護叢集中的應用程式，link:br-use-policies-create.html["建立新的保護原則"]或將應用程式與現有原則建立關聯。之後，您可以視需要移除 Trident Protect 備份計畫。
+
+====
 .步驟
 . 執行下列操作之一：
 +
@@ -35,10 +40,10 @@ NetApp Backup and Recovery需要在保護 Kubernetes 工作負載之前發現它
 . 輸入叢集名稱並選擇與叢集一起使用的連接器。
 . 按照出現的命令列說明進行操作：
 +
-** 建立Trident保護命名空間
+** 建立 Trident Protect 命名空間
 ** 建立 Kubernetes 機密
 ** 新增 Helm 儲存庫
-** 安裝Trident Protect 和Trident Protect 連接器
+** 安裝或升級 Trident Protect 和 Trident Protect 連接器
 +
 這些步驟確保NetApp Backup and Recovery可以與叢集互動。
 

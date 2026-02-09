@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: br-limitations-kubernetes.html 
+keywords: limitations, known, NetApp Backup and Recovery, Kubernetes 
+summary: 在您的環境中使用 Backup and Recovery 之前，請先檢閱這些 NetApp Backup and Recovery 限制。 
+---
+= 適用於 Kubernetes 工作負載的 NetApp Backup and Recovery 已知限制
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
+
+
+
+== 變更應用程式的保護原則
+
+當您變更應用程式的關聯保護原則以使用不同的儲存區或次要複寫目標時、保護原則可能會失敗。
+
+*因應措施*：移除並重新新增應用程式。
+
+
+
+== 3-2-1 保護原則組態限制
+
+當您建立 3-2-1 保護策略時，如果物件儲存備份不會與複製到次要儲存設備同時發生，則在保護應用程式時，保護策略會掛起。
+
+*因應措施*：移除並重新新增應用程式，並使用不同的保護原則加以保護。

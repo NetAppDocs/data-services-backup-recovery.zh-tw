@@ -77,7 +77,7 @@ NOTE: 有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件�
 ** 參考link:br-use-hyperv-protect-overview.html["保護 Hyper-V 工作負載"]。
 
 
-* Oracle 工作負載（預覽版）
+* *Oracle Database 工作負載（預覽）*：
 +
 ** 備份和還原資料庫和日誌
 ** 使用保護組管理備份任務
@@ -85,7 +85,7 @@ NOTE: 有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件�
 ** 使用 3-2-1 備份架構保護資料庫
 ** 配置備份保留
 ** 掛載和卸載 ARCHIVELOG 備份
-** 參考link:br-use-oracle-protect-overview.html["保護 Oracle 工作負載"]。
+** 請參閱 link:br-use-oracle-protect-overview.html["保護 Oracle Database 工作負載"]。
 
 
 * Kubernetes 工作負載（預覽版）
@@ -148,6 +148,8 @@ NetApp不會向您收取試用版的使用費用。但是，您需要承擔與�
 *服務費*
 
 對於ONTAP磁碟區工作負載，您只需為受物件儲存保護的磁碟區付費。費用是根據來源ONTAP磁碟區在應用效率之前使用的邏輯容量計算的，也稱為前端 TB（FETB）。
+
+對於 Kubernetes 工作負載，費用是根據所有持續磁碟區的總大小計算的。
 
 對於所有其他工作負載，您需要為至少保護到一個輔助儲存目標或物件儲存目標的資源付費。費用是根據來源工作負載的邏輯大小計算的。對於資料庫而言，這意味著資料庫的大小；對於虛擬機器而言，這意味著虛擬機器的大小。
 

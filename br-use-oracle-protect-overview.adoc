@@ -14,7 +14,7 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 
 
 [role="lead"]
-使用NetApp Backup and Recovery保護 Oracle 資料庫和日誌。獲得快速、節省空間、崩潰一致和資料庫一致的備份和還原。將 Oracle 工作負載備份到 AWS S3、 NetApp StorageGRID、Azure Blob Storage 或ONTAP S3。將備份還原到本機 Oracle 主機。
+使用 NetApp Backup and Recovery 保護 Oracle 資料庫和日誌。取得快速、節省空間、崩潰一致性且資料庫一致的備份和還原。將 Oracle Database 工作負載備份到 AWS S3、NetApp StorageGRID、Azure Blob Storage 或 ONTAP S3。將備份還原到內部部署 Oracle 主機。
 
 使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：
 
@@ -26,10 +26,10 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 
 NOTE: 若要切換至NetApp Backup and Recovery UI 版本或從 NetApp Backup and Recovery UI 版本切換，請參閱link:br-start-switch-ui.html["切換到先前的NetApp Backup and RecoveryUI"]。
 
-您可以使用NetApp Backup and Recovery執行與 Oracle 工作負載相關的下列任務：
+您可以使用 NetApp Backup and Recovery 來執行下列與 Oracle Database 工作負載相關的任務：
 
-* link:br-start-discover-oracle.html["發現 Oracle 工作負載"]
-* link:br-use-oracle-protection-groups.html["為 Oracle 工作負載建立和管理保護群組"]
-* link:br-use-oracle-backup.html["備份 Oracle 工作負載"]
-* link:br-use-oracle-restore.html["復原 Oracle 工作負載"]
+* link:br-start-discover-oracle.html["探索 Oracle Database 工作負載"]
+* link:br-use-oracle-protection-groups.html["建立和管理 Oracle Database 工作負載的保護群組"]
+* link:br-use-oracle-backup.html["備份 Oracle Database 工作負載"]
+* link:br-use-oracle-restore.html["還原 Oracle Database 工作負載"]
 

@@ -1,0 +1,50 @@
+= Kubernetes 工作負載增強功能
+:allow-uri-read: 
+
+
+
+
+=== Kubernetes 工作負載增強功能
+
+此版本的 Kubernetes 工作負載引入了以下增強功能：
+
+* *CR 工作流程支援*：您現在可以使用 CR 以及 Backup and Recovery Web UI 執行常見的保護任務。
+* *叢集遷移*：現在您可以將受 Trident Protect 保護的現有 Kubernetes 叢集新增至 NetApp Backup and Recovery。
+* *警示架構支援*：您現在可以接收有關某些 Kubernetes 工作負載事件的電子郵件和 UI 警示。
+* *Restore 選項卡整合*：您現在可以從 Restore 功能表存取 Kubernetes 工作負載 restore 操作。
+* *支援 3-2-1 扇出備份架構*：現在，在保護 Kubernetes 工作負載時，您可以在保護原則中使用 3-2-1 扇出架構。
+
+
+有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"]。
+
+
+
+=== Oracle Database 工作負載增強功能
+
+此版本的 Oracle Database 工作負載引入了以下增強功能：
+
+* *非 root 使用者支援*：非 root 使用者現在可以執行備份、還原和複製作業，從而提高安全性和合規性。
+* *Clone 支援*：現在使用 ASM 庫 v2 ，在主要和次要 NAS 、 SAN 和 ASM 環境中支援 Clone 功能，從而實現協調的保護工作流程。
+* *Clone split 支援*：現在可以將可寫入快照（Clone）從其父 Volume 中拆分出來，從而釋放儲存空間並實現獨立操作。
+* *物件儲存的備份和還原*：現在支援基於物件的 S3 相容儲存目標的原生備份和還原功能。
+* *Clone Lifecycle Management（CLM）*：主儲存設備支援複製重新整理作業。
+* *複製到備用主機*：現在您可以從主儲存和次要儲存將資料庫複製到不同的主機（用於測試或分析）。
+* *ONTAP 一致性群組支援*：現在支援 ONTAP 一致性群組，確保跨多個磁碟區的應用程式一致性快照。
+* Backup and Recovery 現在支援以下針對 Oracle Database 工作負載的保護原則架構：
++
+** 3-2-1 分支
+** 磁碟到磁碟
+** 磁碟到物件儲存
+** 級聯
+** 本地快照
+
+
+
+
+有關保護 Oracle Database 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["保護 Oracle 資料庫工作負載概述"]。
+
+
+
+=== 其他增強功能
+
+Hyper-V 工作負載、KVM 工作負載和 VMware 工作負載現已在 NetApp Backup and Recovery 中正式推出（GA）。

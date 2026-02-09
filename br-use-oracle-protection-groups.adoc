@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-oracle-protection-groups.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle, database, workloads, volumes, snapshots 
-summary: 在NetApp Backup and Recovery中建立和管理 Oracle 工作負載的保護群組。 
+summary: 在 NetApp Backup and Recovery 中建立和管理 Oracle Database 工作負載的保護群組。 
 ---
-= 使用NetApp Backup and Recovery為 Oracle 工作負載建立和管理保護群組
+= 使用 NetApp Backup and Recovery 為 Oracle Database 工作負載建立及管理保護群組
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 Oracle 工作負載的�
 
 * 建立保護組。
 * 查看保護詳情。
-* 立即備份保護組。看link:br-use-kvm-backup.html["立即備份 Oracle 工作負載"]。
+* 立即備份保護群組。請參閱 link:br-use-kvm-backup.html["立即備份 Oracle Database 工作負載"]。
 * 刪除保護組。
 
 

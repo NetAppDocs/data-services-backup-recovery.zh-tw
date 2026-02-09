@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-oracle-restore.html 
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp Backup and Recovery保護您的 Oracle 工作負載。 
+summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作負載。 
 ---
 = 使用NetApp Backup and RecoveryOracle 資料庫
 :hardbreaks:
@@ -148,7 +148,7 @@ summary: 使用NetApp Backup and Recovery保護您的 Oracle 工作負載。
 --
 .恢復至備用位置
 --
-不適用於 Oracle 工作負載預覽。
+不適用於 Oracle Database 工作負載預覽。
 
 --
 ====

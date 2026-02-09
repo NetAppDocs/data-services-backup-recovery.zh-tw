@@ -28,6 +28,10 @@ NetApp Backup and Recovery讓您輕鬆發現 Kubernetes 集群，而無需產生
 .開始之前
 在新增和保護 Kubernetes 應用程式之前，您需要link:br-start-discover.html["發現 Kubernetes 工作負載"]。
 
+[role="tabbed-block"]
+====
+.使用 Web UI 新增應用程式
+--
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory*。
 . 選擇一個 Kubernetes 實例，然後選擇「檢視」以查看與該實例關聯的資源。
@@ -58,41 +62,130 @@ NOTE: 控制台不會儲存搜尋參數或結果；這些參數用於在選定�
 .結果
 應用程式已建立並出現在 Kubernetes 清單的 *應用程式* 標籤中的應用程式清單中。  NetApp Console會根據您的設定啟用對應用程式的保護，並且您可以在備份和還原的*監控*區域中監控進度。
 
-
-
-== 保護現有的 Kubernetes 應用程式
-
-在已新增的 Kubernetes 應用程式上啟用保護策略。
-
+--
+.使用 CR 新增應用程式
+--
 .步驟
-. 在NetApp Backup and Recovery中，選擇 *Inventory*。
-. 選擇一個 Kubernetes 實例，然後選擇「檢視」以查看與該實例關聯的資源。
-. 選擇“*應用程式*”標籤。
-. 在應用程式清單中，選擇您想要保護的應用程式並選擇相關的操作選單。
-. 選擇*保護*。
-. 在「*策略*」區域中，選擇現有的保護策略來保護應用程式或建立新策略。參考link:br-use-policies-create.html#create-a-policy["創建策略"]有關建立保護策略的詳細資訊。
-. 在*Prescripts and postscripts*區域中，啟用並配置您想要在備份操作之前或之後執行的任何prescript或postscript執行掛鉤。您可以配置執行鉤子的類型、它使用的模板、參數和標籤選擇器。
-. 選擇*完成*。
+. 建立目的地應用程式 CR 檔案：
++
+.. 建立自訂資源（CR）檔案並將其命名為（例如、 `my-app-name.yaml`）。
+.. 設定下列屬性：
++
+*** *metadata.name*：（_必填_）應用程式自訂資源的名稱。請記住您選擇的名稱，因為保護作業所需的其他 CR 檔案會參照此值。
+*** *spec.includedNamespaces*：（_必要_）使用命名空間和標籤選擇器來指定應用程式使用的命名空間和資源。應用程式命名空間必須包含在此清單中。標籤選擇器是可選的，可用來篩選每個指定命名空間中的資源。
+*** *spec.includedClusterScopedResources*：（_選用_）使用此屬性指定要包含在應用程式定義中的叢集範圍資源。此屬性可讓您根據資源的群組、版本、類型和標籤來選擇這些資源。
++
+**** *groupVersionKind*：（_必要_）指定叢集範圍資源的 API 群組、版本和類型。
+**** *labelSelector*：（_可選_）依照標籤篩選叢集範圍的資源。
 
 
-.結果
-控制台根據您的設定啟用對應用程式的保護，您可以在備份和還原的*監控*區域中監控進度。一旦您啟用應用程式保護，控制台就會建立該應用程式的完整備份。任何未來的增量備份都將根據您在與該應用程式關聯的保護策略中定義的計劃建立。
+
+
+.. 如有需要，請設定下列註解：
++
+*** *metadata.annotations.protect.trident.netapp.io/skip-vm-freeze*：（_可選_）此註解僅適用於從虛擬機器定義的應用程式，例如在 KubeVirt 環境中，快照之前會發生檔案系統凍結。指定此應用程式在快照期間是否可以寫入檔案系統。如果設定為 true，則應用程式會忽略全域設定，並可在快照期間寫入檔案系統。如果設定為 false，則應用程式會忽略全域設定，且檔案系統會在快照期間凍結。如果已指定但應用程式定義中沒有虛擬機器，則會忽略該註解。如果未指定，則應用程式會遵循link:trident-protect-requirements.html#protecting-data-with-kubevirt-vms["全域檔案系統凍結設定"]。
+*** *protect.trident.netapp.io/protection-command*：（_選用_）使用此註釋指示 Backup and Recovery 保護或停止保護應用程式。可能的值為 `protect`或 `unprotect`。
+*** *protect.trident.netapp.io/protection-policy-name*：（_選用_）使用此註解指定要用於保護此應用程式的 Backup and Recovery 保護原則名稱。此保護原則必須已存在於 Backup and Recovery 中。
++
+[NOTE]
+====
+如果需要在應用程式建立後套用此註解，可以使用以下命令：
+
+[source, console]
+----
+kubectl annotate application -n <application CR namespace> <application CR name> protect.trident.netapp.io/skip-vm-freeze="true"
+----
+====
++
+YAML 範例：
+
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Application
+metadata:
+  annotations:
+    protect.trident.netapp.io/skip-vm-freeze: "false"
+    protect.trident.netapp.io/protection-command: "protect"
+    protect.trident.netapp.io/protection-policy-name: "policy-name"
+  name: my-app-name
+  namespace: my-app-namespace
+spec:
+  includedNamespaces:
+    - namespace: namespace-1
+      labelSelector:
+        matchLabels:
+          app: example-app
+    - namespace: namespace-2
+      labelSelector:
+        matchLabels:
+          app: another-example-app
+  includedClusterScopedResources:
+    - groupVersionKind:
+        group: rbac.authorization.k8s.io
+        kind: ClusterRole
+        version: v1
+      labelSelector:
+        matchLabels:
+          mylabel: test
+----
 
 
 
-== 立即備份 Kubernetes 應用程式
 
-手動建立 Kubernetes 應用程式的備份，為未來的備份和快照建立基線，或確保最新資料受到保護。
+. （選用）新增篩選條件，包含或排除標記有特定標籤的資源：
++
+** *resourceFilter.resourceSelectionCriteria*：（篩選必需）使用 `Include`或 `Exclude`來包含或排除在 resourceMatchers 中定義的資源。新增以下 resourceMatchers 參數以定義要包含或排除的資源：
++
+*** *resourceFilter.resourceMatchers*：resourceMatcher 物件的陣列。如果在此陣列中定義多個元素，則它們之間按 OR 運算匹配，每個元素內的欄位（group、kind、version）之間按 AND 運算匹配。
++
+**** *resourceMatchers[].group*：（_可選_）要篩選的資源群組。
+**** *resourceMatchers[].kind*：（_可選_）要篩選的資源類型。
+**** *resourceMatchers[].version*：（_可選_）要篩選的資源版本。
+**** *resourceMatchers[].names*：（_可選_）要過濾的資源的 Kubernetes metadata.name 欄位中的名稱。
+**** *resourceMatchers[].namespaces*：（_可選_）要篩選的資源的 Kubernetes metadata.name 欄位中的命名空間。
+**** *resourceMatchers[].labelSelectors*：（_可選_）資源在 Kubernetes metadata.name 欄位中定義的標籤選擇器字串 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors["Kubernetes 說明文件"^]。例如： `"trident.netapp.io/os=linux"`。
++
 
-.步驟
-. 在NetApp Backup and Recovery中，選擇 *Inventory*。
-. 選擇一個 Kubernetes 實例，然後選擇「檢視」以查看與該實例關聯的資源。
-. 選擇“*應用程式*”標籤。
-. 在應用程式清單中，選擇要備份的應用程式並選擇相關的操作選單。
-. 選擇*立即備份*。
-. 確保選擇了正確的應用程式名稱。
-. 選擇*備份*。
+NOTE: 當兩者  `resourceFilter` 和  `labelSelector` 同時使用時， `resourceFilter` 首先運行，然後  `labelSelector` 將應用於生成的資源。
+
++
+例如：
+
++
+[source, yaml]
+----
+spec:
+  resourceFilter:
+    resourceSelectionCriteria: "Include"
+    resourceMatchers:
+      - group: my-resource-group-1
+        kind: my-resource-kind-1
+        version: my-resource-version-1
+        names: ["my-resource-names"]
+        namespaces: ["my-resource-namespaces"]
+        labelSelectors: ["trident.netapp.io/os=linux"]
+      - group: my-resource-group-2
+        kind: my-resource-kind-2
+        version: my-resource-version-2
+        names: ["my-resource-names"]
+        namespaces: ["my-resource-namespaces"]
+        labelSelectors: ["trident.netapp.io/os=linux"]
+----
 
 
-.結果
-控制台建立應用程式的備份並在備份和還原的*監控*區域中顯示進度。此備份是根據與應用程式關聯的保護策略建立的。
+
+
+
+
+. 建立與您的環境相符的應用程式 CR 後、套用該 CR。例如：
++
+[source, console]
+----
+kubectl apply -f my-app-name.yaml
+----
+
+
+--
+====

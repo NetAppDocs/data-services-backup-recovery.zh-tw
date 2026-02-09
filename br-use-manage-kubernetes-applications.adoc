@@ -25,6 +25,9 @@ NetApp Backup and Recovery讓您能夠取消保護並刪除 Kubernetes 應用程
 
 如果您不再需要保護某個應用程序，可以取消保護。當您取消保護應用程式時， NetApp Backup and Recovery會停止保護該應用程序，但保留所有相關的備份和快照。
 
+
+NOTE: 在應用程式的保護操作仍在進行時，您無法取消其保護。您可以等待操作完成，或作為變通方法，<<刪除 Kubernetes 應用程式的還原點,刪除還原點>>正在執行的保護操作正在使用。然後您就可以取消應用程式的保護。
+
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory*。
 . 選擇一個 Kubernetes 實例，然後選擇「檢視」以查看與該實例關聯的資源。
@@ -52,4 +55,19 @@ NetApp Backup and Recovery讓您能夠取消保護並刪除 Kubernetes 應用程
 CAUTION: 您將無法再使用這些快照和備份還原應用程式。
 
 . 確認操作並選擇*刪除*。
+
+
+
+
+== 刪除 Kubernetes 應用程式的還原點
+
+如果您需要取消應用程式的保護，並且目前正在執行保護操作，則可能需要刪除該應用程式的還原點。
+
+.步驟
+. 在 NetApp Backup and Recovery 選單中，選取 *還原*。
+. 從清單中選擇一個 Kubernetes 應用程式，然後選擇該應用程式的 *View and Restore* 。
++
+出現還原點清單。
+
+. 選擇您需要刪除的復原點，然後選取 Actions 圖示 image:../media/icon-action.png["操作選項"] > *Delete recovery point* 將其刪除。
 

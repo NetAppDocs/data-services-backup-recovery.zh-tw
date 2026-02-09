@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-oracle-backup.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
-summary: 使用NetApp備份和復原保護您的 Oracle 工作負載。 
+summary: 使用 NetApp 備份和復原功能保護您的 Oracle Database 工作負載。 
 ---
-= 使用NetApp Backup and RecoveryOracle 工作負載
+= 使用 NetApp Backup and Recovery 備份 Oracle Database 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ summary: 使用NetApp備份和復原保護您的 Oracle 工作負載。
 
 NOTE: 若要按排程備份保護群組或單一資料庫，請建立管理備份和還原作業的策略。看link:br-use-policies-create.html["創建策略"]以取得說明。
 
-* 建立保護組來管理一組資源的備份和還原作業。看link:br-use-kvm-protection-groups.html["使用NetApp Backup and Recovery為 Oracle 工作負載建立和管理保護群組"]了解更多。
+* 建立保護群組以管理一組資源的備份和還原作業。如需詳細資訊，請參閱 link:br-use-kvm-protection-groups.html["使用 NetApp Backup and Recovery 為 Oracle Database 工作負載建立及管理保護群組"]。
 * 立即備份保護群組（立即建立按需備份）。
 * 立即備份資料庫。
 

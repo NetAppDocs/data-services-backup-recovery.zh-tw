@@ -10,7 +10,7 @@
 
 *支援多個儲存桶*：（私有預覽）從ONTAP 9.17.1 及更高版本開始，您現在可以保護系統中的捲，每個系統最多可跨不同的雲端供應商使用 6 個儲存桶。
 
-link:prev-ontap-backup-manage.html["了解更多關於使用NetApp Backup and Recovery備份ONTAP卷資料的信息"]。
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-manage.html["了解更多關於使用NetApp Backup and Recovery備份ONTAP卷資料的信息"].
 
 
 

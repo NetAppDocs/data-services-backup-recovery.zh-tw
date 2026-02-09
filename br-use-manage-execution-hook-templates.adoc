@@ -18,7 +18,7 @@ summary: NetApp Backup and Recovery使您能夠管理執行掛鉤，以便在應
 
 [NOTE]
 ====
-NetApp Backup and Recovery在資料保護期間凍結和解凍 KubeVirt 等應用程式的檔案系統。您可以使用Trident保護文件全域或針對特定應用程式停用此行為：
+NetApp Backup and Recovery 會在資料保護期間，為像 KubeVirt 這樣的應用程式凍結和解除凍結檔案系統。您可以透過 Trident Protect 文件，全域或針對特定應用程式停用此行為：
 
 * 若要為所有應用程式停用此行為，請參閱 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html#protecting-data-with-kubevirt-vms["使用 KubeVirt 虛擬機器保護數據"]。
 * 若要針對特定應用程式停用此行為，請參閱 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-manage-applications.html#define-an-application["定義應用程式"]。
@@ -105,6 +105,9 @@ NOTE: 如果將命名空間過濾器新增至在復原或複製作業後執行�
 == 建立執行鉤子模板
 
 您可以建立自訂執行掛鉤模板，用於在應用程式上執行資料保護操作之前或之後執行操作。
+
+
+NOTE: 您在此處建立的範本僅可用於保護 Kubernetes 工作負載。
 
 .步驟
 . 在控制台中，前往*保護*>*備份和還原*。

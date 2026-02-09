@@ -1,0 +1,227 @@
+---
+sidebar: sidebar 
+permalink: br-use-back-up-now-kubernetes-applications-cr.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
+summary: NetApp Backup and Recovery 可讓您使用自訂資源（CR）手動備份 Kubernetes 應用程式。 
+---
+= 現在可以使用 Backup and Recovery 中的自訂資源備份 Kubernetes 應用程式
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Backup and Recovery 可讓您使用自訂資源（CR）手動備份 Kubernetes 應用程式。
+
+
+
+== 立即使用自訂資源備份 Kubernetes 應用程式
+
+手動建立 Kubernetes 應用程式的備份，為未來的備份和快照建立基線，或確保最新資料受到保護。
+
+
+NOTE: 如果叢集範圍的資源在應用程式定義中被明確引用，或引用了任何應用程式命名空間，則這些資源將包含在備份、快照或複製中。
+
+.開始之前
+請確保 AWS 會話令牌的有效期限足以應付任何長時間運行的 s3 備份作業。如果令牌在備份作業期間過期，則操作可能會失敗。
+
+* 有關檢查當前會話令牌過期時間的更多資訊，請參閱 https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html["AWS API 文件"^]。
+* 如需 AWS 資源憑證的詳細資訊，請參閱 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html["AWS IAM 文件"^]。
+
+
+
+
+=== 使用自訂資源建立本機快照
+
+若要為您的 Kubernetes 應用程式建立快照並將其儲存在本地，請使用具有特定屬性的 Snapshot 自訂資源。
+
+.步驟
+. 建立自訂資源（CR）檔案並將其命名為  `local-snapshot-cr.yaml`。
+. 在您建立的檔案中、設定以下屬性：
++
+** *metadata.name*：（_必填_）此自訂資源的名稱；請為您的環境選擇一個唯一且有意義的名稱。
+** *spec.applicationRef*：要建立快照的應用程式的 Kubernetes 名稱。
+** *spec.appVaultRef*：（_必填_）應儲存快照內容（元資料）的 AppVault 名稱。
+** *spec.reclaimPolicy*：（選用）定義當快照 CR 刪除時，快照的 AppArchive 會發生什麼情況。這意味著即使設為 `Retain`，快照也會被刪除。有效選項：
++
+*** `Retain` (預設)
+*** `Delete`
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Snapshot
+metadata:
+  namespace: my-app-namespace
+  name: local-snapshot-cr
+spec:
+  applicationRef: my-application
+  appVaultRef: appvault-name
+  reclaimPolicy: Retain
+----
+
+
+
+
+. 在  `local-snapshot-cr.yaml` 檔案中填入正確的值後，套用 CR：
++
+[source, console]
+----
+kubectl apply -f local-snapshot-cr.yaml
+----
+
+
+
+
+=== 使用自訂資源將應用程式備份至物件儲存區
+
+建立具有特定屬性的 Backup CR，以將應用程式備份到物件儲存區。
+
+.步驟
+. 建立自訂資源（CR）檔案並將其命名為  `object-store-backup-cr.yaml`。
+. 在您建立的檔案中、設定以下屬性：
++
+** *metadata.name*：（_必填_）此自訂資源的名稱；請為您的環境選擇一個唯一且有意義的名稱。
+** *spec.applicationRef*：（_必需_）要備份的應用程式的 Kubernetes 名稱。
+** *spec.appVaultRef*：（_必需，與 spec.appVaultTargetsRef 互斥_）如果您使用相同儲存桶來儲存快照和備份，則這是 AppVault 的名稱，備份內容應儲存在其中。
+** *spec.appVaultTargetsRef*：（_必需，與 spec.appVaultRef 互斥_）如果您使用不同的儲存貯體來儲存快照和備份，則此為應儲存備份內容的 AppVault 名稱。
+** *spec.dataMover*：（_可選_）字串，指示要用於備份作業的備份工具。該值區分大小寫，且必須為 `CBS`。
+** *spec.reclaimPolicy*：（_選用_）定義刪除 Backup CR 時備份內容（中繼資料/磁碟區資料）的處理方式。可能的值：
++
+*** `Delete`
+*** `Retain` (預設)
+
+
+** *spec.cleanupSnapshot*：（_必需_）確保備份 CR 建立的臨時快照在備份作業完成後不會被刪除。建議值： `false`。
++
+使用同一個儲存貯體儲存快照和備份時的範例 YAML：
+
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Backup
+metadata:
+  namespace: my-app-namespace
+  name: my-cr-name
+spec:
+  applicationRef: my-application
+  appVaultRef: appvault-name
+  dataMover: CBS
+  reclaimPolicy: Retain
+  cleanupSnapshot: false
+----
++
+使用不同儲存區分別儲存快照和備份時的 YAML 範例：
+
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Backup
+metadata:
+  namespace: my-app-namespace
+  name: object-store-backup-cr
+spec:
+  applicationRef: my-application
+  appVaultTargetsRef: appvault-targets-name
+  dataMover: CBS
+  reclaimPolicy: Retain
+  cleanupSnapshot: false
+----
+
+
+. 在  `object-store-backup-cr.yaml` 檔案中填入正確的值後，套用 CR：
++
+[source, console]
+----
+kubectl apply -f object-store-backup-cr.yaml
+----
+
+
+
+
+=== 使用自訂資源建立 3-2-1 扇出備份
+
+使用 3-2-1 扇出架構進行備份時，備份會同時複製到輔助儲存和物件儲存。若要建立 3-2-1 扇出備份，請建立具有特定屬性的 Backup CR。
+
+.步驟
+. 建立自訂資源（CR）檔案並將其命名為  `3-2-1-fanout-backup-cr.yaml`。
+. 在您建立的檔案中、設定以下屬性：
++
+** *metadata.name*：（_必填_）此自訂資源的名稱；請為您的環境選擇一個唯一且有意義的名稱。
+** *spec.applicationRef*：（_必需_）要備份的應用程式的 Kubernetes 名稱。
+** *spec.appVaultTargetsRef*：（_必填_）應儲存備份內容的 AppVault 名稱。
+** *spec.dataMover*：（_可選_）字串，指示要用於備份作業的備份工具。該值區分大小寫，且必須為 `CBS`。
+** *spec.reclaimPolicy*：（_選用_）定義刪除 Backup CR 時備份內容（中繼資料/磁碟區資料）的處理方式。可能的值：
++
+*** `Delete`
+*** `Retain` (預設)
+
+
+** *spec.cleanupSnapshot*：（_必需_）確保備份 CR 建立的臨時快照在備份作業完成後不會被刪除。建議值： `false`。
+** *spec.replicateSnapshot*：（_必要_）指示 Backup and Recovery 將快照複製到次要儲存設備。必要值： `true`。
+** *spec.replicateSnapshotReclaimPolicy*：（_選用_）定義刪除複製快照時的處理方式。可能的值：
++
+*** `Delete`
+*** `Retain` (預設)
++
+YAML 範例：
+
++
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: Backup
+metadata:
+  namespace: my-app-namespace
+  name: 3-2-1-fanout-backup-cr
+spec:
+  applicationRef: my-application
+  appVaultTargetsRef: appvault-targets-name
+  dataMover: CBS
+  reclaimPolicy: Retain
+  cleanupSnapshot: false
+  replicateSnapshot: true
+  replicateSnapshotReclaimPolicy: Retain
+----
+
+
+
+
+. 在  `3-2-1-fanout-backup-cr.yaml` 檔案中填入正確的值後，套用 CR：
++
+[source, console]
+----
+kubectl apply -f 3-2-1-fanout-backup-cr.yaml
+----
+
+
+
+
+== 支援的備份註釋
+
+下表描述了建立備份 CR 時可以使用的註解。
+
+[cols="2,1,3,1"]
+|===
+| 註解 | 類型 | 描述 | 預設值 
+
+
+| protect.trident.netapp.io/full-backup | 字串 | 指定備份是否為非增量備份。設定為 `true`可建立非增量備份。最佳實踐是定期執行完整備份，並在兩次完整備份之間執行增量備份，以最大程度地降低還原相關風險。 | "false" 
+
+
+| protect.trident.netapp.io/snapshot-completion-timeout | 字串 | 允許完成整個快照作業的最長時間。 | "60 分鐘" 
+
+
+| protect.trident.netapp.io/volume-snapshots-ready-to-use-timeout | 字串 | 磁碟區快照達到可用狀態所允許的最長時間。 | "30 分鐘" 
+
+
+| protect.trident.netapp.io/volume-snapshots-created-timeout | 字串 | 建立磁碟區快照所允許的最長時間。 | "5 分鐘" 
+
+
+| protect.trident.netapp.io/pvc-bind-timeout-sec | 字串 | 等待新建立的任何 PersistentVolumeClaims （PVC） 到達該  `Bound` 階段的最大時間 （以秒為單位），超過此時間操作將失敗。 | "1200"（20 分鐘） 
+|===
