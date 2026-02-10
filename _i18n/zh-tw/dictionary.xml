@@ -3963,17 +3963,6 @@
   <block id="2f8f18e2be23909e758abe786154b05f" category="list-text"><block ref="2f8f18e2be23909e758abe786154b05f" category="inline-link-macro-rx"></block></block>
   <block id="1f325f707555c5e4623d4ca3ed92bc14" category="inline-link-macro">管理 VMware 工作負載的保護</block>
   <block id="6b5e78f60de50d17c6c9e6c26f183c04" category="list-text"><block ref="6b5e78f60de50d17c6c9e6c26f183c04" category="inline-link-macro-rx"></block></block>
-  <block id="450da046762e94e9e23eb94084dbc43c" category="doc">SnapCenter Plug-in for VMware vSphere以與NetApp Backup and Recovery一起使用</block>
-  <block id="dbb710aaa3d97d2921c1e1444e6686e3" category="paragraph">您應該在NetApp Backup and Recovery中註冊SnapCenter Plug-in for VMware vSphere，以便顯示資料儲存區和虛擬機器。只有具有管理權限的使用者才能註冊SnapCenter Plug-in for VMware vSphere。</block>
-  <block id="30ba7e7d6da357cee0df5cb67f525c81" category="list-text">選擇*SnapCenter Plug-in for VMware vSphere*。</block>
-  <block id="12f2045076b291561318e5d9855f26de" category="list-text">指定以下詳細資訊：</block>
-  <block id="ebeea6bd6cc46b0c9f463f2b01659606" category="list-text">在SnapCenter Plug-in for VMware vSphere中，指定SnapCenter Plug-in for VMware vSphere的 FQDN 或 IP 位址。</block>
-  <block id="463d350eb6c9887e5addb9a6561a47ad" category="list-text">在連接埠欄位中，指定執行SnapCenter Plug-in for VMware vSphere埠號碼。</block>
-  <block id="618dcf671038308466415a25c2670cec" category="paragraph">您應該確保在預設 8144 連接埠上執行的SnapCenter Plug-in for VMware vSphere與可在任何雲端提供者（Amazon Web Services、Microsoft Azure、Google Cloud Platform）或本機執行的控制台代理程式執行個體之間的通訊暢通。</block>
-  <block id="eeba430c3c4e0795629fe640359a8730" category="list-text">在使用者名稱和密碼欄位中，指定具有管理員角色的 vCenter 使用者的憑證。</block>
-  <block id="b5249314aff5fae6b6de54ce7f13f16b" category="list-text">選擇*註冊*。</block>
-  <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*完成後*</block>
-  <block id="b6ee3dd78c315fa7dfd1bfa66181a1c2" category="paragraph">選擇「*備份和復原*」&gt;「*虛擬機器*」以查看使用已註冊的SnapCenter Plug-in for VMware vSphere保護的所有資料儲存和虛擬機器。</block>
   <block id="4f42130e8cfb9f713223107cb029a735" category="doc">使用NetApp Backup and Recovery恢復虛擬機器數據</block>
   <block id="b9f7c26581cad3cbd789c6d293692814" category="admonition">您無法還原跨資料儲存的虛擬機器。</block>
   <block id="1c79f8653ccf267be1bce47f8ccf3d2f" category="list-text">如果您要恢復到備用位置：</block>
@@ -4216,9 +4205,6 @@
   <block id="4dba655852206fd33ef2ae210d0f09ea" category="sidebar">備份 Microsoft SQL Server 工作負載</block>
   <block id="a86a44463f171d5cbfffdac926d2c5f7" category="sidebar">還原 Microsoft SQL Server 工作負載</block>
   <block id="c82b8b73ed613da47a71b640f8e94c5d" category="sidebar">複製 Microsoft SQL Server 工作負載</block>
-  <block id="460a4c33ada7a6581872d15b96a4344b" category="sidebar">保護 VMware 工作負載（預覽版）</block>
-  <block id="6a3bb59ab6ca7e1af58c7f804a58a47c" category="sidebar">保護 KVM 工作負載（私人預覽版）</block>
-  <block id="d800ef02fd04e0bcce643b8bacdfd33e" category="sidebar">保護 Hyper-V 工作負載（私人預覽版）</block>
   <block id="8f12fe2d1611902de146ad61b89b8295" category="sidebar">保護 Kubernetes 工作負載（預覽版）</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格和社區</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Data Services</block>
@@ -4253,11 +4239,9 @@
   <block id="c00b274754a2d13242a61b1534660a37" category="sidebar">管理 Microsoft SQL Server 庫存</block>
   <block id="41e1a34ea3ba2b687b86e55ec1a7955d" category="sidebar">管理 Microsoft SQL Server 快照</block>
   <block id="c8ffa42e0e508862d020665c979eb5c0" category="sidebar">建立 Microsoft SQL Server 報告</block>
-  <block id="f4aa5ca6921e92380246ea7a562973a9" category="sidebar">保護 VMware 工作負載（無需 VMware SnapCenter外掛程式即可預覽）</block>
   <block id="b1b8c22062b7762d4a3c459e880dee3b" category="sidebar">保護 VMware 工作負載（使用適用於 VMware 的SnapCenter外掛程式）</block>
   <block id="7706cc052aa7120ddac8475709793258" category="sidebar">保護虛擬機器工作負載概述</block>
   <block id="9ce88727019b612743000c7bcc2bfd23" category="sidebar">保護虛擬機器工作負載的先決條件</block>
-  <block id="437ae89009b207d1aafce3d11e58f524" category="sidebar">SnapCenter Plug-in for VMware vSphere</block>
   <block id="776ec5ed6f61de56be98c037c8ca01c9" category="sidebar">建立備份虛擬機器資料的策略</block>
   <block id="1d5ad62b9217b4a3f085f517534f40bb" category="sidebar">將資料儲存備份到 Amazon Web Services</block>
   <block id="32d2b45dd98e36ad888d7156b4532053" category="sidebar">將資料儲存體備份到 Microsoft Azure</block>
@@ -4266,7 +4250,6 @@
   <block id="9a3f2e7eb30992bb084418711e5093f2" category="sidebar">管理資料儲存和虛擬機器資料的保護</block>
   <block id="9234f5bc35aa09673eacbf8fece508db" category="sidebar">恢復虛擬機器資料和資料存儲</block>
   <block id="a6c93de7c03701dfba222e9072ffe5e7" category="sidebar">保護 KVM 工作負載（預覽版）</block>
-  <block id="1db561ecd535caff5b4a1e7b87668d89" category="sidebar">保護 Hyper-V 工作負載（預覽版）</block>
   <block id="34caa737a5a671b66cc6fe7531c1f8b9" category="sidebar">安裝和卸載復原點</block>
   <block id="60c0c463b8839d0f2c5e5cea8fa728ad" category="sidebar">保護 Kubernetes 工作負載（預覽版）</block>
   <block id="3186e7c44dc909386a0204716ffc46f6" category="sidebar">管理 Kubernetes 工作負載的執行鉤子模板</block>
@@ -5005,8 +4988,6 @@
   <block id="55cf8812c6c22803ddfa5fd41279187d" category="list-text">磁碟到磁碟</block>
   <block id="0f6d38819f95da81f8bc80258fee7071" category="list-text">磁碟到物件儲存</block>
   <block id="e3b858c29172bddae0dbb7e461b2f7df" category="list-text">級聯</block>
-  <block id="cc5d8c9d6668803b438b03567e08b611" category="section-title">其他增強功能</block>
-  <block id="6ec61dc6a9b7787975d159ba164424f9" category="paragraph">Hyper-V 工作負載、KVM 工作負載和 VMware 工作負載現已在 NetApp Backup and Recovery 中正式推出（GA）。</block>
   <block id="6e56df4eb422b0b15187c84ba551237e" category="summary">在您的環境中使用 Backup and Recovery 之前，請先檢閱這些 NetApp Backup and Recovery 限制。</block>
   <block id="36f1a2626b3ec6834b4eb361bac96c37" category="doc">適用於 Kubernetes 工作負載的 NetApp Backup and Recovery 已知限制</block>
   <block id="36c070b302c08836d912ffb6841bb46e" category="section-title">變更應用程式的保護原則</block>
@@ -5241,8 +5222,14 @@
   <block id="8c703f00b817f5c9121d74efc33cdde9" category="list-text">NetApp Trident Protect Connector 25.07 或更新版本（在 Kubernetes 工作負載探索期間安裝）</block>
   <block id="5254dbe16e57a413455e2c5f7d5e70a1" category="list-text">確保 Kubernetes 叢集、Trident Protect Connector 和 Trident Protect Proxy 之間的出站方向 TCP 連接埠 443 未被過濾。</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026 年 2 月 09 日</block>
-  <block id="f3effb5ce493101e0cf4cbc9e93014e1" category="sidebar">保護 Oracle Database 工作負載（私人預覽版）</block>
   <block id="e45770f83b5d2c438c00dea64c505ce7" category="sidebar">Oracle Database 工作負載的已知限制</block>
   <block id="c33d3729ba9e6e1c1dd6ccc4b6c7f949" category="sidebar">保護 Oracle Database 工作負載（預覽版）</block>
   <block id="1e6021824e75d382885d2bb2e945f719" category="sidebar">使用自訂資源還原 Kubernetes 應用程式</block>
+  <block id="6108d5ad430f0631e5c6e10714ba980c" category="doc">正式版（GA）支援的 Microsoft Hyper-V 工作負載</block>
+  <block id="c5db154b8366e71dcf87e4624b1a0112" category="paragraph">NetApp Backup and Recovery 現已全面支援 Microsoft Hyper-V 工作負載（GA）。</block>
+  <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="section-title">General Availability（GA）支援的 KVM 工作負載</block>
+  <block id="1d30989467a5dda6a77c2158034a190b" category="paragraph">NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。</block>
+  <block id="a4af15d338a93411ae3eacbe3e9d1c5e" category="sidebar">保護 KVM 工作負載（預覽）</block>
+  <block id="bd7b6aa0517dacb10ee10e479293ef82" category="sidebar">保護 Oracle Database 工作負載（預覽版）</block>
+  <block id="72f656ffc88a48ec4092d869ae05c4e6" category="sidebar">保護 VMware 工作負載（無需適用於 VMware 的 SnapCenter 外掛程式）</block>
 </blocks>

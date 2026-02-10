@@ -120,7 +120,7 @@ sidebar:
         url: "/br-use-manage-snapshots.html"
       - title: 建立 Microsoft SQL Server 報告
         url: "/br-use-reports.html"
-    - title: 保護 VMware 工作負載（無需 VMware SnapCenter外掛程式即可預覽）
+    - title: 保護 VMware 工作負載（無需適用於 VMware 的 SnapCenter 外掛程式）
       entries:
       - title: 保護 VMware 工作負載概述
         url: "/br-use-vmware-protect-overview.html"
@@ -150,8 +150,6 @@ sidebar:
         url: "/prev-vmware-protect-overview.html"
       - title: 保護虛擬機器工作負載的先決條件
         url: "/prev-vmware-prereqs.html"
-      - title: SnapCenter Plug-in for VMware vSphere
-        url: "/prev-vmware-register-snapcenter.html"
       - title: 建立備份虛擬機器資料的策略
         url: "/prev-vmware-policy-create.html"
       - title: 將資料儲存備份到 Amazon Web Services
@@ -178,7 +176,7 @@ sidebar:
         url: "/br-use-kvm-backup.html"
       - title: 恢復 KVM 工作負載
         url: "/br-use-kvm-restore.html"
-    - title: 保護 Hyper-V 工作負載（預覽版）
+    - title: 保護 Hyper-V 工作負載
       entries:
       - title: 保護 Hyper-V 工作負載概述
         url: "/br-use-hyperv-protect-overview.html"

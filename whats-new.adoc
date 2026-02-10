@@ -24,6 +24,18 @@ summary: 了解NetApp Backup and Recovery的新功能。
 
 
 
+=== 正式版（GA）支援的 Microsoft Hyper-V 工作負載
+
+NetApp Backup and Recovery 現已全面支援 Microsoft Hyper-V 工作負載（GA）。
+
+
+
+=== General Availability（GA）支援的 KVM 工作負載
+
+NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。
+
+
+
 === Kubernetes 工作負載增強功能
 
 此版本的 Kubernetes 工作負載引入了以下增強功能：
@@ -62,12 +74,6 @@ summary: 了解NetApp Backup and Recovery的新功能。
 
 
 有關保護 Oracle Database 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["保護 Oracle 資料庫工作負載概述"]。
-
-
-
-=== 其他增強功能
-
-Hyper-V 工作負載、KVM 工作負載和 VMware 工作負載現已在 NetApp Backup and Recovery 中正式推出（GA）。
 
 
 
