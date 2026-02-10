@@ -144,26 +144,6 @@ sidebar:
             url: "/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html"
           - title: 訪客文件恢復故障排除
             url: "/br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html"
-    - title: 保護 VMware 工作負載（使用適用於 VMware 的SnapCenter外掛程式）
-      entries:
-      - title: 保護虛擬機器工作負載概述
-        url: "/prev-vmware-protect-overview.html"
-      - title: 保護虛擬機器工作負載的先決條件
-        url: "/prev-vmware-prereqs.html"
-      - title: 建立備份虛擬機器資料的策略
-        url: "/prev-vmware-policy-create.html"
-      - title: 將資料儲存備份到 Amazon Web Services
-        url: "/prev-vmware-backup-aws.html"
-      - title: 將資料儲存體備份到 Microsoft Azure
-        url: "/prev-vmware-backup-azure.html"
-      - title: 將資料儲存備份到 Google Cloud Platform
-        url: "/prev-vmware-backup-gcp.html"
-      - title: 將資料儲存備份到StorageGRID
-        url: "/prev-vmware-backup-storagegrid.html"
-      - title: 管理資料儲存和虛擬機器資料的保護
-        url: "/prev-vmware-manage.html"
-      - title: 恢復虛擬機器資料和資料存儲
-        url: "/prev-vmware-restore.html"
     - title: 保護 KVM 工作負載（預覽版）
       entries:
       - title: 保護 KVM 工作負載概述
