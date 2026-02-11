@@ -88,7 +88,7 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 
 軟體支援
 
-* 支援 NFS 和 VMFS 資料儲存。不支援vVols 。
+* 支援 NFS 和 VMFS 資料儲存。
 * 支援的 NFS 版本：NFS 3 和 NFS 4.1
 * 支援的 VMware ESXi Server 版本：7.0U1 以上
 * 支援的 VMware vCenter vSphere 版本：7.0U1 及以上
@@ -106,11 +106,6 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 
 | VMware ESXi 伺服器連接埠  a| 
 443（HTTPS），雙向。來賓檔案復原功能使用此連接埠。
-
-
-
-| VMware vSphere vCenter Server 連接埠  a| 
-如果您正在保護 vVol VM，則必須使用連接埠 443。
 
 
 
