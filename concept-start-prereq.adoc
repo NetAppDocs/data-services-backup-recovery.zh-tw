@@ -94,6 +94,7 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 * 支援的 VMware vCenter vSphere 版本：7.0U1 及以上
 * IP 位址：IPv4 和 IPv6
 * VMware TLS：1.2、1.3
+* 支援的連線儲存設備： ONTAP 9.13 或更新版本
 
 
 *保護 VMware 工作負載的連線和連接埠需求*

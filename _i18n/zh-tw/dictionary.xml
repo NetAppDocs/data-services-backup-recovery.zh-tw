@@ -3822,172 +3822,7 @@
   <block id="f2b162f98b611318ceee106c4b60ae51" category="list-text">若要了解按地區劃分的 Google Cloud Storage 詳細定價，請造訪<block ref="51a97b69fb4ea5748d26915fe19e0057" category="inline-link-rx"></block>。</block>
   <block id="fd161debce2c53100b7c61aa8b2d7c6b" category="list-text">要恢復我在 Google Archive 中存檔的物件需要多長時間？</block>
   <block id="efce98c74b9fc5fb1711b2f3d4da8f34" category="list-text">*檢索時間*：從存檔中檢索備份檔案並將其放置在標準儲存中的時間。這有時被稱為“補水”時間。與其他雲端供應商提供的「最冷」儲存解決方案不同，您的資料可以在幾毫秒內存取。</block>
-  <block id="ea41fefc75b4937d079e3db8ee84bd6b" category="doc">在NetApp Backup and Recovery中將資料儲存備份到 Amazon Web Services</block>
-  <block id="88d382e3b7aa9d602ce38d8495a201ac" category="paragraph">您可以使用NetApp Backup and Recovery將一個或多個資料儲存庫備份並歸檔到 Amazon Web Services，以提高儲存效率和雲端轉換。</block>
-  <block id="88e6abd4ee4f112ba359e37a218778f6" category="paragraph">如果資料儲存與歸檔策略相關聯，您可以選擇歸檔層。支援的存檔層是 Glacier 和 Glacier Deep。</block>
-  <block id="c5697e1933bfd2df9d2052983e1d9241" category="inline-link-macro">虛擬機器保護要求</block>
-  <block id="a7772e34879d0350763b229c08abb4ce" category="paragraph">確保你已經滿足了所有<block ref="b3cdcdb9363cf72cee94211d1cf49d2a" category="inline-link-macro-rx"></block>在將資料儲存備份到雲端之前。</block>
-  <block id="ec20419fe9b99a13a7e6a63187f9ad59" category="list-text">在控制台 UI 中，選擇 *保護* &gt; *備份和還原* &gt; *虛擬機器*。</block>
-  <block id="418c5509e2171d55b0aee5c2ea4442b5" category="inline-image-macro">行動</block>
-  <block id="4d2ca83fc058acd8fd1a2b0e9633319d" category="list-text">選擇<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>對應您要備份的資料存儲，然後按一下*啟動備份*。</block>
-  <block id="323d618819396c39de9471cdfb373ee7" category="list-text">在指派策略頁面中，選擇策略並選擇*下一步*。</block>
-  <block id="65c66680701f71dd9f3d5af61f0f6b41" category="list-text">新增系統。</block>
-  <block id="5acc11cd60ff7e94ad464f395b9bc687" category="paragraph">配置您希望控制台發現的叢集管理 LIF。為其中一個資料儲存庫新增系統後，此系統可重複用於駐留在同一個ONTAP叢集上的所有其他資料儲存庫。</block>
-  <block id="c4f42debc709f58c735092418fa00fa1" category="list-text">選擇與 SVM 對應的 *新增系統*。</block>
-  <block id="30871e9b3db5bb3040245da62e031a45" category="list-text">在新增系統精靈中：</block>
-  <block id="b19fb0dfd78b28bc5415a7f3f4ad6a49" category="list-text">指定叢集管理 LIF 的 IP 位址。</block>
-  <block id="73f07eefb51e62cc902b672233bd4977" category="list-text">指定ONTAP叢集使用者的憑證。</block>
-  <block id="85f2ee063f5ea4d52167b81f6a73c16a" category="list-text">選擇*新增系統*。</block>
-  <block id="52405c4e62742959f93902e51bb72d0b" category="list-text">選擇*Amazon Web Services*將其配置為雲端提供者。</block>
-  <block id="4117af0b4d26b5ba222b63a2b7e1eb27" category="list-text">指定 AWS 帳戶。</block>
-  <block id="0b6515b0d85be4c32021431c5119a675" category="list-text">在 AWS 存取金鑰欄位中，指定資料加密的金鑰。</block>
-  <block id="095a532bc2c4eed2ec2c64b6008b497f" category="list-text">在 AWS 金鑰欄位中，指定資料加密的密碼。</block>
-  <block id="b5d98853353bde168501864a9aa65bfd" category="list-text">選擇您想要建立備份的區域。</block>
-  <block id="386a17271d92cc7a25bf8eec122b0494" category="list-text">指定作為系統新增的叢集管理 LIF 的 IP 位址。</block>
-  <block id="e1a761122b21c1ecd586765e53dacaf5" category="list-text">選擇檔案層。</block>
-  <block id="e56d2516907f7fa0a6e073e43392e9ff" category="paragraph">建議設定存檔層，因為這是一次性活動，您無法稍後設定。</block>
-  <block id="aa6666c7d701e3d022bd0894584ba6bc" category="list-text">查看詳細資訊並選擇*啟動備份*。</block>
-  <block id="0d41ec9efd8e5ceb127f404e3e8dc747" category="doc">使用NetApp Backup and Recovery將資料儲存備份到 Microsoft Azure</block>
-  <block id="edad35da0f3ccd8716a3ecbec6ba4250" category="paragraph">您可以將SnapCenter Plug-in for VMware vSphere與NetApp Backup and Recovery集成，將一個或多個資料儲存庫備份到 Microsoft Azure。這將有助於 VM 管理員輕鬆快速地備份和存檔數據，以提高儲存效率並加速雲端轉換。</block>
-  <block id="0f375a841aae3358a6339864ccfaa86f" category="paragraph">如果資料儲存與存檔策略相關聯，您將可以選擇存檔層。支援的存檔層是 Azure 存檔 Blob 儲存體。</block>
-  <block id="a5d365a9b7414bdc6e9205c9e8eb585d" category="list-text">在NetApp ConsoleUI 中，選擇 *保護* &gt; *備份與還原* &gt; *虛擬機器*。</block>
-  <block id="b621b490b47d0134904539933037722c" category="list-text">選擇<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>對應您要備份的資料儲存並選擇*啟動備份*。</block>
-  <block id="8a8bca40b3d548c634cd73d37e5a630c" category="list-text">選擇 *Microsoft Azure* 將其配置為雲端提供者。</block>
-  <block id="3cc0854835f3b022e6a1537884da217d" category="list-text">指定 Azure 訂閱 ID。</block>
-  <block id="db7f740fbee2466830a1f559dba6b17b" category="list-text">建立新的資源組或使用現有的資源組。</block>
-  <block id="9e8ed7b08261a94b9277289757488767" category="paragraph">建議設定存檔層，因為這是一次性活動，以後將不允許您進行設定。</block>
-  <block id="ea30425cb29f7e447fdeace74c26461f" category="doc">使用NetApp Backup and Recovery將資料儲存備份到 Google Cloud Platform</block>
-  <block id="476c041ec40c52b29e7eff32f4cb7b32" category="paragraph">您可以將SnapCenter Plug-in for VMware vSphere與NetApp Backup and Recovery集成，將一個或多個資料儲存區備份到 Google Cloud Platform。這將有助於 VM 管理員輕鬆快速地備份和存檔數據，以提高儲存效率並加速雲端轉換。</block>
-  <block id="bccdf5c7461a91341c81491a049f7917" category="list-text">選擇*Google Cloud Platform*將其配置為雲端提供者。</block>
-  <block id="bd1bf42f3eb311ef9f00c80352b4b141" category="list-text">選擇您想要建立用於備份的 Google Cloud Storage 儲存桶的 Google Cloud 專案。</block>
-  <block id="fa0f3e6189a17df2b37f1f89872dbee4" category="list-text">在 Google Cloud Access Key 欄位中指定金鑰。</block>
-  <block id="3ee34b7fd8f9ec35694f9ada246e9a7b" category="list-text">在 Google Cloud Secret Key 欄位中，指定密碼。</block>
-  <block id="3ec390de7db5c59f007c717fb9aa2dac" category="list-text">指定IP空間。</block>
-  <block id="71fb704fe6aa28d59f46358c61d5b35a" category="doc">使用NetApp Backup and Recovery將資料儲存備份到StorageGRID</block>
-  <block id="5cf880745ad0e6e8d8208ad538957b63" category="paragraph">您可以將SnapCenter Plug-in for VMware vSphere與NetApp Backup and Recovery集成，將一個或多個資料儲存庫備份到StorageGRID 。這將有助於 VM 管理員輕鬆快速地備份和存檔數據，以提高儲存效率並加速雲端轉換。</block>
-  <block id="6c5cc1315b69c8256bbc33cf47a5a7ab" category="list-text">選擇* StorageGRID*。</block>
-  <block id="cf4e6e70123f43cdec5ffd93f792c083" category="list-text">指定儲存伺服器IP。</block>
-  <block id="10303a499a9e21a77e6dad69618c622b" category="list-text">選擇存取密鑰和密鑰。</block>
-  <block id="b26e7e8656acba73c7e69f8c75f299d1" category="doc">在NetApp Backup and Recovery中管理資料儲存和虛擬機器的保護</block>
-  <block id="749f97c0bfe03215ddfcc33e348d0c86" category="paragraph">您可以在使用NetApp Backup and Recovery資料之前查看策略、資料儲存庫和虛擬機器。根據資料庫、政策或資源群組的變化，您可以從NetApp ConsoleUI 查看更新。</block>
-  <block id="5bea9354a7049a7e639553b703f18e84" category="paragraph">您可以查看所有預設的預設策略。對於每個策略，當您查看詳細資訊時，會列出所有相關的策略和虛擬機器。</block>
-  <block id="b69b2eb51081aa4642c6e881faa0bcb8" category="list-text">從“*設定*”下拉式選單中，選擇“*策略*”。</block>
-  <block id="8448a57387950bac4af453a04975933d" category="list-text">選擇與您想要查看其詳細資訊的策略相對應的*查看詳細資訊*。</block>
-  <block id="1c281da53a696408c46b6da9d44b27e7" category="paragraph">列出了相關的策略和虛擬機器。</block>
-  <block id="8ed12ef54cb1d9b3b955b96ba5173201" category="section-title">查看資料儲存和虛擬機</block>
-  <block id="e3dbc361d0cd589544c61663904eef2c" category="paragraph">顯示使用已註冊的SnapCenter Plug-in for VMware vSphere保護的資料儲存和虛擬機器。</block>
-  <block id="4e98200f297bd7d5853a285fdfe1191f" category="list-text">在控制台 UI 中，選擇 *保護* &gt; *備份和還原* &gt; *虛擬機器* &gt; *設定* &gt; *SnapCenter Plug-in for VMware vSphere*。</block>
-  <block id="18a02c3f300d1165ca70adad83d6a91a" category="list-text">選擇要查看其資料儲存區和虛擬機器的 SnapCenter Plug-in for VMware vSphere。</block>
-  <block id="b1314bfff132a050766ce5d32ac976de" category="section-title">取消保護資料存儲</block>
-  <block id="24e973d26bb253c7b5fb8a764db6860a" category="paragraph">您可以取消保護先前已受保護的資料儲存。當您想要刪除雲端備份或不再想將其備份到雲端時，您可以取消保護資料儲存。取消保護成功後，資料儲存可以再次受到保護。</block>
-  <block id="a4d4871f49f1183bee5e02ea1b2064f9" category="list-text">選擇“操作”圖標<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>對應您要取消保護的資料儲存並選擇*取消保護*。</block>
-  <block id="b4aa547260f4fe266f03ec3a845576a5" category="section-title">編輯SnapCenter Plug-in for VMware vSphere</block>
-  <block id="7d890413f9b664e2bcf99c30c870de89" category="paragraph">您可以在控制台中編輯SnapCenter Plug-in for VMware vSphere的詳細資訊。</block>
-  <block id="73f6eff78e2d5b4c91558c1e0c0e8a24" category="list-text">選擇“操作”圖標<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>並選擇*編輯*。</block>
-  <block id="05c829c7b617d014c0186656453575ea" category="list-text">根據需要修改詳細資料。</block>
-  <block id="738c224049615eeb47fe5a57a6ea8f7c" category="section-title">刷新資源和備份</block>
-  <block id="0e9cec251ac8debda34d029f4302d4eb" category="paragraph">如果您想查看已新增至應用程式的最新資料儲存和備份，您應該刷新資源和備份。這將啟動資源和備份的發現，並顯示最新的詳細資訊。</block>
-  <block id="04fa58f349615d27149f6dda8efe38e2" category="list-text">選擇“備份和還原”&gt;“虛擬機器”。</block>
-  <block id="266f9ff12956ac5692bc7be08bda846f" category="list-text">從「*設定*」下拉式選單中，選擇「SnapCenter Plug-in for VMware vSphere*」。</block>
-  <block id="3909de0b2400078920ffd3d72a06f81b" category="list-text">選擇“操作”圖標<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>對應SnapCenter Plug-in for VMware vSphere，然後選擇*刷新資源和備份*。</block>
-  <block id="aa8a6c50e00adebd857afeb3c163080e" category="section-title">刷新策略或資源組</block>
-  <block id="a663847f6a4dfe84a9e34d968b306aef" category="paragraph">如果策略或資源群組發生變化，則應重新整理保護關係。</block>
-  <block id="dfc67c4e882a2d4fffb8d16037fa7dd2" category="list-text">選擇“操作”圖標<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>對應資料儲存並選擇*刷新保護*。</block>
-  <block id="ecb0c28cd21006ad8c86d4be09edf297" category="section-title">取消註冊SnapCenter Plug-in for VMware vSphere</block>
-  <block id="3d61f1dcef482f1c526370542b798e50" category="paragraph">與SnapCenter Plug-in for VMware vSphere關聯的所有資料儲存和虛擬機器將不受保護。</block>
-  <block id="b184ae3f5a4589cacbec55aa0fa973fc" category="list-text">選擇“操作”圖標<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>對應SnapCenter Plug-in for VMware vSphere並選擇 *取消註冊*。</block>
-  <block id="d65dcf19e9eda758238d835f23a69642" category="section-title">監控作業</block>
-  <block id="4044636ea8a32c730e3b044adcda1f8c" category="paragraph">為所有NetApp Backup and Recovery作業建立作業。您可以監控所有作業以及作為每個任務的一部分執行的所有子任務。</block>
-  <block id="942b89acbe370667e9d70389e84f8544" category="list-text">選擇“備份和復原”&gt;“作業監控”。</block>
-  <block id="5f2c87cb3d6dde849915754be64e1690" category="paragraph">當您啟動一項操作時，會出現一個窗口，表示該作業已啟動。您可以選擇連結來監控該作業。</block>
-  <block id="84d686b7ff9ad225b36fb397dd4cbce7" category="list-text">選擇主要任務來查看子任務以及每個子任務的狀態。</block>
-  <block id="38f579d721675ddff9e2ac5938361837" category="doc">在NetApp Backup and Recovery中建立備份資料儲存的策略</block>
-  <block id="b584330b721e66ff5dabb697badb5ff7" category="paragraph">您可以建立一個策略或使用NetApp Backup and Recovery中提供的以下預定義策略之一。</block>
-  <block id="43852dc1e0c3229284688eb4c01dfef0" category="list-text">如果您不想編輯預定義策略，則應該建立策略。</block>
-  <block id="38fb3153d6139974d24ba11e28a0718d" category="list-text">要將備份從物件儲存移至歸檔存儲，您應該執行ONTAP 9.10.1 或更高版本，並且 Amazon Web Services 或 Microsoft Azure 應該是雲端提供者。</block>
-  <block id="5d0ad01dbdb8717fbebf1cb44a3c10cd" category="list-text">您應該為每個雲端提供者配置存檔存取層。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">關於此任務</block>
-  <block id="25a9fea1bd39d0e24939bbbf1f842b7a" category="paragraph">NetApp Console中提供了以下預先定義策略：</block>
-  <block id="002f7378a5fcfc2f66cfea851a7fd5f4" category="cell">策略名稱</block>
-  <block id="b021df6aac4654c454f46c77646e745f" category="cell">標籤</block>
-  <block id="dfa56cb0ff8ac0e7087134a3d7e1f39d" category="cell">保留價值</block>
-  <block id="7250cb0d0c1524aec805084d9f0ffc21" category="paragraph">1 年每日 LTR（長期保留）</block>
-  <block id="c512b685438f41daa7386329a3b8f8d3" category="paragraph">日常的</block>
-  <block id="5ef698cd9fe650923ea331c15af3b160" category="paragraph">366</block>
-  <block id="5ea7bb0579b5fe6d2acf33c0ab584548" category="paragraph">5 年每日 LTR</block>
-  <block id="069654d5ce089c13f642d19f09a3d1c0" category="paragraph">1830</block>
-  <block id="2cd29ea4d4dd80df56178fc41c9bc385" category="paragraph">7 年每週 LTR</block>
-  <block id="6c25e6a6da95b3d583c6ec4c3f82ed4d" category="paragraph">每週</block>
-  <block id="d709f38ef758b5066ef31b18039b8ce5" category="paragraph">370</block>
-  <block id="f76a9390149b62241c42efed985a431a" category="paragraph">10年每月長期利率</block>
-  <block id="9030e39f00132d583da4122532e509e9" category="paragraph">每月</block>
-  <block id="da4fb5c6e93e74d3df8527599fa62642" category="paragraph">120</block>
-  <block id="0ef51421739da7017b4d3decc1813f4a" category="list-text">在虛擬機器頁面中，從設定下拉清單中選擇*策略*。</block>
-  <block id="db92c743d97601150bbdfa11bf3cf66b" category="list-text">選擇*建立策略*。</block>
-  <block id="9f6b1aa82322cc4f853fe0fe7c532ff0" category="list-text">在「保留」部分中，選擇一種保留類型並指定要保留的備份數量。</block>
-  <block id="db2205364549e4c4841dc9b5d66f62a3" category="list-text">選擇主儲存或輔助儲存作為備份儲存來源。</block>
-  <block id="2a60e5494e07cff54330378780f8e2a4" category="list-text">（可選）如果您希望在一定天數後將備份從物件儲存移至檔案儲存以優化成本，請選取「將備份分層到檔案」複選框，然後輸入應在多少天後將備份存檔。</block>
-  <block id="44dae527927c9be3aabaf37ba09b9068" category="admonition">您無法編輯或刪除與資料儲存區關聯的策略。</block>
-  <block id="ac58e4fdaef529d7061db727c7d95b98" category="doc">NetApp Backup and Recovery中虛擬機器工作負載的先決條件</block>
-  <block id="443b7d29fe382a91202282145dbedf43" category="paragraph">在開始使用NetApp Backup and Recovery保護虛擬機器工作負載之前，請確保符合以下先決條件：</block>
-  <block id="d511399444cf864b695600d159b7c93b" category="list-text">SnapCenter Plug-in for VMware vSphere</block>
-  <block id="2a18af02b6c0b7e92a17df9509574f26" category="list-text">您應該使用適用SnapCenter Plug-in for VMware vSphere從本機輔助儲存備份資料儲存區。</block>
-  <block id="c3ce6809be6bdc67ae978395484d0585" category="list-text">ONTAP 9.8 或更高版本</block>
-  <block id="06126ace9559015b34270e5c984cb3c9" category="list-text">為了支援 VMFS，SnapCenter Plug-in for VMware vSphere應在 4.9 或更高版本上執行。如果SnapCenter Plug-in for VMware vSphere從早期版本升級至 4.9 版本，請確保備份 VMFS 資料儲存。</block>
-  <block id="bff3cdd2fd5f993f3bc3fbbd3c43fb30" category="list-text">應在SnapCenter Plug-in for VMware vSphere中至少進行一次備份。</block>
-  <block id="61607910a1db523098b12865f02faff4" category="list-text">SnapCenter Plug-in for VMware vSphere中至少有一個每日、每週或每月策略，沒有標籤或與控制台中的虛擬機器策略具有相同的標籤。</block>
-  <block id="9c2d7e78a68e18061466c4c12001d828" category="list-text">對於預先確定的策略，適用於SnapCenter Plug-in for VMware vSphere中的資料儲存和雲端中的資料儲存的計劃層應該相同。</block>
-  <block id="ad747f24f06324c9bc58eeaa274f014a" category="list-text">確保資料儲存庫中沒有FlexGroup卷，因為不支援備份和還原FlexGroup卷。</block>
-  <block id="f8038513f93eb5ca7b2505674255b67b" category="list-text">在所需資源組上停用“*_recent*”。如果您為資源組啟用了“*_recent*”，則這些資源組的備份不能用於雲端資料保護，隨後也不能用於復原作業。</block>
-  <block id="391eb750d98c55b72607ff6ec6311db2" category="list-text">確保將要還原虛擬機器的目標資料儲存有足夠的空間來容納所有虛擬機器檔案（如 VMDK、VMX、VMSD 等）的副本。</block>
-  <block id="6ee2c41b7a9bfae5bb618327d9499834" category="list-text">確保目標資料儲存區中沒有因先前的還原作業失敗而導致的格式為 restore_xxx_xxxxxx_filename 的陳舊虛擬機器檔案。您應該在觸發恢復操作之前刪除陳舊的檔案。</block>
-  <block id="7148963c1fe9bd20799d84596b688191" category="list-text">若要部署配置了代理程式的連接器，請確保所有傳出的連接器呼叫都透過代理伺服器路由。</block>
-  <block id="e0d0f7f19ee8c764850a895376299f6e" category="list-text">如果備份資料儲存區的磁碟區已受到「磁碟區」標籤（NetApp Backup and Recovery-&gt; 磁碟區）的保護，則相同資料儲存區無法再次受到「虛擬機器」標籤（NetApp Backup and Recovery-&gt; 虛擬機器）的保護。</block>
-  <block id="455299fd2e4b438ff8661df0bfd1cace" category="paragraph">下圖顯示了每個組件以及您需要在它們之間準備的連接：</block>
-  <block id="add26d38486fad5ca461f986832fa6c3" category="inline-image-macro">架構圖</block>
-  <block id="955c6f1851b4039bd20ae31d5f14d338" category="paragraph"><block ref="955c6f1851b4039bd20ae31d5f14d338" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1ad1b9b9f7ac4090b8d287b119a246b7" category="doc">在NetApp Backup and Recovery中保護虛擬機器工作負載概述</block>
-  <block id="f2e6828ccbddc013dabb3aca8551e78b" category="paragraph">使用NetApp Backup and Recovery保護您的虛擬機器工作負載。  NetApp Backup and Recovery和 VMDK 提供快速、節省空間、崩潰一致和虛擬機器一致的備份和還原作業。</block>
-  <block id="40c5998ccd6f421d1eaa29ece0c36b59" category="paragraph">您可以將資料儲存備份至 Amazon Web Services S3、Microsoft Azure Blob、Google Cloud Platform 和StorageGRID ，並將虛擬機器還原回SnapCenter Plug-in for VMware vSphere。</block>
-  <block id="21b169a7cabe8831cd38ce5fb6f77475" category="paragraph">有關保護虛擬機器工作負載的說明，請參閱以下主題：</block>
-  <block id="49ef03573c7748afa14739a88a72a8fe" category="inline-link-macro">為 VMware 工作負載建立策略</block>
-  <block id="f906bca37e956e72a0c25eb84a587aba" category="list-text"><block ref="f906bca37e956e72a0c25eb84a587aba" category="inline-link-macro-rx"></block></block>
-  <block id="533a49682158340fa752f41b001c3ed7" category="inline-link-macro">將 VMware 資料儲存備份到 Amazon Web Services</block>
-  <block id="28ed746142d082cc313c957c3916de57" category="list-text"><block ref="28ed746142d082cc313c957c3916de57" category="inline-link-macro-rx"></block></block>
-  <block id="b4d632569ac2a60a95624d732b062c21" category="inline-link-macro">將 VMware 資料儲存體備份到 Microsoft Azure</block>
-  <block id="8452a00d810c3f304181a9750756e3c3" category="list-text"><block ref="8452a00d810c3f304181a9750756e3c3" category="inline-link-macro-rx"></block></block>
-  <block id="f54c20442d5c079704492d9e9cc632b0" category="inline-link-macro">將 VMware 資料儲存區備份到 Google Cloud Platform</block>
-  <block id="08261c8a90295d24c0179c89fab872df" category="list-text"><block ref="08261c8a90295d24c0179c89fab872df" category="inline-link-macro-rx"></block></block>
-  <block id="d4e0304413c6571799459b3f2395df3b" category="inline-link-macro">將 VMware 資料儲存備份到StorageGRID</block>
-  <block id="a8fdfae9cbcef9f449ea9eb2143c4f64" category="list-text"><block ref="a8fdfae9cbcef9f449ea9eb2143c4f64" category="inline-link-macro-rx"></block></block>
-  <block id="2f8f18e2be23909e758abe786154b05f" category="list-text"><block ref="2f8f18e2be23909e758abe786154b05f" category="inline-link-macro-rx"></block></block>
-  <block id="1f325f707555c5e4623d4ca3ed92bc14" category="inline-link-macro">管理 VMware 工作負載的保護</block>
-  <block id="6b5e78f60de50d17c6c9e6c26f183c04" category="list-text"><block ref="6b5e78f60de50d17c6c9e6c26f183c04" category="inline-link-macro-rx"></block></block>
-  <block id="4f42130e8cfb9f713223107cb029a735" category="doc">使用NetApp Backup and Recovery恢復虛擬機器數據</block>
-  <block id="b9f7c26581cad3cbd789c6d293692814" category="admonition">您無法還原跨資料儲存的虛擬機器。</block>
-  <block id="1c79f8653ccf267be1bce47f8ccf3d2f" category="list-text">如果您要恢復到備用位置：</block>
-  <block id="0bd63162a36deb15bb735dfc68ec0b84" category="list-text">確保來源 vCenter 和目標 vCenter 處於連結模式。</block>
-  <block id="ccea797bbf5eba8cc950fa05c806cd76" category="list-text">確保在NetApp Console*系統* 頁面和SnapCenter Plug-in for VMware vSphere中的連結模式 vCenter 中新增了來源和目標叢集詳細資訊。</block>
-  <block id="52bda1d8d40e82cef23f0197a5e0c990" category="list-text">在控制台 UI 中，選擇 *保護* &gt; *備份和還原* &gt; *虛擬機器* &gt; *SnapCenter Plug-in for VMware vSphere*，然後選擇SnapCenter Plug-in for VMware vSphere。</block>
-  <block id="d180a4da8965c4cd5488cd05903774f0" category="list-text">您可以將虛擬機器從資料儲存或虛擬機器還原到原始位置或備用位置：</block>
-  <block id="db5366d69994d30376d1a970dcebb9ce" category="cell">如果您想恢復虛擬機器...</block>
-  <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">這樣做...</block>
-  <block id="ccc5c5f6926c7affe9ddb8b5fd8e78d0" category="paragraph">從資料儲存到原始位置</block>
-  <block id="7103002346129eef1e9f38419a6c849d" category="list-text">選擇“操作”圖標<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>與您要恢復的資料儲存相對應的，然後按一下「查看詳細資料」。</block>
-  <block id="a7b5011dd36cfe0539eff959f97ab523" category="list-text">選擇與要還原的備份相對應的*還原*。</block>
-  <block id="ce924f0dcf910e34ec23b7b7ca88af8d" category="list-text">選擇要從備份中還原的虛擬機，然後選擇「下一步」。</block>
-  <block id="8cc375f4ce3601a663a600c7d8e620e5" category="list-text">確保選擇了*Original*並選擇*Continue*。</block>
-  <block id="793f88b02160a70ac96d346b799dd570" category="list-text">如果使用設定了存檔設定的政策來保護虛擬機，請選擇*存檔還原優先權*並選擇*下一步*。</block>
-  <block id="5f6a823289f7bbe90f46815d77f2f0f9" category="list-text">查看詳細資訊並選擇*恢復*。</block>
-  <block id="c0df5d97adcf3825af806d990e658e67" category="paragraph">從資料儲存區到備用位置</block>
-  <block id="1be093b2878514e1a668a6557e0fa48f" category="list-text">選擇“操作”圖標<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>對應您要復原的資料儲存並選擇*查看詳細資料*。</block>
-  <block id="2f663ab73d99f410b05e9f748fdb9f69" category="list-text">選擇*替代*。</block>
-  <block id="1825907f18d398bff7d7bf89210651db" category="list-text">選擇備用 vCenter Server、ESXi 主機、資料儲存和網路。</block>
-  <block id="94187c3780ece70dc5689a3db077e744" category="list-text">為復原後的虛擬機器提供名稱，然後選擇「繼續」。</block>
-  <block id="0236f808af929087f6a9616d379b96a4" category="paragraph">從虛擬機器到原始位置</block>
-  <block id="6cd8cc5fdd9e1409bcb46d17177068ee" category="list-text">選擇“操作”圖標<block ref="1d94ccc08c31bc8efbc06bfabc6854b6" category="inline-image-macro-rx" type="image"></block>對應您要還原的虛擬機器並選擇*還原*。</block>
-  <block id="071df86763e0e93af80e50596aa0710c" category="list-text">選擇您想要用來還原虛擬機器的備份。</block>
-  <block id="ccb90cb50d99e7cb9712a836810d4fae" category="paragraph">從虛擬機器到備用位置</block>
   <block id="b92e6028af16604f3b6fd4eade9dfec6" category="summary">在沒有網際網路存取的網站（稱為「私有模式」）中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID或ONTAP S3 儲存桶中。如果您將來遇到控制台代理主機系統問題，您可以部署新的控制台代理並還原關鍵的NetApp Backup and Recovery資料。</block>
   <block id="a215e32a572a4f73138eb57df3fb494d" category="doc">在暗站中恢復NetApp Backup and Recovery配置數據</block>
   <block id="e49ea1690cc473e646cdffd861381cbc" category="paragraph">在沒有網際網路存取的網站（稱為_私有模式_）中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID或ONTAP S3 儲存桶中。如果控制台代理主機系統出現問題，您可以部署新的控制台代理並還原關鍵的NetApp Backup and Recovery資料。</block>
@@ -4239,16 +4074,6 @@
   <block id="c00b274754a2d13242a61b1534660a37" category="sidebar">管理 Microsoft SQL Server 庫存</block>
   <block id="41e1a34ea3ba2b687b86e55ec1a7955d" category="sidebar">管理 Microsoft SQL Server 快照</block>
   <block id="c8ffa42e0e508862d020665c979eb5c0" category="sidebar">建立 Microsoft SQL Server 報告</block>
-  <block id="b1b8c22062b7762d4a3c459e880dee3b" category="sidebar">保護 VMware 工作負載（使用適用於 VMware 的SnapCenter外掛程式）</block>
-  <block id="7706cc052aa7120ddac8475709793258" category="sidebar">保護虛擬機器工作負載概述</block>
-  <block id="9ce88727019b612743000c7bcc2bfd23" category="sidebar">保護虛擬機器工作負載的先決條件</block>
-  <block id="776ec5ed6f61de56be98c037c8ca01c9" category="sidebar">建立備份虛擬機器資料的策略</block>
-  <block id="1d5ad62b9217b4a3f085f517534f40bb" category="sidebar">將資料儲存備份到 Amazon Web Services</block>
-  <block id="32d2b45dd98e36ad888d7156b4532053" category="sidebar">將資料儲存體備份到 Microsoft Azure</block>
-  <block id="eb1ab874b09a7eab583845e8576be828" category="sidebar">將資料儲存備份到 Google Cloud Platform</block>
-  <block id="ba7b66b996d8928df996e4fd4fffa4a4" category="sidebar">將資料儲存備份到StorageGRID</block>
-  <block id="9a3f2e7eb30992bb084418711e5093f2" category="sidebar">管理資料儲存和虛擬機器資料的保護</block>
-  <block id="9234f5bc35aa09673eacbf8fece508db" category="sidebar">恢復虛擬機器資料和資料存儲</block>
   <block id="a6c93de7c03701dfba222e9072ffe5e7" category="sidebar">保護 KVM 工作負載（預覽版）</block>
   <block id="34caa737a5a671b66cc6fe7531c1f8b9" category="sidebar">安裝和卸載復原點</block>
   <block id="60c0c463b8839d0f2c5e5cea8fa728ad" category="sidebar">保護 Kubernetes 工作負載（預覽版）</block>
@@ -4288,11 +4113,7 @@
   <block id="d4356e3242caba9699bd9bc147a04798" category="paragraph">在「恢復」頁面（搜尋和恢復）中，您可以透過使用篩選器搜尋快照來恢復資源，即使您不記得其確切名稱、位置或最後已知日期。</block>
   <block id="63751d750873479f94855f0a16fc63d8" category="list-text">Hyper-V Windows Server 主機的軟體需求：</block>
   <block id="fd7bb5c3777005321645f38a2d07ea27" category="admonition">如果還原作業未完成，請等到作業監視器顯示「失敗」後再重試還原作業。</block>
-  <block id="df3ee99c8171743d8bd35d65cf62b2ed" category="paragraph">您可以使用NetApp Backup and Recovery將虛擬機器資料從雲端還原到本機 vCenter Server。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。如果虛擬機器是使用存檔原則備份的，那麼您可以設定存檔還原優先權。</block>
   <block id="51e153ee1aa6cdb4ca7796e926180b53" category="admonition">若要切換至NetApp Backup and Recovery工作負載，請參閱<block ref="e56b09183f5489111204017fecace77e" category="inline-link-macro-rx"></block>。</block>
-  <block id="2f3b7eef1cf7df43dea1233ed03f5f42" category="list-text">確保將系統新增至控制台*系統*頁面中的其他位置。</block>
-  <block id="870482577443f708a74b9dbe9b8fe928" category="admonition">如果您使用 VMware vSphere vMotion 移動虛擬機器並從控制台還原它，則備份和還原會將其還原到原始備份位置。</block>
-  <block id="6e6630b7443f8dd6eade1b55e3c59141" category="paragraph">對於 Amazon Web Services，支援的存檔還原優先權為高、標準和低；對於 Microsoft Azure，支援的存檔還原優先權為高和標準。</block>
   <block id="2f52181b09a7c053aed22699e227b9db" category="paragraph">當您在 SaaS 環境中使用NetApp Backup and Recovery，並在雲端供應商或您自己的網際網路連線主機上部署控制台代理程式時，系統會備份並保護雲端中所有重要的設定資料。如果您遇到控制台代理問題，請建立新的控制台代理並新增您的系統。備份詳細資訊將自動恢復。</block>
   <block id="361cc78877d7de2ea952f510e7626ad4" category="paragraph">這些資料每天午夜備份一次，每個檔案最多保留 7 份副本。如果控制台代理程式正在管理多個本機ONTAP系統，則NetApp Backup and Recovery檔案將儲存在首先啟動的系統的儲存桶中。</block>
   <block id="2be5ff28599e1447ad26486d058560b3" category="paragraph">如果您的內部控制台代理停止運作，您將需要安裝新的控制台代理，然後將NetApp Backup and Recovery資料還原到新的控制台代理。</block>
@@ -5232,4 +5053,5 @@
   <block id="a4af15d338a93411ae3eacbe3e9d1c5e" category="sidebar">保護 KVM 工作負載（預覽）</block>
   <block id="bd7b6aa0517dacb10ee10e479293ef82" category="sidebar">保護 Oracle Database 工作負載（預覽版）</block>
   <block id="72f656ffc88a48ec4092d869ae05c4e6" category="sidebar">保護 VMware 工作負載（無需適用於 VMware 的 SnapCenter 外掛程式）</block>
+  <block id="2e6a10996a90ae08a445bcd92b94e301" category="list-text">支援的連線儲存設備： ONTAP 9.13 或更新版本</block>
 </blocks>
