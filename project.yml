@@ -120,7 +120,7 @@ sidebar:
         url: "/br-use-manage-snapshots.html"
       - title: 建立 Microsoft SQL Server 報告
         url: "/br-use-reports.html"
-    - title: 保護 VMware 工作負載（無需適用於 VMware 的 SnapCenter 外掛程式）
+    - title: 保護 VMware 工作負載
       entries:
       - title: 保護 VMware 工作負載概述
         url: "/br-use-vmware-protect-overview.html"

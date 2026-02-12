@@ -5045,11 +5045,9 @@
   <block id="1e6021824e75d382885d2bb2e945f719" category="sidebar">使用自訂資源還原 Kubernetes 應用程式</block>
   <block id="6108d5ad430f0631e5c6e10714ba980c" category="doc">正式版（GA）支援的 Microsoft Hyper-V 工作負載</block>
   <block id="c5db154b8366e71dcf87e4624b1a0112" category="paragraph">NetApp Backup and Recovery 現已全面支援 Microsoft Hyper-V 工作負載（GA）。</block>
-  <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="section-title">General Availability（GA）支援的 KVM 工作負載</block>
-  <block id="1d30989467a5dda6a77c2158034a190b" category="paragraph">NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。</block>
   <block id="a4af15d338a93411ae3eacbe3e9d1c5e" category="sidebar">保護 KVM 工作負載（預覽）</block>
   <block id="bd7b6aa0517dacb10ee10e479293ef82" category="sidebar">保護 Oracle Database 工作負載（預覽版）</block>
-  <block id="72f656ffc88a48ec4092d869ae05c4e6" category="sidebar">保護 VMware 工作負載（無需適用於 VMware 的 SnapCenter 外掛程式）</block>
   <block id="2e6a10996a90ae08a445bcd92b94e301" category="list-text">支援的連線儲存設備： ONTAP 9.13 或更新版本</block>
   <block id="a58576b20da9581ef64dc73d9299ba68" category="list-text">支援 NFS 和 VMFS 資料儲存。</block>
+  <block id="dbeedec7ca35d125dd2a7ee8355c41f5" category="section-title">正式版 (GA) 中支援的 VMware 工作負載</block>
 </blocks>

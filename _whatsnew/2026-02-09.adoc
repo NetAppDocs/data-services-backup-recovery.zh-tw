@@ -10,9 +10,9 @@ NetApp Backup and Recovery 現已全面支援 Microsoft Hyper-V 工作負載（G
 
 
 
-=== General Availability（GA）支援的 KVM 工作負載
+=== 正式版 (GA) 中支援的 VMware 工作負載
 
-NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。
+VMware 工作負載支援現已在 NetApp Backup and Recovery 中正式推出（GA）。
 
 
 
