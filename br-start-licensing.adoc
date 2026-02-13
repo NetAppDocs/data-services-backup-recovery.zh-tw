@@ -137,3 +137,9 @@ BYOL NetApp Backup and Recovery許可證是一種浮動許可證，其總容量�
 您可以使用NetApp Console來管理 BYOL 授權。您可以從控制台新增許可證、更新現有許可證以及查看許可證狀態。
 
 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["了解如何新增許可證"^]。
+
+
+
+== 超出授權容量
+
+超出許可容量將觸發 PAYGO 費率；如果沒有 PAYGO 訂閱，您將無法建立新的備份，但現有備份仍可恢復，只是服務不再有保障。請務必在許可證到期前續訂；過期的許可證將阻止建立新的備份並中斷服務。

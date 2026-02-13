@@ -5050,4 +5050,6 @@
   <block id="2e6a10996a90ae08a445bcd92b94e301" category="list-text">支援的連線儲存設備： ONTAP 9.13 或更新版本</block>
   <block id="a58576b20da9581ef64dc73d9299ba68" category="list-text">支援 NFS 和 VMFS 資料儲存。</block>
   <block id="dbeedec7ca35d125dd2a7ee8355c41f5" category="section-title">正式版 (GA) 中支援的 VMware 工作負載</block>
+  <block id="1fe60033089958dd8dab2fc11925056d" category="section-title">超出授權容量</block>
+  <block id="73b5f5184f0b378b50b42a6e8ceb743c" category="paragraph">超出許可容量將觸發 PAYGO 費率；如果沒有 PAYGO 訂閱，您將無法建立新的備份，但現有備份仍可恢復，只是服務不再有保障。請務必在許可證到期前續訂；過期的許可證將阻止建立新的備份並中斷服務。</block>
 </blocks>
