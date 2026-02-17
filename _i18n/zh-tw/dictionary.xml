@@ -2025,8 +2025,6 @@
   <block id="074c2f1dacf9047766e7f8d5dce71060" category="paragraph">5GB</block>
   <block id="f3f916d11656905ba60e080b6d73ea62" category="paragraph">分配足夠的磁碟空間並監控日誌資料夾的儲存消耗。所需的日誌空間取決於執行的備份次數和資料保護操作的頻率。如果沒有足夠的空間，則不會為操作建立日誌。</block>
   <block id="c02f07fcd7047bf35e0bb82decca0939" category="cell">所需軟體包</block>
-  <block id="fddae060f712e7706e9adb56d9a4fb40" category="list-text">ASP.NET Core Runtime 8.0.12 託管包（以及所有後續 8.0.x 修補程式）</block>
-  <block id="f5b6b1603a32d7ce84d327505a80be82" category="list-text">PowerShell 7.4.2</block>
   <block id="fdd736f6cacce38b5102696f59ea433a" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="c2340f294ea0edd3eaa143337cddb591" category="inline-link-rx"></block>。</block>
   <block id="573531ec152a1cc1709422d00088088e" category="section-title">保護 VMware 工作負載的要求</block>
   <block id="4ccfae37bea4d344c283e2a68013c9c1" category="paragraph">您需要特定的要求來發現和保護您的 VMware 工作負載。</block>
@@ -2075,7 +2073,6 @@
   <block id="e33a9836e18ab4c7f01ac49f666c4e33" category="section-title">保護 Hyper-V 工作負載的要求</block>
   <block id="7e75f7658d8e69b52e07a066a4510af5" category="paragraph">確保您的 Hyper-V 執行個體符合發現和保護虛擬機器的特定要求。</block>
   <block id="99fcf7547e608c33c370f1d5fe54e0a9" category="list-text">Microsoft Hyper-V 2019、2022 及 2025 年版本</block>
-  <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2 或更高版本</block>
   <block id="4c0e33820cc2625f20df7d75a7db2a90" category="list-text">確保 Windows 防火牆設定中允許下列連接埠進行雙向 HTTPS 通訊：</block>
   <block id="2f09bec2ba16dad8a4210aafc07d4e36" category="list-text">8144（適用於 Hyper-V 的NetApp插件）</block>
   <block id="eeb69275da8e2dd563a27a05a24a4ff1" category="list-text">8145（適用於 Windows 的NetApp插件）</block>
@@ -5052,4 +5049,7 @@
   <block id="dbeedec7ca35d125dd2a7ee8355c41f5" category="section-title">正式版 (GA) 中支援的 VMware 工作負載</block>
   <block id="1fe60033089958dd8dab2fc11925056d" category="section-title">超出授權容量</block>
   <block id="73b5f5184f0b378b50b42a6e8ceb743c" category="paragraph">超出許可容量將觸發 PAYGO 費率；如果沒有 PAYGO 訂閱，您將無法建立新的備份，但現有備份仍可恢復，只是服務不再有保障。請務必在許可證到期前續訂；過期的許可證將阻止建立新的備份並中斷服務。</block>
+  <block id="b9c809d8faa35e3cecf28c39b12a0890" category="list-text">ASP.NET Core Runtime 8.0.23 Hosting Bundle（以及所有後續的 8.0.x 修補程式）</block>
+  <block id="d5339ec2460f6dc04a037cc1e0c21e2c" category="list-text">PowerShell 7.4.13</block>
+  <block id="6d379457554ecca51ab298da606eeb2d" category="list-text">PowerShell 7.4.13 或更高版本</block>
 </blocks>

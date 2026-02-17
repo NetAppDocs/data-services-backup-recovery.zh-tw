@@ -73,8 +73,8 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 
 
 | 所需軟體包  a| 
-* ASP.NET Core Runtime 8.0.12 託管包（以及所有後續 8.0.x 修補程式）
-* PowerShell 7.4.2
+* ASP.NET Core Runtime 8.0.23 Hosting Bundle（以及所有後續的 8.0.x 修補程式）
+* PowerShell 7.4.13
 
 
 有關受支援版本的最新信息，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT#welcome["NetApp互通性表工具"^]。
@@ -219,8 +219,8 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 * Hyper-V Windows Server 主機的軟體需求：
 +
 ** Microsoft Hyper-V 2019、2022 及 2025 年版本
-** ASP.NET Core Runtime 8.0.12 託管包（以及所有後續 8.0.x 修補程式）
-** PowerShell 7.4.2 或更高版本
+** ASP.NET Core Runtime 8.0.23 Hosting Bundle（以及所有後續的 8.0.x 修補程式）
+** PowerShell 7.4.13 或更高版本
 ** 如果非管理員網域使用者要保護 Hyper-V 虛擬機，請確保使用者擁有下列權限：
 +
 *** 請確保該使用者是本機管理員群組成員。
