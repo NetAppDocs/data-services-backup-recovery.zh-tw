@@ -78,9 +78,6 @@ NetApp Backup and Recovery可讓您將下列來源系統中的 Microsoft SQL Ser
 
 
 | StorageGRID | Cloud Volumes ONTAP本地ONTAP系統 | 本地ONTAP系統ONTAP S3 
-
-
-| Amazon FSx for NetApp ONTAP | Amazon FSx for NetApp ONTAP | 不適用 
 |===
 
 NOTE: 「本地ONTAP系統」包括FAS和AFF系統。
