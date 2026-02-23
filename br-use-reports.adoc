@@ -4,7 +4,7 @@ permalink: br-use-reports.html
 keywords: backing up, back up, backup, backup on-prem ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
 summary: 在NetApp Backup and Recovery中，建立報告以查看備份狀態，包括備份數量、成功備份數量和失敗備份數量。您還可以查看每個備份的詳細信息，包括備份類型、備份使用的儲存系統以及備份的時間。 
 ---
-= 在NetApp Backup and Recovery中為 Microsoft SQL Server 工作負載建立報告
+= 在 NetApp Backup and Recovery 中為 Microsoft SQL Server 工作負載建立保護報告
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -16,10 +16,11 @@ summary: 在NetApp Backup and Recovery中，建立報告以查看備份狀態，
 
 
 
-== 建立報告
+== 建立保護報告
 
 *所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
+.步驟
 . 從NetApp Backup and Recovery選單中，選擇 *報告* 選項。
 . 選擇*建立報告*。
 . 輸入報告範圍詳細資料：

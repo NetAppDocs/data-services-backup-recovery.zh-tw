@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: br-use-kubernetes-reports.html 
+keywords: backing up, back up, backup, backup on-prem ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
+summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態和詳細資訊，包括成功和失敗的備份計數、備份類型、叢集健全狀況資訊等。 
+---
+= 在 NetApp Backup and Recovery 中建立及管理 Kubernetes 工作負載的保護報告
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Backup and Recovery 中，為 Kubernetes 工作負載建立保護報告，以檢視保護狀態與詳細資訊，包括成功與失敗備份的數量、備份類型、叢集健康資訊等。
+
+*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員或 Backup and Recovery 還原管理員。深入瞭解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]
+
+
+
+== 建立保護報告
+
+建立保護報告以檢視叢集的保護狀態。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *報告* 選項。
+. 選擇*建立報告*。
+. 輸入報告範圍詳細資料：
++
+** *報告名稱*：輸入報告的唯一名稱。
+** *報告類型*：選擇按帳戶或按工作負載產生報告（從清單中選擇 Kubernetes）。
+** *Select cluster*：如果您按工作負載選擇，請從清單中選擇要為其產生報告的 cluster，然後選擇 *Accept*。選擇 *Select all* 可產生所有 cluster 的報告。
+
+
+. 輸入報告範圍：選擇您希望報告包含過去一天、過去 7 天、過去 30 天、過去一個季度或過去一年的資料。
+. 輸入報表配置詳細資料：選擇報表是僅執行一次還是排程定期產生報表。對於排程報表，請選擇重複頻率並選取開始日期。
++
+.. 輸入電子郵件傳送詳細資料：（僅適用於排程報告）如果您希望透過電子郵件傳送報告，請輸入一個或多個應接收排程報告的電子郵件地址。
+
+
++
+在設定頁面配置電子郵件通知。有關配置電子郵件通知的詳細信息，請參閱link:br-start-configure.html["配置設定"]。
+
+. 選擇“*創建*”。
+
+
+
+
+== 下載保護報告
+
+下載產生的保護報告，報告格式可以是 JSON 檔案或 PDF 文件，以便查看和分享。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *報告* 選項。
+. 在 *Reports* 頁面上，選擇 *Reports* 選單，即可查看產生的保護報告清單。
+. 若要下載報告，請選擇「操作」圖示 image:../media/icon-action.png["操作選項"] > *下載*。
++
+** 選擇 *Download JSON* 以下載 JSON 格式的報表。
+** 選擇 *Download PDF* 將報告下載為 PDF 文件。
+
+
+
+
+
+
+== 檢視保護報告
+
+可在 NetApp Backup and Recovery 內快速檢視保護報告的互動式詳細資訊。您可以查看作業摘要資訊、資料保護狀態、組態詳細資料等。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *報告* 選項。
+. 在 *Reports* 頁面上，選擇 *Reports* 選單，即可查看產生的保護報告清單。
+. 若要查看報告，請選擇「操作」圖示 image:../media/icon-action.png["操作選項"] > *查看報告*。
++
+報告詳細資料隨即顯示。
+
+
+
+
+
+== 刪除保護報告
+
+當您不再需要保護報告時，請將其刪除。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *報告* 選項。
+. 在 *Reports* 頁面上，選擇 *Reports* 選單，即可查看產生的保護報告清單。
+. 若要刪除報告，請選擇 Actions 圖示 image:../media/icon-action.png["操作選項"] > *Delete* 。
+. 選擇 *Delete* 以確認操作。
+

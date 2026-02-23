@@ -18,6 +18,30 @@ summary: 了解NetApp Backup and Recovery的新功能。
 
 
 
+== 2026 年 2 月 23 日
+
+此NetApp Backup and Recovery版本包含以下更新。
+
+
+
+=== General Availability（GA）支援的 KVM 工作負載
+
+NetApp Backup and Recovery 現已全面支援 Microsoft Hyper-V 工作負載（GA）。
+
+有關保護 KVM 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["保護 KVM 工作負載概述"]。
+
+
+
+=== Kubernetes 在正式版（GA）中受到支援
+
+Kubernetes 工作負載支援現已在 NetApp Backup and Recovery 中正式發布（GA）。此版本的 Kubernetes 工作負載還引入了以下增強功能：
+
+*報告支援*：現在您可以為受 NetApp Backup and Recovery 保護的 Kubernetes 叢集和應用程式產生保護活動報告。
+
+有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"]。
+
+
+
 == 2026 年 2 月 09 日
 
 此NetApp Backup and Recovery版本包含以下更新。
