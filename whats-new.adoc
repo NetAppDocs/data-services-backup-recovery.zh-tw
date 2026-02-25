@@ -26,13 +26,13 @@ summary: 了解NetApp Backup and Recovery的新功能。
 
 === General Availability（GA）支援的 KVM 工作負載
 
-NetApp Backup and Recovery 現已全面支援 Microsoft Hyper-V 工作負載（GA）。
+NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。
 
 有關保護 KVM 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["保護 KVM 工作負載概述"]。
 
 
 
-=== Kubernetes 在正式版（GA）中受到支援
+=== 正式版 (GA) 中支援的 Kubernetes 工作負載
 
 Kubernetes 工作負載支援現已在 NetApp Backup and Recovery 中正式發布（GA）。此版本的 Kubernetes 工作負載還引入了以下增強功能：
 

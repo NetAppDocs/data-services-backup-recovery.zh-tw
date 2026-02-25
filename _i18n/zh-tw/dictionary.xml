@@ -5047,7 +5047,6 @@
   <block id="d5339ec2460f6dc04a037cc1e0c21e2c" category="list-text">PowerShell 7.4.13</block>
   <block id="6d379457554ecca51ab298da606eeb2d" category="list-text">PowerShell 7.4.13 或更高版本</block>
   <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="doc">General Availability（GA）支援的 KVM 工作負載</block>
-  <block id="e58f3c7a76cad4e6c2c7f515b3171f76" category="section-title">Kubernetes 在正式版（GA）中受到支援</block>
   <block id="2c4d488d266d9d0655ce2e1451e05b2d" category="paragraph">Kubernetes 工作負載支援現已在 NetApp Backup and Recovery 中正式發布（GA）。此版本的 Kubernetes 工作負載還引入了以下增強功能：</block>
   <block id="2329c3692bdf2d2f098db291ec4e9427" category="paragraph">*報告支援*：現在您可以為受 NetApp Backup and Recovery 保護的 Kubernetes 叢集和應用程式產生保護活動報告。</block>
   <block id="2b9a71c68fa2528dcd54a63d6e7b908d" category="paragraph">使用 KVM 工作負載的私有預覽版搭配 NetApp Backup and Recovery 時，請注意下列事項。</block>
@@ -5088,4 +5087,6 @@
   <block id="64599804111c69e57052c204fb880b42" category="doc">在 NetApp Backup and Recovery 中為 Microsoft SQL Server 工作負載建立保護報告</block>
   <block id="8b3c75a910501c009c7e86f190f1825d" category="section-title">2026 年 2 月 23 日</block>
   <block id="175ddb68a640ea3daeb84c25a2402e6f" category="sidebar">建立和管理保護報告</block>
+  <block id="1d30989467a5dda6a77c2158034a190b" category="paragraph">NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。</block>
+  <block id="403eb7104337d3b7cb0c9cbd6a28b588" category="section-title">正式版 (GA) 中支援的 Kubernetes 工作負載</block>
 </blocks>
