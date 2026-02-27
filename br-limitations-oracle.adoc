@@ -16,7 +16,7 @@ summary: 在您的環境中使用 Backup and Recovery 之前，請先檢閱這�
 [role="lead"]
 此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
 
-在 NetApp Backup and Recovery 的 Oracle Database 工作負載私有預覽版本中，不支援下列動作：
+在 NetApp Backup and Recovery 的 Oracle Database 工作負載預覽版本中，不支援下列動作：
 
 * 離線備份
 

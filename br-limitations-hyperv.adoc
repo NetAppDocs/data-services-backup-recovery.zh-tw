@@ -20,7 +20,7 @@ summary: 在您的環境中使用 Backup and Recovery 之前，請先檢閱這�
 
 == 不支援的操作
 
-NetApp Backup and Recovery中的 Hyper-V 工作負載的私人預覽版不支援以下操作：
+在 NetApp Backup and Recovery 中，Hyper-V 工作負載不支援以下操作：
 
 * 使用來自多個 Hyper-V 主機的虛擬機器建立資源組
 * 將虛擬機器還原到備用位置

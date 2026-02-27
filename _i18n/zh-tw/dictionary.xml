@@ -343,13 +343,10 @@
   <block id="6b8b6ab08d4425ec0e0d9ea989426fec" category="doc">NetApp Backup and Recovery針對 Hyper-V 工作負載的已知限制</block>
   <block id="a9ad02ebb13f3d9fa3cb4a1b59be6548" category="paragraph">此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。</block>
   <block id="0e32e31adc232e70ce479856e16c7f00" category="section-title">不支援的操作</block>
-  <block id="57a114780f98fd4bb0b06506b0ca9577" category="paragraph">NetApp Backup and Recovery中的 Hyper-V 工作負載的私人預覽版不支援以下操作：</block>
   <block id="5ae6a8a06c30125d00a57910609856cf" category="list-text">跨磁碟（跨多個 CIFS 共用）</block>
   <block id="5cb642b37b3102019402cbd3b93a5693" category="list-text">透過 SAN 保護虛擬機</block>
   <block id="4a03732927298c2d8d1492b3d08bb831" category="summary">此版本的NetApp Backup and Recovery具有以下已知限制。</block>
   <block id="5050c99de0a6e1bcf02e7ce66edabd97" category="doc">NetApp Backup and Recovery針對 KVM 工作負載的已知限制</block>
-  <block id="448a90c8bbb9415c292cb0e585249a04" category="paragraph">NetApp Backup and Recovery中的 KVM 工作負載的私人預覽版不支援以下操作和設定：</block>
-  <block id="990fa22cecb0eccd120f5d5c758168d4" category="paragraph">私人預覽版不支援以下操作：</block>
   <block id="a06f7c3d3eb77822719225d3ee611842" category="list-text">克隆、掛載或卸載虛擬機</block>
   <block id="e2b26238e3aec34978fbb465dfd6baff" category="list-text">將虛擬機器還原到備用位置</block>
   <block id="fe8e9fc813c1e8a639c0cadb6115589f" category="list-text">保護儲存在 SAN 上的虛擬機</block>
@@ -364,7 +361,6 @@
   <block id="def5bb1c4fff047ce52153ac1f2ef9b5" category="list-text">NetFS 以外的儲存池類型（僅支援 NetFS）</block>
   <block id="203b3a4b594fb28b853f0cb7e5561c26" category="list-text">離線備份</block>
   <block id="11750133b5aeccdb05ec0c5b1027ace4" category="doc">NetApp Backup and Recovery針對 VMware 工作負載的已知限制</block>
-  <block id="bd24e6cbfe24fff0710652a52a0736b5" category="paragraph">NetApp Backup and Recovery中的 VMware 工作負載預覽版不支援下列操作：</block>
   <block id="eace16d66cdd93ad876c620db7456077" category="list-text">山</block>
   <block id="1281764038ea27ade56d7d2b8be22798" category="list-text">解除安裝</block>
   <block id="25e66e51214e8342374fa891a42988b3" category="list-text">恢復至備用位置</block>
@@ -994,7 +990,6 @@
   <block id="2f2ca5d33d51345d8cec8b57e1d131d5" category="list-text">單一控制平面，用於保護跨多個 Kubernetes 叢集運行的應用程式。這些應用程式可以包括在 Kubernetes 叢集上執行的容器或虛擬機器。</block>
   <block id="ed200d27f38aee4afdff8b4619cdf2ae" category="list-text">與NetApp SnapMirror本機集成，為所有備份和恢復工作流程提供儲存卸載功能。</block>
   <block id="1a46229aa405bed39558957f4cb25619" category="list-text">Kubernetes 應用程式的永久增量備份，轉換為更低的復原點目標 (RPO) 和復原時間目標 (RTO)。</block>
-  <block id="1e016758a8b3495be7c3ee2b6b26aab6" category="admonition">本文檔作為技術預覽提供。在預覽期間，不建議將 Kubernetes 功能用於生產工作負載。對於此預覽版產品， NetApp保留在正式發布之前修改產品詳細資訊、內容和時間表的權利。</block>
   <block id="e94d9102ade906ff7fd5fc370d68c0d8" category="paragraph">您可以完成與管理 Kubernetes 工作負載相關的下列任務：</block>
   <block id="d30235bcb420e82027cadb3cffab450f" category="list-text"><block ref="bdf340f843cf54500673f62df22d5070" category="inline-link-macro-rx"></block>。</block>
   <block id="384b71db954a7a463c759208283e47c4" category="inline-link-macro">管理 Kubernetes 集群</block>
@@ -1550,7 +1545,6 @@
   <block id="08dde8a49187490703817f0bb0ca2c66" category="list-text">建立複製到輔助儲存的策略</block>
   <block id="79553f51abb935dd34c66050ba8bd085" category="list-text">為對象儲存設定建立策略</block>
   <block id="560d0289c18f590a486568880a11504c" category="list-text">配置進階策略設定</block>
-  <block id="aa4e928106e1470e1f208b45b3dc915b" category="list-text">編輯策略（不適用於 VMware 預覽工作負載）</block>
   <block id="af5b784334cc5cfd8f61f1fa34d0aca5" category="list-text">刪除策略</block>
   <block id="b7e23f2fbc84fffbedf563f644b8df93" category="section-title">查看政策</block>
   <block id="9a23580d7344d92df6d39880be8984ee" category="list-text">從NetApp Backup and Recovery選單中，選擇 *策略*。</block>
@@ -1826,7 +1820,6 @@
   <block id="1ca9578c25474d5cfeaa6c44bdbaa9b2" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="2aceb93307f82c2d88347faa7eaa4e71" category="list-text">輸入要還原的資源的名稱，或篩選要還原的資源所在的 vCenter、資料中心或資料儲存。</block>
   <block id="a5315c2927cf2b05876fdd6713fbd713" category="summary">NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。</block>
-  <block id="8fa16cd18cf0722e85fe3e62f649f0c8" category="admonition">有關保護 VMware、KVM、Hyper-V 和 Kubernetes 工作負載的文件以技術預覽的形式提供。對於此預覽版產品， NetApp保留在正式發布之前修改產品詳細資訊、內容和時間表的權利。</block>
   <block id="1f603af7daec690416eee590da3bda4c" category="section-title">NetApp Backup and Recovery</block>
   <block id="fa9b71fd6339baf1b1e8d4ce0528032e" category="paragraph">使用NetApp Backup and Recovery實現以下目標：</block>
   <block id="3b9135fa974c68d619894497e2801b13" category="list-text">* ONTAP磁碟區工作負載*：</block>
@@ -1842,31 +1835,21 @@
   <block id="117e9b8129b2417db1e14aec3e2106f7" category="list-text">不使用SnapCenter即可使用NetApp Backup and Recovery 。</block>
   <block id="3d5a9cd83b30ec6ec9f0802593907f05" category="inline-link-macro">保護 Microsoft SQL Server 工作負載</block>
   <block id="da8c1ac7631a3731bc377387b2ab2a43" category="list-text">參考<block ref="f095463814b2c4a573628d3f753afa9a" category="inline-link-macro-rx"></block>。</block>
-  <block id="34cd7eb5bb582ffae3f30f17c145150f" category="list-text">VMware 工作負載（使用新 UI 預覽，無需SnapCenter Plug-in for VMware vSphere）*：</block>
   <block id="fc95c9ae522d362cdffab6c2fe22dcf1" category="list-text">使用NetApp Backup and Recovery保護您的 VMware VM 和資料儲存。</block>
-  <block id="49ce1089a31878d01e3cf0cfff6ec95e" category="list-text">將 VMware 工作負載備份到 Amazon Web Services S3 或StorageGRID （預覽版）。</block>
   <block id="f24990c11b82173bf714c5c0ddeb194e" category="list-text">將 VMware 資料從雲端還原到本機 vCenter。</block>
   <block id="475f34904c96f02d357edad59745a41c" category="list-text">使用NetApp Backup and Recovery，無需SnapCenter Plug-in for VMware vSphere。</block>
   <block id="5f1f4aaebaf623a5d33c8d6da504aec5" category="inline-link-macro">保護 VMware 工作負載</block>
   <block id="e4f723ac59f54885d902bd6a04536b55" category="list-text">參考<block ref="d745d5ccb3cf0872b9a86c3887ddad65" category="inline-link-macro-rx"></block>。</block>
-  <block id="3e6d14001804fbc004cf88b3856a2939" category="list-text">VMware 工作負載（使用SnapCenter Plug-in for VMware vSphere）</block>
-  <block id="ba09cb4fb9d29df0e0fba819c4f6f57a" category="list-text">將虛擬機器和資料儲存備份到 Amazon Web Services S3、Microsoft Azure Blob、Google Cloud Platform 和StorageGRID ，並將虛擬機器還原回SnapCenter Plug-in for VMware vSphere。</block>
-  <block id="08a55d368e75d6e7e867b0cbf3839cc3" category="list-text">使用NetApp Backup and Recovery將虛擬機器資料從雲端還原到本機 vCenter。您可以將虛擬機器還原到與備份完全相同的位置或其他位置。</block>
-  <block id="0b27037d97c0e92bc84accafa1bdfa2d" category="list-text">將NetApp Backup and Recovery與適用於SnapCenter Plug-in for VMware vSphere一起使用。</block>
-  <block id="90dea69f07cd41705feda176fee8105f" category="list-text">參考<block ref="4e4c09988a18e486f48f555be9441a4c" category="inline-link-macro-rx"></block>。</block>
-  <block id="5bf7e6e7676361714b90e6151235e895" category="list-text">KVM 工作負載（預覽版）</block>
   <block id="64a1f9dc6b08acfdc4b3300cd2614167" category="list-text">備份和還原虛擬機</block>
   <block id="3ec425e496ee5df005029a2242617ee7" category="list-text">備份 KVM 儲存池</block>
   <block id="bf935bfc55ca04061ab2aa083d9f2757" category="list-text">使用保護組管理備份任務</block>
   <block id="0b76d4eeae7343324d102cedb375e5ef" category="inline-link-macro">保護KVM工作負載</block>
   <block id="6cbc8c6fa341365b6c9f18b15dde4b43" category="list-text">參考<block ref="e223d31e0b77da378054c44c11584c81" category="inline-link-macro-rx"></block>。</block>
-  <block id="492fd59c461c682062524e7444f188c1" category="list-text">Hyper-V 工作負載（預覽版）</block>
   <block id="bcd52013d4bab273c97ec6049c73eb19" category="inline-link-macro">保護 Hyper-V 工作負載</block>
   <block id="6a88dd8d1df81c216e94864f62adb181" category="list-text">參考<block ref="5ad55f158503485706ea0446a924f3eb" category="inline-link-macro-rx"></block>。</block>
   <block id="9ccb39720e55d973803af308a46b7f9d" category="list-text">備份和還原資料庫和日誌</block>
   <block id="b9f9fe4773f2a73086e819aa78413e31" category="list-text">建立策略來管理資料庫和日誌備份</block>
   <block id="1aced3c59920e62aa237af558421e7bc" category="list-text">使用 3-2-1 備份架構保護資料庫</block>
-  <block id="3066f1ebade966cf5d09fd225d9c82df" category="list-text">Kubernetes 工作負載（預覽版）</block>
   <block id="1c1c6b4c5003945f6d28242d24286ee6" category="list-text">在一個地方管理和保護您的 Kubernetes 應用程式和資源。</block>
   <block id="3f06fb8fe2ecccdacfaa2644488d935d" category="list-text">使用保護策略來建立增量備份。</block>
   <block id="116fc6c4cddb8e42e7260e6817cd901f" category="list-text">將應用程式和資源恢復到相同或不同的叢集和命名空間。</block>
@@ -1910,14 +1893,9 @@
   <block id="9757bd87f9a5ff6758600430092b3955" category="paragraph">請注意，當您首次註冊 PAYGO 訂閱時，可以享受 30 天的免費試用。</block>
   <block id="9504b35cbb481ca2332f36aedcf456c8" category="list-text">ONTAP卷</block>
   <block id="5c1924f6230f429d87dfb7fd242478ba" category="list-text">VMware 虛擬機器與資料儲存區</block>
-  <block id="d696f54a4219f10612b2a92868d7f533" category="list-text">KVM 工作負載（預覽）</block>
-  <block id="ba244ce1386922db2aac58f9ea35cf82" category="list-text">Hyper-V 工作負載（預覽版）</block>
-  <block id="339f6d69f0298e3d4bbd943ba3211c6c" category="list-text">Kubernetes 工作負載（預覽版）</block>
   <block id="d97ad1eba4f90ab1f835497c1e04b99f" category="list-text">適用於 AWS 的Cloud Volumes ONTAP 9.8 或更高版本（使用 SAN 和 NAS）</block>
   <block id="c5446f6574237d9a06e2a847d988c357" category="list-text">適用於 Microsoft Azure 的Cloud Volumes ONTAP 9.8 或更高版本（使用 SAN 和 NAS）</block>
   <block id="736ca911d7d143d01bd8cbfe0d4afbca" category="list-text">亞馬遜網路服務（AWS）S3</block>
-  <block id="fd986c9449acb5abd97bea849d50dc49" category="list-text">Microsoft Azure Blob（預覽版不適用於 VMware 工作負載）</block>
-  <block id="2892aac222ad56500a9c836677137630" category="list-text">ONTAP S3（預覽版不適用於 VMware 工作負載）</block>
   <block id="6059115d52bd54fd7eda8348da15bf57" category="section-title">NetApp Backup and Recovery的工作原理</block>
   <block id="f4bd2e075b247b13852d5afbc79f8e98" category="paragraph">當您啟用NetApp Backup and Recovery，本服務會為您的資料執行完整備份。初始備份之後，所有附加備份都是增量備份。這使得網路流量保持最低限度。</block>
   <block id="504927eafa9845be671b630ab35b5fe6" category="paragraph">下圖顯示了組件之間的關係。</block>
@@ -3626,7 +3604,6 @@
   <block id="5a583661a8908e9d0eb4e2adb7e14660" category="paragraph">使用ONTAP 9.13.0 或更高版本時，您可以還原資料夾以及其中的所有檔案和子資料夾。使用 9.13.0 之前的ONTAP版本時，僅還原該資料夾中的檔案 - 不會還原子資料夾或子資料夾中的檔案。</block>
   <block id="c2d4eb2ee4a0b78ea11dd0bb39d93ab0" category="list-text">如果備份檔案已配置 DataLock 和勒索軟體保護，則僅當ONTAP版本為 9.13.1 或更高版本時才支援資料夾級還原。如果您使用的是早期版本的ONTAP，則可以從備份檔案還原整個卷，然後存取所需的資料夾和檔案。</block>
   <block id="df253d89e3119a8555e39eb63655c32c" category="list-text">如果備份檔案駐留在檔案儲存中，則僅當ONTAP版本為 9.13.1 或更高版本時才支援資料夾層級還原。如果您使用的是早期版本的ONTAP，則可以從尚未存檔的較新備份檔案中還原資料夾，也可以從已存檔的備份中還原整個磁碟區，然後存取所需的資料夾和檔案。</block>
-  <block id="15f09261e873aa1d63f5dcc04347b79b" category="list-text">使用ONTAP 9.15.1，您可以使用「瀏覽和復原」選項還原FlexGroup資料夾。此功能處於技術預覽模式。</block>
   <block id="c054500f5cedecfadc47182aa4b27beb" category="inline-link">NetApp Backup and Recovery2024 年 7 月版本博客</block>
   <block id="ffd82299c0fb8f025a7c16eea2a4cbb6" category="paragraph">您可以使用<block ref="ee15696d5c6d30dc4b29a5712c1eb817" category="inline-link-rx"></block>。</block>
   <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="section-title">先決條件</block>
@@ -4031,7 +4008,6 @@
   <block id="4dba655852206fd33ef2ae210d0f09ea" category="sidebar">備份 Microsoft SQL Server 工作負載</block>
   <block id="a86a44463f171d5cbfffdac926d2c5f7" category="sidebar">還原 Microsoft SQL Server 工作負載</block>
   <block id="c82b8b73ed613da47a71b640f8e94c5d" category="sidebar">複製 Microsoft SQL Server 工作負載</block>
-  <block id="8f12fe2d1611902de146ad61b89b8295" category="sidebar">保護 Kubernetes 工作負載（預覽版）</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格和社區</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Data Services</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
@@ -4065,9 +4041,7 @@
   <block id="c00b274754a2d13242a61b1534660a37" category="sidebar">管理 Microsoft SQL Server 庫存</block>
   <block id="41e1a34ea3ba2b687b86e55ec1a7955d" category="sidebar">管理 Microsoft SQL Server 快照</block>
   <block id="c8ffa42e0e508862d020665c979eb5c0" category="sidebar">建立 Microsoft SQL Server 報告</block>
-  <block id="a6c93de7c03701dfba222e9072ffe5e7" category="sidebar">保護 KVM 工作負載（預覽版）</block>
   <block id="34caa737a5a671b66cc6fe7531c1f8b9" category="sidebar">安裝和卸載復原點</block>
-  <block id="60c0c463b8839d0f2c5e5cea8fa728ad" category="sidebar">保護 Kubernetes 工作負載（預覽版）</block>
   <block id="3186e7c44dc909386a0204716ffc46f6" category="sidebar">管理 Kubernetes 工作負載的執行鉤子模板</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="sidebar">監控作業</block>
   <block id="68b1e52936c426875b2780e91e195546" category="sidebar">使用 REST API 實現自動化</block>
@@ -4380,7 +4354,6 @@
   <block id="063090df0880212c0ba8eec878096a21" category="doc">VMware 工作負載預覽增強功能</block>
   <block id="24936fb650df7af8295e75a3667becef" category="list-text">現在您可以將備份和快照還原到備用位置。如果您想要管理不同 VMware vCenter 部署、VMware ESXi 主機或 VMware 資料儲存上的虛擬機器版本，這將非常有用。</block>
   <block id="99ee61e75520f174d08caa35e0ad294d" category="list-text">現在您可以從主位置或輔助位置還原特定的 VMware 虛擬磁碟（VMDK 映像），從而實現對復原 VM 資料的更精細控制。</block>
-  <block id="77f252cb66af8ee7dab8b27bcf3851ca" category="paragraph">不適用於 KVM 工作負載預覽版。</block>
   <block id="516f1f530028d7905b72cd1b035c8a73" category="list-text">*恢復到原始位置*：虛擬機器將恢復到原始位置，即相同的 vCenter 部署、ESXi 主機和資料儲存。虛擬機器及其所有資料均被覆蓋。</block>
   <block id="d2f574e5e69d11881580660614b89ba3" category="list-text">*恢復到備用位置*：您可以選擇不同的 vCenter、ESXi 主機或資料儲存作為虛擬機器的復原目標。這對於管理位於不同位置和狀態的相同虛擬機器的不同副本非常有用。</block>
   <block id="fa378eb8651e1bbe815e91c2a4ec5b2b" category="list-text">從名稱搜尋欄位右側的下拉清單中，選擇 *VMware*。</block>
@@ -4806,7 +4779,6 @@
   <block id="9f0dc4af8fb867cc1d90bc96a3df9976" category="paragraph">當您建立 3-2-1 保護策略時，如果物件儲存備份不會與複製到次要儲存設備同時發生，則在保護應用程式時，保護策略會掛起。</block>
   <block id="7a9541e3e0859a3bc7198878ae12b9bd" category="paragraph">*因應措施*：移除並重新新增應用程式，並使用不同的保護原則加以保護。</block>
   <block id="3f21300a12c48d2767fb3e5b7f83112b" category="doc">Oracle 資料庫工作負載的 NetApp Backup and Recovery 已知限制</block>
-  <block id="b295452d4036457162f0388dddf070da" category="paragraph">在 NetApp Backup and Recovery 的 Oracle Database 工作負載私有預覽版本中，不支援下列動作：</block>
   <block id="bc757dcd5d14a5f50685dfc481e61eb9" category="paragraph">Oracle Database 僅在 Oracle Database 工作負載的私人預覽版本中支援使用 NFS、SAN 或 ASM SAN 進行獨立部署。</block>
   <block id="92342f1ac80ff519b37da9a3148cbbd9" category="summary">為了提高安全性，請在 NetApp Backup and Recovery 中配置特定角色的存取權限。</block>
   <block id="42481383ace46d9a4716cce3ab760979" category="doc">在 NetApp Backup and Recovery 中設定基於角色的存取控制</block>
@@ -5036,7 +5008,6 @@
   <block id="1e6021824e75d382885d2bb2e945f719" category="sidebar">使用自訂資源還原 Kubernetes 應用程式</block>
   <block id="6108d5ad430f0631e5c6e10714ba980c" category="doc">正式版（GA）支援的 Microsoft Hyper-V 工作負載</block>
   <block id="c5db154b8366e71dcf87e4624b1a0112" category="paragraph">NetApp Backup and Recovery 現已全面支援 Microsoft Hyper-V 工作負載（GA）。</block>
-  <block id="a4af15d338a93411ae3eacbe3e9d1c5e" category="sidebar">保護 KVM 工作負載（預覽）</block>
   <block id="bd7b6aa0517dacb10ee10e479293ef82" category="sidebar">保護 Oracle Database 工作負載（預覽版）</block>
   <block id="2e6a10996a90ae08a445bcd92b94e301" category="list-text">支援的連線儲存設備： ONTAP 9.13 或更新版本</block>
   <block id="a58576b20da9581ef64dc73d9299ba68" category="list-text">支援 NFS 和 VMFS 資料儲存。</block>
@@ -5049,7 +5020,6 @@
   <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="doc">General Availability（GA）支援的 KVM 工作負載</block>
   <block id="2c4d488d266d9d0655ce2e1451e05b2d" category="paragraph">Kubernetes 工作負載支援現已在 NetApp Backup and Recovery 中正式發布（GA）。此版本的 Kubernetes 工作負載還引入了以下增強功能：</block>
   <block id="2329c3692bdf2d2f098db291ec4e9427" category="paragraph">*報告支援*：現在您可以為受 NetApp Backup and Recovery 保護的 Kubernetes 叢集和應用程式產生保護活動報告。</block>
-  <block id="2b9a71c68fa2528dcd54a63d6e7b908d" category="paragraph">使用 KVM 工作負載的私有預覽版搭配 NetApp Backup and Recovery 時，請注意下列事項。</block>
   <block id="bc077e67c7216de25b87f90d5ec28ac0" category="list-text">如果受保護的虛擬機器中未執行 QEMU Guest Agent，則備份可能會失敗。作為解決方法，請確保<block ref="c17d9742912ea08e0cfecda90a08c954" prefix=" " category="inline-code"></block>守護程序在啟動備份之前已在虛擬機器上執行。</block>
   <block id="66330fd6b5a015d85e0b01e96c040005" category="summary">建立 Kubernetes 工作負載的保護報告，以檢視保護狀態和詳細資訊，包括成功和失敗的備份計數、備份類型、叢集健全狀況資訊等。</block>
   <block id="7e9944e42087b52e398e40511794ab10" category="doc">在 NetApp Backup and Recovery 中建立及管理 Kubernetes 工作負載的保護報告</block>
@@ -5089,4 +5059,23 @@
   <block id="175ddb68a640ea3daeb84c25a2402e6f" category="sidebar">建立和管理保護報告</block>
   <block id="1d30989467a5dda6a77c2158034a190b" category="paragraph">NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。</block>
   <block id="403eb7104337d3b7cb0c9cbd6a28b588" category="section-title">正式版 (GA) 中支援的 Kubernetes 工作負載</block>
+  <block id="71f636f07034b2d1d650aeb1ede6791a" category="paragraph">在 NetApp Backup and Recovery 中，Hyper-V 工作負載不支援以下操作：</block>
+  <block id="673d360a297ae7b77b6f88af0d8b7c82" category="paragraph">在 NetApp Backup and Recovery 中，KVM 工作負載不支援以下操作和設定：</block>
+  <block id="3103a41775992118299ff5a989897ac4" category="paragraph">不支援下列動作：</block>
+  <block id="98c68c9df24559c3d5cf6d8c6cc85b9f" category="paragraph">使用 KVM 工作負載搭配 NetApp Backup and Recovery 時，請注意以下事項。</block>
+  <block id="5a7772dd6a45520c18defbce09d0dedf" category="paragraph">在 NetApp Backup and Recovery 的 Oracle Database 工作負載預覽版本中，不支援下列動作：</block>
+  <block id="fffe6dab1367a6da9b1ff43e10e3c12a" category="paragraph">在 NetApp Backup and Recovery 中，VMware 工作負載不支援以下操作：</block>
+  <block id="c06eb245245b3fcd57078c80941d50ca" category="paragraph">不適用於 KVM 工作負載。</block>
+  <block id="97c13d527bcfec5ed7f29badd43016d8" category="list-text">編輯原則（不適用於 VMware 工作負載）</block>
+  <block id="332f36926e04f03459b83b7c8da214a6" category="list-text">*VMware 工作負載（使用新 UI，未安裝 SnapCenter Plug-in for VMware vSphere）*：</block>
+  <block id="66484fcd4199c3f1b40e50c680ad4e56" category="list-text">將 VMware 工作負載備份至 Amazon Web Services S3 或 StorageGRID 。</block>
+  <block id="6a4470b3ca7a52803928f40d397b0521" category="list-text">*KVM 工作負載*：</block>
+  <block id="c4d36d8f4f3b72c9d5cac59995049781" category="list-text">*Hyper-V 工作負載*：</block>
+  <block id="b6178e1ff85723d95932c36399cc61c2" category="list-text">*Kubernetes 工作負載*：</block>
+  <block id="b46d8ca76f6fb8083d6d1c87abd6ef50" category="list-text">KVM 工作負載</block>
+  <block id="5c4a8ce913e27612e0af180d6ef12ee6" category="list-text">Hyper-V 工作負載</block>
+  <block id="49396edcdc3d3d7e4bec42adc037a5ef" category="list-text">Kubernetes 工作負載</block>
+  <block id="2432a396f38937322a4e606bf0aa7f0a" category="list-text">Microsoft Azure Blob （不適用於 VMware 工作負載）</block>
+  <block id="ab95f28db65589c3a2b5f277f324e60b" category="list-text">ONTAP S3 （不適用於 VMware 工作負載）</block>
+  <block id="1d57820923cf47d0bb8ab74db80344ab" category="list-text">使用 ONTAP 9.15.1 ，您可以使用「瀏覽和復原」選項來還原 FlexGroup 資料夾。</block>
 </blocks>

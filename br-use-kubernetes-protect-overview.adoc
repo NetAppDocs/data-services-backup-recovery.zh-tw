@@ -27,9 +27,6 @@ NetApp Backup and Recovery為管理 Kubernetes 工作負載提供了以下優點
 * Kubernetes 應用程式的永久增量備份，轉換為更低的復原點目標 (RPO) 和復原時間目標 (RTO)。
 
 
-
-NOTE: 本文檔作為技術預覽提供。在預覽期間，不建議將 Kubernetes 功能用於生產工作負載。對於此預覽版產品， NetApp保留在正式發布之前修改產品詳細資訊、內容和時間表的權利。
-
 您可以完成與管理 Kubernetes 工作負載相關的下列任務：
 
 * link:br-start-discover-kubernetes.html["發現 Kubernetes 工作負載"]。

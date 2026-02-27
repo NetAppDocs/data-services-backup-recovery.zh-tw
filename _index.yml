@@ -56,7 +56,7 @@ indexpage:
       url: br-use-vmware-backup.html
     - title: 復原 VMware 工作負載
       url: br-use-vmware-restore.html
-  - title: 保護 KVM 工作負載（預覽）
+  - title: 保護KVM工作負載
     links:
     - title: 保護 KVM 工作負載概述
       url: "/br-use-kvm-protect-overview.html"
@@ -92,7 +92,7 @@ indexpage:
       url: "/br-use-oracle-backup.html"
     - title: 還原 Oracle Database 工作負載
       url: "/br-use-oracle-restore.html"
-  - title: 保護 Kubernetes 工作負載（預覽版）
+  - title: 保護 Kubernetes 工作負載
     links:
     - title: 保護 Kubernetes 工作負載概述
       url: br-use-kubernetes-protect-overview.html

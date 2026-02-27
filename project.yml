@@ -144,7 +144,7 @@ sidebar:
             url: "/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html"
           - title: 訪客文件恢復故障排除
             url: "/br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html"
-    - title: 保護 KVM 工作負載（預覽版）
+    - title: 保護KVM工作負載
       entries:
       - title: 保護 KVM 工作負載概述
         url: "/br-use-kvm-protect-overview.html"
@@ -182,7 +182,7 @@ sidebar:
         url: "/br-use-oracle-restore.html"
       - title: 安裝和卸載復原點
         url: "/br-use-oracle-mount-unmount.html"
-    - title: 保護 Kubernetes 工作負載（預覽版）
+    - title: 保護 Kubernetes 工作負載
       entries:
       - title: 保護 Kubernetes 工作負載概述
         url: "/br-use-kubernetes-protect-overview.html"
