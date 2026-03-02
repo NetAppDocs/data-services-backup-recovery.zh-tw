@@ -36,7 +36,7 @@ NOTE: 其中一些選項和配置部分並不適用於所有工作負載。
 . 從NetApp Backup and Recovery選單中，選擇 *策略*。
 . 查看這些政策詳情。
 +
-** *工作負載*：範例包括 Microsoft SQL Server、Volumes、VMware、KVM、Hyper-V、Oracle Database 或 Kubernetes。
+** *工作負載*：例如 Microsoft SQL Server、ONTAP Volumes、VMware、KVM、Hyper-V、Oracle Database 或 Kubernetes。
 ** *備份類型*：例如完整備份和日誌備份。
 ** *架構*：範例包括本機快照、扇出、級聯、磁碟到磁碟和磁碟到物件儲存。
 ** *受保護的資源*：顯示該工作負載的總資源中有多少資源受到保護。

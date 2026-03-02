@@ -670,13 +670,7 @@
   <block id="acaaf9de0e4071fe117da04dbbe9565d" category="list-text">在 KVM 圖塊中，選擇 *發現和管理*。</block>
   <block id="12d8eeba7e97739f6035cbec50bd2369" category="list-text">*工作負載類型*：選擇*KVM*。</block>
   <block id="238fb750ebdea9faf36668536aaa8b42" category="paragraph">KVM 工作負載顯示在「庫存」頁面的工作負載清單中。</block>
-  <block id="945f74309f719db5d0fb0d1bb5a31781" category="paragraph">NetApp Backup and Recovery需要先發現您的 Oracle 資料庫，以便您可以保護它們。</block>
-  <block id="bf36d800e1bbaf0ef44cd361867e4e09" category="section-title">新增 Oracle 主機並發現資源</block>
   <block id="8160dc72c9473d18119ea3e52fe65572" category="paragraph">新增 Oracle 主機資訊並讓NetApp Backup and Recovery發現工作負載。在每個控制台代理程式中，選擇您想要發現工作負載的系統。</block>
-  <block id="bdd8003feffb3131de98b744d8d7e952" category="list-text">*工作負載類型*：選擇*Oracle*。</block>
-  <block id="c758c27facd2d09f2ccc8fc60719f412" category="list-text">如果您尚未儲存此 Oracle 主機的憑證，請選擇「新增憑證」。</block>
-  <block id="8bd91057b53c6035123596e5f2ba38ab" category="list-text">*主機註冊*：新增的 Oracle 主機。輸入主機的 FQDN 或 IP 位址、憑證、控制台代理程式和連接埠號碼。</block>
-  <block id="5ea9a0faddd392a3b490b6e503bc42b2" category="paragraph">Oracle 工作負載顯示在清單頁面的工作負載清單中。</block>
   <block id="5b9d0f0da934c7776ba30ad3c1fe47b2" category="doc">發現 Microsoft SQL Server 工作負載並可選擇從NetApp Backup and Recovery中的SnapCenter匯入</block>
   <block id="cd6726508604886a0b7b678ad4f6a2b8" category="paragraph">NetApp Backup and Recovery需要先發現 Microsoft SQL Server 工作負載，您才能使用該服務。如果您已經安裝了SnapCenter ，則可以選擇從SnapCenter匯入備份資料和原則。</block>
   <block id="da39a7712232603b7b60f32ff70cea25" category="section-title">發現 Microsoft SQL Server 工作負載並選擇性地匯入SnapCenter資源</block>
@@ -1364,7 +1358,6 @@
   <block id="81397f7503542040ff1aa87c847e281b" category="list-text">若要繼續，請選擇*跳過*。</block>
   <block id="67728477667cd78a4cb8ac8a3336c7ef" category="paragraph">您可以拆分 Microsoft SQL Server 工作負載的複製。拆分克隆將從克隆中建立一個新的備份。新的備份可用於恢復工作負載。</block>
   <block id="f4ed3104414bb69a5dfac99135ef72f2" category="paragraph">您可以選擇將克隆拆分為獨立克隆或長期克隆。精靈會顯示 SVM 的聚合清單、其大小以及複製磁碟區的位置。 NetApp Backup and Recovery也會指示是否有足夠的空間來分割克隆。克隆分裂後，克隆成為一個獨立的資料庫進行保護。</block>
-  <block id="fc54fcad59dc4a5ea9c76bbb98303c4a" category="paragraph">克隆作業不會被刪除，並且可以再次用於其他克隆。</block>
   <block id="3cc3bf063b3735dfee9852891c6d4ef6" category="list-text">選擇一個克隆。</block>
   <block id="42db557ffc18279f75ced7531cb65db0" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *分裂克隆*。</block>
   <block id="91a9421f27cf61e52bea5d9c90e7f79e" category="list-text">查看拆分克隆詳細資訊並選擇*拆分*。</block>
@@ -1478,7 +1471,6 @@
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">選擇要備份的資料庫。</block>
   <block id="77b7ee08ed330c77cd76797cc7019357" category="doc">使用NetApp Backup and Recovery掛載和解除安裝 Oracle 資料庫復原點</block>
   <block id="797c8d8b5a0f5a880bd15fd855682db6" category="paragraph">如果您需要以受控狀態存取資料庫來執行復原操作，則可能需要安裝 Oracle 資料庫復原點。</block>
-  <block id="079a3f8ec0bb95d8f0ae5d36f04de7c4" category="section-title">安裝 Oracle 資料庫還原點</block>
   <block id="027d1aa00ef27e7ff911f7a3ecb49c5d" category="list-text">選擇 Oracle 圖塊。</block>
   <block id="3fe9c6f0345265378a65d07de3e0456f" category="list-text">在備份和還原選單中，選擇*Inventory*。</block>
   <block id="872dd4524336673d42ecaa46bc8eb4a9" category="list-text">對於清單中的 Oracle 資料庫工作負載，選擇「*檢視*」。</block>
@@ -1492,7 +1484,6 @@
   <block id="96a0bc8738e149cc2c970e821cab7d08" category="paragraph">顯示備份和復原應使用的安裝路徑。</block>
   <block id="da4155d1cceea0707c4abe61465647f3" category="list-text">選擇*安裝*。</block>
   <block id="87f1df33c9d0ca12a7396f2e8f264291" category="paragraph">恢復點安裝在 Oracle 主機上。</block>
-  <block id="ce5c6f3695f2913abcf739f0f30f1067" category="section-title">解除安裝 Oracle 資料庫還原點</block>
   <block id="078e01c25936988332a6694f6b3c4157" category="paragraph">當您不再需要查看對該資料庫所做的變更時，請卸載復原點。</block>
   <block id="a8e9d9645fc4e43a4a7ce0324acee062" category="list-text">對於清單中的 Oracle 工作負載，選擇「*檢視*」。</block>
   <block id="6f951d1c709837901904521a57b0a9f4" category="list-text">從清單中選擇一個復原點，然後選擇「動作」圖示<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *卸載*。</block>
@@ -4912,7 +4903,6 @@
   <block id="d07e8f6398c66f7d79a80768d3aa858b" category="inline-link-macro">立即備份 Oracle Database 工作負載</block>
   <block id="5361440c8196cc52ba89e8281bc2ef22" category="list-text">立即備份保護群組。請參閱 <block ref="0b07e2abdc1829709878f1d54c90a7ab" category="inline-link-macro-rx"></block>。</block>
   <block id="ecd7b1e39a181dfd260b4d2201a85373" category="paragraph">不適用於 Oracle Database 工作負載預覽。</block>
-  <block id="930da9bc61f880bd2f19e2938c5376f6" category="list-text">*工作負載*：範例包括 Microsoft SQL Server、Volumes、VMware、KVM、Hyper-V、Oracle Database 或 Kubernetes。</block>
   <block id="a1b57f3367efea5ba168ebc1b00dfb09" category="list-text">*3-2-1 fanout*：主儲存（磁碟）到輔助儲存（磁碟）到雲端（物件儲存）。在不同的儲存系統之間建立多個資料副本，例如 ONTAP 到 ONTAP 以及 ONTAP 到物件儲存的配置。這可以是雲端超大規模物件儲存或私有物件儲存。這些配置有助於實現最佳的資料保護和災難復原。</block>
   <block id="7257ebd350ec9dc53fbb407575e942c9" category="open-title">使用 Web UI 新增應用程式</block>
   <block id="7eb786201a1068df31c2a8d7805c50bf" category="open-title">使用 CR 新增應用程式</block>
@@ -5078,4 +5068,46 @@
   <block id="2432a396f38937322a4e606bf0aa7f0a" category="list-text">Microsoft Azure Blob （不適用於 VMware 工作負載）</block>
   <block id="ab95f28db65589c3a2b5f277f324e60b" category="list-text">ONTAP S3 （不適用於 VMware 工作負載）</block>
   <block id="1d57820923cf47d0bb8ab74db80344ab" category="list-text">使用 ONTAP 9.15.1 ，您可以使用「瀏覽和復原」選項來還原 FlexGroup 資料夾。</block>
+  <block id="5bc860fb25e08cbdf4fb6e1eb9fa16c9" category="paragraph">發現 Oracle 資料庫可讓 NetApp Backup and Recovery 透過建立及還原備份和快照來保護這些資料庫。</block>
+  <block id="e82e6b5a702d1fc223d9ea698359376e" category="section-title">新增 Oracle Database 主機並探索資源</block>
+  <block id="b5476a384252538238d37795b3f8f5a1" category="list-text">在 *Workload type* 欄位中選擇 *Oracle*。</block>
+  <block id="3dcf508963e6fe907e0ca3a4c9693fd9" category="list-text">如果您尚未儲存此 Oracle Database 主機的憑證，請選擇「新增憑證」。</block>
+  <block id="19c33f5bda8d2b67e3f14b642d95e9ec" category="list-text">*主機註冊*：新增 Oracle Database 主機。輸入主機的 FQDN 或 IP 位址、憑證、Console 代理程式和連接埠號碼。</block>
+  <block id="2e9227201c87c406d2477a129cc51bf0" category="list-text">（可選）如果您為非 root 使用者選擇憑證，請執行下列操作：</block>
+  <block id="a70d5c13d6b7f41208490c29f59e3063" category="list-text">有關如何將您選擇的非 root 使用者新增至 Oracle Database 主機上的 sudoers 檔案中的說明，請選擇 *Configure sudoers* 。</block>
+  <block id="bf8e3c6752e8047e150b1ede213faaf5" category="list-text">按照對話框中的說明操作，完成後啟用核取方塊，然後選取 *Done* 。</block>
+  <block id="4388b2b0f034ea64ddb691069cae7e62" category="list-text">*Advanced settings*：請執行以下操作：</block>
+  <block id="c9bc8bea020f64d04a5acca88723ddfd" category="list-text">輸入要用於 NetApp 外掛程式的連接埠和安裝路徑。此外掛程式可實現 Oracle Database 主機與 NetApp Backup and Recovery 之間的通訊。</block>
+  <block id="d24f4a3688f3efcb4c012c56b0cbe72b" category="list-text">選擇是否允許 NetApp Backup and Recovery 自動安裝外掛程式，或跳過安裝（您需要在主機上手動安裝外掛程式）。</block>
+  <block id="7ed97ae916d37ed8443606f5c8ac4fbb" category="list-text">選擇是否執行安裝前檢查或跳過檢查。</block>
+  <block id="25f9ab167417178f57bb91f475e3b1b1" category="paragraph">Oracle Database 工作負載顯示在「清單」頁面的工作負載清單中。</block>
+  <block id="30000add7aaf9253676b4000b4de34d5" category="paragraph">複製工作不會移除，可以再次用於其他複製作業。</block>
+  <block id="cd988024594d1879c00a0562b6e05d11" category="summary">使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作負載。</block>
+  <block id="0a2540edb55d3589a778219595c0a236" category="doc">使用 NetApp Backup and Recovery 複製 Oracle Database 工作負載</block>
+  <block id="4c35109db8b6bd097c28381279b0921a" category="paragraph">使用 NetApp Backup and Recovery 從內部部署 ONTAP 系統建立 Oracle 資料庫的可寫入複本至主要或次要儲存設備。管理複本的生命週期，以便根據排程定期重新整理。</block>
+  <block id="6762b8756c91b8a3858e4cd8e6c3fd13" category="section-title">建立 Oracle 資料庫的複本</block>
+  <block id="45f1217ea429824adb8728761976bdd4" category="paragraph">從現有快照立即建立複本。使用此方法建立一次性複本，該複本不會從快照持續重新整理。</block>
+  <block id="9de0e2b17d7e1e2da6c0ce7e9dc6e377" category="list-text">選擇 *Clone* 。</block>
+  <block id="217a3032cd4179f2b9c8e8c54e28dc5f" category="list-text">在 *Database source* 部分，從清單中選擇來源主機和資料庫。</block>
+  <block id="a34f2c4ba7ebd928bc52c6458240ba79" category="list-text">在 *Database target* 區段中，從清單中選擇目標主機和資料庫。目的地主機和資料庫可以與來源不同。</block>
+  <block id="98e04edfb16ae23e37276c1b10bb37f5" category="list-text">在 *Select restore point* 頁面的 *Clone from* 部分中，選擇 *Existing snapshots*。</block>
+  <block id="624f61dd9e5f153789e0f1474e3af02a" category="list-text">從清單中選擇一個現有的快照（還原點）作為克隆的基礎，然後選擇 *Next* 。</block>
+  <block id="250bd2e0fd20f197756f90da65d7b032" category="paragraph">如果快照儲存在多個位置，則會顯示 *Select snapshot location*。</block>
+  <block id="59b1d9c0faeccb050b2ae82254459fd3" category="list-text">選擇要使用的快照位置，然後選取 *Next* 。</block>
+  <block id="b2fe9cdb3dfb44588722f86420682e65" category="list-text">在 *Advanced options* 頁面上、執行以下操作：</block>
+  <block id="20decfe57e54a87359cea95bba79c274" category="list-text">如果您之前曾儲存過規範文件，可以上傳該文件以自訂複製資料庫的設定。您也可以下載資料庫快照的預設規範文件。</block>
+  <block id="3c7b24476512ff19d3887cbbaf0c549e" category="list-text">在 *Recovery scope* 部分中，選擇如何限制要還原的內容以建立複本，並輸入所選選項所需的資訊。選擇 *None* 會還原所有資料。</block>
+  <block id="3360c6db4a303d4e7db0bf74d740c00f" category="list-text">在 *Prescripts and postscripts* 部分，啟用 *Prescript* 和 / 或 *Postscript* 選項，以便在複製作業開始前或完成後執行腳本。對於每個選項，請輸入完整的腳本路徑和任何必要的參數。</block>
+  <block id="50059824044533f44d3ae954c21388e4" category="section-title">排程複製 Oracle 資料庫</block>
+  <block id="15e0124ddc742fcfe98d5dda893c46e7" category="paragraph">排程立即建立複本並持續重新整理複本。這會建立資料庫的最新複本。如果您想要根據所選排程持續從資料庫的最新狀態重新整理複本，請使用此方法。</block>
+  <block id="beed2b8d7c8943c45007114d3902e342" category="list-text">在 *選擇還原點* 頁面的 *複製自* 部分中，選取 *即時快照和複製* 。</block>
+  <block id="5eb27b07ac88ccc12c3c2eee2489d1df" category="list-text">選擇建立快照時要儲存快照的位置。</block>
+  <block id="3be58c81d9fd861bc0413b8f72e39d9c" category="list-text">若要自訂複製資料庫的設定，請啟用 *自訂目標資料庫參數* 選項。如果您之前已儲存過規格檔案，則可以使用此選項上傳該檔案以自訂複製資料庫的設定。您也可以下載反映資料庫目前設定的預設規格檔案。</block>
+  <block id="12955fb7f90e9645025713968aacbab9" category="list-text">在 *Clone refresh schedule* 部分，選擇何時以及多久刷新一次克隆。刷新克隆會重新建立即時快照，並將現有克隆覆蓋為新克隆。</block>
+  <block id="39705154f7358a24581822dc4f6d05f2" category="paragraph">您可以拆分 Oracle Database 工作負載的複製。拆分複製會從複製建立新的備份。您可以使用新的備份來還原資料庫。</block>
+  <block id="20794590d8be25afeadb46ebb7aac87d" category="paragraph">您可以刪除 Oracle Database 工作負載的複本。刪除複本後，它將從物件儲存中移除，從而釋放儲存空間。</block>
+  <block id="9584ee8db3d24be1a3a6e4d94ece5c2e" category="section-title">掛載 Oracle Database 復原點</block>
+  <block id="8616a450958f68321bde3e8f34b8c9c5" category="section-title">卸載 Oracle 資料庫復原點</block>
+  <block id="df197f1a2e9f772f8de9983ed94d9541" category="list-text">*工作負載*：例如 Microsoft SQL Server、ONTAP Volumes、VMware、KVM、Hyper-V、Oracle Database 或 Kubernetes。</block>
+  <block id="e1589447f05ccd92a0e9ade876573b81" category="sidebar">複製 Oracle 資料庫工作負載</block>
 </blocks>
