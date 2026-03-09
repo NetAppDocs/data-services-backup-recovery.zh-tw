@@ -364,8 +364,6 @@
   <block id="eace16d66cdd93ad876c620db7456077" category="list-text">山</block>
   <block id="1281764038ea27ade56d7d2b8be22798" category="list-text">解除安裝</block>
   <block id="25e66e51214e8342374fa891a42988b3" category="list-text">恢復至備用位置</block>
-  <block id="00c5709c4d9ca9f8035d5d0e33f2421e" category="list-text">附加 VMDK</block>
-  <block id="097b06a0d5de05867037a2fdc678ef17" category="list-text">分離 VMDK</block>
   <block id="ef18d76ed6c710e78abb28c0e09b3e30" category="list-text">vVol 支持</block>
   <block id="2cc658d562a11cd1528c2219f2d25da7" category="list-text">NVMe 支持</block>
   <block id="98dc7ecfe4c87955d5fb8b98b895eac7" category="list-text">電子郵件集成</block>
@@ -452,7 +450,6 @@
   <block id="ff65f252d2a0aa40e634cf2ad7eaa2d3" category="list-text">資料保護卷不支援使用「*立即備份*」按鈕進行臨時磁碟區備份。</block>
   <block id="3dd0180637528cde8671a0c957cf90da" category="list-text">不支援 SM-BC 配置。</block>
   <block id="28014e4f484f0639d9b0151965328912" category="list-text">ONTAP不支援從單一磁碟區到多個物件儲存的SnapMirror關係扇出；因此， NetApp Backup and Recovery不支援此配置。</block>
-  <block id="139c263dc37495a1365dde941627eb32" category="list-text">目前，Amazon S3、Azure 和StorageGRID支援物件儲存上的 WORM/Compliance 模式。這被稱為 DataLock 功能，必須使用NetApp Backup and Recovery設定來管理，而不是使用雲端提供者介面。</block>
   <block id="3e6e24d49c1e2a7357bbe49c1cf7e682" category="section-title">ONTAP磁碟區的還原限制</block>
   <block id="79ec871c574dbe9adf17973bdb4bf029" category="paragraph">這些限制適用於恢復文件和資料夾的搜尋和恢復方法以及瀏覽和恢復方法；除非特別指出。</block>
   <block id="03a5b9815bb473e6f4be8d24abee633a" category="list-text">瀏覽和恢復一次最多可以恢復 100 個單獨的檔案。</block>
@@ -462,8 +459,6 @@
   <block id="118a57e2fb1b730b4d9702fc0590ed48" category="paragraph">使用 9.11.1 之前的ONTAP版本時，不支援資料夾還原。</block>
   <block id="caac6b6b759dd099323676db10be1564" category="list-text">僅當叢集執行ONTAP 9.13.1 及更高版本時，才支援對駐留在檔案儲存中的資料進行目錄/資料夾還原。</block>
   <block id="e8573f3934d023dbb0b6cea67803d326" category="list-text">僅當叢集執行ONTAP 9.13.1 及更高版本時，才支援使用 DataLock 保護的資料的目錄/資料夾還原。</block>
-  <block id="2ad2934a6b663d3e1150684467ab796f" category="list-text">目前不支援透過複製和/或本機快照進行目錄/資料夾還原。</block>
-  <block id="b2ff0fb046b03e40e599f1561ed5ebd3" category="list-text">不支援從FlexGroup卷還原到FlexVol卷，或從FlexVol卷還原到FlexGroup卷。</block>
   <block id="5f5966e9da5716290dfc2b88ceeb2217" category="list-text">正在復原的檔案必須使用與目標磁碟區上的語言相同的語言。如果語言不一樣，您將收到一條錯誤訊息。</block>
   <block id="0bfb7259f1f6626c1cdf5b3afe490baa" category="list-text">將資料從 Azure 檔案儲存還原到StorageGRID系統時，不支援「高」還原優先權。</block>
   <block id="baa1235434f9122bbcf4cd93c72c3ed3" category="list-text">如果您備份了 DP 卷，然後決定中斷與該卷的SnapMirror關係，則無法將檔案還原到該卷，除非您也刪除SnapMirror關係或反轉SnapMirror方向。</block>
@@ -1995,7 +1990,6 @@
   <block id="573531ec152a1cc1709422d00088088e" category="section-title">保護 VMware 工作負載的要求</block>
   <block id="4ccfae37bea4d344c283e2a68013c9c1" category="paragraph">您需要特定的要求來發現和保護您的 VMware 工作負載。</block>
   <block id="1269e07e6a9265be5844ea32a0494a7f" category="paragraph">軟體支援</block>
-  <block id="2d5a6b46412544fb6ac242fbc736934e" category="list-text">支援的 NFS 版本：NFS 3 和 NFS 4.1</block>
   <block id="40f1a54f3602033103d74e381708e352" category="list-text">支援的 VMware ESXi Server 版本：7.0U1 以上</block>
   <block id="c7d133a7d1fcc4fc9f8bf51535dc3ef0" category="list-text">支援的 VMware vCenter vSphere 版本：7.0U1 及以上</block>
   <block id="f3c396a6341d422a1f0e7a503896ed29" category="list-text">IP 位址：IPv4 和 IPv6</block>
@@ -4341,7 +4335,6 @@
   <block id="4db9a239be0f58f8e4742665ad2371e2" category="paragraph">在啟用搜尋和復原功能前，請確保您的環境符合以下要求：</block>
   <block id="d0320c3b870d5944eb8c31ee83638872" category="paragraph">以下是使用傳統索引時搜尋和復原功能的要求：</block>
   <block id="9078cbf758e0949f0dca426e9aa6c0ce" category="list-text">使用NetApp NFS 卷</block>
-  <block id="459af9b852bd375bac17fb30c8c1b979" category="list-text">NetApp Backup &amp; Recovery 不支援在維持雲端備份功能的同時，將具有活動雲端備份關係的FlexVol volume轉換為FlexGroup磁碟區。</block>
   <block id="063090df0880212c0ba8eec878096a21" category="doc">VMware 工作負載預覽增強功能</block>
   <block id="24936fb650df7af8295e75a3667becef" category="list-text">現在您可以將備份和快照還原到備用位置。如果您想要管理不同 VMware vCenter 部署、VMware ESXi 主機或 VMware 資料儲存上的虛擬機器版本，這將非常有用。</block>
   <block id="99ee61e75520f174d08caa35e0ad294d" category="list-text">現在您可以從主位置或輔助位置還原特定的 VMware 虛擬磁碟（VMDK 映像），從而實現對復原 VM 資料的更精細控制。</block>
@@ -4999,8 +4992,6 @@
   <block id="6108d5ad430f0631e5c6e10714ba980c" category="doc">正式版（GA）支援的 Microsoft Hyper-V 工作負載</block>
   <block id="c5db154b8366e71dcf87e4624b1a0112" category="paragraph">NetApp Backup and Recovery 現已全面支援 Microsoft Hyper-V 工作負載（GA）。</block>
   <block id="bd7b6aa0517dacb10ee10e479293ef82" category="sidebar">保護 Oracle Database 工作負載（預覽版）</block>
-  <block id="2e6a10996a90ae08a445bcd92b94e301" category="list-text">支援的連線儲存設備： ONTAP 9.13 或更新版本</block>
-  <block id="a58576b20da9581ef64dc73d9299ba68" category="list-text">支援 NFS 和 VMFS 資料儲存。</block>
   <block id="dbeedec7ca35d125dd2a7ee8355c41f5" category="section-title">正式版 (GA) 中支援的 VMware 工作負載</block>
   <block id="1fe60033089958dd8dab2fc11925056d" category="section-title">超出授權容量</block>
   <block id="73b5f5184f0b378b50b42a6e8ceb743c" category="paragraph">超出許可容量將觸發 PAYGO 費率；如果沒有 PAYGO 訂閱，您將無法建立新的備份，但現有備份仍可恢復，只是服務不再有保障。請務必在許可證到期前續訂；過期的許可證將阻止建立新的備份並中斷服務。</block>
@@ -5110,4 +5101,29 @@
   <block id="8616a450958f68321bde3e8f34b8c9c5" category="section-title">卸載 Oracle 資料庫復原點</block>
   <block id="df197f1a2e9f772f8de9983ed94d9541" category="list-text">*工作負載*：例如 Microsoft SQL Server、ONTAP Volumes、VMware、KVM、Hyper-V、Oracle Database 或 Kubernetes。</block>
   <block id="e1589447f05ccd92a0e9ade876573b81" category="sidebar">複製 Oracle 資料庫工作負載</block>
+  <block id="76c3536921b70f0616becde2e9340a54" category="doc">ONTAP Volumes 工作負載增強功能</block>
+  <block id="78b068f24da5a7e17080acceea02e506" category="paragraph">在此版本中、 ONTAP Volumes 工作負載引入了以下增強功能：</block>
+  <block id="61f251cc47dddbc52bddd098d342b6d5" category="list-text">*還原到來源位置*：現在您可以將本機快照和複寫快照中的檔案還原到來源位置以及備用位置。</block>
+  <block id="b64975edc0e1d4d2b77bbc09821fe6c1" category="list-text">*每小時磁碟區探索*：Dashboard 現在可以更快地探索和重新整理新磁碟區。</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp 支援網站</block>
+  <block id="8f504b1c826d739819c7ea02c4fd893f" category="list-text">*支援暗網站*：您現在可以從<block ref="e2fed6b5af5d107fdef5614adaedfcef" category="inline-link-rx"></block>下載適用於暗網站的 Backup and Recovery。目前，適用於暗網站的 NetApp Backup and Recovery 僅支援 ONTAP Volumes 工作負載。</block>
+  <block id="ccf9e1de6190057c9e2e1a10c6b8f07f" category="list-text">*Unicode 相容性改進*：目錄索引現在可以更好地處理 Unicode 字元。</block>
+  <block id="a173f0fc9f4786dd11c96099dd446ec8" category="list-text">*改進的 FlexGroup 相容性*：將 ONTAP FlexVol 磁碟區轉換為 FlexGroup 磁碟區時、現在可以還原轉換之前建立的備份。</block>
+  <block id="f32d4e838dfc925da7a940c6e55acf8c" category="list-text">*多重儲存桶支援*：現在您可以跨不同的雲端供應商，使用每個系統最多 6 個儲存桶來保護系統內的磁碟區。</block>
+  <block id="e32587f34260a350a3a49e3604fb2a4c" category="inline-link">保護 ONTAP Volume 工作負載概述</block>
+  <block id="db44a854b206d5d90008224f3bb5b2da" category="paragraph">有關保護 ONTAP Volume 工作負載的詳細資訊，請參閱<block ref="660ec036763d30562702201a56aaa402" category="inline-link-rx"></block>。</block>
+  <block id="f154c542c430b30dc73d2d3e87fd6f65" category="paragraph">在此版本中、 VMware 工作負載引進下列增強功能：</block>
+  <block id="63eb1b3f5c128e6460c85c7b6e5d2bb9" category="list-text">*從物件儲存還原客體資料*：您現在可以從物件儲存還原客體檔案和資料夾。</block>
+  <block id="7d88c93c0ec65e1bcc3564692a490a5b" category="list-text">*VMFS/NFS 快速還原*：現在，您可以在還原到備用位置時啟用快速還原選項。啟用後，系統只會從物件儲存中擷取 VM 中繼資料（檔案、LUN 和命名空間），使磁碟區的可用速度比完整還原更快。</block>
+  <block id="ba95b1986315d65e4bb0f2dcb924f870" category="list-text">*支援 Amazon FSx for NetApp ONTAP*：VMware 工作負載現在支援執行 9.13.1 或更新版本的 Amazon FSx for NetApp ONTAP 儲存系統。</block>
+  <block id="4313ef91d0af92358d4bfc05358d4692" category="list-text">當您將 FlexVol 磁碟區轉換為 FlexGroup 磁碟區或反之亦然時，轉換後的磁碟區將被視為新磁碟區；您需要在轉換後為轉換後的磁碟區設定保護。您可以將轉換前建立的備份還原到不同的磁碟區。</block>
+  <block id="d88c13a12326a1a581751edb0a83ae1b" category="list-text">目前，Amazon S3、Google Cloud Platform（GCP）、Azure 和 StorageGRID 均支援物件儲存上的 WORM／合規模式。這稱為 DataLock 功能，必須透過 NetApp Backup and Recovery 設定來管理，而不是透過雲端供應商介面。</block>
+  <block id="106839ddc74bb36d184d46f6f8d5016f" category="list-text">*spec.dataMover*：（_選用，從 Trident Protect 遷移的叢集必需_）字串，指示要用於備份作業的備份工具。如果此叢集已從 Trident Protect 遷移到 Backup and Recovery，則該值區分大小寫，且必須為<block ref="250c51527f347066847969f002be67a2" prefix=" " category="inline-code"></block>。</block>
+  <block id="06e1026570d8a901d8b6dedf9e5d6f66" category="list-text">*快速還原*：啟用此選項可指示 Backup and Recovery 僅從物件儲存區還原 VM 中繼資料（檔案、LUN 和命名空間）。這樣可以比完整還原更快地使磁碟區可用。</block>
+  <block id="5b6eae3d36833d14f04c696b7a2e75a9" category="list-text">支援 NFSv3 、 NFSv4.1 和 VMFS 資料儲存區。</block>
+  <block id="eff24131b4bb3e0f34de9a437296c19b" category="list-text">支援的連接儲存：</block>
+  <block id="9e2d6035ec7a18aa99db06aab17683c8" category="list-text">ONTAP 9.13.1 或更新版本</block>
+  <block id="84926f15fa96e5fbcf319691a6c909e3" category="list-text">執行 9.13.1 或更新版本的 Amazon FSx for NetApp ONTAP 儲存系統</block>
+  <block id="d683472bc4b099b7787d3a9d8df4673e" category="admonition">如果您選擇 *Bring your own bucket* ，請確保您建立的用作備份目標的容器與 Azure 儲存體帳戶同名。</block>
+  <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">2026 年 3 月 09 日</block>
 </blocks>

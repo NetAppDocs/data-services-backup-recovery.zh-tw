@@ -18,6 +18,41 @@ summary: 了解NetApp Backup and Recovery的新功能。
 
 
 
+== 2026 年 3 月 09 日
+
+此NetApp Backup and Recovery版本包含以下更新。
+
+
+
+=== ONTAP Volumes 工作負載增強功能
+
+在此版本中、 ONTAP Volumes 工作負載引入了以下增強功能：
+
+* *還原到來源位置*：現在您可以將本機快照和複寫快照中的檔案還原到來源位置以及備用位置。
+* *每小時磁碟區探索*：Dashboard 現在可以更快地探索和重新整理新磁碟區。
+* *支援暗網站*：您現在可以從 https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab/download/61906/4.4.0/downloads["NetApp 支援網站"]下載適用於暗網站的 Backup and Recovery。目前，適用於暗網站的 NetApp Backup and Recovery 僅支援 ONTAP Volumes 工作負載。
+* *Unicode 相容性改進*：目錄索引現在可以更好地處理 Unicode 字元。
+* *改進的 FlexGroup 相容性*：將 ONTAP FlexVol 磁碟區轉換為 FlexGroup 磁碟區時、現在可以還原轉換之前建立的備份。
+* *多重儲存桶支援*：現在您可以跨不同的雲端供應商，使用每個系統最多 6 個儲存桶來保護系統內的磁碟區。
+
+
+有關保護 ONTAP Volume 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["保護 ONTAP Volume 工作負載概述"]。
+
+
+
+=== VMware 工作負載增強功能
+
+在此版本中、 VMware 工作負載引進下列增強功能：
+
+* *從物件儲存還原客體資料*：您現在可以從物件儲存還原客體檔案和資料夾。
+* *VMFS/NFS 快速還原*：現在，您可以在還原到備用位置時啟用快速還原選項。啟用後，系統只會從物件儲存中擷取 VM 中繼資料（檔案、LUN 和命名空間），使磁碟區的可用速度比完整還原更快。
+* *支援 Amazon FSx for NetApp ONTAP*：VMware 工作負載現在支援執行 9.13.1 或更新版本的 Amazon FSx for NetApp ONTAP 儲存系統。
+
+
+有關保護 VMware 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["保護 VMware 工作負載概述"]。
+
+
+
 == 2026 年 2 月 23 日
 
 此NetApp Backup and Recovery版本包含以下更新。
