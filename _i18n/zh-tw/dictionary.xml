@@ -1990,17 +1990,12 @@
   <block id="573531ec152a1cc1709422d00088088e" category="section-title">保護 VMware 工作負載的要求</block>
   <block id="4ccfae37bea4d344c283e2a68013c9c1" category="paragraph">您需要特定的要求來發現和保護您的 VMware 工作負載。</block>
   <block id="1269e07e6a9265be5844ea32a0494a7f" category="paragraph">軟體支援</block>
-  <block id="40f1a54f3602033103d74e381708e352" category="list-text">支援的 VMware ESXi Server 版本：7.0U1 以上</block>
-  <block id="c7d133a7d1fcc4fc9f8bf51535dc3ef0" category="list-text">支援的 VMware vCenter vSphere 版本：7.0U1 及以上</block>
-  <block id="f3c396a6341d422a1f0e7a503896ed29" category="list-text">IP 位址：IPv4 和 IPv6</block>
-  <block id="a1712dda84152f55cce278e06e3fb2b9" category="list-text">VMware TLS：1.2、1.3</block>
   <block id="dc735211c86b33a749d2c86bb8b39e80" category="paragraph">*保護 VMware 工作負載的連線和連接埠需求*</block>
   <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">連接埠類型</block>
   <block id="99ddf0e823c1be51589f68696f62cf56" category="cell">預配置連接埠</block>
   <block id="2cb2843b629d315325aac076907ec4b9" category="cell">VMware ESXi 伺服器連接埠</block>
   <block id="62e8cb73d81843582e583ccefca95a44" category="paragraph">443（HTTPS），雙向。來賓檔案復原功能使用此連接埠。</block>
   <block id="131b9f1c14d26ba7a0cce7389e7679a9" category="cell">儲存叢集或儲存虛擬機器端口</block>
-  <block id="fe2ba23f2f581d1ab01848e05711292a" category="paragraph">443（HTTPS），雙向。80（HTTP），雙向。此連接埠用於虛擬設備與儲存虛擬機器或包含儲存虛擬機器的叢集之間的通訊。</block>
   <block id="6def2be93b1fef441b3ca8a2641cc837" category="paragraph">*保護 VMware 工作負載的基於角色的存取控制 (RBAC) 要求*</block>
   <block id="5a87933ace950bfd22e0597a2e342c27" category="paragraph">vCenter 管理員帳號必須具有所需的 vCenter 權限。</block>
   <block id="444268068dcfb1a62c19cda69301e76f" category="inline-link">SnapCenter Plug-in for VMware vSphere vCenter 權限</block>
@@ -2010,11 +2005,6 @@
   <block id="0e41245837200bd6043f82d33b20190c" category="list-text">運行核心版本 5.14.0-503.22.1.el9_5.x86_64（長期）或更高版本的現代 Linux 發行版</block>
   <block id="c970c11004fdd5ce2f1cc065c0a6ad6b" category="list-text">QEMU Guest Agent 版本 9.0.0 或更高版本</block>
   <block id="1264706b848dd57765cb327cb40961af" category="list-text">libvirt 版本 10.5.0 或更高版本</block>
-  <block id="bd1f903de615a0961eab2be934f825c0" category="paragraph">確保您的環境符合發現和保護 Oracle 資源的特定要求。</block>
-  <block id="7509d7baf822c07a0ff0cabeada1f21a" category="list-text">Oracle 資料庫：</block>
-  <block id="d4e3176f0ba3c81be4e51425c09b9e73" category="list-text">Oracle 19C 和 21C 在獨立部署中支援。</block>
-  <block id="da1bc53145833fd30e1b6db8ad4d01f7" category="list-text">Oracle 資料庫必須部署在主或輔助NetApp ONTAP儲存中。</block>
-  <block id="5c83910ec7ea97399068c52ad1c2ab6e" category="list-text">對象存儲支援：</block>
   <block id="eae881bc37210a5b6e769e27a63b4f54" category="list-text">Azure 物件儲存</block>
   <block id="3fcb666743f4142cc3b9eeeb9bccafb4" category="list-text">亞馬遜 AWS</block>
   <block id="55cf1a0f0fce69fd543500e5761dd26d" category="list-text">NetAppStorageGRID</block>
@@ -2032,16 +2022,10 @@
   <block id="59aaea4a07522d3cb111c0d446b7e7e3" category="list-text">NetApp Trident 24.10 或更高版本</block>
   <block id="e33a9836e18ab4c7f01ac49f666c4e33" category="section-title">保護 Hyper-V 工作負載的要求</block>
   <block id="7e75f7658d8e69b52e07a066a4510af5" category="paragraph">確保您的 Hyper-V 執行個體符合發現和保護虛擬機器的特定要求。</block>
-  <block id="99fcf7547e608c33c370f1d5fe54e0a9" category="list-text">Microsoft Hyper-V 2019、2022 及 2025 年版本</block>
-  <block id="4c0e33820cc2625f20df7d75a7db2a90" category="list-text">確保 Windows 防火牆設定中允許下列連接埠進行雙向 HTTPS 通訊：</block>
-  <block id="2f09bec2ba16dad8a4210aafc07d4e36" category="list-text">8144（適用於 Hyper-V 的NetApp插件）</block>
-  <block id="eeb69275da8e2dd563a27a05a24a4ff1" category="list-text">8145（適用於 Windows 的NetApp插件）</block>
-  <block id="be632b7b13ba242c1c2bfd0b19a81547" category="list-text">Hyper-V 主機的硬體需求：</block>
   <block id="e8ab74a683c73fd7edd0ea5adc16b2b6" category="list-text">支援獨立主機和 FCI 叢集主機</block>
   <block id="6106f73de41b0409a6e5dd18d2f2baf3" category="list-text">Hyper-V 主機上的NetApp Hyper-V 插件至少需要 1GB RAM</block>
   <block id="6736478116770d132993185ee55b6baf" category="list-text">Hyper-V 主機上插件的最低安裝和日誌空間為 5GB</block>
   <block id="523f5e6af5276c06e274c9d76b2d4467" category="admonition">確保在 Hyper-V 主機上為日誌資料夾分配足夠的磁碟空間並定期監控其使用情況。所需空間取決於備份和資料保護操作發生的頻率。如果空間不足，則不會產生日誌。</block>
-  <block id="45eb2c9346b72d7957a67eed3bb74a3d" category="list-text">NetApp ONTAP設定需求：</block>
   <block id="1498907a7069094c1a1b679e2a53087a" category="list-text">主ONTAP系統（ONTAP 9.14.1 或更高版本）</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">ONTAP 文檔</block>
   <block id="0a2b6c395fc07f332dac7e7046c239c4" category="list-text">對於使用 CIFS 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在ONTAP系統上啟用了連續可用性共用屬性。請參閱<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>以取得說明。</block>
@@ -3811,7 +3795,6 @@
   <block id="1a411806f1f54597b7259137d2e753db" category="paragraph">輸入密碼。</block>
   <block id="83760b08057d3103fac3ba1635b60ee2" category="list-text">將 Indexed Catalog 備份 zip 檔案（我們將使用範例檔案名稱「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」）從備份位置複製到「/opt/application/netapp/cbs」資料夾中的新控制台代理主機。</block>
   <block id="39ba61f148a69dbb1215b6b10c98b11a" category="list-text">使用下列命令解壓縮「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」檔案：</block>
-  <block id="3b3267745861675e9a5e88b689b4cda8" category="list-text">執行 *ls* 命令以確保已建立資料夾“catalogdb1”，其下有子資料夾“changes”和“snapshots”。</block>
   <block id="47088be6cbcb439bd7241ec72edf3a91" category="section-title">發現您的ONTAP叢集和StorageGRID系統</block>
   <block id="d48b6913f58cefb9083171fcdb101a45" category="inline-link">探索所有本地ONTAP系統</block>
   <block id="cf7ce87536186cbb28dfd1941d60bf73" category="list-text"><block ref="8d218fd8140a4ddbb1c59ac54a8fd70f" category="inline-link-rx"></block>在您之前的環境中可用。這包括您用作 S3 伺服器的ONTAP系統。</block>
@@ -4061,7 +4044,6 @@
   <block id="fc7c1a6c328c3622bdd68b73c548bb4f" category="paragraph">如果為物件儲存中的備份檔案啟用了勒索軟體復原功能，則要求您在復原之前執行額外的檢查。我們建議進行掃描。</block>
   <block id="2b2261b532e949e52edc443eb38fcb1c" category="admonition">您可能需要向雲端提供者支付額外費用才能存取備份檔案。</block>
   <block id="d4356e3242caba9699bd9bc147a04798" category="paragraph">在「恢復」頁面（搜尋和恢復）中，您可以透過使用篩選器搜尋快照來恢復資源，即使您不記得其確切名稱、位置或最後已知日期。</block>
-  <block id="63751d750873479f94855f0a16fc63d8" category="list-text">Hyper-V Windows Server 主機的軟體需求：</block>
   <block id="fd7bb5c3777005321645f38a2d07ea27" category="admonition">如果還原作業未完成，請等到作業監視器顯示「失敗」後再重試還原作業。</block>
   <block id="51e153ee1aa6cdb4ca7796e926180b53" category="admonition">若要切換至NetApp Backup and Recovery工作負載，請參閱<block ref="e56b09183f5489111204017fecace77e" category="inline-link-macro-rx"></block>。</block>
   <block id="2f52181b09a7c053aed22699e227b9db" category="paragraph">當您在 SaaS 環境中使用NetApp Backup and Recovery，並在雲端供應商或您自己的網際網路連線主機上部署控制台代理程式時，系統會備份並保護雲端中所有重要的設定資料。如果您遇到控制台代理問題，請建立新的控制台代理並新增您的系統。備份詳細資訊將自動恢復。</block>
@@ -4296,9 +4278,6 @@
   <block id="40d372f97e4d897da51bc1fa5978329b" category="paragraph">當您使用 Google Cloud Platform 時，請向NetApp申請私有報價，並在 Google Cloud Marketplace 啟用時選擇您的套餐。</block>
   <block id="14e2c3c5d70d421449af52fed7355245" category="list-text">使用來自多個 Hyper-V 主機的虛擬機器建立資源組</block>
   <block id="c224c03fd1f5cab444913dab60a8d013" category="list-text">*主機註冊*：透過輸入主機的 FQDN 或 IP 位址、憑證、控制台代理程式和連接埠號碼來新增新的 Hyper-V 主機。如果控制台代理無法解析 FQDN，則改用 IP 位址。對於 FCI 集群，請輸入 FCI 集群管理 IP 位址。</block>
-  <block id="36c0d00755a4d8daae367144e5daca38" category="list-text">如果非管理員網域使用者要保護 Hyper-V 虛擬機，請確保使用者擁有下列權限：</block>
-  <block id="57d2171dbc8d8d7a864a60de1ab4656c" category="list-text">請確保該使用者是本機管理員群組成員。</block>
-  <block id="27bc296e867cae2ef33b5cac51392cb2" category="list-text">確保使用者已加入「以服務身分登入」本機安全性原則。</block>
   <block id="6d397139779cf4483cf1c4693e7f6cfc" category="paragraph">如果您建立自己的儲存桶，則應使用儲存桶名稱「netapp-backup」。如果需要使用自訂名稱，請編輯<block ref="36f2cf0d90ddea374df0d9a8b6aa6300" prefix=" " category="inline-code"></block>為現有 CVO 新增 IAMRole，並將下列 JSON 區塊新增至 S3 權限中<block ref="2af6fd9ec72aee193ee7ffe09638e08f" prefix=" " category="inline-code"></block>大批。您需要包括<block ref="87307b2ef4c880d061c68a6a4277d9a9" prefix=" " category="inline-code"></block>並分配與儲存桶關聯的所有必要權限。</block>
   <block id="3f05712ac311679f5293cdeca4b95c4a" category="summary">使用NetApp Backup and Recovery and Recovery ，透過瀏覽和復原功能恢復ONTAP資料。</block>
   <block id="a9069e9a58042b9bc7056398756845ee" category="paragraph">使用NetApp Backup and Recovery and Recovery ，透過瀏覽和復原功能恢復ONTAP資料。在復原之前，請記下來源磁碟區名稱、來源系統和 SVM 以及備份檔案日期。您可以從快照、複製磁碟區或儲存在物件儲存中的備份還原ONTAP資料。</block>
@@ -4545,7 +4524,6 @@
   <block id="80ca63ba7d66f5d8a55a9817ee3bc137" category="list-text">*快速復原*：啟用此選項可使復原的虛擬機器立即可用。僅從物件儲存中恢復運行虛擬機器所需的文件，而不是整個磁碟區。</block>
   <block id="286d76e7e91f5683e678b1a399bad3bd" category="list-text">在「恢復後選項」部分，請考慮以下選項：</block>
   <block id="7510c6e86ae26f29103eade23948e7e7" category="paragraph">使用NetApp Backup and Recovery保護您的託管 KVM 虛擬機器和儲存池。NetApp Backup and Recovery提供快速、節省空間、崩潰一致性和 VM 一致性的備份和復原作業。在使用備份和復原功能保護 KVM 主機和虛擬機器之前，必須先使用 Apache CloudStack 等管理平台來管理它們。</block>
-  <block id="8ff035fa875da8ae8e1e252604570212" category="list-text">*啟用虛擬機器一致性快照*：選擇是否啟用虛擬機器一致性快照。這樣可以確保新建立的快照與建立快照時虛擬機器的狀態保持一致。這有助於確保備份能夠成功恢復，並且資料處於一致狀態。這不適用於現有快照。</block>
   <block id="a6f4d54cf73e6e376bec67151132228e" category="summary">嘗試還原用戶端檔案時，您可能會遇到用戶端檔案還原工作階段為空白、用戶端檔案還原附加磁碟作業失敗或用戶端檔案還原工作階段停止後備份未分離的情況。</block>
   <block id="b6b36b81e336437107eb237b1e03955e" category="doc">訪客文件恢復故障排除</block>
   <block id="e186535e6f6fedaa3e8c07a0dda81d24" category="paragraph">嘗試恢復訪客文件時，您可能會遇到以下任一情況。</block>
@@ -4763,7 +4741,6 @@
   <block id="9f0dc4af8fb867cc1d90bc96a3df9976" category="paragraph">當您建立 3-2-1 保護策略時，如果物件儲存備份不會與複製到次要儲存設備同時發生，則在保護應用程式時，保護策略會掛起。</block>
   <block id="7a9541e3e0859a3bc7198878ae12b9bd" category="paragraph">*因應措施*：移除並重新新增應用程式，並使用不同的保護原則加以保護。</block>
   <block id="3f21300a12c48d2767fb3e5b7f83112b" category="doc">Oracle 資料庫工作負載的 NetApp Backup and Recovery 已知限制</block>
-  <block id="bc757dcd5d14a5f50685dfc481e61eb9" category="paragraph">Oracle Database 僅在 Oracle Database 工作負載的私人預覽版本中支援使用 NFS、SAN 或 ASM SAN 進行獨立部署。</block>
   <block id="92342f1ac80ff519b37da9a3148cbbd9" category="summary">為了提高安全性，請在 NetApp Backup and Recovery 中配置特定角色的存取權限。</block>
   <block id="42481383ace46d9a4716cce3ab760979" category="doc">在 NetApp Backup and Recovery 中設定基於角色的存取控制</block>
   <block id="c43786d5855026fcdf77809fb14618c9" category="paragraph">為了提升安全性並控制資源存取，請為 NetApp Backup and Recovery 設定以角色為基礎的存取權限。NetApp Console 支援部分 Backup and Recovery 工作負載的角色型存取控制（RBAC）。你可以針對這些工作負載指派管理員或檢視者角色。尚未支援角色型存取控制的其他工作負載，在支援專案層級關聯之前，仍可由所有具有 Backup and Recovery 角色的使用者存取。</block>
@@ -4981,7 +4958,6 @@
   <block id="95815b21a64646ca02a4d958d053cef7" category="list-text">請參閱 <block ref="840bb935154607a5be4199a217b0bf56" category="inline-link-macro-rx"></block>。</block>
   <block id="4a6440cf633ba5f9e68b3e722f3a2bdd" category="paragraph">對於 Kubernetes 工作負載，費用是根據所有持續磁碟區的總大小計算的。</block>
   <block id="ac48592f4b6ad81597a3d86209bce635" category="section-title">保護 Oracle 資料庫工作負載的要求</block>
-  <block id="6b4dd2a26d258b058101055118ed2560" category="list-text">主機作業系統支援： Red Hat Enterprise Linux 8 和 9</block>
   <block id="cd992a76d620e6cac42ca61d20f93f1d" category="list-text">NetApp Trident Protect 25.07 或更新版本（在 Kubernetes 工作負載探索期間安裝）</block>
   <block id="8c703f00b817f5c9121d74efc33cdde9" category="list-text">NetApp Trident Protect Connector 25.07 或更新版本（在 Kubernetes 工作負載探索期間安裝）</block>
   <block id="5254dbe16e57a413455e2c5f7d5e70a1" category="list-text">確保 Kubernetes 叢集、Trident Protect Connector 和 Trident Protect Proxy 之間的出站方向 TCP 連接埠 443 未被過濾。</block>
@@ -4997,7 +4973,6 @@
   <block id="73b5f5184f0b378b50b42a6e8ceb743c" category="paragraph">超出許可容量將觸發 PAYGO 費率；如果沒有 PAYGO 訂閱，您將無法建立新的備份，但現有備份仍可恢復，只是服務不再有保障。請務必在許可證到期前續訂；過期的許可證將阻止建立新的備份並中斷服務。</block>
   <block id="b9c809d8faa35e3cecf28c39b12a0890" category="list-text">ASP.NET Core Runtime 8.0.23 Hosting Bundle（以及所有後續的 8.0.x 修補程式）</block>
   <block id="d5339ec2460f6dc04a037cc1e0c21e2c" category="list-text">PowerShell 7.4.13</block>
-  <block id="6d379457554ecca51ab298da606eeb2d" category="list-text">PowerShell 7.4.13 或更高版本</block>
   <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="doc">General Availability（GA）支援的 KVM 工作負載</block>
   <block id="2c4d488d266d9d0655ce2e1451e05b2d" category="paragraph">Kubernetes 工作負載支援現已在 NetApp Backup and Recovery 中正式發布（GA）。此版本的 Kubernetes 工作負載還引入了以下增強功能：</block>
   <block id="2329c3692bdf2d2f098db291ec4e9427" category="paragraph">*報告支援*：現在您可以為受 NetApp Backup and Recovery 保護的 Kubernetes 叢集和應用程式產生保護活動報告。</block>
@@ -5069,7 +5044,6 @@
   <block id="bf8e3c6752e8047e150b1ede213faaf5" category="list-text">按照對話框中的說明操作，完成後啟用核取方塊，然後選取 *Done* 。</block>
   <block id="4388b2b0f034ea64ddb691069cae7e62" category="list-text">*Advanced settings*：請執行以下操作：</block>
   <block id="c9bc8bea020f64d04a5acca88723ddfd" category="list-text">輸入要用於 NetApp 外掛程式的連接埠和安裝路徑。此外掛程式可實現 Oracle Database 主機與 NetApp Backup and Recovery 之間的通訊。</block>
-  <block id="d24f4a3688f3efcb4c012c56b0cbe72b" category="list-text">選擇是否允許 NetApp Backup and Recovery 自動安裝外掛程式，或跳過安裝（您需要在主機上手動安裝外掛程式）。</block>
   <block id="7ed97ae916d37ed8443606f5c8ac4fbb" category="list-text">選擇是否執行安裝前檢查或跳過檢查。</block>
   <block id="25f9ab167417178f57bb91f475e3b1b1" category="paragraph">Oracle Database 工作負載顯示在「清單」頁面的工作負載清單中。</block>
   <block id="30000add7aaf9253676b4000b4de34d5" category="paragraph">複製工作不會移除，可以再次用於其他複製作業。</block>
@@ -5120,10 +5094,57 @@
   <block id="d88c13a12326a1a581751edb0a83ae1b" category="list-text">目前，Amazon S3、Google Cloud Platform（GCP）、Azure 和 StorageGRID 均支援物件儲存上的 WORM／合規模式。這稱為 DataLock 功能，必須透過 NetApp Backup and Recovery 設定來管理，而不是透過雲端供應商介面。</block>
   <block id="106839ddc74bb36d184d46f6f8d5016f" category="list-text">*spec.dataMover*：（_選用，從 Trident Protect 遷移的叢集必需_）字串，指示要用於備份作業的備份工具。如果此叢集已從 Trident Protect 遷移到 Backup and Recovery，則該值區分大小寫，且必須為<block ref="250c51527f347066847969f002be67a2" prefix=" " category="inline-code"></block>。</block>
   <block id="06e1026570d8a901d8b6dedf9e5d6f66" category="list-text">*快速還原*：啟用此選項可指示 Backup and Recovery 僅從物件儲存區還原 VM 中繼資料（檔案、LUN 和命名空間）。這樣可以比完整還原更快地使磁碟區可用。</block>
-  <block id="5b6eae3d36833d14f04c696b7a2e75a9" category="list-text">支援 NFSv3 、 NFSv4.1 和 VMFS 資料儲存區。</block>
-  <block id="eff24131b4bb3e0f34de9a437296c19b" category="list-text">支援的連接儲存：</block>
   <block id="9e2d6035ec7a18aa99db06aab17683c8" category="list-text">ONTAP 9.13.1 或更新版本</block>
   <block id="84926f15fa96e5fbcf319691a6c909e3" category="list-text">執行 9.13.1 或更新版本的 Amazon FSx for NetApp ONTAP 儲存系統</block>
   <block id="d683472bc4b099b7787d3a9d8df4673e" category="admonition">如果您選擇 *Bring your own bucket* ，請確保您建立的用作備份目標的容器與 Azure 儲存體帳戶同名。</block>
   <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">2026 年 3 月 09 日</block>
+  <block id="e0ec2dc076093e707f6f4a129c330a5e" category="paragraph">在此版本中、VMware 工作負載引進了以下增強功能：</block>
+  <block id="c951c234678bc7ac8d60ec274364552c" category="paragraph">*按排程層級支援 VM 一致性*：現在，在設定 VMware 工作負載的保護原則時，您可以為特定的排程層級啟用 VM 一致性備份和應用程式一致性備份。支援年度、月度和週度層級。</block>
+  <block id="b2dce04db788f63b4bd7ca87afaedbeb" category="list-text">選擇是否允許 NetApp Backup and Recovery 自動安裝外掛程式，或跳過自動外掛程式安裝（如果啟用 *使用手動安裝*，則需要在主機上手動安裝外掛程式）。</block>
+  <block id="3cee314942b4a72ed68541a1f11363e7" category="admonition">新增資源可能需要幾分鐘。若要查看進度，請在 Inventory 頁面底部的狀態對話方塊中選取 *Track progress* ，或從左側選單中選取 *Monitoring* 。</block>
+  <block id="9ed79b14b5dd7fad46b63a16e128743e" category="list-text">*啟用 VM 一致性快照*：選擇是否要啟用 VM 一致性快照。這可確保新建立的快照與建立快照時虛擬機器的狀態一致。這有助於確保備份能夠成功還原，且資料處於一致狀態。這不適用於現有快照。對於 VMware 工作負載，您可以針對每小時以外的特定原則頻率啟用此選項。</block>
+  <block id="9b97b7bd5e0a87be7bf218224ada83cf" category="cell">要求</block>
+  <block id="eaa4dc5078017a5c5bebf383ab6f5124" category="cell">支援</block>
+  <block id="7940770b2e70d644dfed6246137fcc6e" category="cell">資料存放區類型</block>
+  <block id="9a80a7159e77caf9f38bf02844e45afe" category="cell">NFSv3 、 NFSv4.1 和 VMFS</block>
+  <block id="edd5bb361ead6616700a93b480d5b4b6" category="cell">VMware ESXi Server 版本</block>
+  <block id="7f48db72c7f9bf7951ba6e6012bf6991" category="cell">7.0U1 及更高版本</block>
+  <block id="09407ee814b2f903a4d4f802845d6ad4" category="cell">VMware vCenter vSphere 版本</block>
+  <block id="c23ce59c2161d685d7c4638a69099117" category="cell">IP 位址類型</block>
+  <block id="57750e92b36b7db69376c18af7d940a5" category="cell">IPv4、IPv6</block>
+  <block id="45d5c295d71d8cb5970142d96ac0face" category="cell">VMware TLS 版本</block>
+  <block id="6dd906abac50c0e38ec5790fd42b32f0" category="cell">1.2 、 1.3</block>
+  <block id="f5992580cf9676b9557bf4c0d7efb7b1" category="cell">連接的儲存設備</block>
+  <block id="8e5543a157fce55496baec1b68e578dd" category="list-text">443 (HTTPS)，雙向。</block>
+  <block id="54d24ca3a5485d7392edb2b1a9ebfd80" category="list-text">80 （HTTP），雙向。此連接埠用於虛擬應用裝置與儲存 VM 或包含儲存 VM 的叢集之間的通訊。</block>
+  <block id="a5f167b540745795bfa82881525658b7" category="paragraph">確保您的環境符合發現和保護 Oracle Database 資源的特定要求。</block>
+  <block id="be84d19651fadb3105ee4563b1a749a1" category="cell">部署拓撲</block>
+  <block id="6573228c28e984dea35ef8e206b9b22e" category="list-text">獨立式 (NFS、SAN、ASM SAN)</block>
+  <block id="40462b3520e204c56d496704b2197731" category="list-text">RAC over ASM（VMDK on VMFS）</block>
+  <block id="23288ce9e4c4065a0c262950a798255a" category="cell">Oracle Database 版本</block>
+  <block id="0ac3a1f034484f75f44fe8688e650ffe" category="list-text">Oracle Database 19c</block>
+  <block id="e78bd68f4ea5809752852eea2f74942d" category="list-text">Oracle Database 21c</block>
+  <block id="bfb41b93b456cbfbb13575130b781d6e" category="cell">資料庫儲存</block>
+  <block id="758c7c131207b45117af92c70404b345" category="cell">必須部署在 NetApp ONTAP （主要或次要）上</block>
+  <block id="0437eec9c1ba5909642a99ee90c5a546" category="cell">主機 OS</block>
+  <block id="5508505cbdbe4c572010783025a1150d" category="list-text">Red Hat Enterprise Linux 8</block>
+  <block id="79a35fb717e5fb1f7054fc94c597e2d2" category="list-text">Red Hat Enterprise Linux 9</block>
+  <block id="014ba561f219ba053a41bf54f3ce33b4" category="cell">物件儲存 （備份目標）</block>
+  <block id="3e0bb972fc7b38e6cd0262fb76265e80" category="paragraph">*Hyper-V Windows Server 主機的軟體需求*</block>
+  <block id="bbc2d665b02dc421c5c756db4b973610" category="cell">Microsoft Hyper-V</block>
+  <block id="49c1cfb8defeea7149e31b4d5c722668" category="cell">2019 、 2022 及 2025 版</block>
+  <block id="d5fda164bdd74f6422bd307aaf09a590" category="cell">ASP.NET Core Runtime</block>
+  <block id="96572d20b8522157aeea52d45e4fa8da" category="cell">8.0.23 Hosting Bundle（以及所有後續的 8.0.x 補丁）</block>
+  <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="cell">PowerShell</block>
+  <block id="f46b5f975abd397286a477bc6d707be0" category="cell">如果非管理員使用者將負責保護 Hyper-V VM ，請確保這些使用者擁有下列權限</block>
+  <block id="cdbbb0285100c9f92a2552ccfefd99ab" category="list-text">本機管理員群組的成員</block>
+  <block id="0880741cc7bc09074a15d249ec960531" category="list-text">「以服務身分登入」本機安全性原則的一部分</block>
+  <block id="4698b69bed4ee276f187d88f25644b08" category="cell">請確保在 Windows 防火牆設定中允許下列連接埠的雙向 HTTPS 流量</block>
+  <block id="d213948679817ac06e8c20f73a6d5e50" category="list-text">TCP 8144（NetApp Plugin for Hyper-V）</block>
+  <block id="eb24ddd0422049219f581858a9ae2714" category="list-text">TCP 8145（NetApp Plugin for Windows）</block>
+  <block id="1fb4fe8a0be6159013de38bbdffbcab3" category="paragraph">*Hyper-V 主機的硬體需求*</block>
+  <block id="7f32d94ab622f0820b5ea4312baa0d74" category="paragraph">*NetApp ONTAP 配置要求*</block>
+  <block id="86a1075e6640849bd364878900fd5412" category="paragraph">您也可以依照下列步驟取代 Console 代理程式並還原在本機以_標準模式_使用 Backup and Recovery 時儲存在其上的設定資料（當不涉及雲端帳戶時，例如，當使用 NetApp StorageGrid 作為備份目標時）。</block>
+  <block id="72edcbdd4436f32d101a83a36dd2d1db" category="list-text">執行 *ls* 命令以確保已建立資料夾 "catalogdb1"，並且其中包含子資料夾<block ref="45b963397aa40d4a0063e0d85e4fe7a1" prefix=" " category="inline-code"></block>、<block ref="b17be6650251f2e6c7d4e90209beb4e0" prefix=" " category="inline-code"></block>和<block ref="695633290d050f31cec0c9d4bd4a57fe" prefix=" " category="inline-code"></block>。</block>
+  <block id="69b1a964078d5301a2aa9822cb2304f2" category="section-title">2026 年 3 月 16 日</block>
 </blocks>

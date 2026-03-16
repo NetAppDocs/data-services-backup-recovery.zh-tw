@@ -88,8 +88,6 @@ sidebar:
         url: "/prev-ontap-backup-onprem-storagegrid.html"
       - title: 使用SnapMirror將磁碟區遷移到 Cloud Resync
         url: "/prev-ontap-migrate-resync.html"
-      - title: 在暗站中恢復配置數據
-        url: "/reference-backup-cbs-db-in-dark-site.html"
       - title: 管理ONTAP備份
         url: "/prev-ontap-backup-manage.html"
       - title: 從ONTAP備份還原
@@ -234,6 +232,8 @@ sidebar:
       url: "/prev-reference-azure-archive-storage-tiers.html"
     - title: 支援的 Google Cloud 歸檔儲存層
       url: "/prev-reference-gcp-archive-storage-tiers.html"
+    - title: 在暗站中恢復配置數據
+      url: "/reference-backup-cbs-db-in-dark-site.html"
   - title: 法律聲明
     url: "/legal-notices.html"
 product-family:

@@ -1,0 +1,13 @@
+= VMware 工作負載增強功能
+:allow-uri-read: 
+
+
+
+
+=== VMware 工作負載增強功能
+
+在此版本中、VMware 工作負載引進了以下增強功能：
+
+*按排程層級支援 VM 一致性*：現在，在設定 VMware 工作負載的保護原則時，您可以為特定的排程層級啟用 VM 一致性備份和應用程式一致性備份。支援年度、月度和週度層級。
+
+有關保護 VMware 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["保護 VMware 工作負載概述"]。

@@ -50,14 +50,14 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您保護
 . *Advanced settings*：請執行以下操作：
 +
 .. 輸入要用於 NetApp 外掛程式的連接埠和安裝路徑。此外掛程式可實現 Oracle Database 主機與 NetApp Backup and Recovery 之間的通訊。
-.. 選擇是否允許 NetApp Backup and Recovery 自動安裝外掛程式，或跳過安裝（您需要在主機上手動安裝外掛程式）。
+.. 選擇是否允許 NetApp Backup and Recovery 自動安裝外掛程式，或跳過自動外掛程式安裝（如果啟用 *使用手動安裝*，則需要在主機上手動安裝外掛程式）。
 .. 選擇是否執行安裝前檢查或跳過檢查。
 
 
 . 選擇*發現*。
 +
 
-TIP: 此過程可能需要幾分鐘。
+TIP: 新增資源可能需要幾分鐘。若要查看進度，請在 Inventory 頁面底部的狀態對話方塊中選取 *Track progress* ，或從左側選單中選取 *Monitoring* 。
 
 
 
