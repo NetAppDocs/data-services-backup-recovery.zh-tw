@@ -261,7 +261,7 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 | ASP.NET Core Runtime | 8.0.23 Hosting Bundle（以及所有後續的 8.0.x 補丁） 
 
 
-| PowerShell | 7.0U1 及更高版本 
+| PowerShell | 7.4.13 或更新版本 
 
 
 | 如果非管理員使用者將負責保護 Hyper-V VM ，請確保這些使用者擁有下列權限  a| 
