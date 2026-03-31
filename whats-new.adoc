@@ -18,6 +18,24 @@ summary: 了解NetApp Backup and Recovery的新功能。
 
 
 
+== 2026 年 3 月 31 日
+
+此NetApp Backup and Recovery版本包含以下更新。
+
+
+
+=== Oracle Database 工作負載增強功能
+
+在此版本中、Oracle Database 工作負載引進下列增強功能：
+
+* *叢集主機支援*：現在您可以發現並保護使用 Oracle Automatic Storage Management（ASM）且透過 VMDK 部署在 VMFS 檔案系統上的 Oracle Real Application Clusters（RAC）資料庫。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-discover-oracle.html["探索 Oracle Database 工作負載"]。
+* *RMAN 目錄支援*：現在您可以設定 Backup and Recovery，將保護中繼資料儲存在 RMAN 復原目錄中，因此即使目標控制檔案遺失，也能提供備援和長期保留。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-configure-oracle-database.html["設定 Oracle 資料庫"]。
+
+
+有關保護 Oracle Database 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["保護 Oracle Database 工作負載概述"]。
+
+
+
 == 2026 年 3 月 16 日
 
 此NetApp Backup and Recovery版本包含以下更新。

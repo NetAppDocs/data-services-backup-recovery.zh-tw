@@ -27,9 +27,6 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您保護
 .步驟
 . 從NetApp Console選單中，選擇「保護」>「備份和復原」。
 . 在“工作負載”下，選擇“Oracle”磁貼。
-+
-如果您是第一次登入備份和恢復，並且在控制台中有一個系統但沒有發現任何資源，則會顯示「歡迎使用新的NetApp備份和恢復」頁面，其中包含「發現資源」選項。
-
 . 選擇*發現資源*。
 . 在 *Workload type* 欄位中選擇 *Oracle*。
 . 如果您尚未儲存此 Oracle Database 主機的憑證，請選擇「新增憑證」。
@@ -40,7 +37,7 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您保護
 .. 選擇*完成*。
 
 
-. *主機註冊*：新增 Oracle Database 主機。輸入主機的 FQDN 或 IP 位址、憑證、Console 代理程式和連接埠號碼。
+. *主機註冊*：新增 Oracle Database 主機。在 *Host FQDN or IP address* 欄位中，輸入主機的 FQDN 或 IP 位址 - 對於叢集資料庫，您可以輸入叢集中任何節點的 FQDN 或 IP。然後提供認證資料、NetApp Console 代理程式和連接埠號碼。
 . （可選）如果您為非 root 使用者選擇憑證，請執行下列操作：
 +
 .. 有關如何將您選擇的非 root 使用者新增至 Oracle Database 主機上的 sudoers 檔案中的說明，請選擇 *Configure sudoers* 。
@@ -50,8 +47,20 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您保護
 . *Advanced settings*：請執行以下操作：
 +
 .. 輸入要用於 NetApp 外掛程式的連接埠和安裝路徑。此外掛程式可實現 Oracle Database 主機與 NetApp Backup and Recovery 之間的通訊。
-.. 選擇是否允許 NetApp Backup and Recovery 自動安裝外掛程式，或跳過自動外掛程式安裝（如果啟用 *使用手動安裝*，則需要在主機上手動安裝外掛程式）。
-.. 選擇是否執行安裝前檢查或跳過檢查。
+.. 選擇是否允許 NetApp Backup and Recovery 自動在每個主機上安裝外掛程式，或略過所有主機的自動外掛程式安裝。選取 *顯示手動安裝說明* 以取得手動安裝指引。
++
+[NOTE]
+====
+NetApp Backup and Recovery 透過 SSH 連線至每個主機，以自動安裝外掛程式。當出現以下任一情況時，請啟用*使用手動安裝*：
+
+*** 一個或多個主機未執行 SSH 服務。
+*** 任何主機都已安裝 NetApp 外掛程式（包括僅部分叢集成員安裝的情況）。
+*** 您偏好在每個主機上手動安裝外掛程式。
+
+
+====
+.. 如果資料庫主機是叢集的，請啟用 *Add all hosts in the cluster* 選項以探索叢集中的所有主機。
+.. 選擇是否在自動安裝外掛程式之前，在每個主機上執行預先安裝檢查。如果檢查失敗，自動外掛程式安裝就會停止。若要略過檢查並繼續安裝，請啟用 *Skip optional preinstall checks* （如果您選擇手動安裝，則會自動啟用）。
 
 
 . 選擇*發現*。

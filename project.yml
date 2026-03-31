@@ -172,6 +172,8 @@ sidebar:
         url: "/br-use-oracle-protect-overview.html"
       - title: 探索 Oracle Database 工作負載
         url: "/br-start-discover-oracle.html"
+      - title: 設定 Oracle 資料庫
+        url: "/br-start-configure-oracle-database.html"
       - title: 建立和管理 Oracle Database 工作負載的保護群組
         url: "/br-use-oracle-protection-groups.html"
       - title: 備份 Oracle Database 工作負載
@@ -180,7 +182,7 @@ sidebar:
         url: "/br-use-oracle-clone.html"
       - title: 還原 Oracle Database 工作負載
         url: "/br-use-oracle-restore.html"
-      - title: 安裝和卸載復原點
+      - title: 掛載、卸載和編目復原點
         url: "/br-use-oracle-mount-unmount.html"
     - title: 保護 Kubernetes 工作負載
       entries:

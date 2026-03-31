@@ -1464,8 +1464,6 @@
   <block id="0e3dfc8aecedae71e6c1e03c52c544ec" category="section-title">立即使用按需備份來備份資料庫</block>
   <block id="4875f551855c5d20449df9a7a54edc8a" category="paragraph">您可以執行單一資料庫的按需備份。</block>
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">選擇要備份的資料庫。</block>
-  <block id="77b7ee08ed330c77cd76797cc7019357" category="doc">使用NetApp Backup and Recovery掛載和解除安裝 Oracle 資料庫復原點</block>
-  <block id="797c8d8b5a0f5a880bd15fd855682db6" category="paragraph">如果您需要以受控狀態存取資料庫來執行復原操作，則可能需要安裝 Oracle 資料庫復原點。</block>
   <block id="027d1aa00ef27e7ff911f7a3ecb49c5d" category="list-text">選擇 Oracle 圖塊。</block>
   <block id="3fe9c6f0345265378a65d07de3e0456f" category="list-text">在備份和還原選單中，選擇*Inventory*。</block>
   <block id="872dd4524336673d42ecaa46bc8eb4a9" category="list-text">對於清單中的 Oracle 資料庫工作負載，選擇「*檢視*」。</block>
@@ -1994,12 +1992,8 @@
   <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">連接埠類型</block>
   <block id="99ddf0e823c1be51589f68696f62cf56" category="cell">預配置連接埠</block>
   <block id="2cb2843b629d315325aac076907ec4b9" category="cell">VMware ESXi 伺服器連接埠</block>
-  <block id="62e8cb73d81843582e583ccefca95a44" category="paragraph">443（HTTPS），雙向。來賓檔案復原功能使用此連接埠。</block>
   <block id="131b9f1c14d26ba7a0cce7389e7679a9" category="cell">儲存叢集或儲存虛擬機器端口</block>
   <block id="6def2be93b1fef441b3ca8a2641cc837" category="paragraph">*保護 VMware 工作負載的基於角色的存取控制 (RBAC) 要求*</block>
-  <block id="5a87933ace950bfd22e0597a2e342c27" category="paragraph">vCenter 管理員帳號必須具有所需的 vCenter 權限。</block>
-  <block id="444268068dcfb1a62c19cda69301e76f" category="inline-link">SnapCenter Plug-in for VMware vSphere vCenter 權限</block>
-  <block id="2c5eb2a50ef564fa05d6cc4a6c86af8f" category="paragraph">有關所需 vCenter 權限的列表，請參閱<block ref="9044a834d03d45a613d887c1c4d3ddd1" category="inline-link-rx"></block>。</block>
   <block id="82ede2f1cf5c1f154c5f0ccbd08838b2" category="section-title">保護 KVM 工作負載的要求</block>
   <block id="64bef292bab71a21d8b1fdfdc5e220aa" category="paragraph">您需要特定的要求來發現和保護 KVM 虛擬機器。</block>
   <block id="0e41245837200bd6043f82d33b20190c" category="list-text">運行核心版本 5.14.0-503.22.1.el9_5.x86_64（長期）或更高版本的現代 Linux 發行版</block>
@@ -4009,7 +4003,6 @@
   <block id="c00b274754a2d13242a61b1534660a37" category="sidebar">管理 Microsoft SQL Server 庫存</block>
   <block id="41e1a34ea3ba2b687b86e55ec1a7955d" category="sidebar">管理 Microsoft SQL Server 快照</block>
   <block id="c8ffa42e0e508862d020665c979eb5c0" category="sidebar">建立 Microsoft SQL Server 報告</block>
-  <block id="34caa737a5a671b66cc6fe7531c1f8b9" category="sidebar">安裝和卸載復原點</block>
   <block id="3186e7c44dc909386a0204716ffc46f6" category="sidebar">管理 Kubernetes 工作負載的執行鉤子模板</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="sidebar">監控作業</block>
   <block id="68b1e52936c426875b2780e91e195546" category="sidebar">使用 REST API 實現自動化</block>
@@ -5038,13 +5031,11 @@
   <block id="e82e6b5a702d1fc223d9ea698359376e" category="section-title">新增 Oracle Database 主機並探索資源</block>
   <block id="b5476a384252538238d37795b3f8f5a1" category="list-text">在 *Workload type* 欄位中選擇 *Oracle*。</block>
   <block id="3dcf508963e6fe907e0ca3a4c9693fd9" category="list-text">如果您尚未儲存此 Oracle Database 主機的憑證，請選擇「新增憑證」。</block>
-  <block id="19c33f5bda8d2b67e3f14b642d95e9ec" category="list-text">*主機註冊*：新增 Oracle Database 主機。輸入主機的 FQDN 或 IP 位址、憑證、Console 代理程式和連接埠號碼。</block>
   <block id="2e9227201c87c406d2477a129cc51bf0" category="list-text">（可選）如果您為非 root 使用者選擇憑證，請執行下列操作：</block>
   <block id="a70d5c13d6b7f41208490c29f59e3063" category="list-text">有關如何將您選擇的非 root 使用者新增至 Oracle Database 主機上的 sudoers 檔案中的說明，請選擇 *Configure sudoers* 。</block>
   <block id="bf8e3c6752e8047e150b1ede213faaf5" category="list-text">按照對話框中的說明操作，完成後啟用核取方塊，然後選取 *Done* 。</block>
   <block id="4388b2b0f034ea64ddb691069cae7e62" category="list-text">*Advanced settings*：請執行以下操作：</block>
   <block id="c9bc8bea020f64d04a5acca88723ddfd" category="list-text">輸入要用於 NetApp 外掛程式的連接埠和安裝路徑。此外掛程式可實現 Oracle Database 主機與 NetApp Backup and Recovery 之間的通訊。</block>
-  <block id="7ed97ae916d37ed8443606f5c8ac4fbb" category="list-text">選擇是否執行安裝前檢查或跳過檢查。</block>
   <block id="25f9ab167417178f57bb91f475e3b1b1" category="paragraph">Oracle Database 工作負載顯示在「清單」頁面的工作負載清單中。</block>
   <block id="30000add7aaf9253676b4000b4de34d5" category="paragraph">複製工作不會移除，可以再次用於其他複製作業。</block>
   <block id="cd988024594d1879c00a0562b6e05d11" category="summary">使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作負載。</block>
@@ -5100,7 +5091,6 @@
   <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">2026 年 3 月 09 日</block>
   <block id="e0ec2dc076093e707f6f4a129c330a5e" category="paragraph">在此版本中、VMware 工作負載引進了以下增強功能：</block>
   <block id="c951c234678bc7ac8d60ec274364552c" category="paragraph">*按排程層級支援 VM 一致性*：現在，在設定 VMware 工作負載的保護原則時，您可以為特定的排程層級啟用 VM 一致性備份和應用程式一致性備份。支援年度、月度和週度層級。</block>
-  <block id="b2dce04db788f63b4bd7ca87afaedbeb" category="list-text">選擇是否允許 NetApp Backup and Recovery 自動安裝外掛程式，或跳過自動外掛程式安裝（如果啟用 *使用手動安裝*，則需要在主機上手動安裝外掛程式）。</block>
   <block id="3cee314942b4a72ed68541a1f11363e7" category="admonition">新增資源可能需要幾分鐘。若要查看進度，請在 Inventory 頁面底部的狀態對話方塊中選取 *Track progress* ，或從左側選單中選取 *Monitoring* 。</block>
   <block id="9ed79b14b5dd7fad46b63a16e128743e" category="list-text">*啟用 VM 一致性快照*：選擇是否要啟用 VM 一致性快照。這可確保新建立的快照與建立快照時虛擬機器的狀態一致。這有助於確保備份能夠成功還原，且資料處於一致狀態。這不適用於現有快照。對於 VMware 工作負載，您可以針對每小時以外的特定原則頻率啟用此選項。</block>
   <block id="9b97b7bd5e0a87be7bf218224ada83cf" category="cell">要求</block>
@@ -5147,4 +5137,55 @@
   <block id="72edcbdd4436f32d101a83a36dd2d1db" category="list-text">執行 *ls* 命令以確保已建立資料夾 "catalogdb1"，並且其中包含子資料夾<block ref="45b963397aa40d4a0063e0d85e4fe7a1" prefix=" " category="inline-code"></block>、<block ref="b17be6650251f2e6c7d4e90209beb4e0" prefix=" " category="inline-code"></block>和<block ref="695633290d050f31cec0c9d4bd4a57fe" prefix=" " category="inline-code"></block>。</block>
   <block id="69b1a964078d5301a2aa9822cb2304f2" category="section-title">2026 年 3 月 16 日</block>
   <block id="5896522d63454009d1844a27f9e16972" category="cell">7.4.13 或更新版本</block>
+  <block id="0fd3e1f73fc71151c33e67909039dd88" category="paragraph">在此版本中、Oracle Database 工作負載引進下列增強功能：</block>
+  <block id="b77d45fa1e71e6bf913df1f7680aa70c" category="list-text">*叢集主機支援*：現在您可以發現並保護使用 Oracle Automatic Storage Management（ASM）且透過 VMDK 部署在 VMFS 檔案系統上的 Oracle Real Application Clusters（RAC）資料庫。如需詳細資訊，請參閱<block ref="d0dab0542f96585a18cc2e536da75fd6" category="inline-link-rx"></block>。</block>
+  <block id="cb7dc55d43e841bfb3cf4e114d10c93d" category="inline-link">設定 Oracle 資料庫</block>
+  <block id="11bf1aa4a1c990ba08edcb69e7bd16a5" category="list-text">*RMAN 目錄支援*：現在您可以設定 Backup and Recovery，將保護中繼資料儲存在 RMAN 復原目錄中，因此即使目標控制檔案遺失，也能提供備援和長期保留。如需詳細資訊，請參閱<block ref="c357671575c77250cb0b189fb7b1b3b4" category="inline-link-rx"></block>。</block>
+  <block id="1336b537734375879229275580e44691" category="inline-link">保護 Oracle Database 工作負載概述</block>
+  <block id="1862dacb480058987868f9ba0ecb7166" category="paragraph">有關保護 Oracle Database 工作負載的詳細資訊，請參閱<block ref="a1bc2d91e29f35544fc66a9a951bc0f5" category="inline-link-rx"></block>。</block>
+  <block id="f2e80d71f106d051f3936857dd104cec" category="summary">在 NetApp Backup and Recovery 中設定您的 Oracle 資料庫。</block>
+  <block id="a8926a2556cafdec73bce23cdd25f47b" category="doc">在 NetApp Backup and Recovery 中設定 Oracle 資料庫</block>
+  <block id="7b0a807dfc43b9f12f43aed88675eb15" category="paragraph">您可以變更新獨立或叢集 Oracle 資料庫的驗證和節點設定。NetApp Backup and Recovery 可在不進行這些變更的情況下保護資料庫。如果您的環境在探索後發生變更，您可能需要更新資料庫設定。</block>
+  <block id="b67dfdd35ec8a688793fa8df3ac7a3cf" category="paragraph">變更獨立或叢集式 Oracle 資料庫的組態。</block>
+  <block id="6030936be17716e99ea49dd7fbd07797" category="list-text">在 Oracle 清單中，選擇 *Databases* 選單。</block>
+  <block id="883cbacf8db43b0881a193c4d47d530a" category="list-text">在資料庫清單中，針對您要設定的資料庫選取 *Configure database* （獨立資料庫）或 *Configure RAC database* （叢集資料庫）。</block>
+  <block id="844712c0c4fa9ea8ff44ee293d026a72" category="list-text">*設定資料庫設定*：設定獨立或叢集資料庫的驗證設定。</block>
+  <block id="0c83cacfba83bada618e0ec18557f95d" category="list-text">選擇 *OS authentication* 僅使用主機作業系統進行驗證。NetApp Backup and Recovery 使用您在探索期間指定的主機認證資料。</block>
+  <block id="32406e7fb2703343d11c0001373270cd" category="list-text">當資料庫需要憑證時，請選擇 *Database authentication*。然後選擇現有憑證或新增憑證，並選擇用於連線的連接埠。</block>
+  <block id="b454e69c64fcc7b2bd2fbfca17404d2f" category="list-text">*設定 RMAN 目錄*：選擇在保護原則中啟用自動編目或手動編目還原點時，此資料庫或叢集的備份和還原作業的中繼資料儲存位置：</block>
+  <block id="3ce44f2405f558a86185711aa7817454" category="list-text">選擇 *Target control file* 以將中繼資料儲存在資料庫目標控制檔案中。</block>
+  <block id="64856894b15bab18945be173f251b08d" category="list-text">選擇 *Catalog database* 以將中繼資料儲存在 RMAN 復原目錄中。選擇憑證和 Transparent Network Substrate (TNS) 名稱以連接到復原目錄。</block>
+  <block id="368bfea96a2dbb524c41a8373bac24eb" category="paragraph">RMAN 復原目錄是一個獨立的資料庫架構，RMAN 公用程式使用它來儲存已註冊資料庫的備份和復原作業的中繼資料。它提供備援和長期保留功能，以防目標控制檔遺失或需要歷史資料。啟用此選項可將資料檔和歸檔日誌副本註冊到 RMAN 儲存庫中，以便 RMAN 可以追蹤和管理這些副本，用於報告和復原。</block>
+  <block id="09392a65d131d6cda50efbcbf1859b83" category="list-text">*Configure nodes*（僅限叢集資料庫）：使用箭頭按鈕新增或刪除受保護的節點，或變更節點優先權。</block>
+  <block id="ee9a7b793b54e3861d3aa7e68e1bfd55" category="paragraph">優先順序較高的節點優先受到保護。只有當優先順序較高的節點無法存取或故障時，優先順序較低的節點才會受到保護。</block>
+  <block id="91a8fa3f6989d0babb6d08cdbd5720cd" category="list-text">完成後，請選取 *Done* 。</block>
+  <block id="4924894d8ebf3e50b09092d15ac74cf5" category="paragraph">Backup and Recovery 使用新設定連線至資料庫。</block>
+  <block id="676f5f057b9a7bfdec60f96e05f53d88" category="list-text">*主機註冊*：新增 Oracle Database 主機。在 *Host FQDN or IP address* 欄位中，輸入主機的 FQDN 或 IP 位址 - 對於叢集資料庫，您可以輸入叢集中任何節點的 FQDN 或 IP。然後提供認證資料、NetApp Console 代理程式和連接埠號碼。</block>
+  <block id="be23ea32b7bfdd906aa3256b808f153e" category="list-text">選擇是否允許 NetApp Backup and Recovery 自動在每個主機上安裝外掛程式，或略過所有主機的自動外掛程式安裝。選取 *顯示手動安裝說明* 以取得手動安裝指引。</block>
+  <block id="f66cf22bc5dcc2ec3f5e9ac32fb89646" category="paragraph">NetApp Backup and Recovery 透過 SSH 連線至每個主機，以自動安裝外掛程式。當出現以下任一情況時，請啟用*使用手動安裝*：</block>
+  <block id="d95584ac80f6e19dfd0cd055def83823" category="list-text">一個或多個主機未執行 SSH 服務。</block>
+  <block id="c2001a00184e6351f6be08c1126d2354" category="list-text">任何主機都已安裝 NetApp 外掛程式（包括僅部分叢集成員安裝的情況）。</block>
+  <block id="27ac64420df3b10e4c1bcf9f4a5c14e6" category="list-text">您偏好在每個主機上手動安裝外掛程式。</block>
+  <block id="ed1ed940aa8203650aff6fef27150796" category="list-text">如果資料庫主機是叢集的，請啟用 *Add all hosts in the cluster* 選項以探索叢集中的所有主機。</block>
+  <block id="a5eb084a1322f9be24762b38a4fc5229" category="list-text">選擇是否在自動安裝外掛程式之前，在每個主機上執行預先安裝檢查。如果檢查失敗，自動外掛程式安裝就會停止。若要略過檢查並繼續安裝，請啟用 *Skip optional preinstall checks* （如果您選擇手動安裝，則會自動啟用）。</block>
+  <block id="f3134e2a4c43c6b44aa4740e858e4d46" category="doc">使用 NetApp Backup and Recovery 掛載、卸載和編目 Oracle Database 還原點</block>
+  <block id="001f29f112c466574ddd6d160c1aab7b" category="paragraph">如果您需要在受控狀態下存取資料庫以執行還原作業，則可能需要掛載 Oracle Database 還原點。如果您需要在 RMAN 還原目錄中儲存備份和還原作業中繼資料，且未啟用自動編目中繼資料的選項，則需要手動編目還原點。</block>
+  <block id="1c00e610b491586395395476dbf8c162" category="section-title">編目 Oracle 資料庫還原點</block>
+  <block id="e5e6317c83585d62864b24ca930be15e" category="paragraph">當您需要保留還原點的備份與還原作業中繼資料時，請手動編目該還原點。中繼資料將根據您為資料庫選擇的 *Configure RMAN catalog* 設定進行儲存（預設位於目標控制檔案中）。只有當關聯的保護原則中停用了自動編目時，才需要手動編目。</block>
+  <block id="022a8430e553de21aa98279f3f834824" category="list-text">從清單中選擇一個復原點，然後選取 Actions 圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *Catalog*。</block>
+  <block id="c11c35cc7a1e267ff6b33d9873e74d29" category="list-text">選取 *Catalog* 以確認操作。</block>
+  <block id="7d138ec0174da03337ca77a53e9b93da" category="list-text">*RMAN 目錄設定*：（僅適用於 Oracle Database 工作負載）啟用 *使用 Oracle Recovery Manager (RMAN) 編目備份* 選項，可自動為 Oracle 資料庫備份和還原作業編目中繼資料。中繼資料將根據您為資料庫選擇的 *Configure RMAN catalog* 設定進行儲存（預設位於目標控制檔案中）。請參閱 <block ref="a332d34c6239f7cac0220ece667896af" category="inline-link-macro-rx"></block> 以變更資料庫的這些設定。</block>
+  <block id="37fa73b86d98c87a23aa1c4614e46436" category="list-text">*SnapMirror 磁碟區和快照格式*：請從下列選項中選擇：</block>
+  <block id="219160b0f165dc42c8baf48fef44eff1" category="list-text">*使用自訂名稱格式建立 Snapshot 複本*：選擇 Snapshot 的命名方案。如果留空，則會在每個 Snapshot 名稱的末尾新增時間戳記。</block>
+  <block id="80c4384169191d80244c3f0757ddce7a" category="list-text">*提供 SnapMirror 磁碟區格式*：指定前綴、後綴或兩者，以修改預設 SnapMirror 磁碟區名稱。預設情況下，SnapMirror 磁碟區會繼承來源磁碟區的名稱。</block>
+  <block id="7ebcad2b4e076ec222a6821f777426e5" category="cell">VMware Tools</block>
+  <block id="de0a644491dbcf8afb745eaa3757ebaa" category="inline-link">VMware 版本對應資訊</block>
+  <block id="058a089cc89d6787b049bbda92f07310" category="cell">使用檔案和資料夾還原功能以及 VM 一致性備份時，需要 VMWare Tools。若要確保 VMware Tools 版本與 ESXi Server 版本相符，請參閱<block ref="ee048a8bc5959e5e47cd9a1e25d270bd" category="inline-link-rx"></block>。</block>
+  <block id="2b31df63a742e08291e56cec2dd644ae" category="paragraph">443 （HTTPS）、雙向。檔案和資料夾還原功能使用此連接埠。</block>
+  <block id="1db417bf673f82a6c8ca189db7008e5e" category="paragraph">您的 Console 使用者帳戶需要具有 Backup and Recovery 超級管理員角色才能使用 VMware 工作負載。</block>
+  <block id="019fba30868c655ee8cc940ae99cd3cd" category="inline-link">NetApp Console 中的備份與還原角色</block>
+  <block id="80afdb34bdd1565998c40515197f31b9" category="paragraph">如需 Backup and Recovery 角色的詳細資訊，請參閱<block ref="6de1818932cff795152c5395660d33a2" category="inline-link-rx"></block>。</block>
+  <block id="40462b3520e204c56d496704b2197731" category="list-text">RAC over ASM（VMDK on VMFS）</block>
+  <block id="d8fdc2681cdec613a02ac551c44a6e8c" category="section-title">2026 年 3 月 31 日</block>
+  <block id="e2ff2fbe928113326186485b8655d712" category="sidebar">掛載、卸載和編目復原點</block>
 </blocks>

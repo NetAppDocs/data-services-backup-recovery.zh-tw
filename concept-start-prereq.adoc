@@ -101,6 +101,9 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 | VMware vCenter vSphere 版本 | 7.0U1 及更高版本 
 
 
+| VMware Tools | 使用檔案和資料夾還原功能以及 VM 一致性備份時，需要 VMWare Tools。若要確保 VMware Tools 版本與 ESXi Server 版本相符，請參閱 https://packages.vmware.com/tools/versions["VMware 版本對應資訊"]。 
+
+
 | IP 位址類型 | IPv4、IPv6 
 
 
@@ -121,7 +124,7 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 
 
 | VMware ESXi 伺服器連接埠  a| 
-443（HTTPS），雙向。來賓檔案復原功能使用此連接埠。
+443 （HTTPS）、雙向。檔案和資料夾還原功能使用此連接埠。
 
 
 
@@ -133,9 +136,9 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 |===
 *保護 VMware 工作負載的基於角色的存取控制 (RBAC) 要求*
 
-vCenter 管理員帳號必須具有所需的 vCenter 權限。
+您的 Console 使用者帳戶需要具有 Backup and Recovery 超級管理員角色才能使用 VMware 工作負載。
 
-有關所需 vCenter 權限的列表，請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deployment_planning_and_requirements.html#rbac-privileges-required["SnapCenter Plug-in for VMware vSphere vCenter 權限"^]。
+如需 Backup and Recovery 角色的詳細資訊，請參閱 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp Console 中的備份與還原角色"]。
 
 
 
@@ -188,7 +191,11 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 | 要求 | 支援 
 
 
-| 部署拓撲 | 獨立式 (NFS、SAN、ASM SAN) 
+| 部署拓撲  a| 
+* 獨立式 (NFS、SAN、ASM SAN)
+* RAC over ASM（VMDK on VMFS）
+
+
 
 
 | Oracle Database 版本  a| 
