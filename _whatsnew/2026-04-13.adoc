@@ -1,0 +1,68 @@
+= ONTAP Volumes 工作負載增強功能
+:allow-uri-read: 
+
+
+
+
+=== ONTAP Volumes 工作負載增強功能
+
+在此版本中，ONTAP Volumes 工作負載引入了以下增強功能：
+
+*NetApp MetroCluster 主動/主動配置支援*：NetApp Backup and Recovery for Volumes 工作負載現在支援主動-主動配置的 MetroCluster。
+
+有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["保護 ONTAP Volumes 工作負載概述"]。
+
+
+
+=== Kubernetes 工作負載增強功能
+
+在此版本中、Kubernetes 工作負載引入了以下保護原則增強功能：
+
+* *編輯保護原則*：如果您需要變更 Kubernetes 工作負載保護原則，現在可以進行編輯
+* *磁碟到磁碟支援*：您現在可以使用磁碟到磁碟備份架構來設定 Kubernetes 保護原則。
+* *Google Cloud Platform 儲存桶支援*：您現在可以設定 Kubernetes 保護原則以備份到 Google Cloud Platform 儲存桶。
+
+
+如需保護原則的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["在 NetApp Backup and Recovery 中建立及管理保護政策"]。
+
+有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"]。
+
+
+
+=== Hyper-V 工作負載增強功能
+
+在此版本中、Hyper-V 工作負載引入了以下增強功能：
+
+* *改進的作業處理*：NetApp Backup and Recovery 現在可以更有效率地處理多個同時進行的作業。
+* *SAN 支援（預覽版）*：NetApp Backup and Recovery 現在支援保護儲存在 SAN 儲存上的 Hyper-V VM。
+
+
+有關保護 Hyper-V 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["保護 Hyper-V 工作負載概述"]。
+
+
+
+=== KVM 工作負載增強功能
+
+在此版本中、KVM 工作負載引入了以下增強功能：
+
+* *改進的作業處理*：NetApp Backup and Recovery 現在可以更有效率地處理多個同時進行的作業。
+* *還原至替代位置（預覽）*：您現在可以將 KVM VM 還原至替代目的地。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-restore.html["使用NetApp Backup and Recovery和還原還原 KVM 虛擬機"]。
+
+
+有關保護 KVM 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["保護 KVM 工作負載概述"]。
+
+
+
+=== VMware 工作負載增強功能
+
+在此版本中、VMware 工作負載引進了以下增強功能：
+
+* *基於標籤的保護*：VMware 工作負載備份與復原現在已支援對儲存在 NFS 和 VMFS 磁碟區上的虛擬機器進行基於標籤的保護，可讓您基於 vCenter 標籤而非單一虛擬機器或資料儲存建置保護群組。當您在 vCenter 中標記虛擬機器和資料儲存時，備份與復原會自動發現它們並將其包含在以後的備份中，無需任何手動群組維護。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protection-groups.html["建立和管理保護群組"]。
+* *還原至替代儲存系統*：即使原始（主要）儲存系統完全無法使用，您現在也可以將虛擬機器還原至替代儲存系統。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore.html["復原 VMware 工作負載"]。
+* *將檔案還原至 Linux VM*：您現在可以將 VM 檔案和資料夾還原至 Linux VM。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html["還原檔案和資料夾"]。
+* *還原檔案和資料夾時支援 Proxy VM* - 現在，如果您不想將虛擬磁碟附加到原始 VM，可以使用 Proxy VM 從虛擬磁碟還原檔案和資料夾。如需更多資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html["還原檔案和資料夾"]。
+* *遞迴檔案和資料夾搜尋* - 您現在可以在整個虛擬磁碟中搜尋特定檔案或資料夾。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html["還原檔案和資料夾"]。
+* *改進的作業處理*：NetApp Backup and Recovery 現在可以更有效率地處理多個同時進行的作業。
+
+
+有關保護 VMware 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["保護 VMware 工作負載概述"]。

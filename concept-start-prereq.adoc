@@ -231,6 +231,9 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 
 有關NetApp Console要求，請參閱<<在NetApp Console中>>。
 
+
+NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程式指派靜態 IP 位址，以避免在代理程式 IP 位址變更時出現問題。
+
 * 主ONTAP系統（ONTAP 9.16.1 或更高版本）
 * Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括：
 +
@@ -288,6 +291,7 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 | 連接的儲存設備  a| 
 * ONTAP 9.13.1 或更新版本
 * 執行 9.13.1 或更新版本的 Amazon FSx for NetApp ONTAP 儲存系統
+* SAN 儲存設備（預覽）（支援從主要和次要儲存設備進行備份和還原至原始位置）
 
 
 |===

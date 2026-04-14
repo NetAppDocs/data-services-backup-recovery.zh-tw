@@ -25,7 +25,6 @@ summary: 此版本的NetApp Backup and Recovery具有以下已知限制。
 不支援下列動作：
 
 * 克隆、掛載或卸載虛擬機
-* 將虛擬機器還原到備用位置
 * 保護儲存在 SAN 上的虛擬機
 * 保護應用程式
 * 建立使用者定義的備份（僅支援從NetApp Console啟動的備份）
