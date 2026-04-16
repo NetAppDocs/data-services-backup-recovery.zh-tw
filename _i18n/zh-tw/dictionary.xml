@@ -2461,12 +2461,8 @@
   <block id="22f12d99e813b34048e25ac4a5f568f3" category="section-title">刪除卷的所有備份文件</block>
   <block id="a8ba6304562632a6eb4762aebfe0d175" category="paragraph">刪除磁碟區的所有備份也會停用該磁碟區的未來備份。</block>
   <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">更多圖標</block>
-  <block id="fac3794c7ab19ecf79400a46e7b334b1" category="list-text">在「卷」標籤中，按一下<block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block>對於來源磁碟區並選擇*詳細資料和備份清單*。</block>
   <block id="782b223a2a5766a12495d35a0f0fc4a1" category="paragraph">顯示所有備份檔案的清單。</block>
-  <block id="2c9220461da540ceac8b243e96929a74" category="list-text">選擇*動作* &gt; *刪除所有備份*。</block>
-  <block id="125aa7ed80cb288006b134021f74ae4d" category="list-text">輸入卷名稱。</block>
   <block id="0c7a693eba5a0f2f80ac9cdb747411a8" category="section-title">刪除卷的單一備份文件</block>
-  <block id="0f077fe78e4dac585cd0607f12f1a2b3" category="paragraph">您無法刪除複製的磁碟區（資料保護磁碟區）。</block>
   <block id="c6f11bef049f9978b6acc052d17daf5a" category="list-text">從「卷」標籤中選擇<block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block>對於來源磁碟區並選擇*查看磁碟區詳細資料*。</block>
   <block id="f92abbb1e1dd381a84bc092e3bc1232f" category="list-text">選擇「*快照*」或「*備份*」來查看要刪除的備份檔案類型。</block>
   <block id="8dac01775d5cf014de7509d0b8b228e4" category="list-text">選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於要刪除的磁碟區備份文件，然後選擇*刪除*。</block>
@@ -2477,10 +2473,8 @@
   <block id="495f64bce7d9d754a435527baf769353" category="paragraph">只有當您的系統運行ONTAP 9.12.1 或更高版本時，此功能才可用。</block>
   <block id="1173c80b35af26bafcc4b74670bfa9c8" category="inline-link">從那裡刪除卷</block>
   <block id="8e219be71b8bc390ef2ad2ec3a99ccae" category="paragraph">您無法從NetApp Backup and Recovery使用者介面刪除來源磁碟區。但是，您可以開啟控制台*系統*頁面上的磁碟區詳細資料頁面，然後<block ref="65a826e779230e29e5ca1795b6b89aba" category="inline-link-rx"></block>。</block>
-  <block id="ccabb5f58c34ffd48f5d3b3d41985f1a" category="admonition">一旦關係被刪除，您就無法刪除單一磁碟區備份檔案。但是，您可以刪除該磁碟區的所有備份。</block>
   <block id="07351083dae4540a45ff30e023e217c2" category="list-text">從「卷」標籤中選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於來源卷，然後選擇*備份*&gt;*刪除關係*。</block>
   <block id="97966562c30303c0bc168db1ef4e82e6" category="section-title">停用系統的NetApp Backup and Recovery</block>
-  <block id="0f6ffb20cbd2ef0bd7c4d4ab751ef397" category="paragraph">停用系統的NetApp Backup and Recovery會停用系統上每個磁碟區的備份，也會停用還原磁碟區的功能。任何現有的備份都不會被刪除。這不會從系統中取消註冊備份服務 - 它基本上允許您暫停所有備份和還原活動一段時間。</block>
   <block id="8764d766d622ae40812776b15d742a79" category="inline-xref">刪除備份</block>
   <block id="150316ac807c8abc9de05ff5720178a5" category="paragraph">請注意，除非您<block ref="f0fba6094ff5354e1300b0446d643e3c" category="inline-xref-macro-rx"></block>。</block>
   <block id="a0fb50abe315f82d405a6dfa5e9af373" category="list-text">從「備份設定」頁面中選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於您想要停用備份的系統，然後選擇*停用備份*。</block>
@@ -4138,7 +4132,6 @@
   <block id="44b2c63b1441a7eef6175bc2818c45c0" category="paragraph">顯示磁碟區的詳細資訊和快照清單。</block>
   <block id="2e3f296276fc537735df961d32dd7d12" category="cell">暫停快照的增量傳輸，以更新目標磁碟區。如果您想重新開始增量更新，可以稍後再恢復。</block>
   <block id="695fbf9213e2d5d1e929e9356fa04c37" category="paragraph">請注意，此操作不會影響快照或複製磁碟區—這些類型的備份檔案不會被刪除。</block>
-  <block id="241f8ce89369b1ae16481599cd708881" category="paragraph">如果您不再需要單一備份文件，可以將其刪除。這包括刪除磁碟區快照的單一備份或物件儲存中的備份。</block>
   <block id="9c01aed76561204d094a863f38d38ad2" category="paragraph">顯示卷的詳細信息，您可以選擇*快照*、*複製*或*備份*來查看該卷的所有備份文件的列表。預設情況下，會顯示可用的快照。</block>
   <block id="d525060e9ad215c3aa2a00862d266e25" category="list-text">*將現有快照匯出至物件儲存作為備份副本*：如果此系統中存在與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
   <block id="7c5de50c41f0a8634817597808c6df4b" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含快照中所含主資料的差異副本。</block>
@@ -5275,4 +5268,17 @@
   <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026 年 4 月 13 日</block>
   <block id="a22504a40a8afdfa908ab0544ecc4178" category="sidebar">從 VMDK 還原檔案和資料夾</block>
   <block id="462fcd2b84c5fc16f3d89522a2068baa" category="sidebar">疑難排解檔案和資料夾還原</block>
+  <block id="af2c1f489f4f9d807eced3ce9373d494" category="admonition">備份關係刪除後、您將無法刪除個別磁碟區備份檔案。在刪除磁碟區的備份關係之前、請先刪除該磁碟區的備份檔案。</block>
+  <block id="cfa2bf6d634376c1523db558d932eaf5" category="list-text">從 *Volumes* 功能表中，按一下來源磁碟區的 <block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block>，然後選取 *Manage backups &gt; View backup*。</block>
+  <block id="f74e6d79341b7e46d6c52bdcd8276a98" category="list-text">從清單中選擇一個備份，然後選擇 *Actions &gt; Delete all Backups*。</block>
+  <block id="4ca052e900c34762a65354caedd304de" category="list-text">輸入磁碟區名稱以確認刪除。</block>
+  <block id="a8bb7b9012738cd41e48f167d1714196" category="list-text">展開 *Advanced settings* 區域。</block>
+  <block id="afdbab0392d56d54bcc63c43d76d3df9" category="list-text">在 *強制刪除備份* 下，選擇是否強制刪除所有備份。</block>
+  <block id="90c8ee9391c34f8b5ae2ca133a2fcc2f" category="paragraph">在少數情況下，您可能需要撤銷 NetApp Backup and Recovery 的備份存取權；例如，當 Backup and Recovery 失去對備份儲存區的存取權，或備份受到 DataLock 保護但您不再需要這些備份時。使用此選項可在磁碟區和系統層級強制刪除備份。</block>
+  <block id="13f46cde2a09e7db91e4561b9c4a0cd6" category="admonition">僅在需要徹底清理時才使用此選項。啟用後，NetApp Backup and Recovery 將不再存取這些備份（即使物件仍保留在雲端儲存中）。您必須手動從雲端服務提供者刪除它們。</block>
+  <block id="2e3d3d23fe0a12335b64a112f20e2924" category="paragraph">不再需要個別備份時，可以刪除。您無法刪除複寫的磁碟區（資料保護磁碟區）。</block>
+  <block id="24a354b4e93e0d1659baa023a11ddcda" category="inline-xref">刪除該磁碟區的所有備份檔案</block>
+  <block id="6a9a9c5f060efdfcbe5e8180b067f48a" category="admonition">備份關係刪除後，您無法刪除個別磁碟區備份檔案。但是，您可以<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。</block>
+  <block id="a251d9e6fa7397f3631b218bdece2a5c" category="admonition">備份關係刪除後，您將無法刪除單一磁碟區備份檔案。但是，您可以<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。如果您需要刪除某個磁碟區的備份關係，請務必先刪除該磁碟區的備份，然後再刪除備份關係。</block>
+  <block id="015c04742dc48d5005ee2eea17467386" category="paragraph">停用 NetApp Backup and Recovery 會暫停該系統所有磁碟區的備份與還原，但不會刪除現有的備份。這可讓您在不從此系統註銷備份服務的情況下，暫停所有備份與還原活動一段時間。</block>
 </blocks>
