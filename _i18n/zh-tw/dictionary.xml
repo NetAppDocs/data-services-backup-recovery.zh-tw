@@ -4779,7 +4779,6 @@
   <block id="8d8a8010684a930aa7760c829cad4141" category="list-text">*labelSelector*：（_可選_）依照標籤篩選叢集範圍的資源。</block>
   <block id="5f47e505a6f61f7f97fe140353dc6594" category="list-text">如有需要，請設定下列註解：</block>
   <block id="57320d49ea044bfa493c42beb1df6cfe" category="inline-link-macro">全域檔案系統凍結設定</block>
-  <block id="2d4560ac7467fc580503e1a2ec64edbc" category="list-text">*metadata.annotations.protect.trident.netapp.io/skip-vm-freeze*：（_可選_）此註解僅適用於從虛擬機器定義的應用程式，例如在 KubeVirt 環境中，快照之前會發生檔案系統凍結。指定此應用程式在快照期間是否可以寫入檔案系統。如果設定為 true，則應用程式會忽略全域設定，並可在快照期間寫入檔案系統。如果設定為 false，則應用程式會忽略全域設定，且檔案系統會在快照期間凍結。如果已指定但應用程式定義中沒有虛擬機器，則會忽略該註解。如果未指定，則應用程式會遵循<block ref="a6fb49ce3deb125e56649f63b2a21282" category="inline-link-macro-rx"></block>。</block>
   <block id="8f13f2f073acc52149f6e8567d13e534" category="list-text">*protect.trident.netapp.io/protection-command*：（_選用_）使用此註釋指示 Backup and Recovery 保護或停止保護應用程式。可能的值為<block ref="124c16e5bae30d956b37ef14c9a00ab4" prefix=" " category="inline-code"></block>或<block ref="354492320803067b5a2cd287e209154d" prefix=" " category="inline-code"></block>。</block>
   <block id="f0d0a63fd9731679f5ea79603dba4d1f" category="list-text">*protect.trident.netapp.io/protection-policy-name*：（_選用_）使用此註解指定要用於保護此應用程式的 Backup and Recovery 保護原則名稱。此保護原則必須已存在於 Backup and Recovery 中。</block>
   <block id="1fdb8b98325df025bfd256fc475c0986" category="paragraph">如果需要在應用程式建立後套用此註解，可以使用以下命令：</block>
@@ -5286,4 +5285,5 @@
   <block id="4f06e500210ecec059ecf486106df9e6" category="list-text">*ASA r2 SAN 支援*：VMware 工作負載現在支援保護由 NetApp ASA r2 SAN 專用環境託管的 VMFS 資料存放區上的虛擬機器。</block>
   <block id="fe6a65d4e5dee2ab8e25b78186c2fa25" category="list-text">ASA r2 SAN 專用系統（需要 ONTAP 9.17.1 或更新版本）</block>
   <block id="6dba6d956d3e495df0c0575cd1b23218" category="section-title">2026 年 4 月 20 日</block>
+  <block id="15c76b732e7da21111f18374ed2e9ae6" category="list-text">*metadata.annotations.protect.trident.netapp.io/skip-vm-freeze*：（_可選_）此註解僅適用於從虛擬機器定義的應用程式，例如在 KubeVirt 環境中，檔案系統會在快照之前凍結。指定此應用程式在快照期間是否可以寫入檔案系統。如果設定為 true，則應用程式將忽略全域設定，並且可以在快照期間寫入檔案系統。如果設定為 false，則應用程式將忽略全域設定，並且檔案系統將在快照期間凍結。如果指定了此註解，但應用程式定義中沒有虛擬機器，則該註解將被忽略。如果未指定，則應用程式遵循<block ref="3047941e3fa7c2760a995edc5fae820b" category="inline-link-rx"></block>。</block>
 </blocks>
