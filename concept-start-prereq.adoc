@@ -113,6 +113,7 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 | 連接的儲存設備  a| 
 * ONTAP 9.13.1 或更新版本
 * 執行 9.13.1 或更新版本的 Amazon FSx for NetApp ONTAP 儲存系統
+* ASA r2 SAN 專用系統（需要 ONTAP 9.17.1 或更新版本）
 
 
 |===

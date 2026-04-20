@@ -4555,7 +4555,6 @@
   <block id="40a9530583ad3747ca30675858b0a6cd" category="list-text">如需 AWS 資源憑證的詳細資訊，請參閱<block ref="101809cc7793764f39e2d5fc223ea04c" category="inline-link-rx"></block>。</block>
   <block id="40a81a4873df306bd0d241dc6c5f81ba" category="admonition">您在此處建立的範本僅可用於保護 Kubernetes 工作負載。</block>
   <block id="782b4a6bf31d7d564f002ed80e56a970" category="doc">資料移動逾時註釋</block>
-  <block id="2cf4114566459ea3b3a5ac507cb86fd9" category="paragraph">在備份和還原作業期間，您可以使用註解<block ref="f49fa3f76b2a4fcdf04dff369d417d84" prefix=" " category="inline-code"></block>來設定資料移動作業的逾時。此註解指定資料移動程式在逾時之前等待特定作業完成的最長時間（以秒為單位）。這在網路問題或其他因素可能導致資料移動作業停滯的情況下特別有用。它有助於偵測和處理停滯的作業，而不是為整個程序設定一般逾時。例如，如果由於網路問題導致還原磁碟區資料沒有進展，則作業將根據指定的持續時間逾時。</block>
   <block id="c2b7f24f4ddbaedb4e3d9e19f77eebac" category="paragraph">您可以在 YAML 檔案中使用此註解，如下所示：</block>
   <block id="14a0e26cbe187a4754f8b523ffba6073" category="paragraph">在這個例子中，如果在還原作業中 2 秒內沒有任何進展，則註解會使 <block ref="ec2a2895b09b6030ec8cc1b3c43ddc4d" prefix=" " category="inline-code"></block> 作業失敗。</block>
   <block id="c49aaf233c16f1193a8d683c17866eea" category="admonition">如果註解值小於或等於 0 、則操作將立即失敗。</block>
@@ -4570,14 +4569,9 @@
   <block id="acb14ba5b70eb330a1d4de9c6b7a325d" category="inline-link-macro">配置虛擬化</block>
   <block id="5ea5c247812e1dca5ff02ca853f05032" category="paragraph">您可以設定 Trident Protect 24.10 來管理資料保護作業期間 VM 檔案系統的凍結和解凍，方法是<block ref="e0dd4c4b8aa16596df6c3f5cb36d3cdc" category="inline-link-macro-rx"></block>然後使用下列指令：</block>
   <block id="cedf2576eebff15fc6b30d5a7109eb6b" category="doc">還原和容錯移轉作業期間的命名空間註釋和標籤</block>
-  <block id="131ff34387be167411ffda7d60b577e7" category="paragraph">在還原和容錯移轉作業期間，目的地命名空間中的標籤和註釋會與來源命名空間中的標籤和註釋相符。來源命名空間中存在但目的地命名空間中不存在的標籤或註釋會被新增，而任何已存在的標籤或註釋則會被覆寫以符合來源命名空間中的值。僅存在於目的地命名空間中的標籤或註釋則保持不變。</block>
   <block id="20f40e0b9308901dac07ce8a8efb3350" category="inline-link-macro">OpenShift 安全上下文約束文檔</block>
-  <block id="80aabc2f42a52376f3d884d3b02360f4" category="admonition">如果您使用 Red Hat OpenShift，請務必注意命名空間註解在 OpenShift 環境中的關鍵作用。命名空間註解可確保復原的 Pod 遵循 OpenShift 安全上下文約束（SCC）定義的相應權限和安全性配置，並能無權限問題地存取磁碟區。如需更多資訊，請參閱 <block ref="842acfa178c0bbf09e368bf9db0716b8" category="inline-link-macro-rx"></block>。</block>
-  <block id="6c83555d4261acb08ebbc5f24823dc7b" category="paragraph">您可以透過在執行復原或故障轉移操作之前設定 Kubernetes 環境變數<block ref="1580ff61f204e9d56cd5324c7e9221ba" prefix=" " category="inline-code"></block>，來防止目標命名空間中的特定註解被覆寫。例如：</block>
   <block id="59f713e31282fe744caf06335d891f9a" category="inline-link-macro">設定其他 Trident Protect Helm Chart 設定</block>
-  <block id="d65eac563b898cb7e41b8853a4fe1a3c" category="paragraph">如果您使用 Helm 並帶有<block ref="cc1f5c1d16e33b8463c9ee27295cd5df" prefix=" " category="inline-code"></block> 標誌安裝了來源應用程式，則會對<block ref="b068931cc450442b63f5b3d276ea4297" prefix=" " category="inline-code"></block> 標籤鍵進行特殊處理。在還原或容錯移轉過程中，Trident Protect 會將此標籤複製到目的地命名空間，但如果來源的值與來源命名空間相符，則會將值更新為目的地命名空間值。如果此值與來源命名空間不相符，則會將其複製到目的地命名空間而不做任何變更。</block>
   <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="section-title">範例</block>
-  <block id="1280c48f074ec68fd2281266662c9a3f" category="paragraph">以下範例展示了來源命名空間和目標命名空間，它們各自具有不同的註解和標籤。您可以查看操作前後目標命名空間的狀態，以及註解和標籤在目標命名空間中是如何組合或覆蓋的。</block>
   <block id="2cfe257f724ed59a07ab01918c828fb5" category="section-title">在還原或容錯移轉作業之前</block>
   <block id="c972cd959174c84d137520d91c011446" category="paragraph">下表說明了復原或容錯移轉作業之前範例來源命名空間和目標命名空間的狀態：</block>
   <block id="b3ba0fe968ce39dcfc6fe8cc0f1b02da" category="cell">命名空間</block>
@@ -5091,7 +5085,6 @@
   <block id="40462b3520e204c56d496704b2197731" category="list-text">RAC over ASM（VMDK on VMFS）</block>
   <block id="d8fdc2681cdec613a02ac551c44a6e8c" category="section-title">2026 年 3 月 31 日</block>
   <block id="e2ff2fbe928113326186485b8655d712" category="sidebar">掛載、卸載和編目復原點</block>
-  <block id="44c66f240c569e9a6734099280701e88" category="admonition">執行還原或容錯移轉作業時，<block ref="22416353aff9ef4322e1ee858f418ae4" prefix=" " category="inline-code"></block> 和 <block ref="8028cf835d9b72ff2d6f835934c25568" prefix=" " category="inline-code"></block> 中指定的任何命名空間註釋和標籤都會從還原或容錯移轉作業中排除。請確保在初始 Helm 安裝期間配置這些設定。如需深入瞭解，請參閱 <block ref="b9fc3066a0a1e2a32e2c8ea860fac505" category="inline-link-rx"></block>。</block>
   <block id="db1da6f84847ade23be98a17bc4b5b1e" category="paragraph">在此版本中，ONTAP Volumes 工作負載引入了以下增強功能：</block>
   <block id="a83b3bb31eda1beff171bab61e67aa23" category="paragraph">*NetApp MetroCluster 主動/主動配置支援*：NetApp Backup and Recovery for Volumes 工作負載現在支援主動-主動配置的 MetroCluster。</block>
   <block id="cd11b988c9f7b5a4f534d244c8f742a8" category="inline-link">保護 ONTAP Volumes 工作負載概述</block>
@@ -5281,4 +5274,16 @@
   <block id="6a9a9c5f060efdfcbe5e8180b067f48a" category="admonition">備份關係刪除後，您無法刪除個別磁碟區備份檔案。但是，您可以<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。</block>
   <block id="a251d9e6fa7397f3631b218bdece2a5c" category="admonition">備份關係刪除後，您將無法刪除單一磁碟區備份檔案。但是，您可以<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。如果您需要刪除某個磁碟區的備份關係，請務必先刪除該磁碟區的備份，然後再刪除備份關係。</block>
   <block id="015c04742dc48d5005ee2eea17467386" category="paragraph">停用 NetApp Backup and Recovery 會暫停該系統所有磁碟區的備份與還原，但不會刪除現有的備份。這可讓您在不從此系統註銷備份服務的情況下，暫停所有備份與還原活動一段時間。</block>
+  <block id="ac702e35e5d377649ce818c63f8cb9d6" category="paragraph">使用此註解<block ref="f49fa3f76b2a4fcdf04dff369d417d84" prefix=" " category="inline-code"></block>可在備份和還原期間設定每次資料移動作業的逾時時間（以秒為單位）。它指定資料移動器在逾時前等待操作取得進展的時間。這對於偵測和處理停滯的傳輸非常有用（例如，當網路問題阻止磁碟區資料還原進程時）。</block>
+  <block id="aaaf3fb2db80e20e6d50218f16d99f4f" category="paragraph">在還原和容錯移轉期間，目的地命名空間標籤和註釋會更新以符合來源：來源中的金鑰會新增至目的地金鑰或覆寫目的地金鑰，而僅存在於目的地中的金鑰則保持不變。</block>
+  <block id="a0c960e39999d3e07d43b18aadea4f7e" category="admonition">在 Red Hat OpenShift 中，命名空間註解非常重要，因為它們可以確保還原的 Pod 獲得正確的安全內容限制和權限，使其能夠存取磁碟區並在沒有權限錯誤的情況下執行。如需更多資訊，請參閱 <block ref="842acfa178c0bbf09e368bf9db0716b8" category="inline-link-macro-rx"></block>。</block>
+  <block id="96cd9f82d7fe1a044069b8c1e88870d3" category="paragraph">設定 Kubernetes 環境變數</block>
+  <block id="6e18bf7adc407522d3adc14c25f83f28" category="paragraph">在還原或容錯移轉之前，以防止特定目的地命名空間註釋被覆寫。例如：</block>
+  <block id="67f7d0d1a6c01cbe0e09404d53ae8fac" category="admonition">在還原或容錯移轉期間，<block ref="22416353aff9ef4322e1ee858f418ae4" prefix=" " category="inline-code"></block> 和 <block ref="8028cf835d9b72ff2d6f835934c25568" prefix=" " category="inline-code"></block> 中指定的任何命名空間註釋和標籤都會從還原或容錯移轉作業中排除。請確保在初始 Helm 安裝期間配置這些設定。若要深入瞭解，請參閱 <block ref="b9fc3066a0a1e2a32e2c8ea860fac505" category="inline-link-rx"></block>。</block>
+  <block id="3e3fc64dca0b9c44d365fc5635e23463" category="paragraph">如果您使用 Helm 並帶有<block ref="cc1f5c1d16e33b8463c9ee27295cd5df" prefix=" " category="inline-code"></block>旗標來安裝來源應用程式，Trident Protect 會將名稱標籤複製到目的地命名空間。如果標籤值與來源命名空間名稱相符，則會將其取代為目的地命名空間名稱；否則，則保持不變。</block>
+  <block id="5ac7bbd26db92893a2f8bcca7d6084a4" category="paragraph">以下範例顯示具有不同標籤和註釋的來源命名空間和目的地命名空間，並顯示作業前後的目的地命名空間，以說明如何新增、合併或覆寫金鑰。</block>
+  <block id="c7ac12b44e81f24dcab5d6e8675df0a1" category="paragraph">在此版本中、VMware 工作負載引進下列增強功能：</block>
+  <block id="4f06e500210ecec059ecf486106df9e6" category="list-text">*ASA r2 SAN 支援*：VMware 工作負載現在支援保護由 NetApp ASA r2 SAN 專用環境託管的 VMFS 資料存放區上的虛擬機器。</block>
+  <block id="fe6a65d4e5dee2ab8e25b78186c2fa25" category="list-text">ASA r2 SAN 專用系統（需要 ONTAP 9.17.1 或更新版本）</block>
+  <block id="6dba6d956d3e495df0c0575cd1b23218" category="section-title">2026 年 4 月 20 日</block>
 </blocks>
