@@ -218,6 +218,8 @@ sidebar:
       url: "/br-use-monitor-tasks.html"
     - title: 重新啟動NetApp Backup and Recovery
       url: "/reference-restart-backup.html"
+    - title: 啟用預覽和隱藏功能
+      url: "/enable-preview-features.html"
   - title: 使用 REST API 實現自動化
     url: "/br-api-backup-restore.html"
   - title: 參考

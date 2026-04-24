@@ -5288,4 +5288,36 @@
   <block id="eb0aff97ddec7b6894c0ea9cc7a6b66c" category="list-text">在 Google Cloud 中，會部署一個新的儲存桶，而<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>是在帳戶 / 專案層級進行佈建的。</block>
   <block id="3addfc338787d5dc6d9709962161e00d" category="list-text">第三種選擇是直接向 NetApp 購買授權。如需詳細資訊，請參閱 <block ref="ba0ccbd18ea5b5cc8b06635e1ea19aa1" category="inline-xref-macro-rx"></block> 章節。</block>
   <block id="09e249805f01ac51656bbbc88c3f5e37" category="list-text">ONTAP S3（不適用於 VMware 工作負載）</block>
+  <block id="e9ebab79f1c4e6f0b2fa9bfe92e9381d" category="summary">啟用 NetApp Backup and Recovery 的預覽和隱藏功能。</block>
+  <block id="145966dcf8392a62159a1226e54e749e" category="doc">啟用 NetApp Backup and Recovery 的預覽和隱藏功能</block>
+  <block id="5737194cdc99152eb3d54bca68703776" category="section-title">可用的預覽功能</block>
+  <block id="38b8475a825d499faaa36a0f5a8a595c" category="paragraph">您可以啟用以下 NetApp Backup and Recovery 預覽功能。</block>
+  <block id="1cc56779118853e9c9789139ed3d4fb8" category="cell">功能標誌</block>
+  <block id="00ee74ec26fadae3b1fbc4d5378362e8" category="cell">功能說明</block>
+  <block id="acd2ecfdcc06da5b85b739621372c3b7" category="cell"><block ref="3d961c40a3b22829a8e4040bc3b25beb" prefix="" category="inline-code"></block></block>
+  <block id="4d5e596f99b3e679accfa0b7ac344816" category="cell">啟用從本機 ONTAP 磁碟區快照進行資料夾層級還原。預設情況下，ONTAP 僅支援從物件儲存備份還原資料夾。啟用此旗標後，您也可以從本機和複寫的快照還原整個目錄。</block>
+  <block id="1eb5bc9aed171393a1b9575017d9efef" category="cell"><block ref="ff10ff95bc79c857a9d612d300c756c9" prefix="" category="inline-code"></block></block>
+  <block id="bad5ef63ec2094c6d84831f4e77806a0" category="cell">在 Backup and Recovery Web 使用者介面中，復原工作流程中可以選擇 *Prioritize restore over existing job queue* 選項。在復原工作流程中選擇此選項時，復原作業的優先權將高於其他排隊作業，即使佇列繁忙也能執行。</block>
+  <block id="5760817f42cfdcd9c310ec63890ecb27" category="section-title">啟用預覽功能</block>
+  <block id="72493bb7c79c6733ffc1d16ee7c7d104" category="paragraph">啟用預覽功能標誌選項即可使用尚未正式發布的功能。在生產環境中謹慎使用預覽功能。</block>
+  <block id="94478b9681978df67e975358352699f4" category="list-text">使用 SSH 登入 Console 代理程式。</block>
+  <block id="eb7643c8d813a09c07f2d8076b2befd1" category="list-text">切換至 root 使用者：</block>
+  <block id="9ba4f57294fda814dbab7cbda4e897fa" category="list-text">在 Docker 中尋找 Backup and Recovery 磁碟區：</block>
+  <block id="a68c3c53417789e724bdb983d1b29d52" category="paragraph">輸出結果應類似以下內容：</block>
+  <block id="b9ec61e8b4b3bbcda4ce87714033c1d0" category="list-text">找到磁碟區的掛載點：</block>
+  <block id="a0bfb659239b4c8e3dd2558e3e258c1b" category="paragraph">雲端部署和私有部署的掛載點不同。此輸出範例顯示雲端部署：</block>
+  <block id="d6ab84ca1261d3a19c56e1b66e415c65" category="list-text">切換到 docker 磁碟區組態目錄，該目錄位於掛載點目錄內。例如：</block>
+  <block id="91558f70d213f0b23f7eb26674ac59c0" category="list-text">建立一個檔案，其中包含以下 JSON 結構，以及每個要啟用的功能標誌的鍵 / 值配對。根據您的部署類型命名該檔案：</block>
+  <block id="2414d97e3408f266e752a2e610afbdd0" category="list-text">雲端部署：<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block></block>
+  <block id="8151bbc69e3e7ea5e83ed8f4d6dbb410" category="list-text">私有 / 暗站部署：<block ref="8feeb3f80a4b4bce68fbe733434eccba" prefix=" " category="inline-code"></block></block>
+  <block id="76460e0fa8e071746b23046ec8f56e36" category="inline-xref">可用旗標</block>
+  <block id="b482cc7b091b355630e6446fa67174ac" category="paragraph">請參閱 <block ref="d309806f28982d865d65b08f86d255e7" category="inline-xref-macro-rx"></block> 以取得功能標誌資訊。例如：</block>
+  <block id="ac5cd439e0017b06be1e4642e8b56e41" category="list-text">重新啟動 Backup and Recovery 容器：</block>
+  <block id="1a9463a420291fe177279490d84a12e3" category="list-text">在網頁瀏覽器中重新載入 Backup and Recovery UI。</block>
+  <block id="a0d8143bf8014bb28b405e42d77fe94e" category="admonition">若要停用預覽功能，請依照相同的步驟操作，但將功能標誌值設為 <block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>。</block>
+  <block id="0914e8028f83c39209dd353fbe4c3cc0" category="section-title">停用屬於儲存 VM 的所有磁碟區的索引</block>
+  <block id="25453b410cc5b5a300cb25323d146096" category="paragraph">請依照下列步驟停用屬於特定儲存 VM 的所有磁碟區的索引，而不是停用每個磁碟區的索引。</block>
+  <block id="8dff4fed8a1d5381eb2f6576f3f06b7d" category="list-text">建立一個名為<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>的檔案，內容如下。將範例中的儲存 VM 名稱替換為您環境中儲存 VM 的名稱：</block>
+  <block id="7577767aaa58a8a7950977e3a65ee191" category="list-text">重新啟動 Backup and Recovery 索引目錄容器：</block>
+  <block id="e6cce919f01af0ea557dc3414a5f3d13" category="sidebar">啟用預覽和隱藏功能</block>
 </blocks>
