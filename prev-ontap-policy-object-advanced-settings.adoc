@@ -102,7 +102,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 預設啟用勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照上。
 
-有關 DataLock 和勒索軟體恢復選項的詳細信息，請參閱link:prev-ontap-policy-object-options.html["DataLock 和勒索軟體復原選項"]。
+如需 Datalock 和勒索軟體保護選項的詳細資訊，請參閱 link:prev-ontap-policy-object-options.html["DataLock 與勒索軟體保護選項"]。
 
 您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。
 
