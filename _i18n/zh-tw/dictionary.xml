@@ -4308,7 +4308,6 @@
   <block id="eb31ef8eb2f5dc2e91e3fc628c278047" category="cell">臨時磁碟區快照建立失敗</block>
   <block id="d6c67ddd6689909f9ab7e453c230fd09" category="paragraph">NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照並將其傳輸到備份位置來同步備份。</block>
   <block id="488ee5eee6409c61723daa55708c1c38" category="paragraph">在NetApp Backup and Recovery中，建立 Microsoft SQL Server 工作負載的報告，以查看備份狀態和詳細信息，包括成功和失敗的備份計數、備份類型、儲存系統和時間戳記。</block>
-  <block id="683c401da81ee8eab953d27954a799cf" category="paragraph">所有ONTAP系統都已內建備份和復原的支持，因此無需額外的硬體、軟體授權或媒體網關。這使得備份操作變得簡單且經濟高效。NetApp Console簡化了任何備份策略的實施，包括所有 3-2-1 備份變體，而無需多個資源管理器或專業人員。</block>
   <block id="1da151060a18e6460ac3d7eb0f913a37" category="paragraph">備份和復原服務有三種付費方式：</block>
   <block id="6fa5c823869ff5f58a4f5dcaaa68d86d" category="list-text">第二種選擇是購買年度合約。</block>
   <block id="6f2ce7f1231e53c03d29e2df6055acf0" category="paragraph">對於ONTAP磁碟區工作負載，您只需為受物件儲存保護的磁碟區付費。費用是根據來源ONTAP磁碟區在應用效率之前使用的邏輯容量計算的，也稱為前端 TB（FETB）。</block>
@@ -5319,4 +5318,5 @@
   <block id="fb71a072e6e449316b8305b9767a4e9e" category="paragraph">如果您的叢集使用的是 ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份免受刪除和勒索軟體攻擊。每個備份原則都提供了一個 _Datalock 和 Ransomware 保護_ 部分，可以將其應用於備份檔案，並設定保護期限（即 _保留期_）。</block>
   <block id="fe096dc1f619b5ae2f454275962bf893" category="paragraph">請注意，如果您選擇物件儲存中的備份檔案，且該備份啟用了勒索軟體防護（如果您在備份策略中啟用了 Datalock 和勒索軟體防護），則系統會提示您在還原資料之前對該備份檔案執行額外的勒索軟體掃描。我們建議您掃描該備份檔案是否有勒索軟體。（存取備份檔案的內容會產生額外的雲端供應商輸出費用。）</block>
   <block id="a38244f145eb7bb81ea84601f169276b" category="paragraph">如果備份檔案啟用了勒索軟體防護（如果您在備份原則中啟用了 Datalock 和勒索軟體防護），則在還原資料之前，系統會提示您對備份檔案執行額外的勒索軟體掃描。我們建議您掃描備份檔案是否有勒索軟體。（存取備份檔案的內容會產生額外的雲端供應商出站流量費用。）</block>
+  <block id="936866268a423c45b2ef9ad24698c8e0" category="paragraph">所有 ONTAP 系統都已內建備份與還原支援，因此無需額外的硬體或媒體閘道器。這使備份作業變得簡單且具成本效益。NetApp Console 簡化了任何備份策略的實施，包括涵蓋 3-2-1 備份變體的完整範圍，無需多個資源管理器或專業人員。</block>
 </blocks>
