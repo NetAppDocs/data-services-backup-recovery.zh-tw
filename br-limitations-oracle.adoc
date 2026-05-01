@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-limitations-oracle.html 
 keywords: NetApp Backup and Recovery, Oracle database 
-summary: 在您的環境中使用 Backup and Recovery 之前，請先檢閱這些 NetApp Backup and Recovery 限制。 
+summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢閱這些 Backup and Recovery 限制。 
 ---
 = Oracle 資料庫工作負載的 NetApp Backup and Recovery 已知限制
 :hardbreaks:

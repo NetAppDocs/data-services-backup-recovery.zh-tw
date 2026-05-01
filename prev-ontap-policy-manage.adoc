@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-policy-manage.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。 
+summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
 ---
 = 使用NetApp Backup and Recovery管理ONTAP磁碟區的備份策略
 :hardbreaks:

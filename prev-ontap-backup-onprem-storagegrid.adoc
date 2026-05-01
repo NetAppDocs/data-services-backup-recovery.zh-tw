@@ -151,7 +151,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 * 節點的群集間 LIF 能夠存取物件儲存（當控制台代理安裝在「暗」站點時不需要）。
 * 已為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["為 SVM 配置 DNS 服務"^]。
-* 如果您使用的 IP 空間與預設 IP 空間不同，則可能需要建立靜態路由才能存取物件儲存。
+* 如果您使用的 IPspace 與預設 IPspace 不同，則可能需要建立靜態路由才能存取物件儲存設備。
 * 如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery服務透過您指定的連接埠（通常為連接埠 443）從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
 
 
@@ -194,7 +194,7 @@ StorageGRID必須符合以下要求。查看 https://docs.netapp.com/us-en/stora
 
 要將舊備份分層到雲端檔案存儲，您的StorageGRID系統必須運行 11.3 或更高版本。此外，您的StorageGRID系統必須在控制台*系統*頁面上被發現。
 
-對於使用者檔案存儲，需要管理節點 IP 存取。
+若要使用歸檔儲存設備，需要管理節點 IP 存取。
 
 始終需要網關 IP 存取。
 

@@ -48,9 +48,9 @@ NetApp Backup and Recovery中定義了十類端點：
 NOTE: 如果您使用服務帳戶，則應使用服務存取令牌而不是使用者令牌。「client_id」的值（「Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC」）是固定值，無法變更。在這種情況下，請按照此處的說明進行操作： https://docs.netapp.com/us-en/console-automation/platform/create_service_token.html["建立服務存取權令牌"^] 。
 
 .步驟
-. 從NetApp NetApp Console網站取得使用者令牌。
+. 從 NetApp Console 網站取得使用者權杖。
 +
-確保從以下連結產生刷新令牌： https://services.cloud.netapp.com/refresh-token/.刷新令牌是一個字母數字字串，您將使用它來產生使用者令牌。
+請務必透過以下連結產生重新整理權杖：https://services.cloud.netapp.com/refresh-token/。重新整理權杖是一個英數字串，您將使用它來產生使用者權杖。
 
 +
 [source, console]

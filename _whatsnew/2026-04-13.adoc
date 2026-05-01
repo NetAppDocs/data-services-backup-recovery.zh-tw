@@ -18,7 +18,7 @@
 
 在此版本中、Kubernetes 工作負載引入了以下保護原則增強功能：
 
-* *編輯保護原則*：如果您需要變更 Kubernetes 工作負載保護原則，現在可以進行編輯
+* *編輯保護原則*：如果您需要變更 Kubernetes 工作負載保護原則，現在可以進行編輯。
 * *磁碟到磁碟支援*：您現在可以使用磁碟到磁碟備份架構來設定 Kubernetes 保護原則。
 * *Google Cloud Platform 儲存桶支援*：您現在可以設定 Kubernetes 保護原則以備份到 Google Cloud Platform 儲存桶。
 

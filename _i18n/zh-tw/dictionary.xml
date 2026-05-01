@@ -41,27 +41,18 @@
   <block id="cd4619af82dfe7627dc934e29e85a6e9" category="paragraph">在此版本中，對FlexGroup資料夾復原的支援是一個技術預覽。</block>
   <block id="abbf2484b45da9fd7be677fe96c511eb" category="inline-link">使用“瀏覽和恢復”功能恢復資料夾和文件</block>
   <block id="20a9fe231d3378f3b995e621821a5fb1" category="paragraph">有關詳細信息，請參閱<block ref="eb7fa071b1afec4a727e847897c52430" category="inline-link-rx"></block>。</block>
-  <block id="da9489b6abd27b653b6c28d99ae2ac6b" category="paragraph">有關手動啟用的詳細信息，請參閱<block ref="cb48ac5d5b1e506c1ce232053a519e6a" category="inline-link-rx"></block>。</block>
   <block id="aa6a53998d98bae73a6913ff1c2eecbc" category="doc">RHEL 8 或 9 上的 Podman 支援瀏覽和恢復</block>
   <block id="adc0925d00b7b860ba010d483035a38d" category="paragraph">NetApp Backup and Recovery現在支援使用 Podman 引擎在 Red Hat Enterprise Linux (RHEL) 版本 8 和 9 上進行檔案和資料夾復原。這適用於NetApp Backup and Recovery瀏覽和還原方法。</block>
   <block id="5462103113dfca7582cf43f266db09a2" category="inline-link">主機需求</block>
-  <block id="6be4e0f7143419aee9499b2a2505b0ab" category="paragraph">控制台代理程式版本 3.9.40 支援 Red Hat Enterprise Linux 版本 8 和 9 的某些版本，用於在 RHEL 8 或 9 主機上手動安裝控制台代理軟體，無論位置如何，以及在<block ref="10c1911da0601c7d780b4af72d11f3ab" category="inline-link-rx"></block>。這些較新的 RHEL 版本需要 Podman 引擎而不是 Docker 引擎。以前， NetApp Backup and Recovery在使用 Podman 引擎時有兩個限制。這些限制已被取消。</block>
   <block id="6111aa812639d5e432842ceca200ea78" category="inline-link">了解有關從備份檔案還原ONTAP資料的更多信息</block>
   <block id="f807d2e87806a64e8251db4daa8c0686" category="paragraph"><block ref="a417ea89f701f9bc0a6d7405552ab71a" category="inline-link-rx"></block>。</block>
   <block id="3abe4a789c1c33e285d9452cca8c493b" category="section-title">更快的目錄索引改進了搜尋和恢復</block>
   <block id="9353e94049314c6236b51712848f2572" category="paragraph">此版本包含改進的目錄索引，可以更快完成基線索引。更快的索引使您能夠更快地使用搜尋和復原功能。</block>
   <block id="517624d736bd2a385ee8cda71584112f" category="doc">SnapLock Compliance和SnapLock Enterprise保護模式</block>
-  <block id="c9c56efcf255aca32ed492e84095d7c2" category="paragraph">NetApp Backup and Recovery現在可以備份使用SnapLock Compliance或SnapLock Enterprise保護模式配置的FlexVol和FlexGroup本機磁碟區。您的叢集必須執行ONTAP 9.14 或更高版本才能獲得此支援。自ONTAP版本 9.11.1 起，支援使用SnapLock Enterprise模式備份FlexVol磁碟區。早期的ONTAP版本不支援備份SnapLock保護磁碟區。</block>
   <block id="d41c5b540be0c3c679bd7d5c99b06670" category="inline-link">了解NetApp Backup and Recovery</block>
-  <block id="97b3d65b7c467100f6712b88b990af6d" category="paragraph">請參閱受支援卷的完整列表<block ref="a026c5bec08ff7bb5b963e48c0daa63e" category="inline-link-rx"></block>。</block>
   <block id="fec92c3dfb6a0b3db498488c7f4d2f29" category="section-title">在卷頁頁面上為搜尋和復原過程建立索引</block>
   <block id="15400d9962ba34aa5fdf096b27ab90a3" category="paragraph">在使用搜尋和還原之前，您需要在要從中還原磁碟區資料的每個來源系統上啟用「索引」。這使得索引目錄能夠追蹤每個卷的備份檔案。卷頁現在顯示索引狀態：</block>
   <block id="cd9b31737e78e0a0a755acc12151f766" category="list-text">已編入索引：磁碟區已編入索引。</block>
-  <block id="02e4eb80c967f3b9add2ba16a690eef2" category="list-text">進行中</block>
-  <block id="838534d879f74e7af515a7de57e72b71" category="list-text">未編入索引</block>
-  <block id="73d4d0de3c5f56849f3c1a290a6681f2" category="list-text">索引已暫停</block>
-  <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="list-text">錯誤</block>
-  <block id="cb48cbf342305a9ae53e02e21fcb644c" category="list-text">未啟用</block>
   <block id="1ef2d1ba8a2963702ac1e5240f81ffde" category="doc">NetApp Backup and Recovery預覽版</block>
   <block id="501af319d8923aa4758190eb4fbada30" category="paragraph">NetApp Backup and Recovery的此預覽版提供了更新的使用者介面，使您能夠使用NetApp Backup and Recovery中熟悉的 3-2-1 保護策略來管理 Microsoft SQL Server 工作負載。使用此新版本，您可以將這些工作負載備份到主存儲，將其複製到輔助存儲，然後將其備份到雲端物件儲存。</block>
   <block id="a2e3a30df706bb24099d5e00888df71a" category="admonition">本文檔作為技術預覽提供。對於此預覽版產品， NetApp保留在正式發布之前修改產品詳細資訊、內容和時間表的權利。</block>
@@ -152,7 +143,6 @@
   <block id="2a42543b31a44385d9801b2e6d715417" category="list-text">不支援在策略中啟用 DataLock。</block>
   <block id="bd38f0d8ed5d82f6a34eef6f60e82afc" category="list-text">不支援在政策中啟用存檔模式。</block>
   <block id="7f4d22b3de45045172408ddd711a85a1" category="paragraph">*入門*</block>
-  <block id="532a003570e90a57b7965cafcf69d336" category="paragraph">若要開始使用此預覽功能，您必須在控制台代理程式上啟用一個標誌。然後，您可以在保護工作流程中透過在備份部分中選擇*第三方相容*物件儲存來輸入 MinIO 第三方物件儲存的連接詳細資訊。</block>
   <block id="c65f3468fbd84ca6a3ed5c4f86c93ec8" category="doc">增強型ONTAP卷儀表板</block>
   <block id="4fd717f9bf23502f14b97a4e0dd209e6" category="paragraph">2025 年 4 月，我們推出了增強型ONTAP卷儀表板的預覽版，它速度更快、更有效率。</block>
   <block id="24c045ea49f5ec7c22662da2305601e6" category="paragraph">此儀表板旨在幫助處理大量工作負載的企業客戶。即使對於擁有 20,000 卷的客戶，新的儀表板也只需不到 10 秒即可加載。</block>
@@ -187,13 +177,11 @@
   <block id="2211c8a4939111428200ceec5f271f42" category="paragraph">您可以在啟用保護或開始復原程序時啟用或停用此選項。</block>
   <block id="e642532444d0db4591ce8b9d729f92b3" category="paragraph">如果停用此設置，則必須手動建立私有端點以使NetApp Backup and Recovery正常運作。如果沒有適當的連接，您可能無法成功執行備份和還原任務。</block>
   <block id="fad4c67d1d97874133e7a367fe5038fd" category="section-title">ONTAP S3 上支援SnapMirror到雲端重新同步</block>
-  <block id="8e0a943cdbcd7f9c7f29128489119715" category="paragraph">先前的版本引入了對SnapMirror到 Cloud Resync（SM-C Resync）的支援。此功能簡化了NetApp環境中磁碟區遷移期間的資料保護。此版本增加了對ONTAP S3 上的 SM-C Resync 以及其他與 S3 相容的提供者（如 Wasabi 和 MinIO）的支援。</block>
   <block id="fa551b5810fe894fcd21bf7c8ffc98d1" category="section-title">為StorageGRID帶來您自己的儲存桶</block>
   <block id="4b2511d38450982bde4f504e80a44028" category="paragraph">當您在物件儲存中為工作環境建立備份檔案時，預設情況下， NetApp Backup and Recovery會為您設定的物件儲存帳戶中的備份檔案建立容器（儲存體桶或儲存帳戶）。以前，您可以覆寫此功能並為 Amazon S3、Azure Blob Storage 和 Google Cloud Storage 指定自己的容器。透過此版本，您現在可以攜帶自己的StorageGRID物件儲存容器。</block>
   <block id="e6e5a011626c6db86099687e0a358c1f" category="inline-link">建立您自己的物件儲存容器</block>
   <block id="51c4ba7436895c5fa861c805e1caee68" category="paragraph">看<block ref="63f7d9c65b21d9a782eb05b351422f54" category="inline-link-rx"></block>。</block>
   <block id="5d8fc779baf0d068c296ee5013b2224f" category="doc">Kubernetes 工作負載支援預覽版</block>
-  <block id="3544c31b5491dc7ecb73e28d6e25a1e8" category="paragraph">此版本的NetApp Backup and Recovery引入了對發現和管理 Kubernetes 工作負載的支援：</block>
   <block id="200a1ca96330b8c7561607ba3e8efa76" category="list-text">發現由NetApp ONTAP支援的 Red Hat OpenShift 和開源 Kubernetes 集群，無需共享 kubeconfig 檔案。</block>
   <block id="bc97cde5f3a6fe336563401fb4b522a7" category="list-text">使用統一的控制平面發現、管理和保護跨多個 Kubernetes 叢集的應用程式。</block>
   <block id="8671fb87efe354c05f9373edb6889d96" category="list-text">將 Kubernetes 應用程式的備份和還原資料移動操作卸載到NetApp ONTAP。</block>
@@ -252,7 +240,6 @@
   <block id="387c71fcb2fb7fdf9038db9d12137530" category="inline-link-macro">NetApp Console發行說明。</block>
   <block id="3a1e37eecca95e81d9e509646022ffda" category="paragraph">有關更改的詳細信息，請參閱<block ref="019a5c722618673de9fa5ca0cf2abddb" category="inline-link-macro-rx"></block></block>
   <block id="86df852f08da7feceb910d31327e83d7" category="section-title">Hyper-V 工作負載支援作為私人預覽版</block>
-  <block id="9fb98f9a29d9d72ef6008750be44e084" category="paragraph">此版本的NetApp Backup and Recovery引入了對發現和管理 Hyper-V 工作負載的支援：</block>
   <block id="bd0905239cb012ebf878ac40c3981660" category="list-text">在獨立實例以及故障轉移群集實例 (FCI) 上備份和還原虛擬機</block>
   <block id="cb861f226468f5c5741c826734953432" category="list-text">保護儲存在 SMB3 共用上的虛擬機</block>
   <block id="165a3a57ae6cbe2ce8d382109a648112" category="list-text">虛擬機器層級的批量保護</block>
@@ -262,7 +249,6 @@
   <block id="57a29df96f4bdf53f80c56b739785313" category="inline-link">保護 Hyper-V 工作負載概述</block>
   <block id="f7bc6e5577bf047a5f192d548391185c" category="paragraph">有關保護 Hyper-V 工作負載的詳細信息，請參閱<block ref="8b99e6e4e6dfd30b0b16292fe5edfbd4" category="inline-link-rx"></block>。</block>
   <block id="ade0d83a8d5df6524dcf5bc339bf6236" category="section-title">KVM 工作負載支援作為私人預覽</block>
-  <block id="c42adba211239f644f4ee6954d8a909e" category="paragraph">此版本的NetApp Backup and Recovery引入了對發現和管理 KVM 工作負載的支援：</block>
   <block id="99803398691d47a569fe2e0eeaf8a74c" category="list-text">備份和還原儲存在 NFS 共享上的 qcow2 VM 映像</block>
   <block id="81e3905959a6e11107e52c1db1aa927a" category="list-text">備份儲存池</block>
   <block id="be660bd29054ec196c26b5d7ab12eca9" category="list-text">使用保護群組進行大量虛擬機器和儲存池保護</block>
@@ -324,8 +310,6 @@
   <block id="a0d08a35ff701967dbc1c996dc96b450" category="paragraph">進行 API 呼叫時，您將在授權標頭中新增使用者令牌，並在 x-agent-id 標頭中新增控制台代理 ID。您應該在 API 中使用NetApp Console帳戶 ID。</block>
   <block id="92ab15f0eb1b97b8c4bdb14a10948af8" category="inline-link">建立服務存取權令牌</block>
   <block id="e5f2b8ab19b544e0e970070da0ef345c" category="admonition">如果您使用服務帳戶，則應使用服務存取令牌而不是使用者令牌。「client_id」的值（「Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC」）是固定值，無法變更。在這種情況下，請按照此處的說明進行操作：<block ref="ad1a67426fea429db40073e48bac82e2" category="inline-link-rx"></block> 。</block>
-  <block id="cb27bd3cf10a5c5ee3ef77ed62b4ec63" category="list-text">從NetApp NetApp Console網站取得使用者令牌。</block>
-  <block id="9644265a314e497bc18814e1694c3d27" category="paragraph">確保從以下連結產生刷新令牌： https://services.cloud.netapp.com/refresh-token/.刷新令牌是一個字母數字字串，您將使用它來產生使用者令牌。</block>
   <block id="4130aadba8d01957d2f7bc7a8826bbc7" category="admonition">NetApp Console網站上的使用者令牌有一個到期日期。API 回應包含一個「expires_in」字段，用於說明令牌何時過期。若要刷新令牌，您需要再次呼叫此 API。</block>
   <block id="354fecdc1c1045cf24231c0bec3c74cd" category="list-text">取得您的NetApp Console帳戶 ID。</block>
   <block id="8249fee34290d25027be632b8f27da68" category="paragraph">此 API 將傳回以下回應。您可以透過解析 *[0].[ accountPublicId]* 的輸出來擷取帳戶 ID。</block>
@@ -520,7 +504,6 @@
   <block id="5b67703bc7ab6a4716dda43c544c9f7d" category="list-text">*現有憑證*：如果選擇此選項，則可以使用已新增的現有憑證。輸入憑證名稱。</block>
   <block id="29c1c21dae903f81a5ce83243375ad66" category="list-text">*新增憑證*：如果您沒有現有的SnapCenter主機憑證，則可以新增憑證。輸入憑證名稱、身份驗證模式、使用者名稱和密碼。</block>
   <block id="d9f0e4ad58dd91513c083d85b8d9abac" category="list-text">選擇“*導入*”來驗證您的條目並註冊SnapCenter伺服器。</block>
-  <block id="e2aca1a90b2505bdbd8989fd67da5b73" category="admonition">如果SnapCenter伺服器已註冊，您可以更新現有的註冊詳細資訊。</block>
   <block id="1a2fd2144a03d5f7da4895a769c5f322" category="paragraph">清單頁面顯示匯入的SnapCenter資源。</block>
   <block id="c836a45d41f4d6fac973334982e0121b" category="section-title">管理SnapCenter主機資源</block>
   <block id="8a44019232b730c71ae86feed08e1f3a" category="paragraph">匯入SnapCenter資源後，在NetApp Backup and Recovery中管理這些主機資源。在您選擇管理這些匯入的資源後， NetApp Backup and Recovery and Recovery可以備份並還原您從SnapCenter匯入的資源。您不再需要在SnapCenter Server 中管理這些資源。</block>
@@ -529,7 +512,6 @@
   <block id="1fb988937b21c00da1e824876b010dc1" category="list-text">選擇“在NetApp Console中管理”*。</block>
   <block id="67c5a09051e18a795b9e554ac46c53fc" category="paragraph">清單頁面在主機名稱下顯示 *Managed*，表示所選主機資源現在由NetApp Backup and Recovery管理。</block>
   <block id="dd65b1fcdfdbfc9273253615b14bdeb7" category="section-title">編輯匯入的SnapCenter資源</block>
-  <block id="34cc7187d0a3d7c2dd259f99b254962d" category="paragraph">您稍後可以重新匯入SnapCenter資源或編輯匯入的SnapCenter資源以更新註冊詳細資訊。</block>
   <block id="2dadcaeef8b607b311c6e42ed35272c1" category="paragraph">您只能變更SnapCenter伺服器的連接埠和密碼詳細資料。</block>
   <block id="0f9066b0f9e42b12f45badda9e9c8254" category="list-text">選擇“從SnapCenter匯入”的向下箭頭。</block>
   <block id="88b324247ad56ee6b822b2ad7363ece8" category="paragraph">從SnapCenter匯入頁面顯示所有先前的匯入。</block>
@@ -1662,7 +1644,6 @@
   <block id="5d49eb458c546b4f70a99f4b37bbcc20" category="list-text">選擇恢復到預設儲存類別或其他儲存類別。</block>
   <block id="12c3c958b266fff57134abb1c9649419" category="list-text">或者，如果您選擇還原到不同的儲存類，請選擇一個目標儲存類別來符合每個來源儲存類別。</block>
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">刪除備份</block>
-  <block id="f34f3b4d83a98c1f03d57b6ce4176300" category="summary">使用NetApp NetApp Backup and Recovery保護您的 VMware 工作負載。</block>
   <block id="d1980609675dd3ea40abaebd4a0989d8" category="doc">使用NetApp Backup and RecoveryVMware 工作負載</block>
   <block id="30a409f022898dd26f006e04486b81e0" category="paragraph">將 VMware VM 和資料儲存區從本機ONTAP系統備份到 Amazon Web Services、 Azure NetApp Files或StorageGRID，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。</block>
   <block id="f941928782d55bd3ba649990c808fcbd" category="inline-link-macro">使用NetApp Backup and Recovery為 VMware 工作負載建立和管理保護群組</block>
@@ -2530,7 +2511,6 @@
   <block id="15791d531460b4c275e03017399fcd1a" category="inline-link">了解有關 IP 空間的更多信息</block>
   <block id="c96f0b5929f61d63c7ae3512d00fb22b" category="list-text">群集間 LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。<block ref="0edb32ced43734581c082142ee8a87a9" category="inline-link-rx"></block> 。</block>
   <block id="d23d9fa8bc8aada34e7bfaf673a1e1d7" category="paragraph">當您設定NetApp Backup and Recovery時，系統會提示您輸入要使用的 IP 空間。您應該選擇與這些 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。</block>
-  <block id="f2d23bc0f0e4ec1066fdf58d41ab19ab" category="paragraph">如果您使用的 IP 空間與「預設」不同，那麼您可能需要建立靜態路由來存取物件儲存。</block>
   <block id="187b50ee8f2351a69b8fa6b8b42687d5" category="paragraph">IP 空間內的所有叢集間 LIF 都必須具有物件儲存的存取權限。如果您無法為目前 IP 空間配置此功能，則需要建立一個專用 IP 空間，其中所有群集間 LIF 都可以存取物件儲存。</block>
   <block id="16b737dd94da3821905b2064f8068f45" category="inline-link">為 SVM 配置 DNS 服務</block>
   <block id="e30347a67bfdcb246f056cfd9aa4efbd" category="list-text">必須為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何<block ref="f1c08d303d78e879204468f0ff96d977" category="inline-link-rx"></block>。</block>
@@ -2621,7 +2601,6 @@
   <block id="352e593026b22ecd240cab27c36a6aa8" category="paragraph">當您設定NetApp Backup and Recovery時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。</block>
   <block id="4ac800b4e5d934f314da963c023ec8e3" category="list-text">節點和叢集間 LIF 能夠存取物件儲存。</block>
   <block id="cf4f978809886b33abb134b8d95a53fa" category="list-text">已為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何<block ref="f1c08d303d78e879204468f0ff96d977" category="inline-link-rx"></block>。</block>
-  <block id="113b5e7186c305ad07d9c9c046e30198" category="list-text">如果您使用的 IP 空間與預設 IP 空間不同，則可能需要建立靜態路由才能存取物件儲存。</block>
   <block id="c6ab18cd48dd0f412dee7654780c4eef" category="list-text">如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery服務透過連接埠 443 從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。</block>
   <block id="dc6287483bb6663eb24a6b4a97292566" category="section-title">準備 Azure Blob 作為備份目標</block>
   <block id="7c6c6d3f55cf70ec4e78761174989411" category="list-text">您可以在啟動精靈中使用自己的自訂管理金鑰進行資料加密，而不是使用預設的 Microsoft 管理加密金鑰。在這種情況下，您將需要有 Azure 訂閱、Key Vault 名稱和金鑰。<block ref="5499082d3ade4f2b56fcc95816a14476" category="inline-link-rx"></block> 。</block>
@@ -2667,7 +2646,6 @@
   <block id="12b49f489ea72468724070c09fc7f45d" category="list-text">ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。控制台代理可以駐留在 Google Cloud Platform VPC 中。</block>
   <block id="8bdfdad72ee7298056198e1b5d8fb704" category="list-text">節點的叢集間 LIF 能夠存取物件儲存。</block>
   <block id="7dfd82301201229d10d2b7f30a3a9e1e" category="paragraph">如果您使用的是 Private Google Access 或 Private Service Connect，請確保您的 DNS 伺服器已設定為指向<block ref="3f4ca1d8ed90e1a3c0451eb42e58e5ef" prefix=" " category="inline-code"></block>到正確的內部（私有）IP 位址。</block>
-  <block id="6f10fb0bdda82988a0fa6dcc2515c346" category="list-text">請注意，如果您使用的 IP 空間與預設 IP 空間不同，則可能需要建立靜態路由才能存取物件儲存。</block>
   <block id="a62451f46dc42982cf209550cb11486e" category="list-text">如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery透過連接埠 443 從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。</block>
   <block id="496645a84a32070fadbf91b2c575e751" category="paragraph">如果您的備份的 Google Cloud Storage 目標存在於控制台 *系統* 頁面上，則可以將ONTAP叢集拖曳到 Google Cloud 物件儲存上。</block>
   <block id="8b7d5c44d9577dfc1c061905392bd3f1" category="list-text">*本機快照*：如果您正在執行複製或備份到物件存儲，則必須建立本機快照。</block>
@@ -2718,7 +2696,6 @@
   <block id="cfb67c066deff155999e8b4bab9d5bd1" category="list-text">ONTAP叢集透過使用者指定的連接埠從叢集間 LIF 啟動到ONTAP S3 伺服器的 HTTPS 連接，以執行備份和還原作業。此連接埠可在備份設定期間配置。</block>
   <block id="da21bd86fb59a4ebcb3e9faa287bbb0d" category="list-text">ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。</block>
   <block id="13af414a6c38f36f8a15bdef0358f5c4" category="list-text">節點的群集間 LIF 能夠存取物件儲存（當控制台代理安裝在「暗」站點時不需要）。</block>
-  <block id="a82a5bb2727df3f1958829955576a139" category="list-text">如果您使用的 IP 空間與預設 IP 空間不同，則可能需要建立靜態路由才能存取物件儲存。</block>
   <block id="b470d5270f42332102265af5da8e545a" category="list-text">如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery服務透過您指定的連接埠（通常為連接埠 443）從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。</block>
   <block id="6da2ce1a0bc0894620f6c533f7a2f2b4" category="section-title">準備ONTAP S3 作為備份目標</block>
   <block id="c3bf5d608f066a6b405a40012a2fc10c" category="inline-link">ONTAP S3 文檔</block>
@@ -2778,7 +2755,6 @@
   <block id="793640ee72b7150dff71a288a821c67c" category="list-text">支援的StorageGRID版本</block>
   <block id="8a456872aea50fd247449bd552854586" category="list-text">支援StorageGRID 10.3 及更高版本。</block>
   <block id="a3c3d46eb7dece1ea66293e26e27c747" category="paragraph">要將舊備份分層到雲端檔案存儲，您的StorageGRID系統必須運行 11.3 或更高版本。此外，您的StorageGRID系統必須在控制台*系統*頁面上被發現。</block>
-  <block id="de84af939f41492b1264ce8c3df573a9" category="paragraph">對於使用者檔案存儲，需要管理節點 IP 存取。</block>
   <block id="a99287c7990930f58a55c1e2dba88d64" category="paragraph">始終需要網關 IP 存取。</block>
   <block id="5a7e671d36e7ddbd948f2001988ffe33" category="inline-link">有關詳細信息，請參閱StorageGRID文檔</block>
   <block id="c794a55c739e453d58e6bcd42293fda2" category="list-text">您必須建立 S3 租用戶帳戶來控制對StorageGRID儲存的存取。<block ref="71eb6cc3bcb687d271a4ec87759d7b9d" category="inline-link-rx"></block> 。</block>
@@ -3073,7 +3049,6 @@
   <block id="b3f1b65a3c7ad581029671863ce84f3e" category="section-title">支援的系統和對象儲存提供者</block>
   <block id="04caa6fde87b21be8738fc7aac2130d5" category="paragraph">在下列公有和私有雲供應商中使用物件儲存時，您可以從下列系統在ONTAP磁碟區上啟用 DataLock 和勒索軟體保護。</block>
   <block id="155ec659cc4e13b84e26ac8a60d0983e" category="cell">Google Cloud 中的Cloud Volumes ONTAP</block>
-  <block id="f3ec603ab9c35660f371c0fc057b7fd1" category="list-text">您的叢集必須執行ONTAP 9.11.1 或更高版本</block>
   <block id="6eccb1b4300ae9587c674c0708c7ee79" category="list-text">控制台代理可以部署在雲端或您的本地</block>
   <block id="685a143757efe250c8c69c08616cbe33" category="list-text">以下 S3 權限必須是提供控制台代理權限的 IAM 角色的一部分。它們位於資源「arn:aws:s3:::netapp-backup-*」的「backupS3Policy」部分：</block>
   <block id="28393e8d0c5d4d42b764689c3d805dd0" category="example-title">AWS S3 權限</block>
@@ -3105,7 +3080,6 @@
   <block id="2575b79b2cd768a027306db8b9e8614a" category="list-text">s3：取得物件版本</block>
   <block id="7b2b7c08da06dd437ae98c50b4ace20f" category="inline-link">查看策略的完整 JSON 格式，您可以在其中複製並貼上所需的權限</block>
   <block id="14fe833125ea1176d7706671e8ef16cc" category="paragraph"><block ref="44b6ea42a3069db8220a474116b68855" category="inline-link-rx"></block>。</block>
-  <block id="4f411ed71b5f872404c482a3c45285e2" category="list-text">您的叢集必須執行ONTAP 9.12.1 或更高版本</block>
   <block id="8dcc4563f1d723683eb1d9c883e3a1eb" category="list-text">對於 Google Cloud：</block>
   <block id="f17f73c90517746e41e59ce4e6a2072f" category="list-text">您的叢集必須執行ONTAP 9.17.1 或更高版本</block>
   <block id="43757ece62940efe206ed418c8c8f76b" category="list-text">您的StorageGRID系統必須執行 11.6.0.3 或更高版本</block>
@@ -3198,7 +3172,6 @@
   <block id="307fac06deb7cfd0fa48e676ffc86224" category="paragraph">如果您為複製或備份建立自訂策略，則策略標籤（例如「每日」或「每週」）必須與快照策略中存在的標籤匹配，否則將不會建立複製的磁碟區和備份檔案。</block>
   <block id="8cb2e913decbf9b532c186901104e076" category="inline-link-macro">新增新的備份策略</block>
   <block id="ee49cee7c44ccb04a139f40fb9f4a214" category="paragraph">您可以在NetApp Backup and RecoveryUI 中建立快照、複製和備份到物件儲存策略。請參閱<block ref="0559f444e8f88edb894615ec30a1d00b" category="inline-link-macro-rx"></block>了解詳情。</block>
-  <block id="4cbdf0f70d1e657d5de76d924cb80f7c" category="paragraph">除了使用NetApp Backup and Recovery建立自訂策略之外，您還可以使用 System Manager 或ONTAP命令列介面 (CLI)：</block>
   <block id="c2fc643b815b9305bcbcfd94e340a3cc" category="inline-link">使用 System Manager 或ONTAP CLI 建立快照策略</block>
   <block id="fc3b34c5669f34396b08c49ba3f73599" category="list-text"><block ref="fc3b34c5669f34396b08c49ba3f73599" category="inline-link-rx"></block></block>
   <block id="e722bdc21722d564815561c634007199" category="inline-link">使用 System Manager 或ONTAP CLI 建立複製策略</block>
@@ -3742,11 +3715,9 @@
   <block id="ff6cbd3287f545a89d1e5e58f0d17bd4" category="section-title">導入的SnapCenter每日計劃</block>
   <block id="61ed4c8e3ffbc53bcf1724532421e782" category="paragraph">NetApp Backup and Recovery如下調整SnapCenter方案：</block>
   <block id="c08c2154284f4af8503c116de1e73d16" category="paragraph">*範例*：如果您有一個SnapCenter每日策略，從星期一開始每 3 天重複一次，NetApp Backup and Recovery會將計劃設定為每週一、週四和週日。由於並非每 3 天一次，因此有些日子會被跳過。</block>
-  <block id="9f6a1fee7b57b18f64bf8bca4ad36e30" category="list-text">如果SnapCenter計劃設定為超過 7 天， NetApp Backup and Recovery會將方案設定為每月。該月將跳過一些快照。</block>
   <block id="9430705db67f982f601f840df3cc16d6" category="section-title">導入的SnapCenter每小時計劃</block>
   <block id="3002d82ef196f81026a4e21905803959" category="paragraph">重複間隔大於一小時的SnapCenter每小時策略將轉換為NetApp Backup and Recovery中的每日策略。</block>
   <block id="a3e76bcb5e859bfa4430da805976f2bd" category="paragraph">任何重複間隔不是 24 倍（例如 5、7 等）的每小時策略都會跳過一天中的某些快照。</block>
-  <block id="9ffb5bf344108bbac86816e15898f943" category="paragraph">*範例*：如果您有一個SnapCenter每小時策略，從凌晨 1:00 開始每 5 小時重複一次，NetApp Backup and Recovery （遷移後）將把計劃設定為每天，間隔 5 小時，時間為凌晨 1:00、上午 6:00、上午 11:00、下午 4:00 和晚上 9:000。有些時間會被跳過，晚上 9:00 之後應該是凌晨 2:00，每 5 小時重複一次，但總是凌晨 1:00。</block>
   <block id="6a7a60343b8fa701471b08effbb43285" category="section-title">SnapCenter策略的日誌保留</block>
   <block id="26d5fd5ccf3209caaffe340f43009814" category="paragraph">如果SnapCenter中的資源具有多個策略，NetApp Backup and Recovery將使用以下優先順序來指派日誌保留值：</block>
   <block id="e38f6416749d06acffe55900ce6dfec5" category="list-text">對於SnapCenter中的「使用日誌備份原則的完整備份」加上「僅日誌」策略， NetApp Backup and Recovery使用僅日誌原則保留值。</block>
@@ -3786,7 +3757,6 @@
   <block id="cbeefab9985d18cf649d85c32d79d188" category="summary">建立安全性憑證以啟用NetApp Backup and Recovery與StorageGRID或ONTAP之間的通訊。</block>
   <block id="63b31af683f5a728cbf36267c289589f" category="doc">在NetApp Backup and Recovery中為StorageGRID和ONTAP設定安全性證書</block>
   <block id="67fc617cb862496da73f0d13f68e5e84" category="section-title">為StorageGRID建立安全性證書</block>
-  <block id="f4ea80cc019b2160c012d4312934a08a" category="paragraph">如果NetApp Backup and Recovery容器與StorageGRID之間的通訊應該驗證StorageGRID證書，則完成以下步驟。</block>
   <block id="66474d54a0b8e88b5463c446c79940ef" category="paragraph">產生的憑證應具有 CN 和主題備用名稱，作為啟動備份時NetApp Backup and Recovery中提供的名稱。</block>
   <block id="04fad0ac16d7f2deb1987a5510c738a1" category="list-text">請依照StorageGRID文件中的步驟建立StorageGRID憑證。</block>
   <block id="3b513e24628a82f33115f07ebd442378" category="inline-link">有關配置證書的StorageGRID信息</block>
@@ -3798,7 +3768,6 @@
   <block id="cdff415187609f29944bf1c630161ca7" category="admonition">標準、私有和受限部署模式的磁碟區名稱不同。本範例使用標準模式。參考<block ref="731df046572b68b75f040bb1dced01d2" category="inline-link-rx"></block>。</block>
   <block id="8e7afc71bbbdb7a90d5effeee846b799" category="list-text">找到NetApp Backup and Recovery磁碟區的掛載點。跑步：</block>
   <block id="e97115c3e90314c60ded3b359ea70498" category="admonition">標準、私有和受限部署模式的掛載點有所不同。此範例展示了標準雲端部署。參考<block ref="731df046572b68b75f040bb1dced01d2" category="inline-link-rx"></block>。</block>
-  <block id="16a11dc8e42e07e3f4167ea593dc06be" category="list-text">變更為 MountPoint 目錄。跑步：</block>
   <block id="096c73b5512780e3a3a1510cb1d77009" category="list-text">如果 StorageGRID 的憑證由根 CA 和中間 CA 簽名，則附加<block ref="8921ffd638d5e5fd424e4c197e829486" prefix=" " category="inline-code"></block>將兩個檔案合併到一個名為<block ref="0cf87cdc35b35ebc25d6a3bf7c9a3198" prefix=" " category="inline-code"></block>在目前位置。不要將葉證書新增至此文件。</block>
   <block id="22945d914abe20d687b81ff6fbc05c67" category="section-title">cloudmanager_cbs 容器的步驟</block>
   <block id="f96abe500d7acb97552081ca537d4b46" category="paragraph">您需要在NetApp Backup and Recovery（Cloud Backup Service）中啟用StorageGRID伺服器憑證驗證。</block>
@@ -3836,7 +3805,6 @@
   <block id="70e79bc1dae40cb4d65ff9311b208121" category="list-text"><block ref="70e79bc1dae40cb4d65ff9311b208121" category="inline-link-rx"></block></block>
   <block id="94127ba5494a8ba1866437839940b777" category="inline-link">如何使用 System Manager 管理ONTAP SSL 憑證</block>
   <block id="490355a668be7c4c18c41a966a22c161" category="list-text"><block ref="490355a668be7c4c18c41a966a22c161" category="inline-link-rx"></block></block>
-  <block id="b5864db94d8bb2d25b7f4630a16f599e" category="list-text">以 root 身分登入控制台代理程式。跑步：</block>
   <block id="94a9166a0ff55136e38b559d3099942f" category="list-text">取得NetApp Backup and RecoveryDocker 磁碟區。跑步：</block>
   <block id="d09a6e67f757bf6ab00dd35df5db31cb" category="admonition">標準、私有和受限部署模式的磁碟區名稱不同。此範例展示了標準雲端部署。參考<block ref="731df046572b68b75f040bb1dced01d2" category="inline-link-rx"></block>。</block>
   <block id="3e964e8f45e1fd19df3c5413fcbd6674" category="list-text">取得卷的掛載。跑步：</block>
@@ -3955,7 +3923,6 @@
   <block id="361cc78877d7de2ea952f510e7626ad4" category="paragraph">這些資料每天午夜備份一次，每個檔案最多保留 7 份副本。如果控制台代理程式正在管理多個本機ONTAP系統，則NetApp Backup and Recovery檔案將儲存在首先啟動的系統的儲存桶中。</block>
   <block id="2be5ff28599e1447ad26486d058560b3" category="paragraph">如果您的內部控制台代理停止運作，您將需要安裝新的控制台代理，然後將NetApp Backup and Recovery資料還原到新的控制台代理。</block>
   <block id="af0d8358ca0559646ed05a1f70fb056c" category="paragraph">檢查系統正常運作後，建立新的備份檔案。</block>
-  <block id="05eb9ffbcd3a4a40092374a3d60d7ac2" category="paragraph">安裝新的控制台代理程式時，請下載與原始代理程式相同的軟體版本。 NetApp Backup and Recovery資料庫的變更可能會導致較新的軟體版本無法與舊的資料庫備份一起使用。你可以<block ref="cf9f37e0e8c15b290b50a2dd76357649" category="inline-link-rx"></block>。</block>
   <block id="5d1e43ba5c03c383925fef923fa745db" category="paragraph">您應該會看到為您的磁碟區建立的所有備份。</block>
   <block id="6e16e42b061f3ee3519b7b870fdcf125" category="list-text">*每日*：選擇每隔一定天數重複一次，例如每 3 天。</block>
   <block id="e8aab330f851827afe9d27b0aec63d26" category="list-text">*每月*：一月至十二月，可選擇每月特定日期或多日演出，例如 7 號。</block>
@@ -4070,7 +4037,6 @@
   <block id="7f04f32c4656d50b5019019cf54c568c" category="list-text">確保您的ONTAP叢集有權存取 S3 儲存桶。</block>
   <block id="8caf5a345895253ff6b6c49a438599d4" category="list-text">請確保顯示的磁碟區與原始環境中的磁碟區相同。</block>
   <block id="432f26fda10ddec4232e210d763f233e" category="paragraph">NetApp Backup and Recovery評估 Microsoft SQL Server 應用程式。該服務評估現有保護級別，包括目前的備份保護策略、快照以及備份和還原選項。</block>
-  <block id="1bf1acc6c6a3e3af639e9ae129364ba0" category="paragraph">第一步從SnapCenter匯入主機資源，並在NetApp Backup and Recovery清單頁面中顯示這些資源。此時，資源尚未由NetApp Backup and Recovery管理。</block>
   <block id="f0b87199311bf1c15f240b666518084c" category="list-text">AWS：<block ref="e5469c6686b5a2c86b78502f7ea8c335" category="inline-link-rx"></block> 。</block>
   <block id="6d641e087ca9cbb2e0778a492ac1066a" category="list-text">Azure：<block ref="211ed702bd160a1aa192248c846136e5" category="inline-link-rx"></block> 。</block>
   <block id="80720981863bfe0c9cc6702701d24f18" category="list-text">Google Cloud：<block ref="5aa99f120ab43d5669622268ca1e3fd1" category="inline-link-rx"></block> 。</block>
@@ -4428,7 +4394,6 @@
   <block id="efdc15efa02d496331c0b53a11beab72" category="paragraph">若要解決此問題，請在客戶作業系統中手動將 VMDK 重新置於連線狀態。當 VMDK 線上時，來賓文件恢復工作階段將顯示正確的內容。</block>
   <block id="f9364c3689e8fa9d558080e005772cd1" category="section-title">來賓檔案恢復附加磁碟操作失敗</block>
   <block id="95c259e43559e78a13dbc7969fdef7cf" category="paragraph">當您啟動用戶機檔案還原作業時會出現此問題，但即使 VMware 工具正在運作且用戶端作業系統憑證正確，連線磁碟操作也會失敗。如果發生這種情況，則會傳回下列錯誤：</block>
-  <block id="9b71c1817815e7cd4130bed94e2ea447" category="paragraph"><block ref="294cedeefde97d4fb81e2aaa200cfe43" prefix="" category="inline-code"></block></block>
   <block id="359361098bd32a62519f56fcb0c584b3" category="paragraph">若要解決此問題，請在用戶端作業系統上重新啟動 VMware Tools Windows 服務，然後重試用戶端檔案還原作業。</block>
   <block id="e2b253374500e2e93f1c334a2bb7ddd4" category="section-title">來賓檔案復原會話停止後，備份不會分離</block>
   <block id="898c4d9cd797d45ca2066478fd269974" category="paragraph">當您從 VM 一致性備份執行來賓檔案還原作業時會發生此問題。當來賓檔案還原工作階段處於活動狀態時，將對相同 VM 執行另一個 VM 一致性備份。當客戶文件恢復會話斷開時（手動或 24 小時後自動斷開），該會話的備份不會被分離。</block>
@@ -4595,7 +4560,6 @@
   <block id="55cf8812c6c22803ddfa5fd41279187d" category="list-text">磁碟到磁碟</block>
   <block id="0f6d38819f95da81f8bc80258fee7071" category="list-text">磁碟到物件儲存</block>
   <block id="e3b858c29172bddae0dbb7e461b2f7df" category="list-text">級聯</block>
-  <block id="6e56df4eb422b0b15187c84ba551237e" category="summary">在您的環境中使用 Backup and Recovery 之前，請先檢閱這些 NetApp Backup and Recovery 限制。</block>
   <block id="36f1a2626b3ec6834b4eb361bac96c37" category="doc">適用於 Kubernetes 工作負載的 NetApp Backup and Recovery 已知限制</block>
   <block id="36c070b302c08836d912ffb6841bb46e" category="section-title">變更應用程式的保護原則</block>
   <block id="ad4e872c3df8cab19a9d649f27b25605" category="paragraph">當您變更應用程式的關聯保護原則以使用不同的儲存區或次要複寫目標時、保護原則可能會失敗。</block>
@@ -4621,7 +4585,6 @@
   <block id="da57866549888e8bceaf30a4db33bfc5" category="list-text">探索 Backup and Recovery 中的工作負載。</block>
   <block id="63e4e660d97fd26bbffa7cb3968c22c4" category="paragraph">組織管理員、資料夾管理員或專案管理員可以發現可用的工作負載，並選擇相應的專案（例如 US East 或 US West）。每個工作負載都會自動關聯到所選專案。</block>
   <block id="0e8d553f80f80eac9e99c265bf9f4d72" category="list-text">將使用者新增至專案。</block>
-  <block id="0da282e170c520798099314d27620ed4" category="paragraph">組織管理員或資料夾/專案管理員可將 Console 使用者新增至包含工作負載的專案中。根據使用者的存取需求，為其指派組織查看者角色和 Backup and Recovery 角色。擁有相應 Backup and Recovery 角色的使用者將自動獲得對這些專案中新工作負載的存取權限。</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">相關資訊</block>
   <block id="728d17e7146dcd6218a24c46a1de8943" category="inline-link-macro">了解 NetApp Console 身分與存取管理</block>
   <block id="d612358528f4a89a703f161a8c3e4a9e" category="list-text"><block ref="22de56c086dedbed6837db4613efda62" category="inline-link-macro-rx"></block>.</block>
@@ -5057,7 +5020,6 @@
   <block id="cd11b988c9f7b5a4f534d244c8f742a8" category="inline-link">保護 ONTAP Volumes 工作負載概述</block>
   <block id="cb64e7530a451b6a29edd3427495ec90" category="paragraph">有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱<block ref="c12abefe1b46a590752410462324e2ee" category="inline-link-rx"></block>。</block>
   <block id="19455401d550e37f86235df1de2da367" category="paragraph">在此版本中、Kubernetes 工作負載引入了以下保護原則增強功能：</block>
-  <block id="8832a3317e409faa663d5b3be7a37383" category="list-text">*編輯保護原則*：如果您需要變更 Kubernetes 工作負載保護原則，現在可以進行編輯</block>
   <block id="67c0c04b74d317df3fb38678dfce9d57" category="list-text">*磁碟到磁碟支援*：您現在可以使用磁碟到磁碟備份架構來設定 Kubernetes 保護原則。</block>
   <block id="1f22edbdac095058ea8301cd1b0fa03f" category="list-text">*Google Cloud Platform 儲存桶支援*：您現在可以設定 Kubernetes 保護原則以備份到 Google Cloud Platform 儲存桶。</block>
   <block id="55dcb475c806e158ae812c3e721ff829" category="inline-link">在 NetApp Backup and Recovery 中建立及管理保護政策</block>
@@ -5318,4 +5280,41 @@
   <block id="a38244f145eb7bb81ea84601f169276b" category="paragraph">如果備份檔案啟用了勒索軟體防護（如果您在備份原則中啟用了 Datalock 和勒索軟體防護），則在還原資料之前，系統會提示您對備份檔案執行額外的勒索軟體掃描。我們建議您掃描備份檔案是否有勒索軟體。（存取備份檔案的內容會產生額外的雲端供應商出站流量費用。）</block>
   <block id="936866268a423c45b2ef9ad24698c8e0" category="paragraph">所有 ONTAP 系統都已內建備份與還原支援，因此無需額外的硬體或媒體閘道器。這使備份作業變得簡單且具成本效益。NetApp Console 簡化了任何備份策略的實施，包括涵蓋 3-2-1 備份變體的完整範圍，無需多個資源管理器或專業人員。</block>
   <block id="eb93c206074e97dfb7bf08b81a6c72c1" category="list-text">您必須在儲存虛擬機器上設定 IPv4 NFS 資料 LIF，並為該磁碟區配置 NFS 匯出。Search &amp; Restore 同時支援 NFS 和 SMB/CIFS 磁碟區。</block>
+  <block id="a2d15c88cd74ef2c07cf5a883fe0b88d" category="paragraph">如需手動啟用的詳細資訊，請參閱<block ref="cb48ac5d5b1e506c1ce232053a519e6a" category="inline-link-rx"></block>。</block>
+  <block id="b61dac5f94b9ddeb94321e1a35a17efe" category="paragraph">Console 代理程式版本 3.9.40 除了<block ref="10c1911da0601c7d780b4af72d11f3ab" category="inline-link-rx"></block>中所列的作業系統外，還支援在 RHEL 主機上手動安裝 Console 代理程式的某些 Red Hat Enterprise Linux 8 和 9 版本。這些較新的 RHEL 版本需要使用 Podman 引擎，而不是 Docker 引擎。先前，使用 Podman 引擎時，NetApp Backup and Recovery 有兩個限制；這些限制現已移除。</block>
+  <block id="28afb94b906782446ccfc717207cf806" category="paragraph">NetApp Backup and Recovery 現在可以備份同時使用 SnapLock Compliance 或 SnapLock Enterprise 保護模式所設定的本地 FlexVol 和 FlexGroup 磁碟區。您的叢集必須執行 ONTAP 9.14 或更新版本才能支援此功能。自 ONTAP 9.11.1 起，已支援在 SnapLock Enterprise 模式下備份 FlexVol 磁碟區。較早的 ONTAP 版本不支援備份受 SnapLock 保護的磁碟區。</block>
+  <block id="6a8ed4de7ab1aa813fb6d9a4e2939ec1" category="paragraph">請參閱 <block ref="a026c5bec08ff7bb5b963e48c0daa63e" category="inline-link-rx"></block> 中支援磁碟區的完整清單。</block>
+  <block id="dc8f8e2a17149271a7db8586e1cda422" category="list-text">進行中：正在建立索引。</block>
+  <block id="769d056387975f8dc9019bf628646aa9" category="list-text">未建立索引：索引尚未開始。</block>
+  <block id="feee87f6c7abb4d53e4a9b94fb0dfb31" category="list-text">索引已暫停：索引已暫停。</block>
+  <block id="a25aee605a3e2d5a74f5276d624b0f5b" category="list-text">錯誤：發生索引錯誤。</block>
+  <block id="ab7c98eb7b63bf725490a49407c4e35b" category="list-text">未啟用：此來源未啟用索引。</block>
+  <block id="42f50deda405c659127ecb5cd695b30b" category="paragraph">若要開始使用此預覽功能、您必須在 Console 代理程式上啟用旗標。然後、您可以在備份區段中選擇 *Third party Compatible* 物件存放區、在保護工作流程中輸入 MinIO 第三方物件存放區的連線詳細資料。</block>
+  <block id="472faf2431c49adc0b2536c0b6dd5f8d" category="paragraph">上一版本引入了 SnapMirror 對雲端重新同步（SM-C Resync）的支援。此功能簡化了 NetApp 環境中磁碟區遷移期間的資料保護。此版本新增了對 ONTAP S3 以及其他 S3 相容提供者（例如 Wasabi 和 MinIO）的 SM-C Resync 支援。</block>
+  <block id="adbe969e927a15ae116084381be98d67" category="paragraph">此版本的 NetApp Backup and Recovery 新增支援發現與管理 Kubernetes 工作負載：</block>
+  <block id="26afd870812fc0397b60acfa7ed436c0" category="paragraph">此版本的 NetApp Backup and Recovery 新增支援探索與管理 Hyper-V 工作負載：</block>
+  <block id="9961d7a185cfa9d439cc427ed38dc48f" category="paragraph">此版本的 NetApp Backup and Recovery 新增支援發現與管理 KVM 工作負載：</block>
+  <block id="b8b08cc8479793cbf90cf90739d5d44a" category="list-text">*編輯保護原則*：如果您需要變更 Kubernetes 工作負載保護原則，現在可以進行編輯。</block>
+  <block id="756c384ea097ecc82b23f490eb2208a9" category="list-text">從 NetApp Console 網站取得使用者權杖。</block>
+  <block id="0aebe097f5e5955c53107ce221189235" category="paragraph">請務必透過以下連結產生重新整理權杖：https://services.cloud.netapp.com/refresh-token/。重新整理權杖是一個英數字串，您將使用它來產生使用者權杖。</block>
+  <block id="00971dcc6a1f39c384a02f00d3e60974" category="summary">在您的環境中使用 NetApp Backup and Recovery 之前，請先檢閱這些 Backup and Recovery 限制。</block>
+  <block id="4897b8cd591825888a626536927740b9" category="paragraph">組織管理員或資料夾/專案管理員可將 Console 使用者新增至包含工作負載的專案中。根據使用者的存取需求，為其指派組織檢視者角色和 Backup and Recovery 角色。擁有相應 Backup and Recovery 角色的使用者將自動獲得對這些專案中新工作負載的存取權限。</block>
+  <block id="3325ba2bc09d36a530988abb840fc8c2" category="admonition">如果 SnapCenter Server 已註冊，您可以更新現有的註冊資訊。</block>
+  <block id="0a73bc800936bebcd3c8b8e4898bf3e3" category="paragraph">之後您可以重新匯入 SnapCenter 資源或編輯匯入的 SnapCenter 資源以更新註冊詳細資訊。</block>
+  <block id="00c16ea9dbe4f4e4a298cb14dbc7bf03" category="summary">使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。</block>
+  <block id="3e843348ced3f9e4c35fbe2e1319ecf5" category="paragraph"><block ref="b167760d93d5326c0be83a7248a528cb" prefix="" category="inline-code"></block></block>
+  <block id="18925d044201253060ba6dfa01ea5700" category="paragraph">如果您使用的 IPspace 不是「預設」，則可能需要建立靜態路由才能存取物件儲存設備。</block>
+  <block id="fb7c7bf4cc7539dceb5fac958b277143" category="list-text">如果您使用的 IPspace 與預設 IPspace 不同，則可能需要建立靜態路由才能存取物件儲存設備。</block>
+  <block id="611a454ad0b8d9c9bf65b6315d891435" category="list-text">請注意、如果您使用的 IPspace 與 Default 不同、則可能需要建立靜態路由才能存取物件儲存設備。</block>
+  <block id="2947f85112e3c257c3ac83e6fbdafb4e" category="list-text">如果您使用的 IPspace 與 Default 不同，則可能需要建立靜態路由才能存取物件儲存設備。</block>
+  <block id="fcfda8ebf2d138d3fcac111b9373c707" category="paragraph">若要使用歸檔儲存設備，需要管理節點 IP 存取。</block>
+  <block id="432eebe4a7604b59dce3cc920c1188ae" category="list-text">您的叢集必須執行 ONTAP 9.11.1 或更新版本</block>
+  <block id="39e9a2df2a2b2ec0f86c3e48b198f446" category="list-text">您的叢集必須執行 ONTAP 9.12.1 或更高版本</block>
+  <block id="75ff6d4c7d81cf2bce3cb6709b5f2544" category="paragraph">除了使用 NetApp Backup and Recovery 建立自訂原則之外，您也可以使用 System Manager 或 ONTAP Command Line Interface（CLI）：</block>
+  <block id="2b8bfee882b822ee5f16bca77595ab0f" category="paragraph">安裝新的 Console 代理程式時、請下載與原始代理程式相同的軟體版本。對 NetApp Backup and Recovery 資料庫的變更可能會導致較新的軟體版本無法與舊的資料庫備份搭配使用。您可以<block ref="cf9f37e0e8c15b290b50a2dd76357649" category="inline-link-rx"></block>。</block>
+  <block id="e85a7923d13a33ad929302f3f0390a8b" category="list-text">如果 SnapCenter 的排程設定超過 7 天，NetApp Backup and Recovery 會將排程設為每月一次。在這個月內，部分快照將會被略過。</block>
+  <block id="5854806eb7a037bac498023782dd080f" category="paragraph">* 範例 *：如果您有 SnapCenter 每小時原則，從上午 1:00 開始每 5 小時重複一次，NetApp Backup and Recovery（移轉後）會將排程設定為每日，間隔 5 小時，時間為上午 1:00、上午 6:00、上午 11:00、下午 4:00 和晚上 9:00。某些時段會被跳過，晚上 9:00 之後應該是上午 2:00 才能每 5 小時重複一次，但始終會是上午 1:00。</block>
+  <block id="1f4f4cafd8d76357721d91da817797be" category="paragraph">如果 NetApp Backup and Recovery 容器與 StorageGRID 之間的通訊需要驗證 StorageGRID 憑證，請完成以下步驟。</block>
+  <block id="c2ced4c78e453bfc0c402989d4c4a226" category="list-text">變更至掛載點目錄。執行：</block>
+  <block id="287ce13946349495fddc07c65c39c410" category="list-text">以 root 使用者登入 Console 代理程式。執行：</block>
 </blocks>

@@ -53,7 +53,7 @@ NetApp Backup and Recovery如下調整SnapCenter方案：
 +
 *範例*：如果您有一個SnapCenter每日策略，從星期一開始每 3 天重複一次，NetApp Backup and Recovery會將計劃設定為每週一、週四和週日。由於並非每 3 天一次，因此有些日子會被跳過。
 
-* 如果SnapCenter計劃設定為超過 7 天， NetApp Backup and Recovery會將方案設定為每月。該月將跳過一些快照。
+* 如果 SnapCenter 的排程設定超過 7 天，NetApp Backup and Recovery 會將排程設為每月一次。在這個月內，部分快照將會被略過。
 +
 *範例*：如果您有一個SnapCenter每日策略，其重複間隔為從每月 2 號開始每 10 天一次，則NetApp Backup and Recovery在遷移後會將計劃設定為每月 2 日、12 日和 22 日執行。  NetApp Backup and Recovery會在下個月跳過某些天。
 
@@ -67,7 +67,7 @@ NetApp Backup and Recovery如下調整SnapCenter方案：
 
 任何重複間隔不是 24 倍（例如 5、7 等）的每小時策略都會跳過一天中的某些快照。
 
-*範例*：如果您有一個SnapCenter每小時策略，從凌晨 1:00 開始每 5 小時重複一次，NetApp Backup and Recovery （遷移後）將把計劃設定為每天，間隔 5 小時，時間為凌晨 1:00、上午 6:00、上午 11:00、下午 4:00 和晚上 9:000。有些時間會被跳過，晚上 9:00 之後應該是凌晨 2:00，每 5 小時重複一次，但總是凌晨 1:00。
+* 範例 *：如果您有 SnapCenter 每小時原則，從上午 1:00 開始每 5 小時重複一次，NetApp Backup and Recovery（移轉後）會將排程設定為每日，間隔 5 小時，時間為上午 1:00、上午 6:00、上午 11:00、下午 4:00 和晚上 9:00。某些時段會被跳過，晚上 9:00 之後應該是上午 2:00 才能每 5 小時重複一次，但始終會是上午 1:00。
 
 
 
