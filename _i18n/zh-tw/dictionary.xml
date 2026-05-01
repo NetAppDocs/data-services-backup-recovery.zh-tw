@@ -3526,8 +3526,6 @@
   <block id="00ecaaff8826e844a2ebf56754fad5d6" category="paragraph">對於搜尋和還原，控制台代理可以安裝在以下位置：</block>
   <block id="7c9a067ed7fc3d318d415405ab0cb349" category="list-text">集群要求：</block>
   <block id="042e2868bd27cf0f2d07239f80a976dd" category="list-text">ONTAP版本必須為 9.8 或更高版本。</block>
-  <block id="6f0cd96277bd61a1a3f4c2504033ded7" category="list-text">磁碟區所在的儲存虛擬機器 (SVM) 必須具有配置的資料 LIF。</block>
-  <block id="aba6991b1b269dad52e52cd4c3998779" category="list-text">必須在磁碟區上啟用 NFS（支援 NFS 和 SMB/CIFS 磁碟區）。</block>
   <block id="b08d607bff755a82c8c9d9351d968b4a" category="list-text">AWS 需求：</block>
   <block id="69822c6d3eec5c2a5b83f578217d08ce" category="inline-link-macro">確保所有權限均已正確配置</block>
   <block id="1e7dbc6a754183195338f872192f2c45" category="list-text">必須將特定的 Amazon Athena、AWS Glue 和 AWS S3 權限新增至為控制台提供權限的使用者角色。<block ref="06b194663576cd6f267595be51223fa0" category="inline-link-macro-rx"></block>。</block>
@@ -5319,4 +5317,5 @@
   <block id="fe096dc1f619b5ae2f454275962bf893" category="paragraph">請注意，如果您選擇物件儲存中的備份檔案，且該備份啟用了勒索軟體防護（如果您在備份策略中啟用了 Datalock 和勒索軟體防護），則系統會提示您在還原資料之前對該備份檔案執行額外的勒索軟體掃描。我們建議您掃描該備份檔案是否有勒索軟體。（存取備份檔案的內容會產生額外的雲端供應商輸出費用。）</block>
   <block id="a38244f145eb7bb81ea84601f169276b" category="paragraph">如果備份檔案啟用了勒索軟體防護（如果您在備份原則中啟用了 Datalock 和勒索軟體防護），則在還原資料之前，系統會提示您對備份檔案執行額外的勒索軟體掃描。我們建議您掃描備份檔案是否有勒索軟體。（存取備份檔案的內容會產生額外的雲端供應商出站流量費用。）</block>
   <block id="936866268a423c45b2ef9ad24698c8e0" category="paragraph">所有 ONTAP 系統都已內建備份與還原支援，因此無需額外的硬體或媒體閘道器。這使備份作業變得簡單且具成本效益。NetApp Console 簡化了任何備份策略的實施，包括涵蓋 3-2-1 備份變體的完整範圍，無需多個資源管理器或專業人員。</block>
+  <block id="eb93c206074e97dfb7bf08b81a6c72c1" category="list-text">您必須在儲存虛擬機器上設定 IPv4 NFS 資料 LIF，並為該磁碟區配置 NFS 匯出。Search &amp; Restore 同時支援 NFS 和 SMB/CIFS 磁碟區。</block>
 </blocks>
