@@ -1,0 +1,223 @@
+---
+sidebar: sidebar 
+permalink: br-use-modify-resources-kubernetes-cr.html 
+keywords: Resource modify, transform, restore, Kubernetes, custom resource, Backup and Recovery, NetApp, transformation, transformations, resource, resource transformations, modify 
+summary: 在還原作業期間修改 NetApp Backup and Recovery 中的資源。 
+---
+= 使用自訂資源還原資源時修改資源
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+資源轉換功能可讓您在還原資源時進行修改。當還原後的版本需要與原始版本有所不同時，此功能非常有用——例如，在將虛擬機器還原到不同的網路時更改其 IP 位址。您還可以link:br-use-restore-kubernetes-applications.html#restore-kubernetes-applications["使用 Web UI 在還原資源時修改資源"^]。
+
+*必要的 NetApp Console 角色* Backup and Recovery 超級管理員或 Backup and Recovery 還原管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^].
+
+
+
+== 資源修改的運作方式
+
+ `transformations` 欄位位於  `SnapshotRestore`、 `BackupRestore`、 `AppMirrorRelationship` 及其他還原資源中，可讓您在還原過程中修改 Kubernetes 資源。這對於透過變更主機名稱、登錄 URL、資源限制或環境變數，使應用程式或虛擬機器適應新叢集非常有用。
+
+資源轉換使用 https://tools.ietf.org/html/rfc6902["RFC 6902"] JSON Patch 操作和 https://tools.ietf.org/html/rfc6901["RFC 6901"] JSON Pointer 路徑來定位和修改 Kubernetes 資源中的特定欄位。
+
+以下是包含資源轉換的還原物件的基本結構：
+
+[source, yaml]
+----
+apiVersion: protect.trident.netapp.io/v1
+kind: SnapshotRestore
+metadata:
+  name: my-restore
+  namespace: target-namespace
+spec:
+  appVaultRef: my-vault
+  appArchivePath: /path/to/snapshot
+  namespaceMapping:
+    - source: source-ns
+      destination: target-ns
+  transformations:
+    - resource:
+        kind: ConfigMap       # Required: resource kind
+        group: ""             # Optional: API group (empty for core resources)
+        version: ""           # Optional: API version
+        name: ""              # Optional: specific resource name
+      operations:
+        - op: replace         # Operation type
+          path: "/data/key"   # JSON Pointer path
+          value: "new-value"  # New value (for add/replace/test)
+----
+
+
+=== 支援的資源
+
+您可以將資源轉換套用至符合下列條件的資源：
+
+* `kind`（必填）：Kubernetes 資源類型（例如 `ConfigMap`、 `Deployment`、 `Pod`）
+* `group`（選用）：API 群組（例如， `apps`、 `route.openshift.io`）- 核心資源請省略
+* `version`（選用）：API 版本（例如、 `v1`、 `v1beta1`）
+* `name`（選用）：僅依名稱套用至特定資源
+
+
+
+NOTE: 目前不支援修改 PersistentVolumeClaims 和命名空間。
+
+
+
+=== 支援的作業
+
+您可以使用以下操作來修改資源：
+
+* `add`：為資源新增值。
+* `copy`：將值從一個路徑複製到另一個路徑。
+* `move`：在資源內移動值。
+* `remove`：從資源中移除一個值。
+* `replace`：替換資源中的值。
+* `test`：在執行操作之前先進行測試。
+
+
+
+
+== 為資源新增值
+
+使用  `add` 操作可在指定路徑新增欄位或值。您可以為物件或陣列新增資料。以下範例為 Deployment 資源新增節點選擇器：
+
+[source, yaml]
+----
+transformations:
+  - resource:
+      kind: Deployment
+    operations:
+      - op: add
+        path: "/spec/template/spec/nodeSelector"
+        value:
+          "topology.kubernetes.io/zone": "us-east-1a"
+          disktype: "ssd"
+----
+使用以下命令透過命令列執行此轉換：
+
+[source, bash]
+----
+tridentctl-protect --transformation 'apps,v1,Deployment:add{"path":"/spec/template/spec/nodeSelector","value":{"topology.kubernetes.io/zone":"us-east-1a","disktype":"ssd"}}'
+----
+
+
+== 複製資源中的值
+
+使用  `copy` 操作可將相同資源內的值從一個路徑複製到另一個路徑。來源值不會改變。以下範例複製 ConfigMap 物件的資料鍵：
+
+[source, yaml]
+----
+transformations:
+  - resource:
+      kind: ConfigMap
+    operations:
+      - op: copy
+        from: "/data/source-key"
+        path: "/data/backup-key"
+----
+使用以下命令透過命令列執行此轉換：
+
+[source, bash]
+----
+tridentctl-protect --transformation ',v1,ConfigMap:copy{"from":"/data/source-key","path":"/data/backup-key"}'
+----
+
+
+== 在資源內移動值
+
+使用 `move`操作可將相同資源中的值從一個路徑移至另一個路徑。來源路徑將被移除，值將被放置在目標路徑中。以下範例重新命名 ConfigMap 物件的資料鍵：
+
+[source, yaml]
+----
+transformations:
+  - resource:
+      kind: ConfigMap
+    operations:
+      - op: move
+        from: "/data/OLD_KEY"
+        path: "/data/NEW_KEY"
+----
+使用以下命令透過命令列執行此轉換：
+
+[source, bash]
+----
+tridentctl-protect --transformation ',v1,ConfigMap:move{"from":"/data/OLD_KEY","path":"/data/NEW_KEY"}'
+----
+
+
+== 從資源中移除值
+
+使用  `remove` 操作可刪除指定路徑中的欄位或值。以下範例從 ConfigMap 資源中刪除註解：
+
+[source, yaml]
+----
+transformations:
+  - resource:
+      kind: ConfigMap
+    operations:
+      - op: remove
+        path: "/metadata/annotations/kubectl.kubernetes.io~1last-applied-configuration"
+----
+
+NOTE: 在上述範例的路徑中、 `~1` 是  `/` 的 JSON Pointer 轉義序列。
+
+使用以下命令透過命令列執行此轉換：
+
+[source, bash]
+----
+tridentctl-protect --transformation ',v1,ConfigMap:remove{"path":"/metadata/annotations/kubectl.kubernetes.io~1last-applied-configuration"}'
+----
+
+
+== 取代資源中的值
+
+使用  `replace` 操作可取代指定路徑下資源中的現有值。JSON 路徑必須已存在。以下範例更改了 Route 物件的 hostname：
+
+[source, yaml]
+----
+transformations:
+  - resource:
+      kind: Route
+      group: route.openshift.io
+    operations:
+      - op: replace
+        path: "/spec/host"
+        value: "prod.example.com"
+----
+使用以下命令透過命令列執行此轉換：
+
+[source, bash]
+----
+tridentctl-protect --transformation 'route.openshift.io,v1,Route:replace{"path":"/spec/host","value":"prod.example.com"}'
+----
+
+
+== 測試資源修改
+
+使用 `test`操作來測試指定路徑的值是否符合預期值。如果測試失敗，整個修改將會回復。以下範例僅在 `database-host`為 `environment`時才會更新 `staging`：
+
+[source, yaml]
+----
+transformations:
+  - resource:
+      kind: ConfigMap
+    operations:
+      - op: test
+        path: "/data/environment"
+        value: "staging"
+      - op: replace
+        path: "/data/database-host"
+        value: "prod-db.example.com"
+----
+使用以下命令透過命令列執行此轉換：
+
+[source, bash]
+----
+tridentctl-protect --transformation ',v1,ConfigMap:test{"path":"/data/environment","value":"staging"},replace{"path":"/data/database-host","value":"prod-db.example.com"}'
+----

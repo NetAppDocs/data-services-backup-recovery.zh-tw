@@ -16,11 +16,36 @@ summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護
 [role="lead"]
 NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用程式。要恢復應用程序，應用程式需要至少有一個可用的恢復點。復原點由本機快照或物件儲存備份（或兩者）組成。您可以使用本機、輔助或物件儲存存檔來還原應用程式。
 
+
+
+== 檢視應用程式還原點的受保護資源
+
+對於使用 Backup and Recovery 保護的每個應用程式、您可以檢視已針對特定還原點備份的資源。
+
+.所需的NetApp Console角色
+Backup and Recovery 檢視器。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^].
+
+.步驟
+. 在 NetApp Backup and Recovery 中，選擇 *Inventory* > *Applications*。
+. 從應用程式清單中選擇一個應用程式，然後選取 Actions 圖示 image:../media/icon-action.png["操作選項"] > *View and Restore*。
+. 從還原點清單中選擇一個還原點，然後選擇「操作」圖示 image:../media/icon-action.png["操作選項"] > *檢視資源*。
++
+這裡會顯示資源清單及其詳細資訊。您可以按命名空間或叢集範圍查看資源，也可以將清單下載為 JSON 檔案以供日後審核。
+
+. 完成後，請選取 *Close*。
+
+
+
+
+== 恢復 Kubernetes 應用程式
+
+您可以從還原點還原基於命名空間或基於 VM 的應用程式，既可以還原所有資源，也可以選擇還原部分資源。
+
 .開始之前
 如果您要還原使用 Trident Protect 備份的應用程式、請確保來源叢集和目的地叢集上都安裝了 Trident Protect。
 
 .所需的NetApp Console角色
-組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+Backup and Recovery 超級管理員或 Backup and Recovery 還原管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^].
 
 .步驟
 . 在 NetApp Backup and Recovery 選單中，選取 *還原*。
@@ -29,58 +54,88 @@ NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用
 出現還原點清單。
 
 . 選擇要使用的還原點的 *Restore* 按鈕。
-
-
-[discrete]
-===== 常規設定
++
+Restore data 精靈隨即開始，並顯示「一般設定」頁面。
 
 . 選擇要從中還原的來源位置。
 . 從*Cluster*清單中選擇目標群集。
+. 選擇還原至原始命名空間或新命名空間。
 +
 
-NOTE: 目前不支援將 Trident Protect 建立的本機快照還原到不同的叢集。
+NOTE: 目前不支援從本機快照對基於 VM 的應用程式進行就地還原（還原至原始命名空間和原始叢集）。
 
-. 選擇還原至原始命名空間或新命名空間。
 . 如果您選擇還原到新的命名空間、請輸入要使用的目標命名空間。
 . 選擇“下一步”。
-
-
-[discrete]
-===== 資源選擇
++
+此時會出現 _Resource selection_ 頁面。
 
 . 選擇是否要恢復與應用程式相關的所有資源，或使用篩選器選擇要復原的特定資源：
-
-
++
 [role="tabbed-block"]
 ====
-.恢復所有資源
+.所有資源
 --
-. 選擇*恢復所有資源*。
-. 選擇“下一步”。
+.. 選擇*恢復所有資源*。
++
+當還原基於虛擬機器的應用程式時、Backup and Recovery 會列出還原點中的所有虛擬機器。
+
+.. 選擇“下一步”。
 
 
 --
-.恢復特定資源
+.特定命名空間型應用程式資源
 --
-. 選擇*選擇性資源*。
-. 選擇資源過濾器的行為。如果您選擇“*包括*”，則會恢復您選擇的資源。如果您選擇“*排除*”，則您選擇的資源將不會被恢復。
-. 選擇*新增規則*來新增定義選擇資源的篩選器的規則。您至少需要一條規則來過濾資源。
+.. 選擇 *Selective resources* 並選擇是根據規則還是根據命名空間來篩選所選資源。
++
+[cols="1,1"]
+|===
+| 資源選擇方法 | 步驟 
+
+
+| 使用規則篩選資源  a| 
+... 選擇 *Rules* 標籤。
+... 選擇資源過濾器的行為。如果您選擇“*包括*”，則會恢復您選擇的資源。如果您選擇“*排除*”，則您選擇的資源將不會被恢復。
+... 選擇*新增規則*來新增定義選擇資源的篩選器的規則。您至少需要一條規則來過濾資源。
 +
 每個規則都可以根據資源命名空間、標籤、群組、版本和種類等標準進行過濾。
 
-. 選擇*儲存*來儲存每條規則。
-. 新增所有需要的規則後，選擇*搜尋*即可查看備份檔案中符合篩選條件的可用資源。
+... 選擇*儲存*來儲存每條規則。
+... 新增所有需要的規則後，選取 *Show resources* 以查看備份歸檔中符合篩選條件的可用資源。
+
+
+
+
+| 從清單中手動選擇資源  a| 
+... 選擇 *Custom* 選項卡。
+... 選擇 *Namespace-Scoped* 或 *Cluster-Scoped* 以檢視對應的資源。
++
+備份與還原會列出還原點中的所有資源。
+
+... 選擇要在還原作業中包含的資源。
+
+
+|===
 +
 
 NOTE: 顯示的資源是叢集上目前存在的資源。
 
-. 對結果滿意後，選擇*下一步*。
+.. 完成後，選擇 *Next*。
+
+
+--
+.特定的基於 VM 的應用程式資源
+--
+.. 選擇*選擇性資源*。
++
+Backup and Recovery 會列出復原點中的所有虛擬機器。您可以選擇要包含在還原作業中的虛擬機器。
+
+.. 完成後，選擇 *Next*。
 
 
 --
 ====
-[discrete]
-===== 目的地設定
++
+此時會顯示「目的地設定」頁面。
 
 . 展開 *Destination settings* 部分，然後選擇還原至預設儲存類別、不同的儲存類別，或者如果您要還原至不同的叢集，則將儲存類別對應至目的地叢集。
 . 如果選擇還原到不同的儲存類別，請選擇與每個來源儲存類別相符的目標儲存類別。
@@ -90,5 +145,24 @@ NOTE: 顯示的資源是叢集上目前存在的資源。
 NOTE: 如果您需要在 Kubernetes 叢集上建立 AppVault 以方便還原使用 Trident Protect 建立的備份或快照，請參閱 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-appvault-custom-resources.html["使用 Trident Protect AppVault 物件來管理儲存桶"]。
 
 . （可選）展開 *Restore scripts* 部分，啟用 *Postscript* 選項，選擇將在復原作業完成後執行的執行鉤子範本。如有需要，輸入腳本所需的任何參數，並新增標籤選擇器，以便根據資源標籤篩選資源。
-. 選擇*恢復*。
+. （選用）展開 *Resource transformations* 區段，以便在還原程序中新增、移除或修改資源屬性。然後，執行下列動作：
++
+
+NOTE: 目前不支援修改 PersistentVolumeClaims 和命名空間。
+
++
+.. 啟用 *Resource transformation* 選項，即可對修改器進行變更。
+.. 從 *Template* 清單中選擇一個範本，即可快速套用您常用的修飾符設定。此清單包含常見場景的預定義範本以及您建立的自訂範本。
++
+
+NOTE: 在全域 link:br-start-configure.html#create-a-resource-modifier-template["設定"^] 區域建立資源轉換範本。
+
+.. 請透過輸入資源群組、版本、種類和名稱來指定要修改的資源。
+.. 從 *Operation* 清單中選擇操作，以指定您要對資源執行的操作。
+.. 輸入您要變更之特定金鑰的 JSON 路徑。
+.. 如果適用，請輸入要使用的新值。*值*欄位僅在執行某些操作（例如*新增*或*替換*）時顯示。
+.. 您可以視需要新增更多資源轉換。
+
+
+. 完成後,請選擇 *Restore*。
 

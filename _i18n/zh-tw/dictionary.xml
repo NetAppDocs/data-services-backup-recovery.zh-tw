@@ -943,7 +943,6 @@
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">選擇*恢復*。</block>
   <block id="4c931104d6ff5fdc2a76bdfc6fba4662" category="summary">您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID 的Kubernetes 應用程式和應用程式數據，確保您的資料受到保護。</block>
   <block id="ff1a3fbe6f92249e286b8a93cf5b5d2e" category="doc">管理 Kubernetes 工作負載概覽</block>
-  <block id="14cca4b1ac5c46a49fffa25e733381e7" category="paragraph">透過在NetApp Backup and Recovery中管理 Kubernetes 工作負載，您可以在一個地方發現、管理和保護您的 Kubernetes 叢集和應用程式。您可以管理託管在 Kubernetes 叢集上的資源和應用程式。您還可以建立保護策略並將其與 Kubernetes 工作負載關聯，所有這些都使用單一介面完成。</block>
   <block id="d1b6f4df1f42df470c1bfa384687e106" category="paragraph">下圖展示了 Kubernetes 工作負載的備份和還原的元件和基本架構，以及如何將資料的不同副本儲存在不同位置：</block>
   <block id="47cae08dce34f06a5f1a2add5c4d92c4" category="inline-image-macro">Kubernetes 工作負載備份與復原架構圖</block>
   <block id="2c3fb17cb3de300689b53969785defa5" category="paragraph"><block ref="2c3fb17cb3de300689b53969785defa5" category="inline-image-macro-rx" type="image"></block></block>
@@ -1578,22 +1577,16 @@
   <block id="dfb11576e6b5e6be3ba755109c7372a6" category="list-text">選擇要刪除的策略。</block>
   <block id="64c635224280ce70595dfdc2ad78b70c" category="list-text">選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*刪除*。</block>
   <block id="87dbb82b420ddaa94923dfa147f079df" category="list-text">確認操作，然後選擇*刪除*。</block>
-  <block id="4e6c79fc2836c08873a0bb5b0d61b896" category="paragraph">NetApp Backup and Recovery讓您輕鬆發現 Kubernetes 集群，而無需產生和上傳 kubeconfig 檔案。您可以使用從NetApp Console使用者介面複製的簡單命令連接 Kubernetes 叢集並安裝所需的軟體。</block>
   <block id="5f630cc239007de25f5a99cae937f7b6" category="section-title">新增並保護新的 Kubernetes 應用程式</block>
-  <block id="3ea973406b218409478357569501ecdc" category="paragraph">保護 Kubernetes 應用程式的第一步是在NetApp Backup and Recovery中建立應用程式。建立應用程式時，您會讓控制台了解 Kubernetes 叢集上正在執行的應用程式。</block>
   <block id="e2d84a068107d6310a638f342af1a416" category="inline-link-macro">發現 Kubernetes 工作負載</block>
   <block id="0ff42294892cbc24c39a0f81d88f902b" category="paragraph">在新增和保護 Kubernetes 應用程式之前，您需要<block ref="69f5fa0b5f42b753171e9fa8fbef9c66" category="inline-link-macro-rx"></block>。</block>
   <block id="1ededf46b716bee183793af35442a908" category="list-text">選擇*建立應用程式*。</block>
   <block id="f446f13c3f03f5e706e59025856f1357" category="list-text">輸入應用程式的名稱。</block>
   <block id="1bce142d5bcf9869d1f052a522fa5822" category="list-text">或者，選擇以下任意欄位來搜尋您想要保護的資源：</block>
-  <block id="10c36ac54e8d8af7b07be76efa014c6d" category="list-text">關聯集群</block>
   <block id="ba8e99e47d2b3859bc28a87f721af62d" category="list-text">關聯的命名空間</block>
   <block id="b6af2b8fdca63591236d48930018b8db" category="list-text">資源類型</block>
   <block id="635c4235a331a9bc9e0197a493f38268" category="list-text">標籤選擇器</block>
-  <block id="dc997bda771b80d1666f7d07ffd6b7d7" category="list-text">（可選）選擇「叢集範圍資源」以選擇任何在叢集層級範圍限定的資源。如果包含這些資源，它們會在建立應用程式時新增到應用程式中。</block>
   <block id="812f9cbafb4aa2378e7470b20baa1fef" category="list-text">或者，選擇“*搜尋*”以根據您的搜尋條件尋找資源。</block>
-  <block id="f61c6819662c7697385d653a1c5eec40" category="admonition">控制台不會儲存搜尋參數或結果；這些參數用於在選定的 Kubernetes 叢集中搜尋可包含在應用程式中的資源。</block>
-  <block id="5b9afbfb19fca04409752241ad335e59" category="list-text">控制台顯示符合您的搜尋條件的資源清單。</block>
   <block id="aa49cc3a36d2c16ec191533800daa634" category="list-text">如果清單包含您想要保護的資源，請選擇「下一步」。</block>
   <block id="4d3ca3588667d04ddbd4f318cdd7677e" category="inline-link-macro">新增保護策略</block>
   <block id="2769be0838f5e6f63e01200eeeec1910" category="list-text">（可選）在「*策略*」區域中，選擇現有保護策略來保護應用程序，或建立新策略。如果不選擇策略，則建立的應用程式將不帶保護策略。你可以<block ref="99c823f28a98717f81cda4eb0c448db5" category="inline-link-macro-rx"></block>之後。</block>
@@ -1931,14 +1924,6 @@
   <block id="d3cbd09d6a0974ee6a694826a8598eb6" category="section-title">保護 Kubernetes 應用程式的要求</block>
   <block id="35efe147e51e11d3e82b92163214c36a" category="paragraph">您需要特定的要求來發現 Kubernetes 資源並保護您的 Kubernetes 應用程式。</block>
   <block id="b4223a9285b846e8b6c959752c4aef73" category="paragraph">有關NetApp Console要求，請參閱<block ref="7a97fc65ea04291b3564618ee6e90325" category="inline-xref-macro-rx"></block>。</block>
-  <block id="4894ae84725aa8a3354a8774b1566f5f" category="list-text">主ONTAP系統（ONTAP 9.16.1 或更高版本）</block>
-  <block id="806a86b605f4d90fb902dc0738b93a29" category="list-text">Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括：</block>
-  <block id="7cc1edf2116d94e97b8f4a69079de132" category="list-text">Anthos On-Prem (VMware) 和 Anthos on Bare Metal 1.16</block>
-  <block id="f39d8c359b3284c30097b65ae4e0dccf" category="list-text">Kubernetes 1.27 - 1.33</block>
-  <block id="d858eab1cb0b74aa1e6d052d7c06bd76" category="list-text">OpenShift 4.10 - 4.18</block>
-  <block id="42113cf11e30b764619d3a98db65262d" category="list-text">Rancher Kubernetes Engine 2（RKE2）v1.26.7+rke2r1、v1.28.5+rke2r1</block>
-  <block id="3c230289b9e480de28e2d616db466bc7" category="list-text">Suse Rancher</block>
-  <block id="59aaea4a07522d3cb111c0d446b7e7e3" category="list-text">NetApp Trident 24.10 或更高版本</block>
   <block id="e33a9836e18ab4c7f01ac49f666c4e33" category="section-title">保護 Hyper-V 工作負載的要求</block>
   <block id="7e75f7658d8e69b52e07a066a4510af5" category="paragraph">確保您的 Hyper-V 執行個體符合發現和保護虛擬機器的特定要求。</block>
   <block id="e8ab74a683c73fd7edd0ea5adc16b2b6" category="list-text">支援獨立主機和 FCI 叢集主機</block>
@@ -4322,7 +4307,6 @@
   <block id="432d122bca6b826d0ff8b770008cb6da" category="list-text">即使 Hyper-V 中的「處理器相容性」設定正確，也無法在 CPU 廠商不同的系統之間（例如 Intel 和 AMD 或反向）還原虛擬機器或虛擬機器資料。此設定僅支援同一廠商不同世代產品之間的相容性（例如，Intel 到 Intel 或 AMD 到 AMD）。</block>
   <block id="fa1b7fd0ad5ec372cdf9f907c6fbf709" category="section-title">故障排除說明</block>
   <block id="ac034a836e482984e927ce7aef3a7bcc" category="list-text">為確保 KVM 工作負載復原成功完成，請確保在用於 KVM 備份的保護策略中啟用「啟用 VM 一致性快照」設定。</block>
-  <block id="caf127224717f7d5605f4155b3a36376" category="list-text"><block ref="473bc5f1f9d293596a6cf3f7d880fe14" category="inline-xref-macro-rx"></block> 適用於NetApp Backup and Recovery需要進行驗證的任何 Windows、Microsoft SQL Server、Oracle Database 或 Linux 主機。這包括恢復訪客檔案或資料夾時使用的 Windows 訪客作業系統憑證。</block>
   <block id="a22707a596fa8306e8d6a5944e2eda1e" category="list-text"><block ref="89ad28258fc3723b5b08e269206e91aa" category="inline-xref-macro-rx"></block>。（僅限 KVM 工作負載）</block>
   <block id="e0981966cb393b67a49dfbe74acbcaa9" category="paragraph">新增主機資源憑證。NetApp Backup and Recovery使用這些憑證來發現工作負載並套用備份策略。</block>
   <block id="53f563c80059cb500ae35dbc14632b31" category="list-text">復原用戶端檔案或資料夾時所使用的 Windows 用戶端作業系統憑證</block>
@@ -4699,8 +4683,6 @@
   <block id="d07e8f6398c66f7d79a80768d3aa858b" category="inline-link-macro">立即備份 Oracle Database 工作負載</block>
   <block id="5361440c8196cc52ba89e8281bc2ef22" category="list-text">立即備份保護群組。請參閱 <block ref="0b07e2abdc1829709878f1d54c90a7ab" category="inline-link-macro-rx"></block>。</block>
   <block id="ecd7b1e39a181dfd260b4d2201a85373" category="paragraph">不適用於 Oracle Database 工作負載預覽。</block>
-  <block id="7257ebd350ec9dc53fbb407575e942c9" category="open-title">使用 Web UI 新增應用程式</block>
-  <block id="7eb786201a1068df31c2a8d7805c50bf" category="open-title">使用 CR 新增應用程式</block>
   <block id="b4b10aa7102ef4de9ba1d5672445c895" category="list-text">建立目的地應用程式 CR 檔案：</block>
   <block id="17131e6f435088e2e03c7280ff7da690" category="list-text">建立自訂資源（CR）檔案並將其命名為（例如、<block ref="52c90dc70fe5cbabbc6872aba835befa" prefix=" " category="inline-code"></block>）。</block>
   <block id="18924d9e76d2dc9a88bddb772904461d" category="list-text">設定下列屬性：</block>
@@ -4768,7 +4750,6 @@
   <block id="51621b374731a256fcdaa7e17b724680" category="paragraph">如果您要還原使用 Trident Protect 備份的應用程式、請確保來源叢集和目的地叢集上都安裝了 Trident Protect。</block>
   <block id="fb5dbc581e0b5b523350175d27ea83c0" category="list-text">選擇要使用的還原點的 *Restore* 按鈕。</block>
   <block id="98c52679a9ed385c5482f74fe44c97ae" category="list-text">選擇要從中還原的來源位置。</block>
-  <block id="d30d07971f43ce3280b143ce31154411" category="admonition">目前不支援將 Trident Protect 建立的本機快照還原到不同的叢集。</block>
   <block id="6d99ca24de4c4c5c0b932cbcc18fdbbe" category="list-text">選擇還原至原始命名空間或新命名空間。</block>
   <block id="41af3e90c2d7ebbd0ddd4e36e78220b5" category="list-text">如果您選擇還原到新的命名空間、請輸入要使用的目標命名空間。</block>
   <block id="a2552d8c6714f46cdb5bfe28dbdc9b87" category="list-text">展開 *Destination settings* 部分，然後選擇還原至預設儲存類別、不同的儲存類別，或者如果您要還原至不同的叢集，則將儲存類別對應至目的地叢集。</block>
@@ -4782,8 +4763,6 @@
   <block id="95815b21a64646ca02a4d958d053cef7" category="list-text">請參閱 <block ref="840bb935154607a5be4199a217b0bf56" category="inline-link-macro-rx"></block>。</block>
   <block id="4a6440cf633ba5f9e68b3e722f3a2bdd" category="paragraph">對於 Kubernetes 工作負載，費用是根據所有持續磁碟區的總大小計算的。</block>
   <block id="ac48592f4b6ad81597a3d86209bce635" category="section-title">保護 Oracle 資料庫工作負載的要求</block>
-  <block id="cd992a76d620e6cac42ca61d20f93f1d" category="list-text">NetApp Trident Protect 25.07 或更新版本（在 Kubernetes 工作負載探索期間安裝）</block>
-  <block id="8c703f00b817f5c9121d74efc33cdde9" category="list-text">NetApp Trident Protect Connector 25.07 或更新版本（在 Kubernetes 工作負載探索期間安裝）</block>
   <block id="5254dbe16e57a413455e2c5f7d5e70a1" category="list-text">確保 Kubernetes 叢集、Trident Protect Connector 和 Trident Protect Proxy 之間的出站方向 TCP 連接埠 443 未被過濾。</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026 年 2 月 09 日</block>
   <block id="e45770f83b5d2c438c00dea64c505ce7" category="sidebar">Oracle Database 工作負載的已知限制</block>
@@ -5317,4 +5296,139 @@
   <block id="1f4f4cafd8d76357721d91da817797be" category="paragraph">如果 NetApp Backup and Recovery 容器與 StorageGRID 之間的通訊需要驗證 StorageGRID 憑證，請完成以下步驟。</block>
   <block id="c2ced4c78e453bfc0c402989d4c4a226" category="list-text">變更至掛載點目錄。執行：</block>
   <block id="287ce13946349495fddc07c65c39c410" category="list-text">以 root 使用者登入 Console 代理程式。執行：</block>
+  <block id="23a8c2c2f00449fb258432bb555df792" category="paragraph">在此版本中、Kubernetes 工作負載引入了以下增強功能：</block>
+  <block id="fa4bdb2a7b9d92b88314f56020b6233b" category="list-text">*原生支援保護 VM*：現在您可以建立基於 VM 的應用程式，從而能夠以保護任何其他應用程式的方式保護虛擬機器。</block>
+  <block id="26941edb78c4dbe9ef9eecfa96d0effe" category="list-text">*資源轉換*：現在您可以使用資源轉換和資源轉換範本，在還原程序期間新增、移除和修改資源屬性。</block>
+  <block id="283ac99a03bae81366bef44dc5d0e7d7" category="list-text">*從 Backup and Recovery 升級 Trident Protect*：現在可以直接從 Backup and Recovery 升級 Kubernetes 叢集的 Trident Protect。</block>
+  <block id="2473cfa7d58a8b216d39f3987c07594f" category="list-text">*檢視受保護的資源*：您現在可以檢視應用程式每個還原點中包含的資源，並下載詳細的 JSON 報告。這可讓您全面掌握還原點，並簡化稽核法規遵循作業。</block>
+  <block id="6e56df4eb422b0b15187c84ba551237e" category="summary">在您的環境中使用 Backup and Recovery 之前，請先檢閱這些 NetApp Backup and Recovery 限制。</block>
+  <block id="a53f9fc03c44857823108d186061d746" category="section-title">不支援從本機快照就地還原基於 VM 的應用程式</block>
+  <block id="3e204d8b8cd27fb138dc9f8b97e831ad" category="paragraph">目前不支援從本機快照對基於 VM 的應用程式進行就地還原（還原至原始命名空間和原始叢集）。</block>
+  <block id="930dce8dab04ce68bb76e7e3616a93a1" category="list-text"><block ref="473bc5f1f9d293596a6cf3f7d880fe14" category="inline-xref-macro-rx"></block> 適用於任何 Windows、Microsoft SQL Server、Oracle Database 或 Linux 主機，NetApp Backup and Recovery 需要進行驗證。這包括在還原檔案或資料夾時所使用的來賓作業系統認證。</block>
+  <block id="9d07cf053c6372eed523592068e90499" category="list-text"><block ref="9bcb031751ebe08f6f5c4f1caa70f94f" category="inline-xref-macro-rx"></block>在還原資源時進行修改。</block>
+  <block id="93f09445bf39151008d23c3879496d00" category="section-title">建立資源轉換範本</block>
+  <block id="eb991a65dd99c4ae07e44106b921f83e" category="paragraph">建立資源轉換範本，用於儲存您在還原資源時對資源所做的常見轉換。</block>
+  <block id="1b1a8ae21cc850a39b7fac2034f37756" category="list-text">選擇向下箭頭以展開 *Resource modifer template* 區段。</block>
+  <block id="450aed9995b7e68ecd52ccb490b62722" category="list-text">選擇 *Create template* 。</block>
+  <block id="d5f7c158977e6b5d2c43c48ab3dfc959" category="list-text">輸入資源轉換範本的名稱。</block>
+  <block id="c1764f42772fa651c147a19678977d98" category="list-text">（選用）輸入範本說明。</block>
+  <block id="89a4af9ad3b075d63eb8ee2ed280eb7c" category="list-text">描述目標資源：</block>
+  <block id="a2fa3a0aed52edfd7fb0ed30f517be11" category="list-text">請輸入資源類型（例如 Pod 或 Deployment）。此欄位為必填項。</block>
+  <block id="1faea244c26158022ac760a4c554a6d7" category="list-text">（選用）輸入資源群組、版本、名稱。</block>
+  <block id="97e2486387ae5137b6a86974008ca45d" category="list-text">建立作業：</block>
+  <block id="d923a578b9a11db9dac89eee9567fb2b" category="list-text">從 *Operation* 清單中選擇一個操作。</block>
+  <block id="7e486d31e8f31b68bf46f7a40dc804a6" category="list-text">輸入作業適用的 JSON 路徑。</block>
+  <block id="f6f8efbe8cd35b501dde1809fc188287" category="list-text">如果適用，請輸入要新增或更新的值，或要從中移動的 JSON 路徑。</block>
+  <block id="783e87be491e23daae904a85f16ab924" category="paragraph">這些欄位僅在需要它們的作業中才會顯示。</block>
+  <block id="0d4860fe632e2ecc84a5e441d9141855" category="list-text">若要為此範本新增其他操作，請選擇 *Add operation*。</block>
+  <block id="fb016800c976cb584670a469fb67aa08" category="paragraph">在 NetApp Backup and Recovery 中管理 Kubernetes 工作負載，讓您能夠在一個平台上發現、管理和保護 Kubernetes 叢集和應用程式。您可以管理託管在 Kubernetes 叢集上的資源和應用程式。還可以建立保護原則並將其與 Kubernetes 應用程式關聯，所有操作均可透過單一介面完成。</block>
+  <block id="516ee22feede3bac94e552d7d7d47c7a" category="section-title">升級 Trident Protect</block>
+  <block id="8f81884d10e6a9d5bed6dc6c7f7e7ad7" category="paragraph">對於執行 Trident Protect 26.04 或更高版本的 Kubernetes 叢集，您可以直接從 NetApp Backup and Recovery 升級 Trident Protect。只有在有新版本可用時，才會顯示升級選項。</block>
+  <block id="5bcc55e1f344c64b73b8980050b81310" category="list-text">選擇要升級的 Kubernetes 叢集，然後選取 Actions 圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *Upgrade cluster*。</block>
+  <block id="51e9423c87c0e6f2111dce27096c87eb" category="list-text">在升級對話方塊中、請執行下列動作：</block>
+  <block id="50382ab9fb7cc5b5cb9eb0c9d8ba6663" category="list-text">從清單中選擇要升級的版本。</block>
+  <block id="3210c75ca343f7bd2eddfaaef1a24817" category="list-text">選擇 *Upgrade* 。</block>
+  <block id="429f908a54c2363c05b18232476548b1" category="summary">在還原作業期間修改 NetApp Backup and Recovery 中的資源。</block>
+  <block id="b5ad52abec5cb04607a10746e3199f1d" category="doc">使用自訂資源還原資源時修改資源</block>
+  <block id="9cbba6ab5c2f123250867543cc584548" category="inline-link-macro">使用 Web UI 在還原資源時修改資源</block>
+  <block id="9b2d0800b291b62181a18273ee5a21a6" category="paragraph">資源轉換功能可讓您在還原資源時進行修改。當還原後的版本需要與原始版本有所不同時，此功能非常有用——例如，在將虛擬機器還原到不同的網路時更改其 IP 位址。您還可以<block ref="05b70993291a3b893b825f52da69f790" category="inline-link-macro-rx"></block>。</block>
+  <block id="0ba0c909bdb663ebbb9b9012d15906a9" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員或 Backup and Recovery 還原管理員。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
+  <block id="389ce31a86e01dced25ad4bbaed743d7" category="section-title">資源修改的運作方式</block>
+  <block id="e7f6a2341b97f6a990dcc2da432a735d" category="paragraph"><block ref="dfc3424f78998e0e9ce8980c12f60650" prefix=" " category="inline-code"></block> 欄位位於 <block ref="3071e8455eddce5336df044508153fa3" prefix=" " category="inline-code"></block>、<block ref="ec2a2895b09b6030ec8cc1b3c43ddc4d" prefix=" " category="inline-code"></block>、<block ref="6b1dc04322703df582f18e066bfdf41c" prefix=" " category="inline-code"></block> 及其他還原資源中，可讓您在還原過程中修改 Kubernetes 資源。這對於透過變更主機名稱、登錄 URL、資源限制或環境變數，使應用程式或虛擬機器適應新叢集非常有用。</block>
+  <block id="f05f209ea5703ecd3aa7c5342b199ca1" category="inline-link">RFC 6902</block>
+  <block id="3f135f376bc81ea7c42eacf61cb928d6" category="inline-link">RFC 6901</block>
+  <block id="e6cfeb398ceacd7a712e749523a9de9d" category="paragraph">資源轉換使用<block ref="6daf8ce1a6a08e84461acbfab288a2c0" category="inline-link-rx"></block> JSON Patch 操作和<block ref="e62f024548945bdc1e26ca595f76348a" category="inline-link-rx"></block> JSON Pointer 路徑來定位和修改 Kubernetes 資源中的特定欄位。</block>
+  <block id="fef48119e878fff3ba8405548957af41" category="paragraph">以下是包含資源轉換的還原物件的基本結構：</block>
+  <block id="0814603dc9adb84011996abf456339b9" category="section-title">支援的資源</block>
+  <block id="e460a24053d5e95a7986e95c1f1dacd2" category="paragraph">您可以將資源轉換套用至符合下列條件的資源：</block>
+  <block id="c7f08fba157e7e9a8efffe1b75986728" category="list-text"><block ref="d939aaf7d2291c6f69ceecee94880d7c" prefix="" category="inline-code"></block>（必填）：Kubernetes 資源類型（例如<block ref="a941f8adb5ae079ebc739cb59407fd30" prefix=" " category="inline-code"></block>、<block ref="ea355214fd4bc7c57f471bd92918879b" prefix=" " category="inline-code"></block>、<block ref="8a0813c70cf4bf1529f25c411a039130" prefix=" " category="inline-code"></block>）</block>
+  <block id="5227600c4907ea2bc9e774b0a6cb1497" category="list-text"><block ref="db0f6f37ebeb6ea09489124345af2a45" prefix="" category="inline-code"></block>（選用）：API 群組（例如，<block ref="9a6dd283c3de653fbca500f9721f634f" prefix=" " category="inline-code"></block>、<block ref="1349047320cfd1ac557e762506024413" prefix=" " category="inline-code"></block>）- 核心資源請省略</block>
+  <block id="6f6c6f64cf03b3ecc5718c568e2e6ba1" category="list-text"><block ref="2af72f100c356273d46284f6fd1dfc08" prefix="" category="inline-code"></block>（選用）：API 版本（例如、<block ref="6654c734ccab8f440ff0825eb443dc7f" prefix=" " category="inline-code"></block>、<block ref="ee21100dace47d83bcefcb7dea09cdd3" prefix=" " category="inline-code"></block>）</block>
+  <block id="9b8278d8b23cfe468d519445162db260" category="list-text"><block ref="b068931cc450442b63f5b3d276ea4297" prefix="" category="inline-code"></block>（選用）：僅依名稱套用至特定資源</block>
+  <block id="513a6d7d84f9a2963c99dfb9753a869c" category="admonition">目前不支援修改 PersistentVolumeClaims 和命名空間。</block>
+  <block id="02356881e19a0d2738b050b76923c98e" category="section-title">支援的作業</block>
+  <block id="c62af3c84500314dba5111dff2550c44" category="paragraph">您可以使用以下操作來修改資源：</block>
+  <block id="cb84befa65f43be26a0617bd62fbf0c4" category="list-text"><block ref="34ec78fcc91ffb1e54cd85e4a0924332" prefix="" category="inline-code"></block>：為資源新增值。</block>
+  <block id="ca808ea8e0b5a4eadaa5afb786623b7a" category="list-text"><block ref="12cba3ee81cf4a793796a51b6327c678" prefix="" category="inline-code"></block>：將值從一個路徑複製到另一個路徑。</block>
+  <block id="20965b98132e64ebb9bf3609011ac72f" category="list-text"><block ref="3734a903022249b3010be1897042568e" prefix="" category="inline-code"></block>：在資源內移動值。</block>
+  <block id="61bf2285f47cfb5cc7c818b0fedc283c" category="list-text"><block ref="0f6969d7052da9261e31ddb6e88c136e" prefix="" category="inline-code"></block>：從資源中移除一個值。</block>
+  <block id="d8adf5257337ae002d52b96b14d7092b" category="list-text"><block ref="9dde360102c103867bd2f45872f1129c" prefix="" category="inline-code"></block>：替換資源中的值。</block>
+  <block id="5ac1a0f433c8458af7dbb13c28e332e2" category="list-text"><block ref="098f6bcd4621d373cade4e832627b4f6" prefix="" category="inline-code"></block>：在執行操作之前先進行測試。</block>
+  <block id="a832c7839f3ea0e8e85a2638fb84703c" category="section-title">為資源新增值</block>
+  <block id="ab6bc758f461b32d18bbce9e39c14946" category="paragraph">使用 <block ref="34ec78fcc91ffb1e54cd85e4a0924332" prefix=" " category="inline-code"></block> 操作可在指定路徑新增欄位或值。您可以為物件或陣列新增資料。以下範例為 Deployment 資源新增節點選擇器：</block>
+  <block id="6c2da398ca2cd47e2a8476794c37a8da" category="paragraph">使用以下命令透過命令列執行此轉換：</block>
+  <block id="d2bce581bf00a3d921fb6c4ff117de85" category="section-title">複製資源中的值</block>
+  <block id="3f93abc752862df4e7deac8b5bd6e859" category="paragraph">使用 <block ref="12cba3ee81cf4a793796a51b6327c678" prefix=" " category="inline-code"></block> 操作可將相同資源內的值從一個路徑複製到另一個路徑。來源值不會改變。以下範例複製 ConfigMap 物件的資料鍵：</block>
+  <block id="245cd8135a6b7d9c39e071a4ffeed8fe" category="section-title">在資源內移動值</block>
+  <block id="7137c47005e632f9886021a14b022edb" category="paragraph">使用<block ref="3734a903022249b3010be1897042568e" prefix=" " category="inline-code"></block>操作可將相同資源中的值從一個路徑移至另一個路徑。來源路徑將被移除，值將被放置在目標路徑中。以下範例重新命名 ConfigMap 物件的資料鍵：</block>
+  <block id="647e0643d122a233cc58a2872227c6bd" category="section-title">從資源中移除值</block>
+  <block id="66d54f9373abc49ddc560506540f1df7" category="paragraph">使用 <block ref="0f6969d7052da9261e31ddb6e88c136e" prefix=" " category="inline-code"></block> 操作可刪除指定路徑中的欄位或值。以下範例從 ConfigMap 資源中刪除註解：</block>
+  <block id="3df1f43d563850a4ac28d8863e93c658" category="admonition">在上述範例的路徑中、<block ref="d695e323dc05e62a04caa9845f572a1b" prefix=" " category="inline-code"></block> 是 <block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block> 的 JSON Pointer 轉義序列。</block>
+  <block id="16069a73b321b9522366fe18e0ec2386" category="section-title">取代資源中的值</block>
+  <block id="59356c26c0668f187a5df28c71a7f1bc" category="paragraph">使用 <block ref="9dde360102c103867bd2f45872f1129c" prefix=" " category="inline-code"></block> 操作可取代指定路徑下資源中的現有值。JSON 路徑必須已存在。以下範例更改了 Route 物件的 hostname：</block>
+  <block id="0f962f05a809491352e584fa94e0db90" category="section-title">測試資源修改</block>
+  <block id="5afdb59fa77ff3fee413c0bbad8dcfcd" category="paragraph">使用<block ref="098f6bcd4621d373cade4e832627b4f6" prefix=" " category="inline-code"></block>操作來測試指定路徑的值是否符合預期值。如果測試失敗，整個修改將會回復。以下範例僅在<block ref="56aa120405be2436dd156a14c563eb0e" prefix=" " category="inline-code"></block>為<block ref="e900e40bc91d3f9f7f0a99fed68a2e96" prefix=" " category="inline-code"></block>時才會更新<block ref="830f78e090fe8aec00891405dfc14824" prefix=" " category="inline-code"></block>：</block>
+  <block id="c0856a2d7d309299e674328178690621" category="paragraph">NetApp Backup and Recovery 可讓您透過網頁 UI 或套用自訂資源檔案來新增 Kubernetes 應用程式。應用程式可以是以命名空間為基礎，由標準 Kubernetes 資源組成，或是以 VM 為基礎，由一個或多個虛擬機組成。</block>
+  <block id="5ed93c588d27d2e865115ddf9df3f1f7" category="paragraph">保護 Kubernetes 應用程式的第一步是在 NetApp Backup and Recovery 中建立應用程式。建立應用程式後，Backup and Recovery 功能就能辨識 Kubernetes 叢集上正在執行的應用程式。</block>
+  <block id="6e26cfb05fc5f5880830d8b66721580e" category="open-title">新增基於命名空間的應用程式（Web UI）</block>
+  <block id="68d64b1095015889c5efdf8c23d7e17d" category="list-text">從 *Cluster* 清單中，選擇託管應用程式的叢集。</block>
+  <block id="33ff7b857906715367b8a1bf042073ae" category="list-text">在 *Filters* 下，選擇 *Namespace* 以按命名空間篩選應用程式。</block>
+  <block id="ad7a09049feb4f4d3622695dfd5c227b" category="list-text">選擇 *Add cluster-scoped resources* 可新增叢集層級的資源。如果選擇新增，這些資源將在建立應用程式時新增到應用程式中。</block>
+  <block id="3f7f21d0e8177d391197f7419bf7c5c6" category="admonition">Backup and Recovery 不會儲存搜尋參數或結果；這些參數用於在選定的 Kubernetes 叢集中搜尋可以包含在應用程式中的資源。</block>
+  <block id="ca7075eeb2e4f58c79831bd9aacf60b6" category="list-text">Backup and Recovery 會顯示符合您搜尋條件的資源清單。</block>
+  <block id="a5b116b68773f6635f5f76746920fc61" category="paragraph">應用程式建立完成後，將顯示在 Kubernetes 清單的 *Applications* 標籤中的應用程式清單中。Backup and Recovery 可根據您的設定保護應用程式，您可以在 *Monitoring* 區域中監控進度。</block>
+  <block id="6376206f8c122840c259955d8096cc8d" category="open-title">新增基於虛擬機器的應用程式（Web UI）</block>
+  <block id="167527381d4b4f1931da5c318c75879b" category="list-text">在 *Filters* 下，選擇 *Virtual machines* 以建立基於 VM 的應用程式。</block>
+  <block id="1e6916b5937245bd6846d901298c3ab2" category="list-text">透過選擇命名空間並可選擇性地包含標籤選取器，尋找要新增至應用程式的虛擬機器。</block>
+  <block id="0db958e48263722bd07d224f40ef2776" category="admonition">如果您從清單中選擇 VM，則應用程式定義是靜態的——之後不會向應用程式新增新的 VM（您需要編輯應用程式才能新增和保護它們）。如果您使用標籤選擇器，則無法選擇個別 VM 或編輯產生的清單，但之後任何與選擇器相符的 VM 都會自動包含在內並受到保護。</block>
+  <block id="9988f638c4677bade4d0527b51c6508b" category="paragraph">選取的虛擬機器會顯示在右側清單中。</block>
+  <block id="c48a30c511b04f07ea9932ebd593bb42" category="list-text">如果清單中包含您要保護的 VM，請選取 * 下一步 * 。</block>
+  <block id="6b92e3d6ca5caa9c8fc41975e3dd7ab1" category="open-title">新增基於命名空間的應用程式（CR）</block>
+  <block id="6f2c2c8a6ae67373eaf44fe68717b89b" category="section-title">檢視應用程式還原點的受保護資源</block>
+  <block id="b14694ca3e316c726e7f049cce858618" category="paragraph">對於使用 Backup and Recovery 保護的每個應用程式、您可以檢視已針對特定還原點備份的資源。</block>
+  <block id="cbb65e321ed785d42edf9a6d1d595009" category="paragraph">Backup and Recovery 檢視器。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
+  <block id="5e9f7a81b8a726582a52130cd1867e7a" category="list-text">在 NetApp Backup and Recovery 中，選擇 *Inventory* &gt; *Applications*。</block>
+  <block id="4295351d31758116e064075143dc4bc9" category="list-text">從應用程式清單中選擇一個應用程式，然後選取 Actions 圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *View and Restore*。</block>
+  <block id="6a42834d1a947d3bbb602bab5d24fafb" category="list-text">從還原點清單中選擇一個還原點，然後選擇「操作」圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *檢視資源*。</block>
+  <block id="5e8b03b3266abd4857d8ea89c86b6092" category="paragraph">這裡會顯示資源清單及其詳細資訊。您可以按命名空間或叢集範圍查看資源，也可以將清單下載為 JSON 檔案以供日後審核。</block>
+  <block id="e88615a04d38a65c9cc4cf0437762026" category="list-text">完成後，請選取 *Close*。</block>
+  <block id="6d09228cbb0eeb4f949b5d0ea43011e3" category="paragraph">您可以從還原點還原基於命名空間或基於 VM 的應用程式，既可以還原所有資源，也可以選擇還原部分資源。</block>
+  <block id="a3965af14c35fd9b32c5d132b0c0e6d8" category="paragraph">Backup and Recovery 超級管理員或 Backup and Recovery 還原管理員。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
+  <block id="e330e239b830d4e06a8dc3c9859c3c17" category="paragraph">Restore data 精靈隨即開始，並顯示「一般設定」頁面。</block>
+  <block id="ddfe487819b76fbcc87c53c850aed4f8" category="paragraph">此時會出現 _Resource selection_ 頁面。</block>
+  <block id="8fff557dc05783397bae22fa8d9d3f3e" category="open-title">所有資源</block>
+  <block id="0a7b74c31af3395beb60606b11aaafe7" category="paragraph">當還原基於虛擬機器的應用程式時、Backup and Recovery 會列出還原點中的所有虛擬機器。</block>
+  <block id="3ec819916b5c44949cabd250b654a7be" category="open-title">特定命名空間型應用程式資源</block>
+  <block id="25606515a4b53f9cac49853361dfeecb" category="list-text">選擇 *Selective resources* 並選擇是根據規則還是根據命名空間來篩選所選資源。</block>
+  <block id="48dd6f2f72ee03f7f77f22ec2f6117a5" category="cell">資源選擇方法</block>
+  <block id="249b7acb023dafaccb5b134625ca03ae" category="cell">使用規則篩選資源</block>
+  <block id="1a975dd16798a76c30622c9a36f4604a" category="list-text">選擇 *Rules* 標籤。</block>
+  <block id="7f277119fe1c2982b100b6c815b4b8e7" category="list-text">新增所有需要的規則後，選取 *Show resources* 以查看備份歸檔中符合篩選條件的可用資源。</block>
+  <block id="dadc4c906465a9819dc4e4b583710ce0" category="cell">從清單中手動選擇資源</block>
+  <block id="27c38bec0a8c0321e9a3236a8a9d4e76" category="list-text">選擇 *Custom* 選項卡。</block>
+  <block id="fa2a5273058808a443b2bbdcd39bf7c1" category="list-text">選擇 *Namespace-Scoped* 或 *Cluster-Scoped* 以檢視對應的資源。</block>
+  <block id="683beff5721537c94b308b9a71f8c3a1" category="paragraph">備份與還原會列出還原點中的所有資源。</block>
+  <block id="f0c39013d334b72474c6006ea063a60a" category="list-text">選擇要在還原作業中包含的資源。</block>
+  <block id="1babd014dacd7ec3dc5797b9becacd63" category="list-text">完成後，選擇 *Next*。</block>
+  <block id="21284dbaeeabb8de0ec35eb90678fddc" category="open-title">特定的基於 VM 的應用程式資源</block>
+  <block id="847c77ddc8d8b4a12aaf7bf7758ef2d2" category="paragraph">Backup and Recovery 會列出復原點中的所有虛擬機器。您可以選擇要包含在還原作業中的虛擬機器。</block>
+  <block id="80ac50d32003f7a24e60111cd4303613" category="paragraph">此時會顯示「目的地設定」頁面。</block>
+  <block id="b20ed212db14bf99a047efa72ed6b18b" category="list-text">（選用）展開 *Resource transformations* 區段，以便在還原程序中新增、移除或修改資源屬性。然後，執行下列動作：</block>
+  <block id="4068d5ec1a7b4b267d864b4ad09e26cf" category="list-text">啟用 *Resource transformation* 選項，即可對修改器進行變更。</block>
+  <block id="58277b3a38eb38eb305ae4faa19d846d" category="list-text">從 *Template* 清單中選擇一個範本，即可快速套用您常用的修飾符設定。此清單包含常見場景的預定義範本以及您建立的自訂範本。</block>
+  <block id="f4f70727dc34561dfde1a3c529b6205c" category="inline-link-macro">設定</block>
+  <block id="632317b2bb237c1d7d24b46218476569" category="admonition">在全域 <block ref="676a0eaa3ab155e3d0da7696107f049f" category="inline-link-macro-rx"></block> 區域建立資源轉換範本。</block>
+  <block id="4f92a8032a0def18d5e7cfbe7fc6b465" category="list-text">請透過輸入資源群組、版本、種類和名稱來指定要修改的資源。</block>
+  <block id="0be96bf87a216fa4424d9b22e1624c4c" category="list-text">從 *Operation* 清單中選擇操作，以指定您要對資源執行的操作。</block>
+  <block id="526aad7c01abce8bd37b72aea1adf9a2" category="list-text">輸入您要變更之特定金鑰的 JSON 路徑。</block>
+  <block id="1927d97b53a2e13c292e7b0ee4f05149" category="list-text">如果適用，請輸入要使用的新值。*值*欄位僅在執行某些操作（例如*新增*或*替換*）時顯示。</block>
+  <block id="0fde83b735dcda0bbb69a0e90ce0981f" category="list-text">您可以視需要新增更多資源轉換。</block>
+  <block id="90f8ed9c2f4259835c05c9de87feb364" category="list-text">完成後,請選擇 *Restore*。</block>
+  <block id="a1ff2aac5244b20dc12ea8c0b87d23d5" category="list-text">主要 ONTAP 系統（不支援 ASA r2 系統）</block>
+  <block id="573f06d1963120e22aae7292a8177d4b" category="list-text">NetApp Trident 25.02 或更高版本</block>
+  <block id="c625623a3b3c56ebd1c8d5915f2e3a96" category="list-text">NetApp Trident Protect 26.05 或更高版本（在 Kubernetes 叢集發現期間安裝）</block>
+  <block id="9b6a034e6854c5f27feb3ac185829f8d" category="inline-link">Trident Protect</block>
+  <block id="d02c2883bbfa212e02daa2b45bd11760" category="list-text">Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括 <block ref="f56ec4bb79bf67d191baea2a353be3ab" category="inline-link-rx"></block> 支援的版本。</block>
+  <block id="2966006d3447f3363606a7ddf7d88713" category="section-title">2026 年 5 月 05 日</block>
+  <block id="bfddb9cc303489a14cbf9520a59e6d1b" category="sidebar">在還原作業期間使用自訂資源修改資源</block>
 </blocks>

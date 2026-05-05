@@ -235,19 +235,10 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 
 NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程式指派靜態 IP 位址，以避免在代理程式 IP 位址變更時出現問題。
 
-* 主ONTAP系統（ONTAP 9.16.1 或更高版本）
-* Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括：
-+
-** Anthos On-Prem (VMware) 和 Anthos on Bare Metal 1.16
-** Kubernetes 1.27 - 1.33
-** OpenShift 4.10 - 4.18
-** Rancher Kubernetes Engine 2（RKE2）v1.26.7+rke2r1、v1.28.5+rke2r1
-** Suse Rancher
-
-
-* NetApp Trident 24.10 或更高版本
-* NetApp Trident Protect 25.07 或更新版本（在 Kubernetes 工作負載探索期間安裝）
-* NetApp Trident Protect Connector 25.07 或更新版本（在 Kubernetes 工作負載探索期間安裝）
+* 主要 ONTAP 系統（不支援 ASA r2 系統）
+* NetApp Trident 25.02 或更高版本
+* NetApp Trident Protect 26.05 或更高版本（在 Kubernetes 叢集發現期間安裝）
+* Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括  https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["Trident Protect"] 支援的版本。
 +
 ** 確保 Kubernetes 叢集、Trident Protect Connector 和 Trident Protect Proxy 之間的出站方向 TCP 連接埠 443 未被過濾。
 

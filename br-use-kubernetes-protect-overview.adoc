@@ -14,7 +14,7 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 
 
 [role="lead"]
-透過在NetApp Backup and Recovery中管理 Kubernetes 工作負載，您可以在一個地方發現、管理和保護您的 Kubernetes 叢集和應用程式。您可以管理託管在 Kubernetes 叢集上的資源和應用程式。您還可以建立保護策略並將其與 Kubernetes 工作負載關聯，所有這些都使用單一介面完成。
+在 NetApp Backup and Recovery 中管理 Kubernetes 工作負載，讓您能夠在一個平台上發現、管理和保護 Kubernetes 叢集和應用程式。您可以管理託管在 Kubernetes 叢集上的資源和應用程式。還可以建立保護原則並將其與 Kubernetes 應用程式關聯，所有操作均可透過單一介面完成。
 
 下圖展示了 Kubernetes 工作負載的備份和還原的元件和基本架構，以及如何將資料的不同副本儲存在不同位置：
 

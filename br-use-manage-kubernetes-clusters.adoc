@@ -48,3 +48,20 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 . 選擇*刪除群集*。
 . 查看確認對話方塊中的信息，然後選擇*刪除*。
 
+
+
+
+== 升級 Trident Protect
+
+對於執行 Trident Protect 26.04 或更高版本的 Kubernetes 叢集，您可以直接從 NetApp Backup and Recovery 升級 Trident Protect。只有在有新版本可用時，才會顯示升級選項。
+
+.步驟
+. 在NetApp Backup and Recovery中，選擇 *Inventory* > *Clusters*。
+. 選擇要升級的 Kubernetes 叢集，然後選取 Actions 圖示 image:../media/icon-action.png["操作選項"] > *Upgrade cluster*。
+. 在升級對話方塊中、請執行下列動作：
++
+.. 從清單中選擇要升級的版本。
+.. 選擇 *Upgrade* 。
+
+
+
