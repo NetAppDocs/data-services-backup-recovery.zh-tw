@@ -5323,7 +5323,6 @@
   <block id="0d4860fe632e2ecc84a5e441d9141855" category="list-text">若要為此範本新增其他操作，請選擇 *Add operation*。</block>
   <block id="fb016800c976cb584670a469fb67aa08" category="paragraph">在 NetApp Backup and Recovery 中管理 Kubernetes 工作負載，讓您能夠在一個平台上發現、管理和保護 Kubernetes 叢集和應用程式。您可以管理託管在 Kubernetes 叢集上的資源和應用程式。還可以建立保護原則並將其與 Kubernetes 應用程式關聯，所有操作均可透過單一介面完成。</block>
   <block id="516ee22feede3bac94e552d7d7d47c7a" category="section-title">升級 Trident Protect</block>
-  <block id="8f81884d10e6a9d5bed6dc6c7f7e7ad7" category="paragraph">對於執行 Trident Protect 26.04 或更高版本的 Kubernetes 叢集，您可以直接從 NetApp Backup and Recovery 升級 Trident Protect。只有在有新版本可用時，才會顯示升級選項。</block>
   <block id="5bcc55e1f344c64b73b8980050b81310" category="list-text">選擇要升級的 Kubernetes 叢集，然後選取 Actions 圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *Upgrade cluster*。</block>
   <block id="51e9423c87c0e6f2111dce27096c87eb" category="list-text">在升級對話方塊中、請執行下列動作：</block>
   <block id="50382ab9fb7cc5b5cb9eb0c9d8ba6663" category="list-text">從清單中選擇要升級的版本。</block>
@@ -5431,4 +5430,5 @@
   <block id="d02c2883bbfa212e02daa2b45bd11760" category="list-text">Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括 <block ref="f56ec4bb79bf67d191baea2a353be3ab" category="inline-link-rx"></block> 支援的版本。</block>
   <block id="2966006d3447f3363606a7ddf7d88713" category="section-title">2026 年 5 月 05 日</block>
   <block id="bfddb9cc303489a14cbf9520a59e6d1b" category="sidebar">在還原作業期間使用自訂資源修改資源</block>
+  <block id="dd95d3f26c14232d5637a6e4d3472711" category="paragraph">對於執行 Trident Protect 26.05 或更高版本的 Kubernetes 叢集，您可以直接從 NetApp Backup and Recovery 升級 Trident Protect。只有在有新版本可用時，才會顯示升級選項。</block>
 </blocks>
