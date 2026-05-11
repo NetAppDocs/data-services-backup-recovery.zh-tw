@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: br-use-vmware-clone.html 
+keywords: clone, clone application data, NetApp backup and recovery, VMware 
+summary: 使用 NetApp Backup and Recovery 複製您的 VMware 虛擬機器工作負載。 
+---
+= 使用 NetApp Backup and Recovery 複製 VMware 工作負載
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用 NetApp Backup and Recovery 從主要或次要快照建立 VMware 虛擬機器的可寫入複本。透過 VM 複本，您可以建立和管理用於測試、整合和訓練的虛擬機器，而不會影響正式作業資料。
+
+*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+
+.開始之前
+請確保所有要複製快照的 VM 都已新增至保護群組並已備份。
+
+
+
+== 建立 VMware VM 的複本
+
+從現有快照立即建立複本。
+
+
+NOTE: 建立 VM 複製後，您必須更新複製虛擬機器的 IP 位址，以防止與原始 VM 發生 IP 位址衝突。
+
+.步驟
+. 從NetApp Console選單中，選擇「保護」>「備份和復原」。
+. 在 *Workloads* 下，選擇 *VMware* 磁貼。
+. 選擇 *Clone* 。
+. 選擇*建立新克隆*。
+. 在 *Select virtual machines* 部分中，選擇一個保護群組。保護群組中的 VM 會出現在選擇清單中。
+. 從清單中選擇一個或多個 VM 進行複製。您選擇的 VM 會顯示在右側的已選取 VM 清單中。
+. 完成後，選擇 *Next*。
+. 在 *Select a snapshot* 頁面的 *Snapshots* 區段中，選取時間範圍以依建立日期篩選快照。
+. 從清單中選擇一個現有快照作為克隆的基礎，然後選擇 *Next*。
++
+如果快照儲存在多個位置，則會顯示 *Select snapshot location*。
+
+. 選擇要使用的快照位置，然後選取 *Next* 。
+. 在 *Destination settings* 頁面上，執行以下操作：
++
+.. 選擇要建立 VM 複製的目標 vCenter 伺服器的 FQDN 或 IP 位址。
+.. 選擇將託管複本的 ESXi 主機。
+.. 選擇複本的網路環境。
+.. 在 *Virtual machine name* 欄位中，輸入新複製虛擬機器的後綴。
+
+
+. 選擇 *Clone* 。
+
+
+
+
+== 分裂克隆
+
+您可以拆分 VMware VM 的複本，使其與父磁碟區分離。拆分後，複本將成為獨立的磁碟區，不再依賴父磁碟區。
+
+拆分後，與複製虛擬機器關聯的資料儲存區將成為一個新的、獨立的資料儲存區。複製虛擬機器本身則被保留。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *複製*。
+. 選擇一個克隆。
+. 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *分裂克隆*。
+. 檢閱對話方塊中的詳細資料，然後選取 *Split* 。
+. 建立新的獨立 VM 後，您可以在 *Inventory* 頁面中查看它。
+
+
+
+
+== 移除複本
+
+您可以移除 VMware VM 複製。當您移除 VM 複製時，該複製會從 vCenter 中移除，且與該 VM 相關聯的資料存放區會從儲存系統卸載並刪除。
+
+如果原則保護了複本，則複本及其工作都會被移除。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *複製*。
+. 選擇一個克隆。
+. 選擇 Actions 圖示 image:../media/icon-action.png["操作選項"] > *Remove*。
+. 在「移除確認」對話方塊中，檢閱刪除詳細資料。
+. 選擇 *Remove* 。
+. 當克隆被刪除時，它將從*庫存*頁面中刪除。
+

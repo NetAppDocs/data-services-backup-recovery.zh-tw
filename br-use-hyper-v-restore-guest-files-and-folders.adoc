@@ -1,0 +1,118 @@
+---
+sidebar: sidebar 
+permalink: br-use-hyper-v-restore-guest-files-and-folders.html 
+keywords: restore, guest, files, folders, files and folders, Windows, VM, virtual machine, browse, mount, virtual disk, session, snapshot, backup 
+summary: 您可以將 Hyper-V VM 快照中的一個或多個檔案或資料夾還原到 Windows 客體 VM。 
+---
+= 從 Hyper-V VM 備份中還原檔案和資料夾
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將 Hyper-V VM 備份中的檔案和資料夾從主儲存設備還原到 Windows 客體 VM。
+
+
+
+== 還原檔案和資料夾
+
+從快照掛載虛擬磁碟，並將檔案和資料夾從該虛擬磁碟還原到原始（來源）Windows VM。
+
+.開始之前
+在您能夠還原檔案和資料夾之前，必須在 NetApp Backup and Recovery 中為來源 VM 建立認證。此認證用於還原過程中與 VM 進行驗證。
+
+.關於此任務
+透過掛載虛擬磁碟開啟檔案和資料夾還原工作階段時，該工作階段將保持作用中狀態 48 小時。
+
+還原效能取決於待還原的檔案或資料夾的大小和數量。對於給定的資料集大小，還原大量小檔案通常比還原少量大檔案花費的時間更長。
+
+還原檔案和資料夾時，請注意以下事項：
+
+[NOTE]
+====
+* 目前無法將檔案和資料夾還原到 Linux 客體虛擬機器。
+* 不支援從儲存在次要儲存設備或物件儲存設備上的備份還原檔案和資料夾。
+* 您無法將檔案或資料夾還原至位於 SAN 儲存設備上的虛擬機器。
+* 一台虛擬機器上同時只能執行一個連線或還原操作。您無法在同一台虛擬機器上執行並行連線或復原操作。
+* 檢視或瀏覽保留分割區可能會導致錯誤。
+* 還原作業期間，客體檔案的隱藏屬性、系統屬性和加密屬性不會保留在還原的檔案中。
+* 您可以檢視和還原系統和隱藏檔案，以及檢視加密檔案。
+* 請勿覆寫現有系統檔案，也不要將加密檔案還原到加密資料夾中。
+
+
+====
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *復原*。
+. 從頁面右上角的工作負載清單中選擇 *Hyper-V*。
+. 在虛擬機器清單中，選擇包含要還原的檔案或資料夾的 VM 的 *Restore* 動作。
+. 選擇 *檔案和資料夾*。
+. 在 *從快照還原* 頁面上，執行下列操作：
++
+.. （選用）選擇時間範圍，依建立時間篩選快照清單。
+.. 選擇主儲存設備上的快照以進行還原，然後選取 *Next* 。
+
+
+. 從清單中選擇包含要還原的檔案和資料夾的虛擬磁碟，然後選取 *Next* 。
+. 在 _Guest virtual machine details_ 頁面上，執行以下操作：
++
+.. 在 *Guest virtual machine details* 區段中，選取 *Original virtual machine*，將虛擬磁碟附加到原始 VM。
+.. 或者，在 *Guest virtual machine credentials* 區段中，如果您尚未儲存來源虛擬磁碟和目的地 VM 的認證，請選取 *Add credentials*，輸入 Windows 認證資訊，然後選取 *Add*。
+.. 從清單中選擇要使用的虛擬機器認證資料。
+.. 選擇“下一步”。
++
+NetApp Backup and Recovery 會將虛擬磁碟掛載到原始 VM，並顯示所有檔案和資料夾，包括隱藏的項目。它會為每個分割區分配一個磁碟機代號，包括系統保留分割區。
+
++
+您可以使用檔案瀏覽器窗格附近的放大鏡（搜尋）圖示來搜尋檔案和資料夾。雖然不支援模式匹配，但您可以根據名稱或副檔名的子集來搜尋檔案或資料夾。
+
+
+
+. 在「選擇要還原的檔案或資料夾」頁面上，執行下列操作：
++
+.. 選擇要還原的檔案或資料夾。
++
+您選擇要還原的檔案和資料夾列在 *Selected files and folders* 區域中。
+
+.. 選擇“下一步”。
+
+
+. 在 _Guest file restore - destination_ 頁面上、執行以下操作：
++
+.. 在「還原到路徑」部分中，輸入目的地 VM 的 UNC 路徑以及要還原所選檔案的檔案系統位置：
++
+*** IPv4 路徑範例： `\\10.60.136.65\c$`
+*** IPv6 路徑範例： `\\fd20-8b1e-b255-832e--61.ipv6-literal.net\C\restore`
+
+
+
+
++
+如果存在同名文件，您可以選擇覆蓋或跳過它們。
+
+. 在「Post-restore-options」區段中，您可以選擇在還原完成後中斷客體工作階段，只需啟用 *Disconnect guest session after the restore completes* 設定即可。這將中斷連接虛擬磁碟並卸載資料存放區。這表示您需要在執行任何其他檔案和資料夾還原作業之前重新連線客體工作階段。
+. 選擇*恢復*。
++
+您可以在「作業監控」頁面上查看恢復進度。
+
+
+
+
+
+== 管理作用中的即時磁碟掛載工作階段
+
+在 NetApp Backup and Recovery 中檢視、使用和刪除活動的 Hyper-V 檔案和資料夾還原工作階段。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *複製*。
+. 從頁面右上角的工作負載清單中選擇 *Hyper-V*。
+. 選擇 *Live disk mount sessions* 選單。
++
+隨即顯示已開啟的虛擬磁碟掛載工作階段清單。
+
+. （選用）若要使用工作階段將檔案和資料夾還原至客體 VM，請開啟工作階段的 Actions 功能表 image:../media/icon-action.png["操作選項"]，然後選取 *Restore files and folders*。
+. （選用）若要刪除工作階段，請開啟工作階段的「動作」功能表 image:../media/icon-action.png["操作選項"]，然後選取 *Delete* 。
+

@@ -56,8 +56,6 @@ sidebar:
       url: "/br-start-login.html"
     - title: 在儀表板中查看保護健康狀況
       url: "/br-use-dashboard.html"
-    - title: 建立策略來管理備份和還原
-      url: "/br-use-policies-create.html"
     - title: 保護ONTAP磁碟區工作負載
       entries:
       - title: 保護ONTAP磁碟區工作負載概述
@@ -106,6 +104,8 @@ sidebar:
         url: "/concept-start-prereq-snapcenter-import.html"
       - title: 發現 Microsoft SQL Server 工作負載
         url: "/br-start-discover.html"
+      - title: 建立和管理 Microsoft SQL Server 工作負載備份原則
+        url: "/br-use-policies-mssql-create.html"
       - title: 備份 Microsoft SQL Server 工作負載
         url: "/br-use-mssql-backup.html"
       - title: 還原 Microsoft SQL Server 工作負載
@@ -126,8 +126,12 @@ sidebar:
         url: "/br-use-vmware-discovery.html"
       - title: 為 VMware 工作負載建立和管理保護群組
         url: "/br-use-vmware-protection-groups.html"
+      - title: 建立和管理 VMware 工作負載備份原則
+        url: "/br-use-policies-vmware-create.html"
       - title: 備份 VMware 工作負載
         url: "/br-use-vmware-backup.html"
+      - title: 複製 VMware 工作負載
+        url: "/br-use-vmware-clone.html"
       - title: 復原 VMware 工作負載
         entries:
         - title: 復原 VMware 虛擬機
@@ -150,6 +154,8 @@ sidebar:
         url: "/br-start-discover-kvm.html"
       - title: 為 KVM 工作負載建立和管理保護群組
         url: "/br-use-kvm-protection-groups.html"
+      - title: 建立和管理 KVM 工作負載備份原則
+        url: "/br-use-policies-kvm-create.html"
       - title: 備份 KVM 工作負載
         url: "/br-use-kvm-backup.html"
       - title: 恢復 KVM 工作負載
@@ -162,10 +168,16 @@ sidebar:
         url: "/br-start-discover-hyperv.html"
       - title: 為 Hyper-V 工作負載建立和管理保護群組
         url: "/br-use-hyperv-protection-groups.html"
+      - title: 建立和管理 Hyper-V 工作負載備份原則
+        url: "/br-use-policies-hyper-v-create.html"
       - title: 備份 Hyper-V 工作負載
         url: "/br-use-hyperv-backup.html"
       - title: 復原 Hyper-V 工作負載
-        url: "/br-use-hyperv-restore.html"
+        entries:
+        - title: 復原 Hyper-V 工作負載
+          url: "/br-use-hyperv-restore.html"
+        - title: 還原檔案和資料夾
+          url: "/br-use-hyper-v-restore-guest-files-and-folders.html"
     - title: 保護 Oracle Database 工作負載（預覽版）
       entries:
       - title: 保護 Oracle 資料庫工作負載概述
@@ -176,6 +188,8 @@ sidebar:
         url: "/br-start-configure-oracle-database.html"
       - title: 建立和管理 Oracle Database 工作負載的保護群組
         url: "/br-use-oracle-protection-groups.html"
+      - title: 建立和管理 Oracle Database 工作負載備份原則
+        url: "/br-use-policies-oracle-create.html"
       - title: 備份 Oracle Database 工作負載
         url: "/br-use-oracle-backup.html"
       - title: 複製 Oracle 資料庫工作負載
@@ -194,6 +208,8 @@ sidebar:
         entries:
         - title: 新增和保護 Kubernetes 應用程式
           url: "/br-use-protect-kubernetes-applications.html"
+        - title: 建立和管理 Kubernetes 工作負載備份原則
+          url: "/br-use-policies-kubernetes-create.html"
         - title: 現在即可使用 Web UI 備份 Kubernetes 應用程式
           url: "/br-use-back-up-now-kubernetes-applications-web-ui.html"
         - title: 立即使用自訂資源備份 Kubernetes 應用程式
