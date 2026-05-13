@@ -5031,7 +5031,6 @@
   <block id="3e292ccda5c971a4b3e12f28c1896c96" category="list-text">在 *Backup architecture* 區段中輸入資訊。從清單中選擇備份的資料流：</block>
   <block id="882709ae2f159dd4483f21419cc1577a" category="list-text">*3-2-1 fanout*：主儲存（磁碟）到輔助儲存（磁碟）到雲端（物件儲存）。此配置會在不同的儲存系統中建立多個資料副本，例如 ONTAP 到 ONTAP 以及 ONTAP 到物件儲存。物件存儲可以是雲端超大規模物件存儲，也可以是私有物件存儲。此配置最適合實現最佳資料保護和災難復原。此選項不適用於 Amazon FSx for NetApp ONTAP。</block>
   <block id="be84ac32aad421d6a1cb46ce683e66b6" category="list-text">*磁碟到磁碟*：主儲存設備（磁碟）到次要儲存設備（磁碟）。ONTAP 到 ONTAP 資料保護策略會在兩個 ONTAP 系統之間複寫資料，以確保高可用度和災難恢復。這通常使用 SnapMirror 來實現，它支援同步和非同步複寫。此方法可讓您的資料在不同位置保持更新並可用，以實現強大的資料保護。</block>
-  <block id="81c8b39fe11eaceb3d9d1d404c6fcabd" category="list-text">*磁碟到物件儲存*：主要儲存設備（磁碟）到雲端（物件存放區）。這會將資料從 ONTAP 系統複寫到物件儲存系統。這可以是雲端超大規模業者物件存放區或私有物件存放區、例如 StorageGRID。此方法非常適合長期資料保留和歸檔。</block>
   <block id="851135c947a89fc1b09d7dcc201469ab" category="list-text">*本機快照*：選定磁碟區上的本機快照。這會建立執行工作負載之正式作業磁碟區的唯讀時間點複本。您可以使用本機快照從資料遺失或毀損中恢復，也可以建立用於災難恢復的備份。</block>
   <block id="fbdef52c241b79ead35478ff22576f90" category="list-text">提供 *Local snapshot settings* 部分的資訊：</block>
   <block id="090b970b75ee26b50d8123db3db2ba55" category="list-text">請提供 *Secondary settings* 部分（複製到次要儲存設備）的資訊：</block>
@@ -5552,4 +5551,5 @@
   <block id="160bf2703f3a2319b3965b541340256a" category="sidebar">還原 VMware 檔案和資料夾</block>
   <block id="b5c91904decad9b84ae436053f327229" category="sidebar">從 VMDK 還原 VMware 檔案和資料夾</block>
   <block id="d68e9c9c6cd6479fbac7751c3f91f5a3" category="sidebar">還原 Hyper-V 檔案和資料夾</block>
+  <block id="e193e26700d466b0349ce7e559d96967" category="list-text">*磁碟到物件儲存*：主要儲存設備（磁碟）到雲端（物件存放區）。這會將資料從 ONTAP 系統複寫到物件儲存系統。這可以是超大規模雲端物件存儲，也可以是私有物件存儲，例如 StorageGRID。此方法非常適合長期資料保留和歸檔。此選項不適用於 Amazon FSx for NetApp ONTAP。</block>
 </blocks>
