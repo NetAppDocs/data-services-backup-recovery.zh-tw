@@ -415,7 +415,6 @@
   <block id="baab0bf328a764b384d4ecab2375f4fa" category="list-text">備份資料時， NetApp Backup and Recovery將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。</block>
   <block id="c638f77e97a62d0d11f775816222d62a" category="inline-link">配置NetApp卷加密概述</block>
   <block id="3553f96cf9281793975488d9cea2ab17" category="paragraph">有關這些加密類型的說明，請參閱<block ref="4e5be28408ee7dfd001133bf87f0a28f" category="inline-link-rx"></block>。</block>
-  <block id="d13da1ef1c5dbdc58b74265b9363e815" category="list-text">如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery備份這些卷，因為這些快照不會移動到物件儲存。</block>
   <block id="3a3d9f6ee5fa05f3aa042e0258eebf58" category="list-text">當您建立或編輯備份策略但未向該策略指派任何磁碟區時，保留的備份數量最多可為 1018。將磁碟區指派給策略後，您可以編輯該策略以建立最多 4000 個備份。</block>
   <block id="dd717dd6a5197fd72bf9aae1e454dd3e" category="list-text">備份資料保護 (DP) 磁碟區時：</block>
   <block id="c73aeadbe74d06b3eebf4d0a5f283344" category="list-text">與SnapMirror標籤的關係<block ref="b17c9a947d4e38d7975718380fab6b7a" prefix=" " category="inline-code"></block>和<block ref="02d69a40f5f4cdc817176fabd085b511" prefix=" " category="inline-code"></block>不會備份到雲端。</block>
@@ -4436,7 +4435,6 @@
   <block id="9255ea030351a8ee8402a7708baf0223" category="list-text">展開「勒索軟體掃描」部分。</block>
   <block id="194a29c3464a05de3c32434145c0b5d6" category="section-title">2026年1月19日</block>
   <block id="88009dbb638181324526010a9eff3c19" category="sidebar">復原 VMware 虛擬機</block>
-  <block id="9b7e5fddcf3e2a7a93fe6669de87fbc2" category="sidebar">恢復特定虛擬磁碟</block>
   <block id="3a4d751e404219df1dc6de0a13c8db55" category="sidebar">工作流程、先決條件與限制</block>
   <block id="b2c5a3b35bd8f72bf653aa42e54cc06c" category="list-text">Windows 客戶作業系統必須執行 Windows Server 2008 R2 或更高版本。</block>
   <block id="367aa9be05b109b226ffbefe3981ac88" category="list-text">如果還原加密的檔案或資料夾，則不會保留加密屬性。</block>
@@ -5119,7 +5117,6 @@
   <block id="ca8d2f28de45d440f4baf4c07d4c8107" category="paragraph">您可以使用「搜尋與復原」功能從 ONTAP 備份檔案中還原磁碟區、資料夾或檔案。「搜尋與復原」功能可讓您搜尋所有備份（包括本機快照、複製磁碟區和物件儲存），而無需提供確切的系統名稱、磁碟區名稱或檔案名稱。</block>
   <block id="13805175d1bc9d9656654bec32406f98" category="admonition">NetApp Backup and Recovery 不會對建立時間戳記與相同磁碟區的另一個 Snapshot 完全相同的 Snapshot 進行索引。</block>
   <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026 年 4 月 13 日</block>
-  <block id="a22504a40a8afdfa908ab0544ecc4178" category="sidebar">從 VMDK 還原檔案和資料夾</block>
   <block id="462fcd2b84c5fc16f3d89522a2068baa" category="sidebar">疑難排解檔案和資料夾還原</block>
   <block id="af2c1f489f4f9d807eced3ce9373d494" category="admonition">備份關係刪除後、您將無法刪除個別磁碟區備份檔案。在刪除磁碟區的備份關係之前、請先刪除該磁碟區的備份檔案。</block>
   <block id="cfa2bf6d634376c1523db558d932eaf5" category="list-text">從 *Volumes* 功能表中，按一下來源磁碟區的 <block ref="a1d09704e1f652cf0082bca28cb44e87" category="inline-image-macro-rx" type="image"></block>，然後選取 *Manage backups &gt; View backup*。</block>
@@ -5549,4 +5546,10 @@
   <block id="d4989fe657e38f56766b05260a139da1" category="sidebar">建立和管理 Hyper-V 工作負載備份原則</block>
   <block id="4cd8801cdee679bb024e188753022546" category="sidebar">建立和管理 Oracle Database 工作負載備份原則</block>
   <block id="9bb7a57e0f15167076e59ed085570cb6" category="sidebar">建立和管理 Kubernetes 工作負載備份原則</block>
+  <block id="2a09eaa4306f964591fbfdee1bad3329" category="list-text">請勿備份已啟用長期保留快照的 SnapMirror 目標磁碟區。這些快照直接在目標磁碟區上建立，不會移動到物件儲存。即使之後變更 SnapMirror 原則以停用長期保留，此限制仍然有效。</block>
+  <block id="cb7e1594adc03f9d88413ab9198e9c43" category="admonition">在 Azure 中建立用作備份目的地的容器時，請確保您建立的容器名稱與 Azure 儲存體帳戶名稱相同。</block>
+  <block id="76382b5bdb7a0a65db2779738439703c" category="sidebar">還原 VMware 虛擬磁碟</block>
+  <block id="160bf2703f3a2319b3965b541340256a" category="sidebar">還原 VMware 檔案和資料夾</block>
+  <block id="b5c91904decad9b84ae436053f327229" category="sidebar">從 VMDK 還原 VMware 檔案和資料夾</block>
+  <block id="d68e9c9c6cd6479fbac7751c3f91f5a3" category="sidebar">還原 Hyper-V 檔案和資料夾</block>
 </blocks>

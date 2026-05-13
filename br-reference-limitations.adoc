@@ -57,7 +57,7 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 +
 有關這些加密類型的說明，請參閱https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["配置NetApp卷加密概述"^]。
 
-* 如果使用SnapMirror策略中的計劃在SnapMirror目標磁碟區上啟用長期保留快照，則會直接在目標磁碟區上建立快照。在這種情況下，您不應使用NetApp Backup and Recovery備份這些卷，因為這些快照不會移動到物件儲存。
+* 請勿備份已啟用長期保留快照的 SnapMirror 目標磁碟區。這些快照直接在目標磁碟區上建立，不會移動到物件儲存。即使之後變更 SnapMirror 原則以停用長期保留，此限制仍然有效。
 * 當您建立或編輯備份策略但未向該策略指派任何磁碟區時，保留的備份數量最多可為 1018。將磁碟區指派給策略後，您可以編輯該策略以建立最多 4000 個備份。
 * 備份資料保護 (DP) 磁碟區時：
 +

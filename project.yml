@@ -136,13 +136,13 @@ sidebar:
         entries:
         - title: 復原 VMware 虛擬機
           url: "/br-use-vmware-restore.html"
-        - title: 恢復特定虛擬磁碟
+        - title: 還原 VMware 虛擬磁碟
           url: "/br-use-vmware-restore-vmdks-from-backups.html"
-        - title: 還原檔案和資料夾
+        - title: 還原 VMware 檔案和資料夾
           entries:
           - title: 工作流程、先決條件與限制
             url: "/br-use-vmware-restore-guest-files-and-folders-overview.html"
-          - title: 從 VMDK 還原檔案和資料夾
+          - title: 從 VMDK 還原 VMware 檔案和資料夾
             url: "/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html"
           - title: 疑難排解檔案和資料夾還原
             url: "/br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html"
@@ -176,7 +176,7 @@ sidebar:
         entries:
         - title: 復原 Hyper-V 工作負載
           url: "/br-use-hyperv-restore.html"
-        - title: 還原檔案和資料夾
+        - title: 還原 Hyper-V 檔案和資料夾
           url: "/br-use-hyper-v-restore-guest-files-and-folders.html"
     - title: 保護 Oracle Database 工作負載（預覽版）
       entries:
