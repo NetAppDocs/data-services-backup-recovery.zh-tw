@@ -5173,9 +5173,6 @@
   <block id="ac5cd439e0017b06be1e4642e8b56e41" category="list-text">重新啟動 Backup and Recovery 容器：</block>
   <block id="1a9463a420291fe177279490d84a12e3" category="list-text">在網頁瀏覽器中重新載入 Backup and Recovery UI。</block>
   <block id="a0d8143bf8014bb28b405e42d77fe94e" category="admonition">若要停用預覽功能，請依照相同的步驟操作，但將功能標誌值設為 <block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>。</block>
-  <block id="0914e8028f83c39209dd353fbe4c3cc0" category="section-title">停用屬於儲存 VM 的所有磁碟區的索引</block>
-  <block id="25453b410cc5b5a300cb25323d146096" category="paragraph">請依照下列步驟停用屬於特定儲存 VM 的所有磁碟區的索引，而不是停用每個磁碟區的索引。</block>
-  <block id="8dff4fed8a1d5381eb2f6576f3f06b7d" category="list-text">建立一個名為<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>的檔案，內容如下。將範例中的儲存 VM 名稱替換為您環境中儲存 VM 的名稱：</block>
   <block id="7577767aaa58a8a7950977e3a65ee191" category="list-text">重新啟動 Backup and Recovery 索引目錄容器：</block>
   <block id="e6cce919f01af0ea557dc3414a5f3d13" category="sidebar">啟用預覽和隱藏功能</block>
   <block id="a66cf4720f5d5d39ed0b714a10c544b8" category="paragraph">如果您選擇物件儲存中的備份檔案，並且該備份啟用了勒索軟體防護（如果您在備份原則中啟用了 Datalock 和勒索軟體防護），則系統會提示您在還原資料之前對該備份檔案執行額外的完整性檢查。我們建議您執行此掃描。</block>
@@ -5554,4 +5551,9 @@
   <block id="be3cd190a86975f6f424dc4b62841598" category="section-title">在災難復原配置中啟用索引</block>
   <block id="07df367027530700215f6c0b89225a68" category="paragraph">在災難復原 (DR) 配置中，當在儲存虛擬機器叢集上啟用索引時，會出現一個錯誤，指出在配置為 Vserver DR 目標的 Vserver 上不允許執行此操作。儘管出現此錯誤，後端程序仍會將<block ref="f97a37281422aa65185ec69709f5c22b" prefix=" " category="inline-code"></block>狀態設為「開啟」以用於來源儲存虛擬機器。儲存虛擬機器 DR 策略計畫運作後，此狀態會傳播到目標儲存虛擬機器。</block>
   <block id="f3a85d41d14b1d81bc48b863a2e8b370" category="paragraph">*因應措施*：等待儲存 VM DR 原則排程在初始錯誤後執行，然後再次嘗試啟用索引。</block>
+  <block id="17ee1e3baa1892c1f3d00118ea446fca" category="section-title">停用磁碟區索引</block>
+  <block id="9d0f404c5a1959bdade3f7db9b0dfed5" category="paragraph">使用下列選項標誌停用特定磁碟區或屬於一個或多個儲存 VM 的所有磁碟區的索引：</block>
+  <block id="99d6bb7f841b0ddd33dd9e23fe42b4e8" category="list-text"><block ref="2f0729ea8ff63f23144ca016d097072b" prefix="" category="inline-code"></block>：以逗號分隔的儲存 VM 清單，其磁碟區不應建立索引</block>
+  <block id="a4c2ad915aa7ffe7e12eaa0ec56e0fcb" category="list-text"><block ref="2e56f3828d4fc676b207b81b442eafdd" prefix="" category="inline-code"></block>：不應編入索引的個別磁碟區清單（以逗號分隔）</block>
+  <block id="2e7ba7a2addeb2881d5673ae4329306b" category="list-text">建立一個名為<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>的檔案，並根據您的環境自訂儲存虛擬機器和磁碟區名稱：</block>
 </blocks>
