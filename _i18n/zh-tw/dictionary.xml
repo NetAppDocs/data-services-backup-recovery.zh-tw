@@ -3344,7 +3344,6 @@
   <block id="75968f9094e000b12da4b2ead555a058" category="list-text">在分配之前考慮備份的影響<block ref="a181a603769c1f98ad927e7367c7aa51" prefix=" " category="inline-code"></block>對磁碟區進行分層策略。由於資料是立即分層的，NetApp Backup and Recovery將從雲層而不是本地層讀取資料。由於並發備份操作共享與雲端物件儲存的網路鏈接，因此如果網路資源飽和，可能會出現效能下降。在這種情況下，您可能需要主動配置多個網路介面 (LIF) 來減少這種類型的網路飽和。</block>
   <block id="0d5740d6083fb9ac304bfaa4bb99e957" category="doc">使用NetApp Backup and Recovery從備份檔案還原ONTAP數據</block>
   <block id="bbf0b1b9c16dc904da9a8179519e7e31" category="list-text">您可以將*磁碟區*（作為新磁碟區）還原到原始系統、使用相同雲端帳戶的其他系統或本機ONTAP系統。</block>
-  <block id="da7f5e5f2be2e4063a41a28fbb91f494" category="list-text">您可以將*資料夾*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區或本機ONTAP系統上的磁碟區。</block>
   <block id="a4883a32493cbf65048c6ba0d655088d" category="list-text">您可以將*檔案*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區或本機ONTAP系統上的磁碟區。</block>
   <block id="d92c1fbc11ff9a4d0db37653e35a2e52" category="paragraph">總而言之，這些是可用於將磁碟區資料還原到ONTAP系統的有效流程：</block>
   <block id="880c04d29288ca6dbdf8598c75af755f" category="list-text">備份檔案 -&gt; 還原卷</block>
@@ -5556,4 +5555,6 @@
   <block id="99d6bb7f841b0ddd33dd9e23fe42b4e8" category="list-text"><block ref="2f0729ea8ff63f23144ca016d097072b" prefix="" category="inline-code"></block>：以逗號分隔的儲存 VM 清單，其磁碟區不應建立索引</block>
   <block id="a4c2ad915aa7ffe7e12eaa0ec56e0fcb" category="list-text"><block ref="2e56f3828d4fc676b207b81b442eafdd" prefix="" category="inline-code"></block>：不應編入索引的個別磁碟區清單（以逗號分隔）</block>
   <block id="2e7ba7a2addeb2881d5673ae4329306b" category="list-text">建立一個名為<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>的檔案，並根據您的環境自訂儲存虛擬機器和磁碟區名稱：</block>
+  <block id="48be46e5153e88189d804da13793e42d" category="list-text">不支援從本機 Snapshot 還原資料夾。</block>
+  <block id="dfad9bc0d0d8b9068168d9197cc59866" category="list-text">您可以將複製儲存或物件儲存快照中的*資料夾*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區，或內部部署 ONTAP 系統中的磁碟區。不支援從本機快照還原資料夾。</block>
 </blocks>
