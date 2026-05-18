@@ -2775,7 +2775,6 @@
   <block id="e2a74f20d433c85025a6f5807d74682d" category="paragraph">選擇或建立一個新的StorageGRID叢集。有關建立StorageGRID叢集以便控制台可以發現它的詳細信息，請參閱<block ref="babf3072d9403ab5e1ffb9e4bb9a27cb" category="inline-link-rx"></block>。</block>
   <block id="85ffdbd09ff5b2ecfdcbea6cb8697013" category="summary">NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。</block>
   <block id="254385f2eec62c0f2399c9da13dde7f6" category="doc">在NetApp Backup and Recovery中使用SnapMirror將磁碟區遷移到 Cloud Resync</block>
-  <block id="ee9ee6fb5d3eb14594205c52636211ec" category="admonition">此功能從 2025 年 5 月發布的NetApp Backup and Recovery版本 4.0.3 開始提供。</block>
   <block id="64d100d00b61364f5c3f3456b1dbbc90" category="paragraph">確保滿足以下先決條件：</block>
   <block id="c8f1c31ff80f86ac3f0e5c6f159fae6e" category="list-text">目標ONTAP叢集必須執行ONTAP 9.16.1 或更高版本。</block>
   <block id="5baace87d48cf58cc80858703e408f10" category="list-text">必須使用NetApp Backup and Recovery保護舊的來源ONTAP叢集。</block>
@@ -5552,4 +5551,7 @@
   <block id="b5c91904decad9b84ae436053f327229" category="sidebar">從 VMDK 還原 VMware 檔案和資料夾</block>
   <block id="d68e9c9c6cd6479fbac7751c3f91f5a3" category="sidebar">還原 Hyper-V 檔案和資料夾</block>
   <block id="e193e26700d466b0349ce7e559d96967" category="list-text">*磁碟到物件儲存*：主要儲存設備（磁碟）到雲端（物件存放區）。這會將資料從 ONTAP 系統複寫到物件儲存系統。這可以是超大規模雲端物件存儲，也可以是私有物件存儲，例如 StorageGRID。此方法非常適合長期資料保留和歸檔。此選項不適用於 Amazon FSx for NetApp ONTAP。</block>
+  <block id="be3cd190a86975f6f424dc4b62841598" category="section-title">在災難復原配置中啟用索引</block>
+  <block id="07df367027530700215f6c0b89225a68" category="paragraph">在災難復原 (DR) 配置中，當在儲存虛擬機器叢集上啟用索引時，會出現一個錯誤，指出在配置為 Vserver DR 目標的 Vserver 上不允許執行此操作。儘管出現此錯誤，後端程序仍會將<block ref="f97a37281422aa65185ec69709f5c22b" prefix=" " category="inline-code"></block>狀態設為「開啟」以用於來源儲存虛擬機器。儲存虛擬機器 DR 策略計畫運作後，此狀態會傳播到目標儲存虛擬機器。</block>
+  <block id="f3a85d41d14b1d81bc48b863a2e8b370" category="paragraph">*因應措施*：等待儲存 VM DR 原則排程在初始錯誤後執行，然後再次嘗試啟用索引。</block>
 </blocks>

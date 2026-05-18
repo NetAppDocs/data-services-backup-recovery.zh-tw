@@ -18,9 +18,6 @@ NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了Ne
 
 此功能無需重新建立基線，即可在遷移後繼續備份。此功能在工作負載遷移場景中很有價值，支援 FlexVols 和 FlexGroups，並且從ONTAP版本 9.16.1 開始可用。
 
-
-NOTE: 此功能從 2025 年 5 月發布的NetApp Backup and Recovery版本 4.0.3 開始提供。
-
 SnapMirror到 Cloud Resync 可跨環境保持備份連續性，因此更容易在混合雲和多雲環境中管理資料。
 
 
