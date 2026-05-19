@@ -3606,9 +3606,7 @@
   <block id="fd161debce2c53100b7c61aa8b2d7c6b" category="list-text">要恢復我在 Google Archive 中存檔的物件需要多長時間？</block>
   <block id="efce98c74b9fc5fb1711b2f3d4da8f34" category="list-text">*檢索時間*：從存檔中檢索備份檔案並將其放置在標準儲存中的時間。這有時被稱為“補水”時間。與其他雲端供應商提供的「最冷」儲存解決方案不同，您的資料可以在幾毫秒內存取。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">關於此任務</block>
-  <block id="b92e6028af16604f3b6fd4eade9dfec6" category="summary">在沒有網際網路存取的網站（稱為「私有模式」）中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID或ONTAP S3 儲存桶中。如果您將來遇到控制台代理主機系統問題，您可以部署新的控制台代理並還原關鍵的NetApp Backup and Recovery資料。</block>
   <block id="a215e32a572a4f73138eb57df3fb494d" category="doc">在暗站中恢復NetApp Backup and Recovery配置數據</block>
-  <block id="e49ea1690cc473e646cdffd861381cbc" category="paragraph">在沒有網際網路存取的網站（稱為_私有模式_）中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID或ONTAP S3 儲存桶中。如果控制台代理主機系統出現問題，您可以部署新的控制台代理並還原關鍵的NetApp Backup and Recovery資料。</block>
   <block id="701ba6e125e8ce791098165f107eb472" category="admonition">此過程僅適用於ONTAP磁碟區資料。</block>
   <block id="28f81c5bbd7730901f36546c0e51e06f" category="paragraph">備份的資料有兩種類型：</block>
   <block id="8ad7c680cb0d9e95e7294cf3e192be1f" category="list-text">NetApp Backup and Recovery資料庫 - 包含所有磁碟區、備份檔案、備份策略和設定資訊的清單。</block>
@@ -3843,7 +3841,6 @@
   <block id="f5b61ddaf24256f9a32421bae22a1e21" category="sidebar">將本機ONTAP備份到 Azure Blob</block>
   <block id="e8f201c141a8ad9fbe4ea92510b4ca30" category="sidebar">將本地ONTAP備份到 Google Cloud</block>
   <block id="6a2941303bd6f981e2724af76bf3da2e" category="sidebar">將本地ONTAP備份到StorageGRID</block>
-  <block id="14873f48c9db88415c7c75e61a0ddd00" category="sidebar">在暗站中恢復配置數據</block>
   <block id="5ee1bd11e1cae9e48854c491affa72a6" category="sidebar">管理ONTAP備份</block>
   <block id="0f18ca4c27c34246c6bc09d2bbf775c6" category="sidebar">從ONTAP備份還原</block>
   <block id="c00b274754a2d13242a61b1534660a37" category="sidebar">管理 Microsoft SQL Server 庫存</block>
@@ -5557,4 +5554,6 @@
   <block id="2e7ba7a2addeb2881d5673ae4329306b" category="list-text">建立一個名為<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>的檔案，並根據您的環境自訂儲存虛擬機器和磁碟區名稱：</block>
   <block id="48be46e5153e88189d804da13793e42d" category="list-text">不支援從本機 Snapshot 還原資料夾。</block>
   <block id="dfad9bc0d0d8b9068168d9197cc59866" category="list-text">您可以將複製儲存或物件儲存快照中的*資料夾*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區，或內部部署 ONTAP 系統中的磁碟區。不支援從本機快照還原資料夾。</block>
+  <block id="637d209786fc6476ac3ed36c800de343" category="summary">在私有模式（無網際網路存取）下，NetApp Backup and Recovery 會將其組態資料儲存在與備份相同的 StorageGRID 或 ONTAP S3 bucket 中。如果 Console agent 主機系統發生故障，您可以部署新的 Console agent 並還原這些資料。</block>
+  <block id="7bc0231d1aacc728e66087d46a205aab" category="paragraph">在 _私有模式_（無網際網路存取）下，NetApp Backup and Recovery 會將其組態資料儲存在與備份相同的 StorageGRID 或 ONTAP S3 bucket 中。如果 Console agent 主機系統發生故障，您可以部署新的 Console agent 並還原這些資料。</block>
 </blocks>
