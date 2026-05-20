@@ -5239,10 +5239,8 @@
   <block id="23a8c2c2f00449fb258432bb555df792" category="paragraph">在此版本中、Kubernetes 工作負載引入了以下增強功能：</block>
   <block id="fa4bdb2a7b9d92b88314f56020b6233b" category="list-text">*原生支援保護 VM*：現在您可以建立基於 VM 的應用程式，從而能夠以保護任何其他應用程式的方式保護虛擬機器。</block>
   <block id="26941edb78c4dbe9ef9eecfa96d0effe" category="list-text">*資源轉換*：現在您可以使用資源轉換和資源轉換範本，在還原程序期間新增、移除和修改資源屬性。</block>
-  <block id="283ac99a03bae81366bef44dc5d0e7d7" category="list-text">*從 Backup and Recovery 升級 Trident Protect*：現在可以直接從 Backup and Recovery 升級 Kubernetes 叢集的 Trident Protect。</block>
   <block id="2473cfa7d58a8b216d39f3987c07594f" category="list-text">*檢視受保護的資源*：您現在可以檢視應用程式每個還原點中包含的資源，並下載詳細的 JSON 報告。這可讓您全面掌握還原點，並簡化稽核法規遵循作業。</block>
   <block id="6e56df4eb422b0b15187c84ba551237e" category="summary">在您的環境中使用 Backup and Recovery 之前，請先檢閱這些 NetApp Backup and Recovery 限制。</block>
-  <block id="a53f9fc03c44857823108d186061d746" category="section-title">不支援從本機快照就地還原基於 VM 的應用程式</block>
   <block id="3e204d8b8cd27fb138dc9f8b97e831ad" category="paragraph">目前不支援從本機快照對基於 VM 的應用程式進行就地還原（還原至原始命名空間和原始叢集）。</block>
   <block id="930dce8dab04ce68bb76e7e3616a93a1" category="list-text"><block ref="473bc5f1f9d293596a6cf3f7d880fe14" category="inline-xref-macro-rx"></block> 適用於任何 Windows、Microsoft SQL Server、Oracle Database 或 Linux 主機，NetApp Backup and Recovery 需要進行驗證。這包括在還原檔案或資料夾時所使用的來賓作業系統認證。</block>
   <block id="9d07cf053c6372eed523592068e90499" category="list-text"><block ref="9bcb031751ebe08f6f5c4f1caa70f94f" category="inline-xref-macro-rx"></block>在還原資源時進行修改。</block>
@@ -5556,4 +5554,8 @@
   <block id="dfad9bc0d0d8b9068168d9197cc59866" category="list-text">您可以將複製儲存或物件儲存快照中的*資料夾*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區，或內部部署 ONTAP 系統中的磁碟區。不支援從本機快照還原資料夾。</block>
   <block id="637d209786fc6476ac3ed36c800de343" category="summary">在私有模式（無網際網路存取）下，NetApp Backup and Recovery 會將其組態資料儲存在與備份相同的 StorageGRID 或 ONTAP S3 bucket 中。如果 Console agent 主機系統發生故障，您可以部署新的 Console agent 並還原這些資料。</block>
   <block id="7bc0231d1aacc728e66087d46a205aab" category="paragraph">在 _私有模式_（無網際網路存取）下，NetApp Backup and Recovery 會將其組態資料儲存在與備份相同的 StorageGRID 或 ONTAP S3 bucket 中。如果 Console agent 主機系統發生故障，您可以部署新的 Console agent 並還原這些資料。</block>
+  <block id="529ee13269734b9af20d3b6447ab6b9f" category="list-text">*Trident Protect 26.05*：此版本包含 Trident Protect 26.05。</block>
+  <block id="54f8a7826ae5101b3374158dadb22dbe" category="list-text">*從 Backup and Recovery 升級 Trident Protect*：如果您的 Kubernetes 叢集執行的是 Trident Protect 26.05 或更新版本，現在可以直接從 Backup and Recovery 升級 Trident Protect。</block>
+  <block id="482d8dda04ea30da4fa480c529cb09b0" category="list-text">*Trident Protect 26.05.1*：此版本包含 Trident Protect 26.05.1。</block>
+  <block id="d0426b89e832dc9c7bd7771552d69499" category="list-text">*基於 VM 的應用程式就地還原*：現在您可以將基於 VM 的應用程式還原到原始命名空間和原始叢集。</block>
 </blocks>

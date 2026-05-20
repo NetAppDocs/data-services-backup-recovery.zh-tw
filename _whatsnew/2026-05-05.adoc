@@ -8,9 +8,10 @@
 
 在此版本中、Kubernetes 工作負載引入了以下增強功能：
 
+* *Trident Protect 26.05*：此版本包含 Trident Protect 26.05。
+* *從 Backup and Recovery 升級 Trident Protect*：如果您的 Kubernetes 叢集執行的是 Trident Protect 26.05 或更新版本，現在可以直接從 Backup and Recovery 升級 Trident Protect。
 * *原生支援保護 VM*：現在您可以建立基於 VM 的應用程式，從而能夠以保護任何其他應用程式的方式保護虛擬機器。
 * *資源轉換*：現在您可以使用資源轉換和資源轉換範本，在還原程序期間新增、移除和修改資源屬性。
-* *從 Backup and Recovery 升級 Trident Protect*：現在可以直接從 Backup and Recovery 升級 Kubernetes 叢集的 Trident Protect。
 * *檢視受保護的資源*：您現在可以檢視應用程式每個還原點中包含的資源，並下載詳細的 JSON 報告。這可讓您全面掌握還原點，並簡化稽核法規遵循作業。
 
 
