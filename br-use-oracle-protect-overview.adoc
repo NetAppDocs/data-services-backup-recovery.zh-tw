@@ -23,9 +23,6 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 * 您可以從現場副本快速恢復，如果現場副本受到損害，則可以使用異地副本。
 
 
-
-NOTE: 若要切換至NetApp Backup and Recovery UI 版本或從 NetApp Backup and Recovery UI 版本切換，請參閱link:br-start-switch-ui.html["切換到先前的NetApp Backup and RecoveryUI"]。
-
 您可以使用 NetApp Backup and Recovery 來執行下列與 Oracle Database 工作負載相關的任務：
 
 * link:br-start-discover-oracle.html["探索 Oracle Database 工作負載"]
