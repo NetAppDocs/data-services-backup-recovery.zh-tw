@@ -151,7 +151,7 @@ NOTE: 目前不支援修改 PersistentVolumeClaims 和命名空間。
 .. 從 *Template* 清單中選擇一個範本，即可快速套用您常用的修飾符設定。此清單包含常見場景的預定義範本以及您建立的自訂範本。
 +
 
-NOTE: 在全域 link:br-start-configure.html#create-a-resource-modifier-template["設定"^] 區域建立資源轉換範本。
+NOTE: 在全域 link:br-start-configure.html#create-a-resource-transformation-template["設定"^] 區域建立資源轉換範本。
 
 .. 請透過輸入資源群組、版本、種類和名稱來指定要修改的資源。
 .. 從 *Operation* 清單中選擇操作，以指定您要對資源執行的操作。

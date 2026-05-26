@@ -343,14 +343,9 @@
   <block id="def5bb1c4fff047ce52153ac1f2ef9b5" category="list-text">NetFS 以外的儲存池類型（僅支援 NetFS）</block>
   <block id="203b3a4b594fb28b853f0cb7e5561c26" category="list-text">離線備份</block>
   <block id="11750133b5aeccdb05ec0c5b1027ace4" category="doc">NetApp Backup and Recovery針對 VMware 工作負載的已知限制</block>
-  <block id="eace16d66cdd93ad876c620db7456077" category="list-text">山</block>
-  <block id="1281764038ea27ade56d7d2b8be22798" category="list-text">解除安裝</block>
   <block id="25e66e51214e8342374fa891a42988b3" category="list-text">恢復至備用位置</block>
   <block id="ef18d76ed6c710e78abb28c0e09b3e30" category="list-text">vVol 支持</block>
-  <block id="2cc658d562a11cd1528c2219f2d25da7" category="list-text">NVMe 支持</block>
   <block id="98dc7ecfe4c87955d5fb8b98b895eac7" category="list-text">電子郵件集成</block>
-  <block id="7c007efb4505aa1063c750565e9e0eac" category="list-text">編輯政策</block>
-  <block id="2af86af91c3987a4d2353d4ec7912d76" category="list-text">編輯保護群組</block>
   <block id="eaaed5c467c733cb37141573cd1396cf" category="doc">NetApp Backup and Recovery針對 Microsoft SQL Server 工作負載的已知限制</block>
   <block id="84c88b39fd4f46203da512886dfca56b" category="section-title">克隆生命週期支援</block>
   <block id="3c068270aa0287f7c64a3c9c3a4f89a7" category="list-text">不支援從物件儲存克隆。</block>
@@ -877,8 +872,6 @@
   <block id="9772979b1b90e72fc3981d222d55243a" category="paragraph">您可以將 Hyper-V 工作負載備份到 Amazon Web Services S3 或StorageGRID ，並將 Hyper-V 工作負載還原為本機 Hyper-V 主機。</block>
   <block id="b7bf580752a61d71227184a60f0fbfd3" category="paragraph">使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：</block>
   <block id="79c28420811a3b277df19fdd38cd10e0" category="list-text">多種媒體類型可確保在一種媒體類型發生實體或邏輯故障時能夠進行故障轉移。</block>
-  <block id="532ee325506687dccb969b2e88d92b32" category="inline-link-macro">切換到先前的NetApp Backup and RecoveryUI</block>
-  <block id="9847581c7ebe97c62f71ab1d90ed1696" category="admonition">若要切換至NetApp Backup and Recovery UI 版本或從 NetApp Backup and Recovery UI 版本切換，請參閱<block ref="3a517a59babeb4a2a4c0dc21bafb9259" category="inline-link-macro-rx"></block>。</block>
   <block id="124a0ee1a6efcb80b27fc999fe308e62" category="paragraph">您可以使用NetApp Backup and Recovery執行與 Hyper-V 工作負載相關的下列任務：</block>
   <block id="e853aa4eb98908dd4b95a8cc80d9972f" category="list-text"><block ref="e853aa4eb98908dd4b95a8cc80d9972f" category="inline-link-macro-rx"></block></block>
   <block id="17eed7efdf891efe01a3f9078fc5227d" category="inline-link-macro">為 Hyper-V 工作負載建立和管理保護群組</block>
@@ -1573,7 +1566,6 @@
   <block id="812f9cbafb4aa2378e7470b20baa1fef" category="list-text">或者，選擇“*搜尋*”以根據您的搜尋條件尋找資源。</block>
   <block id="aa49cc3a36d2c16ec191533800daa634" category="list-text">如果清單包含您想要保護的資源，請選擇「下一步」。</block>
   <block id="4d3ca3588667d04ddbd4f318cdd7677e" category="inline-link-macro">新增保護策略</block>
-  <block id="2769be0838f5e6f63e01200eeeec1910" category="list-text">（可選）在「*策略*」區域中，選擇現有保護策略來保護應用程序，或建立新策略。如果不選擇策略，則建立的應用程式將不帶保護策略。你可以<block ref="99c823f28a98717f81cda4eb0c448db5" category="inline-link-macro-rx"></block>之後。</block>
   <block id="4049c9e3b9c424f5991c5f917ad92c40" category="inline-link-macro">執行鉤子模板</block>
   <block id="5e97a71c79e2f24deabf91daa3d20cd1" category="list-text">在*Prescripts and postscripts*區域中，啟用並配置您想要在備份操作之前或之後執行的任何prescript或postscript執行掛鉤。若要啟用處方或附言，您必須至少已建立了一個<block ref="3059f3d40a47ddab4d322199b8601d95" category="inline-link-macro-rx"></block>。</block>
   <block id="9f77aac915c7dddb04d022bff72e881d" category="paragraph">應用程式已建立並出現在 Kubernetes 清單的 *應用程式* 標籤中的應用程式清單中。  NetApp Console會根據您的設定啟用對應用程式的保護，並且您可以在備份和還原的*監控*區域中監控進度。</block>
@@ -5354,7 +5346,6 @@
   <block id="4068d5ec1a7b4b267d864b4ad09e26cf" category="list-text">啟用 *Resource transformation* 選項，即可對修改器進行變更。</block>
   <block id="58277b3a38eb38eb305ae4faa19d846d" category="list-text">從 *Template* 清單中選擇一個範本，即可快速套用您常用的修飾符設定。此清單包含常見場景的預定義範本以及您建立的自訂範本。</block>
   <block id="f4f70727dc34561dfde1a3c529b6205c" category="inline-link-macro">設定</block>
-  <block id="632317b2bb237c1d7d24b46218476569" category="admonition">在全域 <block ref="676a0eaa3ab155e3d0da7696107f049f" category="inline-link-macro-rx"></block> 區域建立資源轉換範本。</block>
   <block id="4f92a8032a0def18d5e7cfbe7fc6b465" category="list-text">請透過輸入資源群組、版本、種類和名稱來指定要修改的資源。</block>
   <block id="0be96bf87a216fa4424d9b22e1624c4c" category="list-text">從 *Operation* 清單中選擇操作，以指定您要對資源執行的操作。</block>
   <block id="526aad7c01abce8bd37b72aea1adf9a2" category="list-text">輸入您要變更之特定金鑰的 JSON 路徑。</block>
@@ -5558,4 +5549,6 @@
   <block id="54f8a7826ae5101b3374158dadb22dbe" category="list-text">*從 Backup and Recovery 升級 Trident Protect*：如果您的 Kubernetes 叢集執行的是 Trident Protect 26.05 或更新版本，現在可以直接從 Backup and Recovery 升級 Trident Protect。</block>
   <block id="482d8dda04ea30da4fa480c529cb09b0" category="list-text">*Trident Protect 26.05.1*：此版本包含 Trident Protect 26.05.1。</block>
   <block id="d0426b89e832dc9c7bd7771552d69499" category="list-text">*基於 VM 的應用程式就地還原*：現在您可以將基於 VM 的應用程式還原到原始命名空間和原始叢集。</block>
+  <block id="b53801e3c4b30277c5f2975ffed7720c" category="list-text">您也可以在「策略」區域中選擇現有的保護策略來保護應用程式，或建立新策略。如果您未選擇策略，則建立的應用程式將沒有保護策略。您可以稍後<block ref="ee6916d2984f9ce63f3c3b8b1b4f14f9" category="inline-link-macro-rx"></block>。</block>
+  <block id="fefcfa5dbc8a28e96b9d098440cd7d4a" category="admonition">在全域 <block ref="3ce10431a19a41e956e68fb70b49b83e" category="inline-link-macro-rx"></block> 區域建立資源轉換範本。</block>
 </blocks>
