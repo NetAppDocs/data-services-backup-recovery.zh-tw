@@ -5551,4 +5551,5 @@
   <block id="d0426b89e832dc9c7bd7771552d69499" category="list-text">*基於 VM 的應用程式就地還原*：現在您可以將基於 VM 的應用程式還原到原始命名空間和原始叢集。</block>
   <block id="b53801e3c4b30277c5f2975ffed7720c" category="list-text">您也可以在「策略」區域中選擇現有的保護策略來保護應用程式，或建立新策略。如果您未選擇策略，則建立的應用程式將沒有保護策略。您可以稍後<block ref="ee6916d2984f9ce63f3c3b8b1b4f14f9" category="inline-link-macro-rx"></block>。</block>
   <block id="fefcfa5dbc8a28e96b9d098440cd7d4a" category="admonition">在全域 <block ref="3ce10431a19a41e956e68fb70b49b83e" category="inline-link-macro-rx"></block> 區域建立資源轉換範本。</block>
+  <block id="40ccff053be8d0d5d48c09ba075b58e5" category="admonition">當您還原已啟用 SnapLock 的磁碟區時，只有在目的地儲存設備已啟用 WORM 的情況下，還原的磁碟區才會保留 SnapLock 保護。如果還原到非 WORM 目的地，SnapLock 狀態將從還原的磁碟區中移除。</block>
 </blocks>
