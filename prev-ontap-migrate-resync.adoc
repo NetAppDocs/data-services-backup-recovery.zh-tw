@@ -112,6 +112,9 @@ image:diagram-snapmirror-cloud-resync-migration-steps.png["使用SnapMirror到 C
 
 遷移後， NetApp技術更新團隊將確保完成以下步驟以建立保護並為重新同步做好準備。
 
+
+NOTE: 請勿使用SnapMirror「Vault」類型的策略將磁碟區從舊的 ONTAP 叢集複製到新的 ONTAP 叢集，或在級聯架構設定中複製。Vault 策略會在傳輸過程中變更快照的版本 UUID。快照的版本 UUID 用於確定來源和目標之間是否存在通用快照。
+
 . 記錄目標ONTAP叢集中所有遷移磁碟區的新磁碟區實例 UUID。
 . 確認舊ONTAP叢集中可用的所有必要SnapMirror策略均已在新ONTAP叢集中正確配置。
 . 在控制台*系統*頁面中將新的ONTAP叢集新增為系統。
@@ -156,10 +159,10 @@ NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例
 . 輸入重新同步操作所需的提供者和網路設定資訊。
 . 選擇*提交*開始驗證程序。
 +
-NetApp Backup and Recovery驗證選擇重新同步的每個磁碟區是否都是最新快照，並且至少有一個通用快照。這可確保磁碟區已準備好進行SnapMirror到 Cloud Resync 操作。
+NetApp Backup and Recovery 會驗證每個選擇重新同步的磁碟區是否與物件儲存區共享相同的快照。具體來說，儲存在物件儲存區中的最新快照也必須存在於新複製磁碟區的本地快照中。此檢查可確保這些磁碟區已準備好進行 SnapMirror to Cloud Resync 作業。
 
 . 查看驗證結果，包括新的來源磁碟區名稱和每個磁碟區的重新同步狀態。
-. 檢查容量是否合格。系統檢查磁碟區是否符合重新同步的條件。如果磁碟區不符合條件，則表示它不是最新的快照或未找到通用快照。
+. 檢查磁碟區資格。系統會檢查磁碟區是否符合重新同步的條件。如果某個磁碟區不符合條件，則表示未建立通用 Snapshot 標準。
 +
 
 IMPORTANT: 為了確保磁碟區仍然符合SnapMirror到 Cloud Resync 操作的條件，請在遷移前階段刪除任何SnapMirror關係之前，為每個磁碟區拍攝最終快照。這保留了資料的最新狀態。

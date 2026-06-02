@@ -2827,9 +2827,7 @@
   <block id="42ae5c9bea47cb038f5eb5c20c14c009" category="list-text">選擇“上傳卷對映詳細資料”下的“上傳”，將完成的 CSV 表上傳到NetApp Backup and RecoveryUI。</block>
   <block id="52fe5bc906babbd082ffb0764b349da3" category="list-text">輸入重新同步操作所需的提供者和網路設定資訊。</block>
   <block id="43b0700358df39b882c5da30b98d8dcd" category="list-text">選擇*提交*開始驗證程序。</block>
-  <block id="c64a45891aedaa884bd5102de27a4a78" category="paragraph">NetApp Backup and Recovery驗證選擇重新同步的每個磁碟區是否都是最新快照，並且至少有一個通用快照。這可確保磁碟區已準備好進行SnapMirror到 Cloud Resync 操作。</block>
   <block id="8463b887dbd61aa1995dcc0260b60f9f" category="list-text">查看驗證結果，包括新的來源磁碟區名稱和每個磁碟區的重新同步狀態。</block>
-  <block id="b98c88f62c4834a257b2a73ee9fbb4dd" category="list-text">檢查容量是否合格。系統檢查磁碟區是否符合重新同步的條件。如果磁碟區不符合條件，則表示它不是最新的快照或未找到通用快照。</block>
   <block id="4d37de81f19963c13dc2e27a80c87068" category="admonition">為了確保磁碟區仍然符合SnapMirror到 Cloud Resync 操作的條件，請在遷移前階段刪除任何SnapMirror關係之前，為每個磁碟區拍攝最終快照。這保留了資料的最新狀態。</block>
   <block id="c856ee3b535d4aa35b19af5253f54e81" category="list-text">選擇*重新同步*以開始重新同步操作。系統使用最新且通用的快照僅傳輸增量更改，確保備份的連續性。</block>
   <block id="8d2d3fb9cf8aa026f491048ab9fdf368" category="list-text">在作業監視器頁面中監視重新同步過程。</block>
@@ -5552,4 +5550,7 @@
   <block id="b53801e3c4b30277c5f2975ffed7720c" category="list-text">您也可以在「策略」區域中選擇現有的保護策略來保護應用程式，或建立新策略。如果您未選擇策略，則建立的應用程式將沒有保護策略。您可以稍後<block ref="ee6916d2984f9ce63f3c3b8b1b4f14f9" category="inline-link-macro-rx"></block>。</block>
   <block id="fefcfa5dbc8a28e96b9d098440cd7d4a" category="admonition">在全域 <block ref="3ce10431a19a41e956e68fb70b49b83e" category="inline-link-macro-rx"></block> 區域建立資源轉換範本。</block>
   <block id="40ccff053be8d0d5d48c09ba075b58e5" category="admonition">當您還原已啟用 SnapLock 的磁碟區時，只有在目的地儲存設備已啟用 WORM 的情況下，還原的磁碟區才會保留 SnapLock 保護。如果還原到非 WORM 目的地，SnapLock 狀態將從還原的磁碟區中移除。</block>
+  <block id="ae560942cdf67d205fbeeda3a63a14a3" category="admonition">請勿使用SnapMirror「Vault」類型的策略將磁碟區從舊的 ONTAP 叢集複製到新的 ONTAP 叢集，或在級聯架構設定中複製。Vault 策略會在傳輸過程中變更快照的版本 UUID。快照的版本 UUID 用於確定來源和目標之間是否存在通用快照。</block>
+  <block id="eccb056c811f6da5d84262d7dd856d5c" category="paragraph">NetApp Backup and Recovery 會驗證每個選擇重新同步的磁碟區是否與物件儲存區共享相同的快照。具體來說，儲存在物件儲存區中的最新快照也必須存在於新複製磁碟區的本地快照中。此檢查可確保這些磁碟區已準備好進行 SnapMirror to Cloud Resync 作業。</block>
+  <block id="4869420875f3291b832867e066be6b05" category="list-text">檢查磁碟區資格。系統會檢查磁碟區是否符合重新同步的條件。如果某個磁碟區不符合條件，則表示未建立通用 Snapshot 標準。</block>
 </blocks>
