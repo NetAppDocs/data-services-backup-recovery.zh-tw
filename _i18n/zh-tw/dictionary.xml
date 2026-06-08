@@ -1147,12 +1147,7 @@
   <block id="f23e3ed54ae928c06add368fe4fe5a66" category="section-title">刪除 Kubernetes 集群</block>
   <block id="884dae5f1c15db330f66f8e2866510c1" category="list-text">選擇*刪除群集*。</block>
   <block id="19ce5318fcc2968a80a3d2213a7120af" category="list-text">查看確認對話方塊中的信息，然後選擇*刪除*。</block>
-  <block id="6e464deab83d8eb0500f0c27ef47c58b" category="doc">使用NetApp Backup and Recovery管理資源概述</block>
-  <block id="1391797a0b30576f1f116202d3da3a46" category="paragraph">您可以完成與管理資源相關的以下任務：</block>
-  <block id="ccc9658d0f980f24634bf5ef6aaceb3d" category="inline-link-macro">管理庫存</block>
-  <block id="9517c8b5ba697f22d1982a7a6950dbce" category="list-text"><block ref="84e97f55697cdae80cb35f3f0e373346" category="inline-link-macro-rx"></block>。</block>
   <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="inline-link-macro">管理快照</block>
-  <block id="ccfc47004ad0ab207533113156514c4a" category="list-text"><block ref="d66ed6d81bd70c133ddb80e0d8285080" category="inline-link-macro-rx"></block>。</block>
   <block id="5cb859488fba0d173df5045c81e5ee2f" category="doc">使用NetApp Backup and Recovery管理 Microsoft SQL Server 快照</block>
   <block id="56baceb052a5efa89c30115707384440" category="paragraph">您可以透過從NetApp Backup and Recovery中刪除 Microsoft SQL Server 快照來管理它們。</block>
   <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">刪除快照</block>
@@ -1587,31 +1582,16 @@
   <block id="fb197ee87a0f850dc3b7bb98fe408518" category="inline-link-macro">配置設定</block>
   <block id="e1fb45ea82cb12d1d1dbdee887e2850a" category="summary">NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用程式。</block>
   <block id="c75d148fe813178c4a53664110efe289" category="paragraph">NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用程式。要恢復應用程序，應用程式需要至少有一個可用的恢復點。復原點由本機快照或物件儲存備份（或兩者）組成。您可以使用本機、輔助或物件儲存存檔來還原應用程式。</block>
-  <block id="b2c71ce0eb7f82adff3580d86f20d76d" category="list-text">在應用程式清單中，選擇要還原的應用程式並選擇相關的操作選單。</block>
-  <block id="553b5cd5dac97c088cf126dd86d0a9fb" category="list-text">選擇*查看和恢復*。</block>
   <block id="5a870c22146ba310e89eaf52f510bdc8" category="paragraph">出現還原點清單。</block>
-  <block id="c42e645eedd858c3f07be6b12b14117e" category="list-text">開啟您要使用的還原點的操作選單，然後選擇*還原*。</block>
-  <block id="de62775a71fc2bf7a13d7530ae24a7ed" category="floating-title">常規設定</block>
-  <block id="0b829a26d220bb63e030d1042081a086" category="list-text">選擇要從中復原的來源（本機或物件儲存）。</block>
   <block id="d7560bb34437cec51e7e4319ee098f83" category="list-text">從*Cluster*清單中選擇目標群集。</block>
-  <block id="f01f0a18d4bc038c4ed2929f4450ed7d" category="list-text">選擇還原目標命名空間。</block>
-  <block id="75e31fe436b541e95871c54827070e6e" category="paragraph">您可以還原到原始命名空間，也可以還原到新的命名空間。</block>
-  <block id="0ea90fe06c37ce54f4695cefd1980f66" category="floating-title">資源選擇</block>
   <block id="74f41c06ce4ca2bd3dc7e2b83148072b" category="list-text">選擇是否要恢復與應用程式相關的所有資源，或使用篩選器選擇要復原的特定資源：</block>
-  <block id="6ead82e0fb87f1d2639b05d1f514c487" category="open-title">恢復所有資源</block>
   <block id="7247b0618202329b2ab0af353626c9ab" category="list-text">選擇*恢復所有資源*。</block>
-  <block id="a4929640d434e06c32c659a99d0b8163" category="open-title">恢復特定資源</block>
   <block id="d236d20849d5bad669774260f1bf4c47" category="list-text">選擇*選擇性資源*。</block>
   <block id="f6fab4c7c8e2fbb724cb732a6f96f2c2" category="list-text">選擇資源過濾器的行為。如果您選擇“*包括*”，則會恢復您選擇的資源。如果您選擇“*排除*”，則您選擇的資源將不會被恢復。</block>
   <block id="edd2fb2dbd2bec448d4fb4f7596eb159" category="list-text">選擇*新增規則*來新增定義選擇資源的篩選器的規則。您至少需要一條規則來過濾資源。</block>
   <block id="97eef9e67660a5a91cc028dff60a130f" category="paragraph">每個規則都可以根據資源命名空間、標籤、群組、版本和種類等標準進行過濾。</block>
   <block id="7d2b12877c8289521dfc37e1a4ce6681" category="list-text">選擇*儲存*來儲存每條規則。</block>
-  <block id="f5c8e073cfadb44db550fdd37a2fcc8e" category="list-text">新增所有需要的規則後，選擇*搜尋*即可查看備份檔案中符合篩選條件的可用資源。</block>
   <block id="a9f292136fbf924f6d8d675318db6235" category="admonition">顯示的資源是叢集上目前存在的資源。</block>
-  <block id="b5c9051aafb85384e02d47693c3be179" category="list-text">對結果滿意後，選擇*下一步*。</block>
-  <block id="8d7c9cf5b15032c441cad2d538d90368" category="floating-title">目的地設定</block>
-  <block id="5d49eb458c546b4f70a99f4b37bbcc20" category="list-text">選擇恢復到預設儲存類別或其他儲存類別。</block>
-  <block id="12c3c958b266fff57134abb1c9649419" category="list-text">或者，如果您選擇還原到不同的儲存類，請選擇一個目標儲存類別來符合每個來源儲存類別。</block>
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">刪除備份</block>
   <block id="d1980609675dd3ea40abaebd4a0989d8" category="doc">使用NetApp Backup and RecoveryVMware 工作負載</block>
   <block id="30a409f022898dd26f006e04486b81e0" category="paragraph">將 VMware VM 和資料儲存區從本機ONTAP系統備份到 Amazon Web Services、 Azure NetApp Files或StorageGRID，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。</block>
@@ -1852,13 +1832,7 @@
   <block id="4c62e57751652d4b577a25756cfdab04" category="list-text">若要套用更改，請重新啟動電腦。</block>
   <block id="3a3942a17def38d9bd0471e0ef50fc54" category="paragraph-title">停用 UAC 遠端限制的 PowerShell 7 命令範例：</block>
   <block id="5af774cd9735f1047d099584c2782535" category="paragraph">此範例中的值設定為“1”，表示 UAC 遠端限制已停用。</block>
-  <block id="22167e870f6d93e553b43fc2deb69861" category="paragraph">透過驗證操作環境、 NetApp Console代理程式和NetApp Console帳戶的準備情況，開始使用NetApp Backup and Recovery 。要使用NetApp Backup and Recovery，您需要滿足這些先決條件。</block>
-  <block id="a46da293e3099636eab1ab8a656acc6a" category="section-title">ONTAP 9.8 及更高版本的先決條件</block>
-  <block id="e3f0159851c2ac10a4f0d46840e5a66e" category="paragraph">必須在本機ONTAP實例上啟用ONTAP One 授權。</block>
-  <block id="05e7a5201131047cf35d26a62e1a0a4d" category="section-title">備份到物件儲存的先決條件</block>
-  <block id="439fbbae0adc9211b89c4a70f01d1a33" category="paragraph">若要使用物件儲存作為備份目標，您需要一個具有 AWS S3、Microsoft Azure Blob、 StorageGRID或ONTAP 的帳戶並配置適當的存取權限。</block>
   <block id="7126662a353f79c46a7ccefe46dc4c0a" category="inline-link-macro">保護您的ONTAP卷數據</block>
-  <block id="1d638e05920fe33426fac4dc6285a639" category="list-text"><block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block></block>
   <block id="ef53d2e08e79af10a2e451632255842d" category="section-title">保護 Microsoft SQL Server 工作負載的要求</block>
   <block id="0acd3a555d2cc1f83c65dc743cf15408" category="paragraph">若要將NetApp Backup and Recovery用於 Microsoft SQL Server 工作負載，您需要滿足下列主機系統、空間和大小調整前提條件。</block>
   <block id="7d74f3b92b19da5e606d737d339a9679" category="cell">物品</block>
@@ -1880,13 +1854,10 @@
   <block id="fdd736f6cacce38b5102696f59ea433a" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="c2340f294ea0edd3eaa143337cddb591" category="inline-link-rx"></block>。</block>
   <block id="573531ec152a1cc1709422d00088088e" category="section-title">保護 VMware 工作負載的要求</block>
   <block id="4ccfae37bea4d344c283e2a68013c9c1" category="paragraph">您需要特定的要求來發現和保護您的 VMware 工作負載。</block>
-  <block id="1269e07e6a9265be5844ea32a0494a7f" category="paragraph">軟體支援</block>
-  <block id="dc735211c86b33a749d2c86bb8b39e80" category="paragraph">*保護 VMware 工作負載的連線和連接埠需求*</block>
   <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">連接埠類型</block>
   <block id="99ddf0e823c1be51589f68696f62cf56" category="cell">預配置連接埠</block>
   <block id="2cb2843b629d315325aac076907ec4b9" category="cell">VMware ESXi 伺服器連接埠</block>
   <block id="131b9f1c14d26ba7a0cce7389e7679a9" category="cell">儲存叢集或儲存虛擬機器端口</block>
-  <block id="6def2be93b1fef441b3ca8a2641cc837" category="paragraph">*保護 VMware 工作負載的基於角色的存取控制 (RBAC) 要求*</block>
   <block id="82ede2f1cf5c1f154c5f0ccbd08838b2" category="section-title">保護 KVM 工作負載的要求</block>
   <block id="64bef292bab71a21d8b1fdfdc5e220aa" category="paragraph">您需要特定的要求來發現和保護 KVM 虛擬機器。</block>
   <block id="0e41245837200bd6043f82d33b20190c" category="list-text">運行核心版本 5.14.0-503.22.1.el9_5.x86_64（長期）或更高版本的現代 Linux 發行版</block>
@@ -1908,31 +1879,7 @@
   <block id="1498907a7069094c1a1b679e2a53087a" category="list-text">主ONTAP系統（ONTAP 9.14.1 或更高版本）</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">ONTAP 文檔</block>
   <block id="0a2b6c395fc07f332dac7e7046c239c4" category="list-text">對於使用 CIFS 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在ONTAP系統上啟用了連續可用性共用屬性。請參閱<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>以取得說明。</block>
-  <block id="0811b88847f846fb265d219dc4238de2" category="section-title">在NetApp Console中</block>
-  <block id="155fcb205d15e054986b2632ea1cd854" category="paragraph">確保NetApp Console符合以下要求。</block>
-  <block id="5cc1bd5a248543034a550e50bf5aa001" category="inline-link-macro">NetApp Backup and Recovery基於角色的功能訪問</block>
-  <block id="c850782e660a82e43396b6f00fc156a9" category="list-text">控制台使用者應具有對 Microsoft SQL Server 和 Kubernetes 工作負載執行操作所需的角色和權限。要發現資源，您必須具有NetApp Backup and Recovery超級管理員角色。看<block ref="3ea538d610f9c38c4e9027f82ccc13f0" category="inline-link-macro-rx"></block>有關在NetApp Backup and Recovery中執行操作所需的角色和權限的詳細資訊。</block>
-  <block id="6119abf359d82ff3e20728a6c3d8f6ca" category="list-text">具有至少一個活動控制台代理的控制台組織，該代理連接到本地ONTAP叢集或Cloud Volumes ONTAP。</block>
-  <block id="f3ac1f83c98111c361c8cb45aee2f272" category="list-text">至少一個具有NetApp本地ONTAP或Cloud Volumes ONTAP叢集的控制台系統。</block>
-  <block id="e73e7287ad2b8e179dae88b6eebada6c" category="list-text">控制台代理</block>
-  <block id="04f679e072129c7e87e077dc95e5e73e" category="inline-link">了解如何配置控制台代理</block>
-  <block id="67a50452f70d09a4796d712935acce40" category="inline-link">標準NetApp Console要求</block>
-  <block id="9cf0324010f5d39596c98416e19929c6" category="paragraph">參考<block ref="f26f3bdec25207bfa60c6d1f2da2fd25" category="inline-link-rx"></block>和<block ref="0f2cc189841820bbf400fd90cf6cb8ee" category="inline-link-rx"></block>。</block>
-  <block id="3b554f93911a798d0765c792e57bafca" category="list-text">預覽版需要 Ubuntu 22.04 LTS 作業系統作為控制台代理。</block>
-  <block id="3398d1a4d0a2aea999eac34931a1d998" category="section-title">設定NetApp Console</block>
-  <block id="16d9ecdb498025063dae8f97b5c73400" category="paragraph">下一步是設定控制台和NetApp Backup and Recovery。</block>
-  <block id="10d5c90fc807b2c9968a61c35be570c9" category="paragraph">審查<block ref="0f2cc189841820bbf400fd90cf6cb8ee" category="inline-link-rx"></block>。</block>
-  <block id="f3aee30a3a487c746572616e3f53dc9d" category="section-title">建立控制台代理</block>
-  <block id="62cc32537e8fdfb6d3282291f4042bb4" category="paragraph">您應該聯絡您的NetApp產品團隊來嘗試備份和復原。然後，當您使用控制台代理時，它將包含適合該服務的功能。</block>
-  <block id="039a0f51fabaf695c33b745ebbd147bf" category="inline-link">如何建立控制台代理</block>
-  <block id="80cb602f4ec24fce408434bc7c65f694" category="paragraph">若要在使用服務之前在NetApp Console中建立控制台代理，請參閱描述<block ref="a747c66fa3a9e5a767b0d1460e988f0c" category="inline-link-rx"></block>。</block>
-  <block id="92f0c45157f4a06638de9514d90f06ae" category="paragraph-title">控制台代理的安裝位置</block>
-  <block id="4ad96aae78a2caccba56b457927512be" category="paragraph">若要完成還原操作，可以在下列位置安裝控制台代理程式：</block>
-  <block id="4a1a570f7927f6e76005a28d1f766677" category="list-text">對於 Amazon S3，控制台代理可以部署在您的場所。</block>
-  <block id="a10afc87a656ad40aea2fd4081fa15dd" category="list-text">對於 Azure Blob，可以在您的地方部署控制台代理程式。</block>
-  <block id="299fc3aa5fad549c858e325b2098ebfc" category="list-text">對於StorageGRID，控制台代理必須部署在您的場所；無論是否有網路存取。</block>
   <block id="f6e9a28cc6109da66451b7ed0caaea35" category="list-text">對於ONTAP S3，控制台代理可以部署在您的場所（有或沒有網路存取）或雲端供應商環境中</block>
-  <block id="f11d659b2497c3836db933d95773f939" category="admonition">「本地ONTAP系統」包括FAS和AFF系統。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律聲明提供對版權聲明、商標、專利等的存取。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
@@ -3894,8 +3841,6 @@
   <block id="e7a5ac87e73475a462d4dc0b02fe041a" category="paragraph">NetApp Backup and Recovery可協助您管理 Microsoft SQL Server 主機、資料庫和執行個體。您可以查看、變更或刪除庫存的保護設定。</block>
   <block id="cfdfd7a1b72e8e723d4b5a0b7e6afbf5" category="paragraph">刪除不再需要的應用程式。  NetApp Backup and Recovery停止保護並刪除已刪除應用程式的所有備份和快照。</block>
   <block id="f211d824587f775c16c5bded7ee65614" category="paragraph">若要停止保護 Kubernetes 集群，請停用保護並刪除相關應用程序，然後從NetApp Backup and Recovery中刪除該集群。  NetApp Backup and Recovery不會刪除叢集或其資源；它只會從NetApp Console清單中刪除叢集。</block>
-  <block id="2bba4a20b069f20b81f5d7e00bb55ee1" category="summary">管理NetApp Backup and Recovery中的資源以保護您的資料。</block>
-  <block id="5a32edb5240e680dd91847bce7538e99" category="paragraph">管理NetApp Backup and Recovery中的資源以保護您的資料。控制備份、資料庫、實例、應用程式主機和系統。查看、編輯或刪除資源保護設定。</block>
   <block id="76be0aa5e848bc95ef63cb71a62a4a8c" category="admonition">驗證該行*位置*列中的本機快照圖示是否顯示為藍色。</block>
   <block id="c9ba59160e2a933914b5eb21420c64e0" category="summary">使用NetApp Backup and Recovery作業。</block>
   <block id="e10e8c5d47314e650f29f8a9e66e579f" category="paragraph">使用NetApp Backup and Recovery作業。追蹤您啟動的恢復作業。查看已完成、正在進行或失敗的作業以協助診斷問題。在NetApp Console通知中心啟用電子郵件通知，以便在未登入時隨時了解系統活動。使用控制台時間軸查看從 UI 或 API 啟動的所有操作的詳細資訊。</block>
@@ -4246,7 +4191,6 @@
   <block id="31c25778a66dd9ff2087fb25f9f003e3" category="list-text">對於 AWS，您可以將備份分層儲存到 AWS _S3 Glacier_ 或 _S3 Glacier Deep Archive_ 儲存中。<block ref="da672f43205b0c90027c7dfb66aec892" category="inline-link-macro-rx"></block>。</block>
   <block id="cf79bdcd3a75ca2aaf153bfbee77f91f" category="list-text">對於 Azure，您可以將較舊的備份分層儲存到 _Azure Archive_ 儲存體中。<block ref="378f4ee26769b0f22cf8e5c4c18a63bc" category="inline-link-macro-rx"></block>。</block>
   <block id="55746a30fb9b4c5182484dec9b3600d3" category="list-text">您可以將資料從本機ONTAP系統備份到本機ONTAP系統或為 S3 物件儲存配置的Cloud Volumes ONTAP系統。<block ref="61d8249673309599fa2a7a8b0c67a195" category="inline-link-macro-rx"></block>。</block>
-  <block id="a99979a95e2c9dcb0b5768f80898dd11" category="cell">Amazon S3 Azure Blob Google Cloud Storage NetApp StorageGRID ONTAP S3</block>
   <block id="5cbc97866d11e9b3160156a597fbd5bf" category="list-text">在 AWS 中，控制台可以實現<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block> 在 S3 鏟斗上。</block>
   <block id="108d25df82fe933520bf967ad1d14b85" category="list-text">在 Azure 中，控制台使用新的或現有的資源群組，並為 Blob 容器指派儲存帳戶。主機<block ref="a7068b8d2b60241ce77a1051f3a66ed5" category="inline-link-rx"></block> 預設情況下。</block>
   <block id="fc2c90af4df4de3a15611b7cf431a683" category="list-text">在 GCP 中，控制台使用具有 Google Cloud Storage 儲存桶儲存帳戶的新專案或現有專案。</block>
@@ -4890,7 +4834,6 @@
   <block id="5508505cbdbe4c572010783025a1150d" category="list-text">Red Hat Enterprise Linux 8</block>
   <block id="79a35fb717e5fb1f7054fc94c597e2d2" category="list-text">Red Hat Enterprise Linux 9</block>
   <block id="014ba561f219ba053a41bf54f3ce33b4" category="cell">物件儲存 （備份目標）</block>
-  <block id="3e0bb972fc7b38e6cd0262fb76265e80" category="paragraph">*Hyper-V Windows Server 主機的軟體需求*</block>
   <block id="bbc2d665b02dc421c5c756db4b973610" category="cell">Microsoft Hyper-V</block>
   <block id="49c1cfb8defeea7149e31b4d5c722668" category="cell">2019 、 2022 及 2025 版</block>
   <block id="d5fda164bdd74f6422bd307aaf09a590" category="cell">ASP.NET Core Runtime</block>
@@ -4901,8 +4844,6 @@
   <block id="4698b69bed4ee276f187d88f25644b08" category="cell">請確保在 Windows 防火牆設定中允許下列連接埠的雙向 HTTPS 流量</block>
   <block id="d213948679817ac06e8c20f73a6d5e50" category="list-text">TCP 8144（NetApp Plugin for Hyper-V）</block>
   <block id="eb24ddd0422049219f581858a9ae2714" category="list-text">TCP 8145（NetApp Plugin for Windows）</block>
-  <block id="1fb4fe8a0be6159013de38bbdffbcab3" category="paragraph">*Hyper-V 主機的硬體需求*</block>
-  <block id="7f32d94ab622f0820b5ea4312baa0d74" category="paragraph">*NetApp ONTAP 配置要求*</block>
   <block id="86a1075e6640849bd364878900fd5412" category="paragraph">您也可以依照下列步驟取代 Console 代理程式並還原在本機以_標準模式_使用 Backup and Recovery 時儲存在其上的設定資料（當不涉及雲端帳戶時，例如，當使用 NetApp StorageGrid 作為備份目標時）。</block>
   <block id="72edcbdd4436f32d101a83a36dd2d1db" category="list-text">執行 *ls* 命令以確保已建立資料夾 "catalogdb1"，並且其中包含子資料夾<block ref="45b963397aa40d4a0063e0d85e4fe7a1" prefix=" " category="inline-code"></block>、<block ref="b17be6650251f2e6c7d4e90209beb4e0" prefix=" " category="inline-code"></block>和<block ref="695633290d050f31cec0c9d4bd4a57fe" prefix=" " category="inline-code"></block>。</block>
   <block id="69b1a964078d5301a2aa9822cb2304f2" category="section-title">2026 年 3 月 16 日</block>
@@ -5370,15 +5311,12 @@
   <block id="ab186862b28de3aad826b26d80e3eb96" category="list-text">*複製支援*：您現在可以從主要儲存設備和次要儲存設備建立虛擬機器快照的複製。</block>
   <block id="87e187714ad3406b822e2c0bf109240b" category="summary">您可以將 Hyper-V VM 快照中的一個或多個檔案或資料夾還原到 Windows 客體 VM。</block>
   <block id="cd21aa174cd18a8828140ba323628bfb" category="doc">從 Hyper-V VM 備份中還原檔案和資料夾</block>
-  <block id="640c4dc490a389b9c6997266e8a71a44" category="paragraph">將 Hyper-V VM 備份中的檔案和資料夾從主儲存設備還原到 Windows 客體 VM。</block>
   <block id="d822ec23856d26a5af79fad29ce2f55e" category="paragraph">從快照掛載虛擬磁碟，並將檔案和資料夾從該虛擬磁碟還原到原始（來源）Windows VM。</block>
   <block id="d4bb35603ef1e4c4f849336d35413c6f" category="paragraph">在您能夠還原檔案和資料夾之前，必須在 NetApp Backup and Recovery 中為來源 VM 建立認證。此認證用於還原過程中與 VM 進行驗證。</block>
   <block id="17a458fd7a6b6ae191ac9219e3b46deb" category="paragraph">透過掛載虛擬磁碟開啟檔案和資料夾還原工作階段時，該工作階段將保持作用中狀態 48 小時。</block>
   <block id="392177f0b4a0bc4b5bc23ef82eee9fff" category="paragraph">還原效能取決於待還原的檔案或資料夾的大小和數量。對於給定的資料集大小，還原大量小檔案通常比還原少量大檔案花費的時間更長。</block>
   <block id="0c1d8f103b8f05dc9e681f213a4140ed" category="paragraph">還原檔案和資料夾時，請注意以下事項：</block>
   <block id="a705938172beea0cbb274379316dd157" category="list-text">目前無法將檔案和資料夾還原到 Linux 客體虛擬機器。</block>
-  <block id="93ef85ccd89fa47a0fcea649f6297cef" category="list-text">不支援從儲存在次要儲存設備或物件儲存設備上的備份還原檔案和資料夾。</block>
-  <block id="1c4499f1d98b1704724086469c122c63" category="list-text">您無法將檔案或資料夾還原至位於 SAN 儲存設備上的虛擬機器。</block>
   <block id="dcf405acd6661cbfd046dd011bf0a242" category="list-text">檢視或瀏覽保留分割區可能會導致錯誤。</block>
   <block id="d2c522c65144e52bf2492965958bd437" category="list-text">還原作業期間，客體檔案的隱藏屬性、系統屬性和加密屬性不會保留在還原的檔案中。</block>
   <block id="c1eecde3ab58a34da7f6aa03449b4f8c" category="list-text">您可以檢視和還原系統和隱藏檔案，以及檢視加密檔案。</block>
@@ -5388,7 +5326,6 @@
   <block id="d50199c3c85a7557227fb519ea120c77" category="list-text">選擇 *檔案和資料夾*。</block>
   <block id="87ac0b57021ca53dfe6ba31ad849c862" category="list-text">在 *從快照還原* 頁面上，執行下列操作：</block>
   <block id="10ea713b9cd4dda55a5d80fdf7a9f540" category="list-text">（選用）選擇時間範圍，依建立時間篩選快照清單。</block>
-  <block id="438a6c1066c8a98f8894daf9e98f7ab5" category="list-text">選擇主儲存設備上的快照以進行還原，然後選取 *Next* 。</block>
   <block id="3edc266f3a91667d89f538f69793db00" category="list-text">或者，在 *Guest virtual machine credentials* 區段中，如果您尚未儲存來源虛擬磁碟和目的地 VM 的認證，請選取 *Add credentials*，輸入 Windows 認證資訊，然後選取 *Add*。</block>
   <block id="25e60e91201040d5c93090ccf9df68c8" category="paragraph">NetApp Backup and Recovery 會將虛擬磁碟掛載到原始 VM，並顯示所有檔案和資料夾，包括隱藏的項目。它會為每個分割區分配一個磁碟機代號，包括系統保留分割區。</block>
   <block id="bc3ab34e28906290dc143fb28934f931" category="list-text">在「選擇要還原的檔案或資料夾」頁面上，執行下列操作：</block>
@@ -5402,7 +5339,6 @@
   <block id="da51d3c21777acf76b87932de6839d64" category="list-text">（選用）若要使用工作階段將檔案和資料夾還原至客體 VM，請開啟工作階段的 Actions 功能表 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>，然後選取 *Restore files and folders*。</block>
   <block id="57c9526981addf2ea70c6ad409673cb5" category="list-text">（選用）若要刪除工作階段，請開啟工作階段的「動作」功能表 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>，然後選取 *Delete* 。</block>
   <block id="970e7dbe358429eacf37bb0e37943138" category="list-text">從物件儲存備份還原（僅限還原至原始位置）</block>
-  <block id="6d1557ca399dc5f147a2d09028ab2c97" category="admonition">不支援從物件儲存備份還原位於 SAN 儲存設備上的 VM。</block>
   <block id="4b59b9c80f0f0e40294e53eb75b4e004" category="list-text">還原至原始位置（從主儲存設備、次要儲存設備和物件儲存設備）</block>
   <block id="a6f964fecafa0484fc07f1b47496f82c" category="list-text">還原至替代位置（從主要儲存設備和次要儲存設備）</block>
   <block id="bff6f5877ada2718589866425ae83e38" category="doc">在 NetApp Backup and Recovery 中建立及管理 Hyper-V 備份原則</block>
@@ -5553,4 +5489,130 @@
   <block id="ae560942cdf67d205fbeeda3a63a14a3" category="admonition">請勿使用SnapMirror「Vault」類型的策略將磁碟區從舊的 ONTAP 叢集複製到新的 ONTAP 叢集，或在級聯架構設定中複製。Vault 策略會在傳輸過程中變更快照的版本 UUID。快照的版本 UUID 用於確定來源和目標之間是否存在通用快照。</block>
   <block id="eccb056c811f6da5d84262d7dd856d5c" category="paragraph">NetApp Backup and Recovery 會驗證每個選擇重新同步的磁碟區是否與物件儲存區共享相同的快照。具體來說，儲存在物件儲存區中的最新快照也必須存在於新複製磁碟區的本地快照中。此檢查可確保這些磁碟區已準備好進行 SnapMirror to Cloud Resync 作業。</block>
   <block id="4869420875f3291b832867e066be6b05" category="list-text">檢查磁碟區資格。系統會檢查磁碟區是否符合重新同步的條件。如果某個磁碟區不符合條件，則表示未建立通用 Snapshot 標準。</block>
+  <block id="6a46064fa3e0cc88fd5d8f1799eb5b66" category="paragraph">*支援 S3 相容的雲端儲存*：NetApp Backup and Recovery for Volumes 工作負載現在支援備份到 S3 相容的雲端儲存。</block>
+  <block id="860b17c21dae4758109cd6109bb92be4" category="list-text">*將檔案和資料夾還原到客體 VM 的功能改進*：現在您可以將主要或次要儲存設備上快照中的檔案和資料夾還原到客體 Windows VM。CIFS 和 SAN VM 現在支援此功能。</block>
+  <block id="3e96e50a62c2cc112989ccd5d4d264aa" category="list-text">在災難復原（DR）設定中還原檔案和資料夾：故障轉移後、為 DR 設定的儲存 VM 上的磁碟區會以中斷狀態保留既有的 SnapMirror 關係。由於目的地磁碟區已有關係、因此 ONTAP 會封鎖嘗試還原會建立暫時性 SnapMirror RST 關係的檔案或資料夾。</block>
+  <block id="d98b87c41bd7151a94b3271b45bd340f" category="paragraph">將 Hyper-V VM 備份中的檔案和資料夾從主儲存設備或次要儲存設備還原到 Windows 客體 VM。</block>
+  <block id="7438f70a76f855b704ba892f9c003542" category="list-text">不支援從儲存在物件儲存設備上的備份還原檔案和資料夾。</block>
+  <block id="7d3d3c20273081b66e3ecec1f0d07f51" category="list-text">從主儲存設備或次要儲存設備選取要還原的快照，然後選取 *Next* 。</block>
+  <block id="3808991f408e2ffd90ae953886ec1e79" category="doc">NetApp Backup and Recovery 需求</block>
+  <block id="44b68849dd3e2689fb41242f736a140f" category="paragraph">在開始使用 NetApp Backup and Recovery 之前、請確保您的 NetApp Console 和作業環境符合下列要求。</block>
+  <block id="b4d91981598471b84bcf3da4e96f7970" category="section-title">準備 NetApp Console</block>
+  <block id="64450efd5ca18cf6cebe654b9c7c05f3" category="paragraph">您可以透過 NetApp Console 存取 NetApp Backup and Recovery。若要準備 Console 以進行 Backup and Recovery，您必須：</block>
+  <block id="37326d6fc2dae8eb70c8e5c6290c961a" category="list-text">新增 Console 代理程式</block>
+  <block id="f7738f6711f0ef1fb3f5a4464e7fcfb4" category="list-text">至少新增一個儲存系統</block>
+  <block id="5fc19bba732118fb6de20131945d3a1f" category="list-text">設定 NetApp Console 組織和使用者角色</block>
+  <block id="be07c7874107215b35f4cb23114fdba4" category="paragraph">您需要在 NetApp Console 中擁有 Organization admin 或 Super admin 角色才能完成此準備。</block>
+  <block id="166d58641d71e8f7701618924f6e0230" category="inline-link">NetApp Console 統一儲存管理</block>
+  <block id="4422b0b5b9637937564bf621f2610c7a" category="paragraph">如需進一步了解 NetApp Console，請參閱<block ref="26a35b83e5712f1703b96c54f1ac11b8" category="inline-link-rx"></block>。</block>
+  <block id="a859e03fa525c25dee858dad62f9aec0" category="section-title">完成初始 NetApp Console 設定</block>
+  <block id="d1a0bf528dab9557b3add986fac96df8" category="paragraph">如果尚未完成，請完成 NetApp Console 的初始設定。</block>
+  <block id="91edb8869565e8b84d0bb89e65038d3a" category="inline-link">NetApp Console（SaaS 應用程式）入門工作流程</block>
+  <block id="19de064230f9802ad2a46adc704c00c1" category="paragraph"><block ref="19de064230f9802ad2a46adc704c00c1" category="inline-link-rx"></block></block>
+  <block id="4cdcdd6cc684e8847f57a8c461306706" category="section-title">部署 Console 代理程式</block>
+  <block id="41f59680b33ea7227eb6c7e09010d262" category="paragraph">Console 代理程式是一個輕量級軟體元件，您可以將其安裝在網路中，以將儲存基礎架構連接到 NetApp Console。它支援進階儲存協調、資料服務和安全的雲端整合。</block>
+  <block id="413f5c2acfdfdb1a561ffc22afe211b9" category="paragraph"><block ref="4818e913b60896a6e56bad9a383343fa" category="inline-link-rx"></block> <block ref="e0b8910c1bc5f58f6e1bc7ed243fa39c" category="inline-link-rx"></block></block>
+  <block id="737a87ab95be88819eceb25188f58963" category="section-title">新增儲存系統</block>
+  <block id="12e59e4e00969f08c2cb1af893e9ba7a" category="paragraph">在 Backup and Recovery 中保護工作負載之前，您需要將 ONTAP 儲存系統新增至 Console。</block>
+  <block id="d1b29fc7b35be872f620d5d931e8766c" category="inline-link">在 NetApp Console 中探索內部部署 ONTAP 叢集</block>
+  <block id="7a9a5755110e2914f0ad288a141356cb" category="paragraph"><block ref="7a9a5755110e2914f0ad288a141356cb" category="inline-link-rx"></block></block>
+  <block id="e17c2185b4352c73f48a1a8e84f1a8ed" category="section-title">設定組織和使用者角色</block>
+  <block id="9104b82e5e7be42a60370d0e13b27403" category="paragraph">瞭解組織、專案和使用者角色，然後為使用者配置執行任務所需的適當權限。</block>
+  <block id="692fa8c1472b3f5b389ae8b229a03338" category="inline-link">將使用者新增至 NetApp Console 組織</block>
+  <block id="6a66c8d307ddd017849b5680e53c609c" category="paragraph">請參閱<block ref="04f37aa952e829e9448a7d043a30911e" category="inline-link-rx"></block>以取得有關使用組織和專案來控制資源存取的資訊。</block>
+  <block id="1ce75b5926383de539d27e838bd74b8a" category="paragraph">請參閱<block ref="04b01782baab49091268802b7f1423cb" category="inline-link-rx"></block>以瞭解在 NetApp Backup and Recovery 中執行操作所需的角色與權限詳細資訊。</block>
+  <block id="6bb058e639cecc8051a99e8892400bd8" category="section-title">物件儲存備份的要求</block>
+  <block id="fbb5639a46ec6a30ce9e9021778a91a2" category="paragraph">若要使用物件儲存作為備份目標，您需要擁有 AWS S3、Google Cloud Storage、Microsoft Azure Blob、StorageGRID 或 ONTAP 帳戶，並設定對應的存取權限。</block>
+  <block id="fc0cba16e06b834a59ea2732ce15d74a" category="section-title">保護 ONTAP Volume 工作負載的需求</block>
+  <block id="0b0bee32bf0c7158fbba14e4b17f1e23" category="paragraph">若要使用 NetApp Backup and Recovery 進行 ONTAP 磁碟區工作負載，您需要滿足下列主機系統、空間和容量大小方面的先決條件。</block>
+  <block id="f17da14a026a5974537cf1303ac53974" category="list-text">需要 ONTAP 9.8 或更高版本。</block>
+  <block id="45b096193f4470968c1063df19d1c253" category="list-text">必須在內部部署 ONTAP 執行個體上啟用 ONTAP One 授權。</block>
+  <block id="9cf387a6f708f4467810768eb8e4d31f" category="list-text">備份或還原到與 S3 相容的物件儲存需要 ONTAP 9.17.1 或更新版本。</block>
+  <block id="ddaa1c8bd07bda0816a8b44d87c10997" category="paragraph">如需支援功能、磁碟區類型、備份與還原目的地等相關資訊，請參閱 <block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block>。</block>
+  <block id="ba0f269b2bdb85161db3fe51338e6a7b" category="cell">資料庫主機</block>
+  <block id="bff50f1947dbec1e11bc66d60ca0b1d9" category="cell">支援的儲存設備</block>
+  <block id="e042e676706d93b3b14ce12e4d00a002" category="cell">實體伺服器</block>
+  <block id="0bff41cfbe96737aa6b09f610961f5c9" category="list-text">透過 Fibre Channel 呈現的 LUN</block>
+  <block id="e490b6a60f5d5f84da2872552117d35a" category="list-text">透過 iSCSI 呈現的 LUN</block>
+  <block id="86cbd38e0939fb9a14eea3387d05d7b4" category="cell">VMware VM</block>
+  <block id="681eb44a9cbd6da8f7c3f918a64f2c6c" category="list-text">iSCSI LUN 透過 iSCSI 啟動器直接連線至客體系統</block>
+  <block id="6199cc7348edc37d513caecf899a6870" category="list-text">虛擬機器檔案系統 (VMFS)</block>
+  <block id="1f25f9cc2f9e277c0318faa6969f3552" category="list-text">NFS 資料存放區</block>
+  <block id="8389b191652a37792de566d96af881d9" category="cell">Hyper-V VM</block>
+  <block id="76a076e542cbd2e8238bb0e9b956194e" category="admonition">不支援保護儲存在直通磁碟或 VHD/VHDX 檔案中的資料庫，這些檔案是在 NetApp 儲存設備上配置的。</block>
+  <block id="59f5ce8a3e5f9160e855499a4f229823" category="paragraph-title">保護 VMware 工作負載的角色型存取控制（RBAC）要求</block>
+  <block id="1f3be67622d50eb9ea62feda9571af13" category="list-title">Hyper-V 主機的硬體需求</block>
+  <block id="b263d5ca79e3126d53a51eb3fd03ecac" category="list-title">NetApp ONTAP 組態需求</block>
+  <block id="5d5680a7be3d76408ed6363c1640e7fc" category="doc">使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 資料備份到 S3 相容儲存設備</block>
+  <block id="2e7a981f8c415a4fe96294fd71792a0b" category="paragraph">完成 NetApp Backup and Recovery 中的幾個步驟，即可開始將 Cloud Volumes ONTAP 系統中的磁碟區資料備份到 S3。</block>
+  <block id="9336086de56f2232c24135493cbf6bda" category="paragraph">在開始將磁碟區備份到 S3 相容儲存設備之前、請先閱讀下列需求、確保您擁有支援的組態。</block>
+  <block id="b7d0815f0ec0cd041cfc786c3cfad8b3" category="list-text">ONTAP 最低版本要求為 9.17.1。</block>
+  <block id="75f4d0076c7eca9a1d297d2060c6cb45" category="list-text">您可以在啟動精靈中選擇您自己的客戶管理金鑰進行資料加密，而不是使用預設的 S3 加密金鑰。在這種情況下，您需要事先設定好加密管理金鑰<block ref="bfab1fe336406f519c233add80b595e0" category="inline-link-rx"></block>。</block>
+  <block id="9e3bfb50997093a7d84dc23aa0af7c64" category="section-title">支援的動作</block>
+  <block id="9a6bb04c2b277b55faab469f2d04692b" category="paragraph">備份到 S3 相容儲存空間時，支援執行以下操作：</block>
+  <block id="1588002f4465aee8a1e35fc95dbebabd" category="list-text">將內部部署 ONTAP 的當機一致性和應用程式一致性 Snapshot 備份至協力廠商 S3 相容物件儲存區</block>
+  <block id="00de0e91b8bfb37d4831f3333b8df9fa" category="list-text">核心資料保護工作流程：備份、還原和備份刪除</block>
+  <block id="0a7a61be3bd51e21631c884f7d8de9ef" category="list-text">已通過與 Wasabi、MinIO、IBM Object Store 和 Apple Object Store 等 S3 相容提供商的驗證</block>
+  <block id="21e1cea657da329388848ff59f3eea5d" category="list-text">NetApp Support 接受並分類所有涉及第三方 S3 相容物件儲存的支援要求</block>
+  <block id="a368c9277e64abd2f91bd6fdc8cafbda" category="section-title">不支援的功能與組態</block>
+  <block id="ad8f08e5de0a588e08fde1c710915292" category="paragraph">備份至 S3 相容儲存設備時，不支援下列功能和組態：</block>
+  <block id="14c4b12c16f639eb6666730b4697ce83" category="list-text">不支援自備儲存貯體 (BYOB)</block>
+  <block id="8aece3bac78e537459c41a699e7accbf" category="list-text">備份原則不支援啟用 DataLock</block>
+  <block id="ad5d6d9517bd22f4e85d3889ae15dfbc" category="list-text">備份原則中不支援啟用歸檔模式</block>
+  <block id="f979e7b6fe15329deb889203ed84ef53" category="list-text">不支援儲存區層級的加密選項</block>
+  <block id="f24ed73a450b9830eed5bd72f8f99e5d" category="list-text">不支援 MetroCluster 組態</block>
+  <block id="9190a06f227ac08e35f52b77ca071df6" category="list-text">不支援雲端型 ONTAP 環境，僅支援內部部署的 ONTAP</block>
+  <block id="b22e25eb401508f6e5d8658dc96e1743" category="section-title">注意事項</block>
+  <block id="fa7023792107a645d43e3fe6b861b948" category="paragraph">將資料備份到 S3 相容儲存設備時、請注意以下幾點：</block>
+  <block id="0d73a47a2cdaa77e5fe1479284fcc8ba" category="list-text">* 效能無法保證 *：NetApp 產品對 S3 API 延遲和 IOPS 非常敏感。第三方物件儲存必須提供與 AWS S3 等效的延遲和 IOPS 才能達到類似的效能。NetApp 不提供物件儲存效能故障排除。</block>
+  <block id="4ac196401fdad84265362b1b0e047ea0" category="list-text">*不承擔資料損壞或遺失的責任*：NetApp 對於因第三方 S3 物件儲存問題而導致的資料遺失或服務中斷概不負責。</block>
+  <block id="f8e460b636103f574efa0d2b39500fdc" category="list-text">*功能支援有限*：第三方 S3 相容目標的支援功能集是原生目標（AWS S3、Azure Blob、GCP、ONTAP S3、StorageGRID）可用功能集的子集。</block>
+  <block id="9c8180fab30cdf8105c99bb565100576" category="list-text">當您的 Cloud Volumes ONTAP 系統執行 ONTAP 9.12.1 或更高版本的軟體時，為該系統提供權限的 IAM 角色必須包含一組新的 S3 相容權限，專門用於最新版本的 NetApp Backup and Recovery<block ref="7599ab7904564916c5665aaaf7f92943" category="inline-link-rx"></block>。</block>
+  <block id="13ca93dfb9b89bc63ebd2a7dcdb6b677" category="paragraph">如果您的備份的 S3 相容目的地在 *Systems* 頁面上以叢集的形式存在，您可以將該叢集拖曳到 S3 相容系統上以啟動設定精靈。</block>
+  <block id="47d7a1c349dd710c7b70de2cc5f8bef1" category="admonition">目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。其他 S3 相容提供者尚未通過驗證。</block>
+  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
+  <block id="811a794fc3af22bb5e0566f56adc0406" category="list-text">S3 相容儲存設備</block>
+  <block id="d0a6d4081b2093e4e5a535bdce1e44c0" category="cell">Cloud Volumes ONTAP 在 S3 相容的物件儲存設備中</block>
+  <block id="29fc78ad7b30ceab82a6fad5327f5e05" category="cell">S3 相容物件儲存設備</block>
+  <block id="d0eb32456912dd737e495d1233503746" category="summary">由 NetApp Console 稽核所支援的備份與還原動作參考。</block>
+  <block id="a29588ca393407a53992df452b4d7451" category="doc">已審核的 NetApp Backup and Recovery 作業</block>
+  <block id="da8be55f3871d0a372174a9f477823f0" category="inline-link">從「稽核」頁面稽核使用者活動</block>
+  <block id="d122b9f2dec13890c9d50cc911e6ced4" category="paragraph">NetApp Console 稽核頁面會記錄使用者在 NetApp Backup and Recovery 中執行的下列操作，作為其稽核功能的一部分。如需瞭解如何檢視及篩選稽核事件，請參閱 Console 文件中的<block ref="778a97bb392d8d7bffbb44bcc5f130f5" category="inline-link-rx"></block>。</block>
+  <block id="efce8f189df834368b2d049d5a7c64af" category="paragraph">對於每個已審核的操作、NetApp Console 會記錄服務名稱、代理程式、資源、使用者和操作狀態。</block>
+  <block id="199370791c099a5f1bca782c3d1d470c" category="list-text">從備份還原磁碟區或檔案</block>
+  <block id="732e9096426149869bf78ef0e9e94714" category="list-text">將磁碟區還原為快照</block>
+  <block id="197e6976a273829f09fdce7c55317492" category="list-text">開始檔案總管</block>
+  <block id="61e4e908c7741cbd71a41c6aae9e6e0b" category="list-text">從快照還原檔案</block>
+  <block id="42ce1f85d31d3dfe79ed524689b0f9d3" category="list-text">註冊雲端認證資料</block>
+  <block id="320df6f9283ca2b818a461d2e1f6e7d4" category="list-text">更新雲端認證資料</block>
+  <block id="8a663d18b4fa22a73e1e8f7df3df725e" category="list-text">刪除雲端認證資料</block>
+  <block id="6fdec704e98ca0f3864c8ccd6ea73703" category="list-text">建立物件儲存貯體</block>
+  <block id="b3d7067b3bb19bac9f09d0230727dc76" category="list-text">修改物件儲存貯體</block>
+  <block id="e827a8086cf17a1365d856e1cb32423d" category="list-text">驗證備份移轉</block>
+  <block id="bbd999bf19db9750ffac6db4ed4b9b76" category="list-text">在 ONTAP 系統之間移轉備份</block>
+  <block id="9855b90f9781e228ca2fc1b38dfbe068" category="list-text">初始化來源保護</block>
+  <block id="8f5300563e036a0e0dd4466fcf2d4d14" category="list-text">用於保護的對等叢集</block>
+  <block id="3516904f26cb1d151f9f00fd268af5bb" category="list-text">初始化目標保護</block>
+  <block id="70329a173c2df4fc2e113b7d732fee8a" category="list-text">啟動 Volume 複寫</block>
+  <block id="e7604539ca2bc0f8a25657b1c4d49403" category="list-text">建立 Cyber Vault 系統</block>
+  <block id="33d25341884ae4ede29885448acf07d3" category="list-text">刪除 Cyber Vault 系統</block>
+  <block id="fbbce4affcaff35c8cb69b1b21b7fcf9" category="list-text">啟用 Cyber Vault 存取</block>
+  <block id="dff58383e88f614806e0546be77f57cf" category="list-text">停用 Cyber Vault 存取</block>
+  <block id="a8a02fb6103bbf5f6b59d547875601d4" category="list-text">建立臨機操作快照</block>
+  <block id="09e08263ee4fee96bf89af82dadb038e" category="list-text">探索磁碟區和關係</block>
+  <block id="a6d76416e9366d5acf874ba181b85e8d" category="list-text">更新應用程式組態</block>
+  <block id="643d173783cc450c90cddb496ad47f46" category="list-text">啟用磁碟區的全景保護</block>
+  <block id="95a9f5676628d7064eb4ced4825b0462" category="list-text">修改磁碟區的全景保護</block>
+  <block id="578537c537d4e1e20a8451ca31f907db" category="list-text">修改系統的物件儲存設備</block>
+  <block id="d4c6bb4fa3bc21a894bd3ecb1727be38" category="list-text">建立臨機雲端備份</block>
+  <block id="67ddca6cd047644d2e1c3f3346bf654b" category="list-text">初始化系統保護</block>
+  <block id="2f7e188563796edaa051f5c504c41194" category="list-text">重新整理磁碟區備份中繼資料（已排程）</block>
+  <block id="1bba399ba8ca257955b82abe9b77a1c8" category="list-text">在磁碟區中啟用備份</block>
+  <block id="6b379ae81008ca1fdc4a1bee622b4b94" category="list-text">刪除 ANF 快照原則</block>
+  <block id="ceb742da8b5f49c43e25068bf4ebfec4" category="list-text">在系統中啟動全景保護</block>
+  <block id="796522f5baf9f759608770ab7ad25640" category="list-text">修改系統中的全景保護</block>
+  <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="section-title">更多資訊</block>
+  <block id="0714572f5e60fbb935fc53015369f585" category="list-text"><block ref="0714572f5e60fbb935fc53015369f585" category="inline-link-rx"></block></block>
+  <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">2026 年 6 月 08 日</block>
+  <block id="83600b516c30dfc55e0311442c5d9002" category="sidebar">將 Cloud Volumes ONTAP 備份至 S3 相容儲存設備</block>
 </blocks>

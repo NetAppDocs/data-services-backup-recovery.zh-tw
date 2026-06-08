@@ -24,9 +24,6 @@ summary: 使用NetApp Backup and Recovery保護您的 Hyper-V 工作負載。
 * 從物件儲存備份還原（僅限還原至原始位置）
 
 
-
-NOTE: 不支援從物件儲存備份還原位於 SAN 儲存設備上的 VM。
-
 .恢復到這些點
 您可以將資料還原到以下點：
 

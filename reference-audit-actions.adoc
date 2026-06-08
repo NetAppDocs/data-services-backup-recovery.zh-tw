@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: reference-audit-actions.html 
+keywords: audit, audit actions, NetApp Console, Backup and Recovery, audit log 
+summary: 由 NetApp Console 稽核所支援的備份與還原動作參考。 
+---
+= 已審核的 NetApp Backup and Recovery 作業
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console 稽核頁面會記錄使用者在 NetApp Backup and Recovery 中執行的下列操作，作為其稽核功能的一部分。如需瞭解如何檢視及篩選稽核事件，請參閱 Console 文件中的 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["從「稽核」頁面稽核使用者活動"^]。
+
+對於每個已審核的操作、NetApp Console 會記錄服務名稱、代理程式、資源、使用者和操作狀態。
+
+.已審核的 NetApp Backup and Recovery 作業
+* 從備份還原磁碟區或檔案
+* 將磁碟區還原為快照
+* 開始檔案總管
+* 從快照還原檔案
+* 註冊雲端認證資料
+* 更新雲端認證資料
+* 刪除雲端認證資料
+* 建立物件儲存貯體
+* 修改物件儲存貯體
+* 驗證備份移轉
+* 在 ONTAP 系統之間移轉備份
+* 初始化來源保護
+* 用於保護的對等叢集
+* 初始化目標保護
+* 啟動 Volume 複寫
+* 建立 Cyber Vault 系統
+* 刪除 Cyber Vault 系統
+* 啟用 Cyber Vault 存取
+* 停用 Cyber Vault 存取
+* 建立臨機操作快照
+* 探索磁碟區和關係
+* 更新應用程式組態
+* 啟用磁碟區的全景保護
+* 修改磁碟區的全景保護
+* 修改系統的物件儲存設備
+* 建立臨機雲端備份
+* 初始化系統保護
+* 啟用磁碟區的全景保護
+* 修改磁碟區的全景保護
+* 重新整理磁碟區備份中繼資料（已排程）
+* 在磁碟區中啟用備份
+* 修改磁碟區的全景保護
+* 刪除 ANF 快照原則
+* 在系統中啟動全景保護
+* 修改系統中的全景保護
+
+
+
+
+== 更多資訊
+
+* https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["從「稽核」頁面稽核使用者活動"^]
+
