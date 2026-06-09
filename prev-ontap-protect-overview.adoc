@@ -147,13 +147,6 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 * ONTAP S3
 
 
-
-
-| Cloud Volumes ONTAP 在 S3 相容的物件儲存設備中  a| 
-* Cloud Volumes ONTAP 在 S3 相容的物件儲存設備中
-* 本地ONTAP系統
-
-| S3 相容物件儲存設備 
 |===
 
 
@@ -219,17 +212,10 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 | 本地ONTAP系統 
 
 
-| S3 相容物件儲存設備  a| 
-* Cloud Volumes ONTAP 在 S3 相容的物件儲存設備中
-* 本地ONTAP系統
-
- a| 
-* Cloud Volumes ONTAP 在 S3 相容的物件儲存設備中
-* 本地ONTAP系統
-
-
+| S3 相容物件儲存設備 | 本地ONTAP系統 | 本地ONTAP系統 
 |===
-請注意，「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
+
+NOTE: 文中提及的「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
 
 
 
