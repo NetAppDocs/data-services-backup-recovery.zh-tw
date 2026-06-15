@@ -4659,7 +4659,6 @@
   <block id="fb5dbc581e0b5b523350175d27ea83c0" category="list-text">選擇要使用的還原點的 *Restore* 按鈕。</block>
   <block id="98c52679a9ed385c5482f74fe44c97ae" category="list-text">選擇要從中還原的來源位置。</block>
   <block id="6d99ca24de4c4c5c0b932cbcc18fdbbe" category="list-text">選擇還原至原始命名空間或新命名空間。</block>
-  <block id="41af3e90c2d7ebbd0ddd4e36e78220b5" category="list-text">如果您選擇還原到新的命名空間、請輸入要使用的目標命名空間。</block>
   <block id="a2552d8c6714f46cdb5bfe28dbdc9b87" category="list-text">展開 *Destination settings* 部分，然後選擇還原至預設儲存類別、不同的儲存類別，或者如果您要還原至不同的叢集，則將儲存類別對應至目的地叢集。</block>
   <block id="a5e9d16a9cc07839a654d90f3a7a4b97" category="list-text">如果選擇還原到不同的儲存類別，請選擇與每個來源儲存類別相符的目標儲存類別。</block>
   <block id="7a19603af554b25cd8b2df54b3b90a02" category="list-text">如果您要還原使用 Trident Protect 建立的備份或快照，則可以選擇查看用作還原作業儲存貯體的 AppVault 詳細資訊。如果您的環境或 AppVault 狀態發生變更，請選取 *Sync App Vault* 以重新整理詳細資訊。</block>
@@ -5615,4 +5614,16 @@
   <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">2026 年 6 月 08 日</block>
   <block id="83600b516c30dfc55e0311442c5d9002" category="sidebar">將 Cloud Volumes ONTAP 備份至 S3 相容儲存設備</block>
   <block id="3a6182405315948a2b482f267396231c" category="admonition">文中提及的「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。</block>
+  <block id="248bbbcb51ef3ddd3bd9dc8e6ef8b5a1" category="list-text">*Trident Protect 26.06*：此版本包含 Trident Protect 26.06。</block>
+  <block id="a322829a7429e3dce13d41945775197c" category="list-text">*恢復期間跳過應用程式建立*：現在您可以在復原作業期間跳過自動建立應用程式自訂資源物件。這可以減少應用程式清單中不必要的條目。</block>
+  <block id="b6e7f9bbbf3d504dc4f264292161745a" category="list-text">*還原 VM 持久性磁碟區請求*：還原 VM 型應用程式時，現在可以還原個別持久性磁碟區請求，而無需還原整個虛擬機器，當特定磁碟或磁碟區受到損毀或資料遺失影響時，可加快復原速度。</block>
+  <block id="bf6f998632908219ca091b00cfa53117" category="list-text">*作業監控改進*：作業監控功能現已增強，可更清楚顯示 Kubernetes 保護作業的狀態。您可以查看作業和子作業的詳細狀態資訊，以及每個作業使用的目標儲存。</block>
+  <block id="2fa234e4bf58407b9116597669532c73" category="list-text">如果您選擇還原到新的命名空間，請執行以下操作：</block>
+  <block id="b74045bc4ba6e80e41145047c07e7187" category="list-text">請輸入要使用的目標命名空間或多個命名空間。</block>
+  <block id="d99b2f4ce740b964bfc13369bafa70b1" category="list-text">請輸入目標應用程式名稱。</block>
+  <block id="5639f1fbdf481a03dd07036133bb85db" category="list-text">您也可以選擇「不為已復原的資源建立應用程式」選項，以便在不建立應用程式自訂資源物件的情況下復原資源。這樣可以減少應用程式清單中不必要的條目。</block>
+  <block id="928e9cbce0c62c73be1d4bd0799f3a7a" category="list-text">若要還原整個虛擬機器，請選擇「虛擬機器」索引標籤。</block>
+  <block id="d7b53b986ac236d7156eb62ccb254f74" category="list-text">若要還原個別持久性磁碟區聲明，請選擇 *Persistent volume claims* 索引標籤。</block>
+  <block id="dbdc850e2c6c701a4218daf5d558b642" category="paragraph">Backup and Recovery 會列出復原點中的所有持久性磁碟區宣告。您可以選擇要在還原作業中包含的持久性磁碟區宣告。</block>
+  <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026 年 6 月 15 日</block>
 </blocks>
