@@ -1869,7 +1869,6 @@
   <block id="1716834171e243de0f898a67621b6624" category="list-text">ONTAP S3</block>
   <block id="d3cbd09d6a0974ee6a694826a8598eb6" category="section-title">保護 Kubernetes 應用程式的要求</block>
   <block id="35efe147e51e11d3e82b92163214c36a" category="paragraph">您需要特定的要求來發現 Kubernetes 資源並保護您的 Kubernetes 應用程式。</block>
-  <block id="b4223a9285b846e8b6c959752c4aef73" category="paragraph">有關NetApp Console要求，請參閱<block ref="7a97fc65ea04291b3564618ee6e90325" category="inline-xref-macro-rx"></block>。</block>
   <block id="e33a9836e18ab4c7f01ac49f666c4e33" category="section-title">保護 Hyper-V 工作負載的要求</block>
   <block id="7e75f7658d8e69b52e07a066a4510af5" category="paragraph">確保您的 Hyper-V 執行個體符合發現和保護虛擬機器的特定要求。</block>
   <block id="e8ab74a683c73fd7edd0ea5adc16b2b6" category="list-text">支援獨立主機和 FCI 叢集主機</block>
@@ -5551,7 +5550,6 @@
   <block id="9a6bb04c2b277b55faab469f2d04692b" category="paragraph">備份到 S3 相容儲存空間時，支援執行以下操作：</block>
   <block id="1588002f4465aee8a1e35fc95dbebabd" category="list-text">將內部部署 ONTAP 的當機一致性和應用程式一致性 Snapshot 備份至協力廠商 S3 相容物件儲存區</block>
   <block id="00de0e91b8bfb37d4831f3333b8df9fa" category="list-text">核心資料保護工作流程：備份、還原和備份刪除</block>
-  <block id="0a7a61be3bd51e21631c884f7d8de9ef" category="list-text">已通過與 Wasabi、MinIO、IBM Object Store 和 Apple Object Store 等 S3 相容提供商的驗證</block>
   <block id="21e1cea657da329388848ff59f3eea5d" category="list-text">NetApp Support 接受並分類所有涉及第三方 S3 相容物件儲存的支援要求</block>
   <block id="a368c9277e64abd2f91bd6fdc8cafbda" category="section-title">不支援的功能與組態</block>
   <block id="ad8f08e5de0a588e08fde1c710915292" category="paragraph">備份至 S3 相容儲存設備時，不支援下列功能和組態：</block>
@@ -5626,4 +5624,6 @@
   <block id="d7b53b986ac236d7156eb62ccb254f74" category="list-text">若要還原個別持久性磁碟區聲明，請選擇 *Persistent volume claims* 索引標籤。</block>
   <block id="dbdc850e2c6c701a4218daf5d558b642" category="paragraph">Backup and Recovery 會列出復原點中的所有持久性磁碟區宣告。您可以選擇要在還原作業中包含的持久性磁碟區宣告。</block>
   <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026 年 6 月 15 日</block>
+  <block id="eb985c23c2b4157b8059d99e50538799" category="paragraph">有關 NetApp Console 需求，請參閱<block ref="a1e048c2b33797bd5e09f13ddaff6fff" category="inline-xref-macro-rx"></block>。</block>
+  <block id="d1a5a28bec1ce98df5bea6fe830a4f31" category="list-text">已使用 Wasabi 物件儲存進行測試和驗證；客戶也報告已成功部署 MinIO、IBM Cloud Object Storage 和 Apple Object Store。</block>
 </blocks>

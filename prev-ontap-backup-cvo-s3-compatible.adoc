@@ -45,7 +45,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 * 將內部部署 ONTAP 的當機一致性和應用程式一致性 Snapshot 備份至協力廠商 S3 相容物件儲存區
 * 核心資料保護工作流程：備份、還原和備份刪除
-* 已通過與 Wasabi、MinIO、IBM Object Store 和 Apple Object Store 等 S3 相容提供商的驗證
+* 已使用 Wasabi 物件儲存進行測試和驗證；客戶也報告已成功部署 MinIO、IBM Cloud Object Storage 和 Apple Object Store。
 * NetApp Support 接受並分類所有涉及第三方 S3 相容物件儲存的支援要求
 
 
