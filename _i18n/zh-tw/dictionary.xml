@@ -4265,8 +4265,6 @@
   <block id="d866b8b94a3e8b940c5c063a7cf79472" category="paragraph">編輯保護群組以變更其名稱或設定。如果保護群組中的資源發生了變化，您可能需要編輯該保護群組。</block>
   <block id="2028d26ecaf3fcd5b07a86fe6beca923" category="list-text">選擇要編輯的保護群組。</block>
   <block id="712a9492193e1ef0b35be30256c2d566" category="list-text">選擇“操作”圖標 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *編輯*。</block>
-  <block id="08483165aa1f33d41b512e87d0481649" category="list-text">變更保護群組的任何設置，例如名稱或群組中的虛擬機器。</block>
-  <block id="ad41a0253f0fa950ebd266549a680870" category="list-text">必要時更改保護策略。完成後，選擇“下一步”。</block>
   <block id="c3db3d5055385cdff6f17b6bf22a7152" category="list-text">檢查配置並選擇“提交”。</block>
   <block id="90f68f3e2b7c1b2173cf20adbaecd7aa" category="list-text">恢復到備用位置</block>
   <block id="20ca6e882fe3b588e30201e762f2131d" category="list-text">*啟動虛擬機器*：啟用此選項可在復原後啟動新的虛擬機器。</block>
@@ -5626,4 +5624,21 @@
   <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026 年 6 月 15 日</block>
   <block id="eb985c23c2b4157b8059d99e50538799" category="paragraph">有關 NetApp Console 需求，請參閱<block ref="a1e048c2b33797bd5e09f13ddaff6fff" category="inline-xref-macro-rx"></block>。</block>
   <block id="d1a5a28bec1ce98df5bea6fe830a4f31" category="list-text">已使用 Wasabi 物件儲存進行測試和驗證；客戶也報告已成功部署 MinIO、IBM Cloud Object Storage 和 Apple Object Store。</block>
+  <block id="11cb5552207ff0aa19a1682353b76f93" category="list-text">*保護群組現在使用主機時區排程*：保護群組現在使用 Hyper-V 主機的時區。在引入主機時區排程功能之前建立的保護群組將繼續使用其先前設定的時間（通常為 UTC）。若要將這些保護群組更新為使用 Hyper-V 主機時區，您必須重新建立排程。如需詳細資訊，請參閱<block ref="d7b709a60ba856948f2de1f387e47906" category="inline-link-rx"></block>。</block>
+  <block id="327e5e3e392a7cf832926cb52870097c" category="list-text">*保護群組現在使用主機時區排程*：保護群組現在使用宿主 VMware vCenter 伺服器的時區。在引入主機時區排程功能之前建立的保護群組將繼續使用先前設定的時區（通常為 UTC）運作。若要使用 vCenter 時區，您必須重新建立排程。如需詳細資訊，請參閱<block ref="5181f9a713551c0880da1b785cb2e8f3" category="inline-link-rx"></block>。</block>
+  <block id="d041f642a2d3785a0e94ba8db99dbb87" category="list-text">請注意，對於 Hyper-V 工作負載，排程備份時間會以管理主機的時區為準。如需更多資訊，請參閱 <block ref="6abbe22a47895e202e8193141aa3411e" category="inline-link-macro-rx"></block>。</block>
+  <block id="2c1cd28b4c922c58abcbcf35e3928c82" category="paragraph">「編輯保護群組」精靈會引導您完成保護群組中的設定。</block>
+  <block id="099b64c43a578b47f6704f18b87a7a7f" category="list-text">在精靈的每個畫面上進行必要的變更。</block>
+  <block id="ee50c8cd836b2085ab8f01315cef077a" category="list-text">完成後，選擇 *Submit*。</block>
+  <block id="1aeeb7dce233dd15c02742ecac270391" category="section-title">將更新後的主機時區套用至現有保護群組</block>
+  <block id="3d7dc123777dfed33a5f55d552bfa333" category="paragraph">排程備份使用 Hyper-V 主機的時區，該時區在建立保護群組排程時記錄。如果您變更主機的時區，現有保護群組將繼續以其原始時區（通常為 UTC）執行，直到您更新其排程為止。</block>
+  <block id="b691fa63eb388ff83c950ba41d60f083" category="admonition">只有在您修改保護群組名稱、新增或刪除虛擬機器、變更指派的原則或更新備份前/後腳本時，才會重新建立排程。如果未進行任何變更而直接儲存，則不會更新排程。此排程更新對於每個保護群組而言是一次性操作，不會立即啟動備份。</block>
+  <block id="1d9b7a2cf50c0d4395425719e90736b9" category="list-text">刷新 Hyper-V 主機，以便取得其目前時區。</block>
+  <block id="dbff8d173c910d8884b39289ba861aec" category="list-text">編輯保護群組，將其名稱變更為其他值，然後儲存。</block>
+  <block id="075bcf42a67adc33e136e805e5049090" category="admonition">對於 Hyper-V 工作負載，備份排程使用 Hyper-V 主機的時區，而非 UTC 或瀏覽器的本地時間。此時區在建立排程時設定。如果主機時區發生變更，您必須重新整理主機並重新建立排程，才能使新時區生效。如需詳細資訊，請參閱 <block ref="25003dd775b8cc60c4948243bfa5b95f" category="inline-link-macro-rx"></block>。</block>
+  <block id="6d55b984a1a7d79f913f0cf893df29e2" category="admonition">對於 VMware 工作負載，備份計畫使用 VMware vCenter 伺服器的時區，而不是 UTC 或瀏覽器的本機時間。此時區在您建立排程時設定。如果主機時區發生變更，您必須重新整理主機並重新建立排程，才能使新時區生效。如需詳細資訊，請參閱 <block ref="d56582b18b2c53315e597c8a39e49a92" category="inline-link-macro-rx"></block>。</block>
+  <block id="0acbc3c15cbb4ede69f094274dea781f" category="list-text">請注意，對於 VMware 工作負載，排程備份時間會以管理主機的時區為準。如需詳細資訊，請參閱 <block ref="5e4c8524c39497e064cba735f55e2d8d" category="inline-link-macro-rx"></block>。</block>
+  <block id="fab4e94712a0410b3069e33d1470fe7c" category="section-title">將更新後的 vCenter 時區套用至現有保護群組</block>
+  <block id="ee19d16e1df2ea16cdf0906f9c62e70b" category="paragraph">排程備份使用建立保護群組排程時所記錄的 vCenter Server 時區。如果您變更 vCenter Server 時區，現有保護群組將繼續以其原始時區（通常為 UTC）執行，直到您更新其排程為止。</block>
+  <block id="2b33678c8eba4dacaa294cad350a79f8" category="list-text">刷新 vCenter 伺服器以取得其目前時區。</block>
 </blocks>

@@ -19,6 +19,18 @@
 在此版本中、Hyper-V 工作負載引入了以下增強功能：
 
 * *將檔案和資料夾還原到客體 VM 的功能改進*：現在您可以將主要或次要儲存設備上快照中的檔案和資料夾還原到客體 Windows VM。CIFS 和 SAN VM 現在支援此功能。
+* *保護群組現在使用主機時區排程*：保護群組現在使用 Hyper-V 主機的時區。在引入主機時區排程功能之前建立的保護群組將繼續使用其先前設定的時間（通常為 UTC）。若要將這些保護群組更新為使用 Hyper-V 主機時區，您必須重新建立排程。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protection-groups.html["為 Hyper-V 工作負載建立和管理保護群組"]。
 
 
 有關保護 Hyper-V 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["保護 Hyper-V 工作負載概述"]。
+
+
+
+=== VMware 工作負載增強功能
+
+在此版本中、VMware 工作負載引進下列增強功能：
+
+* *保護群組現在使用主機時區排程*：保護群組現在使用宿主 VMware vCenter 伺服器的時區。在引入主機時區排程功能之前建立的保護群組將繼續使用先前設定的時區（通常為 UTC）運作。若要使用 vCenter 時區，您必須重新建立排程。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protection-groups.html["為 VMware 工作負載建立和管理保護群組"]。
+
+
+有關保護 VMware 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["保護 VMware 工作負載概述"]。

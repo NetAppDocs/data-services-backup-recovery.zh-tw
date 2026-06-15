@@ -32,6 +32,10 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 
 *所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
+.開始之前
+* 請注意，對於 Hyper-V 工作負載，排程備份時間會以管理主機的時區為準。如需更多資訊，請參閱 link:br-use-policies-hyper-v-create.html["在 NetApp Backup and Recovery 中建立及管理 Hyper-V 備份原則"]。
+
+
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
 . 選擇一個工作負載來查看保護詳細資訊。
@@ -60,10 +64,25 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 . 選擇*保護群組*標籤。
 . 選擇要編輯的保護群組。
 . 選擇“操作”圖標 image:../media/icon-action.png["操作選項"] > *編輯*。
-. 變更保護群組的任何設置，例如名稱或群組中的虛擬機器。
-. 選擇“下一步”。
-. 必要時更改保護策略。完成後，選擇“下一步”。
-. 檢查配置並選擇“提交”。
++
+「編輯保護群組」精靈會引導您完成保護群組中的設定。
+
+. 在精靈的每個畫面上進行必要的變更。
+. 完成後，選擇 *Submit*。
+
+
+
+
+=== 將更新後的主機時區套用至現有保護群組
+
+排程備份使用 Hyper-V 主機的時區，該時區在建立保護群組排程時記錄。如果您變更主機的時區，現有保護群組將繼續以其原始時區（通常為 UTC）執行，直到您更新其排程為止。
+
+
+NOTE: 只有在您修改保護群組名稱、新增或刪除虛擬機器、變更指派的原則或更新備份前/後腳本時，才會重新建立排程。如果未進行任何變更而直接儲存，則不會更新排程。此排程更新對於每個保護群組而言是一次性操作，不會立即啟動備份。
+
+.步驟
+. 刷新 Hyper-V 主機，以便取得其目前時區。
+. 編輯保護群組，將其名稱變更為其他值，然後儲存。
 
 
 

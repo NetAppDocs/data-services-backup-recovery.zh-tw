@@ -27,6 +27,9 @@ summary: 在NetApp Backup and Recovery中，建立您自己的策略來管理備
 
 
 
+NOTE: 對於 Hyper-V 工作負載，備份排程使用 Hyper-V 主機的時區，而非 UTC 或瀏覽器的本地時間。此時區在建立排程時設定。如果主機時區發生變更，您必須重新整理主機並重新建立排程，才能使新時區生效。如需詳細資訊，請參閱 link:br-use-hyperv-protection-groups.html["為 Hyper-V 工作負載建立和管理保護群組"]。
+
+
 
 == 查看政策
 
