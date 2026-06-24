@@ -109,9 +109,3 @@ SnapCenter沒有將資源對應到主機的儲存叢集或 SVM，但NetApp Backu
 如果您有一個SnapCenter策略計劃，該計劃在特定時間啟動並以 15 分鐘間隔以外的間隔重複，NetApp Backup and Recovery將不會匯入該計劃。
 
 *解決方法*：使用SnapCenter調整策略，使其以 15 分鐘的間隔重複。
-
-
-
-== 對虛擬化管理軟體的支援有限
-
-當您保護 KVM 工作負載時， NetApp Backup and Recovery不支援在​​使用虛擬化管理軟體（例如 Apache CloudStack 或 Red Hat OpenShift Virtualization）時發現 KVM 工作負載。

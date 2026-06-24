@@ -210,10 +210,11 @@ NetApp Backup and Recovery可保護下列類型的工作負載：
 
 .支援的備份目標
 * 亞馬遜網路服務（AWS）S3
+* S3 相容儲存（僅限 ONTAP Volumes 工作負載）
 * Google 雲端儲存
-* Microsoft Azure Blob （不適用於 VMware 工作負載）
+* Microsoft Azure Blob 儲存
 * StorageGRID
-* ONTAP S3（不適用於 VMware 工作負載）
+* ONTAP S3
 
 
 

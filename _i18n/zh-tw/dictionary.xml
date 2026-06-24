@@ -384,8 +384,6 @@
   <block id="b76fe15e5efb181107a884a8a169710c" category="section-title">班次間隔不為 15 分鐘</block>
   <block id="150bc9b32553d2cdbf1033715f83d268" category="paragraph">如果您有一個SnapCenter策略計劃，該計劃在特定時間啟動並以 15 分鐘間隔以外的間隔重複，NetApp Backup and Recovery將不會匯入該計劃。</block>
   <block id="da5c7a32fb1f34042f2d0d433f50328c" category="paragraph">*解決方法*：使用SnapCenter調整策略，使其以 15 分鐘的間隔重複。</block>
-  <block id="2d9cb3f69beb79a3c5b8d0153c88c2db" category="section-title">對虛擬化管理軟體的支援有限</block>
-  <block id="cb6fc7dd7b45612ba1f18392811f988b" category="paragraph">當您保護 KVM 工作負載時， NetApp Backup and Recovery不支援在​​使用虛擬化管理軟體（例如 Apache CloudStack 或 Red Hat OpenShift Virtualization）時發現 KVM 工作負載。</block>
   <block id="5d8aef9555e5438ddeff623786db2956" category="summary">已知限制標識了該產品的此版本不支援的功能，或無法與其正確互通的功能。仔細審查這些限制。</block>
   <block id="23eb49de2f5ba6e24c6af10a73585797" category="doc">NetApp Backup and Recovery for ONTAP磁碟區的已知限制</block>
   <block id="32c27a5a3b9d3ca4a4a83c91adb6b781" category="list-text">NetApp Backup and Recovery可以將Cloud Volumes ONTAP備份到 AWS 中國區域（包括北京和寧夏）的物件儲存；但是，您可能需要先手動修改身分和存取策略。</block>
@@ -1648,7 +1646,6 @@
   <block id="4513150785c046bfbcd37a0b9dcb7a35" category="list-text">選取「您想繼續遷移嗎？」複選框並選擇*遷移*。</block>
   <block id="13be03aaa1d065e4e2a3d1cb64d9f254" category="paragraph">清單頁面顯示新管理的 vCenter 資源。</block>
   <block id="9f292a76282f4f6731d03460bcd3b924" category="doc">使用NetApp Backup and Recovery保護 VMware 工作負載概述</block>
-  <block id="c59e55a8f797ea977bb075c0da4e3733" category="paragraph">使用NetApp Backup and Recovery保護您的 VMware VM 和資料儲存。 NetApp Backup and Recovery提供快速、節省空間、崩潰一致和 VM 一致的備份和復原作業。您可以將 VMware 工作負載備份到 Amazon Web Services S3 或StorageGRID ，並將 VMware 工作負載還原至本機 VMware 主機。</block>
   <block id="13a7ab00fe9ae146021f5c5ab40ca443" category="paragraph">使用NetApp Backup and Recovery實作 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端保留 1 個副本。3-2-1 方法的優點包括：</block>
   <block id="eb2d112b017e683992cc9b9b338c90a1" category="paragraph">您可以使用NetApp Backup and Recovery執行與 VMware 工作負載相關的下列任務：</block>
   <block id="4c90ef6c5dc037251bf65afdeeb1ee6c" category="list-text"><block ref="4c90ef6c5dc037251bf65afdeeb1ee6c" category="inline-link-macro-rx"></block></block>
@@ -4736,7 +4733,6 @@
   <block id="b46d8ca76f6fb8083d6d1c87abd6ef50" category="list-text">KVM 工作負載</block>
   <block id="5c4a8ce913e27612e0af180d6ef12ee6" category="list-text">Hyper-V 工作負載</block>
   <block id="49396edcdc3d3d7e4bec42adc037a5ef" category="list-text">Kubernetes 工作負載</block>
-  <block id="2432a396f38937322a4e606bf0aa7f0a" category="list-text">Microsoft Azure Blob （不適用於 VMware 工作負載）</block>
   <block id="1d57820923cf47d0bb8ab74db80344ab" category="list-text">使用 ONTAP 9.15.1 ，您可以使用「瀏覽和復原」選項來還原 FlexGroup 資料夾。</block>
   <block id="5bc860fb25e08cbdf4fb6e1eb9fa16c9" category="paragraph">發現 Oracle 資料庫可讓 NetApp Backup and Recovery 透過建立及還原備份和快照來保護這些資料庫。</block>
   <block id="e82e6b5a702d1fc223d9ea698359376e" category="section-title">新增 Oracle Database 主機並探索資源</block>
@@ -5068,7 +5064,6 @@
   <block id="238d7a2bebc2cf898422ec1dbda4a73b" category="paragraph">工作負載是指系統內資源的邏輯分組，作為一個整體進行管理，以實現保護、治理、偵測和復原。在 Backup and Recovery 中，工作負載就是您需要保護的單元。其意義取決於資料來源：對於 Kubernetes，工作負載指的是應用程式；對於虛擬機器環境，它指的是虛擬機器；對於資料庫環境，它指的是資料庫。</block>
   <block id="eb0aff97ddec7b6894c0ea9cc7a6b66c" category="list-text">在 Google Cloud 中，會部署一個新的儲存桶，而<block ref="7c8e47e4f5e61b3b1d7f7769baa8100f" category="inline-link-rx"></block>是在帳戶 / 專案層級進行佈建的。</block>
   <block id="3addfc338787d5dc6d9709962161e00d" category="list-text">第三種選擇是直接向 NetApp 購買授權。如需詳細資訊，請參閱 <block ref="ba0ccbd18ea5b5cc8b06635e1ea19aa1" category="inline-xref-macro-rx"></block> 章節。</block>
-  <block id="09e249805f01ac51656bbbc88c3f5e37" category="list-text">ONTAP S3（不適用於 VMware 工作負載）</block>
   <block id="e9ebab79f1c4e6f0b2fa9bfe92e9381d" category="summary">啟用 NetApp Backup and Recovery 的預覽和隱藏功能。</block>
   <block id="145966dcf8392a62159a1226e54e749e" category="doc">啟用 NetApp Backup and Recovery 的預覽和隱藏功能</block>
   <block id="5737194cdc99152eb3d54bca68703776" category="section-title">可用的預覽功能</block>
@@ -5623,7 +5618,6 @@
   <block id="dbdc850e2c6c701a4218daf5d558b642" category="paragraph">Backup and Recovery 會列出復原點中的所有持久性磁碟區宣告。您可以選擇要在還原作業中包含的持久性磁碟區宣告。</block>
   <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026 年 6 月 15 日</block>
   <block id="eb985c23c2b4157b8059d99e50538799" category="paragraph">有關 NetApp Console 需求，請參閱<block ref="a1e048c2b33797bd5e09f13ddaff6fff" category="inline-xref-macro-rx"></block>。</block>
-  <block id="d1a5a28bec1ce98df5bea6fe830a4f31" category="list-text">已使用 Wasabi 物件儲存進行測試和驗證；客戶也報告已成功部署 MinIO、IBM Cloud Object Storage 和 Apple Object Store。</block>
   <block id="11cb5552207ff0aa19a1682353b76f93" category="list-text">*保護群組現在使用主機時區排程*：保護群組現在使用 Hyper-V 主機的時區。在引入主機時區排程功能之前建立的保護群組將繼續使用其先前設定的時間（通常為 UTC）。若要將這些保護群組更新為使用 Hyper-V 主機時區，您必須重新建立排程。如需詳細資訊，請參閱<block ref="d7b709a60ba856948f2de1f387e47906" category="inline-link-rx"></block>。</block>
   <block id="327e5e3e392a7cf832926cb52870097c" category="list-text">*保護群組現在使用主機時區排程*：保護群組現在使用宿主 VMware vCenter 伺服器的時區。在引入主機時區排程功能之前建立的保護群組將繼續使用先前設定的時區（通常為 UTC）運作。若要使用 vCenter 時區，您必須重新建立排程。如需詳細資訊，請參閱<block ref="5181f9a713551c0880da1b785cb2e8f3" category="inline-link-rx"></block>。</block>
   <block id="d041f642a2d3785a0e94ba8db99dbb87" category="list-text">請注意，對於 Hyper-V 工作負載，排程備份時間會以管理主機的時區為準。如需更多資訊，請參閱 <block ref="6abbe22a47895e202e8193141aa3411e" category="inline-link-macro-rx"></block>。</block>
@@ -5641,4 +5635,11 @@
   <block id="fab4e94712a0410b3069e33d1470fe7c" category="section-title">將更新後的 vCenter 時區套用至現有保護群組</block>
   <block id="ee19d16e1df2ea16cdf0906f9c62e70b" category="paragraph">排程備份使用建立保護群組排程時所記錄的 vCenter Server 時區。如果您變更 vCenter Server 時區，現有保護群組將繼續以其原始時區（通常為 UTC）執行，直到您更新其排程為止。</block>
   <block id="2b33678c8eba4dacaa294cad350a79f8" category="list-text">刷新 vCenter 伺服器以取得其目前時區。</block>
+  <block id="9044dfb75ff38841e5c3112d327e52cf" category="admonition">Verda GitHub 程式碼庫中的腳本按原樣提供，不受 NetApp 官方支援。只有 Trident Protect 和 Backup and Recovery 中的執行掛鉤框架才受 NetApp 官方支援。</block>
+  <block id="0ea4d3ea6dde327be7585dd707c798c5" category="list-text">在頁面右上角，確保工作負載清單中已選擇 *Kubernetes*。</block>
+  <block id="ea5b48c7d3f8b0a9e0a12672ffc2b29a" category="list-text">選取工作負載行項目的 *View* 以檢視 Kubernetes 資源。</block>
+  <block id="9a6733678bfc1a6a630c61271f174949" category="paragraph">使用 NetApp Backup and Recovery 保護您的 VMware 虛擬機器和資料存放區。NetApp Backup and Recovery 提供快速、節省空間、當機一致性和虛擬機器一致性的備份與還原作業。您可以將 VMware 工作負載備份到支援的備份目標，並將 VMware 工作負載還原至內部部署的 VMware 主機。</block>
+  <block id="a7ffc4809e4a33a20f30769fc3e62703" category="list-text">S3 相容儲存（僅限 ONTAP Volumes 工作負載）</block>
+  <block id="7229e78ecf33d07a5618d54695f22e2b" category="list-text">Microsoft Azure Blob 儲存</block>
+  <block id="746c4e9758e4e986d2c5f289c1d7e4ed" category="list-text">已使用 Wasabi 物件儲存進行測試和驗證；客戶也報告已成功部署 MinIO 和 IBM Cloud Object Storage</block>
 </blocks>

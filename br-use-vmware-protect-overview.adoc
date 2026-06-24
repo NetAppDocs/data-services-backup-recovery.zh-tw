@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-使用NetApp Backup and Recovery保護您的 VMware VM 和資料儲存。 NetApp Backup and Recovery提供快速、節省空間、崩潰一致和 VM 一致的備份和復原作業。您可以將 VMware 工作負載備份到 Amazon Web Services S3 或StorageGRID ，並將 VMware 工作負載還原至本機 VMware 主機。
+使用 NetApp Backup and Recovery 保護您的 VMware 虛擬機器和資料存放區。NetApp Backup and Recovery 提供快速、節省空間、當機一致性和虛擬機器一致性的備份與還原作業。您可以將 VMware 工作負載備份到支援的備份目標，並將 VMware 工作負載還原至內部部署的 VMware 主機。
 
 
 NOTE: 此版本的NetApp Backup and Recovery僅支援 VMware vCenter，且無法發現vVols或vVols上的 VM。
