@@ -283,7 +283,7 @@ NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保
 [NOTE]
 ====
 * 您一次只能在單一FlexGroup磁碟區上啟動備份。
-* 您選擇的捲必須具有相同的SnapLock設定。所有磁碟區都必須啟用SnapLock Enterprise或停用SnapLock 。
+* 選擇要保護的來源磁碟區時，只能選擇具有相符 SnapLock 設定的磁碟區。所選磁碟區必須全部啟用 SnapLock 功能，或全部停用 SnapLock 功能。
 
 
 ====

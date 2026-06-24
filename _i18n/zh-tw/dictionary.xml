@@ -1990,7 +1990,6 @@
   <block id="bade104de773419f0c559bd71478cc40" category="inline-link-macro">啟動系統中附加磁碟區的備份</block>
   <block id="7b58ae9806fd4e9bf78fdc8568395ab6" category="paragraph">您可以選擇保護FlexVol或FlexGroup磁碟區；但是，在啟動系統備份時不能選擇這些磁碟區的混合。了解如何<block ref="7239f8ae1ce8c5a40d4003de7480554a" category="inline-link-macro-rx"></block>（FlexVol或FlexGroup）在為初始磁碟區配置備份後。</block>
   <block id="e9dfd7a5bc1d9c55d3cafeb50c863440" category="list-text">您一次只能在單一FlexGroup磁碟區上啟動備份。</block>
-  <block id="8678ec2b63284b1fce3f9da35c37df05" category="list-text">您選擇的捲必須具有相同的SnapLock設定。所有磁碟區都必須啟用SnapLock Enterprise或停用SnapLock 。</block>
   <block id="8a6e28d635ac6cca84e8efc5d0dd4b54" category="paragraph">如果您選擇的磁碟區已經套用了快照或複製策略，那麼您稍後選擇的策略將覆寫這些現有策略。</block>
   <block id="60956fee8c3d9f3ef0f2f7652f27143f" category="list-text">在「選擇卷」頁面中，選擇要保護的一個或多個磁碟區。</block>
   <block id="faf9e3428a892363316a8c1e34a4551b" category="list-text">或者，過濾行以僅顯示具有特定卷類型、樣式等的捲，以便更輕鬆地進行選擇。</block>
@@ -5518,7 +5517,6 @@
   <block id="0b0bee32bf0c7158fbba14e4b17f1e23" category="paragraph">若要使用 NetApp Backup and Recovery 進行 ONTAP 磁碟區工作負載，您需要滿足下列主機系統、空間和容量大小方面的先決條件。</block>
   <block id="f17da14a026a5974537cf1303ac53974" category="list-text">需要 ONTAP 9.8 或更高版本。</block>
   <block id="45b096193f4470968c1063df19d1c253" category="list-text">必須在內部部署 ONTAP 執行個體上啟用 ONTAP One 授權。</block>
-  <block id="9cf387a6f708f4467810768eb8e4d31f" category="list-text">備份或還原到與 S3 相容的物件儲存需要 ONTAP 9.17.1 或更新版本。</block>
   <block id="ddaa1c8bd07bda0816a8b44d87c10997" category="paragraph">如需支援功能、磁碟區類型、備份與還原目的地等相關資訊，請參閱 <block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block>。</block>
   <block id="ba0f269b2bdb85161db3fe51338e6a7b" category="cell">資料庫主機</block>
   <block id="bff50f1947dbec1e11bc66d60ca0b1d9" category="cell">支援的儲存設備</block>
@@ -5642,4 +5640,7 @@
   <block id="a7ffc4809e4a33a20f30769fc3e62703" category="list-text">S3 相容儲存（僅限 ONTAP Volumes 工作負載）</block>
   <block id="7229e78ecf33d07a5618d54695f22e2b" category="list-text">Microsoft Azure Blob 儲存</block>
   <block id="746c4e9758e4e986d2c5f289c1d7e4ed" category="list-text">已使用 Wasabi 物件儲存進行測試和驗證；客戶也報告已成功部署 MinIO 和 IBM Cloud Object Storage</block>
+  <block id="df9ce829d97bcaaccefd13ad9443c5fe" category="list-text">若要啟用 FlexGroup 磁碟區保護功能，需要 ONTAP 9.12.1 或更新版本。請參閱 <block ref="a1845bf1ef98236015caabc5bbd8f351" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
+  <block id="bc75b0ab08d9eba6d835f75a9dc3780f" category="list-text">備份或還原至 S3 相容物件儲存需要 ONTAP 9.17.1 或更新版本。</block>
+  <block id="6e61da6259c2e5766003325feb7a477a" category="list-text">選擇要保護的來源磁碟區時，只能選擇具有相符 SnapLock 設定的磁碟區。所選磁碟區必須全部啟用 SnapLock 功能，或全部停用 SnapLock 功能。</block>
 </blocks>
