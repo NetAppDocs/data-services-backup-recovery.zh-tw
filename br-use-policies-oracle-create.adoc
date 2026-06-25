@@ -170,7 +170,7 @@ NOTE: 如果此原則使用 *Local snapshots* 或 *Disk to object storage*，則
 +
 **** 已安裝 NetApp 外掛程式
 **** 已安裝 Oracle Database 二進位檔案
-**** 與來源資料庫具有相同的 Oracle Database 版本
+**** 與來源資料庫使用相同的 Oracle Database 版本
 **** 擁有對儲存快照的儲存設備（主要或次要）的網路存取
 **** 能夠掛載複製的磁碟區並執行 Oracle Database DBVERIFY 公用程式。
 

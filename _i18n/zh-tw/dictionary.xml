@@ -778,7 +778,6 @@
   <block id="e5dd8794e7e239a004607625309c03bb" category="list-text">有關 Kubernetes 工作負載，請參閱<block ref="bdf340f843cf54500673f62df22d5070" category="inline-link-macro-rx"></block>。</block>
   <block id="47531513e36377c6a5c78be39708d962" category="summary">在使用NetApp Backup and Recovery之前，請執行幾個步驟來設定備份目標。</block>
   <block id="e902bc2010ef35580633bf1114aee5b3" category="doc">在使用NetApp Backup and Recovery之前設定備份目標</block>
-  <block id="8a0933307f827fb9f8c7b526a219880b" category="paragraph">在使用NetApp Backup and Recovery之前，請執行幾個步驟來設定備份目標。</block>
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">先決條件</block>
   <block id="1ee0b624eb9dbd226bf2ec0c999c84a7" category="paragraph">在開始之前，請查看<block ref="2eebb303c5f465d9ddee1afb9c070240" category="inline-link-macro-rx"></block>以確保您的環境已準備就緒。</block>
   <block id="7fada33e4007d6c45f21f39f8f564f62" category="section-title">準備備份目標</block>
@@ -5298,7 +5297,6 @@
   <block id="87e187714ad3406b822e2c0bf109240b" category="summary">您可以將 Hyper-V VM 快照中的一個或多個檔案或資料夾還原到 Windows 客體 VM。</block>
   <block id="cd21aa174cd18a8828140ba323628bfb" category="doc">從 Hyper-V VM 備份中還原檔案和資料夾</block>
   <block id="d822ec23856d26a5af79fad29ce2f55e" category="paragraph">從快照掛載虛擬磁碟，並將檔案和資料夾從該虛擬磁碟還原到原始（來源）Windows VM。</block>
-  <block id="d4bb35603ef1e4c4f849336d35413c6f" category="paragraph">在您能夠還原檔案和資料夾之前，必須在 NetApp Backup and Recovery 中為來源 VM 建立認證。此認證用於還原過程中與 VM 進行驗證。</block>
   <block id="17a458fd7a6b6ae191ac9219e3b46deb" category="paragraph">透過掛載虛擬磁碟開啟檔案和資料夾還原工作階段時，該工作階段將保持作用中狀態 48 小時。</block>
   <block id="392177f0b4a0bc4b5bc23ef82eee9fff" category="paragraph">還原效能取決於待還原的檔案或資料夾的大小和數量。對於給定的資料集大小，還原大量小檔案通常比還原少量大檔案花費的時間更長。</block>
   <block id="0c1d8f103b8f05dc9e681f213a4140ed" category="paragraph">還原檔案和資料夾時，請注意以下事項：</block>
@@ -5378,7 +5376,6 @@
   <block id="96cd77faff8587f3ee978f6d738fc506" category="list-text">*驗證伺服器*：您可以選擇一個或多個已註冊的 Oracle 主機作為異地驗證伺服器。如果未選擇任何伺服器，驗證將直接在來源資料庫主機上執行。否則，NetApp Backup and Recovery 會將快照複製掛載到選定的主機之一上，並在該主機上驗證備份，從而將驗證 I/O 與生產資料庫伺服器隔離。驗證伺服器必須：</block>
   <block id="a96c5b49f0e2679b8f6884c399905c08" category="list-text">已安裝 NetApp 外掛程式</block>
   <block id="aa525d522adb224988fcdcd6f1e78c30" category="list-text">已安裝 Oracle Database 二進位檔案</block>
-  <block id="7ed52864c10e2ddd715752fb3ab3a33f" category="list-text">與來源資料庫具有相同的 Oracle Database 版本</block>
   <block id="ed72ca5994ca086c703a8fad4669ac29" category="list-text">擁有對儲存快照的儲存設備（主要或次要）的網路存取</block>
   <block id="a6b9c0ae442c5226d495a5c8fcbaec6c" category="list-text">能夠掛載複製的磁碟區並執行 Oracle Database DBVERIFY 公用程式。</block>
   <block id="ee722f1985ae6abb41cf3cea75ae2afd" category="list-text">*最大傳輸速率*：啟用 *Enable maximum transfer rate* 可為選定主機設定最大傳輸速率。如需不限制頻寬使用，請選擇 *Unlimited*。如需限制傳輸速率，請選擇 *Limited*，並選擇 1 到 1,000 Mbps 之間的網路頻寬，用於將備份上傳到物件儲存。預設情況下，ONTAP 可以使用無限頻寬將備份資料從系統中的磁碟區傳輸到物件儲存。如果備份流量影響工作負載，請降低傳輸的網路頻寬。</block>
@@ -5644,4 +5641,6 @@
   <block id="2b4ccece5f6493a03ab0eed818dd5e54" category="list-text">將 VMware 工作負載備份到支援的儲存供應商。</block>
   <block id="947289c8d4497907d6f4aedc1502dce8" category="list-text">Google Cloud Storage（僅限 ONTAP 磁碟區和 Kubernetes 工作負載）</block>
   <block id="0692ea49da3133a6dc624be3e9654369" category="paragraph">您也可以依照下列步驟取代控制台代理程式並還原在本機使用標準模式備份和還原時（不涉及雲端帳戶時，例如，使用 NetApp StorageGRID 作為備份目標時）儲存在其上的組態資料。</block>
+  <block id="2be7e1093c386d54e43c7fc0e8de4a1f" category="paragraph">在還原檔案和資料夾之前，您必須在 NetApp Backup and Recovery 中為來源虛擬機器建立憑證。此憑證用於在還原過程中對虛擬機器進行驗證。</block>
+  <block id="9f5917bbc05d835882ed9022aa56ac20" category="list-text">與來源資料庫使用相同的 Oracle Database 版本</block>
 </blocks>
