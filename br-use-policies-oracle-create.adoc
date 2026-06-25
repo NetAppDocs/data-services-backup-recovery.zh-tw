@@ -108,7 +108,7 @@ NOTE: 其中一些選項和配置部分並不適用於所有工作負載。
 *** 其他選項：如果您選擇延期轉賬，則轉帳不是立即進行的，您可以設定時間表。
 
 
-** * SnapMirror和SnapVault SMAS 二級關係*：對 SQL Server 工作負載使用SnapMirror和SnapVault SMAS 二級關係。
+** *使用現有 SnapMirror 和 SyncMirror 輔助關係*：啟用此選項可使用現有 SnapMirror 或 SyncMirror 關係將快照傳輸到指定的目標叢集。
 
 
 . 提供 * 物件儲存設定 * 區段的資訊（備份至物件儲存）：

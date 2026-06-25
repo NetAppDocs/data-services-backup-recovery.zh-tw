@@ -1513,7 +1513,6 @@
   <block id="b46669fe80ca2a5b9a2d07aed9bdb568" category="list-text">*轉入中學*：</block>
   <block id="c6b1efb6a3381715b935aaf64195be83" category="list-text">預設情況下，選擇 * ONTAP傳輸計畫 - 內嵌* 選項，表示快照會立即傳輸到二級儲存系統。您不需要安排備份。</block>
   <block id="ea593eb0ffc75f929e0088d1e36356cf" category="list-text">其他選項：如果您選擇延期轉賬，則轉帳不是立即進行的，您可以設定時間表。</block>
-  <block id="cc7a1e67eff230a3c65fb315a1c8d1f0" category="list-text">* SnapMirror和SnapVault SMAS 二級關係*：對 SQL Server 工作負載使用SnapMirror和SnapVault SMAS 二級關係。</block>
   <block id="5d53f1521f3c11d2c706909ba7322fd1" category="admonition">出現的欄位會根據所選的提供者和架構而有所不同。</block>
   <block id="aea6f666cce57b356fb2085a81658754" category="list-text">*IPspace*：選擇用於備份作業的 IP 空間。如果您有多個 IP 空間並想要控制哪一個用於備份，這將非常有用。</block>
   <block id="61c7ccb12ec5421abd7bf85769ede78b" category="list-text">*計畫設定*：選擇為本機快照設定的計畫。您可以刪除計劃，但不能新增計劃，因為計劃是根據本機快照計劃設定的。</block>
@@ -4724,8 +4723,6 @@
   <block id="5a7772dd6a45520c18defbce09d0dedf" category="paragraph">在 NetApp Backup and Recovery 的 Oracle Database 工作負載預覽版本中，不支援下列動作：</block>
   <block id="fffe6dab1367a6da9b1ff43e10e3c12a" category="paragraph">在 NetApp Backup and Recovery 中，VMware 工作負載不支援以下操作：</block>
   <block id="97c13d527bcfec5ed7f29badd43016d8" category="list-text">編輯原則（不適用於 VMware 工作負載）</block>
-  <block id="332f36926e04f03459b83b7c8da214a6" category="list-text">*VMware 工作負載（使用新 UI，未安裝 SnapCenter Plug-in for VMware vSphere）*：</block>
-  <block id="66484fcd4199c3f1b40e50c680ad4e56" category="list-text">將 VMware 工作負載備份至 Amazon Web Services S3 或 StorageGRID 。</block>
   <block id="6a4470b3ca7a52803928f40d397b0521" category="list-text">*KVM 工作負載*：</block>
   <block id="c4d36d8f4f3b72c9d5cac59995049781" category="list-text">*Hyper-V 工作負載*：</block>
   <block id="b6178e1ff85723d95932c36399cc61c2" category="list-text">*Kubernetes 工作負載*：</block>
@@ -4835,7 +4832,6 @@
   <block id="4698b69bed4ee276f187d88f25644b08" category="cell">請確保在 Windows 防火牆設定中允許下列連接埠的雙向 HTTPS 流量</block>
   <block id="d213948679817ac06e8c20f73a6d5e50" category="list-text">TCP 8144（NetApp Plugin for Hyper-V）</block>
   <block id="eb24ddd0422049219f581858a9ae2714" category="list-text">TCP 8145（NetApp Plugin for Windows）</block>
-  <block id="86a1075e6640849bd364878900fd5412" category="paragraph">您也可以依照下列步驟取代 Console 代理程式並還原在本機以_標準模式_使用 Backup and Recovery 時儲存在其上的設定資料（當不涉及雲端帳戶時，例如，當使用 NetApp StorageGrid 作為備份目標時）。</block>
   <block id="72edcbdd4436f32d101a83a36dd2d1db" category="list-text">執行 *ls* 命令以確保已建立資料夾 "catalogdb1"，並且其中包含子資料夾<block ref="45b963397aa40d4a0063e0d85e4fe7a1" prefix=" " category="inline-code"></block>、<block ref="b17be6650251f2e6c7d4e90209beb4e0" prefix=" " category="inline-code"></block>和<block ref="695633290d050f31cec0c9d4bd4a57fe" prefix=" " category="inline-code"></block>。</block>
   <block id="69b1a964078d5301a2aa9822cb2304f2" category="section-title">2026 年 3 月 16 日</block>
   <block id="5896522d63454009d1844a27f9e16972" category="cell">7.4.13 或更新版本</block>
@@ -5643,4 +5639,9 @@
   <block id="df9ce829d97bcaaccefd13ad9443c5fe" category="list-text">若要啟用 FlexGroup 磁碟區保護功能，需要 ONTAP 9.12.1 或更新版本。請參閱 <block ref="a1845bf1ef98236015caabc5bbd8f351" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
   <block id="bc75b0ab08d9eba6d835f75a9dc3780f" category="list-text">備份或還原至 S3 相容物件儲存需要 ONTAP 9.17.1 或更新版本。</block>
   <block id="6e61da6259c2e5766003325feb7a477a" category="list-text">選擇要保護的來源磁碟區時，只能選擇具有相符 SnapLock 設定的磁碟區。所選磁碟區必須全部啟用 SnapLock 功能，或全部停用 SnapLock 功能。</block>
+  <block id="fa428977bbfd079a1a152d734ac0da9a" category="list-text">*使用現有 SnapMirror 和 SyncMirror 輔助關係*：啟用此選項可使用現有 SnapMirror 或 SyncMirror 關係將快照傳輸到指定的目標叢集。</block>
+  <block id="2d86afc1dea874d04cb6b44f9329cb39" category="list-text">*VMware workloads*：</block>
+  <block id="2b4ccece5f6493a03ab0eed818dd5e54" category="list-text">將 VMware 工作負載備份到支援的儲存供應商。</block>
+  <block id="947289c8d4497907d6f4aedc1502dce8" category="list-text">Google Cloud Storage（僅限 ONTAP 磁碟區和 Kubernetes 工作負載）</block>
+  <block id="0692ea49da3133a6dc624be3e9654369" category="paragraph">您也可以依照下列步驟取代控制台代理程式並還原在本機使用標準模式備份和還原時（不涉及雲端帳戶時，例如，使用 NetApp StorageGRID 作為備份目標時）儲存在其上的組態資料。</block>
 </blocks>

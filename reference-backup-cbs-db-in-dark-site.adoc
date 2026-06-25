@@ -16,7 +16,7 @@ summary: 在私有模式（無網際網路存取）下，NetApp Backup and Recov
 [role="lead"]
 在 _私有模式_（無網際網路存取）下，NetApp Backup and Recovery 會將其組態資料儲存在與備份相同的 StorageGRID 或 ONTAP S3 bucket 中。如果 Console agent 主機系統發生故障，您可以部署新的 Console agent 並還原這些資料。
 
-您也可以依照下列步驟取代 Console 代理程式並還原在本機以_標準模式_使用 Backup and Recovery 時儲存在其上的設定資料（當不涉及雲端帳戶時，例如，當使用 NetApp StorageGrid 作為備份目標時）。
+您也可以依照下列步驟取代控制台代理程式並還原在本機使用標準模式備份和還原時（不涉及雲端帳戶時，例如，使用 NetApp StorageGRID 作為備份目標時）儲存在其上的組態資料。
 
 
 NOTE: 此過程僅適用於ONTAP磁碟區資料。
