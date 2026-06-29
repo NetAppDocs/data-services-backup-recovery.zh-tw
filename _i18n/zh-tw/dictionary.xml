@@ -2426,10 +2426,6 @@
   <block id="868fb9c55d4ddac7523d9c4697eb9d9f" category="section-title">設定客戶管理的 AWS 金鑰以進行資料加密</block>
   <block id="72828ef5ab3d5aa027bfcdd1a9224f67" category="paragraph">如果您想使用預設的 Amazon S3 加密金鑰來加密您的本機叢集和 S3 儲存桶之間傳遞的數據，那麼您已經完成了所有設置，因為預設安裝使用這種類型的加密。</block>
   <block id="aa9f769e3ac07b6605a7c510f6467b0d" category="paragraph">如果您想使用自己的客戶管理金鑰進行資料加密而不是使用預設金鑰，那麼您需要在啟動NetApp Backup and Recovery精靈之前設定加密管理金鑰。</block>
-  <block id="81d60e20c02d2dc4f1f049ef17d9c0f3" category="inline-link">請參閱如何在Cloud Volumes ONTAP中使用您自己的 Amazon 加密金鑰</block>
-  <block id="eb3f4e9630751efd3957882fa3339f53" category="paragraph"><block ref="a7e77aaf059fb9a4b638710225357142" category="inline-link-rx"></block>。</block>
-  <block id="8ceec43667de81f25c5ddfbde5549946" category="inline-link">請參閱如何在NetApp Backup and Recovery中使用您自己的 Amazon 加密金鑰</block>
-  <block id="3869dda903236d84654e6efafcb9d188" category="paragraph"><block ref="8fe101e295f009741416862cf90e3f6c" category="inline-link-rx"></block>。</block>
   <block id="486567bdd60f21beefa59174661f6d52" category="section-title">使用 VPC 終端節點介面配置系統以進行私有連接</block>
   <block id="f50abdb59982020e158a4a180050f908" category="paragraph">如果您想使用標準公共互聯網連接，那麼所有權限都由控制台代理設置，您無需執行任何其他操作。</block>
   <block id="26dcafbb92de47e3c098da4f6dfb38ae" category="paragraph">如果您希望透過網路從本機資料中心到 VPC 建立更安全的連接，則可以在備份啟動精靈中選擇 AWS PrivateLink 連接。如果您打算使用 VPN 或 AWS Direct Connect 透過使用私人 IP 位址的 VPC 終端節點介面連接您的本機系統，則需要它。</block>
@@ -5643,4 +5639,7 @@
   <block id="0692ea49da3133a6dc624be3e9654369" category="paragraph">您也可以依照下列步驟取代控制台代理程式並還原在本機使用標準模式備份和還原時（不涉及雲端帳戶時，例如，使用 NetApp StorageGRID 作為備份目標時）儲存在其上的組態資料。</block>
   <block id="2be7e1093c386d54e43c7fc0e8de4a1f" category="paragraph">在還原檔案和資料夾之前，您必須在 NetApp Backup and Recovery 中為來源虛擬機器建立憑證。此憑證用於在還原過程中對虛擬機器進行驗證。</block>
   <block id="9f5917bbc05d835882ed9022aa56ac20" category="list-text">與來源資料庫使用相同的 Oracle Database 版本</block>
+  <block id="6b181f9b8f3365a62a308265f446f30b" category="admonition">客戶管理的金鑰加密功能僅支援 Amazon FSx for NetApp ONTAP。不支援 Cloud Volumes ONTAP for AWS。</block>
+  <block id="e46ce594d7f94f0d680627c5f9150ad6" category="inline-link">在 AWS 中設定客戶管理的金鑰加密</block>
+  <block id="fe921914a3a58bce833cfd4d4785fb2b" category="paragraph">請參閱<block ref="445e5997f02f6fbbedcd2ff2bda158c4" category="inline-link-rx"></block>。</block>
 </blocks>

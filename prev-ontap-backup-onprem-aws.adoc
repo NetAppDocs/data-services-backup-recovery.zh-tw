@@ -336,9 +336,10 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 如果您想使用自己的客戶管理金鑰進行資料加密而不是使用預設金鑰，那麼您需要在啟動NetApp Backup and Recovery精靈之前設定加密管理金鑰。
 
-https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["請參閱如何在Cloud Volumes ONTAP中使用您自己的 Amazon 加密金鑰"^]。
 
-https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-bluexp.html#configure-encryption-settings["請參閱如何在NetApp Backup and Recovery中使用您自己的 Amazon 加密金鑰"^]。
+NOTE: 客戶管理的金鑰加密功能僅支援 Amazon FSx for NetApp ONTAP。不支援 Cloud Volumes ONTAP for AWS。
+
+請參閱 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["在 AWS 中設定客戶管理的金鑰加密"^]。
 
 
 
