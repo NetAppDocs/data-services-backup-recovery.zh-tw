@@ -146,6 +146,9 @@ NetApp Console通知中心追蹤您啟動的備份和復原作業的進度，以
 | 啟用設定 | 系統備份和恢復啟動失敗 | 是的 | 是的 
 
 
+| 啟用設定 | 系統備份和恢復啟動成功 | 是的 | 是的 
+
+
 | 啟用設定 | 系統備份和恢復編輯失敗 | 是的 | 是的 
 
 
@@ -153,9 +156,6 @@ NetApp Console通知中心追蹤您啟動的備份和復原作業的進度，以
 
 
 | 啟用設定 | 磁碟區備份或狀態已修改 | 是的 | 是的 
-
-
-| 啟用設定 | 系統備份和恢復啟動成功 | 是的 | 是的 
 
 
 | 啟用設定 | 臨時磁碟區備份失敗 | 是的 | 是的 
@@ -167,10 +167,10 @@ NetApp Console通知中心追蹤您啟動的備份和復原作業的進度，以
 | 啟用設定 | 多磁碟區備份失敗 | 是的 | 是的 
 
 
-| 定時任務 | 檢查是否缺少快照標籤 | 是的 | 是的 
+| 定時任務 | 快照策略/備份策略標籤不匹配 | 是的 | 是的 
 
 
-| 定時任務 | 未能向ONTAP發送此系統的安全令牌 | 是的 | 是的 
+| 定時任務 | 更新此系統的 ONTAP 物件儲存憑證失敗 | 是的 | 是的 
 
 
 | 酒吧/訂閱活動 | 連線失敗 | 是的 | 不 
@@ -203,22 +203,22 @@ NetApp Console通知中心追蹤您啟動的備份和復原作業的進度，以
 | 複製 | NetApp Backup and Recovery暫時複製作業失敗 | 是的 | 是的 
 
 
-| 複製 | NetApp Backup and Recovery與復原複製暫停作業失敗 | 是的 | 不 
+| 複製 | NetApp Backup and Recovery 複製關係暫停作業失敗 | 是的 | 不 
 
 
-| 複製 | NetApp Backup and Recovery複製中斷作業失敗 | 是的 | 不 
+| 複製 | NetApp Backup and Recovery 複製關係中斷作業失敗 | 是的 | 不 
 
 
-| 複製 | NetApp Backup and Recovery重新同步作業失敗 | 是的 | 不 
+| 複製 | NetApp Backup and Recovery 複製關係重新同步作業失敗 | 是的 | 不 
 
 
 | 複製 | NetApp Backup and Recovery與復原複製停止作業失敗 | 是的 | 不 
 
 
-| 複製 | NetApp Backup and Recovery反向重新同步作業失敗 | 是的 | 是的 
+| 複製 | NetApp Backup and Recovery 複製關係反向重新同步作業失敗 | 是的 | 是的 
 
 
-| 複製 | NetApp Backup and Recovery複製刪除作業失敗 | 是的 | 是的 
+| 複製 | NetApp Backup and Recovery 複製關係刪除作業失敗 | 是的 | 是的 
 
 
 | 目標行動 | 恢復到本機或雲端目標故障 | 是的 | 是的 
@@ -228,6 +228,9 @@ NetApp Console通知中心追蹤您啟動的備份和復原作業的進度，以
 
 
 | 系統操作 | 臨時磁碟區快照建立失敗 | 是的 | 是的 
+
+
+| 系統操作 | 磁碟區備份索引失敗 | 是的 | 是的 
 |===
 
 NOTE: 從ONTAP 9.13.0 開始，所有警報都會出現在Cloud Volumes ONTAP和本地ONTAP系統中。對於具有Cloud Volumes ONTAP 9.13.0 和本機ONTAP 的系統，僅出現與「復原作業已完成，但有警告」相關的警報。

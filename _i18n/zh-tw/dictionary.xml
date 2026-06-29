@@ -1209,13 +1209,8 @@
   <block id="32316833f8e2552223d79fb99979ff7f" category="cell">NetApp Backup and Recovery快照建立作業失敗</block>
   <block id="8c340dc334134096f68b880b42a8692c" category="cell">複製</block>
   <block id="def1939e9c93c839079171f6dd5e3291" category="cell">NetApp Backup and Recovery暫時複製作業失敗</block>
-  <block id="08a671649ac55e1aa9d353651e865c93" category="cell">NetApp Backup and Recovery與復原複製暫停作業失敗</block>
   <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">不</block>
-  <block id="de07da0681d640a8e5bfdf21bac49e81" category="cell">NetApp Backup and Recovery複製中斷作業失敗</block>
-  <block id="d275c1564b9f2a250f9bf30d6e8bab26" category="cell">NetApp Backup and Recovery重新同步作業失敗</block>
   <block id="9f6cd0f0a12191a75f16414b3b601822" category="cell">NetApp Backup and Recovery與復原複製停止作業失敗</block>
-  <block id="93d1a6c01d156e393187858c16c5c626" category="cell">NetApp Backup and Recovery反向重新同步作業失敗</block>
-  <block id="594e604651fd901124d237d8caf5c86f" category="cell">NetApp Backup and Recovery複製刪除作業失敗</block>
   <block id="910e8697aa5e0e59e920af3a4cf26b12" category="admonition">從ONTAP 9.13.0 開始，所有警報都會出現在Cloud Volumes ONTAP和本地ONTAP系統中。對於具有Cloud Volumes ONTAP 9.13.0 和本機ONTAP 的系統，僅出現與「復原作業已完成，但有警告」相關的警報。</block>
   <block id="4e1654b110548c12172bd1f4aa2a9b85" category="paragraph">若要接收NetApp Backup and Recovery電子郵件警報，您需要在通知設定頁面中選擇通知嚴重性類型「嚴重」、「警告」和「錯誤」。</block>
   <block id="ac92ec63bcc51fd7fbdc332411a1c313" category="inline-link">了解如何傳送備份和復原作業的警報電子郵件</block>
@@ -4138,8 +4133,6 @@
   <block id="80fd95bd893f8df76c2fa9dd4bad6849" category="cell">臨時卷備份成功</block>
   <block id="5ed835b77018cbf32fbdfb39bcc25527" category="cell">多磁碟區備份失敗</block>
   <block id="0298583ff5a55aeec25dc314bbd47357" category="cell">定時任務</block>
-  <block id="f771739629c02b8a1545a40985444450" category="cell">檢查是否缺少快照標籤</block>
-  <block id="39e7a35fbe3bf187f05710b99a1abab5" category="cell">未能向ONTAP發送此系統的安全令牌</block>
   <block id="1da6059b2e40a5d5dcd0f29c0344d522" category="cell">酒吧/訂閱活動</block>
   <block id="75c3b3bb89bde01f9166a94cbfa98588" category="cell">連線失敗</block>
   <block id="4d40cebef25fff7de69b66a1fd2b91ac" category="cell">刪除計劃快照失敗</block>
@@ -5642,4 +5635,12 @@
   <block id="6b181f9b8f3365a62a308265f446f30b" category="admonition">客戶管理的金鑰加密功能僅支援 Amazon FSx for NetApp ONTAP。不支援 Cloud Volumes ONTAP for AWS。</block>
   <block id="e46ce594d7f94f0d680627c5f9150ad6" category="inline-link">在 AWS 中設定客戶管理的金鑰加密</block>
   <block id="fe921914a3a58bce833cfd4d4785fb2b" category="paragraph">請參閱<block ref="445e5997f02f6fbbedcd2ff2bda158c4" category="inline-link-rx"></block>。</block>
+  <block id="a5f837afad6e28e74cc2bc1ddf30b10c" category="cell">快照策略/備份策略標籤不匹配</block>
+  <block id="0c1df2a13aa2696a312b568815c83f15" category="cell">更新此系統的 ONTAP 物件儲存憑證失敗</block>
+  <block id="14714a38e65ddb4109cc93b0e6a171b9" category="cell">NetApp Backup and Recovery 複製關係暫停作業失敗</block>
+  <block id="6532e5d724a28a601ca7648d508d625b" category="cell">NetApp Backup and Recovery 複製關係中斷作業失敗</block>
+  <block id="cb807b65bdf438c727793dce019ff942" category="cell">NetApp Backup and Recovery 複製關係重新同步作業失敗</block>
+  <block id="633255f387c732126e8cdceb4ac9fceb" category="cell">NetApp Backup and Recovery 複製關係反向重新同步作業失敗</block>
+  <block id="d59074181d2dab51d18ca27cb4fc47d8" category="cell">NetApp Backup and Recovery 複製關係刪除作業失敗</block>
+  <block id="5df069a4ec3b3f8731b57ed05f942930" category="cell">磁碟區備份索引失敗</block>
 </blocks>
