@@ -729,7 +729,6 @@
   <block id="782af9afc0728a9389fd837476a88107" category="inline-link">前往NetApp Intelligent Services市場了解定價詳情</block>
   <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">使用年度合約</block>
   <block id="e8081693b5a02447f0b48df91b9f65d8" category="paragraph">透過購買年度合約每年支付NetApp Backup and Recovery的費用。期限分為 1 年、2 年或 3 年。</block>
-  <block id="ba3a3b81b7867cbfec5cb03d1bbc6d9a" category="paragraph">如果您與市場簽訂了年度合同，則所有NetApp Backup and Recovery消費均根據該合約收費。您不能將年度市場合約與 BYOL 混合搭配。</block>
   <block id="2351127acb653fd60dafc73c8efcb79d" category="inline-link">AWS Marketplace 頁面</block>
   <block id="dda622e647d2d5d64503c046c508cc10" category="paragraph">當您使用 AWS 時，有兩種年度合約可供選擇<block ref="85c21eb306ec4bcbda7252ca6117fc5c" category="inline-link-rx"></block>對於Cloud Volumes ONTAP和本機ONTAP系統：</block>
   <block id="c776759ca58ab152a9abc5e0b4f7ae66" category="list-text">「雲端備份」計畫可讓您備份Cloud Volumes ONTAP資料和本機ONTAP資料。</block>
@@ -5644,4 +5643,5 @@
   <block id="9823593ea29f31b6d988e92cd15483f6" category="list-text">SMB 共用</block>
   <block id="e3438f0f5d63a3c8de989b98d3095c8d" category="list-text">透過 iSCSI 或光纖通道連接的 SAN 儲存設備</block>
   <block id="81bdc0623ea533b24d0e11cb1d26ba25" category="list-text">對於使用 SMB 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在 ONTAP 系統上啟用持續可用性共用屬性。請參閱<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>以取得相關說明。</block>
+  <block id="09e4a6980ec8e49e9c338d71a078b029" category="paragraph">如果您與市場平台簽訂了年度合約，則所有 NetApp Backup and Recovery 的使用費用都將計入該合約。</block>
 </blocks>

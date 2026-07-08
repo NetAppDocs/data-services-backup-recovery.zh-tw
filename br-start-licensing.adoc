@@ -86,7 +86,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 
 透過購買年度合約每年支付NetApp Backup and Recovery的費用。期限分為 1 年、2 年或 3 年。
 
-如果您與市場簽訂了年度合同，則所有NetApp Backup and Recovery消費均根據該合約收費。您不能將年度市場合約與 BYOL 混合搭配。
+如果您與市場平台簽訂了年度合約，則所有 NetApp Backup and Recovery 的使用費用都將計入該合約。
 
 當您使用 AWS 時，有兩種年度合約可供選擇 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace 頁面"^]對於Cloud Volumes ONTAP和本機ONTAP系統：
 
