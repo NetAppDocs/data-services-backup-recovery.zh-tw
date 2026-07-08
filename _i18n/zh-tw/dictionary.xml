@@ -617,7 +617,6 @@
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">執行下列操作之一：</block>
   <block id="6226950d1b144f972ce9b5d3caea9b42" category="list-text">如果您已經發現 Kubernetes 工作負載，請在NetApp Backup and Recovery中選擇 *Inventory* &gt; *Workloads*，然後選擇 *Discover resources*。</block>
   <block id="e7c444e4a1d2f156d71a907145c8a598" category="list-text">選擇 *Kubernetes* 工作負載類型。</block>
-  <block id="96c35fcba67cbf6710845bcca4668cc2" category="list-text">輸入叢集名稱並選擇與叢集一起使用的連接器。</block>
   <block id="39b0136210d9abd099b81781cc0a17db" category="list-text">按照出現的命令列說明進行操作：</block>
   <block id="ed6eabebedff09350cdabab556887c62" category="list-text">建立 Kubernetes 機密</block>
   <block id="6c27e11d1144953d7877449d5adc966d" category="list-text">新增 Helm 儲存庫</block>
@@ -5644,4 +5643,5 @@
   <block id="e3438f0f5d63a3c8de989b98d3095c8d" category="list-text">透過 iSCSI 或光纖通道連接的 SAN 儲存設備</block>
   <block id="81bdc0623ea533b24d0e11cb1d26ba25" category="list-text">對於使用 SMB 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在 ONTAP 系統上啟用持續可用性共用屬性。請參閱<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>以取得相關說明。</block>
   <block id="09e4a6980ec8e49e9c338d71a078b029" category="paragraph">如果您與市場平台簽訂了年度合約，則所有 NetApp Backup and Recovery 的使用費用都將計入該合約。</block>
+  <block id="fe336167ccf46f9fb348006254d0f3ee" category="list-text">輸入叢集名稱並選擇要與叢集搭配使用的 Console 代理程式。</block>
 </blocks>
