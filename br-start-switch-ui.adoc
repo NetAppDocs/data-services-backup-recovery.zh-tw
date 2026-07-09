@@ -18,6 +18,7 @@ summary: 您可以在不同的NetApp Backup and Recovery工作負載之間切換
 
 
 
+[[switch-to-a-different-workload]]
 == 切換到不同的工作負載
 
 您可以在NetApp Backup and RecoveryUI 中切換到不同的工作負載。

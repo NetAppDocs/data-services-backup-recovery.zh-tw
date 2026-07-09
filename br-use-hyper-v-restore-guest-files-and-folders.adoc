@@ -18,6 +18,7 @@ summary: 您可以將 Hyper-V VM 快照中的一個或多個檔案或資料夾�
 
 
 
+[[restore-files-and-folders]]
 == 還原檔案和資料夾
 
 從快照掛載虛擬磁碟，並將檔案和資料夾從該虛擬磁碟還原到原始（來源）Windows VM。
@@ -101,6 +102,7 @@ NetApp Backup and Recovery 會將虛擬磁碟掛載到原始 VM，並顯示所�
 
 
 
+[[manage-active-live-disk-mount-sessions]]
 == 管理作用中的即時磁碟掛載工作階段
 
 在 NetApp Backup and Recovery 中檢視、使用和刪除活動的 Hyper-V 檔案和資料夾還原工作階段。

@@ -18,6 +18,7 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 
 
 
+[[discover-a-backup-target]]
 == 發現備份目標
 
 在使用NetApp Backup and Recovery之前，請先設定您的備份目標（Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage 或StorageGRID ）。
@@ -86,6 +87,7 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 
 
 
+[[add-a-bucket-for-a-backup-target]]
 == 為備份目標新增儲存桶
 
 您可以手動將儲存桶新增至異地備份目標，而不是讓NetApp Backup and Recovery自動發現儲存桶。
@@ -160,6 +162,7 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 
 
 
+[[change-credentials-for-a-backup-target]]
 == 更改備份目標的憑證
 
 輸入存取備份目標所需的憑證。

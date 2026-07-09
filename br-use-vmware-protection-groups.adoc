@@ -27,6 +27,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 VMware 工作負載的�
 
 
 
+[[tag-based-protection-groups]]
 == 基於標籤的保護群組
 
 選擇要新增至保護群組的資源時，可以按資料儲存區、虛擬機器或 vSphere 標籤進行組織。
@@ -45,6 +46,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 VMware 工作負載的�
 
 
 
+[[create-a-protection-group]]
 == 建立保護組
 
 建立保護群組，將要備份和還原的資源組織在一起。
@@ -92,6 +94,7 @@ IMPORTANT: 不支援混合資源類型（例如，將標籤與相同保護群組
 
 
 
+[[suspend-a-protection-groups-backup-schedule]]
 == 暫停保護組的備份計劃
 
 暫停保護組以暫停其計劃的備份。
@@ -109,6 +112,7 @@ IMPORTANT: 不支援混合資源類型（例如，將標籤與相同保護群組
 
 
 
+[[resume-a-protection-groups-backup-schedule]]
 == 恢復保護組的備份計劃
 
 復原已暫停的保護群組將重新啟動該保護群組的計畫備份。
@@ -129,6 +133,7 @@ IMPORTANT: 不支援混合資源類型（例如，將標籤與相同保護群組
 
 
 
+[[edit-a-protection-group]]
 == 編輯保護群組
 
 編輯保護群組以變更其名稱或設定。如果保護群組中的資源發生了變化，您可能需要編輯該保護群組。
@@ -149,6 +154,7 @@ IMPORTANT: 不支援混合資源類型（例如，將標籤與相同保護群組
 
 
 
+[[apply-an-updated-vcenter-time-zone-to-an-existing-protection-group]]
 === 將更新後的 vCenter 時區套用至現有保護群組
 
 排程備份使用建立保護群組排程時所記錄的 vCenter Server 時區。如果您變更 vCenter Server 時區，現有保護群組將繼續以其原始時區（通常為 UTC）執行，直到您更新其排程為止。
@@ -163,6 +169,7 @@ NOTE: 只有在您修改保護群組名稱、新增或刪除虛擬機器、變�
 
 
 
+[[delete-a-protection-group]]
 == 刪除保護群組
 
 刪除保護群組時，也會刪除該群組以及該群組的所有備份計畫。如果不再需要某個保護群組，請將其刪除。

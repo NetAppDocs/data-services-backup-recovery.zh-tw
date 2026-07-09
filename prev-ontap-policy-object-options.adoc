@@ -24,6 +24,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[backup-schedule-options]]
 == 備份計畫選項
 
 NetApp Backup and Recovery使您能夠為每個系統（叢集）建立具有唯一計劃的多個備份策略。您可以為具有不同復原點目標 (RPO) 的磁碟區指派不同的備份策略。
@@ -53,6 +54,7 @@ NetApp Backup and Recovery使您能夠為每個系統（叢集）建立具有唯
 
 
 
+[[datalock-and-ransomware-protection-options]]
 == DataLock 和勒索軟體保護選項
 
 NetApp Backup and Recovery為您的磁碟區備份提供 DataLock 和勒索軟體保護支援。這些功能使您能夠鎖定備份檔案並對其進行掃描以偵測備份檔案上可能存在的勒索軟體。這是一個可選設置，當您希望為叢集的磁碟區備份提供額外保護時，可以在備份策略中定義它。
@@ -70,6 +72,7 @@ NetApp Backup and Recovery為您的磁碟區備份提供 DataLock 和勒索軟�
 ====
 
 
+[[what-is-datalock]]
 === 什麼是DataLock
 
 借助此功能，您可以鎖定透過SnapMirror複製到雲端的雲端快照，還可以啟用該功能來偵測勒索軟體攻擊並恢復物件儲存上快照的一致副本。此功能在 AWS、Azure、Google Cloud Platform 和StorageGRID上均支援。
@@ -88,6 +91,7 @@ DataLock 可保護您的備份檔案在一定時間內不被修改或刪除 - �
 
 
 
+[[what-is-retention-until-date-rud-and-how-is-it-calculated]]
 === 什麼是保留截止日期 (RUD)？如何計算？
 
 保留截止日期 (RUD) 根據快照保留期確定。保留截止日期是透過將快照保留期與緩衝區相加來計算的。
@@ -116,6 +120,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 
 
 
+[[enable-datalock-and-ransomware-protection]]
 === 啟用 DataLock 和勒索軟體保護
 
 您可以在建立策略時啟用 DataLock 和勒索軟體保護。建立策略後，您無法啟用、修改或停用此功能。
@@ -134,6 +139,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 
 
 
+[[what-is-ransomware-protection]]
 === 什麼是勒索軟體保護
 
 勒索軟體防護會掃描您的備份檔案以尋找勒索軟體攻擊的證據。勒索軟體攻擊的偵測是使用校驗和比較來執行的。如果在新的備份檔案與先前的備份檔案中發現潛在的勒索軟體，則該較新的備份檔案將被未顯示任何勒索軟體攻擊跡象的最新備份檔案取代。（被判定為遭受勒索軟體攻擊的檔案在被替換1天後被刪除。）
@@ -159,6 +165,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 
 
 
+[[supported-systems-and-object-storage-providers]]
 === 支援的系統和對象儲存提供者
 
 在下列公有和私有雲供應商中使用物件儲存時，您可以從下列系統在ONTAP磁碟區上啟用 DataLock 和勒索軟體保護。
@@ -181,6 +188,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 |===
 
 
+[[requirements]]
 === 要求
 
 * 對於 AWS：
@@ -282,6 +290,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html
 
 
 
+[[restrictions]]
 === 限制
 
 * 如果您在備份策略中配置了檔案存儲，則 DataLock 和勒索軟體保護功能不可用。
@@ -294,6 +303,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html
 
 
 
+[[tips-on-how-to-mitigate-datalock-costs]]
 === 如何降低 DataLock 成本的技巧
 
 您可以啟用或停用勒索軟體掃描功能，同時保持 DataLock 功能處於活動狀態。為了避免額外費用，您可以停用計劃的勒索軟體掃描。這使您可以自訂安全設定並避免產生雲端提供者的費用。
@@ -321,6 +331,7 @@ NOTE: Microsoft Azure 使用鎖定和解鎖模式。
 
 
 
+[[archival-storage-options]]
 == 檔案存儲選項
 
 使用 AWS、Azure 或 Google 雲端儲存時，您可以在一定天數後將較舊的備份檔案移至較便宜的存檔儲存類別或存取層。您也可以選擇立即將備份檔案傳送到檔案存儲，而無需寫入標準雲端儲存。只需輸入 *0* 作為「幾天後存檔」即可將備份檔案直接傳送到檔案儲存。對於很少需要存取雲端備份資料的用戶或正在替換磁帶備份解決方案的用戶來說，這尤其有用。

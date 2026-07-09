@@ -20,6 +20,7 @@ NetApp Backup and Recovery需要先發現 KVM 主機和虛擬機，然後才能�
 
 
 
+[[add-a-management-platform-kvm-host-and-discover-resources]]
 == 新增管理平台、KVM 主機並發現資源
 
 新增管理平台和 KVM 主機訊息，讓NetApp Backup and Recovery發現工作負載。
@@ -71,6 +72,7 @@ KVM 工作負載顯示在「庫存」頁面的工作負載清單中。
 
 
 
+[[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == 繼續存取NetApp Backup and Recovery儀表板
 
 .步驟

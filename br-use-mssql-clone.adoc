@@ -34,6 +34,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 
 
 
+[[create-a-clone]]
 == 創建克隆
 
 您可以建立 Microsoft SQL Server 工作負載的複製。克隆是從備份建立的來源資料的副本。克隆儲存在您的公有或私有雲帳戶的物件儲存中。如果資料遺失或損壞，您可以使用克隆來恢復您的工作負載。
@@ -105,6 +106,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 
 
 
+[[refresh-a-clone]]
 == 刷新克隆
 
 您可以刷新 Microsoft SQL Server 工作負載的克隆。刷新克隆會使用來源工作負載中的最新資料來更新克隆。如果您希望使克隆與來源工作負載保持同步，這將非常有用。
@@ -135,6 +137,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 
 
 
+[[skip-a-clone-refresh]]
 == 跳過克隆刷新
 
 跳過克隆刷新以保持克隆不變。
@@ -153,6 +156,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 
 
 
+[[split-a-clone]]
 == 分裂克隆
 
 您可以拆分 Microsoft SQL Server 工作負載的複製。拆分克隆將從克隆中建立一個新的備份。新的備份可用於恢復工作負載。
@@ -171,6 +175,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 
 
 
+[[delete-a-clone]]
 == 刪除克隆
 
 您可以刪除 Microsoft SQL Server 工作負載的複製。刪除克隆會從物件儲存中移除該複製並釋放儲存空間。

@@ -18,6 +18,7 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 
 
 
+[[create-a-protection-report]]
 == 建立保護報告
 
 建立保護報告以檢視叢集的保護狀態。
@@ -46,6 +47,7 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 
 
 
+[[download-a-protection-report]]
 == 下載保護報告
 
 下載產生的保護報告，報告格式可以是 JSON 檔案或 PDF 文件，以便查看和分享。
@@ -63,6 +65,7 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 
 
 
+[[view-a-protection-report]]
 == 檢視保護報告
 
 可在 NetApp Backup and Recovery 內快速檢視保護報告的互動式詳細資訊。您可以查看作業摘要資訊、資料保護狀態、組態詳細資料等。
@@ -78,6 +81,7 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 
 
 
+[[delete-a-protection-report]]
 == 刪除保護報告
 
 當您不再需要保護報告時，請將其刪除。

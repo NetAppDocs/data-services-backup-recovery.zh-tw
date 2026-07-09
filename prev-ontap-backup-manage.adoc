@@ -24,6 +24,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[view-the-backup-status-of-volumes-in-your-systems]]
 == 查看系統中磁碟區的備份狀態
 
 您可以在磁碟區備份儀表板中查看目前正在備份的所有磁碟區的清單。這包括所有類型的備份，包括快照、複製磁碟區和物件儲存中的備份檔案。您也可以查看系統中目前未備份的磁碟區。
@@ -43,6 +44,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[activate-backup-on-additional-volumes-in-a-system]]
 == 啟動系統中附加磁碟區的備份
 
 如果您在首次啟用NetApp Backup and Recovery時僅在系統中的某些磁碟區上啟動了備份，則可以稍後在其他磁碟區上啟用備份。
@@ -55,12 +57,14 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[change-the-backup-settings-assigned-to-existing-volumes]]
 == 更改分配給現有磁碟區的備份設置
 
 您可以變更指派給已指派原則的現有磁碟區的備份策略。您可以變更本機快照、複製磁碟區和備份檔案的策略。您想要套用於磁碟區的任何新快照、複製或備份策略都必須已經存在。
 
 
 
+[[edit-backup-settings-on-a-single-volume]]
 === 編輯單一磁碟區上的備份設置
 
 .步驟
@@ -74,6 +78,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[edit-backup-settings-on-multiple-volumes]]
 === 編輯多個卷上的備份設置
 
 如果您想在多個磁碟區上使用相同的備份設置，您可以同時在多個磁碟區上啟用或編輯備份設定。您可以選擇沒有備份設定、只有快照設定、只有備份到雲端設定等的捲，並使用不同的備份設定對所有這些磁碟區進行批次變更。
@@ -116,6 +121,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[create-a-manual-volume-backup-at-any-time]]
 == 隨時建立手動卷備份
 
 您可以隨時建立按需備份來擷取磁碟區的當前狀態。如果對磁碟區進行了非常重要的更改並且您不想等待下一次計劃的備份來保護該數據，這將非常有用。您也可以使用此功能為目前未備份且想要擷取其目前狀態的磁碟區建立備份。
@@ -139,6 +145,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 
 
 
+[[view-the-list-of-backups-for-each-volume]]
 == 查看每個卷的備份列表
 
 您可以查看每個磁碟區的所有備份檔案的清單。此頁面顯示有關來源磁碟區、目標位置和備份詳細資訊（例如上次備份、目前備份策略、備份檔案大小等）。
@@ -153,6 +160,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 
 
 
+[[run-a-ransomware-scan-on-a-volume-backup-in-object-storage]]
 == 對物件儲存中的磁碟區備份執行勒索軟體掃描
 
 當建立目標檔案備份時以及還原備份檔案中的資料時， NetApp Backup and Recovery and Recovery會掃描您的備份檔案以尋找勒索軟體攻擊的證據。您也可以隨時執行按需掃描，以驗證物件儲存中特定備份檔案的可用性。如果您在特定磁碟區上遇到勒索軟體問題並且想要驗證該磁碟區的備份不受影響，這將很有用。
@@ -173,6 +181,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 
 
 
+[[manage-the-replication-relationship-with-the-source-volume]]
 == 管理與來源磁碟區的複製關係
 
 在兩個系統之間設定資料複製後，您可以管理資料複製關係。
@@ -216,6 +225,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 
 
 
+[[edit-an-existing-backup-to-cloud-policy]]
 == 編輯現有的備份到雲端策略
 
 您可以變更目前套用至系統中的磁碟區的備份策略的屬性。更改備份策略會影響所有使用該策略的現有磁碟區。
@@ -245,6 +255,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔�
 
 
 
+[[add-a-new-backup-to-cloud-policy]]
 == 新增新的備份到雲端策略
 
 當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您定義的預設備份策略進行備份。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，您可以為該叢集建立其他策略並將這些原則指派給其他磁碟區。
@@ -273,6 +284,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關使用 AWS 檔�
 
 
 
+[[delete-backups]]
 == 刪除備份
 
 NetApp Backup and Recovery讓您能夠刪除單一備份檔案、刪除磁碟區的所有備份或刪除系統中所有磁碟區的所有備份。如果您不再需要備份，或者您刪除了來源磁碟區並想要刪除所有備份，則可能需要刪除所有備份。
@@ -284,6 +296,7 @@ CAUTION: 如果您打算刪除具有備份的系統或集群，則必須在刪�
 
 
 
+[[delete-all-backup-files-for-a-system]]
 === 刪除系統的所有備份文件
 
 刪除系統物件儲存上的所有備份並不會停用該系統中磁碟區的未來備份。如果要停止建立系統中所有磁碟區的備份，您可以停用備份<<停用系統的NetApp Backup and Recovery,如這裡所述>>。
@@ -308,6 +321,7 @@ CAUTION: 請謹慎使用此選項，並且僅在極端清理需要時使用。�
 
 
 
+[[delete-all-backup-files-for-a-volume]]
 === 刪除卷的所有備份文件
 
 刪除磁碟區的所有備份也會停用該磁碟區的未來備份。
@@ -336,6 +350,7 @@ CAUTION: 僅在需要徹底清理時才使用此選項。啟用後，NetApp Back
 
 
 
+[[delete-a-single-backup-file-for-a-volume]]
 === 刪除卷的單一備份文件
 
 不再需要個別備份時，可以刪除。您無法刪除複寫的磁碟區（資料保護磁碟區）。
@@ -355,6 +370,7 @@ NOTE: 備份關係刪除後，您無法刪除個別磁碟區備份檔案。但�
 
 
 
+[[delete-volume-backup-relationships]]
 == 刪除卷備份關係
 
 如果您想停止建立新的備份文件並刪除來源卷，但保留所有現有的備份文件，則刪除卷的備份關係為您提供了一種存檔機制。這樣，您就可以在將來需要時從備份檔案中還原卷，同時清除來源儲存系統中的空間。
@@ -374,6 +390,7 @@ NOTE: 備份關係刪除後，您將無法刪除單一磁碟區備份檔案。�
 
 
 
+[[deactivate-netapp-backup-and-recovery-for-a-system]]
 == 停用系統的NetApp Backup and Recovery
 
 停用 NetApp Backup and Recovery 會暫停該系統所有磁碟區的備份與還原，但不會刪除現有的備份。這可讓您在不從此系統註銷備份服務的情況下，暫停所有備份與還原活動一段時間。
@@ -391,6 +408,7 @@ NOTE: 當備份被停用時，該系統會出現一個「啟動備份」按鈕�
 
 
 
+[[unregister-netapp-backup-and-recovery-for-a-system]]
 == 取消註冊系統的NetApp Backup and Recovery
 
 如果您不再想使用備份功能且不想再為該系統的備份付費，則可以取消NetApp Backup and Recovery and Recovery 。通常，當您計劃刪除系統並想要取消備份服務時使用此功能。

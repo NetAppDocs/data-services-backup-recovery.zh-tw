@@ -4,6 +4,7 @@
 
 
 
+[[enhanced-ontap-volume-dashboard]]
 === 增強型ONTAP卷儀表板
 
 2025 年 4 月，我們推出了增強型ONTAP卷儀表板的預覽版，它速度更快、更有效率。
@@ -16,6 +17,7 @@
 
 
 
+[[microsoft-sql-server-workload-support-as-a-public-technology-preview]]
 === Microsoft SQL Server 工作負載支援作為公共技術預覽
 
 此版本的NetApp Backup and Recovery提供了更新的使用者介面，可讓您使用NetApp Backup and Recovery中熟悉的 3-2-1 保護策略來管理 Microsoft SQL Server 工作負載。使用此新版本，您可以將這些工作負載備份到主存儲，將其複製到輔助存儲，然後將其備份到雲端物件儲存。

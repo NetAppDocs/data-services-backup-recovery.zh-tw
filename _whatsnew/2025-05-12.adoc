@@ -4,6 +4,7 @@
 
 
 
+[[snapmirror-to-cloud-resync-for-volume-migrations]]
 === SnapMirror到 Cloud Resync 用於磁碟區遷移
 
 SnapMirror到 Cloud Resync 功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本地NetApp部署遷移到另一個部署，或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可正常運作。
@@ -16,6 +17,7 @@ SnapMirror到 Cloud Resync 功能簡化了NetApp環境中捲遷移期間的資�
 
 
 
+[[support-for-third-party-minio-object-store-preview]]
 === 支援第三方 MinIO 物件儲存（預覽）
 
 NetApp Backup and Recovery現在將其支援擴展到第三方物件存儲，主要關注 MinIO。此新的預覽功能可讓您利用任何與 S3 相容的物件儲存來滿足您的備份和復原需求。

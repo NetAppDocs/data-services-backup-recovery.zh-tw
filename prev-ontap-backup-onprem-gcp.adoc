@@ -24,6 +24,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[identify-the-connection-method]]
 == 識別連接方法
 
 選擇在設定從本機ONTAP系統到 Google Cloud Storage 的備份時要使用的兩種連接方法中的哪一種。
@@ -44,12 +45,14 @@ image:diagram_cloud_backup_onprem_gcp_private.png["此圖表展示了NetApp Back
 
 
 
+[[prepare-your-console-agent]]
 == 準備控制台代理
 
 控制台代理程式是控制台功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
 
 
 
+[[create-or-switch-console-agents]]
 === 建立或切換控制台代理
 
 如果您已經在 Google Cloud Platform VPC 中部署了控制台代理，那麼一切就緒了。
@@ -62,6 +65,7 @@ image:diagram_cloud_backup_onprem_gcp_private.png["此圖表展示了NetApp Back
 
 
 
+[[prepare-networking-for-the-console-agent]]
 == 為控制台代理準備網絡
 
 確保控制台代理程式具有所需的網路連線。
@@ -81,6 +85,7 @@ image:diagram_cloud_backup_onprem_gcp_private.png["此圖表展示了NetApp Back
 
 
 
+[[verify-or-add-permissions-to-the-console-agent]]
 === 驗證或新增控制台代理的權限
 
 要使用NetApp Backup and Recovery的「搜尋和復原」功能，您需要在控制台代理的角色中擁有特定權限，以便它可以存取 Google Cloud BigQuery 服務。查看以下權限，如果需要修改策略，請依照下列步驟操作。
@@ -110,6 +115,7 @@ bigquery.tables.create
 
 
 
+[[verify-license-requirements]]
 == 驗證許可證要求
 
 * 在為叢集啟動NetApp Backup and Recovery之前，您需要訂閱 Google 提供的即用即付 (PAYGO) 主機市場，或從NetApp購買並啟用NetApp Backup and Recovery BYOL 授權。這些許可證適用於您的帳戶，可以在多個系統中使用。
@@ -127,6 +133,7 @@ bigquery.tables.create
 
 
 
+[[prepare-your-ontap-clusters]]
 == 準備ONTAP集群
 
 準備來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統。
@@ -141,6 +148,7 @@ bigquery.tables.create
 
 
 
+[[discover-your-ontap-systems-in-netapp-console]]
 === 在NetApp Console中發現您的ONTAP系統
 
 您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。
@@ -149,6 +157,7 @@ bigquery.tables.create
 
 
 
+[[verify-ontap-system-requirements]]
 === 驗證ONTAP系統要求
 
 確保您的ONTAP系統符合以下要求：
@@ -170,6 +179,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 
 
+[[verify-ontap-networking-requirements-for-backing-up-data-to-object-storage]]
 === 驗證ONTAP網路要求以將資料備份到對象存儲
 
 您必須在連接到物件儲存的系統上配置以下要求。
@@ -200,6 +210,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[verify-ontap-networking-requirements-for-replicating-volumes]]
 === 驗證ONTAP複製卷的網路要求
 
 如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
@@ -224,6 +235,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[prepare-google-cloud-storage-as-your-backup-target]]
 == 準備 Google Cloud Storage 作為備份目標
 
 準備 Google Cloud Storage 作為備份目標涉及以下步驟：
@@ -235,6 +247,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[set-up-permissions]]
 === 設定權限
 
 您需要使用自訂角色為具有特定權限的服務帳戶提供儲存存取金鑰。服務帳戶使NetApp Backup and Recovery能夠驗證和存取用於儲存備份的 Cloud Storage 儲存桶。需要金鑰，以便 Google Cloud Storage 知道誰在發出請求。
@@ -280,6 +293,7 @@ storage.objects.update
 
 
 
+[[create-your-own-buckets]]
 === 建立您自己的儲存桶
 
 預設情況下，該服務會為您建立儲存桶。或者，如果您想使用自己的儲存桶，您可以在啟動備份啟動精靈之前建立它們，然後在精靈中選擇這些儲存桶。
@@ -288,6 +302,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 
 
+[[set-up-customer-managed-encryption-keys-cmek-for-data-encryption]]
 === 設定客戶管理的加密金鑰 (CMEK) 以進行資料加密
 
 您可以使用自己的客戶管理金鑰進行資料加密，而不是使用預設的 Google 管理加密金鑰。跨區域和跨項目密鑰均受支持，因此您可以為存儲桶選擇與 CMEK 密鑰的項目不同的項目。
@@ -322,6 +337,7 @@ cloudkms.keyRings.setIamPolicy
 
 
 
+[[activate-backups-on-your-ontap-volumes]]
 == 啟動ONTAP磁碟區上的備份
 
 隨時直接從您的本機系統啟動備份。
@@ -337,6 +353,7 @@ cloudkms.keyRings.setIamPolicy
 
 
 
+[[start-the-wizard]]
 === 啟動精靈
 
 .步驟
@@ -362,6 +379,7 @@ cloudkms.keyRings.setIamPolicy
 
 
 
+[[select-the-volumes-that-you-want-to-back-up]]
 === 選擇要備份的捲
 
 選擇您想要保護的磁碟區。受保護的磁碟區是具有以下一項或多項的磁碟區：快照策略、複製策略、備份到物件策略。
@@ -390,6 +408,7 @@ cloudkms.keyRings.setIamPolicy
 
 
 
+[[define-the-backup-strategy]]
 === 定義備份策略
 
 定義備份策略涉及設定以下選項：
@@ -503,6 +522,7 @@ TIP: 若要建立自訂策略，請參閱link:br-use-policies-create.html["創�
 
 
 
+[[review-your-selections]]
 === 檢查您的選擇
 
 這是審查您的選擇並在必要時進行調整的機會。
@@ -524,6 +544,7 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 
 
 
+[[show-the-api-commands]]
 === 顯示 API 命令
 
 您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。

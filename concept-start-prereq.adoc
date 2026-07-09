@@ -18,6 +18,7 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 
+[[prepare-netapp-console]]
 == 準備 NetApp Console
 
 您可以透過 NetApp Console 存取 NetApp Backup and Recovery。若要準備 Console 以進行 Backup and Recovery，您必須：
@@ -33,6 +34,7 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 
+[[complete-initial-netapp-console-setup]]
 === 完成初始 NetApp Console 設定
 
 如果尚未完成，請完成 NetApp Console 的初始設定。
@@ -41,6 +43,7 @@ https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode
 
 
 
+[[deploy-a-console-agent]]
 === 部署 Console 代理程式
 
 Console 代理程式是一個輕量級軟體元件，您可以將其安裝在網路中，以將儲存基礎架構連接到 NetApp Console。它支援進階儲存協調、資料服務和安全的雲端整合。
@@ -49,6 +52,7 @@ https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html["了解控
 
 
 
+[[add-a-storage-system]]
 === 新增儲存系統
 
 在 Backup and Recovery 中保護工作負載之前，您需要將 ONTAP 儲存系統新增至 Console。
@@ -57,6 +61,7 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 
 
 
+[[configure-an-organization-and-user-roles]]
 === 設定組織和使用者角色
 
 瞭解組織、專案和使用者角色，然後為使用者配置執行任務所需的適當權限。
@@ -67,12 +72,14 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 
 
 
+[[requirements-for-backups-to-object-storage]]
 == 物件儲存備份的要求
 
 若要使用物件儲存作為備份目標，您需要擁有 AWS S3、Google Cloud Storage、Microsoft Azure Blob、StorageGRID 或 ONTAP 帳戶，並設定對應的存取權限。
 
 
 
+[[requirements-for-protecting-ontap-volume-workloads]]
 == 保護 ONTAP Volume 工作負載的需求
 
 若要使用 NetApp Backup and Recovery 進行 ONTAP 磁碟區工作負載，您需要滿足下列主機系統、空間和容量大小方面的先決條件。
@@ -87,6 +94,7 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 
 
 
+[[requirements-for-protecting-microsoft-sql-server-workloads]]
 == 保護 Microsoft SQL Server 工作負載的要求
 
 若要將NetApp Backup and Recovery用於 Microsoft SQL Server 工作負載，您需要滿足下列主機系統、空間和大小調整前提條件。
@@ -163,6 +171,7 @@ NOTE: 不支援保護儲存在直通磁碟或 VHD/VHDX 檔案中的資料庫，�
 |===
 
 
+[[requirements-for-protecting-vmware-workloads]]
 == 保護 VMware 工作負載的要求
 
 您需要特定的要求來發現和保護您的 VMware 工作負載。
@@ -219,6 +228,7 @@ NOTE: 不支援保護儲存在直通磁碟或 VHD/VHDX 檔案中的資料庫，�
 
 
 
+[[requirements-for-protecting-kvm-workloads]]
 == 保護 KVM 工作負載的要求
 
 您需要特定的要求來發現和保護 KVM 虛擬機器。
@@ -260,6 +270,7 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 ====
 
 
+[[requirements-for-protecting-oracle-database-workloads]]
 == 保護 Oracle 資料庫工作負載的要求
 
 確保您的環境符合發現和保護 Oracle Database 資源的特定要求。
@@ -303,6 +314,7 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 |===
 
 
+[[requirements-for-protecting-kubernetes-applications]]
 == 保護 Kubernetes 應用程式的要求
 
 您需要特定的要求來發現 Kubernetes 資源並保護您的 Kubernetes 應用程式。
@@ -324,6 +336,7 @@ NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程�
 
 
 
+[[requirements-for-protecting-hyper-v-workloads]]
 == 保護 Hyper-V 工作負載的要求
 
 確保您的 Hyper-V 執行個體符合發現和保護虛擬機器的特定要求。

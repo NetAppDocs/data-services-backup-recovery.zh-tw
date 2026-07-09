@@ -20,6 +20,7 @@ NetApp Backup and Recovery需要先發現 Microsoft SQL Server 工作負載，�
 
 
 
+[[discover-microsoft-sql-server-workloads-and-optionally-import-snapcenter-resources]]
 == 發現 Microsoft SQL Server 工作負載並選擇性地匯入SnapCenter資源
 
 在發現過程中， NetApp Backup and Recovery會分析組織內系統中的 Microsoft SQL Server 執行個體和資料庫。
@@ -38,6 +39,7 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 
 
 
+[[if-snapcenter-is-already-installed-import-snapcenter-resources-into-netapp-backup-and-recovery]]
 === 如果已安裝SnapCenter ，請將SnapCenter資源匯入NetApp Backup and Recovery
 
 如果您已安裝SnapCenter ，請依照下列步驟將SnapCenter資源匯入NetApp Backup and Recovery 。  NetApp Console從SnapCenter發現資源、主機、憑證和計劃；您不必重新建立所有這些資訊。
@@ -131,6 +133,7 @@ NOTE: 如果 SnapCenter Server 已註冊，您可以更新現有的註冊資訊�
 
 
 
+[[if-you-dont-have-snapcenter-installed-add-a-vcenter-and-discover-resources]]
 === 如果您尚未安裝SnapCenter ，請新增 vCenter 並發現資源
 
 如果您尚未安裝SnapCenter ，您可以新增 vCenter 資訊並讓NetApp備份和還原發現工作負載。在每個控制台代理程式中，選擇您想要發現工作負載的系統。

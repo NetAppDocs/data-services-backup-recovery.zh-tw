@@ -24,6 +24,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[identify-the-connection-method]]
 == 識別連接方法
 
 選擇在配置從本機ONTAP系統到 AWS S3 的備份時要使用的兩種連接方法中的哪一種。
@@ -44,12 +45,14 @@ image:diagram_cloud_backup_onprem_aws_private.png["此圖表顯示了NetApp Back
 
 
 
+[[prepare-your-console-agent]]
 == 準備控制台代理
 
 控制台代理程式是NetApp Console功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
 
 
 
+[[create-or-switch-console-agents]]
 === 建立或切換控制台代理
 
 如果您已經在 AWS VPC 或您的場所部署了控制台代理，那麼一切就緒了。
@@ -67,6 +70,7 @@ image:diagram_cloud_backup_onprem_aws_private.png["此圖表顯示了NetApp Back
 
 
 
+[[prepare-console-agent-networking-requirements]]
 === 準備控制台代理網路要求
 
 確保符合以下網路要求：
@@ -83,6 +87,7 @@ image:diagram_cloud_backup_onprem_aws_private.png["此圖表顯示了NetApp Back
 
 
 
+[[verify-license-requirements]]
 == 驗證許可證要求
 
 您需要驗證 AWS 和NetApp Console的授權需求：
@@ -102,6 +107,7 @@ image:diagram_cloud_backup_onprem_aws_private.png["此圖表顯示了NetApp Back
 
 
 
+[[prepare-your-ontap-clusters]]
 == 準備ONTAP集群
 
 準備來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統。
@@ -116,6 +122,7 @@ image:diagram_cloud_backup_onprem_aws_private.png["此圖表顯示了NetApp Back
 
 
 
+[[discover-your-ontap-systems-in-netapp-console]]
 === 在NetApp Console中發現您的ONTAP系統
 
 您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。
@@ -124,6 +131,7 @@ image:diagram_cloud_backup_onprem_aws_private.png["此圖表顯示了NetApp Back
 
 
 
+[[verify-ontap-system-requirements]]
 === 驗證ONTAP系統要求
 
 確保您的ONTAP系統符合以下要求：
@@ -145,6 +153,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 
 
+[[verify-ontap-networking-requirements-for-backing-up-data-to-object-storage]]
 === 驗證ONTAP網路要求以將資料備份到對象存儲
 
 您必須在連接到物件儲存的系統上配置以下要求。
@@ -178,6 +187,7 @@ IP 空間內的所有叢集間 LIF 都必須具有物件儲存的存取權限。
 
 
 
+[[verify-ontap-networking-requirements-for-replicating-volumes]]
 === 驗證ONTAP複製卷的網路要求
 
 如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
@@ -202,6 +212,7 @@ IP 空間內的所有叢集間 LIF 都必須具有物件儲存的存取權限。
 
 
 
+[[prepare-amazon-s3-as-your-backup-target]]
 == 準備 Amazon S3 作為備份目標
 
 準備 Amazon S3 作為備份目標涉及以下步驟：
@@ -214,6 +225,7 @@ IP 空間內的所有叢集間 LIF 都必須具有物件儲存的存取權限。
 
 
 
+[[set-up-s3-permissions]]
 === 設定 S3 權限
 
 您需要設定兩組權限：
@@ -287,6 +299,7 @@ NOTE: 在 AWS 中國區域建立備份時，您需要將 IAM 政策中所有_Res
 
 
 
+[[create-your-own-buckets]]
 === 建立您自己的儲存桶
 
 預設情況下，該服務會為您建立儲存桶。或者，如果您想使用自己的儲存桶，您可以在啟動備份啟動精靈之前建立它們，然後在精靈中選擇這些儲存桶。
@@ -330,6 +343,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 ====
 
 
+[[set-up-customer-managed-aws-keys-for-data-encryption]]
 === 設定客戶管理的 AWS 金鑰以進行資料加密
 
 如果您想使用預設的 Amazon S3 加密金鑰來加密您的本機叢集和 S3 儲存桶之間傳遞的數據，那麼您已經完成了所有設置，因為預設安裝使用這種類型的加密。
@@ -343,6 +357,7 @@ NOTE: 客戶管理的金鑰加密功能僅支援 Amazon FSx for NetApp ONTAP。�
 
 
 
+[[configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface]]
 === 使用 VPC 終端節點介面配置系統以進行私有連接
 
 如果您想使用標準公共互聯網連接，那麼所有權限都由控制台代理設置，您無需執行任何其他操作。
@@ -390,6 +405,7 @@ Please enter Certificate: Press <Enter> when done
 
 
 
+[[activate-backups-on-your-ontap-volumes]]
 == 啟動ONTAP磁碟區上的備份
 
 隨時直接從您的本機系統啟動備份。
@@ -405,6 +421,7 @@ Please enter Certificate: Press <Enter> when done
 
 
 
+[[start-the-wizard]]
 === 啟動精靈
 
 .步驟
@@ -430,6 +447,7 @@ Please enter Certificate: Press <Enter> when done
 
 
 
+[[select-the-volumes-that-you-want-to-back-up]]
 === 選擇要備份的捲
 
 選擇您想要保護的磁碟區。受保護的磁碟區是具有以下一項或多項的磁碟區：快照策略、複製策略、備份到物件策略。
@@ -458,6 +476,7 @@ Please enter Certificate: Press <Enter> when done
 
 
 
+[[define-the-backup-strategy]]
 === 定義備份策略
 
 定義備份策略涉及設定以下選項：
@@ -569,6 +588,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 
 
 
+[[review-your-selections]]
 === 檢查您的選擇
 
 這是審查您的選擇並在必要時進行調整的機會。
@@ -590,6 +610,7 @@ S3 儲存桶在您輸入的 S3 存取金鑰和金鑰指示的服務帳戶中創�
 
 
 
+[[show-the-api-commands]]
 === 顯示 API 命令
 
 您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。

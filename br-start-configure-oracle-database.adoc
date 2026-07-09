@@ -20,6 +20,7 @@ summary: 在 NetApp Backup and Recovery 中設定您的 Oracle 資料庫。
 
 
 
+[[configure-an-oracle-database]]
 == 設定 Oracle 資料庫
 
 變更獨立或叢集式 Oracle 資料庫的組態。

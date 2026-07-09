@@ -23,6 +23,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 VMware 虛擬機器工�
 
 
 
+[[create-a-clone-of-a-vmware-vm]]
 == 建立 VMware VM 的複本
 
 從現有快照立即建立複本。
@@ -57,6 +58,7 @@ NOTE: 建立 VM 複製後，您必須更新複製虛擬機器的 IP 位址，以
 
 
 
+[[split-a-clone]]
 == 分裂克隆
 
 您可以拆分 VMware VM 的複本，使其與父磁碟區分離。拆分後，複本將成為獨立的磁碟區，不再依賴父磁碟區。
@@ -73,6 +75,7 @@ NOTE: 建立 VM 複製後，您必須更新複製虛擬機器的 IP 位址，以
 
 
 
+[[remove-a-clone]]
 == 移除複本
 
 您可以移除 VMware VM 複製。當您移除 VM 複製時，該複製會從 vCenter 中移除，且與該 VM 相關聯的資料存放區會從儲存系統卸載並刪除。

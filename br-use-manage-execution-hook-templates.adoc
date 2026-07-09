@@ -30,6 +30,7 @@ NetApp Backup and Recovery 會在資料保護期間，為像 KubeVirt 這樣的�
 
 
 
+[[types-of-execution-hooks]]
 == 執行鉤子的類型
 
 NetApp Backup and Recovery根據運行時間支援以下類型的執行掛鉤：
@@ -43,6 +44,7 @@ NetApp Backup and Recovery根據運行時間支援以下類型的執行掛鉤：
 
 
 
+[[order-of-execution]]
 === 執行順序
 
 當執行資料保護操作時，執行掛鉤事件會依照下列順序發生：
@@ -70,6 +72,7 @@ NOTE: 如果快照前執行鉤子新增、變更或刪除 Kubernetes 資源，�
 
 
 
+[[important-notes-about-custom-execution-hooks]]
 == 關於自訂執行鉤子的重要說明
 
 在為您的應用程式規劃執行掛鉤時，請考慮以下事項。
@@ -85,6 +88,7 @@ NOTE: 執行掛鉤可以減少或停用應用程式功能。讓您的自訂鉤�
 
 
 
+[[execution-hook-filters]]
 == 執行鉤子過濾器
 
 當您為應用程式新增或編輯執行掛鉤時，您可以向執行掛鉤添加過濾器來管理該掛鉤將匹配哪些容器。過濾器對於在所有容器上使用相同容器鏡像但可能將每個鏡像用於不同目的的應用程式（例如 Elasticsearch）很有用。過濾器可讓您建立執行掛鉤在某些（但不一定是所有）相同的容器上運行的場景。如果為單一執行掛鉤建立多個篩選器，它們將透過邏輯 AND 運算子組合在一起。每個執行掛鉤最多可以有 10 個活動過濾器。
@@ -96,6 +100,7 @@ NOTE: 如果將命名空間過濾器新增至在復原或複製作業後執行�
 
 
 
+[[execution-hook-examples]]
 == 執行鉤子範例
 
 訪問 https://github.com/NetApp/Verda["NetApp Verda GitHub 項目"]下載流行應用程式（如 Apache Cassandra 和 Elasticsearch）的真實執行掛鉤。您還可以查看範例並獲得建立自己的自訂執行掛鉤的想法。
@@ -105,6 +110,7 @@ NOTE: Verda GitHub 程式碼庫中的腳本按原樣提供，不受 NetApp 官�
 
 
 
+[[create-an-execution-hook-template]]
 == 建立執行鉤子模板
 
 您可以建立自訂執行掛鉤模板，用於在應用程式上執行資料保護操作之前或之後執行操作。

@@ -18,6 +18,7 @@ NetApp Backup and Recovery支援兩種 S3 存檔儲存類別和大多數區域�
 
 
 
+[[supported-s3-archival-storage-classes-for-netapp-backup-and-recovery]]
 == NetApp Backup and Recovery支援的 S3 歸檔儲存類
 
 最初建立備份檔案時，它們會儲存在 S3 _Standard_ 儲存中。此層針對儲存不經常存取的資料進行了最佳化；但也允許您立即存取它。  30 天后，備份將轉換為 S3_標準-不頻繁存取_儲存類別以節省成本。
@@ -37,6 +38,7 @@ https://aws.amazon.com/s3/storage-classes/["了解 S3 儲存類別"^]。
 
 
 
+[[restore-data-from-archival-storage]]
 == 從檔案儲存中復原數據
 
 雖然將較舊的備份檔案儲存在檔案儲存中比標準或標準 IA 儲存便宜得多，但從檔案儲存中的備份檔案中存取資料以進行復原作業將花費更長的時間並且花費更多。

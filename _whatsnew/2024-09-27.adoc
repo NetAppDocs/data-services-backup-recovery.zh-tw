@@ -4,6 +4,7 @@
 
 
 
+[[podman-support-on-rhel-8-or-9-with-browse-and-restore]]
 === RHEL 8 或 9 上的 Podman 支援瀏覽和恢復
 
 NetApp Backup and Recovery現在支援使用 Podman 引擎在 Red Hat Enterprise Linux (RHEL) 版本 8 和 9 上進行檔案和資料夾復原。這適用於NetApp Backup and Recovery瀏覽和還原方法。
@@ -14,6 +15,7 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-restore.h
 
 
 
+[[faster-catalog-indexing-improves-search-and-restore]]
 === 更快的目錄索引改進了搜尋和恢復
 
 此版本包含改進的目錄索引，可以更快完成基線索引。更快的索引使您能夠更快地使用搜尋和復原功能。

@@ -18,6 +18,7 @@ NetApp Backup and Recovery支援一個 Azure 存檔存取層和大多數區域�
 
 
 
+[[supported-azure-blob-access-tiers-for-netapp-backup-and-recovery]]
 == NetApp Backup and Recovery支援的 Azure Blob 存取層
 
 當最初建立備份檔案時，它們儲存在_Cool_存取層中。此層針對儲存不經常存取的資料進行了最佳化；但在需要時可以立即存取。
@@ -30,6 +31,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["了�
 
 
 
+[[restore-data-from-archival-storage]]
 == 從檔案儲存中復原數據
 
 雖然將較舊的備份檔案儲存在檔案儲存中比冷儲存便宜得多，但從 Azure 檔案中的備份檔案存取資料進行還原作業將花費更長的時間並且花費更多。

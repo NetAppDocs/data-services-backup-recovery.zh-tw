@@ -30,6 +30,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[which-protection-features-will-you-use]]
 == 您將使用哪些保護功能
 
 在您選擇要使用的功能之前，這裡先簡單介紹一下每個功能的作用以及它提供的保護類型。
@@ -84,6 +85,7 @@ NOTE: 複製磁碟區或備份檔案的初始建立包括來源資料的完整�
 |===
 
 
+[[which-backup-architecture-will-you-use]]
 == 您將使用哪種備份架構
 
 在建立複製磁碟區和備份檔案時，您可以選擇磁軌或級聯架構來備份磁碟區。
@@ -112,6 +114,7 @@ image:diagram-321-cascade-detailed.png["圖示說明如何使用磁碟區的快�
 |===
 
 
+[[will-you-use-the-default-policies-for-snapshots-replications-and-backups]]
 == 您是否會使用快照、複製和備份的預設策略
 
 您可以使用NetApp提供的預設策略來建立備份，也可以建立自訂策略。當您使用啟動精靈為您的磁碟區啟用備份和復原服務時，您可以從預設原則和系統中已經存在的任何其他策略（Cloud Volumes ONTAP或本機ONTAP系統）中進行選擇。如果您想使用與現有策略不同的策略，您可以在開始之前或使用啟動精靈時建立該策略。
@@ -163,6 +166,7 @@ NOTE: 只有保險庫策略可用於備份到雲端關係。
 
 
 
+[[where-do-my-policies-reside]]
 == 我的政策在哪裡？
 
 根據您計劃使用的備份架構，備份策略位於不同的位置：扇出式或級聯式。複製策略和備份策略的設計方式不同，因為複製將兩個ONTAP儲存系統配對，而物件備份使用儲存提供者作為目標。
@@ -190,6 +194,7 @@ NOTE: 只有保險庫策略可用於備份到雲端關係。
 
 
 
+[[do-you-want-to-create-your-own-object-storage-container]]
 == 你想建立自己的物件儲存容器嗎
 
 當您在系統的物件儲存中建立備份檔案時，預設情況下，備份和復原服務會在您配置的物件儲存帳戶中為備份檔案建立容器（儲存桶或儲存帳戶）。  AWS 或 GCP 儲存桶預設為「netapp-backup-<uuid>」。  Azure Blob 儲存帳戶名稱為「netappbackup<uuid>」。
@@ -228,6 +233,7 @@ NOTE: 在 Azure 中建立用作備份目的地的容器時，請確保您建立�
 
 
 
+[[which-console-agent-deployment-mode-are-you-using]]
 == 您正在使用哪種控制台代理部署模式
 
 如果您已經使用控制台來管理您的存儲，那麼控制台代理已經安裝。如果您打算將相同的控制台代理與NetApp Backup and Recovery一起使用，那麼一切就緒了。如果您需要使用不同的控制台代理，則需要在開始備份和還原實作之前安裝它。
@@ -238,6 +244,7 @@ https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解有�
 
 
 
+[[support-for-sites-with-full-internet-connectivity]]
 === 支援具有完整網路連線的網站
 
 當在具有完全互聯網連接（也稱為_標準模式_或_SaaS 模式_）的網站中使用NetApp Backup and Recovery時，您可以在控制台管理的任何本地ONTAP或Cloud Volumes ONTAP系統上建立複製卷，並且可以在任何受支援的雲端提供者的物件儲存上建立備份檔案。link:concept-backup-to-cloud.html["查看受支援的備份目標的完整列表"]。
@@ -256,6 +263,7 @@ https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解有�
 
 
 
+[[support-for-sites-with-limited-internet-connectivity]]
 === 支援網路連線有限的網站
 
 NetApp Backup and Recovery可用於網際網路連線受限的網站（也稱為「受限模式」）來備份磁碟區資料。在這種情況下，您需要在目標雲端區域部署控制台代理程式。
@@ -266,6 +274,7 @@ NetApp Backup and Recovery可用於網際網路連線受限的網站（也稱為
 
 
 
+[[support-for-sites-with-no-internet-connectivity]]
 === 支援沒有網路連線的網站
 
 NetApp Backup and Recovery可用於沒有網路連線的網站（也稱為_私有模式_或_暗站_）來備份磁碟區資料。在這種情況下，您需要在同一網站的 Linux 主機上部署控制台代理程式。

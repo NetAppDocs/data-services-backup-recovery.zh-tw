@@ -18,6 +18,7 @@ summary: 您可以透過從NetApp Backup and Recovery中刪除 Microsoft SQL Ser
 
 
 
+[[delete-a-snapshot]]
 == 刪除快照
 
 您只能刪除本機快照。

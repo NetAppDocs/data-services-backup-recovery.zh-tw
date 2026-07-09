@@ -4,6 +4,7 @@
 
 
 
+[[ontap-volumes-workloads-enhancements]]
 === ONTAP Volumes 工作負載增強功能
 
 在此版本中、 ONTAP Volumes 工作負載引入了以下增強功能：
@@ -20,6 +21,7 @@
 
 
 
+[[vmware-workloads-enhancements]]
 === VMware 工作負載增強功能
 
 在此版本中、 VMware 工作負載引進下列增強功能：

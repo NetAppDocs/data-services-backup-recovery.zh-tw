@@ -23,6 +23,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 
+[[back-up-workloads-now-with-an-on-demand-backup]]
 == 立即使用按需備份來備份工作負載
 
 立即建立按需備份。如果您要對系統進行變更並希望確保在開始之前有備份，則可能需要執行按需備份。

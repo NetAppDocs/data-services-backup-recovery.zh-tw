@@ -18,6 +18,7 @@ summary: '您可以從 Windows 用戶作業系統上的虛擬機器磁碟 (VMDK)
 
 
 
+[[guest-restore-workflow]]
 == 來賓還原工作流程
 
 客戶作業系統還原操作包含以下步驟：
@@ -42,6 +43,7 @@ summary: '您可以從 Windows 用戶作業系統上的虛擬機器磁碟 (VMDK)
 
 
 
+[[prerequisites-for-restoring-guest-files-and-folders]]
 == 恢復訪客文件和資料夾的先決條件
 
 從 VMDK 還原檔案或資料夾之前，請檢閱所有需求。
@@ -69,6 +71,7 @@ NetApp Backup and Recovery 使用來自 VMware tools 的資訊來建立與 VMwar
 
 
 
+[[windows-guests]]
 === Windows 客體
 
 * Windows 客戶作業系統必須執行 Windows Server 2008 R2 或更高版本。
@@ -84,6 +87,7 @@ IMPORTANT: 如果您必須使用非內建管理員帳戶但在 VM 內具有管�
 
 
 
+[[linux-guests]]
 === Linux 客體
 
 * 支援下列客體作業系統發行版本：
@@ -99,6 +103,7 @@ IMPORTANT: 如果您必須使用非內建管理員帳戶但在 VM 內具有管�
 
 
 
+[[guest-file-restore-limitations]]
 == 來賓檔案還原限制
 
 在從客戶作業系統還原檔案或資料夾之前，您應該了解其功能限制。

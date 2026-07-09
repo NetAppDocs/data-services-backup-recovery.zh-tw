@@ -23,6 +23,7 @@ summary: 將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份�
 
 
 
+[[view-workload-protection-status]]
 == 查看工作負載保護狀態
 
 在開始備份之前，請先查看工作負載的保護狀態。
@@ -38,6 +39,7 @@ summary: 將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份�
 
 
 
+[[configure-the-log-directory-for-discovered-hosts]]
 == 配置發現主機的日誌目錄
 
 設定已發現主機的活動日誌路徑，以便在備份工作負載之前追蹤操作狀態。
@@ -61,6 +63,7 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 
 
+[[create-a-protection-group]]
 == 建立保護組
 
 建立保護組來管理多個工作負載的備份和還原作業。保護組是工作負載的邏輯分組。
@@ -87,6 +90,7 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 
 
+[[back-up-workloads-now-with-an-on-demand-backup]]
 == 立即使用按需備份來備份工作負載
 
 在對系統進行變更之前執行按需備份，以確保您的資料受到保護。
@@ -107,6 +111,7 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 
 
+[[suspend-the-backup-schedule]]
 == 暫停備份計劃
 
 暫停計劃以在維護或故障排除期間暫時停止備份。
@@ -124,6 +129,7 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 
 
+[[delete-a-protection-group]]
 == 刪除保護群組
 
 刪除保護群組會刪除該保護群組以及所有相關的備份計畫。如果不再需要某個保護群組，您可能需要將其刪除。
@@ -140,6 +146,7 @@ NOTE: 顯示的欄位會根據所選的部署模型而有所不同，例如故�
 
 
 
+[[remove-protection-from-a-workload]]
 == 刪除工作負載的保護
 
 如果您不再想要備份某個工作負載，或是想要停止在NetApp Backup and Recovery中管理該工作負載，則可以從該工作負載中移除保護。

@@ -32,6 +32,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 
 
 
+[[how-restoring-oracle-databases-works]]
 == Oracle 資料庫復原的工作原理
 
 還原 Oracle 資料庫時，會發生以下情況：
@@ -45,6 +46,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 
 
 
+[[restore-an-oracle-database]]
 == 還原 Oracle 資料庫
 
 根據您的需要，將 Oracle 資料庫還原到特定時間點、特定係統變更號碼 (SCN) 或最後的良好狀態。您也可以簡單地從快照還原資料庫並跳過自動復原程序。如果您想手動執行恢復，您可能想要跳過自動恢復程序。您可以使用資料庫名稱或特定篩選器來搜尋資料庫。

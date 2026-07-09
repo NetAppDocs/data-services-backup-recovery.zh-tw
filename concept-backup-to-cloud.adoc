@@ -22,6 +22,7 @@ NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作�
 
 
 
+[[what-you-can-do-with-netapp-backup-and-recovery]]
 == NetApp Backup and Recovery
 
 使用NetApp Backup and Recovery實現以下目標：
@@ -92,6 +93,7 @@ NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作�
 
 
 
+[[benefits-of-using-netapp-backup-and-recovery]]
 == 使用NetApp Backup and Recovery的優勢
 
 NetApp Backup and Recovery有以下優勢：
@@ -105,6 +107,7 @@ NetApp Backup and Recovery有以下優勢：
 
 
 
+[[cost]]
 == 成本
 
 NetApp不會向您收取試用版的使用費用。但是，您需要承擔與您使用的雲端資源相關的費用，例如儲存和資料傳輸費用。
@@ -153,6 +156,7 @@ NetApp不會向您收取試用版的使用費用。但是，您需要承擔與�
 
 
 
+[[licensing]]
 == 授權
 
 NetApp Backup and Recovery提供免費試用版，讓您在限定時間內無需許可證金鑰即可使用。
@@ -186,6 +190,7 @@ link:br-start-licensing.html["了解如何設定許可證"]。
 
 
 
+[[supported-workloads-systems-and-backup-targets]]
 == 支援的工作負載、系統和備份目標
 
 .支援的工作負載
@@ -219,6 +224,7 @@ NetApp Backup and Recovery可保護下列類型的工作負載：
 
 
 
+[[how-netapp-backup-and-recovery-works]]
 == NetApp Backup and Recovery的工作原理
 
 當您啟用NetApp Backup and Recovery，本服務會為您的資料執行完整備份。初始備份之後，所有附加備份都是增量備份。這使得網路流量保持最低限度。
@@ -232,6 +238,7 @@ NOTE: 還支援從主存儲到對象存儲，而不僅僅是從二級存儲到�
 
 
 
+[[where-backups-reside-in-object-store-locations]]
 === 備份在物件儲存位置的位置
 
 備份副本儲存在NetApp Console在您的雲端帳戶中建立的物件儲存中。每個叢集或系統都有一個物件存儲，控制台以如下方式命名該物件存儲： `netapp-backup-clusteruuid` 。請確保不要刪除此物件存儲。
@@ -244,6 +251,7 @@ NOTE: 還支援從主存儲到對象存儲，而不僅僅是從二級存儲到�
 
 
 
+[[backup-copies-are-associated-with-your-netapp-console-organization]]
 === 備份副本與您的NetApp Console組織相關聯
 
 備份副本與控制台代理程式所在的NetApp Console組織相關聯。 https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html["了解NetApp Console身份和訪問"^] 。
@@ -252,6 +260,7 @@ NOTE: 還支援從主存儲到對象存儲，而不僅僅是從二級存儲到�
 
 
 
+[[terms-that-might-help-you-with-netapp-backup-and-recovery]]
 == 可能對您使用NetApp Backup and Recovery有幫助的術語
 
 了解一些與保護相關的術語可能會對您有所幫助。

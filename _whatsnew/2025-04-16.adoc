@@ -4,6 +4,7 @@
 
 
 
+[[ui-improvements]]
 === UI改進
 
 此版本透過簡化介面來增強您的體驗：
@@ -17,12 +18,14 @@
 
 
 
+[[enhanced-volume-dashboard-preview]]
 === 增強型音量儀表板（預覽版）
 
 音量儀表板現在可在 10 秒內加載，提供更快、更有效率的介面。此預覽版可供部分客戶使用，讓他們可以事先了解這些改進。
 
 
 
+[[support-for-third-party-wasabi-object-store-preview]]
 === 支援第三方 Wasabi 物件儲存（預覽版）
 
 NetApp Backup and Recovery現在將其支援擴展到第三方物件存儲，主要專注於 Wasabi。此新預覽功能可讓您利用任何與 S3 相容的物件儲存來滿足您的備份和復原需求。

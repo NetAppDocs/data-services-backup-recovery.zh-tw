@@ -26,6 +26,7 @@ summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護
 ====
 
 
+[[restore-a-backup-to-a-different-namespace]]
 == 將備份還原至不同的命名空間
 
 當您使用 BackupRestore CR 將備份還原到不同的命名空間時，NetApp Backup and Recovery 會將應用程式還原到新的命名空間，並為還原的應用程式建立一個應用程式 CR。為了保護還原的應用程式，您可以建立隨需備份或快照，或製定保護排程。
@@ -130,6 +131,7 @@ kubectl apply -f trident-protect-backup-restore-cr.yaml
 
 
 
+[[restore-a-backup-to-the-original-namespace]]
 == 將備份還原至原始命名空間
 
 您可以隨時將備份還原至原始命名空間。
@@ -228,6 +230,7 @@ kubectl apply -f trident-protect-backup-ipr-cr.yaml
 
 
 
+[[restore-a-backup-to-a-different-cluster]]
 == 將備份還原至不同的叢集
 
 如果原始叢集出現問題、您可以將備份還原至不同的叢集。
@@ -335,6 +338,7 @@ kubectl apply -f trident-protect-backup-restore-cr.yaml
 
 
 
+[[restore-a-snapshot-to-a-different-namespace]]
 == 將快照還原至不同的命名空間
 
 您可以使用自訂資源 (CR) 檔案從快照還原資料到不同的命名空間或原始來源命名空間。當您使用 SnapshotRestore CR 將快照還原到不同的命名空間時，NetApp Backup and Recovery 會將應用程式還原到新的命名空間，並為還原的應用程式建立一個應用程式 CR。為了保護還原的應用程式，您可以建立隨需備份或快照，或製定保護排程。
@@ -436,6 +440,7 @@ kubectl apply -f trident-protect-snapshot-restore-cr.yaml
 
 
 
+[[restore-a-snapshot-to-the-original-namespace]]
 == 將快照還原至原始命名空間
 
 您可以隨時將快照還原至原始命名空間。

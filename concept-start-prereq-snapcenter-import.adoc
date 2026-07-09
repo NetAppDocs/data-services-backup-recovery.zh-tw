@@ -18,12 +18,14 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 
+[[create-systems-in-netapp-console-first]]
 == 首先在NetApp Console中建立系統
 
 如果要從SnapCenter匯入資源，則應先將所有本機SnapCenter叢集儲存體新增至控制台 *系統* 頁面，然後再從SnapCenter匯入。這確保主機資源能夠被正確地發現和導入。
 
 
 
+[[ensure-host-requirements-to-install-the-snapcenter-plug-in]]
 == 確保安裝SnapCenter插件的主機需求
 
 若要從 Microsoft SQL Server 適用的SnapCenter外掛程式匯入資源，請確保符合安裝適用於 Microsoft SQL Server 的SnapCenter外掛程式的主機需求。
@@ -32,6 +34,7 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 
+[[disable-user-account-control-remote-restrictions]]
 == 停用使用者帳戶控制遠端限制
 
 從SnapCenter匯入資源之前，請停用SnapCenter Windows 主機上的使用者帳戶控制 (UAC) 遠端限制。如果您使用本機管理帳戶遠端連線至SnapCenter Server 主機或 SQL 主機，請停用 UAC。
@@ -69,6 +72,7 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 
+[[method-1-disable-user-account-control-by-using-the-registry-editor]]
 === 方法 1：使用登錄編輯器停用使用者帳戶控制
 
 這是可以用來停用使用者帳戶控制的方法之一。
@@ -112,6 +116,7 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 ----
 
 
+[[method-2-disable-user-account-control-by-using-a-powershell-script]]
 === 方法 2：使用 PowerShell 腳本停用使用者帳號控制
 
 這是您可以用來停用使用者帳戶控制的另一種方法。

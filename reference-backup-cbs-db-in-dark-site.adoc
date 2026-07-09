@@ -36,6 +36,7 @@ TIP: NetApp Backup and Recovery資料庫或索引目錄檔案中從未包含任�
 
 
 
+[[restore-netapp-backup-and-recovery-data-to-a-new-console-agent]]
 == 將NetApp Backup and Recovery資料還原到新的控制台代理
 
 如果您的內部控制台代理停止運作，您將需要安裝新的控制台代理，然後將NetApp Backup and Recovery資料還原到新的控制台代理。
@@ -65,6 +66,7 @@ TIP: NetApp Backup and Recovery資料庫或索引目錄檔案中從未包含任�
 
 
 
+[[install-a-new-console-agent-on-a-new-on-premises-linux-host]]
 === 在新的本機 Linux 主機上安裝新的控制台代理
 
 安裝新的 Console 代理程式時、請下載與原始代理程式相同的軟體版本。對 NetApp Backup and Recovery 資料庫的變更可能會導致較新的軟體版本無法與舊的資料庫備份搭配使用。您可以 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["恢復備份資料庫後，將控制台代理軟體升級至最新版本"^]。
@@ -75,6 +77,7 @@ TIP: NetApp Backup and Recovery資料庫或索引目錄檔案中從未包含任�
 
 
 
+[[restore-the-netapp-backup-and-recovery-database]]
 === 還原NetApp Backup and Recovery資料庫
 
 . 將 MySQL 備份從備份位置複製到新的控制台代理主機。下面我們將使用範例檔案名稱「CBS_DB_Backup_23_05_2023.sql」。
@@ -126,6 +129,7 @@ mysql> select * from volume;
 
 
 
+[[restore-the-indexed-catalog-files]]
 === 恢復索引目錄文件
 
 . 將 Indexed Catalog 備份 zip 檔案（我們將使用範例檔案名稱「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」）從備份位置複製到「/opt/application/netapp/cbs」資料夾中的新控制台代理主機。
@@ -140,6 +144,7 @@ unzip Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip -d catalogdb1
 
 
 
+[[discover-your-ontap-clusters-and-storagegrid-systems]]
 === 發現您的ONTAP叢集和StorageGRID系統
 
 . https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html#discover-clusters-using-a-connector["探索所有本地ONTAP系統"^]在您之前的環境中可用。這包括您用作 S3 伺服器的ONTAP系統。
@@ -148,6 +153,7 @@ unzip Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip -d catalogdb1
 
 
 
+[[set-up-the-storagegrid-environment-details]]
 === 設定StorageGRID環境詳細信息
 
 添加與您的ONTAP系統關聯的StorageGRID系統的詳細信息，因為它們是在原始控制台代理設定上使用 https://docs.netapp.com/us-en/console-automation/index.html["NetApp ConsoleAPI"^]。
@@ -202,6 +208,7 @@ curl -X POST 'http://10.193.192.202/account/account-DARKSITE1/providers/cloudman
 
 
 
+[[verify-netapp-backup-and-recovery-settings]]
 === 驗證NetApp Backup and Recovery設置
 
 . 選擇每個ONTAP系統，然後點擊右側面板中備份和還原服務旁邊的「檢視備份」。

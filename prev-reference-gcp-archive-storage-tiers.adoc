@@ -18,6 +18,7 @@ NetApp Backup and Recovery支援一個 Google 歸檔儲存類別和大多數區�
 
 
 
+[[supported-google-archival-storage-classes-for-netapp-backup-and-recovery]]
 == NetApp Backup and Recovery支援的 Google 歸檔儲存類
 
 最初建立備份檔案時，它們儲存在_標準_儲存中。此層針對儲存不經常存取的資料進行了最佳化；但也允許您立即存取它。
@@ -30,6 +31,7 @@ https://cloud.google.com/storage/docs/storage-classes["了解 Google 儲存類�
 
 
 
+[[restore-data-from-archival-storage]]
 == 從檔案儲存中復原數據
 
 雖然將較舊的備份檔案儲存在存檔儲存中比標準儲存便宜得多，但從存檔儲存中的備份檔案中存取資料進行復原作業將花費更長的時間並且花費更多。

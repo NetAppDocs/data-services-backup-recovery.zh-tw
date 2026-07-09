@@ -20,6 +20,7 @@ NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您才能保
 
 
 
+[[add-a-hyper-v-host-and-discover-resources]]
 == 新增 Hyper-V 主機並發現資源
 
 新增 Hyper-V 主機資訊並讓NetApp Backup and Recovery發現虛擬機器。在每個控制台代理程式中，選擇您想要發現資源的系統。
@@ -59,6 +60,7 @@ NetApp Backup and Recovery發現資源後，「清單」頁面會在工作負載
 
 
 
+[[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == 繼續存取NetApp Backup and Recovery儀表板
 
 .步驟

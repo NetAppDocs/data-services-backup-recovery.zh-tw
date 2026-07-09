@@ -21,6 +21,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[verify-support-for-your-configuration]]
 == 驗證對您的配置的支持
 
 在開始將磁碟區備份到 S3 相容儲存設備之前、請先閱讀下列需求、確保您擁有支援的組態。
@@ -39,6 +40,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 
 
+[[supported-actions]]
 === 支援的動作
 
 備份到 S3 相容儲存空間時，支援執行以下操作：
@@ -51,6 +53,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 
 
+[[unsupported-features-and-configurations]]
 === 不支援的功能與組態
 
 備份至 S3 相容儲存設備時，不支援下列功能和組態：
@@ -65,6 +68,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 
 
+[[caveats]]
 === 注意事項
 
 將資料備份到 S3 相容儲存設備時、請注意以下幾點：
@@ -76,6 +80,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 
 
+[[verify-license-requirements]]
 == 驗證許可證要求
 
 對於NetApp Backup and Recovery PAYGO 許可，可在 AWS Marketplace 中訂閱控制台，從而支援部署Cloud Volumes ONTAP和NetApp Backup and Recovery。你需要 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["訂閱此NetApp Console"^]在啟用NetApp Backup and Recovery之前。  NetApp Backup and Recovery的計費透過此訂閱完成。
@@ -90,6 +95,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 
 
+[[prepare-your-console-agent]]
 == 準備控制台代理
 
 控制台代理必須安裝在具有完全或有限網路存取權限（「標準」或「受限」模式）的 AWS 區域。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["有關詳細信息，請參閱NetApp Console部署模式"^] 。
@@ -101,6 +107,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 
 
+[[verify-or-add-permissions-to-the-console-agent]]
 === 驗證或新增控制台代理的權限
 
 為控制台提供權限的 IAM 角色必須包含最新的 S3 權限 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["控制台策略"^]。如果策略不包含所有這些權限，請參閱 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS 文件：編輯 IAM 原則"^]。
@@ -210,6 +217,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 
 
+[[verify-ontap-networking-requirements-for-replicating-volumes]]
 == 驗證ONTAP複製卷的網路要求
 
 如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
@@ -237,6 +245,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 
 
 
+[[enable-netapp-backup-and-recovery-on-cloud-volumes-ontap]]
 == 在Cloud Volumes ONTAP上啟用NetApp Backup and Recovery
 
 啟用NetApp Backup and Recovery非常簡單。根據您擁有的是現有Cloud Volumes ONTAP系統還是新系統，步驟略有不同。
@@ -271,6 +280,7 @@ NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保
 
 
 
+[[activate-backups-on-your-ontap-volumes]]
 == 啟動ONTAP磁碟區上的備份
 
 隨時直接從您的本機系統啟動備份。
@@ -286,6 +296,7 @@ NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保
 
 
 
+[[start-the-wizard]]
 === 啟動精靈
 
 .步驟
@@ -311,6 +322,7 @@ NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保
 
 
 
+[[select-the-volumes-that-you-want-to-back-up]]
 === 選擇要備份的捲
 
 選擇您想要保護的磁碟區。受保護的磁碟區是具有以下一項或多項的磁碟區：快照策略、複製策略、備份到物件策略。
@@ -339,6 +351,7 @@ NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保
 
 
 
+[[define-the-backup-strategy]]
 === 定義備份策略
 
 定義備份策略涉及設定以下選項：
@@ -452,6 +465,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 
 
 
+[[review-your-selections]]
 === 檢查您的選擇
 
 這是審查您的選擇並在必要時進行調整的機會。
@@ -475,6 +489,7 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 
 
 
+[[show-the-api-commands]]
 === 顯示 API 命令
 
 您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。

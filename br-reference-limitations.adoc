@@ -32,6 +32,7 @@ summary: 已知限制標識了該產品的此版本不支援的功能，或無�
 
 
 
+[[replication-limitations-for-ontap-volumes]]
 == ONTAP磁碟區的複製限制
 
 * 您一次只能選擇一個FlexGroup磁碟區進行複製。您需要為每個FlexGroup磁碟區單獨啟動備份。
@@ -51,6 +52,7 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 
 
 
+[[backup-to-object-limitations-for-ontap-volumes]]
 == ONTAP磁碟區的備份到物件限制
 
 * 備份資料時， NetApp Backup and Recovery將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
@@ -89,6 +91,7 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 
 
 
+[[restore-limitations-for-ontap-volumes]]
 == ONTAP磁碟區的還原限制
 
 這些限制適用於恢復文件和資料夾的搜尋和恢復方法以及瀏覽和恢復方法；除非特別指出。
@@ -121,6 +124,7 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 
 
 
+[[enabling-indexing-in-a-disaster-recovery-configuration]]
 == 在災難復原配置中啟用索引
 
 在災難復原 (DR) 配置中，當在儲存虛擬機器叢集上啟用索引時，會出現一個錯誤，指出在配置為 Vserver DR 目標的 Vserver 上不允許執行此操作。儘管出現此錯誤，後端程序仍會將 `snapdiff-rpc-server`狀態設為「開啟」以用於來源儲存虛擬機器。儲存虛擬機器 DR 策略計畫運作後，此狀態會傳播到目標儲存虛擬機器。

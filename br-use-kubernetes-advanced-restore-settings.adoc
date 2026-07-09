@@ -18,6 +18,7 @@ summary: 您可以使用註解、命名空間設定和儲存選項來自訂 CR �
 
 
 
+[[namespace-annotations-and-labels-during-restore-and-failover-operations]]
 == 還原和容錯移轉作業期間的命名空間註釋和標籤
 
 在還原和容錯移轉期間，目的地命名空間標籤和註釋會更新以符合來源：來源中的金鑰會新增至目的地金鑰或覆寫目的地金鑰，而僅存在於目的地中的金鑰則保持不變。
@@ -46,6 +47,7 @@ NOTE: 在還原或容錯移轉期間， `restoreSkipNamespaceAnnotations` 和  `
 
 
 
+[[example]]
 === 範例
 
 以下範例顯示具有不同標籤和註釋的來源命名空間和目的地命名空間，並顯示作業前後的目的地命名空間，以說明如何新增、合併或覆寫金鑰。
@@ -108,12 +110,14 @@ NOTE: 在還原或容錯移轉期間， `restoreSkipNamespaceAnnotations` 和  `
 |===
 
 
+[[supported-fields]]
 == 支援的欄位
 
 本節說明可用於還原作業的其他欄位。
 
 
 
+[[storage-class-mapping]]
 === 儲存類別對應
 
 此 `spec.storageClassMapping`屬性定義了從來源應用程式中的儲存類別到目標叢集上新儲存類別的對應。在將應用程式遷移到具有不同儲存類別的叢集之間，或變更 BackupRestore 操作的儲存後端時，可以使用此屬性。
@@ -130,6 +134,7 @@ storageClassMapping:
 ----
 
 
+[[supported-annotations]]
 == 支援的註釋
 
 本節列出系統中用於配置各種行為的支援註解。如果使用者未明確設定註解，系統將使用預設值。

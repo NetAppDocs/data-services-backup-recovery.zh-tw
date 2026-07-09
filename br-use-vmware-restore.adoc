@@ -39,6 +39,7 @@ TIP: 您可能需要向雲端提供者支付額外費用才能存取備份檔案
 
 
 
+[[how-restoring-workloads-works]]
 == 恢復工作負載的工作原理
 
 恢復工作負載時，會發生以下情況：
@@ -55,6 +56,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 
 
 
+[[restore-workload-data-from-the-restore-option-search-restore]]
 == 從恢復選項恢復工作負載資料（搜尋和恢復）
 
 使用復原選項還原 VMware 工作負載。您可以按名稱或使用篩選器來搜尋快照。

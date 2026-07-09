@@ -18,6 +18,7 @@ summary: 您可以將一個或多個檔案或資料夾從 VMDK 還原到客體�
 
 
 
+[[restore-files-and-folders-from-virtual-disks]]
 == 從虛擬磁碟還原檔案和資料夾
 
 將虛擬磁碟中的檔案或資料夾還原到原始虛擬機器或其他虛擬機器。如果您不想將虛擬磁碟附加到原始虛擬機器，可以將其附加到 Proxy 虛擬機器。
@@ -178,6 +179,7 @@ NetApp Backup and Recovery 會將虛擬磁碟掛載到 proxy VM，並顯示所�
 ====
 
 
+[[view-active-vmdk-mount-sessions]]
 == 檢視作用中的 VMDK 掛載工作階段
 
 在還原檔案或資料夾時，可以查看活動的來賓工作階段。這會顯示目前已附加到開啟工作階段的 VMDK。

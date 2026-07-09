@@ -18,6 +18,7 @@ summary: 在您的環境中使用 Backup and Recovery 之前，請先檢閱這�
 
 
 
+[[unsupported-actions]]
 == 不支援的操作
 
 在 NetApp Backup and Recovery 中，Hyper-V 工作負載不支援以下操作：

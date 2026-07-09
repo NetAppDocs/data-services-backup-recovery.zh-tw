@@ -4,6 +4,7 @@
 
 
 
+[[netapp-backup-and-recovery-preview-release]]
 === NetApp Backup and Recovery預覽版
 
 NetApp Backup and Recovery的此預覽版提供了更新的使用者介面，使您能夠使用NetApp Backup and Recovery中熟悉的 3-2-1 保護策略來管理 Microsoft SQL Server 工作負載。使用此新版本，您可以將這些工作負載備份到主存儲，將其複製到輔助存儲，然後將其備份到雲端物件儲存。

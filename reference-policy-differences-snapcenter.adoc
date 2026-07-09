@@ -16,6 +16,7 @@ SnapCenter中使用的策略與NetApp Backup and Recovery中使用的策略之�
 
 
 
+[[schedule-tiers]]
 == 計劃層級
 
 SnapCenter使用以下計劃層：
@@ -37,6 +38,7 @@ NetApp Backup and Recovery使用以下計劃層，它們略有不同：
 
 
 
+[[multiple-policies-in-snapcenter-with-the-same-schedule-tier]]
 == SnapCenter中具有相同計劃層的多個策略
 
 您可以將具有相同計劃層的多個政策指派給SnapCenter中的資源。但是， NetApp Backup and Recovery不支援在​​使用相同計劃層的資源上套用多個策略。
@@ -45,6 +47,7 @@ NetApp Backup and Recovery使用以下計劃層，它們略有不同：
 
 
 
+[[imported-snapcenter-daily-schedules]]
 == 導入的SnapCenter每日計劃
 
 NetApp Backup and Recovery如下調整SnapCenter方案：
@@ -61,6 +64,7 @@ NetApp Backup and Recovery如下調整SnapCenter方案：
 
 
 
+[[imported-snapcenter-hourly-schedules]]
 == 導入的SnapCenter每小時計劃
 
 重複間隔大於一小時的SnapCenter每小時策略將轉換為NetApp Backup and Recovery中的每日策略。
@@ -71,6 +75,7 @@ NetApp Backup and Recovery如下調整SnapCenter方案：
 
 
 
+[[log-retention-from-snapcenter-policies]]
 == SnapCenter策略的日誌保留
 
 如果SnapCenter中的資源具有多個策略，NetApp Backup and Recovery將使用以下優先順序來指派日誌保留值：
@@ -83,12 +88,14 @@ NetApp Backup and Recovery如下調整SnapCenter方案：
 
 
 
+[[log-backup-retention]]
 == 日誌備份保留
 
 SnapCenter支援資源策略的多個保留值。  NetApp Backup and Recovery僅支援每個資源一個保留值。
 
 
 
+[[retention-count-from-snapcenter-policies]]
 == SnapCenter策略的保留計數
 
 如果您在SnapCenter中啟用了二級保護的資源具有多個來源磁碟區、多個目標磁碟區和多個SnapMirror關係，NetApp Backup and Recovery僅使用第一個原則的保留計數。
@@ -97,6 +104,7 @@ SnapCenter支援資源策略的多個保留值。  NetApp Backup and Recovery僅
 
 
 
+[[snapmirror-labels-from-snapcenter-policies]]
 == SnapCenter策略中的SnapMirror標籤
 
 即使層級發生變化， SnapCenter也會在遷移後保留每個策略的SnapMirror標籤。

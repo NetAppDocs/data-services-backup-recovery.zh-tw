@@ -4,18 +4,21 @@
 
 
 
+[[microsoft-hyper-v-workloads-supported-in-general-availability-ga]]
 === 正式版（GA）支援的 Microsoft Hyper-V 工作負載
 
 NetApp Backup and Recovery 現已全面支援 Microsoft Hyper-V 工作負載（GA）。
 
 
 
+[[vmware-workloads-supported-in-general-availability-ga]]
 === 正式版 (GA) 中支援的 VMware 工作負載
 
 VMware 工作負載支援現已在 NetApp Backup and Recovery 中正式推出（GA）。
 
 
 
+[[kubernetes-workloads-enhancements]]
 === Kubernetes 工作負載增強功能
 
 此版本的 Kubernetes 工作負載引入了以下增強功能：
@@ -31,6 +34,7 @@ VMware 工作負載支援現已在 NetApp Backup and Recovery 中正式推出（
 
 
 
+[[oracle-database-workloads-enhancements]]
 === Oracle Database 工作負載增強功能
 
 此版本的 Oracle Database 工作負載引入了以下增強功能：

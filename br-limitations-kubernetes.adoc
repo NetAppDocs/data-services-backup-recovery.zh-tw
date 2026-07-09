@@ -18,6 +18,7 @@ summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢�
 
 
 
+[[changing-the-protection-policy-for-an-application]]
 == 變更應用程式的保護原則
 
 當您變更應用程式的關聯保護原則以使用不同的儲存區或次要複寫目標時、保護原則可能會失敗。
@@ -26,6 +27,7 @@ summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢�
 
 
 
+[[3-2-1-protection-policy-configuration-limitation]]
 == 3-2-1 保護原則組態限制
 
 當您建立 3-2-1 保護策略時，如果物件儲存備份不會與複製到次要儲存設備同時發生，則在保護應用程式時，保護策略會掛起。

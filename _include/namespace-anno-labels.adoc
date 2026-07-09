@@ -4,6 +4,7 @@
 
 
 
+[[namespace-annotations-and-labels-during-restore-and-failover-operations]]
 == 還原和容錯移轉作業期間的命名空間註釋和標籤
 
 在還原和容錯移轉期間，目的地命名空間標籤和註釋會更新以符合來源：來源中的金鑰會新增至目的地金鑰或覆寫目的地金鑰，而僅存在於目的地中的金鑰則保持不變。
@@ -32,6 +33,7 @@ NOTE: 在還原或容錯移轉期間， `restoreSkipNamespaceAnnotations` 和  `
 
 
 
+[[example]]
 === 範例
 
 以下範例顯示具有不同標籤和註釋的來源命名空間和目的地命名空間，並顯示作業前後的目的地命名空間，以說明如何新增、合併或覆寫金鑰。

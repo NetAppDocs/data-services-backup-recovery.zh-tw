@@ -20,10 +20,12 @@ summary: 啟用 NetApp Backup and Recovery 的預覽和隱藏功能。
 
 
 
+[[available-preview-features]]
 == 可用的預覽功能
 
 您可以啟用以下 NetApp Backup and Recovery 預覽功能。
 
+[[anchor-flags]]
 [cols="50,50"]
 |===
 | 功能標誌 | 功能說明 
@@ -36,6 +38,7 @@ summary: 啟用 NetApp Backup and Recovery 的預覽和隱藏功能。
 |===
 
 
+[[enable-preview-features]]
 == 啟用預覽功能
 
 啟用預覽功能標誌選項即可使用尚未正式發布的功能。在生產環境中謹慎使用預覽功能。
@@ -116,6 +119,7 @@ NOTE: 若要停用預覽功能，請依照相同的步驟操作，但將功能�
 
 
 
+[[disable-indexing-for-volumes]]
 == 停用磁碟區索引
 
 使用下列選項標誌停用特定磁碟區或屬於一個或多個儲存 VM 的所有磁碟區的索引：

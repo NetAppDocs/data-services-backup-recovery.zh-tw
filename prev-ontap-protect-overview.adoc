@@ -41,6 +41,7 @@ NetApp Backup and Recovery利用 NetApp 的SnapMirror資料複製技術，透過
 
 
 
+[[features]]
 == 特徵
 
 *複製功能：*
@@ -87,12 +88,14 @@ NetApp Backup and Recovery利用 NetApp 的SnapMirror資料複製技術，透過
 
 
 
+[[supported-systems-for-backup-and-restore-operations]]
 == 支援備份和復原作業的系統
 
 NetApp Backup and Recovery支援ONTAP系統以及公有和私有雲供應商。
 
 
 
+[[supported-regions]]
 === 支持的區域
 
 NetApp Backup and Recovery在許多 Amazon Web Services、Microsoft Azure 和 Google Cloud 區域中均支援Cloud Volumes ONTAP 。
@@ -101,6 +104,7 @@ https://bluexp.netapp.com/cloud-volumes-global-regions["使用全球區域地圖
 
 
 
+[[supported-backup-destinations]]
 === 支援的備份目標
 
 NetApp Backup and Recovery讓您能夠將ONTAP磁碟區從下列來源系統備份到下列輔助系統以及公有雲和私有雲供應商中的物件儲存。快照保留在來源系統上。
@@ -150,6 +154,7 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 |===
 
 
+[[supported-restore-destinations]]
 === 支援的還原目標
 
 您可以將ONTAP資料從位於輔助系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照位於來源系統上，並且只能還原到同一系統。
@@ -219,6 +224,7 @@ NOTE: 文中提及的「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP S
 
 
 
+[[supported-volumes]]
 == 支持的捲
 
 NetApp Backup and Recovery支援以下類型的磁碟區：
@@ -237,6 +243,7 @@ NOTE: NetApp Backup and Recovery不支援FlexCache磁碟區的備份。
 
 
 
+[[cost]]
 == 成本
 
 使用NetApp Backup and Recovery與ONTAP系統相關的成本有兩種：資源費用和服務費用。這兩項費用均針對服務的對象部分備份。
@@ -270,6 +277,7 @@ NOTE: NetApp Backup and Recovery不支援FlexCache磁碟區的備份。
 
 
 
+[[licensing]]
 == 授權
 
 NetApp Backup and Recovery適用於以下消費模式：
@@ -283,6 +291,7 @@ NetApp Backup and Recovery適用於以下消費模式：
 
 
 
+[[bring-your-own-license]]
 === 自備駕照
 
 BYOL 是基於期限（1、2 或 3 年）和容量的，以 1 TiB 為增量。您向NetApp付費以使用該服務一段時間（例如 1 年）以及最大容量（例如 10 TiB）。
@@ -293,6 +302,7 @@ link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。
 
 
 
+[[pay-as-you-go-subscription]]
 === 按需付費訂閱
 
 NetApp Backup and Recovery以按需付費模式提供基於消費的授權。透過雲端供應商的市場訂閱後，您需要按 GiB 為備份資料付費 - 無需預付款。您的雲端提供者將透過每月帳單向您收費。
@@ -303,6 +313,7 @@ link:br-start-licensing.html["了解如何設定即用即付訂閱"]。
 
 
 
+[[annual-contract]]
 === 年度合約
 
 使用 AWS 時，有兩種年度合約可供選擇，期限分別為 1 年、2 年或 3 年：
@@ -323,6 +334,7 @@ link:br-start-licensing.html["了解如何制定年度合約"]。
 
 
 
+[[how-netapp-backup-and-recovery-works]]
 == NetApp Backup and Recovery的工作原理
 
 當您在Cloud Volumes ONTAP或本機ONTAP系統上啟用NetApp Backup and Recovery時，本服務會對您的資料執行完整備份。初始備份之後，所有附加備份都是增量的，這意味著只備份更改的區塊和新區塊。這使得網路流量保持最低限度。物件儲存備份建立在 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirror雲端技術"^]。
@@ -338,6 +350,7 @@ image:diagram-backup-recovery-general.png["此圖顯示了NetApp Backup and Reco
 
 
 
+[[where-backups-reside]]
 === 備份所在位置
 
 根據備份類型，備份位於不同的位置：
@@ -359,6 +372,7 @@ image:diagram-backup-recovery-general.png["此圖顯示了NetApp Backup and Reco
 
 
 
+[[customizable-backup-schedule-and-retention-settings]]
 === 可自訂的備份計劃和保留設置
 
 當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您選擇的策略進行備份。您可以為快照、複製磁碟區和備份檔案選擇不同的策略。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，則可以為該叢集建立其他策略，並在啟動NetApp Backup and Recovery後將這些原則指派給其他磁碟區。
@@ -375,6 +389,7 @@ TIP: 資料保護磁碟區備份的保留期與來源SnapMirror關係中定義�
 
 
 
+[[backup-file-protection-settings]]
 === 備份檔案保護設定
 
 如果您的叢集使用的是 ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份免受刪除和勒索軟體攻擊。每個備份原則都提供了一個 _Datalock 和 Ransomware 保護_ 部分，可以將其應用於備份檔案，並設定保護期限（即 _保留期_）。
@@ -400,6 +415,7 @@ TIP: 如果您將備份分層到檔案存儲，則無法啟用 DataLock。
 
 
 
+[[archival-storage-for-older-backup-files]]
 === 舊備份文件的存檔存儲
 
 使用某些雲端儲存時，您可以在一定天數後將較舊的備份檔案移至較便宜的儲存類別/存取層。您也可以選擇立即將備份檔案傳送到檔案存儲，而無需寫入標準雲端儲存。請注意，如果您啟用了 DataLock，則無法使用檔案儲存。
@@ -430,6 +446,7 @@ TIP: 如果您將備份分層到檔案存儲，則無法啟用 DataLock。
 
 
 
+[[fabricpool-tiering-policy-considerations]]
 == FabricPool分層策略注意事項
 
 當您要備份的磁碟區位於FabricPool聚合上，並且指派了分層策略時，您需要注意以下幾點 `none`：

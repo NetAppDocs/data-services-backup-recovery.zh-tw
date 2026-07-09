@@ -26,6 +26,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 
 
 
+[[create-a-protection-group]]
 == 建立保護組
 
 將您想要保護的工作負載分組到一個保護群組。建立保護組來一起備份和還原工作負載。
@@ -53,6 +54,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 
 
 
+[[edit-a-protection-group]]
 == 編輯保護群組
 
 編輯保護群組以變更其名稱或設定。如果保護群組中的資源發生了變化，您可能需要編輯該保護群組。
@@ -73,6 +75,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 
 
 
+[[apply-an-updated-host-time-zone-to-an-existing-protection-group]]
 === 將更新後的主機時區套用至現有保護群組
 
 排程備份使用 Hyper-V 主機的時區，該時區在建立保護群組排程時記錄。如果您變更主機的時區，現有保護群組將繼續以其原始時區（通常為 UTC）執行，直到您更新其排程為止。
@@ -87,6 +90,7 @@ NOTE: 只有在您修改保護群組名稱、新增或刪除虛擬機器、變�
 
 
 
+[[delete-a-protection-group]]
 == 刪除保護群組
 
 刪除保護群組會刪除該保護群組以及所有相關的備份計畫。如果不再需要某個保護群組，您可能需要將其刪除。

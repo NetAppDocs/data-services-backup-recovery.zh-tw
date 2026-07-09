@@ -50,6 +50,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 
 
 
+[[search-restore-supported-systems-and-object-storage-providers]]
 == 搜尋和恢復支援的系統和物件儲存提供者
 
 您可以將ONTAP資料從位於二級系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。
@@ -91,6 +92,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 
 
 
+[[search-restore-prerequisites]]
 == 搜尋與恢復的先決條件
 
 在啟用搜尋和復原功能前，請確保您的環境符合以下要求：
@@ -107,6 +109,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 
 
 
+[[legacy-search-restore-prerequisites-using-indexed-catalog-v1]]
 === 舊版搜尋與復原的先決條件（使用索引目錄 v1）
 
 以下是使用傳統索引時搜尋和復原功能的要求：
@@ -160,6 +163,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 ====
 
 
+[[search-restore-process]]
 == 搜尋和恢復過程
 
 這個過程如下：
@@ -185,6 +189,7 @@ image:diagram_search_restore_vol_file.png["此圖顯示了使用「搜尋和還�
 
 
 
+[[enable-the-indexed-catalog-for-each-system]]
 == 為每個系統啟用索引目錄
 
 在使用搜尋和還原之前，您需要在計劃還原磁碟區或檔案的每個來源系統上啟用「索引」。這使得索引目錄可以追蹤每個捲和每個備份檔案 - 使您的搜尋非常快速和有效率。
@@ -257,6 +262,7 @@ mount 10.192.24.17:/CATALOG_SCALE_234 /opt/application/netapp/cbs
 
 
 
+[[restore-volumes-folders-and-files-using-search-restore]]
 == 使用「搜尋和還原」功能還原磁碟區、資料夾和文件
 
 之後<<enable-the-indexed-catalog-for-each-system,為您的系統啟用索引>>，您可以使用「搜尋和還原」還原磁碟區、資料夾和檔案。這使您可以使用廣泛的過濾器從所有備份檔案中找到要還原的確切檔案或磁碟區。

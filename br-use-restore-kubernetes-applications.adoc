@@ -18,6 +18,7 @@ NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用
 
 
 
+[[view-protected-resources-for-an-application-restore-point]]
 == 檢視應用程式還原點的受保護資源
 
 對於使用 Backup and Recovery 保護的每個應用程式、您可以檢視已針對特定還原點備份的資源。
@@ -37,6 +38,7 @@ Backup and Recovery 檢視器。link:reference-roles.html["了解NetApp Backup a
 
 
 
+[[restore-kubernetes-applications]]
 == 恢復 Kubernetes 應用程式
 
 您可以從還原點還原基於命名空間或基於 VM 的應用程式，既可以還原所有資源，也可以選擇還原部分資源。

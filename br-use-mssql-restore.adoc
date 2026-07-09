@@ -40,6 +40,7 @@ TIP: 您需要向雲端提供者支付額外費用才能存取備份檔案。
 
 
 
+[[how-restoring-workloads-works]]
 == 恢復工作負載的工作原理
 
 恢復工作負載時，會發生以下情況：
@@ -54,6 +55,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 
 
 
+[[restore-methods]]
 == 恢復方法
 
 使用下列方法之一恢復工作負載：
@@ -66,6 +68,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 
 
 
+[[restore-workload-data-from-the-restore-option]]
 == 從“恢復”選項恢復工作負載數據
 
 使用復原選項復原資料庫工作負載。
@@ -84,6 +87,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 
 
 
+[[restore-workloads-from-snapshots]]
 === 從快照恢復工作負載
 
 . 繼續從復原選項頁面，選擇*從快照復原*。
@@ -121,6 +125,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 
 
 
+[[restore-to-specific-point-in-time]]
 === 恢復到特定時間點
 
 NetApp Backup and Recovery使用日誌和最新的快照來建立資料的時間點復原。
@@ -160,6 +165,7 @@ NetApp Backup and Recovery使用日誌和最新的快照來建立資料的時間
 
 
 
+[[restore-to-the-latest-backup]]
 === 還原到最新備份
 
 此選項使用最新的完整備份和日誌備份將資料恢復到最後的良好狀態。系統掃描從上次快照到現在的日誌。該過程追蹤變化和活動以恢復資料的最新和最準確的版本。
@@ -197,6 +203,7 @@ NetApp Backup and Recovery向您顯示可用於復原操作的快照。
 
 
 
+[[restore-workload-data-from-the-inventory-option]]
 == 從 Inventory 選項恢復工作負載數據
 
 從庫存頁面還原資料庫工作負載。使用 Inventory 選項，您只能還原資料庫，而不能還原執行個體。

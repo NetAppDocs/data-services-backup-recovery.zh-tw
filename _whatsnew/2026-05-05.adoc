@@ -4,6 +4,7 @@
 
 
 
+[[kubernetes-workloads-enhancements]]
 === Kubernetes 工作負載增強功能
 
 在此版本中、Kubernetes 工作負載引入了以下增強功能：

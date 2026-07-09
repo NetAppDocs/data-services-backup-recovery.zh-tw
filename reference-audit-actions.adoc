@@ -58,6 +58,7 @@ NetApp Console 稽核頁面會記錄使用者在 NetApp Backup and Recovery 中�
 
 
 
+[[more-information]]
 == 更多資訊
 
 * https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["從「稽核」頁面稽核使用者活動"^]

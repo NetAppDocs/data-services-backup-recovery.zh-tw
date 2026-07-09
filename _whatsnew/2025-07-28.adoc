@@ -4,6 +4,7 @@
 
 
 
+[[kubernetes-workload-support-as-a-preview]]
 === Kubernetes 工作負載支援預覽版
 
 此版本的 NetApp Backup and Recovery 新增支援發現與管理 Kubernetes 工作負載：

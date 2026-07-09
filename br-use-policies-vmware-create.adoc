@@ -33,6 +33,7 @@ NOTE: 對於 VMware 工作負載，備份計畫使用 VMware vCenter 伺服器�
 
 
 
+[[view-policies]]
 == 查看政策
 
 . 從NetApp Backup and Recovery選單中，選擇 *策略*。
@@ -49,6 +50,7 @@ NOTE: 對於 VMware 工作負載，備份計畫使用 VMware vCenter 伺服器�
 
 
 
+[[create-a-policy]]
 == 創建策略
 
 您可以建立策略來管理本機快照、複製到二級儲存以及備份到物件儲存。3-2-1 策略的一部分包括建立主儲存系統上的實例、資料庫、應用程式或虛擬機器的快照。
@@ -146,6 +148,7 @@ NOTE: 出現的欄位會根據所選的提供者和架構而有所不同。
 
 
 
+[[configure-advanced-settings-in-the-policy]]
 === 在策略中配置進階設定
 
 [%collapsible]
@@ -185,6 +188,7 @@ TIP: 如果快照頻率設定為 1 小時，則最大延遲以及重試次數不
 ====
 
 
+[[delete-a-policy]]
 == 刪除策略
 
 如果您不再需要某個策略，則可以將其刪除。

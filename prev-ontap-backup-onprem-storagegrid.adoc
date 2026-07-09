@@ -24,6 +24,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[identify-the-connection-method]]
 == 識別連接方法
 
 下圖顯示了將本機ONTAP系統備份到StorageGRID時的每個元件以及您需要在它們之間準備的連線。
@@ -36,12 +37,14 @@ image:diagram_cloud_backup_onprem_storagegrid.png["此圖顯示了NetApp Backup 
 
 
 
+[[prepare-your-console-agent]]
 == 準備控制台代理
 
 控制台代理程式是控制台功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
 
 
 
+[[create-or-switch-console-agents]]
 === 建立或切換控制台代理
 
 當您將資料備份到StorageGRID時，您的場所必須有控制台代理。您需要安裝新的控制台代理程式或確保目前選定的控制台代理程式位於本機。控制台代理可以安裝在有或沒有網路存取的網站。
@@ -54,6 +57,7 @@ image:diagram_cloud_backup_onprem_storagegrid.png["此圖顯示了NetApp Backup 
 
 
 
+[[prepare-console-agent-networking-requirements]]
 === 準備控制台代理網路要求
 
 確保安裝控制台代理程式的網路啟用以下連線：
@@ -76,6 +80,7 @@ image:diagram_cloud_backup_onprem_storagegrid.png["此圖顯示了NetApp Backup 
 
 
 
+[[verify-license-requirements]]
 == 驗證許可證要求
 
 在為叢集啟動NetApp Backup and Recovery之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此許可證適用於該帳戶，可跨多個系統使用。
@@ -87,6 +92,7 @@ TIP: 將檔案備份到StorageGRID時不支援 PAYGO 授權。
 
 
 
+[[prepare-your-ontap-clusters]]
 == 準備ONTAP集群
 
 準備來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統。
@@ -101,6 +107,7 @@ TIP: 將檔案備份到StorageGRID時不支援 PAYGO 授權。
 
 
 
+[[discover-your-ontap-systems-in-netapp-console]]
 === 在NetApp Console中發現您的ONTAP系統
 
 您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。
@@ -109,6 +116,7 @@ TIP: 將檔案備份到StorageGRID時不支援 PAYGO 授權。
 
 
 
+[[verify-ontap-system-requirements]]
 === 驗證ONTAP系統要求
 
 確保您的ONTAP系統符合以下要求：
@@ -130,6 +138,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 
 
+[[verify-ontap-networking-requirements-for-backing-up-data-to-object-storage]]
 === 驗證ONTAP網路要求以將資料備份到對象存儲
 
 您必須在連接到物件儲存的系統上配置以下要求。
@@ -157,6 +166,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[verify-ontap-networking-requirements-for-replicating-volumes]]
 === 驗證ONTAP複製卷的網路要求
 
 如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
@@ -181,6 +191,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[prepare-storagegrid-as-your-backup-target]]
 == 準備StorageGRID作為備份目標
 
 StorageGRID必須符合以下要求。查看 https://docs.netapp.com/us-en/storagegrid-117/["StorageGRID文檔"^]了解更多。
@@ -221,6 +232,7 @@ S3 憑證:: 您必須建立 S3 租用戶帳戶來控制對StorageGRID儲存的�
 
 
 
+[[prepare-to-archive-older-backup-files-to-public-cloud-storage]]
 === 準備將較舊的備份文件存檔到公有雲存儲
 
 將較舊的備份檔案分層到檔案儲存中可以節省資金，因為您可以使用較便宜的儲存類別來儲存您可能不需要的備份。 StorageGRID是一種內部部署（私有雲）解決方案，不提供檔案存儲，但您可以將較舊的備份檔案移至公有雲檔案儲存。以這種方式使用時，分層到雲端儲存的資料或從雲端儲存恢復的資料會在StorageGRID和雲端儲存之間傳輸 - 控制台不參與此資料傳輸。
@@ -274,6 +286,7 @@ image:screenshot_sg_archive_to_cloud.png["將備份檔案從StorageGRID到 AWS S
 
 
 
+[[activate-backups-on-your-ontap-volumes]]
 == 啟動ONTAP磁碟區上的備份
 
 隨時直接從您的本機系統啟動備份。
@@ -289,6 +302,7 @@ image:screenshot_sg_archive_to_cloud.png["將備份檔案從StorageGRID到 AWS S
 
 
 
+[[start-the-wizard]]
 === 啟動精靈
 
 .步驟
@@ -314,6 +328,7 @@ image:screenshot_sg_archive_to_cloud.png["將備份檔案從StorageGRID到 AWS S
 
 
 
+[[select-the-volumes-that-you-want-to-back-up]]
 === 選擇要備份的捲
 
 選擇您想要保護的磁碟區。受保護的磁碟區是具有以下一項或多項的磁碟區：快照策略、複製策略、備份到物件策略。
@@ -342,6 +357,7 @@ image:screenshot_sg_archive_to_cloud.png["將備份檔案從StorageGRID到 AWS S
 
 
 
+[[define-the-backup-strategy]]
 === 定義備份策略
 
 定義備份策略涉及設定以下選項：
@@ -455,6 +471,7 @@ TIP: 若要建立自訂策略，請參閱link:br-use-policies-create.html["創�
 
 
 
+[[review-your-selections]]
 === 檢查您的選擇
 
 這是審查您的選擇並在必要時進行調整的機會。
@@ -478,6 +495,7 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 
 
 
+[[show-the-api-commands]]
 === 顯示 API 命令
 
 您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。

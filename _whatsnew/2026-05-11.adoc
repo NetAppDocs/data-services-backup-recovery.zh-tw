@@ -4,6 +4,7 @@
 
 
 
+[[hyper-v-workloads-enhancements]]
 === Hyper-V 工作負載增強功能
 
 在此版本中、Hyper-V 工作負載引入了以下增強功能：
@@ -17,6 +18,7 @@
 
 
 
+[[kvm-workloads-enhancements]]
 === KVM 工作負載增強功能
 
 在此版本中、KVM 工作負載引入了以下增強功能：
@@ -27,6 +29,7 @@
 
 
 
+[[oracle-database-workloads-enhancements]]
 === Oracle Database 工作負載增強功能
 
 在此版本中、Oracle Database 工作負載引進下列增強功能：
@@ -39,6 +42,7 @@
 
 
 
+[[vmware-workloads-enhancements]]
 === VMware 工作負載增強功能
 
 在此版本中、VMware 工作負載引進了以下增強功能：
@@ -51,6 +55,7 @@
 
 
 
+[[kubernetes-workloads-enhancements]]
 === Kubernetes 工作負載增強功能
 
 在此版本中、Kubernetes 工作負載引入了以下增強功能：

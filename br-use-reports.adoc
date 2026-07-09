@@ -16,6 +16,7 @@ summary: 在NetApp Backup and Recovery中，建立報告以查看備份狀態，
 
 
 
+[[create-a-protection-report]]
 == 建立保護報告
 
 *所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。

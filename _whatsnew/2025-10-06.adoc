@@ -4,12 +4,14 @@
 
 
 
+[[bluexp-backup-and-recovery-is-now-netapp-backup-and-recovery]]
 === BlueXP backup and recovery現已更名NetApp Backup and Recovery
 
 BlueXP backup and recovery已重新命名為NetApp Backup and Recovery。
 
 
 
+[[bluexp-is-now-netapp-console]]
 === BlueXP現在是NetApp Console
 
 NetApp Console建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp Data Services，提供即時洞察、更快的工作流程以及高度安全且合規的簡化管理。
@@ -18,6 +20,7 @@ NetApp Console建立在增強和重組的BlueXP基礎之上，可在企業級內
 
 
 
+[[hyper-v-workload-support-as-a-private-preview]]
 === Hyper-V 工作負載支援作為私人預覽版
 
 此版本的 NetApp Backup and Recovery 新增支援探索與管理 Hyper-V 工作負載：
@@ -34,6 +37,7 @@ NetApp Console建立在增強和重組的BlueXP基礎之上，可在企業級內
 
 
 
+[[kvm-workload-support-as-a-private-preview]]
 === KVM 工作負載支援作為私人預覽
 
 此版本的 NetApp Backup and Recovery 新增支援發現與管理 KVM 工作負載：
@@ -50,6 +54,7 @@ NetApp Console建立在增強和重組的BlueXP基礎之上，可在企業級內
 
 
 
+[[kubernetes-preview-enhancements]]
 === Kubernetes 預覽增強功能
 
 Kubernetes 工作負載的預覽版引入了以下增強功能：
@@ -73,6 +78,7 @@ Kubernetes 工作負載的預覽版引入了以下增強功能：
 
 
 
+[[vmware-preview-enhancements]]
 === VMware 預覽增強功能
 
 VMware 工作負載預覽版引入了以下增強功能：
@@ -90,6 +96,7 @@ VMware 工作負載預覽版引入了以下增強功能：
 
 
 
+[[oracle-database-workload-support-as-a-private-preview]]
 === Oracle 資料庫工作負載支援作為私人預覽
 
 此版本的NetApp Backup and Recovery引進了對發現和管理 Oracle 資料庫工作負載的支援：
@@ -108,6 +115,7 @@ VMware 工作負載預覽版引入了以下增強功能：
 
 
 
+[[ontap-volume-workload-enhancements]]
 === ONTAP磁碟區工作負載增強功能
 
 此版本的ONTAP磁碟區工作負載引入了以下增強功能：

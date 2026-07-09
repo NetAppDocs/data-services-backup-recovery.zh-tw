@@ -24,6 +24,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[identify-the-connection-method]]
 == 識別連接方法
 
 選擇在設定從本機ONTAP系統到 Azure Blob 的備份時要使用的兩種連接方法中的哪一種。
@@ -44,12 +45,14 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 
 
 
+[[prepare-your-console-agent]]
 == 準備控制台代理
 
 控制台代理程式是NetApp Console功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
 
 
 
+[[create-or-switch-console-agents]]
 === 建立或切換控制台代理
 
 如果您已經在 Azure VNet 或本機部署了控制台代理，那麼一切就緒了。
@@ -67,6 +70,7 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 
 
 
+[[prepare-networking-for-the-console-agent]]
 === 為控制台代理準備網絡
 
 確保控制台代理程式具有所需的網路連線。
@@ -85,6 +89,7 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 
 
 
+[[verify-or-add-permissions-to-the-console-agent]]
 === 驗證或新增控制台代理的權限
 
 要使用NetApp Backup and Recovery搜尋和還原功能，您需要在控制台代理程式的角色中擁有特定權限，以便它可以存取 Azure Synapse 工作區和資料湖儲存帳戶。請參閱下面的權限，如果需要修改策略，請依照下列步驟操作。
@@ -161,6 +166,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 
 
+[[verify-license-requirements]]
 == 驗證許可證要求
 
 您需要驗證 Azure 和控制台的授權需求：
@@ -180,6 +186,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 
 
+[[prepare-your-ontap-clusters]]
 == 準備ONTAP集群
 
 準備來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統。
@@ -194,6 +201,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 
 
+[[discover-your-ontap-systems-in-netapp-console]]
 === 在NetApp Console中發現您的ONTAP系統
 
 您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。
@@ -202,6 +210,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 
 
+[[verify-ontap-system-requirements]]
 === 驗證ONTAP系統要求
 
 確保您的ONTAP系統符合以下要求：
@@ -223,6 +232,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 
 
+[[verify-ontap-networking-requirements-for-backing-up-data-to-object-storage]]
 === 驗證ONTAP網路要求以將資料備份到對象存儲
 
 您必須在連接到物件儲存的系統上配置以下要求。
@@ -250,6 +260,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[verify-ontap-networking-requirements-for-replicating-volumes]]
 === 驗證ONTAP複製卷的網路要求
 
 如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
@@ -274,6 +285,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[prepare-azure-blob-as-your-backup-target]]
 == 準備 Azure Blob 作為備份目標
 
 . 您可以在啟動精靈中使用自己的自訂管理金鑰進行資料加密，而不是使用預設的 Microsoft 管理加密金鑰。在這種情況下，您將需要有 Azure 訂閱、Key Vault 名稱和金鑰。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["了解如何使用自己的密鑰"^] 。
@@ -285,6 +297,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[create-your-azure-blob-storage-account]]
 === 建立 Azure Blob 儲存體帳戶
 
 預設情況下，該服務會為您建立儲存帳戶。如果您想使用自己的儲存帳戶，您可以在啟動備份啟動精靈之前建立它們，然後在精靈中選擇這些儲存帳戶。
@@ -293,6 +306,7 @@ link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的
 
 
 
+[[activate-backups-on-your-ontap-volumes]]
 == 啟動ONTAP磁碟區上的備份
 
 隨時直接從您的本機系統啟動備份。
@@ -308,6 +322,7 @@ link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的
 
 
 
+[[start-the-wizard]]
 === 啟動精靈
 
 .步驟
@@ -333,6 +348,7 @@ link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的
 
 
 
+[[select-the-volumes-that-you-want-to-back-up]]
 === 選擇要備份的捲
 
 選擇您想要保護的磁碟區。受保護的磁碟區是具有以下一項或多項的磁碟區：快照策略、複製策略、備份到物件策略。
@@ -361,6 +377,7 @@ link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的
 
 
 
+[[define-the-backup-strategy]]
 === 定義備份策略
 
 定義備份策略涉及設定以下選項：
@@ -488,6 +505,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 
 
 
+[[review-your-selections]]
 === 檢查您的選擇
 
 這是審查您的選擇並在必要時進行調整的機會。
@@ -509,6 +527,7 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 
 
 
+[[show-the-api-commands]]
 === 顯示 API 命令
 
 您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。

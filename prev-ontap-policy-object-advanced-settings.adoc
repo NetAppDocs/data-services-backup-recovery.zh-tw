@@ -34,6 +34,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[view-cluster-level-backup-settings]]
 == 查看叢集等級備份設定
 
 您可以查看每個系統的叢集級系統設定和提供者設定。
@@ -51,6 +52,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[change-the-network-bandwidth-available-to-upload-backups-to-object-storage]]
 == 變更可用於將備份上傳到物件儲存的網路頻寬
 
 當您為系統啟動NetApp Backup and Recovery時，預設情況下， ONTAP可以使用無限量的頻寬將備份資料從系統中的磁碟區傳送到物件儲存。如果您注意到備份流量影響了正常的使用者工作負載，您可以使用「進階設定」頁面中的最大傳輸速率選項來限制傳輸過程中使用的網路頻寬量。
@@ -68,6 +70,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[change-whether-historical-snapshots-are-exported-as-backup-files]]
 == 更改是否將歷史快照匯出為備份文件
 
 如果存在與本系統中使用的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則可以將這些歷史快照匯出到物件儲存作為備份檔案。這樣，您就可以透過將較舊的快照移至基準備份副本中來初始化雲端備份。
@@ -84,6 +87,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[change-whether-yearly-snapshots-are-removed-from-the-source-system]]
 == 更改是否從來源系統中刪除“年度”快照
 
 當您為任何磁碟區選擇「年度」備份策略標籤時，建立的快照將非常大。預設情況下，這些年度快照在傳輸到物件儲存後會自動從來源系統中刪除。您可以從「年度快照刪除」部分變更此預設行為。
@@ -98,6 +102,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[enable-or-disable-ransomware-scans]]
 == 啟用或停用勒索軟體掃描
 
 預設啟用勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照上。
@@ -115,6 +120,7 @@ TIP: 根據雲端提供者的不同，啟用勒索軟體掃描將產生額外費
 
 
 
+[[enable-or-disable-ransomware-scans-for-a-system]]
 === 啟用或停用系統的勒索軟體掃描
 
 您可以為叢集啟用或停用勒索軟體掃描。
@@ -132,6 +138,7 @@ TIP: 根據雲端提供者的不同，啟用勒索軟體掃描將產生額外費
 
 
 
+[[enable-or-disable-ransomware-scans-for-a-provider]]
 === 啟用或停用提供者的勒索軟體掃描
 
 您可以透過提供者設定頁面在提供者層級啟用或停用勒索軟體掃描。頁面上的設定與您在頁面頂部選擇的儲存桶相關。

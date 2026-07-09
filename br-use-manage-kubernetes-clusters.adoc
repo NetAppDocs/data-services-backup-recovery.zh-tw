@@ -24,6 +24,7 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 
 
 
+[[edit-kubernetes-cluster-information]]
 == 編輯 Kubernetes 叢集訊息
 
 如果需要變更叢集名稱，您可以編輯叢集。
@@ -38,6 +39,7 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 
 
 
+[[remove-a-kubernetes-cluster]]
 == 刪除 Kubernetes 集群
 
 若要停止保護 Kubernetes 集群，請停用保護並刪除相關應用程序，然後從NetApp Backup and Recovery中刪除該集群。  NetApp Backup and Recovery不會刪除叢集或其資源；它只會從NetApp Console清單中刪除叢集。
@@ -51,6 +53,7 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 
 
 
+[[upgrade-trident-protect]]
 == 升級 Trident Protect
 
 對於執行 Trident Protect 26.05 或更高版本的 Kubernetes 叢集，您可以直接從 NetApp Backup and Recovery 升級 Trident Protect。只有在有新版本可用時，才會顯示升級選項。

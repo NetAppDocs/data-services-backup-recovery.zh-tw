@@ -23,6 +23,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 
 
+[[identify-the-connection-method]]
 == 識別連接方法
 
 您可以使用多種配置在ONTAP系統上建立 S3 儲存桶的備份。下面顯示了兩種情況。
@@ -41,12 +42,14 @@ image:diagram_cloud_backup_onprem_ontap_s3_cloud.png["此圖顯示了NetApp Back
 
 
 
+[[prepare-your-console-agent]]
 == 準備控制台代理
 
 控制台代理程式是控制台功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
 
 
 
+[[create-or-switch-console-agents]]
 === 建立或切換控制台代理
 
 當您將資料備份到ONTAP S3 時，您的本機或雲端中必須有控制台代理。您需要安裝新的控制台代理，或確保目前選定的控制台代理位於其中一個位置。本機控制台代理程式可以安裝在有或沒有網路存取的網站中。
@@ -60,6 +63,7 @@ image:diagram_cloud_backup_onprem_ontap_s3_cloud.png["此圖顯示了NetApp Back
 
 
 
+[[prepare-console-agent-networking-requirements]]
 === 準備控制台代理網路要求
 
 確保安裝控制台代理程式的網路啟用以下連線：
@@ -79,6 +83,7 @@ NetApp Backup and Recovery功能內建於控制台代理程式中。以私人模
 
 
 
+[[verify-license-requirements]]
 == 驗證許可證要求
 
 在為叢集啟動NetApp Backup and Recovery之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此授權用於備份和還原物件儲存 - 建立快照或複製磁碟區不需要授權。此許可證適用於該帳戶，可跨多個系統使用。
@@ -90,6 +95,7 @@ TIP: 將檔案備份到ONTAP S3 時不支援 PAYGO 授權。
 
 
 
+[[prepare-your-ontap-clusters]]
 == 準備ONTAP集群
 
 準備來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統。
@@ -104,6 +110,7 @@ TIP: 將檔案備份到ONTAP S3 時不支援 PAYGO 授權。
 
 
 
+[[discover-your-ontap-systems-in-netapp-console]]
 === 在NetApp Console中發現您的ONTAP系統
 
 您的來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統都必須在NetApp Console*系統* 頁面上可用。
@@ -112,6 +119,7 @@ TIP: 將檔案備份到ONTAP S3 時不支援 PAYGO 授權。
 
 
 
+[[verify-ontap-system-requirements]]
 === 驗證ONTAP系統要求
 
 確保您的ONTAP系統符合以下要求：
@@ -133,6 +141,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 
 
+[[verify-ontap-networking-requirements-for-backing-up-data-to-object-storage]]
 === 驗證ONTAP網路要求以將資料備份到對象存儲
 
 您必須確保連接到物件儲存的系統符合以下要求。
@@ -166,6 +175,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[verify-ontap-networking-requirements-for-replicating-volumes]]
 === 驗證ONTAP複製卷的網路要求
 
 如果您打算使用NetApp Backup and Recovery在輔助ONTAP系統上建立複製卷，請確保來源系統和目標系統符合下列網路需求。
@@ -190,6 +200,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 
 
+[[prepare-ontap-s3-as-your-backup-target]]
 == 準備ONTAP S3 作為備份目標
 
 您必須在計畫用於物件儲存備份的ONTAP叢集中啟用簡單儲存服務 (S3) 物件儲存伺服器。查看 https://docs.netapp.com/us-en/ontap/s3-config/index.html["ONTAP S3 文檔"^]了解詳情。
@@ -221,6 +232,7 @@ S3 憑證:: 您必須建立 S3 使用者來控制對ONTAP S3 儲存的存取。 
 
 
 
+[[activate-backups-on-your-ontap-volumes]]
 == 啟動ONTAP磁碟區上的備份
 
 隨時直接從您的本機系統啟動備份。
@@ -236,6 +248,7 @@ S3 憑證:: 您必須建立 S3 使用者來控制對ONTAP S3 儲存的存取。 
 
 
 
+[[start-the-wizard]]
 === 啟動精靈
 
 .步驟
@@ -258,6 +271,7 @@ S3 憑證:: 您必須建立 S3 使用者來控制對ONTAP S3 儲存的存取。 
 
 
 
+[[select-the-volumes-that-you-want-to-back-up]]
 === 選擇要備份的捲
 
 選擇您想要保護的磁碟區。受保護的磁碟區是具有以下一項或多項的磁碟區：快照策略、複製策略、備份到物件策略。
@@ -286,6 +300,7 @@ S3 憑證:: 您必須建立 S3 使用者來控制對ONTAP S3 儲存的存取。 
 
 
 
+[[define-the-backup-strategy]]
 === 定義備份策略
 
 定義備份策略涉及配置以下選項：
@@ -389,6 +404,7 @@ TIP: 若要使用備份和復原建立自訂策略，請參閱link:br-use-polici
 
 
 
+[[review-your-selections]]
 === 檢查您的選擇
 
 這是審查您的選擇並在必要時進行調整的機會。
@@ -412,6 +428,7 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 
 
 
+[[show-the-api-commands]]
 === 顯示 API 命令
 
 您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。

@@ -22,6 +22,7 @@ NetApp Backup and Recovery會將作業資訊保留 15 天，然後刪除作業�
 
 
 
+[[view-job-status-on-the-job-monitor]]
 == 在作業監視器上查看作業狀態
 
 您可以在「作業監控」標籤中查看所有快照、複製、備份到物件儲存和復原作業的清單及其目前狀態。這包括來自您的Cloud Volumes ONTAP、本地ONTAP、應用程式和虛擬機器的操作。每個操作或作業都有唯一的 ID 和狀態。
@@ -47,6 +48,7 @@ NOTE: 如果您已將ONTAP系統升級至 9.13.x，但在作業監視器中沒�
 
 
 
+[[search-and-filter-the-list-of-jobs]]
 === 搜尋並過濾職位列表
 
 您可以使用多個篩選器在「作業監控」頁面上篩選操作，例如政策、快照標籤、操作類型（保護、復原、保留或其他）和保護類型（本機快照、複製或備份到雲端）。
@@ -83,6 +85,7 @@ NOTE: 如果您已將ONTAP系統升級至 9.13.x，但在作業監視器中沒�
 
 
 
+[[view-job-details]]
 === 查看職位詳情
 
 您可以查看與特定已完成作業相對應的詳細資訊。您可以以 JSON 格式匯出特定作業的詳細資訊。
@@ -100,6 +103,7 @@ NOTE: 如果您已將ONTAP系統升級至 9.13.x，但在作業監視器中沒�
 
 
 
+[[download-job-monitoring-results-as-a-report]]
 === 下載作業監控結果報告
 
 您可以在篩選或排序結果後將主作業監控頁面的內容下載為報表。NetApp Backup and Recovery會產生並下載一個 .CSV 文件，您可以根據需要查看該文件並傳送給其他群組。.CSV 檔案包含最多 10,000 行資料。
@@ -114,6 +118,7 @@ NOTE: 如果您已將ONTAP系統升級至 9.13.x，但在作業監視器中沒�
 
 
 
+[[review-retention-backup-lifecycle-jobs]]
 == 檢討保留（備份生命週期）作業
 
 監控保留（備份生命週期）流程以檢查備份、確保其安全並支援稽核。確定備份副本何時過期以追蹤生命週期。
@@ -130,6 +135,7 @@ NOTE: 如果您已將ONTAP系統升級至 9.13.x，但在作業監視器中沒�
 
 
 
+[[review-backup-and-restore-alerts-in-the-netapp-console-notification-center]]
 == 在NetApp Console通知中心查看備份和還原警報
 
 NetApp Console通知中心追蹤您啟動的備份和復原作業的進度，以便您可以驗證作業是否成功。
@@ -248,6 +254,7 @@ https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.htm
 
 
 
+[[review-operation-activity-in-console-timeline]]
 == 在控制台時間軸中查看操作活動
 
 您可以在控制台時間軸中查看備份和復原作業的詳細資訊以進行進一步調查。控制台時間軸提供每個事件的詳細信息，無論是用戶發起的還是系統發起的，並顯示在 UI 中或透過 API 發起的操作。

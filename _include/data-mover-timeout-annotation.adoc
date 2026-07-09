@@ -4,6 +4,7 @@
 
 
 
+[[data-mover-timeout-annotation]]
 == 資料移動逾時註釋
 
 使用此註解 `protect.trident.netapp.io/data-mover-timeout-sec`可在備份和還原期間設定每次資料移動作業的逾時時間（以秒為單位）。它指定資料移動器在逾時前等待操作取得進展的時間。這對於偵測和處理停滯的傳輸非常有用（例如，當網路問題阻止磁碟區資料還原進程時）。

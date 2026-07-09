@@ -20,6 +20,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 
 
 
+[[create-a-clone-of-an-oracle-database]]
 == 建立 Oracle 資料庫的複本
 
 從現有快照立即建立複本。使用此方法建立一次性複本，該複本不會從快照持續重新整理。
@@ -50,6 +51,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 
 
 
+[[schedule-a-clone-of-an-oracle-database]]
 == 排程複製 Oracle 資料庫
 
 排程立即建立複本並持續重新整理複本。這會建立資料庫的最新複本。如果您想要根據所選排程持續從資料庫的最新狀態重新整理複本，請使用此方法。
@@ -77,6 +79,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 
 
 
+[[split-a-clone]]
 == 分裂克隆
 
 您可以拆分 Oracle Database 工作負載的複製。拆分複製會從複製建立新的備份。您可以使用新的備份來還原資料庫。
@@ -95,6 +98,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 
 
 
+[[delete-a-clone]]
 == 刪除克隆
 
 您可以刪除 Oracle Database 工作負載的複本。刪除複本後，它將從物件儲存中移除，從而釋放儲存空間。

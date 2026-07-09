@@ -21,6 +21,7 @@ NetApp Backup and Recovery 可讓您透過網頁 UI 或套用自訂資源檔案�
 
 
 
+[[add-and-protect-a-new-kubernetes-application]]
 == 新增並保護新的 Kubernetes 應用程式
 
 保護 Kubernetes 應用程式的第一步是在 NetApp Backup and Recovery 中建立應用程式。建立應用程式後，Backup and Recovery 功能就能辨識 Kubernetes 叢集上正在執行的應用程式。

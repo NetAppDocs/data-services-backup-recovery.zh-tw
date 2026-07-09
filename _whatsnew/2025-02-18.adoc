@@ -4,6 +4,7 @@
 
 
 
+[[high-performance-indexing]]
 === 高效能索引
 
 NetApp Backup and Recovery引入了更新的索引功能，使來源系統上的資料索引更有效率。新的索引功能包括 UI 的更新、資料復原搜尋和復原方法效能的改進、全域搜尋功能的升級以及更好的可擴充性。
@@ -40,6 +41,7 @@ NetApp Backup and Recovery引入了更新的索引功能，使來源系統上的
 
 
 
+[[global-search-performance-improvements]]
 === 全域搜尋效能改進
 
 此版本還包括對全域搜尋效能的增強。現在您將看到進度指示器和更詳細的搜尋結果，包括文件數量和搜尋所花費的時間。專用的搜尋和索引容器可確保全域搜尋在五分鐘內完成。
