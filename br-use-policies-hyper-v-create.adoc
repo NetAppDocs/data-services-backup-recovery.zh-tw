@@ -53,7 +53,7 @@ NOTE: 對於 Hyper-V 工作負載，備份排程使用 Hyper-V 主機的時區�
 
 您可以建立策略來管理本機快照、複製到二級儲存以及備份到物件儲存。3-2-1 策略的一部分包括建立主儲存系統上的實例、資料庫、應用程式或虛擬機器的快照。
 
-*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .開始之前
 如果您打算複製到二級儲存並希望在本機快照或遠端ONTAP二級儲存上使用快照鎖定，則首先需要在叢集層級初始化ONTAP合規時脈。這是在政策中啟用快照鎖定的要求。

@@ -14,7 +14,7 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 [role="lead"]
 在 NetApp Backup and Recovery 中，為 Kubernetes 工作負載建立保護報告，以檢視保護狀態與詳細資訊，包括成功與失敗備份的數量、備份類型、叢集健康資訊等。
 
-*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員或 Backup and Recovery 還原管理員。深入瞭解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]
+*必要的 NetApp Console 角色* 備份與還原超級管理員、備份與還原備份管理員或備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 
 

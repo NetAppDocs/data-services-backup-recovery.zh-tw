@@ -16,7 +16,7 @@ summary: 啟用 NetApp Backup and Recovery 的預覽和隱藏功能。
 [role="lead"]
 啟用 NetApp Backup and Recovery 的預覽和隱藏功能。
 
-*所需的NetApp Console角色* 備份和還原超級管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* 備份與還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 
 

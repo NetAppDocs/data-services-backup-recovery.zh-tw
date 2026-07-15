@@ -22,7 +22,7 @@ NetApp Backup and Recovery使用身分和存取管理來控制每個使用者可
 
 若要登入NetApp Console，您可以使用您的NetApp支援網站憑證，也可以使用您的電子郵件和密碼註冊NetApp Console登入。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["了解有關登入的更多信息"^] 。
 
-*所需的NetApp Console角色* 備份和還原超級管理員或備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 要新增控制台代理，您必須具有備份和還原超級管理員角色。
 

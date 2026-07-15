@@ -49,7 +49,7 @@ NetApp Backup and Recovery可協助您管理 Microsoft SQL Server 主機、資�
 
 您可以管理主機資訊以確保正確的主機受到保護。您可以查看、編輯和刪除主機資訊。
 
-*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員或備份和還原複製管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員或備份與還原複製管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 * 配置日誌目錄。有關詳細信息，請參閱link:br-start-setup.html["配置NetApp Backup and Recovery設置"]。
 * 暫停時間表
@@ -69,7 +69,7 @@ TIP: 您可以在「主機」欄位中管理狀態為「未管理」的主機。
 
 在NetApp Backup and Recovery中管理主機後， SnapCenter不再管理這些主機上的資源。
 
-*所需的NetApp Console角色* 儲存檢視器，或備份和還原超級管理員。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* 儲存檢視器，或備份和還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP Admin 角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從選單中選擇*庫存*。
@@ -145,7 +145,7 @@ TIP: 您可以在「主機」欄位中管理狀態為「未管理」的主機。
 * 立即備份
 
 
-*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 
 
@@ -255,7 +255,7 @@ TIP: 您可以在「主機」欄位中管理狀態為「未管理」的主機。
 
 您可以變更策略、建立新策略、設定時間表和設定保留設定。
 
-*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
@@ -275,7 +275,7 @@ TIP: 您可以在「主機」欄位中管理狀態為「未管理」的主機。
 
 恢復資料庫以保護您的資料。
 
-*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 . 選擇“*資料庫*”標籤。
 . 選擇資料庫。

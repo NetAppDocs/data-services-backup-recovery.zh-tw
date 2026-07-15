@@ -450,7 +450,6 @@
   <block id="d64cd0a27b28c206184fce8cc1e3a57f" category="list-text"><block ref="6b0c6b1a663fb4e7f1c7e667f6d83b77" category="inline-xref-macro-rx"></block>。</block>
   <block id="4c1db484b3b75504c8490f8e890dbeab" category="inline-link-macro">備份和恢復角色和權限</block>
   <block id="a5999c1155de9850d34ba60075be7171" category="inline-link">了解所有服務的NetApp Console存取角色</block>
-  <block id="7dea1900c0a761205245e3263e1f1ebf" category="paragraph">*所需的NetApp Console角色* 備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="5c42b26269b60e99eac73f94a3585743" category="section-title">為主機資源新增憑證</block>
   <block id="c353deca6689f7e632a94f8d6f03f7ca" category="paragraph">如果您沒有憑證，請建立具有存取和管理主機工作負載的權限的憑證。</block>
   <block id="aedf3a488773fb9c60ee19cf684d0005" category="paragraph">您需要配置以下類型的憑證：</block>
@@ -611,7 +610,6 @@
   <block id="dd9e4491810d247bd97912faae187a39" category="summary">NetApp Backup and Recovery需要先發現工作負載，以便您使用該服務。</block>
   <block id="dfbbf83657db8e9ef8d6ee3a468873c2" category="doc">探索NetApp Backup and Recovery中的 Kubernetes 工作負載</block>
   <block id="d1b560b331735fdf9cef92794cc2cff2" category="paragraph">NetApp Backup and Recovery需要在保護 Kubernetes 工作負載之前發現它們。</block>
-  <block id="c3a291a73ba59b4d94eb6db3eaa2ff85" category="paragraph">*所需的NetApp Console角色* 備份和還原超級管理員。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="f0338e38e7978ec30d1f5eb9b845e843" category="section-title">發現 Kubernetes 工作負載</block>
   <block id="a74bdf5d9abca25c000c1902f13999c8" category="paragraph">在備份和復原清單中，發現您環境中的 Kubernetes 工作負載。新增工作負載會將 Kubernetes 叢集新增至NetApp Backup and Recovery。然後，您可以新增應用程式並保護叢集資源。</block>
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">執行下列操作之一：</block>
@@ -757,7 +755,6 @@
   <block id="84431c593b60f03c075ddbf38e5d0185" category="paragraph">有關每個角色可以執行的操作的詳細信息，請參閱<block ref="d0d0dcb15768cc7e1b5fa2cdae059c59" category="inline-link-macro-rx"></block>。</block>
   <block id="8e917942a77709dfd28c155f42a97553" category="inline-link">了解有關登入的更多信息</block>
   <block id="ae5c737a541e095839e199ea2ab82f0f" category="paragraph">若要登入NetApp Console，您可以使用您的NetApp支援網站憑證，也可以使用您的電子郵件和密碼註冊NetApp Console登入。<block ref="3546779ff62edcb806e94b283f4a603a" category="inline-link-rx"></block> 。</block>
-  <block id="4c82cd55e9c216695cfce74c86a368dd" category="paragraph">*所需的NetApp Console角色* 備份和還原超級管理員或備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="03169a1f1f9d0a03d15fd58f20cbb63e" category="paragraph">要新增控制台代理，您必須具有備份和還原超級管理員角色。</block>
   <block id="3c031b939f6ec312ee601d021e7a6644" category="inline-link">NetApp Console</block>
   <block id="6a65fb509b9c682f9df5eb122484e2f7" category="list-text">開啟 Web 瀏覽器並前往<block ref="d6205946f936217747639e85e1340e8f" category="inline-link-rx"></block>。</block>
@@ -824,7 +821,6 @@
   <block id="d65e3c349db2ba76702d9c5bd1ade27f" category="summary">監控工作負載的健康狀況可確保您了解工作負載保護的問題並採取措施解決這些問題。查看備份和復原的狀態並對NetApp Backup and Recovery儀表板上出現的任何警報做出回應。您可以查看保護摘要、復原摘要、系統摘要等。</block>
   <block id="a160325dcdf365b6a979dfed5c7d50f7" category="doc">在NetApp Backup and Recovery儀表板上查看保護健康狀況</block>
   <block id="2da92f995ab136dd344c314ba2b4eed1" category="paragraph">監控工作負載的健康狀況可確保您了解工作負載保護的問題並採取措施解決這些問題。在NetApp Backup and Recovery儀表板上查看備份和復原的狀態。您可以查看系統摘要、保護摘要、作業摘要、復原摘要等。</block>
-  <block id="f8dd3e1869946d83a9dde01dd1d1532b" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員或備份和還原檢視器角色。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="786dc54a357443785ac613f07c08cc8f" category="list-text">發現的主機或虛擬機器的數量</block>
   <block id="6393f4da4761be4d85c7778d5e5ebdea" category="list-text">發現的 Kubernetes 叢集數量</block>
   <block id="54b82ae02ee9c233cf025fb2566edaf9" category="list-text">物件儲存上的備份目標數量</block>
@@ -1048,14 +1044,12 @@
   <block id="9ce5968862f805302d5e98cf0c20ffe4" category="list-text">保護資料庫</block>
   <block id="c2c5db1d1d2621038f3f8eed4c38e455" category="list-text">還原資料庫</block>
   <block id="25ef121f0e7b6c2bccdb92c9ee0c85f2" category="paragraph">您可以管理主機資訊以確保正確的主機受到保護。您可以查看、編輯和刪除主機資訊。</block>
-  <block id="d34a310043a97652f9151b93c8ee3473" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員或備份和還原複製管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="a53b0f7c5740f1ddf0d66520bf53e285" category="list-text">配置日誌目錄。有關詳細信息，請參閱<block ref="24412093cd6bfc9d3bb3355f8f2561e8" category="inline-link-macro-rx"></block>。</block>
   <block id="00728f6c7dc87b6261794ccab562d6c6" category="list-text">編輯主機</block>
   <block id="30a4c00b1d59e760020a5a1e5d3e6210" category="list-text">刪除主機</block>
   <block id="51929aa5ac08be2aca8dda46b9a095b1" category="section-title">管理主機</block>
   <block id="c1b699a50a4bda0565d1e967c632b8da" category="paragraph">您可以管理系統中發現的主機。您可以單獨或作為一個群組來管理它們。</block>
   <block id="25766f02d9d8c870ca51e8b39ef38dcb" category="paragraph">在NetApp Backup and Recovery中管理主機後， SnapCenter不再管理這些主機上的資源。</block>
-  <block id="773cf16e18760a45e76c513e8459874c" category="paragraph">*所需的NetApp Console角色* 儲存檢視器，或備份和還原超級管理員。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="dd41653a412227c2091e7d71ec5fd28f" category="list-text">選擇“*主機*”標籤。</block>
   <block id="1c0e88e18ea93193d118d41719c7717a" category="list-text">選擇一個或多個主機。如果您選擇多個主機，則會出現批次操作選項，您可以在其中選擇*管理（最多 5 個主機）*。</block>
   <block id="9da6d54a1aea848e8f3fd8528ac7fa2e" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *管理*。</block>
@@ -1224,7 +1218,6 @@
   <block id="7f9f81d01b7164c9af904c1ddc62367d" category="section-title">查看工作負載保護狀態</block>
   <block id="9ba224f0573e42a55a47b26c40bae95c" category="list-text">查看主機、保護群組、可用性群組、執行個體和資料庫標籤上的詳細資訊。</block>
   <block id="3c440e2fe11de8b0c9ba750fb038f088" category="section-title">配置發現主機的日誌目錄</block>
-  <block id="0e7efc08a39aef2e4e81084cfd484cde" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員或備份和還原還原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="f664fa7f8e8f64dd3b179d0894c484df" category="list-text">選擇主機。</block>
   <block id="75d216d45ee5cd87dedb6c923b7ac199" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *配置日誌目錄*。</block>
   <block id="c90f3128927fb9082f339e01f74e41df" category="list-text">選擇您想要儲存日誌的那些。</block>
@@ -1478,7 +1471,6 @@
   <block id="eacf7361c754b5087b6ade2e010c1a1f" category="list-text">*架構*：範例包括本機快照、扇出、級聯、磁碟到磁碟和磁碟到物件儲存。</block>
   <block id="292fca252d0ac5aa32931919e05e3331" category="list-text">*受保護的資源*：顯示該工作負載的總資源中有多少資源受到保護。</block>
   <block id="817b82403aa370acb5f863d3bd73073f" category="list-text">*勒索軟體保護*：顯示策略是否包含本機快照上的快照鎖定、二級儲存上的快照鎖定或物件儲存上的 DataLock 鎖定。</block>
-  <block id="5e116320ce28dcfdae299c1ab1e1d47b" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="253d0e4a062daad466aad4fa375b12c0" category="paragraph">如果您打算複製到二級儲存並希望在本機快照或遠端ONTAP二級儲存上使用快照鎖定，則首先需要在叢集層級初始化ONTAP合規時脈。這是在政策中啟用快照鎖定的要求。</block>
   <block id="6e8754ff907c91289017110ca55a88ae" category="inline-link">在ONTAP中初始化合規性時鐘</block>
   <block id="0621bcd8535518f8545f295ae3dbb57e" category="paragraph">有關如何執行此操作的說明，請參閱<block ref="1295c010e43712cf8fd9e428f572f9d0" category="inline-link-rx"></block>。</block>
@@ -1559,7 +1551,6 @@
   <block id="793c79d603a2a6eb42272304c6135f12" category="list-text">確保選擇了正確的應用程式名稱。</block>
   <block id="408156cb89b56d3b746dba5ade40b0e4" category="paragraph">控制台建立應用程式的備份並在備份和還原的*監控*區域中顯示進度。此備份是根據與應用程式關聯的保護策略建立的。</block>
   <block id="2f2fda22f167ad6c7dcc0ac3f92cd945" category="summary">在NetApp Backup and Recovery中，建立報告以查看備份狀態，包括備份數量、成功備份數量和失敗備份數量。您還可以查看每個備份的詳細信息，包括備份類型、備份使用的儲存系統以及備份的時間。</block>
-  <block id="391ccda3039974f5c4561d91d157e4be" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員、備份和還原復原管理員、備份和還原複製管理員。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="a75db1c6ad7a6018f4076429dcb47fd8" category="list-text">從NetApp Backup and Recovery選單中，選擇 *報告* 選項。</block>
   <block id="3b0a91a5ea7b77db2fb83f740b7d1303" category="list-text">選擇*建立報告*。</block>
   <block id="df9d16703353a537518df08cc1ae9663" category="list-text">輸入報告範圍詳細資料：</block>
@@ -1663,7 +1654,6 @@
   <block id="ae6771902a8163ff6ab3c15cf2e407b0" category="doc">使用NetApp Backup and RecoveryVMware 工作負載</block>
   <block id="ba48c3305320f5df1a8db5cbd6fed75a" category="paragraph">您可以將資料還原到以下點：</block>
   <block id="600582313b42616fbf96d317e8033ef9" category="paragraph">使用復原選項還原 VMware 工作負載。您可以按名稱或使用篩選器來搜尋快照。</block>
-  <block id="1ca9578c25474d5cfeaa6c44bdbaa9b2" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="2aceb93307f82c2d88347faa7eaa4e71" category="list-text">輸入要還原的資源的名稱，或篩選要還原的資源所在的 vCenter、資料中心或資料儲存。</block>
   <block id="a5315c2927cf2b05876fdd6713fbd713" category="summary">NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。</block>
   <block id="1f603af7daec690416eee590da3bda4c" category="section-title">NetApp Backup and Recovery</block>
@@ -2135,7 +2125,6 @@
   <block id="4ce60442c0b2156c43c785528827a3ab" category="list-text">GCP 服務帳戶</block>
   <block id="68cc6348671b24995e53975d0fd5d303" category="inline-link">了解如何建立服務帳號</block>
   <block id="294e4146bdfdaa3ab110a36978a75afe" category="list-text">您需要在 Google Cloud 專案中擁有一個具有自訂角色的服務帳戶。<block ref="ecb147299e2723fe85aee47451735661" category="inline-link-rx"></block> 。</block>
-  <block id="8ffee06eb8953595f6110df9b85302ec" category="admonition">啟用NetApp Backup and Recovery來存取 Google Cloud Storage 儲存桶的服務帳戶不再需要儲存管理員角色。</block>
   <block id="37b087e8154d293bcef3ff5ed8861fbe" category="inline-link">訂閱此控制台訂閱</block>
   <block id="7398e06a889a4d5ee5e36e3eaf815e28" category="paragraph">對於NetApp Backup and Recovery PAYGO 許可，可在 Google Marketplace 中訂閱控制台，從而實現Cloud Volumes ONTAP和NetApp Backup and Recovery 的部署。你需要<block ref="49ca373206730bcda9478230b369ff70" category="inline-link-rx"></block>在啟用NetApp Backup and Recovery之前。  NetApp Backup and Recovery的計費透過此訂閱完成。<block ref="8b7505c60cde71c85823c6e0620ceca0" category="inline-link-rx"></block> 。</block>
   <block id="a760f9d8cb8caec7d18920fbac0485f8" category="paragraph">對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。<block ref="706a4c6b2a498be3949e082e6d4f63b6" category="inline-link-macro-rx"></block>。</block>
@@ -4666,7 +4655,6 @@
   <block id="66330fd6b5a015d85e0b01e96c040005" category="summary">建立 Kubernetes 工作負載的保護報告，以檢視保護狀態和詳細資訊，包括成功和失敗的備份計數、備份類型、叢集健全狀況資訊等。</block>
   <block id="7e9944e42087b52e398e40511794ab10" category="doc">在 NetApp Backup and Recovery 中建立及管理 Kubernetes 工作負載的保護報告</block>
   <block id="59db8c9d0215fa2a51b2a35609aa5bbd" category="paragraph">在 NetApp Backup and Recovery 中，為 Kubernetes 工作負載建立保護報告，以檢視保護狀態與詳細資訊，包括成功與失敗備份的數量、備份類型、叢集健康資訊等。</block>
-  <block id="6f0eb8b8a8ac47dbe395a0547f6dba8d" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員或 Backup and Recovery 還原管理員。深入瞭解<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block></block>
   <block id="d45ba014e75a2424453d999d1ec1584d" category="section-title">建立保護報告</block>
   <block id="cf9569ff04e8697d933d86bb055b6753" category="paragraph">建立保護報告以檢視叢集的保護狀態。</block>
   <block id="764cb0718c60ad28fec23c72e06cd3eb" category="list-text">*報告類型*：選擇按帳戶或按工作負載產生報告（從清單中選擇 Kubernetes）。</block>
@@ -5171,7 +5159,6 @@
   <block id="b5ad52abec5cb04607a10746e3199f1d" category="doc">使用自訂資源還原資源時修改資源</block>
   <block id="9cbba6ab5c2f123250867543cc584548" category="inline-link-macro">使用 Web UI 在還原資源時修改資源</block>
   <block id="9b2d0800b291b62181a18273ee5a21a6" category="paragraph">資源轉換功能可讓您在還原資源時進行修改。當還原後的版本需要與原始版本有所不同時，此功能非常有用——例如，在將虛擬機器還原到不同的網路時更改其 IP 位址。您還可以<block ref="05b70993291a3b893b825f52da69f790" category="inline-link-macro-rx"></block>。</block>
-  <block id="0ba0c909bdb663ebbb9b9012d15906a9" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員或 Backup and Recovery 還原管理員。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
   <block id="389ce31a86e01dced25ad4bbaed743d7" category="section-title">資源修改的運作方式</block>
   <block id="e7f6a2341b97f6a990dcc2da432a735d" category="paragraph"><block ref="dfc3424f78998e0e9ce8980c12f60650" prefix=" " category="inline-code"></block> 欄位位於 <block ref="3071e8455eddce5336df044508153fa3" prefix=" " category="inline-code"></block>、<block ref="ec2a2895b09b6030ec8cc1b3c43ddc4d" prefix=" " category="inline-code"></block>、<block ref="6b1dc04322703df582f18e066bfdf41c" prefix=" " category="inline-code"></block> 及其他還原資源中，可讓您在還原過程中修改 Kubernetes 資源。這對於透過變更主機名稱、登錄 URL、資源限制或環境變數，使應用程式或虛擬機器適應新叢集非常有用。</block>
   <block id="f05f209ea5703ecd3aa7c5342b199ca1" category="inline-link">RFC 6902</block>
@@ -5644,4 +5631,22 @@
   <block id="81bdc0623ea533b24d0e11cb1d26ba25" category="list-text">對於使用 SMB 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在 ONTAP 系統上啟用持續可用性共用屬性。請參閱<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>以取得相關說明。</block>
   <block id="09e4a6980ec8e49e9c338d71a078b029" category="paragraph">如果您與市場平台簽訂了年度合約，則所有 NetApp Backup and Recovery 的使用費用都將計入該合約。</block>
   <block id="fe336167ccf46f9fb348006254d0f3ee" category="list-text">輸入叢集名稱並選擇要與叢集搭配使用的 Console 代理程式。</block>
+  <block id="59ff3234d92baf85ab9719aa478962eb" category="paragraph">*增強的多儲存桶支援*：從 ONTAP 9.19.1 及更新版本開始，您現在可以保護系統中的磁碟區，每個系統最多可跨不同的雲端供應商使用 100 個儲存桶。</block>
+  <block id="c1ec49703505f57531225059c7c36779" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="6dd3c7c1ba8e65da85c3e2fe08fa8a94" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="48581c2684fab807e94bda181c201389" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="6fac8ebf0571b3c51f8b3e73527b96e4" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員、備份與還原複製管理員或備份與還原檢視器角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 <block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="44371de0a029c248f1a90987cb1f4534" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員、備份與還原備份管理員或備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="00175b45adeb2fd0dadf3cbebb6a6e1a" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員或備份與還原複製管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="245c869d7d516179ee0d44de43c6a4dc" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器，或備份和還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP Admin 角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="8d7814801e68bc09e7c15034344e4fb2" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="52d42f2d4b51510352e6a5d5264a2324" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
+  <block id="59398ed776f23c14f4a504292f627cfa" category="paragraph">*必要的 NetApp Console 角色* 儲存空間檢視器、備份與還原超級管理員、備份與還原備份管理員或備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="1f878dc7bdb71ee28c2c50bc232dfae8" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員或備份與還原備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="795e84085ddc80428b97bda253086f11" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 <block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="9e29ab9466f0bd217537f14714daa46c" category="paragraph">備份和恢復超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="f086ad71d827eb87743f472c780e2446" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員、備份與還原複製管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 <block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="e5b682be117d99f07d8f1223cbe827ea" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員、備份與還原複製管理員或備份與還原檢視器角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="6077c15fad6f07f1de9a676f2c04e33a" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="de2e4685966d24481dfab35c95ad44dc" category="section-title">2026年7月13日</block>
 </blocks>

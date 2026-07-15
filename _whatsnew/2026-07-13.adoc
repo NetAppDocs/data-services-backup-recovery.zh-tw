@@ -1,0 +1,14 @@
+= ONTAP Volumes 工作負載增強功能
+:allow-uri-read: 
+
+
+
+
+[[ontap-volumes-workloads-enhancements]]
+=== ONTAP Volumes 工作負載增強功能
+
+在此版本中，ONTAP Volumes 工作負載引入了以下增強功能：
+
+*增強的多儲存桶支援*：從 ONTAP 9.19.1 及更新版本開始，您現在可以保護系統中的磁碟區，每個系統最多可跨不同的雲端供應商使用 100 個儲存桶。
+
+有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["保護 ONTAP Volumes 工作負載概述"]。
