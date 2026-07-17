@@ -161,7 +161,7 @@ summary: 複製 Microsoft SQL Server 應用程式資料以用於開發、測試�
 
 您可以拆分 Microsoft SQL Server 工作負載的複製。拆分克隆將從克隆中建立一個新的備份。新的備份可用於恢復工作負載。
 
-您可以選擇將克隆拆分為獨立克隆或長期克隆。精靈會顯示 SVM 的聚合清單、其大小以及複製磁碟區的位置。 NetApp Backup and Recovery也會指示是否有足夠的空間來分割克隆。克隆分裂後，克隆成為一個獨立的資料庫進行保護。
+您可以選擇將 Clone 分割為獨立 Clone 或長期 Clone。精靈會顯示儲存設備虛擬機器中包含的 Aggregate 清單、其大小以及複製 Volume 的位置。NetApp Backup and Recovery 也會指示是否有足夠的空間來分割 Clone。Clone 分割後，Clone 將成為獨立的資料庫以供保護。
 
 複製工作不會移除，可以再次用於其他複製作業。
 

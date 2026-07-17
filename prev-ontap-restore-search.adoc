@@ -101,7 +101,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 +
 ** ONTAP版本必須為 9.8 或更高版本。
 ** 您必須在儲存虛擬機器上設定 IPv4 NFS 資料 LIF，並為該磁碟區配置 NFS 匯出。Search & Restore 同時支援 NFS 和 SMB/CIFS 磁碟區。
-** 必須在 SVM 上啟動 SnapDiff RPC 伺服器。當您在系統上啟用索引時，控制台會自動執行此操作。（SnapDiff 是一種能夠快速識別快照之間檔案和目錄差異的技術。）
+** SnapDiff RPC 伺服器必須在儲存設備虛擬機器上啟動。在系統上啟用索引時，Console 會自動執行此操作。（SnapDiff 是一種能夠快速識別 Snapshot 快照技術之間檔案和目錄差異的技術。）
 
 
 * NetApp建議在控制台代理上掛載單獨的捲，以提高搜尋和復原的彈性。有關說明，請參閱<<mount-volume-steps,掛載磁碟區以重新索引目錄>>。

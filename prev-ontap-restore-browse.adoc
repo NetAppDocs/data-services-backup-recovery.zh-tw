@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery，透過瀏覽和還原來還原 ONTA
 
 
 [role="lead"]
-使用NetApp Backup and Recovery and Recovery ，透過瀏覽和復原功能恢復ONTAP資料。在復原之前，請記下來源磁碟區名稱、來源系統和 SVM 以及備份檔案日期。您可以從快照、複製磁碟區或儲存在物件儲存中的備份還原ONTAP資料。
+使用 NetApp 備份與還原，透過「瀏覽與還原」還原 ONTAP 資料。還原前，請記下來源 Volume 名稱、來源系統和儲存設備虛擬機器，以及備份檔案日期。您可以從 Snapshot 快照技術、複寫的 Volume 或儲存在物件儲存中的備份還原 ONTAP 資料。
 
 復原功能取決於您的ONTAP版本：
 

@@ -73,7 +73,7 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 +
 ** 僅支援從ONTAP輔助節點進行備份。
 ** 應用於磁碟區的快照策略必須是NetApp Backup and Recovery可識別的策略之一，包括每日、每週、每月等。預設的「sm_created」策略（用於*鏡像所有快照*）無法識別，且 DP 磁碟區不會顯示在可備份的磁碟區清單中。
-** 當從來源或目標進行備份時，SVM-DR 和磁碟區備份和還原完全獨立工作。唯一的限制是 SVM-DR 不會複製SnapMirror雲端關係。在 DR 場景中，當 SVM 在輔助位置上線時，您必須手動更新SnapMirror雲端關係。
+** 當備份來自來源或目的地時，SVM-DR 和 Volume 備份與還原完全獨立運作。唯一的限制是 SVM-DR 不會複寫 SnapMirror 雲端關係。在災難復原場景中，當儲存 VM 在輔助位置線上時，您必須手動更新 SnapMirror 雲端關係。
 
 
 * MetroCluster支援：

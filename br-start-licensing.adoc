@@ -18,7 +18,6 @@ summary: 您可以透過從雲端供應商購買按使用量付費或年度市�
 
 在您繼續閱讀之前，請注意以下幾點：
 
-* 如果您已經在雲端供應商的市場中訂閱了Cloud Volumes ONTAP系統的即用即付 (PAYGO) 服務，那麼您也會自動訂閱NetApp Backup and Recovery 。您無需再次訂閱。
 * NetApp Backup and Recovery自帶許可證 (BYOL) 是一種浮動許可證，您可以在與NetApp Console組織或帳戶關聯的所有系統中使用它。因此，如果您現有的 BYOL 授權具有足夠的備份容量，則無需購買另一個 BYOL 授權。
 * 如果您使用的是 BYOL 許可證，建議您也訂閱 PAYGO 訂閱。如果您備份的資料超出了 BYOL 許可證允許的範圍，或者許可證期限已過期，則備份將透過您的即用即付訂閱繼續進行 - 不會中斷服務。
 * 將本機ONTAP資料備份到StorageGRID時，您需要 BYOL 許可證，但雲端提供者儲存空間無需付費。

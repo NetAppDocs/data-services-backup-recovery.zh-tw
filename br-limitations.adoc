@@ -109,7 +109,7 @@ NetApp Backup and Recovery不會從SnapCenter匯入僅日誌備份原則。如�
 [[host-mapping]]
 === 主機映射
 
-SnapCenter沒有將資源對應到主機的儲存叢集或 SVM，但NetApp Backup and Recovery有。本機ONTAP叢集或 SVM 將不會對應到NetApp Backup and Recovery預覽版中的主機。此外， NetApp Console不支援 SVM。
+SnapCenter 不會將儲存叢集或儲存 VM 對應到資源的主機，但 NetApp Backup and Recovery 支援此功能。在 NetApp Backup and Recovery 預覽版中，內部部署 ONTAP 叢集或儲存 VM 不會對應到主機。此外，NetApp Console 不支援儲存 VM。
 
 *解決方法*：從SnapCenter匯入資源之前，請在NetApp Backup and Recovery中為在本機SnapCenter中註冊的所有本機ONTAP儲存系統建立一個系統。然後，將該叢集的資源從SnapCenter匯入NetApp Backup and Recovery。
 

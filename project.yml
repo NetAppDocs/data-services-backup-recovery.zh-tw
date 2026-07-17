@@ -70,8 +70,6 @@ sidebar:
         url: "/prev-ontap-policy-object-advanced-settings.html"
       - title: 將Cloud Volumes ONTAP備份到 Amazon S3
         url: "/prev-ontap-backup-cvo-aws.html"
-      - title: 將 Cloud Volumes ONTAP 備份至 S3 相容儲存設備
-        url: "/prev-ontap-backup-cvo-s3-compatible.html"
       - title: 將Cloud Volumes ONTAP備份到 Azure Blob
         url: "/prev-ontap-backup-cvo-azure.html"
       - title: 將Cloud Volumes ONTAP備份到 Google Cloud
@@ -84,6 +82,8 @@ sidebar:
         url: "/prev-ontap-backup-onprem-gcp.html"
       - title: 將本地ONTAP備份到ONTAP S3
         url: "/prev-ontap-backup-onprem-ontaps3.html"
+      - title: 將內部部署 ONTAP 備份至 S3 相容儲存設備
+        url: "/prev-ontap-backup-onprem-s3-compatible.html"
       - title: 將本地ONTAP備份到StorageGRID
         url: "/prev-ontap-backup-onprem-storagegrid.html"
       - title: 使用SnapMirror將磁碟區遷移到 Cloud Resync

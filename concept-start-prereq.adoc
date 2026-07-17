@@ -87,6 +87,7 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 * 需要 ONTAP 9.8 或更高版本。
 * 若要啟用 FlexGroup 磁碟區保護功能，需要 ONTAP 9.12.1 或更新版本。請參閱 link:br-reference-limitations.html["NetApp Backup and Recovery for ONTAP磁碟區的已知限制"] 以取得更多資訊。
 * 備份或還原至 S3 相容物件儲存需要 ONTAP 9.17.1 或更新版本。
+* 如果要在不同雲端供應商中每個系統使用超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本（最多支援 100 個儲存桶）。
 * 必須在內部部署 ONTAP 執行個體上啟用 ONTAP One 授權。
 
 
