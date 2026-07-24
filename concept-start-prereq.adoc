@@ -87,7 +87,7 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 * 需要 ONTAP 9.8 或更高版本。
 * 若要啟用 FlexGroup 磁碟區保護功能，需要 ONTAP 9.12.1 或更新版本。請參閱 link:br-reference-limitations.html["NetApp Backup and Recovery for ONTAP磁碟區的已知限制"] 以取得更多資訊。
 * 備份或還原至 S3 相容物件儲存需要 ONTAP 9.17.1 或更新版本。
-* 如果要在不同雲端供應商中每個系統使用超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本（最多支援 100 個儲存桶）。
+* 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
 * 必須在內部部署 ONTAP 執行個體上啟用 ONTAP One 授權。
 
 
@@ -99,6 +99,9 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 == 保護 Microsoft SQL Server 工作負載的要求
 
 若要將NetApp Backup and Recovery用於 Microsoft SQL Server 工作負載，您需要滿足下列主機系統、空間和大小調整前提條件。
+
+
+NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
 
 [cols="33,66a"]
 |===
@@ -200,7 +203,7 @@ NOTE: 不支援保護儲存在直通磁碟或 VHD/VHDX 檔案中的資料庫，�
 
 
 | 連接的儲存設備  a| 
-* ONTAP 9.13.1 或更新版本
+* ONTAP 9.13.1 或更高版本（若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更高版本；最多可支援 100 個儲存桶）
 * 執行 9.13.1 或更新版本的 Amazon FSx for NetApp ONTAP 儲存系統
 * ASA r2 SAN 專用系統（需要 ONTAP 9.17.1 或更新版本）
 
@@ -233,6 +236,9 @@ NOTE: 不支援保護儲存在直通磁碟或 VHD/VHDX 檔案中的資料庫，�
 == 保護 KVM 工作負載的要求
 
 您需要特定的要求來發現和保護 KVM 虛擬機器。
+
+
+NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
 
 * 運行核心版本 5.14.0-503.22.1.el9_5.x86_64（長期）或更高版本的現代 Linux 發行版
 * 您的 KVM 主機和虛擬機器必須由管理平台進行管理。NetApp Backup and Recovery支援以下管理平台：
@@ -275,6 +281,9 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 == 保護 Oracle 資料庫工作負載的要求
 
 確保您的環境符合發現和保護 Oracle Database 資源的特定要求。
+
+
+NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
 
 |===
 | 要求 | 支援 
@@ -321,6 +330,9 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 您需要特定的要求來發現 Kubernetes 資源並保護您的 Kubernetes 應用程式。
 
 有關 NetApp Console 需求，請參閱<<準備 NetApp Console>>。
+
+
+NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
 
 
 NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程式指派靜態 IP 位址，以避免在代理程式 IP 位址變更時出現問題。
@@ -387,6 +399,6 @@ NOTE: 確保在 Hyper-V 主機上為日誌資料夾分配足夠的磁碟空間�
 
 
 .NetApp ONTAP 組態需求
-* 主ONTAP系統（ONTAP 9.14.1 或更高版本）
+* 主要 ONTAP 系統（ONTAP 9.14.1 或更新版本 - 若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本；最多 100 個儲存桶）
 * 對於使用 SMB 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在 ONTAP 系統上啟用持續可用性共用屬性。請參閱 https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/configure-shares-continuous-availability-task.html["ONTAP 文檔"^]以取得相關說明。
 

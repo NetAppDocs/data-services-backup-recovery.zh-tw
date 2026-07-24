@@ -1846,7 +1846,6 @@
   <block id="6106f73de41b0409a6e5dd18d2f2baf3" category="list-text">Hyper-V 主機上的NetApp Hyper-V 插件至少需要 1GB RAM</block>
   <block id="6736478116770d132993185ee55b6baf" category="list-text">Hyper-V 主機上插件的最低安裝和日誌空間為 5GB</block>
   <block id="523f5e6af5276c06e274c9d76b2d4467" category="admonition">確保在 Hyper-V 主機上為日誌資料夾分配足夠的磁碟空間並定期監控其使用情況。所需空間取決於備份和資料保護操作發生的頻率。如果空間不足，則不會產生日誌。</block>
-  <block id="1498907a7069094c1a1b679e2a53087a" category="list-text">主ONTAP系統（ONTAP 9.14.1 或更高版本）</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">ONTAP 文檔</block>
   <block id="f6e9a28cc6109da66451b7ed0caaea35" category="list-text">對於ONTAP S3，控制台代理可以部署在您的場所（有或沒有網路存取）或雲端供應商環境中</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
@@ -5640,7 +5639,6 @@
   <block id="ba92b1a20870ba2e4e62480d0f546f50" category="list-text">只有先選取系統，才能在特定的儲存 VM 中搜尋資料。</block>
   <block id="e3474dde8545c53e3274ed9c9b64005c" category="paragraph">還原作業顯示詳細資訊，例如備份目標供應商（Amazon Web Services、Microsoft Azure、Google Cloud、本機）、S3 儲存桶名稱、儲存設備 VM 名稱、來源 Volume 名稱、目的地 Volume、Snapshot 快照技術標籤、已還原物件計數、檔案名稱、檔案大小、上次修改日期和完整檔案路徑。</block>
   <block id="f9740f6d9a7b17271d0bd9c950beb364" category="paragraph">您可以選擇將 Clone 分割為獨立 Clone 或長期 Clone。精靈會顯示儲存設備虛擬機器中包含的 Aggregate 清單、其大小以及複製 Volume 的位置。NetApp Backup and Recovery 也會指示是否有足夠的空間來分割 Clone。Clone 分割後，Clone 將成為獨立的資料庫以供保護。</block>
-  <block id="f8a8c54321528bdfeaace1c0344da0e3" category="list-text">如果要在不同雲端供應商中每個系統使用超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本（最多支援 100 個儲存桶）。</block>
   <block id="5f215f7c34f6e7e676381bc568270c08" category="list-text">*複製目標*：選擇目的地系統和儲存設備虛擬機器。您也可以選擇目的地 Aggregate（或 FlexGroup Volume 的多個 Aggregate），以及將新增至複寫 Volume 名稱的前綴或後綴。</block>
   <block id="84894d14ff1ffc8ca882274f258dab82" category="doc">使用 NetApp Backup and Recovery 將內部部署 ONTAP 資料備份至與 S3 相容的儲存設備</block>
   <block id="b4e544c2a798b61cb8be540d9a98bdd7" category="paragraph">完成 NetApp Backup and Recovery 中的幾個步驟，即可開始備份本機主要 ONTAP 系統中的 Volume 資料。您可以將備份傳送到輔助 ONTAP 儲存系統（複寫的 Volume）或 S3 相容儲存系統上的儲存桶，或同時傳送至兩者。</block>
@@ -5653,4 +5651,7 @@
   <block id="77b3f26262e74232411c4a9845e78dd4" category="paragraph">使用 NetApp 備份與還原，透過「瀏覽與還原」還原 ONTAP 資料。還原前，請記下來源 Volume 名稱、來源系統和儲存設備虛擬機器，以及備份檔案日期。您可以從 Snapshot 快照技術、複寫的 Volume 或儲存在物件儲存中的備份還原 ONTAP 資料。</block>
   <block id="ddba76f3680bcef2d5a8170c73d395e7" category="list-text">SnapDiff RPC 伺服器必須在儲存設備虛擬機器上啟動。在系統上啟用索引時，Console 會自動執行此操作。（SnapDiff 是一種能夠快速識別 Snapshot 快照技術之間檔案和目錄差異的技術。）</block>
   <block id="e6932ee3628baaf132027b16f688c205" category="sidebar">將內部部署 ONTAP 備份至 S3 相容儲存設備</block>
+  <block id="4ad36f854b6d4d49c94081fec1b29de2" category="list-text">要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。</block>
+  <block id="59ebd83b4c20d2b24ac46c96525c37fc" category="list-text">ONTAP 9.13.1 或更高版本（若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更高版本；最多可支援 100 個儲存桶）</block>
+  <block id="6a0d2c5dd8e27d910d6ff2158f8d5520" category="list-text">主要 ONTAP 系統（ONTAP 9.14.1 或更新版本 - 若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本；最多 100 個儲存桶）</block>
 </blocks>
