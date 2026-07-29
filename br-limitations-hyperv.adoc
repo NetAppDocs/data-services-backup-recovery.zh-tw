@@ -23,6 +23,7 @@ summary: 在您的環境中使用 Backup and Recovery 之前，請先檢閱這�
 
 在 NetApp Backup and Recovery 中，Hyper-V 工作負載不支援以下操作：
 
+* 使用 Microsoft Windows Server 2025 時，不支援保護儲存在 SAN 儲存設備上的第二代虛擬機器。
 * 使用來自多個 Hyper-V 主機的虛擬機器建立資源組
 * 跨磁碟（跨多個 CIFS 共用）
 * 即使 Hyper-V 中的「處理器相容性」設定正確，也無法在 CPU 廠商不同的系統之間（例如 Intel 和 AMD 或反向）還原虛擬機器或虛擬機器資料。此設定僅支援同一廠商不同世代產品之間的相容性（例如，Intel 到 Intel 或 AMD 到 AMD）。
