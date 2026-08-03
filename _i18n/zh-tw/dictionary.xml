@@ -5629,7 +5629,6 @@
   <block id="6077c15fad6f07f1de9a676f2c04e33a" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="de2e4685966d24481dfab35c95ad44dc" category="section-title">2026年7月13日</block>
   <block id="66591c0e71be05bd24e1869944b92db6" category="doc">增強對所有工作負載的多儲存貯體支援</block>
-  <block id="fca26b0431792befd32dc54e69c74dc4" category="paragraph">在此備份與還原版本中，您現在可以跨不同的雲端供應商，為每個系統保護多達 100 個儲存桶的工作負載。</block>
   <block id="9bf2c1ebc9be74ae2e995a0a4dab1fec" category="paragraph">有關 NetApp Backup and Recovery 的詳細資訊，請參閱<block ref="a026c5bec08ff7bb5b963e48c0daa63e" category="inline-link-rx"></block>。</block>
   <block id="d29362a340bc3ab282b7ab00a7a252e8" category="paragraph">SnapCenter 不會將儲存叢集或儲存 VM 對應到資源的主機，但 NetApp Backup and Recovery 支援此功能。在 NetApp Backup and Recovery 預覽版中，內部部署 ONTAP 叢集或儲存 VM 不會對應到主機。此外，NetApp Console 不支援儲存 VM。</block>
   <block id="528479df4d34d5d63a688250da8bc886" category="list-text">當備份來自來源或目的地時，SVM-DR 和 Volume 備份與還原完全獨立運作。唯一的限制是 SVM-DR 不會複寫 SnapMirror 雲端關係。在災難復原場景中，當儲存 VM 在輔助位置線上時，您必須手動更新 SnapMirror 雲端關係。</block>
@@ -5654,4 +5653,5 @@
   <block id="6a0d2c5dd8e27d910d6ff2158f8d5520" category="list-text">主要 ONTAP 系統（ONTAP 9.14.1 或更新版本 - 若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本；最多 100 個儲存桶）</block>
   <block id="d2bf4d042aabc15b9ccde353c782a6f2" category="list-text">使用 Microsoft Windows Server 2025 時，不支援保護儲存在 SAN 儲存設備上的第二代虛擬機器。</block>
   <block id="b2d5ba8de92c18cbb9c45e01ad3f5509" category="list-text">還原至備用位置（從主要儲存設備、次要儲存設備和物件儲存）</block>
+  <block id="62ff0d9db122207756fd73342a3eb3ad" category="paragraph">NetApp Backup and Recovery 現在支援保護系統中多達 100 個儲存桶（跨不同雲端供應商）的工作負載。每個系統支援超過 6 個儲存桶需要 ONTAP 9.19.1 或更新版本。</block>
 </blocks>

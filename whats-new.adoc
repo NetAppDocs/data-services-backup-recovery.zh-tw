@@ -28,7 +28,7 @@ summary: 了解NetApp Backup and Recovery的新功能。
 [[enhanced-multi-bucket-support-for-all-workloads]]
 === 增強對所有工作負載的多儲存貯體支援
 
-在此備份與還原版本中，您現在可以跨不同的雲端供應商，為每個系統保護多達 100 個儲存桶的工作負載。
+NetApp Backup and Recovery 現在支援保護系統中多達 100 個儲存桶（跨不同雲端供應商）的工作負載。每個系統支援超過 6 個儲存桶需要 ONTAP 9.19.1 或更新版本。
 
 有關 NetApp Backup and Recovery 的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["了解NetApp Backup and Recovery"]。
 
