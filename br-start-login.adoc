@@ -27,9 +27,14 @@ NetApp Backup and Recovery使用身分和存取管理來控制每個使用者可
 要新增控制台代理，您必須具有備份和還原超級管理員角色。
 
 .步驟
-. 開啟 Web 瀏覽器並前往 https://console.netapp.com/["NetApp Console"^]。
+. 執行下列操作之一：
++
+** 如果您使用的是 NetApp Console，請開啟網頁瀏覽器並前往 https://console.netapp.com/["NetApp Console"^]。
+** 如果您使用的是 NetApp Console 本機部署，請開啟網頁瀏覽器並前往本機 Console 部署的 Web UI 的 IP 位址。
 +
 出現NetApp Console登入頁面。
+
+
 
 . 登入控制台。
 . 從控制台左側導覽中，選擇*保護*>*備份和還原*。

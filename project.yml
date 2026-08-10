@@ -2,7 +2,7 @@
 settings:
   name: NetApp Backup and Recovery
   release_notes_autogen:
-    release_notes_repo: console-relnotes
+    release_notes_repo: console-local-relnotes, console-relnotes
   internal:
     pdf_enabled: true
   prod:
@@ -60,8 +60,14 @@ sidebar:
       entries:
       - title: 保護ONTAP磁碟區工作負載概述
         url: "/prev-ontap-protect-overview.html"
+      - title: 啟用備份與還原功能以保護磁碟區
+        url: "/br-start-enable.html"
+      - title: 提升 NetApp Console 本地部署的 Volume 搜尋與復原效能
+        url: "/prev-ontap-protect-migrate-pvc.html"
       - title: 規劃ONTAP卷的保護之旅
         url: "/prev-ontap-protect-journey.html"
+      - title: 無需啟動即可探索 ONTAP 系統和 Volume
+        url: "/prev-ontap-discover-no-activate.html"
       - title: 管理ONTAP磁碟區的策略
         url: "/prev-ontap-policy-manage.html"
       - title: ONTAP磁碟區的備份到物件策略選項

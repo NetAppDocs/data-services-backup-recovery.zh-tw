@@ -1,0 +1,62 @@
+= 一般 NetApp Backup and Recovery 增強功能
+:allow-uri-read: 
+
+
+
+
+[[general-netapp-backup-and-recovery-enhancements]]
+=== 一般 NetApp Backup and Recovery 增強功能
+
+* *支援 NetApp Console 本機部署*：此 NetApp Backup and Recovery 版本以預覽狀態支援 NetApp Console 本機部署。
+* *90 天作業保留*：Backup and Recovery 現在會在作業監視器中保留作業資訊 90 天。
+
+
+
+
+[[vmware-workloads-enhancements]]
+=== VMware 工作負載增強功能
+
+在此版本中、VMware 工作負載引進了以下增強功能：
+
+* *SAN VM 還原至備用位置支援*：您現在可以將基於 SAN 的 VM 備份還原至備用位置。
+* *支援批次刪除備份*：現在可以一次刪除多個備份。
+
+
+有關保護 VMware 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["保護 VMware 工作負載概述"]。
+
+
+
+[[oracle-database-workloads-enhancements]]
+=== Oracle Database 工作負載增強功能
+
+在此版本中、Oracle Database 工作負載引進下列增強功能：
+
+* *可插拔資料庫 （PDB） 還原與 Clone*：Backup and Recovery for NetApp Console 服務現在支援還原與複製可插拔資料庫。
+
+
+有關保護 Oracle Database 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["保護 Oracle 資料庫工作負載概述"]。
+
+
+
+[[kubernetes-workloads-enhancements]]
+=== Kubernetes 工作負載增強功能
+
+在此版本中、Kubernetes 工作負載引入了以下增強功能：
+
+* *預覽版支援氣隙資源*：如果在 NetApp Console 本機部署中執行 NetApp Backup and Recovery，您可以探索、保護和還原氣隙 Kubernetes 資源。此功能在此版本中為預覽功能。
+
+
+有關保護 Kubernetes 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["保護 Kubernetes 工作負載概述"]。
+
+
+
+[[ontap-volumes-workloads-enhancements]]
+=== ONTAP Volumes 工作負載增強功能
+
+在此版本中，ONTAP Volumes 工作負載引入了以下增強功能：
+
+* *優先執行還原作業而非備份作業*：現在，在還原虛擬機器或檔案時，您可以優先執行還原作業而非備份作業。
+* *無需啟動 Backup and Recovery 即可探索 ONTAP 系統和磁碟區*：您現在無需啟動 Backup and Recovery 即可探索系統和磁碟區。
+
+
+有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["保護 ONTAP Volumes 工作負載概述"]。

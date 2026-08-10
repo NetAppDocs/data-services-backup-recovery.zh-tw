@@ -126,7 +126,7 @@ NOTE: 如果您從清單中選擇 VM，則應用程式定義是靜態的——�
 ====
 如果需要在應用程式建立後套用此註解，可以使用以下命令：
 
-[source, console]
+[source, shell]
 ----
 kubectl annotate application -n <application CR namespace> <application CR name> protect.trident.netapp.io/skip-vm-freeze="true"
 ----
@@ -216,7 +216,7 @@ spec:
 
 . 建立與您的環境相符的應用程式 CR 後、套用該 CR。例如：
 +
-[source, console]
+[source, shell]
 ----
 kubectl apply -f my-app-name.yaml
 ----

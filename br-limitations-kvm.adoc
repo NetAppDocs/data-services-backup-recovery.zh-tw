@@ -25,6 +25,7 @@ summary: 此版本的NetApp Backup and Recovery具有以下已知限制。
 
 不支援下列動作：
 
+* 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
 * 克隆、掛載或卸載虛擬機
 * 保護儲存在 SAN 上的虛擬機
 * 保護應用程式

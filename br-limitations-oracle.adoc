@@ -18,5 +18,6 @@ summary: 在您的環境中使用 Backup and Recovery 之前，請先檢閱這�
 
 在 NetApp Backup and Recovery 的 Oracle Database 工作負載預覽版本中，不支援下列動作：
 
+* 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
 * 離線備份
 

@@ -34,7 +34,7 @@ RESTORE_SKIP_NAMESPACE_ANNOTATIONS
 ----
 在還原或容錯移轉之前，以防止特定目的地命名空間註釋被覆寫。例如：
 
-[source, console]
+[source, shell]
 ----
 helm upgrade trident-protect -n trident-protect netapp-trident-protect/trident-protect \
   --set-string restoreSkipNamespaceAnnotations="{<annotation_key_to_skip_1>,<annotation_key_to_skip_2>}" \

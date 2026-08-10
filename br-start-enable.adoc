@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: br-start-enable.html 
+keywords: backup, Backup and Recovery, enable backup, Console, service, local deployment 
+summary: 在 NetApp Console 或 NetApp Console 本機部署中的系統上啟動 Backup and Recovery。 
+---
+= 啟用備份與還原功能以保護磁碟區
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在保護 ONTAP Volumes 工作負載之前，您需要先在 NetApp Console 或 NetApp Console 本機部署中為儲存系統啟用 NetApp Backup and Recovery。您可以在新增系統時啟用 Backup and Recovery，也可以稍後再啟用。
+
+
+
+[[enable-backup-and-recovery-in-netapp-console]]
+== 在 NetApp Console 中啟動 Backup and Recovery
+
+在 NetApp Console 中啟動 Backup and Recovery 服務。
+
+.步驟
+. 選擇 *Volumes* 選單。
+. 在磁碟區保護總覽頁面中，選取 *Backup Settings*。
+. 確定要啟動備份的系統，然後選擇 *啟動備份* 按鈕。
+. 選擇“下一步”。
+. 選擇要保護的來源磁碟區，然後選擇 *Next*。
+. 在「定義備份策略」頁面中，選擇備份架構，然後定義本機快照、複寫磁碟區和備份檔案的策略及其他詳細資料。請參閱您在此系統中啟動的初始磁碟區的備份選項詳細資訊。然後選取 *Next*。
+. （可選）選擇讓 Backup and Recovery 自動修復不符的備份、快照和複寫標籤。
+. 檢查此卷的備份設置，然後選擇*啟動備份*。
+. 您保護的磁碟區將顯示在「磁碟區總覽」頁面中。
+
+
+
+
+[[enable-backup-and-recovery-in-netapp-console-local-deployment]]
+== 在 NetApp Console 本機部署中啟用 Backup and Recovery
+
+在 NetApp Console 本機部署中啟用備份與還原服務。
+
+.開始之前
+請確保您已取得 NetApp Backup and Recovery 的授權。請參閱 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#obtain-a-license-file["取得授權"^]以取得更多資訊。
+
+.步驟
+. 從 NetApp Console 選單中，選擇 *Storage > Fleets*。
+. 如有需要，請選擇 *Add fleet* 新增您的機組詳細資料。
+. 選擇 *Administration > Licenses*。
+. 選取 *新增授權* 以新增 Backup and Recovery 的授權。如需新增授權的詳細資訊，請參閱 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#add-a-license["新增授權"^]。
+. 選擇 *Storage* > *Fleets*，然後開啟 *Systems* 選單。
+. 選擇 *新增* 以新增系統，輸入系統詳細資訊，然後選擇 *新增* 儲存新系統。
+. 選擇系統並選取叢集。在頁面右側的資訊面板中，選取「備份與還原」服務的 *啟用* 按鈕。
+. 選擇 *Backup Volumes*。
+. 選擇“下一步”。
+. 選擇要保護的來源磁碟區，然後選擇 *Next*。
+. 在「定義備份策略」頁面中，選擇備份架構，然後定義本機快照、複寫磁碟區和備份檔案的策略及其他詳細資料。請參閱您在此系統中啟動的初始磁碟區的備份選項詳細資訊。然後選取 *Next*。
+. （可選）選擇讓 Backup and Recovery 自動修復不符的備份、快照和複寫標籤。
+. 檢查此卷的備份設置，然後選擇*啟動備份*。
+. 您保護的磁碟區將顯示在「磁碟區總覽」頁面中。
+

@@ -609,15 +609,9 @@
   <block id="dfbbf83657db8e9ef8d6ee3a468873c2" category="doc">探索NetApp Backup and Recovery中的 Kubernetes 工作負載</block>
   <block id="d1b560b331735fdf9cef92794cc2cff2" category="paragraph">NetApp Backup and Recovery需要在保護 Kubernetes 工作負載之前發現它們。</block>
   <block id="f0338e38e7978ec30d1f5eb9b845e843" category="section-title">發現 Kubernetes 工作負載</block>
-  <block id="a74bdf5d9abca25c000c1902f13999c8" category="paragraph">在備份和復原清單中，發現您環境中的 Kubernetes 工作負載。新增工作負載會將 Kubernetes 叢集新增至NetApp Backup and Recovery。然後，您可以新增應用程式並保護叢集資源。</block>
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">執行下列操作之一：</block>
   <block id="6226950d1b144f972ce9b5d3caea9b42" category="list-text">如果您已經發現 Kubernetes 工作負載，請在NetApp Backup and Recovery中選擇 *Inventory* &gt; *Workloads*，然後選擇 *Discover resources*。</block>
   <block id="e7c444e4a1d2f156d71a907145c8a598" category="list-text">選擇 *Kubernetes* 工作負載類型。</block>
-  <block id="39b0136210d9abd099b81781cc0a17db" category="list-text">按照出現的命令列說明進行操作：</block>
-  <block id="ed6eabebedff09350cdabab556887c62" category="list-text">建立 Kubernetes 機密</block>
-  <block id="6c27e11d1144953d7877449d5adc966d" category="list-text">新增 Helm 儲存庫</block>
-  <block id="efa5307bfad4cbe53b6ae3c88baa522e" category="paragraph">這些步驟確保NetApp Backup and Recovery可以與叢集互動。</block>
-  <block id="9bac5e7d53677c1fdcf7d275fd58ed60" category="list-text">完成這些步驟後，選擇*發現*。</block>
   <block id="6b3946603d5588826f1cd3f2695b8542" category="paragraph">該集群已新增至清單。</block>
   <block id="95f06f6ac101b19d86ae2a17fb3eb848" category="list-text">在關聯的 Kubernetes 工作負載中選擇「檢視」以查看該工作負載的應用程式、叢集和命名空間清單。</block>
   <block id="b0719c20a836424f725e51c9b181748d" category="paragraph">請依照以下步驟查看NetApp Backup and Recovery儀表板。</block>
@@ -688,7 +682,6 @@
   <block id="b7dfb6860d9af743a7d3f0fe2adfde3d" category="list-text">*跳過選購的預安裝檢查*：勾選此方塊可跳過選購的預安裝檢查。例如，如果您知道記憶體或空間考慮因素將在不久的將來發生變化，並且您想立即安裝插件，那麼您可能想要這樣做。</block>
   <block id="2a9ab4f690bade887dade42f4a0f412b" category="inline-link">NetApp Console部署模式</block>
   <block id="02a0978d1df3ca052a64d05249709cc3" category="summary">您可以透過從雲端供應商購買按使用量付費或年度市場訂閱來獲得NetApp Backup and Recovery 的許可，或透過從NetApp購買自帶許可證來獲得許可。需要有效的許可證才能在系統上啟動NetApp Backup and Recovery and Recovery 、建立生產資料的備份以及將備份資料還原到生產系統。</block>
-  <block id="d44c500b8ff5c565a7d3b02d14def6a3" category="paragraph">您可以透過從雲端供應商購買按使用量付費 (PAYGO) 或年度市場訂閱 * NetApp Intelligent Services* 來獲得NetApp Backup and Recovery許可，或透過從NetApp購買自帶許可 (BYOL)。需要有效的許可證才能在系統上啟動NetApp Backup and Recovery and Recovery 、建立生產資料的備份以及將備份資料還原到生產系統。</block>
   <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">在您繼續閱讀之前，請注意以下幾點：</block>
   <block id="0afafddaf42e76b83acff428b8613a7e" category="list-text">NetApp Backup and Recovery自帶許可證 (BYOL) 是一種浮動許可證，您可以在與NetApp Console組織或帳戶關聯的所有系統中使用它。因此，如果您現有的 BYOL 授權具有足夠的備份容量，則無需購買另一個 BYOL 授權。</block>
   <block id="98ed4c44ab8a3c8a5b08f8e91a585c40" category="list-text">如果您使用的是 BYOL 許可證，建議您也訂閱 PAYGO 訂閱。如果您備份的資料超出了 BYOL 許可證允許的範圍，或者許可證期限已過期，則備份將透過您的即用即付訂閱繼續進行 - 不會中斷服務。</block>
@@ -721,7 +714,6 @@
   <block id="7744fc20060f2753538eb1cbe03db4f0" category="paragraph">使用這些連結從您的雲端供應商市場訂閱NetApp Backup and Recovery ：</block>
   <block id="14c403304e8650321be08c9edd75c486" category="inline-link">前往NetApp Intelligent Services市場了解定價詳情</block>
   <block id="782af9afc0728a9389fd837476a88107" category="inline-link">前往NetApp Intelligent Services市場了解定價詳情</block>
-  <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">使用年度合約</block>
   <block id="e8081693b5a02447f0b48df91b9f65d8" category="paragraph">透過購買年度合約每年支付NetApp Backup and Recovery的費用。期限分為 1 年、2 年或 3 年。</block>
   <block id="2351127acb653fd60dafc73c8efcb79d" category="inline-link">AWS Marketplace 頁面</block>
   <block id="dda622e647d2d5d64503c046c508cc10" category="paragraph">當您使用 AWS 時，有兩種年度合約可供選擇<block ref="85c21eb306ec4bcbda7252ca6117fc5c" category="inline-link-rx"></block>對於Cloud Volumes ONTAP和本機ONTAP系統：</block>
@@ -754,7 +746,6 @@
   <block id="ae5c737a541e095839e199ea2ab82f0f" category="paragraph">若要登入NetApp Console，您可以使用您的NetApp支援網站憑證，也可以使用您的電子郵件和密碼註冊NetApp Console登入。<block ref="3546779ff62edcb806e94b283f4a603a" category="inline-link-rx"></block> 。</block>
   <block id="03169a1f1f9d0a03d15fd58f20cbb63e" category="paragraph">要新增控制台代理，您必須具有備份和還原超級管理員角色。</block>
   <block id="3c031b939f6ec312ee601d021e7a6644" category="inline-link">NetApp Console</block>
-  <block id="6a65fb509b9c682f9df5eb122484e2f7" category="list-text">開啟 Web 瀏覽器並前往<block ref="d6205946f936217747639e85e1340e8f" category="inline-link-rx"></block>。</block>
   <block id="0daac1b9cd4c3a240bf2f6b44ba178a1" category="paragraph">出現NetApp Console登入頁面。</block>
   <block id="4a43cddfeeabba4570c14c252dec0bd1" category="list-text">登入控制台。</block>
   <block id="4d2b18ba50dc1294ccb141fdc1041417" category="inline-link">NetApp Console標準模式入門</block>
@@ -3775,7 +3766,6 @@
   <block id="b4ae20208d5c757b694d673276341786" category="paragraph">恢復資料庫以保護您的資料。</block>
   <block id="3f6fab6bedfff19150a3d6ab054b0391" category="paragraph">現在您可以備份您的 Microsoft SQL Server 執行個體和資料庫，以立即保護您的資料。</block>
   <block id="2b2261b532e949e52edc443eb38fcb1c" category="admonition">您可能需要向雲端提供者支付額外費用才能存取備份檔案。</block>
-  <block id="d4356e3242caba9699bd9bc147a04798" category="paragraph">在「恢復」頁面（搜尋和恢復）中，您可以透過使用篩選器搜尋快照來恢復資源，即使您不記得其確切名稱、位置或最後已知日期。</block>
   <block id="fd7bb5c3777005321645f38a2d07ea27" category="admonition">如果還原作業未完成，請等到作業監視器顯示「失敗」後再重試還原作業。</block>
   <block id="51e153ee1aa6cdb4ca7796e926180b53" category="admonition">若要切換至NetApp Backup and Recovery工作負載，請參閱<block ref="e56b09183f5489111204017fecace77e" category="inline-link-macro-rx"></block>。</block>
   <block id="2f52181b09a7c053aed22699e227b9db" category="paragraph">當您在 SaaS 環境中使用NetApp Backup and Recovery，並在雲端供應商或您自己的網際網路連線主機上部署控制台代理程式時，系統會備份並保護雲端中所有重要的設定資料。如果您遇到控制台代理問題，請建立新的控制台代理並新增您的系統。備份詳細資訊將自動恢復。</block>
@@ -3918,7 +3908,6 @@
   <block id="d04d7ffd1d421df13a11259032d9191e" category="paragraph">透過NetApp Backup and Recovery，您可以透過變更備份計畫、啟用/停用磁碟區備份、暫停備份、刪除備份、強制刪除備份等方式管理Cloud Volumes ONTAP和本機ONTAP系統的備份。這包括所有類型的備份，包括快照、複製磁碟區和物件儲存中的備份檔案。您也可以取消註冊NetApp Backup and Recovery。</block>
   <block id="294441075d63ebaf575b2bea27e26a8b" category="paragraph">您可以在磁碟區備份儀表板中查看目前正在備份的所有磁碟區的清單。這包括所有類型的備份，包括快照、複製磁碟區和物件儲存中的備份檔案。您也可以查看系統中目前未備份的磁碟區。</block>
   <block id="16733ccec61246c84b6ccea8b096ea96" category="list-text">查看「現有保護」欄位中保護選項的狀態。這 3 個圖示分別代表「本機快照」、「複製磁碟區」和「物件儲存中的備份」。</block>
-  <block id="41164544ff8c92dec6c6202f3c48b888" category="list-text">在「定義備份策略」頁面中，選擇備份架構，然後定義本機快照、複製磁碟區和備份檔案的策略和其他詳細資訊。查看您在此系統中啟動的初始磁碟區的備份選項的詳細資訊。然後選擇“下一步”。</block>
   <block id="6c93c0ee904d580923385784899b59a3" category="paragraph">您可以變更指派給已指派原則的現有磁碟區的備份策略。您可以變更本機快照、複製磁碟區和備份檔案的策略。您想要套用於磁碟區的任何新快照、複製或備份策略都必須已經存在。</block>
   <block id="257aa7f9d15bc46fa7c45edeac5b1ab7" category="list-text">在「編輯備份策略」頁面中，對本機快照、複製磁碟區和備份檔案的現有備份策略進行更改，然後選擇「下一步」。</block>
   <block id="96f9f5071945e75714c9ffbe54f80851" category="list-text">在出現的備份頁面中，對本機快照、複製磁碟區或備份檔案的現有備份策略進行更改，然後選擇「儲存」。</block>
@@ -4295,7 +4284,6 @@
   <block id="5a3443bdabcca33a88f837ed431e4140" category="list-text">*匯出現有快照*：如果此系統中存在與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則會顯示此附加提示。選取此框，即可將所有歷史快照複製到物件儲存作為備份文件，以確保您的磁碟區得到最全面的保護。</block>
   <block id="fd5c6f657b9b82dc2fc86f506dacc05d" category="list-text">（可選）選取此複選框可「自動修復本機快照、複製和備份中不符的標籤」。這將建立與快照、複製和備份策略中的標籤相符的標籤的快照。</block>
   <block id="a85910c6eeb75a045489c2b16a61b922" category="paragraph">當此備份類型啟動時，對應的圖示會亮起；當該備份類型未啟動時，圖示會變為灰色。您可以將遊標停留在每個圖示上，查看正在使用的備份策略以及每種備份類型的其他相關資訊。</block>
-  <block id="ff171d855d9a99655f572a9bb5b1628f" category="list-text">在「卷」標籤中，找到要啟動備份的捲，然後選擇「操作」選單。 <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block> 在行尾，選擇「啟動 3-2-1 保護」。</block>
   <block id="1ae9b0331f20d420feb95df3c5f492ec" category="list-text">從「卷」選單中，找到要修改策略設定的捲，然後選擇「操作」選單。 <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block> 在行尾，選擇「編輯備份策略」。</block>
   <block id="7a8eafe0820d78646db0118a296f0af3" category="paragraph">當啟用備份的磁碟區超過五個時， NetApp Backup and Recovery一次只會初始化五個磁碟區。當這些完成後，它會以 5 個為一組繼續進行，直到所有捲都初始化完畢。</block>
   <block id="a3836fe1cde887edc4dd8114527d3364" category="paragraph">您可以建立磁碟區的臨時快照或備份到物件儲存。您無法建立臨時複製磁碟區。</block>
@@ -4416,7 +4404,6 @@
   <block id="3f21300a12c48d2767fb3e5b7f83112b" category="doc">Oracle 資料庫工作負載的 NetApp Backup and Recovery 已知限制</block>
   <block id="92342f1ac80ff519b37da9a3148cbbd9" category="summary">為了提高安全性，請在 NetApp Backup and Recovery 中配置特定角色的存取權限。</block>
   <block id="42481383ace46d9a4716cce3ab760979" category="doc">在 NetApp Backup and Recovery 中設定基於角色的存取控制</block>
-  <block id="c43786d5855026fcdf77809fb14618c9" category="paragraph">為了提升安全性並控制資源存取，請為 NetApp Backup and Recovery 設定以角色為基礎的存取權限。NetApp Console 支援部分 Backup and Recovery 工作負載的角色型存取控制（RBAC）。你可以針對這些工作負載指派管理員或檢視者角色。尚未支援角色型存取控制的其他工作負載，在支援專案層級關聯之前，仍可由所有具有 Backup and Recovery 角色的使用者存取。</block>
   <block id="0095575f49738915ec4332a4cab3f770" category="paragraph">請依照以下步驟控制對組織內資源的存取權限。在 NetApp Console 選單的「管理 &gt; 身分和存取」頁面中進行變更。</block>
   <block id="4ce081445a8183fac4f9d6fc6a51691e" category="admonition">這些步驟假設您在 Console 中被指派了組織管理員角色。</block>
   <block id="c9b674f0a38b83f43d155669dc9e1dae" category="list-text">建立身分和存取專案結構。</block>
@@ -4438,8 +4425,6 @@
   <block id="509c51772921c8ab860f75456880683f" category="list-text"><block ref="a16a606232229e0e62a5010aaabec2ae" category="inline-xref-macro-rx"></block>在備份作業前後執行腳本。（僅限 Kubernetes 工作負載）</block>
   <block id="1d74d204f5274b499e41d2e0238b7bdd" category="inline-link-macro">建立新的保護原則</block>
   <block id="c7a4eea6d62999931e3442bac0f23c29" category="paragraph">當您發現目前受 Trident Protect 保護的叢集時，所有與 Trident Protect 一起使用的備份計畫都會在發現過程中停用（Trident Protect 備份計畫與 Backup and Recovery 不相容）。若要保護叢集中的應用程式，<block ref="f0814d3538b9ea88d5e27855ca8d3a8e" category="inline-link-macro-rx"></block>或將應用程式與現有原則建立關聯。之後，您可以視需要移除 Trident Protect 備份計畫。</block>
-  <block id="a44ad7bb8f2123fa1919c8eb91adac29" category="list-text">建立 Trident Protect 命名空間</block>
-  <block id="75457b35c4c6b70a7664a43e080563ca" category="list-text">安裝或升級 Trident Protect 和 Trident Protect 連接器</block>
   <block id="dff3994b6daee1be81638e1c4964af92" category="doc">在 NetApp Backup and Recovery 中探索 Oracle Database 工作負載</block>
   <block id="e242e6f8581d6d11d04b2c80d7a16519" category="inline-link-macro">探索 Oracle Database 工作負載</block>
   <block id="ec9157f5af288c671e8006da3677d9c3" category="list-text">有關 Oracle Database 工作負載，請參閱 <block ref="c9b387ac576fa007292bb17c9c97e163" category="inline-link-macro-rx"></block>。</block>
@@ -4635,7 +4620,6 @@
   <block id="dbeedec7ca35d125dd2a7ee8355c41f5" category="section-title">正式版 (GA) 中支援的 VMware 工作負載</block>
   <block id="1fe60033089958dd8dab2fc11925056d" category="section-title">超出授權容量</block>
   <block id="73b5f5184f0b378b50b42a6e8ceb743c" category="paragraph">超出許可容量將觸發 PAYGO 費率；如果沒有 PAYGO 訂閱，您將無法建立新的備份，但現有備份仍可恢復，只是服務不再有保障。請務必在許可證到期前續訂；過期的許可證將阻止建立新的備份並中斷服務。</block>
-  <block id="d5339ec2460f6dc04a037cc1e0c21e2c" category="list-text">PowerShell 7.4.13</block>
   <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="doc">General Availability（GA）支援的 KVM 工作負載</block>
   <block id="2c4d488d266d9d0655ce2e1451e05b2d" category="paragraph">Kubernetes 工作負載支援現已在 NetApp Backup and Recovery 中正式發布（GA）。此版本的 Kubernetes 工作負載還引入了以下增強功能：</block>
   <block id="2329c3692bdf2d2f098db291ec4e9427" category="paragraph">*報告支援*：現在您可以為受 NetApp Backup and Recovery 保護的 Kubernetes 叢集和應用程式產生保護活動報告。</block>
@@ -5238,8 +5222,6 @@
   <block id="0fde83b735dcda0bbb69a0e90ce0981f" category="list-text">您可以視需要新增更多資源轉換。</block>
   <block id="90f8ed9c2f4259835c05c9de87feb364" category="list-text">完成後,請選擇 *Restore*。</block>
   <block id="a1ff2aac5244b20dc12ea8c0b87d23d5" category="list-text">主要 ONTAP 系統（不支援 ASA r2 系統）</block>
-  <block id="573f06d1963120e22aae7292a8177d4b" category="list-text">NetApp Trident 25.02 或更高版本</block>
-  <block id="c625623a3b3c56ebd1c8d5915f2e3a96" category="list-text">NetApp Trident Protect 26.05 或更高版本（在 Kubernetes 叢集發現期間安裝）</block>
   <block id="9b6a034e6854c5f27feb3ac185829f8d" category="inline-link">Trident Protect</block>
   <block id="d02c2883bbfa212e02daa2b45bd11760" category="list-text">Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括 <block ref="f56ec4bb79bf67d191baea2a353be3ab" category="inline-link-rx"></block> 支援的版本。</block>
   <block id="2966006d3447f3363606a7ddf7d88713" category="section-title">2026 年 5 月 05 日</block>
@@ -5391,7 +5373,6 @@
   <block id="aefd2cbeb423f608e4e14dc18e7cda38" category="section-title">檢視作用中的 VMDK 掛載工作階段</block>
   <block id="a2c3693f6f1b657d3365bb6121bebfc1" category="paragraph">在還原檔案或資料夾時，可以查看活動的來賓工作階段。這會顯示目前已附加到開啟工作階段的 VMDK。</block>
   <block id="29760f5766da0c4d6a0ac770b454e9d0" category="paragraph">此處顯示已開啟的 VMDK 掛載會話清單。您可以查看關聯的備份、來源 VM、掛載路徑和其他資訊。</block>
-  <block id="e77e2a03d88f40058869e1cc3d680930" category="list-text">ASP.NET Core Runtime 8.0.24 Hosting Bundle（以及所有後續的 8.0.x 修補程式）</block>
   <block id="9e75b63d575b523917aa9e47b41b52fb" category="list-text">Oracle AI Database 26ai</block>
   <block id="f9fe5abdb3368e0236fd36a21bb8f840" category="cell">8.0.24 Hosting Bundle（以及所有後續的 8.0.x 補丁）</block>
   <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026 年 5 月 11 日</block>
@@ -5438,8 +5419,6 @@
   <block id="7d3d3c20273081b66e3ecec1f0d07f51" category="list-text">從主儲存設備或次要儲存設備選取要還原的快照，然後選取 *Next* 。</block>
   <block id="3808991f408e2ffd90ae953886ec1e79" category="doc">NetApp Backup and Recovery 需求</block>
   <block id="44b68849dd3e2689fb41242f736a140f" category="paragraph">在開始使用 NetApp Backup and Recovery 之前、請確保您的 NetApp Console 和作業環境符合下列要求。</block>
-  <block id="b4d91981598471b84bcf3da4e96f7970" category="section-title">準備 NetApp Console</block>
-  <block id="64450efd5ca18cf6cebe654b9c7c05f3" category="paragraph">您可以透過 NetApp Console 存取 NetApp Backup and Recovery。若要準備 Console 以進行 Backup and Recovery，您必須：</block>
   <block id="37326d6fc2dae8eb70c8e5c6290c961a" category="list-text">新增 Console 代理程式</block>
   <block id="f7738f6711f0ef1fb3f5a4464e7fcfb4" category="list-text">至少新增一個儲存系統</block>
   <block id="5fc19bba732118fb6de20131945d3a1f" category="list-text">設定 NetApp Console 組織和使用者角色</block>
@@ -5448,8 +5427,6 @@
   <block id="4422b0b5b9637937564bf621f2610c7a" category="paragraph">如需進一步了解 NetApp Console，請參閱<block ref="26a35b83e5712f1703b96c54f1ac11b8" category="inline-link-rx"></block>。</block>
   <block id="a859e03fa525c25dee858dad62f9aec0" category="section-title">完成初始 NetApp Console 設定</block>
   <block id="d1a0bf528dab9557b3add986fac96df8" category="paragraph">如果尚未完成，請完成 NetApp Console 的初始設定。</block>
-  <block id="91edb8869565e8b84d0bb89e65038d3a" category="inline-link">NetApp Console（SaaS 應用程式）入門工作流程</block>
-  <block id="19de064230f9802ad2a46adc704c00c1" category="paragraph"><block ref="19de064230f9802ad2a46adc704c00c1" category="inline-link-rx"></block></block>
   <block id="4cdcdd6cc684e8847f57a8c461306706" category="section-title">部署 Console 代理程式</block>
   <block id="41f59680b33ea7227eb6c7e09010d262" category="paragraph">Console 代理程式是一個輕量級軟體元件，您可以將其安裝在網路中，以將儲存基礎架構連接到 NetApp Console。它支援進階儲存協調、資料服務和安全的雲端整合。</block>
   <block id="413f5c2acfdfdb1a561ffc22afe211b9" category="paragraph"><block ref="4818e913b60896a6e56bad9a383343fa" category="inline-link-rx"></block> <block ref="e0b8910c1bc5f58f6e1bc7ed243fa39c" category="inline-link-rx"></block></block>
@@ -5458,9 +5435,7 @@
   <block id="d1b29fc7b35be872f620d5d931e8766c" category="inline-link">在 NetApp Console 中探索內部部署 ONTAP 叢集</block>
   <block id="7a9a5755110e2914f0ad288a141356cb" category="paragraph"><block ref="7a9a5755110e2914f0ad288a141356cb" category="inline-link-rx"></block></block>
   <block id="e17c2185b4352c73f48a1a8e84f1a8ed" category="section-title">設定組織和使用者角色</block>
-  <block id="9104b82e5e7be42a60370d0e13b27403" category="paragraph">瞭解組織、專案和使用者角色，然後為使用者配置執行任務所需的適當權限。</block>
   <block id="692fa8c1472b3f5b389ae8b229a03338" category="inline-link">將使用者新增至 NetApp Console 組織</block>
-  <block id="6a66c8d307ddd017849b5680e53c609c" category="paragraph">請參閱<block ref="04f37aa952e829e9448a7d043a30911e" category="inline-link-rx"></block>以取得有關使用組織和專案來控制資源存取的資訊。</block>
   <block id="1ce75b5926383de539d27e838bd74b8a" category="paragraph">請參閱<block ref="04b01782baab49091268802b7f1423cb" category="inline-link-rx"></block>以瞭解在 NetApp Backup and Recovery 中執行操作所需的角色與權限詳細資訊。</block>
   <block id="6bb058e639cecc8051a99e8892400bd8" category="section-title">物件儲存備份的要求</block>
   <block id="fbb5639a46ec6a30ce9e9021778a91a2" category="paragraph">若要使用物件儲存作為備份目標，您需要擁有 AWS S3、Google Cloud Storage、Microsoft Azure Blob、StorageGRID 或 ONTAP 帳戶，並設定對應的存取權限。</block>
@@ -5560,7 +5535,6 @@
   <block id="d7b53b986ac236d7156eb62ccb254f74" category="list-text">若要還原個別持久性磁碟區聲明，請選擇 *Persistent volume claims* 索引標籤。</block>
   <block id="dbdc850e2c6c701a4218daf5d558b642" category="paragraph">Backup and Recovery 會列出復原點中的所有持久性磁碟區宣告。您可以選擇要在還原作業中包含的持久性磁碟區宣告。</block>
   <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026 年 6 月 15 日</block>
-  <block id="eb985c23c2b4157b8059d99e50538799" category="paragraph">有關 NetApp Console 需求，請參閱<block ref="a1e048c2b33797bd5e09f13ddaff6fff" category="inline-xref-macro-rx"></block>。</block>
   <block id="11cb5552207ff0aa19a1682353b76f93" category="list-text">*保護群組現在使用主機時區排程*：保護群組現在使用 Hyper-V 主機的時區。在引入主機時區排程功能之前建立的保護群組將繼續使用其先前設定的時間（通常為 UTC）。若要將這些保護群組更新為使用 Hyper-V 主機時區，您必須重新建立排程。如需詳細資訊，請參閱<block ref="d7b709a60ba856948f2de1f387e47906" category="inline-link-rx"></block>。</block>
   <block id="327e5e3e392a7cf832926cb52870097c" category="list-text">*保護群組現在使用主機時區排程*：保護群組現在使用宿主 VMware vCenter 伺服器的時區。在引入主機時區排程功能之前建立的保護群組將繼續使用先前設定的時區（通常為 UTC）運作。若要使用 vCenter 時區，您必須重新建立排程。如需詳細資訊，請參閱<block ref="5181f9a713551c0880da1b785cb2e8f3" category="inline-link-rx"></block>。</block>
   <block id="d041f642a2d3785a0e94ba8db99dbb87" category="list-text">請注意，對於 Hyper-V 工作負載，排程備份時間會以管理主機的時區為準。如需更多資訊，請參閱 <block ref="6abbe22a47895e202e8193141aa3411e" category="inline-link-macro-rx"></block>。</block>
@@ -5654,4 +5628,181 @@
   <block id="d2bf4d042aabc15b9ccde353c782a6f2" category="list-text">使用 Microsoft Windows Server 2025 時，不支援保護儲存在 SAN 儲存設備上的第二代虛擬機器。</block>
   <block id="b2d5ba8de92c18cbb9c45e01ad3f5509" category="list-text">還原至備用位置（從主要儲存設備、次要儲存設備和物件儲存）</block>
   <block id="62ff0d9db122207756fd73342a3eb3ad" category="paragraph">NetApp Backup and Recovery 現在支援保護系統中多達 100 個儲存桶（跨不同雲端供應商）的工作負載。每個系統支援超過 6 個儲存桶需要 ONTAP 9.19.1 或更新版本。</block>
+  <block id="a804a09090ab946ea48120427df5be47" category="paragraph">如果您在與網路隔離的環境中（資料庫主機無法透過標準 DNS 存取）使用 NetApp Console 本機部署，則必須暫時修改內部 RKE2 CoreDNS 組態。這可讓 Pod 將特定主機名稱解析為叢集內的 IP 位址，類似於在節點上新增<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block>項目。</block>
+  <block id="d38c5698c3f0a0cc565d84f0583ddbe8" category="admonition">在進行任何變更之前，請檢查現有的 CoreDNS 組態，以避免置換任何現有的自訂設定。使用 RKE2 清單套用此變更，確保由 RKE2 營運者和執行階段一致地管理。</block>
+  <block id="0d1c49b7f34131be8c6ddbc862cc359d" category="list-text">盡可能將 HelmChartConfig 檔案置於變更控制之下。</block>
+  <block id="feb789eaa0d039f7e4fc241b5a35b268" category="list-text">使用清晰的檔案名稱，以便明確 CoreDNS 置換的目的。</block>
+  <block id="1c675544711def39976f57e2f6b7e39d" category="list-text">如果在 Corefile 中看不到預期的 DNS 記錄，請檢查 RKE2 伺服器日誌並確認清單檔案語法。</block>
+  <block id="d36d322fa13411cc64a12177b6ad51ce" category="list-text">檢查現有的 CoreDNS 組態，確保您沒有置換現有的變更：</block>
+  <block id="f4edd834d634c666190d7b67f0c12622" category="list-text">複製以下命令區塊並編輯 <block ref="10e11b33e0776f6cd4b1e675accff1f5" prefix=" " category="inline-code"></block> 區域以新增您的靜態 DNS 記錄。這會在 RKE2 清單資料夾中建立一個 HelmChartConfig YAML 檔案，RKE2 會自動套用該檔案以置換 CoreDNS 組態：</block>
+  <block id="b893a4548c6b5490f347a2312c465362" category="list-text">驗證 CoreDNS 是否已偵測到變更：</block>
+  <block id="ad5eadc57f2e0ed4fdd17752bad0fe52" category="paragraph">如果幾分鐘後變更仍未生效，請重新啟動 CoreDNS 部署，然後再次驗證 Corefile：</block>
+  <block id="9e04101c187aa923054a894c988f5aeb" category="list-text">如果在探索資料庫主機後需要移除條目，請執行下列操作：</block>
+  <block id="606b05130da19f4457434aa58ba985b8" category="list-text">從清單資料夾中刪除 HelmChartConfig 檔案。</block>
+  <block id="5b25c5946d94965af8af242970d2aee2" category="list-text">重新啟動 CoreDNS 部署：</block>
+  <block id="64c0705ecd150a07e521638d5157a4ec" category="doc">一般 NetApp Backup and Recovery 增強功能</block>
+  <block id="7700d007f970d2c042d61e3551aa039e" category="list-text">*支援 NetApp Console 本機部署*：此 NetApp Backup and Recovery 版本以預覽狀態支援 NetApp Console 本機部署。</block>
+  <block id="ce2f56e5c9015b28eb92d0581ad9a718" category="list-text">*90 天作業保留*：Backup and Recovery 現在會在作業監視器中保留作業資訊 90 天。</block>
+  <block id="1a83c2d5d73015e6e971eff46d37e9d8" category="list-text">*SAN VM 還原至備用位置支援*：您現在可以將基於 SAN 的 VM 備份還原至備用位置。</block>
+  <block id="b7bfbf5f47aa4163507ae71ed18f8b9f" category="list-text">*支援批次刪除備份*：現在可以一次刪除多個備份。</block>
+  <block id="7ac62e0d250037c318f5fcf102e2e700" category="list-text">*可插拔資料庫 （PDB） 還原與 Clone*：Backup and Recovery for NetApp Console 服務現在支援還原與複製可插拔資料庫。</block>
+  <block id="c67660fa166ae58260874bbf6f9c5e4a" category="list-text">*預覽版支援氣隙資源*：如果在 NetApp Console 本機部署中執行 NetApp Backup and Recovery，您可以探索、保護和還原氣隙 Kubernetes 資源。此功能在此版本中為預覽功能。</block>
+  <block id="d1c241263c19a21db56b6d9aaeb83ca1" category="paragraph">在此版本中，ONTAP Volumes 工作負載引入了以下增強功能：</block>
+  <block id="a33b2a8cf6a943c4ae96728143fee277" category="list-text">*優先執行還原作業而非備份作業*：現在，在還原虛擬機器或檔案時，您可以優先執行還原作業而非備份作業。</block>
+  <block id="3c8fad259371a43b707a7a3c64b147f6" category="list-text">*無需啟動 Backup and Recovery 即可探索 ONTAP 系統和磁碟區*：您現在無需啟動 Backup and Recovery 即可探索系統和磁碟區。</block>
+  <block id="2c6cc6886b730f35083997c1321dcc78" category="list-text">在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。</block>
+  <block id="5c09edc1ed9afb140af2607f91da29e1" category="section-title">NetApp Console 本機部署的 Backup and Recovery 預覽版限制</block>
+  <block id="100ccba98eb51c65bd8c14443e1fd850" category="paragraph">為了提高安全性並控制資源存取，請為 NetApp Backup and Recovery 設定角色型存取。NetApp Console 支援部分 Backup and Recovery 工作負載的角色型存取控制 （RBAC）。您可以為這些工作負載指派特定的管理員或檢視者角色。其他尚不支援角色型存取控制的工作負載，在支援專案層級或機組層級關聯之前，仍可供所有具有 Backup and Recovery 角色的使用者存取。</block>
+  <block id="32e1c572f7e144c1646e5a596a5a1451" category="admonition">NetApp Console 使用專案來組織資料夾中的資源，而 NetApp Console 本地部署則將專案稱為機組。</block>
+  <block id="4adee4f45a74219d1cd07ce797df9f99" category="paragraph">在 Backup and Recovery 清單中，探索環境中的 Kubernetes 工作負載。新增工作負載會將 Kubernetes 叢集新增至 NetApp Backup and Recovery。然後，您可以新增應用程式並保護叢集資源。您也可以選擇使用 NetApp Console 本機部署來探索氣隙隔離的本機 Kubernetes 資源。</block>
+  <block id="32fd98562c6a156ac87022787c83fd6e" category="paragraph">備份與還原提供的說明會根據您選擇的安裝類型而有所不同。如果您使用 NetApp Console 本機部署，則可以選擇相關說明，以探索沒有外部網路連線的氣隙資源。</block>
+  <block id="c9f1fbd3541e041c7aefce17e569d706" category="list-text">選擇安裝類型以檢視在 Kubernetes 叢集上安裝 Trident Protect 的說明：</block>
+  <block id="eb91a7499802a37e3cd48fa310c15a57" category="list-text">選擇「已連線」以探索具有外部網路連線的叢集。</block>
+  <block id="42549739c293d276ceebe73a196959c7" category="list-text">選擇 *Air-gapped* 以探索沒有外部網路連線的叢集。</block>
+  <block id="c81c81c33dcdd7c4d24b501795cfae12" category="open-title">連線探索</block>
+  <block id="b2e76d956d1446ebd1dc9cf7262e7a73" category="list-text">請依照 Backup and Recovery 中顯示的命令列說明進行操作。這些步驟可確保 Backup and Recovery 能夠與叢集互動。</block>
+  <block id="2b7add97385bfd3948413e32d55ea9b3" category="open-title">Air-gapped 探索</block>
+  <block id="8e073c87439fbb7907d40a3b2b4f20db" category="list-text">輸入您的私人 Docker Container 登錄的 URL。安裝過程中，將使用此登錄下載 Trident Protect 和 Trident Protect Connector "映像"。</block>
+  <block id="b40fdc2f50180e3dc294592258666241" category="list-text">如果您的私有 Container 登錄需要驗證，請使用下列其中一種方法來設定登錄認證：</block>
+  <block id="9a7eca7534aaacf48a2e6ab580310efb" category="list-text">*節點層級驗證*：在每個節點的 Container 執行階段中設定登錄憑證。設定完成後，所有 Pod 均可提取"映像"，無需額外的 Helm 設定。</block>
+  <block id="ccf6fbb85e170dcc8a339f853dd9ecd1" category="list-text">*Kubernetes image pull secret*：在<block ref="9a82c7a4099124e5bfaa83e7c5997bd4" prefix=" " category="inline-code"></block>命名空間中建立 Kubernetes image pull secret，然後在 Trident Protect 安裝說明中的 Helm 升級步驟中引用它：</block>
+  <block id="e83c36aded47a82f3a80094d5e40c8ec" category="list-text">請依照 Backup and Recovery 中顯示的命令列說明進行操作，並在 Helm 步驟中新增"映像"拉取金鑰資訊（如果需要）。這些步驟可確保 Backup and Recovery 能夠與叢集互動。</block>
+  <block id="b369100bdd2bca7404427091ea1773f0" category="list-text">完成 Trident Protect 安裝步驟後，選取 * 探索 *。</block>
+  <block id="b5f7c930c601cdb6867c5fa448e058de" category="list-text">選擇 Kubernetes 工作負載磁貼。</block>
+  <block id="3157af79837d704f357cbe0fb5ca681e" category="section-title">在 NetApp Console 本機部署中設定 DNS 以實現氣隙主機探索</block>
+  <block id="9130f3e76360b4e0b50d62c02b73f297" category="summary">在 NetApp Console 或 NetApp Console 本機部署中的系統上啟動 Backup and Recovery。</block>
+  <block id="3b1f21f533f4569ccdb069a224c3fc8b" category="doc">啟用備份與還原功能以保護磁碟區</block>
+  <block id="fce3336a53277a34c72eaf26ae68eb3c" category="paragraph">在保護 ONTAP Volumes 工作負載之前，您需要先在 NetApp Console 或 NetApp Console 本機部署中為儲存系統啟用 NetApp Backup and Recovery。您可以在新增系統時啟用 Backup and Recovery，也可以稍後再啟用。</block>
+  <block id="64c73d6afa3e4d25eb2bf5b546c3dcf2" category="section-title">在 NetApp Console 中啟動 Backup and Recovery</block>
+  <block id="cb120e5cd2b396558aacbb18f19389be" category="paragraph">在 NetApp Console 中啟動 Backup and Recovery 服務。</block>
+  <block id="bd449026fb2b3bf3a1ff4cb4c323ddee" category="list-text">選擇 *Volumes* 選單。</block>
+  <block id="afa0bb87d54f156e627003dfa34823a6" category="list-text">在磁碟區保護總覽頁面中，選取 *Backup Settings*。</block>
+  <block id="204a48efa1a8f290d2951f016919ea7c" category="list-text">確定要啟動備份的系統，然後選擇 *啟動備份* 按鈕。</block>
+  <block id="247ff6666bd29c91fd85627e96b3510b" category="list-text">選擇要保護的來源磁碟區，然後選擇 *Next*。</block>
+  <block id="05339b07e52d64122e9141dc4c7ce142" category="list-text">在「定義備份策略」頁面中，選擇備份架構，然後定義本機快照、複寫磁碟區和備份檔案的策略及其他詳細資料。請參閱您在此系統中啟動的初始磁碟區的備份選項詳細資訊。然後選取 *Next*。</block>
+  <block id="99fc855c46d2e6f60c45d31a733d59a3" category="list-text">（可選）選擇讓 Backup and Recovery 自動修復不符的備份、快照和複寫標籤。</block>
+  <block id="9f3d5403b8dc8b2031f6b4fc3737cd37" category="list-text">您保護的磁碟區將顯示在「磁碟區總覽」頁面中。</block>
+  <block id="4b064ddd7a02084e346fa166ed7bb6cb" category="section-title">在 NetApp Console 本機部署中啟用 Backup and Recovery</block>
+  <block id="14f23530841dd1cfad164a8e134f88ea" category="paragraph">在 NetApp Console 本機部署中啟用備份與還原服務。</block>
+  <block id="388e989dd77f81541d749ac165d92200" category="inline-link">取得授權</block>
+  <block id="eb3ebbfc3ab12363d471b8aec28b7d88" category="paragraph">請確保您已取得 NetApp Backup and Recovery 的授權。請參閱<block ref="f655a90fa3a25d2cdc287fbda8576bbe" category="inline-link-rx"></block>以取得更多資訊。</block>
+  <block id="3f8f1a22fc87e0c9826e6b21c5a926be" category="list-text">從 NetApp Console 選單中，選擇 *Storage &gt; Fleets*。</block>
+  <block id="21b2098e073151f4bd9c33b9ffefa2aa" category="list-text">如有需要，請選擇 *Add fleet* 新增您的機組詳細資料。</block>
+  <block id="c2dab7efe42335c34a0f152ae2750987" category="list-text">選擇 *Administration &gt; Licenses*。</block>
+  <block id="ec01ce5d7a75843507cddc0f1e980f6a" category="inline-link">新增授權</block>
+  <block id="27012ade26486f85495fbb2267fed618" category="list-text">選取 *新增授權* 以新增 Backup and Recovery 的授權。如需新增授權的詳細資訊，請參閱<block ref="e9f7bfb753a05c7d1690a9e4e7b2ce56" category="inline-link-rx"></block>。</block>
+  <block id="5e62bf511aa053fcc08329f483488665" category="list-text">選擇 *Storage* &gt; *Fleets*，然後開啟 *Systems* 選單。</block>
+  <block id="3b173fe4c1bd68bf7dd8db9c524dc8a7" category="list-text">選擇 *新增* 以新增系統，輸入系統詳細資訊，然後選擇 *新增* 儲存新系統。</block>
+  <block id="07c87e1a7ad1cef370fca4fd17f11406" category="list-text">選擇系統並選取叢集。在頁面右側的資訊面板中，選取「備份與還原」服務的 *啟用* 按鈕。</block>
+  <block id="650a46b766c48de5003178d3c64c3e35" category="list-text">選擇 *Backup Volumes*。</block>
+  <block id="c02715a613f1d27ea0d77a20a3d25376" category="paragraph">根據您使用的是 NetApp Console 還是 NetApp Console （本地部署），您可以透過以下方式取得 NetApp Backup and Recovery 的授權：從雲端供應商購買隨用隨付 （PAYGO） 或年度市場訂閱的 *NetApp Intelligent Services*；或從 NetApp 購買自帶授權 （BYOL）。在系統上啟動 NetApp Backup and Recovery、建立正式作業資料的備份，以及將備份資料還原至正式作業系統，均需要有效的授權。</block>
+  <block id="d63e296034547bf26cb0cadf2f6380a7" category="list-text">如果您使用 NetApp Console 的 Backup and Recovery，您可以訂閱隨用隨付 （PAYGO） 授權，或購買自帶授權 （BYOL） 授權。</block>
+  <block id="4f423dab0b2a066d43aa7c2770125156" category="list-text">如果您正在搭配 NetApp Console 本機部署使用 Backup and Recovery，則只能購買自備授權（BYOL）授權。</block>
+  <block id="c25cac16b9617f72907c0630edc1b01c" category="paragraph">設定 NetApp Backup and Recovery 的授權。</block>
+  <block id="1ee6f4a6521039e0ae82dbbbba308a27" category="section-title">使用市場年度合約或 BYOL 授權</block>
+  <block id="f553546046684a79a8a9f772a3ba1d69" category="section-title">設定 NetApp Backup and Recovery 本機部署的授權</block>
+  <block id="81f4d3c9ac626f319c4045d07dc88068" category="paragraph">設定本地部署版 NetApp Console 的授權。</block>
+  <block id="e686efc70811cf9c1330fb2efbfde349" category="paragraph">您可以使用 NetApp Console 本機部署來管理 BYOL 授權。您可以從 Console 新增授權、更新現有授權，以及檢視授權狀態。</block>
+  <block id="703de1576e07d34f2860aa3e1da40baf" category="list-text">如果您使用的是 NetApp Console，請開啟網頁瀏覽器並前往<block ref="d6205946f936217747639e85e1340e8f" category="inline-link-rx"></block>。</block>
+  <block id="5cb1f0001bf54c75c97113f354e00531" category="list-text">如果您使用的是 NetApp Console 本機部署，請開啟網頁瀏覽器並前往本機 Console 部署的 Web UI 的 IP 位址。</block>
+  <block id="7c55093665daac77f8dd76430cb75dfa" category="inline-link">在 NetApp Console 本機部署中設定警示通知規則</block>
+  <block id="f9bee688793a428e0d9f7ec70aa5e128" category="paragraph"><block ref="d002346fd3a4e505164eb1f97ce43042" category="inline-link-rx"></block>。</block>
+  <block id="8a694efe640190f66766a628dd36f07a" category="list-text">選擇 VMware 工作負載。</block>
+  <block id="56fa99412e731bf74dfe0e92bfc1a799" category="paragraph">您可以刪除不再需要的本機備份，以釋放儲存空間或符合資料保留要求。</block>
+  <block id="4ba79ff2175b296fa6e60a343f55f890" category="list-text">登入 NetApp Backup and Recovery，然後從主畫面選擇 VMware 工作負載磚。</block>
+  <block id="384972b6673da7b24e3d0b2560f6a88f" category="paragraph">顯示 VMware 清單頁面。</block>
+  <block id="13e9141fa63d8f037f1f9d57eb55d7cd" category="list-text">選擇*虛擬機器*標題。</block>
+  <block id="e4fa3a00894276c9b73f4a5fbea2b8b6" category="list-text">在虛擬機器清單中，選擇一個虛擬機器，然後選擇「動作」圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *檢視保護詳細資料*。</block>
+  <block id="48c896058bf313b7b8c3e5d0d059d0b5" category="list-text">選擇時間範圍以顯示相關快照。</block>
+  <block id="1f6e5768c369e513177719a55ddb10b9" category="list-text">刪除一個或多個快照：</block>
+  <block id="621aa8040403a0524dc805bb41b10d5c" category="open-title">刪除單一快照</block>
+  <block id="df9690d930ba43ffe814d178e0dc946f" category="list-text">從清單中選擇要刪除的快照，然後選擇「動作」圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *刪除本機快照*。</block>
+  <block id="3c6317f4ac9a23c959a2cb8d8e0ac466" category="open-title">刪除多個快照</block>
+  <block id="d8fb1204bc24f18b837d45773c94ad3f" category="list-text">選取要刪除的每張快照左側的核取方塊。</block>
+  <block id="52930d2f80d2c62aee1edf1f424cca24" category="list-text">選取*刪除所選內容*。</block>
+  <block id="e73ac3f158df9b045a6b3779d75dd829" category="section-title">準備使用 NetApp Backup and Recovery</block>
+  <block id="bb5b370bd7de303eeaf48da0ac823498" category="paragraph">您可以透過 NetApp Console 存取 NetApp Backup and Recovery。根據您使用的是 NetApp Console 還是 NetApp Console 本機部署，請執行下列任務以準備 Console 進行備份和還原。</block>
+  <block id="a13a878a01fe30a9dc231ed21ce14d86" category="section-title">準備在 NetApp Console 上使用 Backup and Recovery</block>
+  <block id="9e781c93fe77a834e50a700943322044" category="paragraph">若要為備份與還原準備 NetApp Console，您必須：</block>
+  <block id="f6f6e076664f3fcf9fd5ac3712c1c4e3" category="list-text">完成初始設定</block>
+  <block id="e114d8cf5b97d8a06057760568b034cd" category="list-text">啟用備份與還原</block>
+  <block id="0b1338766341d9e4efb068789c59087a" category="inline-link">適用於 NetApp Console 的開始使用工作流程</block>
+  <block id="2b5a20633ae8165987b5d83e836bded7" category="paragraph"><block ref="2b5a20633ae8165987b5d83e836bded7" category="inline-link-rx"></block></block>
+  <block id="63cfc085cd8deb50d0fe4aee5d0e650a" category="paragraph">您可以在新增系統時啟用備份與還原功能，也可以稍後啟用。</block>
+  <block id="044b5c77027bf301184b5e0ade8798d5" category="inline-link-macro">啟用系統的備份和復原功能</block>
+  <block id="67cb34703319339892e803e99681624a" category="paragraph"><block ref="b42fc317c2ac82fa1e68e771a5aef85a" category="inline-link-macro-rx"></block>。</block>
+  <block id="f5ad467a98dc6a5895620ec9cfd7929a" category="paragraph">了解組織、專案、機組和使用者角色，然後為使用者設定執行其任務所需的適當權限。</block>
+  <block id="d501e17169facc1a138d3fc8e9175373" category="paragraph">請參閱<block ref="04f37aa952e829e9448a7d043a30911e" category="inline-link-rx"></block>以取得有關控制資源存取的資訊。</block>
+  <block id="232ad6d71a356fe268501304d4498151" category="section-title">準備在 NetApp Console 本機部署上使用 Backup and Recovery</block>
+  <block id="0ba77f30bb461b885a18b790dc1c7fed" category="paragraph">要準備在 NetApp Console 本機部署上使用 NetApp Backup and Recovery，您必須：</block>
+  <block id="5fb18472c65b22e6aed72da32e038aec" category="list-text">完成初始 NetApp Console 本機部署設定</block>
+  <block id="1a990df39107b1e639f4fd55a4b39ac5" category="list-text">註冊參加預覽版申請</block>
+  <block id="568f1f6b8bbc4b5eee65743da6e30afb" category="list-text">授予使用者存取資源的權限</block>
+  <block id="5d65636e37c16188531efc5248b04ea4" category="paragraph">您需要擁有 NetApp Console 本機部署中的組織管理員或超級管理員角色才能完成此準備工作。</block>
+  <block id="ac2d7625e323010740bb75ef56225b3d" category="inline-link">了解 NetApp Console 本機部署</block>
+  <block id="c62e20f5538087472dc438eb3f0eeca6" category="paragraph">要深入瞭解 NetApp Console 本地部署，請參閱<block ref="327be2ef9e4468a98c588ef8c879bec6" category="inline-link-rx"></block>。</block>
+  <block id="df25e49020c58ef73da6befa0eb72dd2" category="paragraph">如果尚未完成，請完成 NetApp Console 本機部署的初始設定。完成初始設定包括新增資料服務（包括 Backup and Recovery）的授權。</block>
+  <block id="6c67e4958bd3ecc4ebc2486fe40c9fb6" category="inline-link">開始使用 NetApp Console 本地部署</block>
+  <block id="2c6df80c002181573883566420c83445" category="paragraph"><block ref="2c6df80c002181573883566420c83445" category="inline-link-rx"></block></block>
+  <block id="33dff0ff51e9773f32a9999496de90ea" category="section-title">註冊參加 NetApp Backup and Recovery 預覽版註冊</block>
+  <block id="1081e691742befdfc0131302b893d29c" category="paragraph">在 NetApp Console 本機部署上註冊 NetApp Backup and Recovery 預覽版：</block>
+  <block id="29baeb7c31a3e708d97805f86fcb505a" category="inline-link">填寫預覽報名表</block>
+  <block id="4d405e082b9036b99ea8ef4d4c6b3cae" category="paragraph"><block ref="570de0e604bd7f8002cc6704e0146ea7" category="inline-link-rx"></block></block>
+  <block id="a3b49aeb70a4060b1c36c4a694debc5c" category="inline-link">在 NetApp Console 本地部署中新增儲存設備</block>
+  <block id="de0f709d7b0812e121e9fa6bdb8b87b3" category="paragraph"><block ref="de0f709d7b0812e121e9fa6bdb8b87b3" category="inline-link-rx"></block></block>
+  <block id="5867ad8a560196a64df2278876df70c2" category="paragraph"><block ref="fd61760e9709a64e2426151a909b6045" category="inline-link-macro-rx"></block>。</block>
+  <block id="83524f1d1d58a585ea5008790d8e85cf" category="paragraph">了解身分和存取管理，然後為使用者設定執行其任務所需的適當權限。</block>
+  <block id="acb0fa18e6cbdd062b1c342d22b5d7e9" category="inline-link">開始使用 NetApp Console 本機部署中的身分識別與存取管理</block>
+  <block id="951c1419bc6678a290628918eb471078" category="paragraph">有關身分和存取的資訊，請參閱<block ref="ea5b8c83a53307fc473cf87abf76dc05" category="inline-link-rx"></block>。</block>
+  <block id="614c9b8c0079226ae2c76caf00bdc9d7" category="list-text">ASP.NET Core Runtime 10.0.10 Hosting Bundle</block>
+  <block id="2c03c04d013cd18a2b08ffdaa3807fc6" category="list-text">PowerShell 7.6.4</block>
+  <block id="3b93068d4eec990f1969b952fef82849" category="list-text">NetApp Trident 25.06 至 26.02.1</block>
+  <block id="c6ee0c0b0d79479e99725d43f4f2b0f8" category="list-text">NetApp Trident Protect 26.06（在 Kubernetes 叢集探索期間安裝）</block>
+  <block id="0ac549660d0a9677d9f22785c2d2c924" category="paragraph">如需相關指示，請參閱 <block ref="2f1950f09c9a71aa668e32b381c98250" category="inline-link-macro-rx"></block>。</block>
+  <block id="e75b3a902ee99b25571be4a98b084a31" category="summary">無需啟動 NetApp Backup and Recovery 即可探索系統和 Volume。</block>
+  <block id="bf768851617c703a4014233f58b31de3" category="doc">無需啟動即可探索 ONTAP 系統和 Volume</block>
+  <block id="2887d4ffc35ab6898bed2a982c5423a2" category="paragraph">您可以在啟動 Volume 的備份和復原功能時探索系統和 Volume，也可以在啟動 NetApp Backup and Recovery 之前探索。如果您在未啟動備份和復原功能的情況下探索 Volume，則必須先啟動備份和復原功能才能保護這些 Volume。</block>
+  <block id="c05c8d19188da81641764e4d99fba036" category="list-text">前往 *Protection &gt; Backup and Recovery*。</block>
+  <block id="aade6a4ecb73182997804e0dc7dbdb4b" category="list-text">選擇 *Volumes* 圖塊。</block>
+  <block id="cd443e02f5cbebd87795406cf9cb796d" category="paragraph">「Volumes」儀表板隨即出現。</block>
+  <block id="6d2d3f5b63dfbdd66641a095c0ad211b" category="list-text">選擇 *Discover systems*。</block>
+  <block id="860cf33608268fe2d5a3ed1713fe9107" category="list-text">在清單中，選取要探索其 Volume 的所有系統。</block>
+  <block id="f256471c6761fa054c01bf424427f283" category="paragraph">探索過程開始。您可以在作業監視器中查看探索狀態和結果。</block>
+  <block id="8bfcbad5f6e35a5fb200847e49a3e066" category="summary">提高 NetApp Console 本機部署環境中的目錄索引效能。</block>
+  <block id="1b8e826b73c0743e53c07bcd60fec634" category="doc">使用 NetApp Console 本地部署時，提升 Volume 搜尋與還原的效能</block>
+  <block id="626ff7e0402d85582fdc0561907b9fe6" category="paragraph">將目錄索引儲存設備從叢集的預設儲存設備類別遷移至 ONTAP 支援的 NFS 共享，可顯著提升 NetApp Console 本地部署的目錄效能。索引目錄用於搜尋和還原功能。雖然目錄在預設儲存設備也能運作，但使用 ONTAP 支援的 NFS 可為搜尋和還原提供可量測的效能改善。</block>
+  <block id="adb346c6a3b4c2c621493a5c3df68916" category="paragraph">在開始之前，請確保您已準備好以下物品：</block>
+  <block id="86f1b6285159d589785ea087767c5ad1" category="list-text">叢集中已設定 ONTAP NFS StorageClass，且 ONTAP 系統容量充足。</block>
+  <block id="5bd55eb44ebdfd90229d8601c0ee18b7" category="list-text">叢集管理員憑證，具有取得、建立、套用、執行、修補、擴充和刪除資源的權限。</block>
+  <block id="2d6416018a758bac07ba133aba8edfbe" category="list-text">對來源 PVC 中資料的已驗證備份（在移轉之前，請先建立快照或將其複製到其他位置）。</block>
+  <block id="60ada73ffb582db867e106e713a19b22" category="floating-title">縮減 Worker 數量</block>
+  <block id="2fbb9ae01a9a1d1d00f103cebbc113ba" category="paragraph">列出工作節點部署，並將每個節點的副本數縮減至零。</block>
+  <block id="4f15c81d8d6f0d7c242aa5a7caaacaeb" category="list-text">列出所有目錄工作程序部署：</block>
+  <block id="e525caa32927c48e8f475f147ed69285" category="list-text">將所有工作者部署縮減至零個副本：</block>
+  <block id="94308a11171ffd5f25d06ce5924aaf34" category="list-text">確認沒有剩餘的工作節點：</block>
+  <block id="e48416869ee325cb8ec14ca6aa79059a" category="floating-title">在 NetApp Console 本機部署上裝載 ONTAP Volume，並從 pod 複製。</block>
+  <block id="38a39e1403e6d98341c4add54dcf2c53" category="list-text">將 ONTAP NFS 匯出裝載至部署 NetApp Console 本機部署 OVA 時所建立的虛擬機器中的本機安裝點。</block>
+  <block id="b767a193f4efe7e250ea2b6743324418" category="list-text">將正在運作的協調器 pod 中的資料複製到 ONTAP 裝載，無需中間目錄。協調器必須仍在運作。</block>
+  <block id="0d3fdcf062c36d66c6074134cb8fedb3" category="admonition">將內容複製到 Volume 根目錄，而不是子目錄。ONTAP Volume 是新的<block ref="98c39705410022b33dadad6bd4b4e449" prefix=" " category="inline-code"></block>目錄。資料必須位於 Volume 根目錄，以便應用程式能夠透過相同的路徑找到它（例如 /opt/netapp/cbs/catalog/shared/cbs/&lt;DATASET_NAME&gt;/……）。以下命令中的 tar 命令格式會將目錄內容（包括點檔案）串流傳輸到裝載根目錄，避免建立巢狀<block ref="9e81e7b963c71363e2fb3eefcfecfc0e" prefix=" " category="inline-code"></block>資料夾。</block>
+  <block id="12d8a9b322a08784194798a9d8f80277" category="list-text">在 NetApp Console 本機部署上，將 ONTAP NFS 匯出裝載至本機安裝點。使用與稍後在 pv.yaml 中使用的相同伺服器/路徑：</block>
+  <block id="8ed7d227f3bbb6ffea13ffbfc6c368b5" category="list-text">將 pod 的共享 Volume 複製到 ONTAP 裝載位置：</block>
+  <block id="3db51ef8f1296af2a14290a2c745a8ad" category="list-text">設定所有權以符合 pod 身分識別：</block>
+  <block id="e213fca4007bf319dd8a71f9e597dfbd" category="list-text">確認資料已複製到 Volume 根目錄（您應該在裝載下直接看到「cbs」資料夾，而不是巢狀的「shared/」）：</block>
+  <block id="e8498c948b994ff098aaa8e52531da7e" category="list-text">驗證複本後將其取下（稍後 pod 將透過 PVC 裝載）：</block>
+  <block id="558bd5dc4964f474c8391676490b6f25" category="list-text">縮減協調員的規模。例如：</block>
+  <block id="9609c99c56c51052acb8aed3f8f46c04" category="floating-title">刪除舊的 PVC 和 PV</block>
+  <block id="5fd4a320b36fd6fc70d429b0bc8335a3" category="list-text">取得已連結 PV 的資訊，然後刪除舊的 PVC 和 PV：</block>
+  <block id="5919fc794547c38fbe49ed0dcc8fbd54" category="floating-title">建立靜態 ONTAP PV 和 PVC</block>
+  <block id="2a07b5cff72e4d597937f878e0b4d76b" category="list-text">建立以下 PV 和 PVC yaml 物件：</block>
+  <block id="d3124d17f5a064210152a2174f3da379" category="paragraph">*<block ref="2b7a31ccb2b33fdd062e9e3f10e075d5" prefix="*" category="inline-code"></block>**</block>
+  <block id="bf6a3296a98dd303ceb6ada20b938af0" category="paragraph">*<block ref="88bf8ee4d993e535425148da6a64c1c2" prefix="*" category="inline-code"></block>**</block>
+  <block id="d22a94b0231cd881dea01a8d9bb97cf4" category="list-text">套用 YAML 對象，先套用 PV，再套用 PVC（PV 必須存在，PVC 的標籤選擇器才能連結到該 PV）。然後驗證 PVC 宣告是否已連結：</block>
+  <block id="5828c7ac9e00c56c881334dd15e14acd" category="list-text">將協調器擴展至 1 個複本：</block>
+  <block id="6d8037d122cd0d4fd1490aa574dee37f" category="list-text">如果您手動縮減了工作進程，但它們未自動終止，請手動將其擴展回來（這可能不是必要的，因為工作進程通常會自動佈建）：</block>
+  <block id="9a19304cff6834a89aa2e5a2fcc7b323" category="list-text">驗證裝載和資料狀態。確保資料存在，且歸使用者和群組 10001:10001 所有：</block>
+  <block id="aafe04b5477e90484ecb5a97ab35b2e5" category="list-text">*回收原則<block ref="afece4245269582cb2f1009d4fb52047" prefix=" " category="inline-code"></block>：*刪除 PVC 不會清除 ONTAP 資料；如果重新資源配置，則必須手動清理已釋放的 PV。</block>
+  <block id="0ca13922f073b075ebe35843a4741a65" category="list-text">*保持 Helm 同步：* 由於 PVC 通常由 Chart 渲染，未來的版本<block ref="cd01e1bae83933b9c59c914bc71332ac" prefix=" " category="inline-code"></block>可能會嘗試重新建立或修改它。為了保持此手動 ONTAP PVC，請將 Chart 指向相同的值<block ref="da653f0609e1ee5bf4ad3210bbae68f7" prefix="(" category="inline-code"></block>（匹配大小/存取模式），或從版本中排除共享的 PVC。</block>
+  <block id="718879a57c5479ddc9d8c13719835aa2" category="list-text">如果手動執行<block ref="547d17b0589ba1ba53549f8ddb830b62" prefix=" " category="inline-code"></block>然後嘗試重新安裝，PV 將以相同名稱安裝，進而導致命名衝突。</block>
+  <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">2026年8月10日</block>
+  <block id="874b4474de89858c50d77a501e5764e2" category="sidebar">提升 NetApp Console 本地部署的 Volume 搜尋與復原效能</block>
 </blocks>

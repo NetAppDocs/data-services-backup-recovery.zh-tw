@@ -18,13 +18,22 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 
-[[prepare-netapp-console]]
-== 準備 NetApp Console
+[[prepare-to-use-netapp-backup-and-recovery]]
+== 準備使用 NetApp Backup and Recovery
 
-您可以透過 NetApp Console 存取 NetApp Backup and Recovery。若要準備 Console 以進行 Backup and Recovery，您必須：
+您可以透過 NetApp Console 存取 NetApp Backup and Recovery。根據您使用的是 NetApp Console 還是 NetApp Console 本機部署，請執行下列任務以準備 Console 進行備份和還原。
 
+
+
+[[prepare-to-use-backup-and-recovery-on-netapp-console]]
+=== 準備在 NetApp Console 上使用 Backup and Recovery
+
+若要為備份與還原準備 NetApp Console，您必須：
+
+* 完成初始設定
 * 新增 Console 代理程式
 * 至少新增一個儲存系統
+* 啟用備份與還原
 * 設定 NetApp Console 組織和使用者角色
 
 
@@ -34,17 +43,15 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 
-[[complete-initial-netapp-console-setup]]
-=== 完成初始 NetApp Console 設定
+==== 完成初始 NetApp Console 設定
 
 如果尚未完成，請完成 NetApp Console 的初始設定。
 
-https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Console（SaaS 應用程式）入門工作流程"^]
+https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["適用於 NetApp Console 的開始使用工作流程"^]
 
 
 
-[[deploy-a-console-agent]]
-=== 部署 Console 代理程式
+==== 部署 Console 代理程式
 
 Console 代理程式是一個輕量級軟體元件，您可以將其安裝在網路中，以將儲存基礎架構連接到 NetApp Console。它支援進階儲存協調、資料服務和安全的雲端整合。
 
@@ -52,8 +59,7 @@ https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html["了解控
 
 
 
-[[add-a-storage-system]]
-=== 新增儲存系統
+==== 新增儲存系統
 
 在 Backup and Recovery 中保護工作負載之前，您需要將 ONTAP 儲存系統新增至 Console。
 
@@ -61,12 +67,79 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 
 
 
-[[configure-an-organization-and-user-roles]]
-=== 設定組織和使用者角色
+==== 在 NetApp Console 中啟動 Backup and Recovery
 
-瞭解組織、專案和使用者角色，然後為使用者配置執行任務所需的適當權限。
+您可以在新增系統時啟用備份與還原功能，也可以稍後啟用。
 
-請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html["將使用者新增至 NetApp Console 組織"]以取得有關使用組織和專案來控制資源存取的資訊。
+link:br-start-enable.html#enable-backup-and-recovery-in-netapp-console["啟用系統的備份和復原功能"^]。
+
+
+
+==== 設定組織和使用者角色
+
+了解組織、專案、機組和使用者角色，然後為使用者設定執行其任務所需的適當權限。
+
+請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html["將使用者新增至 NetApp Console 組織"]以取得有關控制資源存取的資訊。
+
+請參閱 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp Console中的NetApp Backup and Recovery角色"]以瞭解在 NetApp Backup and Recovery 中執行操作所需的角色與權限詳細資訊。
+
+
+
+[[prepare-to-use-backup-and-recovery-on-netapp-console-local-deployment]]
+=== 準備在 NetApp Console 本機部署上使用 Backup and Recovery
+
+要準備在 NetApp Console 本機部署上使用 NetApp Backup and Recovery，您必須：
+
+* 完成初始 NetApp Console 本機部署設定
+* 註冊參加預覽版申請
+* 至少新增一個儲存系統
+* 啟用備份與還原
+* 授予使用者存取資源的權限
+
+
+您需要擁有 NetApp Console 本機部署中的組織管理員或超級管理員角色才能完成此準備工作。
+
+要深入瞭解 NetApp Console 本地部署，請參閱 https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["了解 NetApp Console 本機部署"^]。
+
+
+
+==== 完成初始 NetApp Console 本機部署設定
+
+如果尚未完成，請完成 NetApp Console 本機部署的初始設定。完成初始設定包括新增資料服務（包括 Backup and Recovery）的授權。
+
+https://docs.netapp.com/us-en/console-local/task-quick-start-console-setup.html["開始使用 NetApp Console 本地部署"^]
+
+
+
+==== 註冊參加 NetApp Backup and Recovery 預覽版註冊
+
+在 NetApp Console 本機部署上註冊 NetApp Backup and Recovery 預覽版：
+
+https://forms.cloud.microsoft/pages/responsepage.aspx?id=oBEJS5uSFUeUS8A3RRZbOmNJwiQYiM5EhCH6-tDLH1hUMzBMVUY4Vk5DNDlRRzlKV1dORUlKQkUwNS4u&route=shorturl["填寫預覽報名表"^]
+
+
+
+==== 新增儲存系統
+
+在 Backup and Recovery 中保護工作負載之前，您需要將 ONTAP 儲存系統新增至 Console。
+
+https://docs.netapp.com/us-en/console-local/task-discover-storage.html["在 NetApp Console 本地部署中新增儲存設備"^]
+
+
+
+==== 在 NetApp Console 本機部署中啟用 Backup and Recovery
+
+您可以在新增系統時啟用備份與還原功能，也可以稍後啟用。
+
+link:br-start-enable.html#enable-backup-and-recovery-in-netapp-console-local-deployment["啟用系統的備份和復原功能"^]。
+
+
+
+==== 授予使用者存取資源的權限
+
+了解身分和存取管理，然後為使用者設定執行其任務所需的適當權限。
+
+有關身分和存取的資訊，請參閱 https://docs.netapp.com/us-en/console-local/task-iam-fleet-mgmt-get-started.html["開始使用 NetApp Console 本機部署中的身分識別與存取管理"]。
 
 請參閱 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp Console中的NetApp Backup and Recovery角色"]以瞭解在 NetApp Backup and Recovery 中執行操作所需的角色與權限詳細資訊。
 
@@ -139,8 +212,8 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 
 
 | 所需軟體包  a| 
-* ASP.NET Core Runtime 8.0.24 Hosting Bundle（以及所有後續的 8.0.x 修補程式）
-* PowerShell 7.4.13
+* ASP.NET Core Runtime 10.0.10 Hosting Bundle
+* PowerShell 7.6.4
 
 
 有關受支援版本的最新信息，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT#welcome["NetApp互通性表工具"^]。
@@ -261,13 +334,13 @@ NOTE: 為確保 KVM 工作負載復原成功完成，請確保在用於 KVM 備�
 . 將磁碟區掛載為 NFS3 類型，以避免使用 `nobody` 使用者和群組。
 . 使用以下命令將非root使用者新增至 `qemu` 在保留現有群體的同時，組成新的群體：
 +
-[source, console]
+[source, shell]
 ----
 usermod -aG qemu <non-root-user>
 ----
 . 使用以下命令將掛載路徑的所有權授予… `qemu` 使用者和群組，並更改掛載路徑的權限：
 +
-[source, console]
+[source, shell]
 ----
 chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 ----
@@ -329,8 +402,6 @@ NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（�
 
 您需要特定的要求來發現 Kubernetes 資源並保護您的 Kubernetes 應用程式。
 
-有關 NetApp Console 需求，請參閱<<準備 NetApp Console>>。
-
 
 NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
 
@@ -338,8 +409,8 @@ NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（�
 NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程式指派靜態 IP 位址，以避免在代理程式 IP 位址變更時出現問題。
 
 * 主要 ONTAP 系統（不支援 ASA r2 系統）
-* NetApp Trident 25.02 或更高版本
-* NetApp Trident Protect 26.05 或更高版本（在 Kubernetes 叢集發現期間安裝）
+* NetApp Trident 25.06 至 26.02.1
+* NetApp Trident Protect 26.06（在 Kubernetes 叢集探索期間安裝）
 * Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括  https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["Trident Protect"] 支援的版本。
 +
 ** 確保 Kubernetes 叢集、Trident Protect Connector 和 Trident Protect Proxy 之間的出站方向 TCP 連接埠 443 未被過濾。

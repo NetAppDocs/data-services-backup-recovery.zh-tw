@@ -70,7 +70,7 @@ spec:
 
 . 在  `local-snapshot-cr.yaml` 檔案中填入正確的值後，套用 CR：
 +
-[source, console]
+[source, shell]
 ----
 kubectl apply -f local-snapshot-cr.yaml
 ----
@@ -139,7 +139,7 @@ spec:
 
 . 在  `object-store-backup-cr.yaml` 檔案中填入正確的值後，套用 CR：
 +
-[source, console]
+[source, shell]
 ----
 kubectl apply -f object-store-backup-cr.yaml
 ----
@@ -198,7 +198,7 @@ spec:
 
 . 在  `3-2-1-fanout-backup-cr.yaml` 檔案中填入正確的值後，套用 CR：
 +
-[source, console]
+[source, shell]
 ----
 kubectl apply -f 3-2-1-fanout-backup-cr.yaml
 ----

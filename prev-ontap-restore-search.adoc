@@ -229,7 +229,7 @@ image:diagram_search_restore_vol_file.png["此圖顯示了使用「搜尋和還�
 ** `volume name` 這是在叢集上用於儲存目錄檔案的磁碟區。
 ** `/opt/application/netapp/cbs` 這是它安裝的路徑。
 +
-[source, console]
+[source, shell]
 ----
 mount <cluster IP address>:/<volume name> /opt/application/netapp/cbs
 ----
@@ -237,7 +237,7 @@ mount <cluster IP address>:/<volume name> /opt/application/netapp/cbs
 範例：
 
 +
-[source, console]
+[source, shell]
 ----
 mount 10.192.24.17:/CATALOG_SCALE_234 /opt/application/netapp/cbs
 ----

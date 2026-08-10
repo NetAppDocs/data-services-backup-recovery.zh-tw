@@ -55,6 +55,7 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 [[backup-to-object-limitations-for-ontap-volumes]]
 == ONTAP磁碟區的備份到物件限制
 
+* 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
 * 備份資料時， NetApp Backup and Recovery將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
 +
 有關這些加密類型的說明，請參閱https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["配置NetApp卷加密概述"^]。

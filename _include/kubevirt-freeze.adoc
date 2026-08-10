@@ -12,7 +12,7 @@ NOTE: 在復原作業期間，不會復原為虛擬機器 (VM) 建立的任何 `
 ====
 Trident Protect 會在資料保護作業期間自動凍結和解凍 KubeVirt 檔案系統，以確保資料一致性。從 Trident Protect 25.10 開始，您可以在 Helm chart 安裝過程中使用 `vm.freeze`參數來停用此功能。此參數預設為啟用。
 
-[source, console]
+[source, shell]
 ----
 helm install ... --set vm.freeze=false ...
 ----
@@ -22,7 +22,7 @@ helm install ... --set vm.freeze=false ...
 ====
 從 Trident Protect 24.10.1 版本開始，Trident Protect 會在資料保護作業期間自動凍結和解凍 KubeVirt 檔案系統。您也可以選擇使用以下命令停用此自動行為：
 
-[source, console]
+[source, shell]
 ----
 kubectl set env deployment/trident-protect-controller-manager NEPTUNE_VM_FREEZE=false -n trident-protect
 ----
@@ -34,7 +34,7 @@ Trident Protect 24.10 在資料保護作業期間不會自動確保 KubeVirt VM 
 
 您可以設定 Trident Protect 24.10 來管理資料保護作業期間 VM 檔案系統的凍結和解凍，方法是link:https://docs.openshift.com/container-platform/4.16/virt/install/installing-virt.html["配置虛擬化"^]然後使用下列指令：
 
-[source, console]
+[source, shell]
 ----
 kubectl set env deployment/trident-protect-controller-manager NEPTUNE_VM_FREEZE=true -n trident-protect
 ----

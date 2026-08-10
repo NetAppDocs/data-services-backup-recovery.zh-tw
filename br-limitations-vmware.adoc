@@ -18,6 +18,7 @@ summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢�
 
 在 NetApp Backup and Recovery 中，VMware 工作負載不支援以下操作：
 
+* 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
 * vVol 支持
 * 電子郵件集成
 * 基於角色的存取控制 (RBAC) 支持

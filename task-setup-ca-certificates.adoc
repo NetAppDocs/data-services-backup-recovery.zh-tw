@@ -33,13 +33,13 @@ https://docs.netapp.com/us-en/storagegrid-118/admin/configuring-load-balancer-en
 . 如果您尚未更新StorageGRID ，請使用憑證進行更新。
 . 以 root 使用者登入控制台代理程式。跑步：
 +
-[source, console]
+[source, shell]
 ----
 sudo su
 ----
 . 取得NetApp Backup and Recovery（Cloud Backup Service）Docker 磁碟區。跑步：
 +
-[source, console]
+[source, shell]
 ----
 docker volume ls | grep cbs
 ----
@@ -57,7 +57,7 @@ NOTE: 標準、私有和受限部署模式的磁碟區名稱不同。本範例�
 
 . 找到NetApp Backup and Recovery磁碟區的掛載點。跑步：
 +
-[source, console]
+[source, shell]
 ----
 docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoint
 ----
@@ -75,7 +75,7 @@ NOTE: 標準、私有和受限部署模式的掛載點有所不同。此範例�
 
 . 變更至掛載點目錄。執行：
 +
-[source, console]
+[source, shell]
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
@@ -91,13 +91,13 @@ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 
 . 將目錄更改為前面步驟中獲得的 Docker 磁碟區。
 +
-[source, console]
+[source, shell]
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
 . 將目錄變更為配置目錄。
 +
-[source, console]
+[source, shell]
 ----
 cd cbs_config
 ----
@@ -129,13 +129,13 @@ cd cbs_config
 
 . 退出容器。跑步：
 +
-[source, console]
+[source, shell]
 ----
 exit
 ----
 . 重啟 `cloudmanager_cbs`。跑步：
 +
-[source, console]
+[source, shell]
 ----
 docker restart cloudmanager_cbs
 ----
@@ -150,13 +150,13 @@ docker restart cloudmanager_cbs
 
 . 將目錄更改為 Docker 磁碟區：
 +
-[source, console]
+[source, shell]
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
 . 配置目錄。跑步：
 +
-[source, console]
+[source, shell]
 ----
 cd cbs_catalog_config
 ----
@@ -188,7 +188,7 @@ cd cbs_catalog_config
 
 . 重新啟動目錄。跑步：
 +
-[source, console]
+[source, shell]
 ----
 docker restart cloudmanager_cbs_catalog
 ----
@@ -205,7 +205,7 @@ docker restart cloudmanager_cbs_catalog
 
 . 將 SGWS 憑證複製到 `/usr/local/share/ca-certificates`。以下是一個例子：
 +
-[source, console]
+[source, shell]
 ----
 cp /config/sgws.crt /usr/local/share/ca-certificates/
 ----
@@ -214,7 +214,7 @@ cp /config/sgws.crt /usr/local/share/ca-certificates/
 
 . 使用StorageGRID憑證更新主機憑證。跑步
 +
-[source, console]
+[source, shell]
 ----
 sudo update-ca-certificates
 ----
@@ -226,7 +226,7 @@ sudo update-ca-certificates
 
 . 將 SGWS 憑證複製到 `/etc/pki/ca-trust/source/anchors/`。
 +
-[source, console]
+[source, shell]
 ----
 cp /config/sgws.crt /etc/pki/ca-trust/source/anchors/
 ----
@@ -235,20 +235,20 @@ cp /config/sgws.crt /etc/pki/ca-trust/source/anchors/
 
 . 使用StorageGRID憑證更新主機憑證。
 +
-[source, console]
+[source, shell]
 ----
 update-ca-trust extract
 ----
 . 更新 `ca-bundle.crt`
 +
-[source, console]
+[source, shell]
 ----
 cd /etc/pki/tls/certs/
 openssl x509 -in ca-bundle.crt -text -noout
 ----
 . 若要檢查憑證是否存在，請執行以下命令：
 +
-[source, console]
+[source, shell]
 ----
 openssl crl2pkcs7 -nocrl -certfile /etc/pki/tls/certs/ca-bundle.crt | openssl pkcs7 -print_certs | grep subject | head
 ----
@@ -272,13 +272,13 @@ NetApp Backup and Recovery使用 Cluster Management IP 連接到ONTAP。在憑�
 .步驟
 . 以 root 使用者登入 Console 代理程式。執行：
 +
-[source, console]
+[source, shell]
 ----
 sudo su
 ----
 . 取得NetApp Backup and RecoveryDocker 磁碟區。跑步：
 +
-[source, console]
+[source, shell]
 ----
 docker volume ls | grep cbs
 ----
@@ -296,7 +296,7 @@ NOTE: 標準、私有和受限部署模式的磁碟區名稱不同。此範例�
 
 . 取得卷的掛載。跑步：
 +
-[source, console]
+[source, shell]
 ----
 docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoint
 ----
@@ -314,7 +314,7 @@ NOTE: 標準、私有和受限部署模式的掛載點有所不同。此範例�
 
 . 變更為掛載點目錄。跑步：
 +
-[source, console]
+[source, shell]
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
@@ -335,13 +335,13 @@ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 
 . 將目錄更改為前面步驟中獲得的 Docker 磁碟區。
 +
-[source, console]
+[source, shell]
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
 . 切換到配置目錄。跑步：
 +
-[source, console]
+[source, shell]
 ----
 cd cbs_config
 ----
@@ -371,13 +371,13 @@ cd cbs_config
 
 . 退出容器。跑步：
 +
-[source, console]
+[source, shell]
 ----
 exit
 ----
 . 重新啟動NetApp Backup and Recovery。跑步：
 +
-[source, console]
+[source, shell]
 ----
 docker restart cloudmanager_cbs
 ----
@@ -392,13 +392,13 @@ docker restart cloudmanager_cbs
 
 . 將目錄更改為 Docker 磁碟區。跑步：
 +
-[source, console]
+[source, shell]
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
 . 跑步：
 +
-[source, console]
+[source, shell]
 ----
 cd cbs_catalog_config
 ----
@@ -428,7 +428,7 @@ cd cbs_catalog_config
 
 . 重新啟動NetApp Backup and Recovery。跑步：
 +
-[source, console]
+[source, shell]
 ----
 docker restart cloudmanager_cbs_catalog
 ----

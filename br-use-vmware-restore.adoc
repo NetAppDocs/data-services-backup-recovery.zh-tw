@@ -52,8 +52,6 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 * 從物件儲存還原備份時，您可以將資料還原到原始系統或本機ONTAP系統。
 
 
-在「恢復」頁面（搜尋和恢復）中，您可以透過使用篩選器搜尋快照來恢復資源，即使您不記得其確切名稱、位置或最後已知日期。
-
 
 
 [[restore-workload-data-from-the-restore-option-search-restore]]

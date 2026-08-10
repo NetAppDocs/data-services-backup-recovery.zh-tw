@@ -12,7 +12,10 @@ summary: 為了提高安全性，請在 NetApp Backup and Recovery 中配置特�
 
 
 [role="lead"]
-為了提升安全性並控制資源存取，請為 NetApp Backup and Recovery 設定以角色為基礎的存取權限。NetApp Console 支援部分 Backup and Recovery 工作負載的角色型存取控制（RBAC）。你可以針對這些工作負載指派管理員或檢視者角色。尚未支援角色型存取控制的其他工作負載，在支援專案層級關聯之前，仍可由所有具有 Backup and Recovery 角色的使用者存取。
+為了提高安全性並控制資源存取，請為 NetApp Backup and Recovery 設定角色型存取。NetApp Console 支援部分 Backup and Recovery 工作負載的角色型存取控制 （RBAC）。您可以為這些工作負載指派特定的管理員或檢視者角色。其他尚不支援角色型存取控制的工作負載，在支援專案層級或機組層級關聯之前，仍可供所有具有 Backup and Recovery 角色的使用者存取。
+
+
+NOTE: NetApp Console 使用專案來組織資料夾中的資源，而 NetApp Console 本地部署則將專案稱為機組。
 
 請依照以下步驟控制對組織內資源的存取權限。在 NetApp Console 選單的「管理 > 身分和存取」頁面中進行變更。
 

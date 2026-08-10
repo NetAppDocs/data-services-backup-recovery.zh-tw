@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-discover-no-activate.html 
+keywords: activate, backup and recovery, volumes, back up, discover 
+summary: 無需啟動 NetApp Backup and Recovery 即可探索系統和 Volume。 
+---
+= 無需啟動即可探索 ONTAP 系統和 Volume
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在啟動 Volume 的備份和復原功能時探索系統和 Volume，也可以在啟動 NetApp Backup and Recovery 之前探索。如果您在未啟動備份和復原功能的情況下探索 Volume，則必須先啟動備份和復原功能才能保護這些 Volume。
+
+.步驟
+. 前往 *Protection > Backup and Recovery*。
+. 選擇 *Volumes* 圖塊。
++
+「Volumes」儀表板隨即出現。
+
+. 選擇 *Discover systems*。
+. 在清單中，選取要探索其 Volume 的所有系統。
+. 選擇*發現*。
+. 在NetApp Backup and Recovery中，選擇 *Inventory*。
++
+探索過程開始。您可以在作業監視器中查看探索狀態和結果。
+
+

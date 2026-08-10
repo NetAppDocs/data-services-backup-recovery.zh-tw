@@ -376,7 +376,7 @@ NOTE: 客戶管理的金鑰加密功能僅支援 Amazon FSx for NetApp ONTAP。�
 . 從 AWS 控制台取得端點的 DNS 名稱。
 . 從 VPC S3 端點取得憑證。你可以透過以下方式做到這一點 https://docs.netapp.com/us-en/console-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["登入託管控制台代理的虛擬機"^]並運行以下命令。輸入端點的 DNS 名稱時，在開頭新增“bucket”，取代“*”：
 +
-[source, console]
+[source, shell]
 ----
 openssl s_client -connect bucket.vpce-0ff5c15df7e00fbab-yxs7lt8v.s3.us-west-2.vpce.amazonaws.com:443 -showcerts
 ----
@@ -396,9 +396,9 @@ GqvbOz/oO2NWLLFCqI+xmkLcMiPrZy+/6Af+HH2mLCM4EsI2b+IpBmPkriWnnxo=
 ----
 . 登入ONTAP叢集 CLI 並使用以下命令套用您複製的憑證（取代您自己的儲存虛擬機器名稱）：
 +
-[source, console]
+[source, shell]
 ----
-cluster1::> security certificate install -vserver cluster1 -type server-ca
+security certificate install -vserver cluster1 -type server-ca
 Please enter Certificate: Press <Enter> when done
 ----
 
