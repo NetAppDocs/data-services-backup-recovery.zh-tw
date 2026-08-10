@@ -126,7 +126,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 
 * Azure 需求：
 +
-** 您必須向您的訂閱註冊 Azure Synapse Analytics 資源提供者（稱為「Microsoft.Synapse」）。 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["了解如何為您的訂閱註冊此資源提供程序"^] 。您必須是訂閱*擁有者*或*貢獻者*才能註冊資源提供者。
+** 您必須將 Azure Synapse Analytics 資源供應商（名為「Microsoft.Synapse」）註冊到您的訂閱中 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["了解如何為您的訂閱註冊此資源提供程序"^]。您必須是訂閱的*擁有者*或*參與者*才能註冊資源供應商。
 ** 必須將特定的 Azure Synapse Workspace 和 Data Lake Storage 帳戶權限新增至為控制台提供權限的使用者角色。link:prev-ontap-backup-onprem-azure.html["確保所有權限均已正確配置"]。
 +
 請注意，如果您已經使用NetApp Backup and Recovery以及過去配置的控制台代理，則現在需要將 Azure Synapse Workspace 和 Data Lake Storage 帳戶權限新增至控制台使用者角色。它們是搜尋和恢復所必需的。

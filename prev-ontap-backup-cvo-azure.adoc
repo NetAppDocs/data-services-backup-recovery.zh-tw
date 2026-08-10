@@ -73,7 +73,7 @@ image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recov
 要使用NetApp Backup and Recovery搜尋和還原功能，您需要在控制台代理程式的角色中擁有特定權限，以便它可以存取 Azure Synapse 工作區和資料湖儲存帳戶。請參閱下面的權限，如果需要修改策略，請依照下列步驟操作。
 
 .開始之前
-* 您必須向您的訂閱註冊 Azure Synapse Analytics 資源提供者（稱為「Microsoft.Synapse」）。 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["了解如何為您的訂閱註冊此資源提供程序"^] 。您必須是訂閱*擁有者*或*貢獻者*才能註冊資源提供者。
+* 您必須將 Azure Synapse Analytics 資源供應商（名為「Microsoft.Synapse」）註冊到您的訂閱中 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["了解如何為您的訂閱註冊此資源提供程序"^]。您必須是訂閱的*擁有者*或*參與者*才能註冊資源供應商。
 * 必須開啟連接埠 1433 才能實現控制台代理程式和 Azure Synapse SQL 服務之間的通訊。
 
 
