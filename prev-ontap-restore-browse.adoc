@@ -40,25 +40,77 @@ NOTE: 將資料從 Azure 檔案儲存還原到StorageGRID系統時不支援高�
 [[browse-restore-supported-systems-and-object-storage-providers]]
 == 瀏覽並恢復支援的系統和物件儲存提供者
 
-您可以將ONTAP資料從位於二級系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。
-
-*注意：*您可以從任何類型的備份檔案還原卷，但目前只能從物件儲存中的備份檔案還原資料夾或單一檔案。
+您可以將 ONTAP 資料從位於二線系統（複製 Volume）或物件儲存（備份檔案）中的備份檔案還原到下列系統。
 
 [cols="25,25,25,25"]
 |===
 | *來自物件儲存（備份）* | *來自主（快照）* | *來自輔助系統（複製）* | 至目的地系統 
 
 
-| 亞馬遜 S3 | AWS 本機ONTAP系統中的Cloud Volumes ONTAP | AWS 本機ONTAP系統中的Cloud Volumes ONTAP | Azure Blob 
+| 亞馬遜 S3  a| 
+* AWS 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+ a| 
+* AWS 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+ a| 
+* 本地ONTAP系統
+* Cloud Volumes ONTAP
 
 
-| Azure 本地端ONTAP系統中的Cloud Volumes ONTAP | Azure 本地端ONTAP系統中的Cloud Volumes ONTAP | Google 雲端儲存 | Google 本機ONTAP系統中的Cloud Volumes ONTAP 
 
 
-| Google 本機ONTAP系統中的Cloud Volumes ONTAP | NetAppStorageGRID | 本地ONTAP系統 | 本機ONTAP系統Cloud Volumes ONTAP 
+| Azure Blob  a| 
+* Azure 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+ a| 
+* Azure 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+ a| 
+* 本地ONTAP系統
+* Cloud Volumes ONTAP
 
 
-| 到本地ONTAP系統 | ONTAP S3 | 本地ONTAP系統 | 本機ONTAP系統Cloud Volumes ONTAP 
+
+
+| Google 雲端儲存  a| 
+* Google 的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+ a| 
+* Google 的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+ a| 
+* 本地ONTAP系統
+* Cloud Volumes ONTAP
+
+
+
+
+| NetAppStorageGRID | 本地ONTAP系統  a| 
+* 本地ONTAP系統
+* Cloud Volumes ONTAP
+
+| 本地ONTAP系統 
+
+
+| ONTAP S3 | 本地ONTAP系統  a| 
+* 本地ONTAP系統
+* Cloud Volumes ONTAP
+
+| 本地ONTAP系統 
+
+
+| S3 相容物件儲存 | 本地ONTAP系統  a| 
+* 本地ONTAP系統
+* Cloud Volumes ONTAP
+
+| 本地ONTAP系統 
 |===
 對於瀏覽和恢復，控制台代理可以安裝在以下位置：
 

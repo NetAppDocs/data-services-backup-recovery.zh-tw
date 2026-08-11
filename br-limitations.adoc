@@ -19,7 +19,7 @@ summary: NetApp Backup and Recovery需要先發現數據，以便您使用該服
 
 
 [[backup-and-recovery-preview-for-netapp-console-local-deployment-limitation]]
-=== NetApp Console 本機部署的 Backup and Recovery 預覽版限制
+== NetApp Console 本機部署的 Backup and Recovery 預覽版限制
 
 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
 
