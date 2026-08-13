@@ -247,7 +247,6 @@
   <block id="1e2c3f75c2996070badf4cdcfa9188be" category="list-text">從主儲存、輔助儲存和物件儲存還原虛擬機</block>
   <block id="318dd7c3ae3e9302e9fc1054a535b274" category="list-text">搜尋和恢復虛擬機器備份</block>
   <block id="57a29df96f4bdf53f80c56b739785313" category="inline-link">保護 Hyper-V 工作負載概述</block>
-  <block id="f7bc6e5577bf047a5f192d548391185c" category="paragraph">有關保護 Hyper-V 工作負載的詳細信息，請參閱<block ref="8b99e6e4e6dfd30b0b16292fe5edfbd4" category="inline-link-rx"></block>。</block>
   <block id="ade0d83a8d5df6524dcf5bc339bf6236" category="section-title">KVM 工作負載支援作為私人預覽</block>
   <block id="99803398691d47a569fe2e0eeaf8a74c" category="list-text">備份和還原儲存在 NFS 共享上的 qcow2 VM 映像</block>
   <block id="81e3905959a6e11107e52c1db1aa927a" category="list-text">備份儲存池</block>
@@ -256,7 +255,6 @@
   <block id="33b87914ae72ad3c394fc1f941a94c8c" category="list-text">從主儲存、輔助儲存和物件儲存中搜尋並還原虛擬機器備份</block>
   <block id="01edc88c05b373b3f7ebaedf025e6c66" category="list-text">備份和還原基於 KVM 的虛擬機器和虛擬機器資料的指導流程</block>
   <block id="4cfb069ae88ce34afb281a4bbf65ac6e" category="inline-link">保護 KVM 工作負載概述</block>
-  <block id="79fcd951f792f60f767e44b5011c7851" category="paragraph">有關保護 KVM 工作負載的詳細信息，請參閱<block ref="e92217b78da768e08fd669e597378b8f" category="inline-link-rx"></block>。</block>
   <block id="c95af44ddc098359d1a302a271aa883b" category="section-title">Kubernetes 預覽增強功能</block>
   <block id="a9db09b7be48f8631739b57e73f48cd3" category="paragraph">Kubernetes 工作負載的預覽版引入了以下增強功能：</block>
   <block id="7f6a04aadde1854e173d7668132da89b" category="list-text">3-2-1 扇出備份架構支持</block>
@@ -346,7 +344,6 @@
   <block id="25e66e51214e8342374fa891a42988b3" category="list-text">恢復至備用位置</block>
   <block id="ef18d76ed6c710e78abb28c0e09b3e30" category="list-text">vVol 支持</block>
   <block id="98dc7ecfe4c87955d5fb8b98b895eac7" category="list-text">電子郵件集成</block>
-  <block id="eaaed5c467c733cb37141573cd1396cf" category="doc">NetApp Backup and Recovery針對 Microsoft SQL Server 工作負載的已知限制</block>
   <block id="84c88b39fd4f46203da512886dfca56b" category="section-title">克隆生命週期支援</block>
   <block id="3c068270aa0287f7c64a3c9c3a4f89a7" category="list-text">不支援從物件儲存克隆。</block>
   <block id="610c4dda883be7c31ce2aa927e41cbf3" category="list-text">按需克隆不支援批量克隆操作。</block>
@@ -624,7 +621,6 @@
   <block id="12d8eeba7e97739f6035cbec50bd2369" category="list-text">*工作負載類型*：選擇*KVM*。</block>
   <block id="238fb750ebdea9faf36668536aaa8b42" category="paragraph">KVM 工作負載顯示在「庫存」頁面的工作負載清單中。</block>
   <block id="8160dc72c9473d18119ea3e52fe65572" category="paragraph">新增 Oracle 主機資訊並讓NetApp Backup and Recovery發現工作負載。在每個控制台代理程式中，選擇您想要發現工作負載的系統。</block>
-  <block id="5b9d0f0da934c7776ba30ad3c1fe47b2" category="doc">發現 Microsoft SQL Server 工作負載並可選擇從NetApp Backup and Recovery中的SnapCenter匯入</block>
   <block id="cd6726508604886a0b7b678ad4f6a2b8" category="paragraph">NetApp Backup and Recovery需要先發現 Microsoft SQL Server 工作負載，您才能使用該服務。如果您已經安裝了SnapCenter ，則可以選擇從SnapCenter匯入備份資料和原則。</block>
   <block id="da39a7712232603b7b60f32ff70cea25" category="section-title">發現 Microsoft SQL Server 工作負載並選擇性地匯入SnapCenter資源</block>
   <block id="c3c491309ae5a0dc1e917949dbce3a2d" category="paragraph">在發現過程中， NetApp Backup and Recovery會分析組織內系統中的 Microsoft SQL Server 執行個體和資料庫。</block>
@@ -834,7 +830,6 @@
   <block id="9b10f740f7a3baa5d49ccca5b455a03c" category="paragraph">將 Hyper-V VM 從本機ONTAP系統備份到 Amazon Web Services、 Azure NetApp Files或StorageGRID，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。</block>
   <block id="663b8460da445a8bdcdacd5586794a5a" category="inline-link-macro">創建策略</block>
   <block id="05b46e53cea9fa986faee5585257dc74" category="list-text">若要按排程備份工作負載，請建立管理備份和還原作業的策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>以取得說明。</block>
-  <block id="6abc83c82a1319b4d333fa2233e4f151" category="inline-link-macro">使用NetApp Backup and Recovery為 Hyper-V 工作負載建立和管理保護群組</block>
   <block id="7560dd7799dfbab82d090d3826c438e5" category="list-text">立即備份工作負載（立即建立按需備份）。</block>
   <block id="7eb85b9ab846044a4d26b2851ea3e18c" category="section-title">立即使用按需備份來備份工作負載</block>
   <block id="a940ef4062bc3a7b375cd592da54d6fe" category="paragraph">您可以立即執行按需備份。如果您要對系統進行更改並希望確保在開始之前有備份，這將很有幫助。</block>
@@ -913,7 +908,6 @@
   <block id="d705348f84095bf9f266942da2cf2b84" category="list-text">*啟用電子郵件通知*：選擇此選項可接收有關復原作業的電子郵件通知，並指示您想要接收的通知類型。</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">選擇*恢復*。</block>
   <block id="4c931104d6ff5fdc2a76bdfc6fba4662" category="summary">您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID 的Kubernetes 應用程式和應用程式數據，確保您的資料受到保護。</block>
-  <block id="ff1a3fbe6f92249e286b8a93cf5b5d2e" category="doc">管理 Kubernetes 工作負載概覽</block>
   <block id="d1b6f4df1f42df470c1bfa384687e106" category="paragraph">下圖展示了 Kubernetes 工作負載的備份和還原的元件和基本架構，以及如何將資料的不同副本儲存在不同位置：</block>
   <block id="47cae08dce34f06a5f1a2add5c4d92c4" category="inline-image-macro">Kubernetes 工作負載備份與復原架構圖</block>
   <block id="2c3fb17cb3de300689b53969785defa5" category="paragraph"><block ref="2c3fb17cb3de300689b53969785defa5" category="inline-image-macro-rx" type="image"></block></block>
@@ -924,19 +918,14 @@
   <block id="e94d9102ade906ff7fd5fc370d68c0d8" category="paragraph">您可以完成與管理 Kubernetes 工作負載相關的下列任務：</block>
   <block id="d30235bcb420e82027cadb3cffab450f" category="list-text"><block ref="bdf340f843cf54500673f62df22d5070" category="inline-link-macro-rx"></block>。</block>
   <block id="384b71db954a7a463c759208283e47c4" category="inline-link-macro">管理 Kubernetes 集群</block>
-  <block id="75750592598a2163e070809696d795f5" category="list-text"><block ref="4c3d4ee32af52a5715d89ae7d8ef89d4" category="inline-link-macro-rx"></block>。</block>
   <block id="bd0d9feacbc44891c493b82f74939311" category="inline-link-macro">新增和保護 Kubernetes 應用程式</block>
-  <block id="d0b5709d97bbe5098abd93c7e694cb77" category="list-text"><block ref="3e35e8d4173c71043e7b66d0d706f7de" category="inline-link-macro-rx"></block>。</block>
   <block id="7ce6b1278baad78a64a18c8640136c77" category="inline-link-macro">管理 Kubernetes 應用程式</block>
-  <block id="1c39e480280e05e6e2669259a50ce500" category="list-text"><block ref="dc144ac0d06e909a8d08dc882910af82" category="inline-link-macro-rx"></block>。</block>
   <block id="343af147af834c1b9b9a351344e425f2" category="inline-link-macro">恢復 Kubernetes 應用程式</block>
   <block id="1af35924e4dcf46a6e48f4acc678dff6" category="list-text"><block ref="7769ce529a2e3eb709e04d840fce1c3b" category="inline-link-macro-rx"></block>。</block>
   <block id="744546642e71088baf4315094df38746" category="summary">使用NetApp備份和復原保護您的 KVM 工作負載。</block>
   <block id="cac571a156e888c0880b8aef4dedffa1" category="doc">使用NetApp Backup and RecoveryKVM 工作負載</block>
   <block id="03b485a42ff9f3ab6b866003e695baab" category="paragraph">將 KVM 保護群組從本機ONTAP系統備份至 Amazon Web Services、 Azure NetApp Files或StorageGRID，以確保您的資料受到保護。備份保護群組時， NetApp Console會備份該保護群組中包含的虛擬機器和儲存池。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。</block>
   <block id="e041984a6da2e8a11f5059b38e9fa433" category="admonition">若要按排程備份保護群組，請建立管理備份和還原作業的政策。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>以取得說明。</block>
-  <block id="acc91ecacc65c8b61d7cc5e8b87c9b16" category="inline-link-macro">使用NetApp Backup and Recovery為 KVM 工作負載建立和管理保護群組</block>
-  <block id="01b71b30358060af2af131d782d36b14" category="list-text">建立保護組來管理一組資源的備份和還原作業。看<block ref="9f310ee55069faa86451032b68f08200" category="inline-link-macro-rx"></block>了解更多。</block>
   <block id="fa962838903da9010b982b3b7dc8b0d7" category="section-title">立即使用按需備份來備份保護群組</block>
   <block id="439c49409f66b996051132e75cb733a9" category="list-text">選擇要備份的保護組。</block>
   <block id="b6ae737eccbf79159084e585ff9b8d6d" category="admonition">應用於備份的策略與指派給保護組的策略相同。</block>
@@ -969,7 +958,6 @@
   <block id="28826b6f1571b9d0354ca0ae481f50c6" category="list-text">從名稱搜尋欄位右側的下拉清單中，選擇 *KVM*。</block>
   <block id="066fa262c239f022506c95a1e09ebb65" category="list-text">輸入要還原的 VM 的名稱或篩選要還原的資源所在的 VM 主機或儲存池。</block>
   <block id="67833cdc3e0f9b5bea226d3734262615" category="summary">NetApp Backup and Recovery使您能夠管理執行掛鉤，以便在應用程式保護作業之前或之後採取行動。</block>
-  <block id="3d932cbb71cd117a65669b165e078b5b" category="doc">管理適用於 Kubernetes 工作負載的NetApp Backup and Recovery執行掛鉤模板</block>
   <block id="ac84b7596169ab3fb6c24e8a5c85c234" category="inline-link">使用 KubeVirt 虛擬機器保護數據</block>
   <block id="e71db3dcefde23f3505bd780d11437a6" category="list-text">若要為所有應用程式停用此行為，請參閱<block ref="cdee12d0fdecb470fee17a09aa7ec297" category="inline-link-rx"></block>。</block>
   <block id="2fd92693952062fc00d949899370185d" category="inline-link">定義應用程式</block>
@@ -1559,7 +1547,6 @@
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">刪除備份</block>
   <block id="d1980609675dd3ea40abaebd4a0989d8" category="doc">使用NetApp Backup and RecoveryVMware 工作負載</block>
   <block id="30a409f022898dd26f006e04486b81e0" category="paragraph">將 VMware VM 和資料儲存區從本機ONTAP系統備份到 Amazon Web Services、 Azure NetApp Files或StorageGRID，以確保您的資料受到保護。備份會自動產生並儲存在您的公有或私有雲帳戶的物件儲存中。</block>
-  <block id="f941928782d55bd3ba649990c808fcbd" category="inline-link-macro">使用NetApp Backup and Recovery為 VMware 工作負載建立和管理保護群組</block>
   <block id="bd3847966f48b6808bad35d652e79b8b" category="list-text">從備份和還原選單中，選擇*庫存*。</block>
   <block id="f1e9f00ae199ca6520d1d2e98102cd84" category="doc">使用NetApp Backup and Recovery發現 VMware 工作負載</block>
   <block id="7ac2807cf305b6eed9abb3096eafd7b5" category="paragraph">NetApp Backup and Recovery服務需要先發現在ONTAP系統上執行的 VMware 資料儲存和虛擬機，以便您可以使用該服務。如果您已安裝SnapCenter Plug-in for VMware vSphere匯入備份資料和政策。</block>
@@ -1611,7 +1598,6 @@
   <block id="3bad3af408bb48efcddbf97415e11709" category="list-text">在清單 &gt; 工作負載頁面中，選擇操作圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *管理* 顯示管理 vCenter 頁面。</block>
   <block id="4513150785c046bfbcd37a0b9dcb7a35" category="list-text">選取「您想繼續遷移嗎？」複選框並選擇*遷移*。</block>
   <block id="13be03aaa1d065e4e2a3d1cb64d9f254" category="paragraph">清單頁面顯示新管理的 vCenter 資源。</block>
-  <block id="9f292a76282f4f6731d03460bcd3b924" category="doc">使用NetApp Backup and Recovery保護 VMware 工作負載概述</block>
   <block id="13a7ab00fe9ae146021f5c5ab40ca443" category="paragraph">使用NetApp Backup and Recovery實作 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端保留 1 個副本。3-2-1 方法的優點包括：</block>
   <block id="eb2d112b017e683992cc9b9b338c90a1" category="paragraph">您可以使用NetApp Backup and Recovery執行與 VMware 工作負載相關的下列任務：</block>
   <block id="4c90ef6c5dc037251bf65afdeeb1ee6c" category="list-text"><block ref="4c90ef6c5dc037251bf65afdeeb1ee6c" category="inline-link-macro-rx"></block></block>
@@ -1736,7 +1722,6 @@
   <block id="3d64ce7622c605da7588f1fc1631218b" category="list-text">*保護*： NetApp Backup and Recovery中的保護意味著確保使用保護策略定期將快照和不可變備份傳送到不同的安全域。</block>
   <block id="d67d3b3386ed426c121867b5d4117a50" category="list-text">*工作負載*： NetApp Backup and Recovery中的工作負載可以包括ONTAP磁碟區、Microsoft SQL Server 執行個體和資料庫；VMware VM 和資料儲存區；或 Kubernetes 叢集和應用程式。</block>
   <block id="ab88260b949b573ae8e9bfa68047faf4" category="summary">透過驗證操作環境、控制台代理程式和控制台帳戶的準備情況來開始使用NetApp Backup and Recovery 。要使用NetApp Backup and Recovery，您需要滿足這些先決條件。</block>
-  <block id="33a64c9b2c5bf45d79f7c8d3cfed7609" category="doc">從外掛程式服務匯入NetApp Backup and Recovery 的先決條件</block>
   <block id="0bfac17e903cad9f09711c6925f0b7a8" category="paragraph">如果您要將資源從 Microsoft SQL Server 的SnapCenter外掛程式服務匯入NetApp Backup and Recovery，則需要設定更多項目。</block>
   <block id="ccc193cf85b1791b2d154f384494e867" category="section-title">首先在NetApp Console中建立系統</block>
   <block id="02dcea582cf2c07e9f15021a959ecfe1" category="paragraph">如果要從SnapCenter匯入資源，則應先將所有本機SnapCenter叢集儲存體新增至控制台 *系統* 頁面，然後再從SnapCenter匯入。這確保主機資源能夠被正確地發現和導入。</block>
@@ -2811,7 +2796,6 @@
   <block id="9d089a52567a29f4f420f7f2f76246ac" category="inline-link">使用 System Manager 建立物件儲存策略的備份</block>
   <block id="fb258284d7569744ca758873d339532b" category="inline-link">使用ONTAP CLI 建立物件儲存策略備份</block>
   <block id="bc7ba4c7d62d6d4917e638edbc43dbb5" category="paragraph"><block ref="1d5508fcd8027e26b48962bd984558d5" category="inline-link-rx"></block> <block ref="25d9216966497b44f1274c2fdc3f62ee" category="inline-link-rx"></block> <block ref="6a671fae687ae09ed6ec2eb759a70329" category="inline-link-rx"></block> <block ref="76f9b86225921137bc166f71caebf3f1" category="inline-link-rx"></block> <block ref="ab2445e139747cf732d46d877cc62a64" category="inline-link-rx"></block> <block ref="9c225a8772c7b3c40b62701739b123cf" category="inline-link-rx"></block></block>
-  <block id="d6b2f75c5e7cc6c2d5da7268c117d88e" category="doc">在NetApp Backup and Recovery和還原進階設定中管理備份到物件儲存選項</block>
   <block id="2f5538c2e34ba12aae307adeb8e9361f" category="admonition">這些設定僅適用於備份到物件儲存。這些設定都不會影響您的快照或複製設定。</block>
   <block id="c7097337eab210464618620268aa80bc" category="paragraph">您可以在進階設定頁面中變更以下選項：</block>
   <block id="90262b49b516aea0770d54c5389860ab" category="list-text">更改是否從來源系統中刪除“年度”快照</block>
@@ -2978,7 +2962,6 @@
   <block id="934b0a65e87eaa0952123591f2e40ba3" category="paragraph">如果您的本地叢集使用的是ONTAP 9.12.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and Recovery UI 中的「_Archive_」儲存中，以進一步最佳化成本。<block ref="a5f5ea528fdc4d7b7927a7bc5e75da85" category="inline-link-macro-rx"></block>。</block>
   <block id="c811e121a426ef27a318d7ddd351730d" category="list-text">在StorageGRID中，備份與 _Standard_ 儲存類別相關聯。</block>
   <block id="858f352aed10fc578bc936929dbfe50b" category="paragraph">如果您的本地叢集使用ONTAP 9.12.1 或更高版本，並且您的StorageGRID系統使用 11.4 或更高版本，則可以將較舊的備份檔案存檔到公有雲檔案儲存。</block>
-  <block id="bb4d18abee2ac1ac9616f24e56d8201d" category="doc">使用NetApp Backup and Recovery規劃您的保護之旅</block>
   <block id="854bc156a37cbbf040c040fbef53bdec" category="paragraph">NetApp Backup and Recovery使您能夠建立最多三個來源磁碟區副本來保護您的資料。在磁碟區上啟用備份和還原時，您可以選擇許多選項，因此您應該檢查您的選擇以做好準備。</block>
   <block id="abb8243f73c63e089a9cc6cdf95785b2" category="paragraph">我們將討論以下選項：</block>
   <block id="85c221c528aa48303ce42bd715536fcc" category="list-text">您將使用哪種備份架構：磁碟區的級聯備份還是磁軌備份</block>
@@ -3110,7 +3093,6 @@
   <block id="c91b161e73b74151a87e57d1b478a8bf" category="admonition">BlueXP私有模式（傳統BlueXP介面）通常用於沒有網路連線的本機環境和安全雲端區域，其中包括 AWS Secret Cloud、AWS Top Secret Cloud 和 Azure IL6。NetApp繼續透過傳統的BlueXP介面支援這些環境。有關舊版BlueXP介面中的私人模式文檔，請參閱<block ref="48f65378777d422181826aa490861bdb" category="inline-link-rx"></block>。</block>
   <block id="7d137c690fd8c0d815296a007443c889" category="list-text">您可以將資料從本機ONTAP系統備份到本機NetApp StorageGRID系統。<block ref="860e591e9b4ec768065d563e22bafdf4" category="inline-link-macro-rx"></block>。</block>
   <block id="02cb06ba88a3c5f99e8d4b475bd0ac1b" category="inline-link-macro">將本地ONTAP資料備份到ONTAP S3</block>
-  <block id="8116cbee5887b07b452fecf9c1836d5c" category="doc">使用NetApp Backup and Recovery保護您的ONTAP卷數據</block>
   <block id="f147568c086732bd86eb443dc52d5e33" category="paragraph">NetApp Backup and Recovery功能，用於保護和長期存檔您的ONTAP磁碟區資料。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。</block>
   <block id="80281310e7f1753680348f039d61ece0" category="paragraph">啟動後，備份和復原會建立區塊級、增量永久備份，這些備份儲存在另一個ONTAP叢集和雲端中的物件儲存中。除了來源磁碟區之外，您還將擁有：</block>
   <block id="00b4fe156d0b170f5196995dd8889b0d" category="list-text">不同儲存系統上的複製卷</block>
@@ -3229,7 +3211,6 @@
   <block id="3b4f7847e0c80a6665d11cb27ec353f5" category="list-text">後續備份是增量的，不會產生這種影響。</block>
   <block id="418dfdb508c036c09d2c850937665491" category="list-text">如果在最初建立磁碟區時將分層策略指派給磁碟區，則您將不會看到此問題。</block>
   <block id="75968f9094e000b12da4b2ead555a058" category="list-text">在分配之前考慮備份的影響<block ref="a181a603769c1f98ad927e7367c7aa51" prefix=" " category="inline-code"></block>對磁碟區進行分層策略。由於資料是立即分層的，NetApp Backup and Recovery將從雲層而不是本地層讀取資料。由於並發備份操作共享與雲端物件儲存的網路鏈接，因此如果網路資源飽和，可能會出現效能下降。在這種情況下，您可能需要主動配置多個網路介面 (LIF) 來減少這種類型的網路飽和。</block>
-  <block id="0d5740d6083fb9ac304bfaa4bb99e957" category="doc">使用NetApp Backup and Recovery從備份檔案還原ONTAP數據</block>
   <block id="bbf0b1b9c16dc904da9a8179519e7e31" category="list-text">您可以將*磁碟區*（作為新磁碟區）還原到原始系統、使用相同雲端帳戶的其他系統或本機ONTAP系統。</block>
   <block id="a4883a32493cbf65048c6ba0d655088d" category="list-text">您可以將*檔案*還原到原始系統中的磁碟區、使用相同雲端帳戶的不同系統中的磁碟區或本機ONTAP系統上的磁碟區。</block>
   <block id="d92c1fbc11ff9a4d0db37653e35a2e52" category="paragraph">總而言之，這些是可用於將磁碟區資料還原到ONTAP系統的有效流程：</block>
@@ -3261,7 +3242,6 @@
   <block id="91679e5e03d41aefa89ddfa7649b05d2" category="paragraph">請參閱要使用的還原操作類型的要求和還原步驟：</block>
   <block id="ab298a1df9e049ac3ba4c02e893cc475" category="inline-xref">使用「瀏覽和恢復」恢復卷</block>
   <block id="8996e9eaff78ab540aab279a66de20ac" category="inline-xref">使用「搜尋和還原」功能還原磁碟區、資料夾和文件</block>
-  <block id="685a6ba7b83ab5e286920feb961c08bb" category="section-title">使用“瀏覽和還原”功能還原ONTAP數據</block>
   <block id="b23bca1a2a7f2ec270c7be93eb3d5720" category="inline-link-macro">了解有關從 AWS 檔案儲存恢復的更多信息</block>
   <block id="f0a32293e7110abfd30f9402fa924815" category="inline-link-macro">了解有關從 Azure 檔案儲存還原的詳細信息</block>
   <block id="e57e5c06a7f562addb87315f013677ab" category="inline-link-macro">詳細了解如何從 Google 存檔儲存中恢復</block>
@@ -3599,12 +3579,10 @@
   <block id="7bbc18e8c81866c16ae2fa4ae7b4faa7" category="cell"><block ref="04dcde0112f87c65139657970e95733e" prefix="" category="inline-code"></block></block>
   <block id="e23da6bf724f3225b25342aa20aab822" category="cell"><block ref="1e8904cbbffb7eff1de96297f70cd53e" prefix="" category="inline-code"></block></block>
   <block id="74443ec40597d5044894672e880e4cb8" category="summary">NetApp Backup and Recovery採用 IAM 角色來管理每個使用者對特定功能和操作的存取權。</block>
-  <block id="30aedeff64f56a66117a57772bf048e2" category="doc">NetApp Backup and Recovery身分和存取管理 (IAM) 角色</block>
   <block id="628ffac7ede42e0edae88edd9f769e8b" category="paragraph">NetApp Backup and Recovery and Recovery採用身分識別和存取管理 (IAM) 來管理每個使用者對特定功能和操作的存取權限。</block>
   <block id="d8242f460ba07545cc4fc280abc24dfd" category="inline-link">NetApp Console中的NetApp Backup and Recovery角色</block>
   <block id="b7ce2fa7e7dfbfcf006c177bd9507fe6" category="paragraph">若要了解位於NetApp Backup and Recovery特定的IAM 角色，請參閱<block ref="00765778411880d6fabcf7f493ef0db6" category="inline-link-rx"></block>。</block>
   <block id="cbeefab9985d18cf649d85c32d79d188" category="summary">建立安全性憑證以啟用NetApp Backup and Recovery與StorageGRID或ONTAP之間的通訊。</block>
-  <block id="63b31af683f5a728cbf36267c289589f" category="doc">在NetApp Backup and Recovery中為StorageGRID和ONTAP設定安全性證書</block>
   <block id="67fc617cb862496da73f0d13f68e5e84" category="section-title">為StorageGRID建立安全性證書</block>
   <block id="66474d54a0b8e88b5463c446c79940ef" category="paragraph">產生的憑證應具有 CN 和主題備用名稱，作為啟動備份時NetApp Backup and Recovery中提供的名稱。</block>
   <block id="04fad0ac16d7f2deb1987a5510c738a1" category="list-text">請依照StorageGRID文件中的步驟建立StorageGRID憑證。</block>
@@ -3706,41 +3684,18 @@
   <block id="14c080443b0d6b621daed392bae461c2" category="sidebar">NetApp Backup and Recovery文檔</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">發行說明</block>
   <block id="adc285d73b2f7cdf2384ca8c91570878" category="sidebar">ONTAP磁碟區工作負載的已知限制</block>
-  <block id="09092e90e42e51dde4c6cb831f40c41e" category="sidebar">Microsoft SQL Server 工作負載的已知限制</block>
   <block id="fe5216e8c6ca199aaa9802985fb31c17" category="sidebar">VMware 工作負載的已知限制</block>
   <block id="006d31cf1f539a7e450614470546345c" category="sidebar">Hyper-V 工作負載的已知限制</block>
   <block id="c97a0e572b66db226b5bead553a18a21" category="sidebar">KVM 工作負載的已知限制</block>
-  <block id="af63af72a4851d67644aa944a5b730df" category="sidebar">NetApp Backup and Recovery的先決條件</block>
-  <block id="ad4016cac47a83a6e1446b1b38d42180" category="sidebar">為ONTAP和StorageGRID設定安全證書</block>
-  <block id="302152c28a081827c4d7c5eeb2372c70" category="sidebar">配置NetApp Backup and Recovery常規設置</block>
   <block id="9108ac44c023ea7b20fce0b4ae303134" category="sidebar">使用NetApp Backup and Recovery</block>
   <block id="0302e61ffbf31edbbbd1fc59ebe8483a" category="sidebar">保護ONTAP磁碟區工作負載</block>
-  <block id="8589e10f754e309eea1413339cac0722" category="sidebar">保護ONTAP磁碟區工作負載概述</block>
-  <block id="9af25233c7173e28a0f37d630f8fbe09" category="sidebar">規劃ONTAP卷的保護之旅</block>
-  <block id="6b28ac02ff2a9de6b423b9f57d6a4d09" category="sidebar">管理ONTAP磁碟區的策略</block>
-  <block id="4530f08d456589f6b973b76d8b5843e9" category="sidebar">管理備份到物件策略進階設定選項</block>
-  <block id="30f1797234e3bfa4ab1f707a8b681072" category="sidebar">將Cloud Volumes ONTAP備份到 Amazon S3</block>
-  <block id="32bfa5cb747a11af2fed4c8de1f2cc27" category="sidebar">將Cloud Volumes ONTAP備份到 Azure Blob</block>
-  <block id="b5b529e8dc821910caacb50b880d2487" category="sidebar">將Cloud Volumes ONTAP備份到 Google Cloud</block>
-  <block id="b0d927ad422ac8cc6384923c7961c4b5" category="sidebar">將本機ONTAP備份到 Amazon S3</block>
-  <block id="f5b61ddaf24256f9a32421bae22a1e21" category="sidebar">將本機ONTAP備份到 Azure Blob</block>
-  <block id="e8f201c141a8ad9fbe4ea92510b4ca30" category="sidebar">將本地ONTAP備份到 Google Cloud</block>
-  <block id="6a2941303bd6f981e2724af76bf3da2e" category="sidebar">將本地ONTAP備份到StorageGRID</block>
-  <block id="5ee1bd11e1cae9e48854c491affa72a6" category="sidebar">管理ONTAP備份</block>
   <block id="0f18ca4c27c34246c6bc09d2bbf775c6" category="sidebar">從ONTAP備份還原</block>
   <block id="c00b274754a2d13242a61b1534660a37" category="sidebar">管理 Microsoft SQL Server 庫存</block>
   <block id="41e1a34ea3ba2b687b86e55ec1a7955d" category="sidebar">管理 Microsoft SQL Server 快照</block>
   <block id="c8ffa42e0e508862d020665c979eb5c0" category="sidebar">建立 Microsoft SQL Server 報告</block>
   <block id="3186e7c44dc909386a0204716ffc46f6" category="sidebar">管理 Kubernetes 工作負載的執行鉤子模板</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="sidebar">監控作業</block>
-  <block id="68b1e52936c426875b2780e91e195546" category="sidebar">使用 REST API 實現自動化</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考</block>
-  <block id="b8eb63e33c59a9179cc3722091163f7b" category="sidebar">SnapCenter中的策略與NetApp Backup and Recovery的策略比較</block>
-  <block id="a0ed7f6901b0fa563476381ac02c5fdd" category="sidebar">NetApp Backup and Recovery角色和權限</block>
-  <block id="60ec37a58e91a8c13f6a1ad249517432" category="sidebar">在暗站中恢復NetApp Backup and Recovery數據</block>
-  <block id="0253148ca606e51aa3fdb4d9f8b84f32" category="sidebar">支援的 AWS 存檔儲存層</block>
-  <block id="62967cdcfc7912e3c1a9b3870580fe3f" category="sidebar">支援的 Azure 存檔儲存層</block>
-  <block id="6af2225d62ab9c4b0de4dfa7f9e852f5" category="sidebar">支援的 Google Cloud 歸檔儲存層</block>
   <block id="56ef2682280ac110060b881925a87b80" category="sidebar">Google雲</block>
   <block id="6fc478198b32debce80454c7af87f2a6" category="paragraph">準備來源本機ONTAP系統和任何輔助本機ONTAP或Cloud Volumes ONTAP系統。</block>
   <block id="9d6517026ceae75d40ad31bbce85a01f" category="paragraph">確保您的ONTAP系統符合以下要求：</block>
@@ -3820,7 +3775,6 @@
   <block id="8b44463d6dea841eba5655fcddf2d308" category="paragraph">跳過克隆刷新以保持克隆不變。</block>
   <block id="9c56aad86b05797af73b468bb579fca1" category="paragraph">如果策略保護克隆，則克隆及其作業都會被刪除。</block>
   <block id="ba0363fe48f14ee1de2dc51cf57a540a" category="summary">使用NetApp Backup and Recovery保護您的 Microsoft SQL Server 應用程式數據，從本機ONTAP系統到 Amazon Web Services、Microsoft Azure 或StorageGRID 。</block>
-  <block id="f67bd1ebeb2e1458c18ee1bfe3a0d5e2" category="doc">使用NetApp Backup and Recovery保護 Microsoft SQL 工作負載概述</block>
   <block id="a355bd32745a1495313545b192a3533f" category="paragraph">使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 AWS、Azure 或StorageGRID 。系統會根據您的政策自動在您的雲端帳戶中建立並儲存備份。使用 3-2-1 策略：在兩個儲存系統上保留資料的三個副本，在雲端中保留一個副本。</block>
   <block id="d23f996c9926f1f022cbe22d0fcae8e8" category="paragraph">您可以執行以下操作來保護您的資料：</block>
   <block id="f59023f77e90026f16f584d31820eb90" category="paragraph">若要備份工作負載，您需要建立管理備份和復原作業的策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>了解更多。</block>
@@ -3862,7 +3816,6 @@
   <block id="61072584d2c0588f0150c943e6e1d86d" category="paragraph">此過程可防止重複備份，節省頻寬，並在遷移後保持備份運作。</block>
   <block id="d59831ba17afe4b93cae3b97e014b988" category="list-text">NetApp遷移團隊會在來源 ONTAP 叢集和目標ONTAP叢集之間建立SnapMirror關係，以協助遷移磁碟區。</block>
   <block id="afcda94ead598792a58b79c595695a00" category="paragraph">在遷移之前， NetApp技術更新團隊會檢查這些先決條件，以防止資料遺失並確保流程順利進行。</block>
-  <block id="6c00cfff6ac17757a455b88d64f5a020" category="list-text">建立保護組來管理一組資源的備份和還原作業。看<block ref="57b3b2c08bb1a6ce1539d80f54a7da11" category="inline-link-macro-rx"></block>了解更多。</block>
   <block id="022bea392176c3deaa4c87fa999a78b5" category="list-text"><block ref="022bea392176c3deaa4c87fa999a78b5" category="inline-link-macro-rx"></block></block>
   <block id="a53044fc76783d9ee60dfa1066342cef" category="paragraph">在設定頁面配置電子郵件通知。有關配置電子郵件通知的詳細信息，請參閱<block ref="395b0c19462e78afc4e209cde346ef5d" category="inline-link-macro-rx"></block>。</block>
   <block id="8b12e8d890ce22ed0ad6e05550a4b8eb" category="list-text">在 AWS 中， NetApp Console可以實現以下功能：<block ref="b38667957fcdf9b9da65b213e7fb2492" category="inline-link-rx"></block>在 S3 鏟斗上。</block>
@@ -3998,7 +3951,6 @@
   <block id="093fffba6528268e08d16655a00408c0" category="list-text">檔案復原： ONTAP 9.11.1 或更高版本</block>
   <block id="e2a690f8f0185ec41067ba5b3b30a529" category="list-text">Google Archive 和StorageGRID： ONTAP 9.12.1 或更高版本</block>
   <block id="8ca6fb4bb5529d6adfde15cbdb57e634" category="list-text">資料夾恢復： ONTAP 9.13.1 或更高版本</block>
-  <block id="7e1d8ccd1392087c63490394612a8c15" category="doc">使用搜尋和恢復功能從ONTAP備份中恢復</block>
   <block id="ac7a11fed1e42e0aabdca6e9d3df239d" category="paragraph">從本機快照或複製磁碟區復原通常比從物件儲存復原更快、更便宜。</block>
   <block id="84c030a8c3b510739684721f83cf4004" category="paragraph">還原整個磁碟區時， NetApp Backup and Recovery會使用備份資料建立一個新磁碟區。您可以還原到原始系統、同一雲端帳戶內的另一個系統或本機ONTAP系統。資料夾和檔案可以恢復到其原始位置、同一系統中的不同磁碟區、同一雲端帳戶中的另一個系統或本機系統。</block>
   <block id="1a7f268901b8ff64a74ae8d0296ce039" category="section-title">搜尋與恢復的先決條件</block>
@@ -4016,8 +3968,6 @@
   <block id="a8c20c3f2c501cda4b216ab5d3a59157" category="list-text"><block ref="f9cc88ea2514d9b9242d31770690af88" category="inline-link-macro-rx"></block></block>
   <block id="5e763606a0239729deac991a560d57c0" category="list-text"><block ref="34e43cfade3963995cc048abf44b0989" category="inline-link-macro-rx"></block></block>
   <block id="b72cbffce68718636e4f9c2f1c2a8173" category="list-text"><block ref="f0a1a1822bca6dd563c941cbc831d447" category="inline-link-macro-rx"></block></block>
-  <block id="cee41b55e417d2c681bd345802b719fd" category="sidebar">恢復概述</block>
-  <block id="a49488740a7ad2d76917598dae6b3fbb" category="sidebar">使用“瀏覽和恢復”功能從ONTAP備份中恢復數據</block>
   <block id="4db9a239be0f58f8e4742665ad2371e2" category="paragraph">在啟用搜尋和復原功能前，請確保您的環境符合以下要求：</block>
   <block id="d0320c3b870d5944eb8c31ee83638872" category="paragraph">以下是使用傳統索引時搜尋和復原功能的要求：</block>
   <block id="9078cbf758e0949f0dca426e9aa6c0ce" category="list-text">使用NetApp NFS 卷</block>
@@ -4053,7 +4003,6 @@
   <block id="01f07264521662850e2d8465c322c978" category="inline-link-macro">了解更多關於使用NetApp Backup and Recovery恢復 VMware 虛擬磁碟的信息</block>
   <block id="61b4efc27d21705d0d4d56786ccc1f78" category="paragraph"><block ref="78a5fc4b6640a61792f9693d7c0f443b" category="inline-link-macro-rx"></block>。</block>
   <block id="af5eb3f6323875097e7bb24b26d6173d" category="summary">您可以從傳統虛擬機器或 vVol 虛擬機器的主備份或輔助備份中還原現有的 VMDK 或已刪除或分離的 VMDK。</block>
-  <block id="26b80604718acd7f55cf527a0bdacff9" category="doc">從備份中還原特定虛擬磁碟</block>
   <block id="49ad71250d1ffd36154d69faa3ad6ea1" category="paragraph">您可以從傳統虛擬機器的主備份或輔助備份中還原現有的虛擬磁碟 (VMDK)，或已刪除或已分離的虛擬磁碟。這樣，您就可以只恢復特定的虛擬機器資料或應用程序，而無需在僅影響特定資料的情況下恢復整個虛擬機器及其所有關聯的虛擬磁碟。虛擬磁碟復原後，會附加到其原始虛擬機，即可使用。</block>
   <block id="25734bf6409795c4ad848a8de171d984" category="paragraph">您可以將虛擬機器上的一個或多個虛擬機器磁碟 (VMDK) 還原到相同資料儲存或不同的資料儲存體。</block>
   <block id="65edaa2fcae57d6f852991cc8468f875" category="admonition">為了提高 NFS 環境中復原作業的效能，請啟用 VMware 應用程式 vStorage API for Array Integration (VAAI)。</block>
@@ -4221,7 +4170,6 @@
   <block id="286d76e7e91f5683e678b1a399bad3bd" category="list-text">在「恢復後選項」部分，請考慮以下選項：</block>
   <block id="7510c6e86ae26f29103eade23948e7e7" category="paragraph">使用NetApp Backup and Recovery保護您的託管 KVM 虛擬機器和儲存池。NetApp Backup and Recovery提供快速、節省空間、崩潰一致性和 VM 一致性的備份和復原作業。在使用備份和復原功能保護 KVM 主機和虛擬機器之前，必須先使用 Apache CloudStack 等管理平台來管理它們。</block>
   <block id="a6f4d54cf73e6e376bec67151132228e" category="summary">嘗試還原用戶端檔案時，您可能會遇到用戶端檔案還原工作階段為空白、用戶端檔案還原附加磁碟作業失敗或用戶端檔案還原工作階段停止後備份未分離的情況。</block>
-  <block id="b6b36b81e336437107eb237b1e03955e" category="doc">訪客文件恢復故障排除</block>
   <block id="e186535e6f6fedaa3e8c07a0dda81d24" category="paragraph">嘗試恢復訪客文件時，您可能會遇到以下任一情況。</block>
   <block id="e2b39c8b51a0a2a12e2e00f7bdd2127f" category="section-title">來賓文件恢復會話為空白</block>
   <block id="db2dc5988d458b3d9d19d3a39d616e1f" category="paragraph">如果在建立用戶機檔案復原工作階段期間用戶機作業系統重啟，則會發生此問題。客戶作業系統中的 VMDK 可能處於離線狀態，因此客戶文件復原會話清單為空。</block>
@@ -4239,7 +4187,6 @@
   <block id="568b266180f72a62a6b7a16e74fd7c84" category="paragraph">如果存在同名文件，您可以選擇覆蓋或跳過它們。</block>
   <block id="9400685c82ef048826c1183065e6283e" category="paragraph">您可以在「作業監控」頁面上查看恢復進度。</block>
   <block id="e4bfaed3f3210f4076310e841130f424" category="summary">您可以從 Windows 用戶作業系統上的虛擬機器磁碟 (VMDK) 還原檔案或資料夾。</block>
-  <block id="26dc9b7bc6b95362feca65c89dc39119" category="doc">恢復訪客文件和資料夾的要求和限制</block>
   <block id="6682a5a344207b03b09bfb0798a193b6" category="section-title">來賓還原工作流程</block>
   <block id="dfb5e1e797a80916627d17588b36ab12" category="paragraph">客戶作業系統還原操作包含以下步驟：</block>
   <block id="7193518e6f5f0076ef05680742323f9c" category="list-text">附</block>
@@ -4302,8 +4249,6 @@
   <block id="ac960be8ab0dada73edd8073df004280" category="list-text">在出現的頁面頂部，選擇需要變更設定的儲存桶。</block>
   <block id="9255ea030351a8ee8402a7708baf0223" category="list-text">展開「勒索軟體掃描」部分。</block>
   <block id="194a29c3464a05de3c32434145c0b5d6" category="section-title">2026年1月19日</block>
-  <block id="88009dbb638181324526010a9eff3c19" category="sidebar">復原 VMware 虛擬機</block>
-  <block id="3a4d751e404219df1dc6de0a13c8db55" category="sidebar">工作流程、先決條件與限制</block>
   <block id="b2c5a3b35bd8f72bf653aa42e54cc06c" category="list-text">Windows 客戶作業系統必須執行 Windows Server 2008 R2 或更高版本。</block>
   <block id="367aa9be05b109b226ffbefe3981ac88" category="list-text">如果還原加密的檔案或資料夾，則不會保留加密屬性。</block>
   <block id="34454c78e4e96cfe4c311b8ba072f6cd" category="list-text">您無法將檔案或資料夾還原到加密資料夾。</block>
@@ -4368,7 +4313,6 @@
   <block id="cb4354b08a6a88b3c12671390a85c520" category="list-text">*resourceMatchers[].labelSelectors*：（_可選_）資源在 Kubernetes metadata.name 欄位中定義的標籤選擇器字串<block ref="d4ce3da8407a7d8e148bb1287288e778" category="inline-link-rx"></block>。例如：<block ref="6ea45baf659f1f35e51c8dc9005eac03" prefix=" " category="inline-code"></block>。</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例如：</block>
   <block id="00d3f03654bed141c3478449f1760762" category="paragraph">請確保 AWS 工作階段權杖的有效期限足以應付任何長時間執行的 s3 還原作業。如果權杖在還原作業期間過期，則作業可能會失敗。</block>
-  <block id="89a7d3742e536d3e468bf485545ed9fb" category="paragraph">有關保護 Oracle Database 工作負載的詳細資訊，請參閱<block ref="dca8e6f6588b72be45d0f60d74204461" category="inline-link-rx"></block>。</block>
   <block id="37c785778d2185acbba38fa4b6624392" category="paragraph"><block ref="b49343ccc7da9738bd595bd89e3d39db" category="inline-link-macro-rx"></block>.</block>
   <block id="27f6ebf60d74cce9ba572615629e4416" category="doc">Kubernetes 工作負載增強功能</block>
   <block id="de8616724d177017abdd720d7365feff" category="paragraph">此版本的 Kubernetes 工作負載引入了以下增強功能：</block>
@@ -4426,7 +4370,6 @@
   <block id="e242e6f8581d6d11d04b2c80d7a16519" category="inline-link-macro">探索 Oracle Database 工作負載</block>
   <block id="ec9157f5af288c671e8006da3677d9c3" category="list-text">有關 Oracle Database 工作負載，請參閱 <block ref="c9b387ac576fa007292bb17c9c97e163" category="inline-link-macro-rx"></block>。</block>
   <block id="72581b2d72c5eaf924f3612a1d930c1f" category="summary">NetApp Backup and Recovery 可讓您使用自訂資源（CR）手動備份 Kubernetes 應用程式。</block>
-  <block id="81c6902865980301c496fb545daf563f" category="doc">現在可以使用 Backup and Recovery 中的自訂資源備份 Kubernetes 應用程式</block>
   <block id="98059fcd3ca40facbefb17e9841439ff" category="section-title">立即使用自訂資源備份 Kubernetes 應用程式</block>
   <block id="c2c21ce64dd4770c44c8642d322a5424" category="admonition">如果叢集範圍的資源在應用程式定義中被明確引用，或引用了任何應用程式命名空間，則這些資源將包含在備份、快照或複製中。</block>
   <block id="fe52ac2568977e4c3fd2c94c3daa5a5a" category="section-title">使用自訂資源建立本機快照</block>
@@ -4481,7 +4424,6 @@
   <block id="728633ade1403bcbcd881fc22ec19596" category="cell">protect.trident.netapp.io/pvc-bind-timeout-sec</block>
   <block id="fc7da248a2f7c60cc6dde87d2093c48e" category="cell">等待新建立的任何 PersistentVolumeClaims （PVC） 到達該 <block ref="685d1f2146dd079015e81918414e8971" prefix=" " category="inline-code"></block> 階段的最大時間 （以秒為單位），超過此時間操作將失敗。</block>
   <block id="d396afb1bbf01f546690ad93f3524626" category="cell">"1200"（20 分鐘）</block>
-  <block id="4255dda5f5998cbad65847ed764b4130" category="doc">現在即可使用 Backup and Recovery Web UI 備份 Kubernetes 應用程式</block>
   <block id="55ebd262da946bfda89bdb99e1367f0f" category="paragraph">NetApp Backup and Recovery 可讓您使用 Web 介面手動備份 Kubernetes 應用程式。</block>
   <block id="8b9e73cb622150ff43b7f7777e74619a" category="section-title">現在即可使用 Web UI 備份 Kubernetes 應用程式</block>
   <block id="b7d8dcf9545dd644dca99859290097ab" category="summary">您可以使用註解、命名空間設定和儲存選項來自訂 CR 還原作業。</block>
@@ -4543,11 +4485,9 @@
   <block id="2508b93e69f47b3a094284dbdc9a09de" category="list-text">（選用）新增篩選條件，包含或排除標記有特定標籤的資源：</block>
   <block id="b4d332d25d8164d8387707934254781d" category="admonition">當兩者 <block ref="a25777d0a6883efb33950a7cd7a8f9b9" prefix=" " category="inline-code"></block> 和 <block ref="2021b5ec814a388ca04af6c6d6c2d16f" prefix=" " category="inline-code"></block> 同時使用時，<block ref="a25777d0a6883efb33950a7cd7a8f9b9" prefix=" " category="inline-code"></block> 首先運行，然後 <block ref="2021b5ec814a388ca04af6c6d6c2d16f" prefix=" " category="inline-code"></block> 將應用於生成的資源。</block>
   <block id="964ba319e15e38c5b0f3ee2a3dd4a8f8" category="list-text">建立與您的環境相符的應用程式 CR 後、套用該 CR。例如：</block>
-  <block id="a23759db2139aa9e17de9cb47110d6d5" category="doc">使用自訂資源還原 Kubernetes 應用程式</block>
   <block id="415a07ca472058e76674945c8c1ccdb3" category="paragraph">您可以使用自訂資源從快照或備份還原應用程式。如果要將應用程式還原到同一個叢集，從現有快照還原速度會更快。</block>
   <block id="f346d32ba5d9c332bf8577bf1bacda07" category="list-text">還原應用程式時，所有為該應用程式配置的執行鉤子都會隨應用程式一起還原。如果存在還原後執行鉤子，它會在還原操作過程中自動執行。</block>
   <block id="961ce5b35a999d2dc3f7e386f74eb614" category="list-text">qtree 磁碟區支援從備份還原到不同的命名空間或原始命名空間。但是，qtree 磁碟區不支援從快照還原到不同的命名空間或原始命名空間。</block>
-  <block id="57367d979fb9d476b127b8b1c0e64004" category="list-text">您可以使用進階設定來自訂還原操作。如需深入瞭解、請參閱 <block ref="de6b60e125121f4190b8e2b41a7ccad4" category="inline-link-macro-rx"></block>。</block>
   <block id="d46abb8b08b9cabb804a375e086762ef" category="section-title">將備份還原至不同的命名空間</block>
   <block id="6b76c2e4af7a396193495c80e698179e" category="paragraph">當您使用 BackupRestore CR 將備份還原到不同的命名空間時，NetApp Backup and Recovery 會將應用程式還原到新的命名空間，並為還原的應用程式建立一個應用程式 CR。為了保護還原的應用程式，您可以建立隨需備份或快照，或製定保護排程。</block>
   <block id="cff063350a0daf1b0ee4c6c97eb2e2de" category="list-text">將備份還原到具有現有資源的不同命名空間不會變更與備份中資源同名的任何資源。若要還原備份中的所有資源，請刪除並重新建立目標命名空間，或將備份還原到新的命名空間。</block>
@@ -4622,7 +4562,6 @@
   <block id="2329c3692bdf2d2f098db291ec4e9427" category="paragraph">*報告支援*：現在您可以為受 NetApp Backup and Recovery 保護的 Kubernetes 叢集和應用程式產生保護活動報告。</block>
   <block id="bc077e67c7216de25b87f90d5ec28ac0" category="list-text">如果受保護的虛擬機器中未執行 QEMU Guest Agent，則備份可能會失敗。作為解決方法，請確保<block ref="c17d9742912ea08e0cfecda90a08c954" prefix=" " category="inline-code"></block>守護程序在啟動備份之前已在虛擬機器上執行。</block>
   <block id="66330fd6b5a015d85e0b01e96c040005" category="summary">建立 Kubernetes 工作負載的保護報告，以檢視保護狀態和詳細資訊，包括成功和失敗的備份計數、備份類型、叢集健全狀況資訊等。</block>
-  <block id="7e9944e42087b52e398e40511794ab10" category="doc">在 NetApp Backup and Recovery 中建立及管理 Kubernetes 工作負載的保護報告</block>
   <block id="59db8c9d0215fa2a51b2a35609aa5bbd" category="paragraph">在 NetApp Backup and Recovery 中，為 Kubernetes 工作負載建立保護報告，以檢視保護狀態與詳細資訊，包括成功與失敗備份的數量、備份類型、叢集健康資訊等。</block>
   <block id="d45ba014e75a2424453d999d1ec1584d" category="section-title">建立保護報告</block>
   <block id="cf9569ff04e8697d933d86bb055b6753" category="paragraph">建立保護報告以檢視叢集的保護狀態。</block>
@@ -4653,7 +4592,6 @@
   <block id="7e6254a3c499887f0d500958fc6584ed" category="paragraph">如果您需要在不刪除和重新建立保護群組的情況下變更保護群組的詳細資訊，請編輯保護群組。</block>
   <block id="78fa67c28bf09a9555618080f725243c" category="list-text">對保護群組中的一般詳細資料和 VM 進行任何必要的變更。</block>
   <block id="3573adc4fce66bc7bb13c8f35b9d7e90" category="list-text">如有需要，請變更與保護群組相關聯的原則。</block>
-  <block id="64599804111c69e57052c204fb880b42" category="doc">在 NetApp Backup and Recovery 中為 Microsoft SQL Server 工作負載建立保護報告</block>
   <block id="8b3c75a910501c009c7e86f190f1825d" category="section-title">2026 年 2 月 23 日</block>
   <block id="175ddb68a640ea3daeb84c25a2402e6f" category="sidebar">建立和管理保護報告</block>
   <block id="1d30989467a5dda6a77c2158034a190b" category="paragraph">NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。</block>
@@ -4911,7 +4849,6 @@
   <block id="735df7f2e37c9dd264e94c878ea7d619" category="admonition">標籤成員資格會在備份時從 vCenter 解析。您在 vCenter 中對標籤所做的任何變更（新增/移除標籤、刪除標籤、新增/移除 VM）都會自動反映在下一次備份中。</block>
   <block id="d07a2c33b1ba6b58e2a1a775e9fc5aa7" category="doc">從虛擬磁碟還原檔案和資料夾</block>
   <block id="979479a71f02703e287e1fad2bc3d0ae" category="paragraph">將虛擬磁碟中的檔案或資料夾還原到原始虛擬機器或其他虛擬機器。如果您不想將虛擬磁碟附加到原始虛擬機器，可以將其附加到 Proxy 虛擬機器。</block>
-  <block id="32de0b1da4ab4b8f52bfe3ce1811b043" category="list-text">請查看 <block ref="538cee55729c515ab8aab7ca0ccd040a" category="inline-link-macro-rx"></block> 中的先決條件和限制。</block>
   <block id="e66fc9654ba30e5bd71aa3b351339afa" category="list-text">若要使用 Proxy VM 還原檔案和資料夾，請確保在開始檔案和資料夾還原程序之前已設定好 Proxy VM。</block>
   <block id="c127ae612a3e24c3b1f14accf888c545" category="list-text">您需要在 NetApp Backup and Recovery 中為來源虛擬磁碟和目標 VM 建立認證，才能還原檔案和資料夾。NetApp Backup and Recovery 會在還原檔案和資料夾時，使用這些認證來驗證虛擬磁碟和目標 VM 的身份。</block>
   <block id="7b7824cad48305f033e7a7b04105000a" category="paragraph">檔案或資料夾還原效能取決於兩個因素：待還原檔案或資料夾的大小；以及待還原檔案或資料夾的數量。如果待還原的資料集大小相同，則還原大量小檔案可能比還原少量大檔案花費的時間更長。</block>
@@ -4967,7 +4904,6 @@
   <block id="b07f4d391521e556166d0e8a85f249d6" category="admonition">NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程式指派靜態 IP 位址，以避免在代理程式 IP 位址變更時出現問題。</block>
   <block id="1873f6028647ed72cee9a7bccf68c491" category="summary">使用 NetApp Backup and Recovery，透過瀏覽和還原來還原 ONTAP 資料。</block>
   <block id="9b0b495cd3a28a2977dbab61bc1cbce8" category="summary">您可以使用搜尋和還原功能從 ONTAP 備份檔案中還原磁碟區、資料夾或檔案。</block>
-  <block id="153309581b8b7324fe069ec2701fe5ca" category="doc">使用搜尋和還原功能從 ONTAP 備份中還原</block>
   <block id="ca8d2f28de45d440f4baf4c07d4c8107" category="paragraph">您可以使用「搜尋與復原」功能從 ONTAP 備份檔案中還原磁碟區、資料夾或檔案。「搜尋與復原」功能可讓您搜尋所有備份（包括本機快照、複製磁碟區和物件儲存），而無需提供確切的系統名稱、磁碟區名稱或檔案名稱。</block>
   <block id="13805175d1bc9d9656654bec32406f98" category="admonition">NetApp Backup and Recovery 不會對建立時間戳記與相同磁碟區的另一個 Snapshot 完全相同的 Snapshot 進行索引。</block>
   <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026 年 4 月 13 日</block>
@@ -5125,7 +5061,6 @@
   <block id="50382ab9fb7cc5b5cb9eb0c9d8ba6663" category="list-text">從清單中選擇要升級的版本。</block>
   <block id="3210c75ca343f7bd2eddfaaef1a24817" category="list-text">選擇 *Upgrade* 。</block>
   <block id="429f908a54c2363c05b18232476548b1" category="summary">在還原作業期間修改 NetApp Backup and Recovery 中的資源。</block>
-  <block id="b5ad52abec5cb04607a10746e3199f1d" category="doc">使用自訂資源還原資源時修改資源</block>
   <block id="9cbba6ab5c2f123250867543cc584548" category="inline-link-macro">使用 Web UI 在還原資源時修改資源</block>
   <block id="9b2d0800b291b62181a18273ee5a21a6" category="paragraph">資源轉換功能可讓您在還原資源時進行修改。當還原後的版本需要與原始版本有所不同時，此功能非常有用——例如，在將虛擬機器還原到不同的網路時更改其 IP 位址。您還可以<block ref="05b70993291a3b893b825f52da69f790" category="inline-link-macro-rx"></block>。</block>
   <block id="389ce31a86e01dced25ad4bbaed743d7" category="section-title">資源修改的運作方式</block>
@@ -5235,7 +5170,6 @@
   <block id="fe5aa0dbf25e183784fa7cd2b595be46" category="list-text">*跨資料存放區保護群組支援*：現在可以選擇在保護虛擬磁碟跨越多個資料存放區的虛擬機器時，保護群組的行為。</block>
   <block id="ab186862b28de3aad826b26d80e3eb96" category="list-text">*複製支援*：您現在可以從主要儲存設備和次要儲存設備建立虛擬機器快照的複製。</block>
   <block id="87e187714ad3406b822e2c0bf109240b" category="summary">您可以將 Hyper-V VM 快照中的一個或多個檔案或資料夾還原到 Windows 客體 VM。</block>
-  <block id="cd21aa174cd18a8828140ba323628bfb" category="doc">從 Hyper-V VM 備份中還原檔案和資料夾</block>
   <block id="d822ec23856d26a5af79fad29ce2f55e" category="paragraph">從快照掛載虛擬磁碟，並將檔案和資料夾從該虛擬磁碟還原到原始（來源）Windows VM。</block>
   <block id="17a458fd7a6b6ae191ac9219e3b46deb" category="paragraph">透過掛載虛擬磁碟開啟檔案和資料夾還原工作階段時，該工作階段將保持作用中狀態 48 小時。</block>
   <block id="392177f0b4a0bc4b5bc23ef82eee9fff" category="paragraph">還原效能取決於待還原的檔案或資料夾的大小和數量。對於給定的資料集大小，還原大量小檔案通常比還原少量大檔案花費的時間更長。</block>
@@ -5373,8 +5307,6 @@
   <block id="9e75b63d575b523917aa9e47b41b52fb" category="list-text">Oracle AI Database 26ai</block>
   <block id="f9fe5abdb3368e0236fd36a21bb8f840" category="cell">8.0.24 Hosting Bundle（以及所有後續的 8.0.x 補丁）</block>
   <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026 年 5 月 11 日</block>
-  <block id="a37ef823bf93d8b834512d7ddfdf36cd" category="sidebar">建立和管理 Microsoft SQL Server 工作負載備份原則</block>
-  <block id="2287427b367a426395bab449f1e777dc" category="sidebar">建立和管理 VMware 工作負載備份原則</block>
   <block id="5b94860a42a3f19b0fba83e9b7d762f3" category="sidebar">複製 VMware 工作負載</block>
   <block id="beb76bddbaec1f03042fdde3ce87a100" category="sidebar">建立和管理 KVM 工作負載備份原則</block>
   <block id="d4989fe657e38f56766b05260a139da1" category="sidebar">建立和管理 Hyper-V 工作負載備份原則</block>
@@ -5382,9 +5314,7 @@
   <block id="9bb7a57e0f15167076e59ed085570cb6" category="sidebar">建立和管理 Kubernetes 工作負載備份原則</block>
   <block id="2a09eaa4306f964591fbfdee1bad3329" category="list-text">請勿備份已啟用長期保留快照的 SnapMirror 目標磁碟區。這些快照直接在目標磁碟區上建立，不會移動到物件儲存。即使之後變更 SnapMirror 原則以停用長期保留，此限制仍然有效。</block>
   <block id="cb7e1594adc03f9d88413ab9198e9c43" category="admonition">在 Azure 中建立用作備份目的地的容器時，請確保您建立的容器名稱與 Azure 儲存體帳戶名稱相同。</block>
-  <block id="76382b5bdb7a0a65db2779738439703c" category="sidebar">還原 VMware 虛擬磁碟</block>
   <block id="160bf2703f3a2319b3965b541340256a" category="sidebar">還原 VMware 檔案和資料夾</block>
-  <block id="b5c91904decad9b84ae436053f327229" category="sidebar">從 VMDK 還原 VMware 檔案和資料夾</block>
   <block id="d68e9c9c6cd6479fbac7751c3f91f5a3" category="sidebar">還原 Hyper-V 檔案和資料夾</block>
   <block id="e193e26700d466b0349ce7e559d96967" category="list-text">*磁碟到物件儲存*：主要儲存設備（磁碟）到雲端（物件存放區）。這會將資料從 ONTAP 系統複寫到物件儲存系統。這可以是超大規模雲端物件存儲，也可以是私有物件存儲，例如 StorageGRID。此方法非常適合長期資料保留和歸檔。此選項不適用於 Amazon FSx for NetApp ONTAP。</block>
   <block id="be3cd190a86975f6f424dc4b62841598" category="section-title">在災難復原配置中啟用索引</block>
@@ -5618,7 +5548,6 @@
   <block id="844fc7abbe7e8885979a95956cae4413" category="list-text">*複寫目標*：選擇目的地系統和儲存 VM。您也可以選擇目的地 Aggregate（或 FlexGroup Volume 的多個 Aggregate），以及將新增至複寫 Volume 名稱的前置詞或後置詞。</block>
   <block id="77b3f26262e74232411c4a9845e78dd4" category="paragraph">使用 NetApp 備份與還原，透過「瀏覽與還原」還原 ONTAP 資料。還原前，請記下來源 Volume 名稱、來源系統和儲存設備虛擬機器，以及備份檔案日期。您可以從 Snapshot 快照技術、複寫的 Volume 或儲存在物件儲存中的備份還原 ONTAP 資料。</block>
   <block id="ddba76f3680bcef2d5a8170c73d395e7" category="list-text">SnapDiff RPC 伺服器必須在儲存設備虛擬機器上啟動。在系統上啟用索引時，Console 會自動執行此操作。（SnapDiff 是一種能夠快速識別 Snapshot 快照技術之間檔案和目錄差異的技術。）</block>
-  <block id="e6932ee3628baaf132027b16f688c205" category="sidebar">將內部部署 ONTAP 備份至 S3 相容儲存設備</block>
   <block id="4ad36f854b6d4d49c94081fec1b29de2" category="list-text">要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。</block>
   <block id="59ebd83b4c20d2b24ac46c96525c37fc" category="list-text">ONTAP 9.13.1 或更高版本（若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更高版本；最多可支援 100 個儲存桶）</block>
   <block id="6a0d2c5dd8e27d910d6ff2158f8d5520" category="list-text">主要 ONTAP 系統（ONTAP 9.14.1 或更新版本 - 若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本；最多 100 個儲存桶）</block>
@@ -5667,7 +5596,6 @@
   <block id="b5f7c930c601cdb6867c5fa448e058de" category="list-text">選擇 Kubernetes 工作負載磁貼。</block>
   <block id="3157af79837d704f357cbe0fb5ca681e" category="section-title">在 NetApp Console 本機部署中設定 DNS 以實現氣隙主機探索</block>
   <block id="9130f3e76360b4e0b50d62c02b73f297" category="summary">在 NetApp Console 或 NetApp Console 本機部署中的系統上啟動 Backup and Recovery。</block>
-  <block id="3b1f21f533f4569ccdb069a224c3fc8b" category="doc">啟用備份與還原功能以保護磁碟區</block>
   <block id="fce3336a53277a34c72eaf26ae68eb3c" category="paragraph">在保護 ONTAP Volumes 工作負載之前，您需要先在 NetApp Console 或 NetApp Console 本機部署中為儲存系統啟用 NetApp Backup and Recovery。您可以在新增系統時啟用 Backup and Recovery，也可以稍後再啟用。</block>
   <block id="64c73d6afa3e4d25eb2bf5b546c3dcf2" category="section-title">在 NetApp Console 中啟動 Backup and Recovery</block>
   <block id="cb120e5cd2b396558aacbb18f19389be" category="paragraph">在 NetApp Console 中啟動 Backup and Recovery 服務。</block>
@@ -5754,7 +5682,6 @@
   <block id="2c03c04d013cd18a2b08ffdaa3807fc6" category="list-text">PowerShell 7.6.4</block>
   <block id="3b93068d4eec990f1969b952fef82849" category="list-text">NetApp Trident 25.06 至 26.02.1</block>
   <block id="c6ee0c0b0d79479e99725d43f4f2b0f8" category="list-text">NetApp Trident Protect 26.06（在 Kubernetes 叢集探索期間安裝）</block>
-  <block id="0ac549660d0a9677d9f22785c2d2c924" category="paragraph">如需相關指示，請參閱 <block ref="2f1950f09c9a71aa668e32b381c98250" category="inline-link-macro-rx"></block>。</block>
   <block id="e75b3a902ee99b25571be4a98b084a31" category="summary">無需啟動 NetApp Backup and Recovery 即可探索系統和 Volume。</block>
   <block id="bf768851617c703a4014233f58b31de3" category="doc">無需啟動即可探索 ONTAP 系統和 Volume</block>
   <block id="2887d4ffc35ab6898bed2a982c5423a2" category="paragraph">您可以在啟動 Volume 的備份和復原功能時探索系統和 Volume，也可以在啟動 NetApp Backup and Recovery 之前探索。如果您在未啟動備份和復原功能的情況下探索 Volume，則必須先啟動備份和復原功能才能保護這些 Volume。</block>
@@ -5765,7 +5692,6 @@
   <block id="860cf33608268fe2d5a3ed1713fe9107" category="list-text">在清單中，選取要探索其 Volume 的所有系統。</block>
   <block id="f256471c6761fa054c01bf424427f283" category="paragraph">探索過程開始。您可以在作業監視器中查看探索狀態和結果。</block>
   <block id="8bfcbad5f6e35a5fb200847e49a3e066" category="summary">提高 NetApp Console 本機部署環境中的目錄索引效能。</block>
-  <block id="1b8e826b73c0743e53c07bcd60fec634" category="doc">使用 NetApp Console 本地部署時，提升 Volume 搜尋與還原的效能</block>
   <block id="626ff7e0402d85582fdc0561907b9fe6" category="paragraph">將目錄索引儲存設備從叢集的預設儲存設備類別遷移至 ONTAP 支援的 NFS 共享，可顯著提升 NetApp Console 本地部署的目錄效能。索引目錄用於搜尋和還原功能。雖然目錄在預設儲存設備也能運作，但使用 ONTAP 支援的 NFS 可為搜尋和還原提供可量測的效能改善。</block>
   <block id="adb346c6a3b4c2c621493a5c3df68916" category="paragraph">在開始之前，請確保您已準備好以下物品：</block>
   <block id="86f1b6285159d589785ea087767c5ad1" category="list-text">叢集中已設定 ONTAP NFS StorageClass，且 ONTAP 系統容量充足。</block>
@@ -5800,8 +5726,87 @@
   <block id="0ca13922f073b075ebe35843a4741a65" category="list-text">*保持 Helm 同步：* 由於 PVC 通常由 Chart 渲染，未來的版本<block ref="cd01e1bae83933b9c59c914bc71332ac" prefix=" " category="inline-code"></block>可能會嘗試重新建立或修改它。為了保持此手動 ONTAP PVC，請將 Chart 指向相同的值<block ref="da653f0609e1ee5bf4ad3210bbae68f7" prefix="(" category="inline-code"></block>（匹配大小/存取模式），或從版本中排除共享的 PVC。</block>
   <block id="718879a57c5479ddc9d8c13719835aa2" category="list-text">如果手動執行<block ref="547d17b0589ba1ba53549f8ddb830b62" prefix=" " category="inline-code"></block>然後嘗試重新安裝，PV 將以相同名稱安裝，進而導致命名衝突。</block>
   <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">2026年8月10日</block>
-  <block id="874b4474de89858c50d77a501e5764e2" category="sidebar">提升 NetApp Console 本地部署的 Volume 搜尋與復原效能</block>
   <block id="4d92224f9798401488621039f9e4cfa9" category="list-text">您必須將 Azure Synapse Analytics 資源供應商（名為「Microsoft.Synapse」）註冊到您的訂閱中<block ref="c0f87c4b35b6d93246175aae02f70afd" category="inline-link-rx"></block>。您必須是訂閱的*擁有者*或*參與者*才能註冊資源供應商。</block>
   <block id="309ab91ccf975daed364d3636f21792a" category="paragraph">您可以將 ONTAP 資料從位於二線系統（複製 Volume）或物件儲存（備份檔案）中的備份檔案還原到下列系統。</block>
   <block id="e9a171dcb6f5a1441f086b12be8cbc6b" category="cell">S3 相容物件儲存</block>
+  <block id="34f4f1cc663f1412cfa7b75fadb675a3" category="inline-link">使用 NetApp Backup and Recovery 的 Hyper-V 保護工作流程</block>
+  <block id="dd6b96618d7cbd8e19555b4b7f193bc9" category="paragraph">有關保護 Hyper-V 工作負載的詳細資訊，請參閱<block ref="5c7098f7c6a9321b2b214c22a678e5ae" category="inline-link-rx"></block>。</block>
+  <block id="64fc4ecfda7118c91c89fddcf898d5d7" category="inline-link">了解如何使用 NetApp Backup and Recovery 保護 KVM 工作負載</block>
+  <block id="3c7cd0f90fa4063959f7ca1b5c78c32e" category="paragraph">有關保護 KVM 工作負載的詳細資訊，請參閱<block ref="17cc50b9ecf4246774aec2e0a030aba6" category="inline-link-rx"></block>。</block>
+  <block id="76665439cf119912213e2021a654bd03" category="inline-link">了解如何使用 NetApp Backup and Recovery 保護 Oracle 資料庫工作負載</block>
+  <block id="883ef32320e466646eafa77fe6544695" category="paragraph">有關保護 Oracle Database 工作負載的詳細資訊，請參閱<block ref="ceba14b704f10c1caedce91a9e3962ca" category="inline-link-rx"></block>。</block>
+  <block id="9999c942092b335d50684003563ea5f9" category="doc">NetApp Backup and Recovery for SQL Server 工作負載的已知限制</block>
+  <block id="0b1536a86422406afd722e1ac2283d9d" category="doc">在 NetApp Backup and Recovery 中探索 Microsoft SQL Server 工作負載</block>
+  <block id="337604573cd4462d0d1724d770e652d8" category="doc">啟用 NetApp Backup and Recovery 以保護磁碟區</block>
+  <block id="ecf72091b88d50d91235a5b54bfdaba0" category="doc">現在可以使用 NetApp Backup and Recovery 中的自訂資源備份 Kubernetes 應用程式</block>
+  <block id="11d8ba8565e42e51d55c3e359918c594" category="doc">立即使用 NetApp Backup and Recovery Web UI 備份 Kubernetes 應用程式</block>
+  <block id="bdf0e0b6e03243954c16a0f72630d7b2" category="doc">使用 NetApp Backup and Recovery 從 Hyper-V VM 備份還原檔案和資料夾</block>
+  <block id="3dbc9657586fc847243e768b250ff753" category="inline-link-macro">在 NetApp Backup and Recovery 中建立和管理 Hyper-V 保護群組</block>
+  <block id="fe0673abaf63905872a274c4f114c1c3" category="list-text">建立保護群組以管理一組資源的備份和還原作業。如需詳細資訊，請參閱 <block ref="16175628729bc24473ccf819fa4215ad" category="inline-link-macro-rx"></block>。</block>
+  <block id="bfa3a6d0929ce4764538eeb452e40a15" category="doc">NetApp Backup and Recovery 中 Kubernetes 的進階還原設定</block>
+  <block id="33c64f512f9574f40c2c64ecd115283e" category="doc">了解如何使用 NetApp Backup and Recovery 管理 Kubernetes 工作負載</block>
+  <block id="f92d35a20617a147336af18c1ad986ed" category="inline-link-macro">在 NetApp Backup and Recovery 中管理 Kubernetes 叢集</block>
+  <block id="49210c11824604491df81c945d4bb574" category="list-text"><block ref="55a50d08a4265bfdac78d093909c9662" category="inline-link-macro-rx"></block>。</block>
+  <block id="47f898d7683bc44ff7c437601451aa50" category="inline-link-macro">在 NetApp Backup and Recovery 中新增和保護 Kubernetes 應用程式</block>
+  <block id="bac042f679d2f17a81d0d6d37aadcf66" category="list-text"><block ref="a50bdd85c91df76c8278b2b7972cf2e2" category="inline-link-macro-rx"></block>。</block>
+  <block id="2dcc97b7b5d7bbb9216b1e9c1d0cbc38" category="inline-link-macro">在 NetApp Backup and Recovery 中管理 Kubernetes 應用程式</block>
+  <block id="f9b08ae1eccef4edb6f8cf8e83729eda" category="list-text"><block ref="7a505e7ac488846d15d2ebbd264a01b1" category="inline-link-macro-rx"></block>。</block>
+  <block id="23337653dd09050d55a14abb882d3e7f" category="doc">在 NetApp Backup and Recovery 中管理 Kubernetes 保護報告</block>
+  <block id="b75d59ed6e695ac7c7951b21101cf900" category="inline-link-macro">在 NetApp Backup and Recovery 中管理 KVM 保護群組</block>
+  <block id="11c063e391ecda7520e176c4ba1565c2" category="list-text">建立保護群組以管理一組資源的備份和還原作業。如需詳細資訊，請參閱 <block ref="714faa4a64088e2c20a08baeddb1dcfe" category="inline-link-macro-rx"></block>。</block>
+  <block id="426086f918326399d7697355e378bce6" category="doc">在 NetApp Backup and Recovery 中管理 Kubernetes 執行掛鉤範本</block>
+  <block id="014cdc5a08fd7c5bad41f0da392d3f7b" category="doc">在 NetApp Backup and Recovery 還原期間修改 Kubernetes 資源</block>
+  <block id="685d9f05fa8e2a37d148ad281f51ee68" category="doc">Microsoft SQL Server 在 NetApp Backup and Recovery 中的保護工作流程</block>
+  <block id="404bc9ed709ff3d64fea2404cf0959d2" category="doc">在 NetApp Backup and Recovery 中建立 Microsoft SQL Server 保護報告</block>
+  <block id="2f4dcb95fa38881d34539f2355bea474" category="doc">使用自訂資源透過 NetApp Backup and Recovery 還原 Kubernetes 應用程式</block>
+  <block id="bdf5ca8a4448efcf660f078e1a135d47" category="list-text">您可以使用進階設定來自訂還原操作。若要深入瞭解，請參閱 <block ref="7a3143b2dfd83e6320f8bf3cf68e173b" category="inline-link-macro-rx"></block>。</block>
+  <block id="42d5af576055aa21949010929e4837db" category="doc">使用 NetApp Backup and Recovery Web UI 還原 Kubernetes 應用程式</block>
+  <block id="b68140b2aaa46c601ac8fcffbbe4e637" category="doc">NetApp Backup and Recovery 中的訪客檔案還原疑難排解</block>
+  <block id="91fff961af7f2d9ce7209aab8ac1ac55" category="doc">VMware 保護工作流程與 NetApp Backup and Recovery</block>
+  <block id="0ecbe0a8ca59b45c9e922386c2e93a08" category="doc">在 NetApp Backup and Recovery 中管理 VMware 保護群組</block>
+  <block id="13b01a96c5d11eb4f3c03b640bd403a8" category="doc">在 NetApp Backup and Recovery 中還原 VMware 客體檔案和資料夾</block>
+  <block id="be78ebb555000b024c0c816f0660642b" category="inline-link-macro">VMware 訪客檔案還原在 NetApp Backup and Recovery 中的要求</block>
+  <block id="4631010ef43be338b6e59f222dd3b329" category="list-text">請查看 <block ref="e4afc00d31064a81887dd786753c1398" category="inline-link-macro-rx"></block> 中的先決條件和限制。</block>
+  <block id="1e6d2cb23d98e91380f80c606a5a0a13" category="doc">在 NetApp Backup and Recovery 中從備份還原 VMware 虛擬磁碟</block>
+  <block id="bd17888b35c546fa898e507569d40c0b" category="doc">SnapCenter 匯入 NetApp Backup and Recovery 的先決條件</block>
+  <block id="7e900a191b889cd4d3e5e777e03f05c2" category="paragraph">如需相關指示，請參閱 <block ref="68a9f6057ec4c65ff8802aff8473d69f" category="inline-link-macro-rx"></block>。</block>
+  <block id="f47e3e8a5ba4f8344161541063fa0153" category="doc">在 NetApp Backup and Recovery 中探索未啟動的 ONTAP 系統和磁碟區</block>
+  <block id="35710b5426a61bab0279fb92bd9eb767" category="doc">在 NetApp Backup and Recovery 中管理備份至物件儲存選項</block>
+  <block id="c441e24bb826e395f6d73d8c34600f7c" category="doc">NetApp Backup and Recovery 中的保護旅程規劃選項</block>
+  <block id="b8af6340cc3d83c6cf07337054a1164f" category="doc">提升 NetApp Backup and Recovery 本地部署中的搜尋與還原效能</block>
+  <block id="e0aceca7e5412937958bf3994a724838" category="doc">了解 NetApp Backup and Recovery for ONTAP 磁碟區</block>
+  <block id="10261cd3a3f5ccb15e72d0c1b57c5ebc" category="doc">使用 NetApp Backup and Recovery 中的「瀏覽與還原」功能還原 ONTAP 資料</block>
+  <block id="a536fe7082ff09f4ede1423eed0fa35f" category="doc">使用 NetApp Backup and Recovery 中的搜尋和還原功能來還原 ONTAP 資料</block>
+  <block id="1e3b1f0d393fcf8ab682a2efc8b9d348" category="doc">ONTAP 資料還原選項（位於 NetApp Backup and Recovery 中）</block>
+  <block id="8447f3e97e778a81833a1a5597d87ecc" category="doc">已審核的 NetApp Backup and Recovery 動作</block>
+  <block id="94cd9ee1235e2eab393d382cde30f6b4" category="doc">NetApp Backup and Recovery IAM 角色</block>
+  <block id="89b4d1f007e67f05475e15dfbc29ee75" category="doc">為 NetApp Backup and Recovery 設定安全性憑證</block>
+  <block id="180f19e05f372b67d4f4475292271b2e" category="sidebar">NetApp Backup and Recovery 的新增功能</block>
+  <block id="1a79ae3dc400dd3630931a6805a747ae" category="sidebar">SQL Server 工作負載的已知限制</block>
+  <block id="e907b41f5f3d7332bee5a43fbbf78a08" category="sidebar">設定授權</block>
+  <block id="d8538d3a353014bcf88f03823cd5323e" category="sidebar">設定安全性證書</block>
+  <block id="9c4aa31f6e757f3144e2a8cf29f21d01" category="sidebar">探索異地備份目標</block>
+  <block id="c5ec9497d4d38f978972bab7a78ce530" category="sidebar">設定角色型存取控制</block>
+  <block id="defb6c38e16057d80b8b116a92ab8665" category="sidebar">管理 ONTAP 磁碟區的備份原則</block>
+  <block id="5dca07c730e5772a118dfefb19e464ec" category="sidebar">ONTAP 磁碟區備份至物件原則選項</block>
+  <block id="a7066ad754124248242c2cbec0c709ad" category="sidebar">管理備份到物件儲存選項</block>
+  <block id="0ac5da5698976e512fb0207d330744f6" category="sidebar">將 Cloud Volumes ONTAP 資料備份到 Azure Blob 儲存設備</block>
+  <block id="3618be0c223951c8ad19bcd0eb9d03c4" category="sidebar">將 Cloud Volumes ONTAP 資料備份至 Google Cloud Storage</block>
+  <block id="c6f935fce64d135ae3250df1beb9c2aa" category="sidebar">將內部部署 ONTAP 資料備份至 Azure Blob 儲存設備</block>
+  <block id="8e4bf073edf59649a0f460fa772a07bb" category="sidebar">將內部部署 ONTAP 資料備份至 Google Cloud Storage</block>
+  <block id="762e11347a90eb550c2d625d335f1e69" category="sidebar">將內部部署 ONTAP 資料備份至與 S3 相容的儲存設備</block>
+  <block id="8fd9c89c88ef219fff680d53232fd0c5" category="sidebar">使用 SnapMirror 將 ONTAP 磁碟區移轉至 Cloud Resync</block>
+  <block id="d04ac75da006cef6da314dc3097ce2f8" category="sidebar">管理 ONTAP 系統的備份</block>
+  <block id="e12a007c359db325c0c016459aa7aff3" category="sidebar">ONTAP 資料還原選項</block>
+  <block id="a1abe1f8b41b11db7c4f8b45c4d1c502" category="sidebar">使用搜尋與還原功能還原 ONTAP 資料</block>
+  <block id="96bd274dcd77edba4d1dd5935a595463" category="sidebar">使用瀏覽與還原功能還原 ONTAP 資料</block>
+  <block id="2f98a845a47bb70f05581b839e3fc198" category="sidebar">建立和管理 Microsoft SQL Server 備份原則</block>
+  <block id="34fee038feb9485291a63ded40824cc0" category="sidebar">VMware 保護工作流程</block>
+  <block id="29d6b6ceb76837a289f39bd30abaf8dc" category="sidebar">管理 VMware 保護群組</block>
+  <block id="1ba1634c2c78abe382031beb099bfb32" category="sidebar">管理 VMware 備份原則</block>
+  <block id="e1514b574a78a11efa11b537d77b2c16" category="sidebar">從備份還原 VMware 虛擬磁碟</block>
+  <block id="42bebbc50b0ec18001af17e571e3ff0c" category="sidebar">VMware 訪客檔案還原要求</block>
+  <block id="04a5a856cc6b493eb99f477d96256257" category="sidebar">還原 VMware 用戶機檔案和資料夾</block>
+  <block id="bd0ebd8b773f57bb68702549777a23ef" category="sidebar">支援具有 NetApp Backup and Recovery 的 Azure 歸檔儲存設備層</block>
+  <block id="8ee4602516c339cfb06e6c5907f4f918" category="sidebar">支援具有 NetApp Backup and Recovery 的 Google Cloud 歸檔儲存設備層級</block>
 </blocks>

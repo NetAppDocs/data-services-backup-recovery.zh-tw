@@ -50,4 +50,4 @@ https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-restor
 
 KVM 工作負載預覽版現在可以保護由 Apache CloudStack 管理的 KVM 主機和虛擬機器。
 
-有關保護 KVM 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["保護 KVM 工作負載概述"]。
+有關保護 KVM 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 KVM 工作負載"]。

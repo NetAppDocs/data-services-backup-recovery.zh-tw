@@ -4,7 +4,7 @@ permalink: br-use-hyper-v-restore-guest-files-and-folders.html
 keywords: restore, guest, files, folders, files and folders, Windows, VM, virtual machine, browse, mount, virtual disk, session, snapshot, backup 
 summary: 您可以將 Hyper-V VM 快照中的一個或多個檔案或資料夾還原到 Windows 客體 VM。 
 ---
-= 從 Hyper-V VM 備份中還原檔案和資料夾
+= 使用 NetApp Backup and Recovery 從 Hyper-V VM 備份還原檔案和資料夾
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

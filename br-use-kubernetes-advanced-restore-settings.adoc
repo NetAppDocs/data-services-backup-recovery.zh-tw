@@ -4,7 +4,7 @@ permalink: br-use-kubernetes-advanced-restore-settings.html
 keywords: cr, custom resource, restore, data, backup, advanced, settings 
 summary: 您可以使用註解、命名空間設定和儲存選項來自訂 CR 還原作業。 
 ---
-= 使用進階自訂資源還原設定
+= NetApp Backup and Recovery 中 Kubernetes 的進階還原設定
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: br-use-reports.html
 keywords: backing up, back up, backup, backup on-prem ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
 summary: 在NetApp Backup and Recovery中，建立報告以查看備份狀態，包括備份數量、成功備份數量和失敗備份數量。您還可以查看每個備份的詳細信息，包括備份類型、備份使用的儲存系統以及備份的時間。 
 ---
-= 在 NetApp Backup and Recovery 中為 Microsoft SQL Server 工作負載建立保護報告
+= 在 NetApp Backup and Recovery 中建立 Microsoft SQL Server 保護報告
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

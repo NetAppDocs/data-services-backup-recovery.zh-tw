@@ -4,7 +4,7 @@ permalink: task-setup-ca-certificates.html
 keywords: cloud backup, backup and recovery, backup, restore, certificates, protection, security, storagegrid, backup, back up 
 summary: 建立安全性憑證以啟用NetApp Backup and Recovery與StorageGRID或ONTAP之間的通訊。 
 ---
-= 在NetApp Backup and Recovery中為StorageGRID和ONTAP設定安全性證書
+= 為 NetApp Backup and Recovery 設定安全性憑證
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

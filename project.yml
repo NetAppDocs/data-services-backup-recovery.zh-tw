@@ -16,11 +16,11 @@ sidebar:
     url: "/index.html"
   - title: 發行說明
     entries:
-    - title: 什麼是新的
+    - title: NetApp Backup and Recovery 的新增功能
       url: "/whats-new.html"
     - title: ONTAP磁碟區工作負載的已知限制
       url: "/br-reference-limitations.html"
-    - title: Microsoft SQL Server 工作負載的已知限制
+    - title: SQL Server 工作負載的已知限制
       url: "/br-limitations.html"
     - title: VMware 工作負載的已知限制
       url: "/br-limitations-vmware.html"
@@ -34,85 +34,85 @@ sidebar:
     entries:
     - title: 了解NetApp Backup and Recovery
       url: "/concept-backup-to-cloud.html"
-    - title: NetApp Backup and Recovery的先決條件
+    - title: NetApp Backup and Recovery 需求
       url: "/concept-start-prereq.html"
-    - title: 設定NetApp Backup and Recovery 的許可
+    - title: 設定授權
       url: "/br-start-licensing.html"
-    - title: 為ONTAP和StorageGRID設定安全證書
+    - title: 設定安全性證書
       url: "/task-setup-ca-certificates.html"
     - title: 在使用NetApp Backup and Recovery之前設定備份目標
       url: "/br-start-setup.html"
-    - title: 發現備份目標
+    - title: 探索異地備份目標
       url: "/br-start-discover-backup-targets.html"
     - title: 切換到不同的NetApp Backup and Recovery工作負載
       url: "/br-start-switch-ui.html"
-    - title: 配置NetApp Backup and Recovery常規設置
+    - title: 配置NetApp Backup and Recovery設置
       url: "/br-start-configure.html"
-    - title: 在 NetApp Backup and Recovery 中設定基於角色的存取控制
+    - title: 設定角色型存取控制
       url: "/br-rbac-setup.html"
   - title: 使用NetApp Backup and Recovery
     entries:
     - title: 登入NetApp Backup and Recovery
       url: "/br-start-login.html"
-    - title: 在儀表板中查看保護健康狀況
+    - title: 在NetApp Backup and Recovery儀表板上查看保護健康狀況
       url: "/br-use-dashboard.html"
     - title: 保護ONTAP磁碟區工作負載
       entries:
-      - title: 保護ONTAP磁碟區工作負載概述
+      - title: 了解 NetApp Backup and Recovery for ONTAP 磁碟區
         url: "/prev-ontap-protect-overview.html"
-      - title: 啟用備份與還原功能以保護磁碟區
+      - title: 啟用 NetApp Backup and Recovery 以保護磁碟區
         url: "/br-start-enable.html"
-      - title: 提升 NetApp Console 本地部署的 Volume 搜尋與復原效能
+      - title: 提升 NetApp Backup and Recovery 本地部署中的搜尋與還原效能
         url: "/prev-ontap-protect-migrate-pvc.html"
-      - title: 規劃ONTAP卷的保護之旅
+      - title: NetApp Backup and Recovery 中的保護旅程規劃選項
         url: "/prev-ontap-protect-journey.html"
       - title: 無需啟動即可探索 ONTAP 系統和 Volume
         url: "/prev-ontap-discover-no-activate.html"
-      - title: 管理ONTAP磁碟區的策略
+      - title: 管理 ONTAP 磁碟區的備份原則
         url: "/prev-ontap-policy-manage.html"
-      - title: ONTAP磁碟區的備份到物件策略選項
+      - title: ONTAP 磁碟區備份至物件原則選項
         url: "/prev-ontap-policy-object-options.html"
-      - title: 管理備份到物件策略進階設定選項
+      - title: 管理備份到物件儲存選項
         url: "/prev-ontap-policy-object-advanced-settings.html"
-      - title: 將Cloud Volumes ONTAP備份到 Amazon S3
+      - title: 將Cloud Volumes ONTAP資料備份到 Amazon S3
         url: "/prev-ontap-backup-cvo-aws.html"
-      - title: 將Cloud Volumes ONTAP備份到 Azure Blob
+      - title: 將 Cloud Volumes ONTAP 資料備份到 Azure Blob 儲存設備
         url: "/prev-ontap-backup-cvo-azure.html"
-      - title: 將Cloud Volumes ONTAP備份到 Google Cloud
+      - title: 將 Cloud Volumes ONTAP 資料備份至 Google Cloud Storage
         url: "/prev-ontap-backup-cvo-gcp.html"
-      - title: 將本機ONTAP備份到 Amazon S3
+      - title: 將本地ONTAP資料備份到 Amazon S3
         url: "/prev-ontap-backup-onprem-aws.html"
-      - title: 將本機ONTAP備份到 Azure Blob
+      - title: 將內部部署 ONTAP 資料備份至 Azure Blob 儲存設備
         url: "/prev-ontap-backup-onprem-azure.html"
-      - title: 將本地ONTAP備份到 Google Cloud
+      - title: 將內部部署 ONTAP 資料備份至 Google Cloud Storage
         url: "/prev-ontap-backup-onprem-gcp.html"
-      - title: 將本地ONTAP備份到ONTAP S3
+      - title: 將本地ONTAP資料備份到ONTAP S3
         url: "/prev-ontap-backup-onprem-ontaps3.html"
-      - title: 將內部部署 ONTAP 備份至 S3 相容儲存設備
+      - title: 將內部部署 ONTAP 資料備份至與 S3 相容的儲存設備
         url: "/prev-ontap-backup-onprem-s3-compatible.html"
-      - title: 將本地ONTAP備份到StorageGRID
+      - title: 將本地ONTAP資料備份到StorageGRID
         url: "/prev-ontap-backup-onprem-storagegrid.html"
-      - title: 使用SnapMirror將磁碟區遷移到 Cloud Resync
+      - title: 使用 SnapMirror 將 ONTAP 磁碟區移轉至 Cloud Resync
         url: "/prev-ontap-migrate-resync.html"
-      - title: 管理ONTAP備份
+      - title: 管理 ONTAP 系統的備份
         url: "/prev-ontap-backup-manage.html"
       - title: 從ONTAP備份還原
         entries:
-        - title: 恢復概述
+        - title: ONTAP 資料還原選項
           url: "/prev-ontap-restore.html"
-        - title: 使用搜尋和恢復功能從ONTAP備份中恢復
+        - title: 使用搜尋與還原功能還原 ONTAP 資料
           url: "/prev-ontap-restore-search.html"
-        - title: 使用“瀏覽和恢復”功能從ONTAP備份中恢復數據
+        - title: 使用瀏覽與還原功能還原 ONTAP 資料
           url: "/prev-ontap-restore-browse.html"
     - title: 保護 Microsoft SQL Server 工作負載
       entries:
-      - title: 保護 Microsoft SQL Server 工作負載概述
+      - title: Microsoft SQL Server 在 NetApp Backup and Recovery 中的保護工作流程
         url: "/br-use-mssql-protect-overview.html"
-      - title: 如果從SnapCenter匯入，則配置其他項目
+      - title: SnapCenter 匯入 NetApp Backup and Recovery 的先決條件
         url: "/concept-start-prereq-snapcenter-import.html"
       - title: 發現 Microsoft SQL Server 工作負載
         url: "/br-start-discover.html"
-      - title: 建立和管理 Microsoft SQL Server 工作負載備份原則
+      - title: 建立和管理 Microsoft SQL Server 備份原則
         url: "/br-use-policies-mssql-create.html"
       - title: 備份 Microsoft SQL Server 工作負載
         url: "/br-use-mssql-backup.html"
@@ -128,13 +128,13 @@ sidebar:
         url: "/br-use-reports.html"
     - title: 保護 VMware 工作負載
       entries:
-      - title: 保護 VMware 工作負載概述
+      - title: VMware 保護工作流程
         url: "/br-use-vmware-protect-overview.html"
       - title: 發現 VMware 工作負載
         url: "/br-use-vmware-discovery.html"
-      - title: 為 VMware 工作負載建立和管理保護群組
+      - title: 管理 VMware 保護群組
         url: "/br-use-vmware-protection-groups.html"
-      - title: 建立和管理 VMware 工作負載備份原則
+      - title: 管理 VMware 備份原則
         url: "/br-use-policies-vmware-create.html"
       - title: 備份 VMware 工作負載
         url: "/br-use-vmware-backup.html"
@@ -142,15 +142,15 @@ sidebar:
         url: "/br-use-vmware-clone.html"
       - title: 復原 VMware 工作負載
         entries:
-        - title: 復原 VMware 虛擬機
+        - title: 復原 VMware 工作負載
           url: "/br-use-vmware-restore.html"
-        - title: 還原 VMware 虛擬磁碟
+        - title: 從備份還原 VMware 虛擬磁碟
           url: "/br-use-vmware-restore-vmdks-from-backups.html"
         - title: 還原 VMware 檔案和資料夾
           entries:
-          - title: 工作流程、先決條件與限制
+          - title: VMware 訪客檔案還原要求
             url: "/br-use-vmware-restore-guest-files-and-folders-overview.html"
-          - title: 從 VMDK 還原 VMware 檔案和資料夾
+          - title: 還原 VMware 用戶機檔案和資料夾
             url: "/br-use-vmware-restore-guest-files-and-folders-from-vmdks.html"
           - title: 疑難排解檔案和資料夾還原
             url: "/br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html"
@@ -246,23 +246,23 @@ sidebar:
       url: "/reference-restart-backup.html"
     - title: 啟用預覽和隱藏功能
       url: "/enable-preview-features.html"
-  - title: 使用 REST API 實現自動化
+  - title: 使用NetApp Backup and RecoveryREST API 實現自動化
     url: "/br-api-backup-restore.html"
   - title: 參考
     entries:
-    - title: 已審核的 NetApp Backup and Recovery 作業
+    - title: 已審核的 NetApp Backup and Recovery 動作
       url: "/reference-audit-actions.html"
-    - title: SnapCenter中的策略與NetApp Backup and Recovery的策略比較
+    - title: SnapCenter中的策略與NetApp Backup and Recovery中的策略比較
       url: "/reference-policy-differences-snapcenter.html"
-    - title: NetApp Backup and Recovery角色和權限
+    - title: NetApp Backup and Recovery IAM 角色
       url: "/reference-roles.html"
-    - title: 在暗站中恢復NetApp Backup and Recovery數據
+    - title: 在暗站中恢復NetApp Backup and Recovery配置數據
       url: "/reference-backup-cbs-db-in-dark-site.html"
-    - title: 支援的 AWS 存檔儲存層
+    - title: NetApp Backup and Recovery支援的 AWS 存檔儲存層
       url: "/prev-reference-aws-archive-storage-tiers.html"
-    - title: 支援的 Azure 存檔儲存層
+    - title: 支援具有 NetApp Backup and Recovery 的 Azure 歸檔儲存設備層
       url: "/prev-reference-azure-archive-storage-tiers.html"
-    - title: 支援的 Google Cloud 歸檔儲存層
+    - title: 支援具有 NetApp Backup and Recovery 的 Google Cloud 歸檔儲存設備層級
       url: "/prev-reference-gcp-archive-storage-tiers.html"
   - title: 法律聲明
     url: "/legal-notices.html"

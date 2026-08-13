@@ -9,7 +9,7 @@
 
 NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。
 
-有關保護 KVM 工作負載的詳細信息，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["保護 KVM 工作負載概述"]。
+有關保護 KVM 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kvm-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 KVM 工作負載"]。
 
 
 

@@ -49,7 +49,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 如果您在首次啟用NetApp Backup and Recovery時僅在系統中的某些磁碟區上啟動了備份，則可以稍後在其他磁碟區上啟用備份。
 
-如需相關指示，請參閱 link:br-start-enable.html["啟用備份與還原功能以保護磁碟區"^]。
+如需相關指示，請參閱 link:br-start-enable.html["啟用 NetApp Backup and Recovery 以保護磁碟區"^]。
 
 
 

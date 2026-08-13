@@ -4,7 +4,7 @@ permalink: br-use-manage-kubernetes-applications.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
 summary: NetApp Backup and Recovery讓您能夠取消保護並刪除 Kubernetes 應用程式及相關資源。 
 ---
-= 管理 Kubernetes 應用程式
+= 在 NetApp Backup and Recovery 中管理 Kubernetes 應用程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

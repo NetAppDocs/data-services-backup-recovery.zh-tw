@@ -4,7 +4,7 @@ permalink: br-use-manage-kubernetes-clusters.html
 keywords: discover, backup and recovery, snapcenter, kubernetes, k8s, clusters, applications, inventory 
 summary: NetApp Backup and Recovery使您能夠發現和管理 Kubernetes 集群，以便保護集群託管的資源。 
 ---
-= 管理 Kubernetes 集群
+= 在 NetApp Backup and Recovery 中管理 Kubernetes 叢集
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

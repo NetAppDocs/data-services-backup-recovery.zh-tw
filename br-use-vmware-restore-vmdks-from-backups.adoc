@@ -4,7 +4,7 @@ permalink: br-use-vmware-restore-vmdks-from-backups.html
 keywords:  
 summary: 您可以從傳統虛擬機器或 vVol 虛擬機器的主備份或輔助備份中還原現有的 VMDK 或已刪除或分離的 VMDK。 
 ---
-= 從備份中還原特定虛擬磁碟
+= 在 NetApp Backup and Recovery 中從備份還原 VMware 虛擬磁碟
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

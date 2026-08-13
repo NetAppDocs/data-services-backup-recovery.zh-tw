@@ -4,7 +4,7 @@ permalink: prev-ontap-discover-no-activate.html
 keywords: activate, backup and recovery, volumes, back up, discover 
 summary: 無需啟動 NetApp Backup and Recovery 即可探索系統和 Volume。 
 ---
-= 無需啟動即可探索 ONTAP 系統和 Volume
+= 在 NetApp Backup and Recovery 中探索未啟動的 ONTAP 系統和磁碟區
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

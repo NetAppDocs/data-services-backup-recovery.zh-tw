@@ -4,7 +4,7 @@ permalink: prev-ontap-restore.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: 您可以使用搜尋和還原功能從 ONTAP 備份檔案中還原磁碟區、資料夾或檔案。 
 ---
-= 使用NetApp Backup and Recovery從備份檔案還原ONTAP數據
+= ONTAP 資料還原選項（位於 NetApp Backup and Recovery 中）
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

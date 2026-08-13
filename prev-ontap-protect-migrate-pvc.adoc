@@ -4,7 +4,7 @@ permalink: prev-ontap-protect-migrate-pvc.html
 keywords: migrate, pvc, nfs, storage, performance, persistence 
 summary: 提高 NetApp Console 本機部署環境中的目錄索引效能。 
 ---
-= 使用 NetApp Console 本地部署時，提升 Volume 搜尋與還原的效能
+= 提升 NetApp Backup and Recovery 本地部署中的搜尋與還原效能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

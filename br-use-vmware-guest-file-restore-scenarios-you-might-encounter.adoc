@@ -4,7 +4,7 @@ permalink: br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html
 keywords:  
 summary: 嘗試還原用戶端檔案時，您可能會遇到用戶端檔案還原工作階段為空白、用戶端檔案還原附加磁碟作業失敗或用戶端檔案還原工作階段停止後備份未分離的情況。 
 ---
-= 訪客文件恢復故障排除
+= NetApp Backup and Recovery 中的訪客檔案還原疑難排解
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

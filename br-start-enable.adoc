@@ -4,7 +4,7 @@ permalink: br-start-enable.html
 keywords: backup, Backup and Recovery, enable backup, Console, service, local deployment 
 summary: 在 NetApp Console 或 NetApp Console 本機部署中的系統上啟動 Backup and Recovery。 
 ---
-= 啟用備份與還原功能以保護磁碟區
+= 啟用 NetApp Backup and Recovery 以保護磁碟區
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

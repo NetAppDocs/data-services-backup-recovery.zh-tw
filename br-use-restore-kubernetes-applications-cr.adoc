@@ -4,7 +4,7 @@ permalink: br-use-restore-kubernetes-applications-cr.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用程式。 
 ---
-= 使用自訂資源還原 Kubernetes 應用程式
+= 使用自訂資源透過 NetApp Backup and Recovery 還原 Kubernetes 應用程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護
 ====
 * 還原應用程式時，所有為該應用程式配置的執行鉤子都會隨應用程式一起還原。如果存在還原後執行鉤子，它會在還原操作過程中自動執行。
 * qtree 磁碟區支援從備份還原到不同的命名空間或原始命名空間。但是，qtree 磁碟區不支援從快照還原到不同的命名空間或原始命名空間。
-* 您可以使用進階設定來自訂還原操作。如需深入瞭解、請參閱 link:br-use-kubernetes-advanced-restore-settings.html["使用進階自訂資源還原設定"]。
+* 您可以使用進階設定來自訂還原操作。若要深入瞭解，請參閱 link:br-use-kubernetes-advanced-restore-settings.html["NetApp Backup and Recovery 中 Kubernetes 的進階還原設定"]。
 
 
 ====

@@ -4,7 +4,7 @@ permalink: reference-audit-actions.html
 keywords: audit, audit actions, NetApp Console, Backup and Recovery, audit log 
 summary: 由 NetApp Console 稽核所支援的備份與還原動作參考。 
 ---
-= 已審核的 NetApp Backup and Recovery 作業
+= 已審核的 NetApp Backup and Recovery 動作
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: br-use-vmware-restore-guest-files-and-folders-from-vmdks.html
 keywords: restore, guest, files, folders, files and folders, guest VM, windows, linux, VMDK, attach 
 summary: 您可以將一個或多個檔案或資料夾從 VMDK 還原到客體虛擬機器。 
 ---
-= 從虛擬磁碟還原檔案和資料夾
+= 在 NetApp Backup and Recovery 中還原 VMware 客體檔案和資料夾
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,7 +24,7 @@ summary: 您可以將一個或多個檔案或資料夾從 VMDK 還原到客體�
 將虛擬磁碟中的檔案或資料夾還原到原始虛擬機器或其他虛擬機器。如果您不想將虛擬磁碟附加到原始虛擬機器，可以將其附加到 Proxy 虛擬機器。
 
 .開始之前
-* 請查看 link:br-use-vmware-restore-guest-files-and-folders-overview.html["恢復訪客文件和資料夾的要求和限制"] 中的先決條件和限制。
+* 請查看 link:br-use-vmware-restore-guest-files-and-folders-overview.html["VMware 訪客檔案還原在 NetApp Backup and Recovery 中的要求"] 中的先決條件和限制。
 * 若要使用 Proxy VM 還原檔案和資料夾，請確保在開始檔案和資料夾還原程序之前已設定好 Proxy VM。
 * 您需要在 NetApp Backup and Recovery 中為來源虛擬磁碟和目標 VM 建立認證，才能還原檔案和資料夾。NetApp Backup and Recovery 會在還原檔案和資料夾時，使用這些認證來驗證虛擬磁碟和目標 VM 的身份。
 

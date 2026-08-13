@@ -4,7 +4,7 @@ permalink: br-use-back-up-now-kubernetes-applications-web-ui.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
 summary: NetApp Backup and Recovery讓您能夠管理工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。 
 ---
-= 現在即可使用 Backup and Recovery Web UI 備份 Kubernetes 應用程式
+= 立即使用 NetApp Backup and Recovery Web UI 備份 Kubernetes 應用程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
