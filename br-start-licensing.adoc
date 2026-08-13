@@ -86,7 +86,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 使用這些連結從您的雲端供應商市場訂閱NetApp Backup and Recovery ：
 
 * AWS： https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4["前往NetApp Intelligent Services市場了解定價詳情"^] 。
-* Azure： https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["前往NetApp Intelligent Services市場了解定價詳情"^] 。
+* Azure： https://marketplace.microsoft.com/en-us/product/netapp.cloud-manager?tab=Overview["前往NetApp Intelligent Services市場了解定價詳情"^]。
 * Google Cloud： https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project["前往NetApp Intelligent Services市場了解定價詳情"^] 。
 
 
@@ -114,7 +114,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 
 
 
-使用 Azure 時，有兩種年度合約可供選擇 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp["Azure 市集頁面"^]對於Cloud Volumes ONTAP和本機ONTAP系統：
+使用 Azure 時，有兩種年度合約可從 https://marketplace.microsoft.com/en-us/product/netapp.netapp-bluexp["Azure 市集頁面"^]取得，分別適用於 Cloud Volumes ONTAP 和內部部署 ONTAP 系統：
 
 * 「雲端備份」計畫可讓您備份Cloud Volumes ONTAP資料和本機ONTAP資料。
 +

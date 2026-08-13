@@ -720,7 +720,6 @@
   <block id="5f0364e373bcb99c02ad1b8359683908" category="inline-link">Cloud Volumes ONTAP授權主題</block>
   <block id="8bf40ad9f866315020ec4fdd4f65701a" category="paragraph">查看<block ref="efcb71a951fd69a7db06309cdcce3842" category="inline-link-rx"></block>了解有關此許可選項的更多資訊。</block>
   <block id="bd0202b4a5e368ede75c41822527f8dd" category="inline-link">Azure 市集頁面</block>
-  <block id="ba52c601f575024f72fb5f7ac8154b76" category="paragraph">使用 Azure 時，有兩種年度合約可供選擇<block ref="d5a65c1c4876b0fa6968c9e08ffea7e8" category="inline-link-rx"></block>對於Cloud Volumes ONTAP和本機ONTAP系統：</block>
   <block id="f201c550f444b5128aeb063bf930d1e2" category="inline-link">將訂閱與您的 Azure 憑證關聯</block>
   <block id="bb2a4ab21c5ccf409e44b59faacde869" category="paragraph">如果您想使用此選項，請從 Marketplace 頁面設定您的訂閱，然後<block ref="ee52880e3726e54668f91a4b65aa4b29" category="inline-link-rx"></block>。請注意，您還需要使用此年度合約訂閱來支付您的Cloud Volumes ONTAP系統的費用，因為您只能在控制台中為您的 Azure 憑證指派有效訂閱。</block>
   <block id="78cb5753f269296b8cbe81558d864e4f" category="paragraph">當您使用 GCP 時，請聯絡您的NetApp銷售代表購買年度合約。該合約在 Google Cloud Marketplace 中以私人優惠形式提供。</block>
@@ -2433,7 +2432,6 @@
   <block id="69dbfb140f0641649e386e4fa6eb9ccc" category="paragraph">您需要驗證 Azure 和控制台的授權需求：</block>
   <block id="2170d0e9ec0577e343eec3fd2bc324d7" category="list-text">在為叢集啟動NetApp Backup and Recovery之前，您需要訂閱 Azure 提供的即用即付 (PAYGO) 主機市場，或從NetApp購買並啟用NetApp Backup and Recovery BYOL 授權。這些許可證適用於您的帳戶，可以在多個系統中使用。</block>
   <block id="99502accd75b1c001f0d4173b25e6554" category="inline-link">Azure 市場提供的NetApp Console</block>
-  <block id="a140b0fdf404992274b76a850ba3cc4b" category="list-text">對於NetApp Backup and Recovery PAYGO 許可，您需要訂閱<block ref="3300cb29b93693465495dcf855aee89b" category="inline-link-rx"></block>。  NetApp Backup and Recovery的計費透過此訂閱完成。</block>
   <block id="38b11d9697757c33227037f48357f555" category="list-text">對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。<block ref="706a4c6b2a498be3949e082e6d4f63b6" category="inline-link-macro-rx"></block>。</block>
   <block id="39476a4d8825e098719d72ca18619ed8" category="list-text">您需要對用於儲存備份的物件儲存空間進行 Azure 訂閱。</block>
   <block id="a2dc9a4fb704e8ca875a1a77d909ba7d" category="paragraph">您可以在所有區域（包括 Azure 政府區域）中建立從本機系統到 Azure Blob 的備份。您在設定服務時指定儲存備份的區域。</block>
@@ -3834,7 +3832,6 @@
   <block id="8caf5a345895253ff6b6c49a438599d4" category="list-text">請確保顯示的磁碟區與原始環境中的磁碟區相同。</block>
   <block id="432f26fda10ddec4232e210d763f233e" category="paragraph">NetApp Backup and Recovery評估 Microsoft SQL Server 應用程式。該服務評估現有保護級別，包括目前的備份保護策略、快照以及備份和還原選項。</block>
   <block id="f0b87199311bf1c15f240b666518084c" category="list-text">AWS：<block ref="e5469c6686b5a2c86b78502f7ea8c335" category="inline-link-rx"></block> 。</block>
-  <block id="6d641e087ca9cbb2e0778a492ac1066a" category="list-text">Azure：<block ref="211ed702bd160a1aa192248c846136e5" category="inline-link-rx"></block> 。</block>
   <block id="80720981863bfe0c9cc6702701d24f18" category="list-text">Google Cloud：<block ref="5aa99f120ab43d5669622268ca1e3fd1" category="inline-link-rx"></block> 。</block>
   <block id="35521e84b87db7ff299e3d292854a426" category="paragraph">使用NetApp Backup and Recovery從快照、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原 Hyper-V 工作負載。</block>
   <block id="c71707f07223923dbaab7d7f94cf956b" category="paragraph">使用NetApp Backup and Recovery從快照、複製到輔助儲存的保護群組備份或儲存在物件儲存中的備份還原 KVM 虛擬機器。</block>
@@ -5809,4 +5806,7 @@
   <block id="04a5a856cc6b493eb99f477d96256257" category="sidebar">還原 VMware 用戶機檔案和資料夾</block>
   <block id="bd0ebd8b773f57bb68702549777a23ef" category="sidebar">支援具有 NetApp Backup and Recovery 的 Azure 歸檔儲存設備層</block>
   <block id="8ee4602516c339cfb06e6c5907f4f918" category="sidebar">支援具有 NetApp Backup and Recovery 的 Google Cloud 歸檔儲存設備層級</block>
+  <block id="053401f3d9ace97002dd341287d9ebb1" category="list-text">Azure：<block ref="f4515f843bc62e0cde60bea0de056fd5" category="inline-link-rx"></block>。</block>
+  <block id="a76ddbef42127fde7d9134d4314bebdd" category="paragraph">使用 Azure 時，有兩種年度合約可從<block ref="25abf8f644a5c025c626f91c32f89a15" category="inline-link-rx"></block>取得，分別適用於 Cloud Volumes ONTAP 和內部部署 ONTAP 系統：</block>
+  <block id="55226b5c9d4512e179f5677e92c03e76" category="list-text">對於 NetApp Backup and Recovery PAYGO 授權，您需要訂閱<block ref="404638c3cd4ff4f928bcc623b020a5df" category="inline-link-rx"></block>。NetApp Backup and Recovery 的計費透過此訂閱進行。</block>
 </blocks>
