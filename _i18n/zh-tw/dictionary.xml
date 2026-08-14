@@ -677,26 +677,15 @@
   <block id="628bc160a519e5ae69b6c8aa88610900" category="list-text">*新增叢集中的所有主機*：選取此方塊可在發現期間將叢集中的所有主機新增至NetApp Backup and Recovery 。</block>
   <block id="b7dfb6860d9af743a7d3f0fe2adfde3d" category="list-text">*跳過選購的預安裝檢查*：勾選此方塊可跳過選購的預安裝檢查。例如，如果您知道記憶體或空間考慮因素將在不久的將來發生變化，並且您想立即安裝插件，那麼您可能想要這樣做。</block>
   <block id="2a9ab4f690bade887dade42f4a0f412b" category="inline-link">NetApp Console部署模式</block>
-  <block id="02a0978d1df3ca052a64d05249709cc3" category="summary">您可以透過從雲端供應商購買按使用量付費或年度市場訂閱來獲得NetApp Backup and Recovery 的許可，或透過從NetApp購買自帶許可證來獲得許可。需要有效的許可證才能在系統上啟動NetApp Backup and Recovery and Recovery 、建立生產資料的備份以及將備份資料還原到生產系統。</block>
-  <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">在您繼續閱讀之前，請注意以下幾點：</block>
   <block id="0afafddaf42e76b83acff428b8613a7e" category="list-text">NetApp Backup and Recovery自帶許可證 (BYOL) 是一種浮動許可證，您可以在與NetApp Console組織或帳戶關聯的所有系統中使用它。因此，如果您現有的 BYOL 授權具有足夠的備份容量，則無需購買另一個 BYOL 授權。</block>
-  <block id="98ed4c44ab8a3c8a5b08f8e91a585c40" category="list-text">如果您使用的是 BYOL 許可證，建議您也訂閱 PAYGO 訂閱。如果您備份的資料超出了 BYOL 許可證允許的範圍，或者許可證期限已過期，則備份將透過您的即用即付訂閱繼續進行 - 不會中斷服務。</block>
   <block id="31f730de563a8876975a231ee55bc4d7" category="list-text">將本機ONTAP資料備份到StorageGRID時，您需要 BYOL 許可證，但雲端提供者儲存空間無需付費。</block>
   <block id="a19866903a3ec5f04991a0a8cddba809" category="inline-link-macro">了解有關使用NetApp Backup and Recovery 的成本的更多資訊。</block>
   <block id="c286e932d30112d9d8d5bbd32a601120" category="paragraph"><block ref="c286e932d30112d9d8d5bbd32a601120" category="inline-link-macro-rx"></block></block>
   <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">30天免費試用</block>
-  <block id="5c90c4146c60ec1de207d739570727f4" category="paragraph">如果您在雲端供應商的市場中註冊按使用量付費訂閱 * NetApp Intelligent Services*，則可以獲得NetApp Backup and Recovery 30 天免費試用。免費試用從您訂閱市場清單時開始。請注意，如果您在部署Cloud Volumes ONTAP系統時支付市場訂閱費用，然後在 10 天後開始NetApp Backup and Recovery免費試用，那麼您將有 20 天的剩餘時間來使用免費試用版。</block>
   <block id="3bda37bfd2c4e1de30fe6dc83a6b5161" category="inline-link-macro">從系統取消註冊NetApp Backup and Recovery</block>
-  <block id="bf1d645798cca16870d01c4291e32232" category="paragraph">免費試用結束後，您將自動切換至 PAYGO 訂閱，不會中斷。如果您決定不再繼續使用NetApp Backup and Recovery，只需<block ref="d386fd58d02a020da97ae73badd35eec" category="inline-link-macro-rx"></block>在試用期結束前，您將不會被收費。</block>
   <block id="8d4d6551ee286317b2a4f297766952f5" category="section-title">結束免費試用</block>
-  <block id="6e2ca457da511ed9f33e436ba447bd20" category="paragraph">如果您想在免費試用結束後繼續使用NetApp Backup and Recovery ，則必須設定付費訂閱。您可以從NetApp Console介面導覽至計費部分並選擇適合您需求的訂閱方案來執行此操作。如果您不想繼續使用NetApp Backup and Recovery，您可以結束免費試用。</block>
-  <block id="d512d1c3dcc8425bf55d8cf433aeb7fe" category="paragraph">當您結束免費試用而未訂閱付費方案時，您的資料將在免費試用結束後 60 天自動刪除。您可以選擇讓系統立即刪除您的資料。</block>
-  <block id="304ebe491249439866719a481b2c1f8f" category="list-text">從NetApp Backup and Recovery登入頁面，選擇 *查看免費試用版*。</block>
   <block id="93fc967afa4fe1863c2b23f94955bb42" category="list-text">選擇*結束免費試用*。</block>
-  <block id="e5c5290b0a5e919e86eb32abf4823612" category="list-text">選擇「免費試用結束後立即刪除資料」以立即刪除您的資料。</block>
   <block id="5d85e0c470da58b1efab48b84e308a0b" category="list-text">在框框中輸入*結束試用*。</block>
-  <block id="599188bc76d650bfca3dc06eda5883ba" category="list-text">選擇*結束*確認。</block>
-  <block id="b859d3bf6860d3407e06ede252614a4c" category="section-title">使用NetApp Backup and Recovery PAYGO 訂閱</block>
   <block id="a4afc1eb46bd689c898689a130322269" category="paragraph">對於即用即付，您將在單一訂閱中按小時向雲端供應商支付物件儲存成本和NetApp備份授權成本。即使您有免費試用版或自帶授權 (BYOL)，也應該在 Marketplace 中訂閱 * NetApp Intelligent Services*：</block>
   <block id="dcb73ed45cf0756ddb50a72607921a55" category="list-text">訂閱可確保免費試用結束後服務不會中斷。試用期結束後，我們將根據您備份的資料量按小時向您收費。</block>
   <block id="09734c1f0feb893a640f1a5c4dad5854" category="list-text">如果您備份的資料超出了 BYOL 授權允許的範圍，則資料備份和復原作業將透過即用即付訂閱繼續進行。例如，如果您擁有 10 TiB BYOL 許可證，則超過 10 TiB 的所有容量都將透過 PAYGO 訂閱收費。</block>
@@ -723,13 +712,11 @@
   <block id="f201c550f444b5128aeb063bf930d1e2" category="inline-link">將訂閱與您的 Azure 憑證關聯</block>
   <block id="bb2a4ab21c5ccf409e44b59faacde869" category="paragraph">如果您想使用此選項，請從 Marketplace 頁面設定您的訂閱，然後<block ref="ee52880e3726e54668f91a4b65aa4b29" category="inline-link-rx"></block>。請注意，您還需要使用此年度合約訂閱來支付您的Cloud Volumes ONTAP系統的費用，因為您只能在控制台中為您的 Azure 憑證指派有效訂閱。</block>
   <block id="78cb5753f269296b8cbe81558d864e4f" category="paragraph">當您使用 GCP 時，請聯絡您的NetApp銷售代表購買年度合約。該合約在 Google Cloud Marketplace 中以私人優惠形式提供。</block>
-  <block id="f795b2e1a1434e0b0c432d97df55b423" category="section-title">使用NetApp Backup and RecoveryBYOL 許可證</block>
   <block id="70af97100aa32faf0090b5c729f50df0" category="paragraph">NetApp提供的自備授權的有效期限為 1 年、2 年或 3 年。您只需為您保護的資料付費，該費用根據正在備份的來源ONTAP磁碟區的邏輯使用容量（任何效率之前）計算。此容量也稱為前端兆位元組 (FETB)。</block>
   <block id="b323a5cd735592858ae199d4fb24a0ed" category="paragraph">BYOL NetApp Backup and Recovery許可證是一種浮動許可證，其總容量在與您的NetApp Console組織或帳戶關聯的所有系統之間共用。對於ONTAP系統，您可以透過執行 CLI 命令來粗略估計所需的容量<block ref="2a47fed7b3c4b7d59e03f10c018cf5cc" prefix=" " category="inline-code"></block>對於您計劃備份的磁碟區。</block>
   <block id="0e1664404f2f5bf6df7854c143d822d8" category="paragraph">如果您沒有NetApp Backup and Recovery BYOL 許可證，請點擊控制台右下角的聊天圖示購買。</block>
   <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link">點此了解詳情</block>
   <block id="44f0b39025659271b58ac6522acd1947" category="paragraph">或者，如果您擁有未指派的基於節點的Cloud Volumes ONTAP授權但不會使用，則可以將其轉換為具有相同美元等值和相同到期日的NetApp Backup and Recovery授權。<block ref="75023a227952ebf9289e6265901bd994" category="inline-link-rx"></block> 。</block>
-  <block id="7ca2437ae36844293233999dbc49cda6" category="paragraph">您可以使用NetApp Console來管理 BYOL 授權。您可以從控制台新增許可證、更新現有許可證以及查看許可證狀態。</block>
   <block id="053b4884f108724f51751445f3fa132f" category="inline-link">了解如何新增許可證</block>
   <block id="ecc3952d3e2cfa4951474032864c7c9a" category="paragraph"><block ref="b3309669576eb9e10c25cb147fe4e7a8" category="inline-link-rx"></block>。</block>
   <block id="31c503d495627df1adea02e470ba00e6" category="summary">您使用NetApp Console登入NetApp Backup and Recovery服務。</block>
@@ -5617,13 +5604,7 @@
   <block id="07c87e1a7ad1cef370fca4fd17f11406" category="list-text">選擇系統並選取叢集。在頁面右側的資訊面板中，選取「備份與還原」服務的 *啟用* 按鈕。</block>
   <block id="650a46b766c48de5003178d3c64c3e35" category="list-text">選擇 *Backup Volumes*。</block>
   <block id="c02715a613f1d27ea0d77a20a3d25376" category="paragraph">根據您使用的是 NetApp Console 還是 NetApp Console （本地部署），您可以透過以下方式取得 NetApp Backup and Recovery 的授權：從雲端供應商購買隨用隨付 （PAYGO） 或年度市場訂閱的 *NetApp Intelligent Services*；或從 NetApp 購買自帶授權 （BYOL）。在系統上啟動 NetApp Backup and Recovery、建立正式作業資料的備份，以及將備份資料還原至正式作業系統，均需要有效的授權。</block>
-  <block id="d63e296034547bf26cb0cadf2f6380a7" category="list-text">如果您使用 NetApp Console 的 Backup and Recovery，您可以訂閱隨用隨付 （PAYGO） 授權，或購買自帶授權 （BYOL） 授權。</block>
   <block id="4f423dab0b2a066d43aa7c2770125156" category="list-text">如果您正在搭配 NetApp Console 本機部署使用 Backup and Recovery，則只能購買自備授權（BYOL）授權。</block>
-  <block id="c25cac16b9617f72907c0630edc1b01c" category="paragraph">設定 NetApp Backup and Recovery 的授權。</block>
-  <block id="1ee6f4a6521039e0ae82dbbbba308a27" category="section-title">使用市場年度合約或 BYOL 授權</block>
-  <block id="f553546046684a79a8a9f772a3ba1d69" category="section-title">設定 NetApp Backup and Recovery 本機部署的授權</block>
-  <block id="81f4d3c9ac626f319c4045d07dc88068" category="paragraph">設定本地部署版 NetApp Console 的授權。</block>
-  <block id="e686efc70811cf9c1330fb2efbfde349" category="paragraph">您可以使用 NetApp Console 本機部署來管理 BYOL 授權。您可以從 Console 新增授權、更新現有授權，以及檢視授權狀態。</block>
   <block id="703de1576e07d34f2860aa3e1da40baf" category="list-text">如果您使用的是 NetApp Console，請開啟網頁瀏覽器並前往<block ref="d6205946f936217747639e85e1340e8f" category="inline-link-rx"></block>。</block>
   <block id="5cb1f0001bf54c75c97113f354e00531" category="list-text">如果您使用的是 NetApp Console 本機部署，請開啟網頁瀏覽器並前往本機 Console 部署的 Web UI 的 IP 位址。</block>
   <block id="7c55093665daac77f8dd76430cb75dfa" category="inline-link">在 NetApp Console 本機部署中設定警示通知規則</block>
@@ -5809,4 +5790,30 @@
   <block id="053401f3d9ace97002dd341287d9ebb1" category="list-text">Azure：<block ref="f4515f843bc62e0cde60bea0de056fd5" category="inline-link-rx"></block>。</block>
   <block id="a76ddbef42127fde7d9134d4314bebdd" category="paragraph">使用 Azure 時，有兩種年度合約可從<block ref="25abf8f644a5c025c626f91c32f89a15" category="inline-link-rx"></block>取得，分別適用於 Cloud Volumes ONTAP 和內部部署 ONTAP 系統：</block>
   <block id="55226b5c9d4512e179f5677e92c03e76" category="list-text">對於 NetApp Backup and Recovery PAYGO 授權，您需要訂閱<block ref="404638c3cd4ff4f928bcc623b020a5df" category="inline-link-rx"></block>。NetApp Backup and Recovery 的計費透過此訂閱進行。</block>
+  <block id="2f5c0cdf23fd1d83e8957259864d7504" category="summary">向您的雲端供應商購買隨用隨付或年度市場訂閱，或向 NetApp 購買自帶授權，以授權 NetApp Backup and Recovery。</block>
+  <block id="5efdbe70fa40d9f38adfb6f4b09b9950" category="paragraph">關於授權運作方式的幾點說明：</block>
+  <block id="4ecebde206e234cc155e8a344bd3bba8" category="list-text">使用 ONTAP Volumes 工作負載時，無需授權即可探索和還原磁碟區。但是，如果需要保護（備份）磁碟區，則需要購買授權。</block>
+  <block id="8ac0c776ec80b47063ea03e1287a8a48" category="list-text">如果您使用自帶授權 （BYOL） 授權搭配 NetApp Console，建議您同時訂閱隨用隨付 （PAYGO） 訂閱。如果您備份的資料超過 BYOL 授權允許的範圍，或您的授權到期，備份將繼續透過您的隨用隨付 （PAYGO） 訂閱進行，服務不會中斷。</block>
+  <block id="dd1244bc2b4c33b486f92809fd26eae2" category="paragraph">NetApp Backup and Recovery 有三種授權選項：</block>
+  <block id="5a7ebe04758dcbebfc8904dfdffebbc0" category="list-text">直接從 NetApp 購買授權，也稱為自帶授權 (BYOL)。此選項適用於 NetApp Console 和 Console 本機部署。</block>
+  <block id="eb5d26d67b856ebf71b998adb69af3de" category="list-text">從大型公有雲市場購買年度合約。此選項僅適用於 NetApp Console。</block>
+  <block id="a76b9ce0651abc0570c1ff416f15f0b5" category="list-text">從大型公有雲市場訂閱隨用隨付 （PAYGO） 授權。此選項僅適用於 NetApp Console。</block>
+  <block id="633001bd3e29e073a9170c112245d8eb" category="paragraph">除 ONTAP Volumes 工作負載外，所有未授權工作負載均可享有 30 天的 NetApp Backup and Recovery 免費試用。您可以在開始使用工作負載時（在探索其資源之前）啟動試用。試用開始後，其狀態和已使用容量將顯示在 NetApp Backup and Recovery 首頁的 *Free Trials* 下方。</block>
+  <block id="a1c09b267b15d9abb4abc0a353f38d9e" category="paragraph">您可以隨時從登入 NetApp Backup and Recovery 後顯示的首頁結束工作負載的免費試用。如果您想在免費試用結束後繼續使用 NetApp Backup and Recovery，則必須在 NetApp Console 介面的 *Licenses and subscriptions* 部分設定付費訂閱。如果您不想繼續使用 NetApp Backup and Recovery，可以在不訂閱付費方案的情況下結束免費試用。您可以<block ref="d386fd58d02a020da97ae73badd35eec" category="inline-link-macro-rx"></block>在試用期結束前結束試用，且不會被收取任何費用。</block>
+  <block id="0aac3c6dd03cf6d4e8ca51d69072f150" category="list-text">在 NetApp Backup and Recovery 首頁的 *Free trials* 下，選擇您要結束的免費試用。</block>
+  <block id="7b6b8ad5edbe17678fa98a5ef86c7fb9" category="list-text">選擇 *End trial* 進行確認。</block>
+  <block id="a9d2203ef3099da24a574d6c0c78c420" category="section-title">使用自備授權 (BYOL)</block>
+  <block id="317dca095a5aeada6a0b52d1d48e704b" category="paragraph">您可以使用 NetApp Console 或 Console 本機部署來管理 BYOL 授權。您可以從 Console 新增授權、更新現有授權以及檢視授權狀態。</block>
+  <block id="14d6933e870fc5ba7090e0dd8e19090f" category="section-title">使用市場授權（僅適用於 NetApp Console）</block>
+  <block id="cfe9e403b5c5bc984ca85f982761e1f5" category="section-title">使用 NetApp Backup and Recovery 隨用隨付訂閱（僅適用於 NetApp Console）</block>
+  <block id="5a474070d931997b2be1cddaf1854c05" category="section-title">授權到期後會發生什麼情況</block>
+  <block id="083677780056e9fc5dae49e6a71d0358" category="paragraph">當您的 Backup and Recovery 授權到期時：</block>
+  <block id="f2e3a4590b9900025cd853f75bfa6758" category="list-text">根據現有備份策略進行的備份和還原作業仍然有效。</block>
+  <block id="32b82b9e3d79607ecd0f2b1e699a015d" category="list-text">您無法建立新的備份原則，也無法將保護擴展至其他工作負載和資料存放區。</block>
+  <block id="17f9b4552ffa5050f9c2883f166c9bcf" category="list-text">您無法使用新的 Backup and Recovery 功能及增強功能。</block>
+  <block id="ed463bcf7129e69f84536ce086c5ca71" category="list-text">NetApp 備份和復原的技術支援已不再提供。</block>
+  <block id="9dbe18255749234b9167dd6f2487c4c3" category="paragraph">續訂您的授權：</block>
+  <block id="e925e590a02502efcacb9c27366f2977" category="list-text">建立和修改備份策略，包括資料庫、虛擬機器和 Kubernetes 工作負載的應用程式一致性備份策略。</block>
+  <block id="bd0fc1d90d95f8259fbb2a77c47166c8" category="list-text">使用新的備份和復原功能及增強功能。</block>
+  <block id="f724a122832f4cd3fdfc151421f7e241" category="list-text">繼續獲取 NetApp 技術支援。</block>
 </blocks>
