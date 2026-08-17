@@ -4884,7 +4884,6 @@
   <block id="a1f316919d6ee6dc4555dd8c215dd639" category="list-text">對於跨 VM 還原（還原至不同的 Linux VM），SSH 必須在目標 VM 上執行。</block>
   <block id="0904d2f230fc0f0277b7da11a64a4fdb" category="list-text">您無法在作業系統不同的客體之間還原檔案或資料夾（還原到不同的 VM 時,目的地作業系統類型必須與來源作業系統類型相同）。</block>
   <block id="dbbb5df4d99995be20065b232a8370ff" category="list-text">*目的地儲存設備* 區段（僅在從物件存放區還原時可見）：</block>
-  <block id="60dda7eb5d8d89865794c9953a4b00ab" category="list-text">*變更預設儲存位置*：啟用此選項可在來源儲存位置無法存取或已滿時，將物件儲存備份還原到其他 Storage VM。選擇要使用的其他叢集、Storage VM 或 Aggregate。</block>
   <block id="b07f4d391521e556166d0e8a85f249d6" category="admonition">NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程式指派靜態 IP 位址，以避免在代理程式 IP 位址變更時出現問題。</block>
   <block id="1873f6028647ed72cee9a7bccf68c491" category="summary">使用 NetApp Backup and Recovery，透過瀏覽和還原來還原 ONTAP 資料。</block>
   <block id="9b0b495cd3a28a2977dbab61bc1cbce8" category="summary">您可以使用搜尋和還原功能從 ONTAP 備份檔案中還原磁碟區、資料夾或檔案。</block>
@@ -5180,7 +5179,6 @@
   <block id="f21c672ce008bffc75e9cebaa985c8b8" category="paragraph">隨即顯示已開啟的虛擬磁碟掛載工作階段清單。</block>
   <block id="da51d3c21777acf76b87932de6839d64" category="list-text">（選用）若要使用工作階段將檔案和資料夾還原至客體 VM，請開啟工作階段的 Actions 功能表 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>，然後選取 *Restore files and folders*。</block>
   <block id="57c9526981addf2ea70c6ad409673cb5" category="list-text">（選用）若要刪除工作階段，請開啟工作階段的「動作」功能表 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>，然後選取 *Delete* 。</block>
-  <block id="970e7dbe358429eacf37bb0e37943138" category="list-text">從物件儲存備份還原（僅限還原至原始位置）</block>
   <block id="4b59b9c80f0f0e40294e53eb75b4e004" category="list-text">還原至原始位置（從主儲存設備、次要儲存設備和物件儲存設備）</block>
   <block id="bff6f5877ada2718589866425ae83e38" category="doc">在 NetApp Backup and Recovery 中建立及管理 Hyper-V 備份原則</block>
   <block id="7c54de5e880bd010125642ffb949ccad" category="paragraph">在 NetApp Backup and Recovery 中，建立您自己的 Hyper-V 備份原則，以管理備份頻率、備份執行時間，以及保留的備份檔案數量。</block>
@@ -5816,4 +5814,22 @@
   <block id="e925e590a02502efcacb9c27366f2977" category="list-text">建立和修改備份策略，包括資料庫、虛擬機器和 Kubernetes 工作負載的應用程式一致性備份策略。</block>
   <block id="bd0fc1d90d95f8259fbb2a77c47166c8" category="list-text">使用新的備份和復原功能及增強功能。</block>
   <block id="f724a122832f4cd3fdfc151421f7e241" category="list-text">繼續獲取 NetApp 技術支援。</block>
+  <block id="d649bc1632422c59f70f207f44b9bd46" category="paragraph">在此版本中，Hyper-V 工作負載引入了以下增強功能：</block>
+  <block id="f24ced363c199d867c90ec2cb7734252" category="paragraph">*將物件儲存備份還原到備用位置*：您現在可以將 Hyper-V 虛擬機器、檔案和資料夾從物件存放區還原到備用儲存設備位置。</block>
+  <block id="9836134eb11f1353834ea33101d25681" category="inline-link">了解如何使用 NetApp Backup and Recovery 保護 Hyper-V 工作負載</block>
+  <block id="02b4e2b0b1ffdd4b0919e2e3430f47a2" category="paragraph">有關保護 Hyper-V 工作負載的詳細資訊，請參閱<block ref="ff9e4811de6c06d1343d50a5a2fb4ef4" category="inline-link-rx"></block>。</block>
+  <block id="d7a71b14f458c01c992ae6ab1d9419fb" category="list-text">*Trident Protect 26.08*：此版本包含 Trident Protect 26.08。</block>
+  <block id="a246bba4bc1bf6be5dbc5f0eef6fa916" category="list-text">*備份重試*：您現在可以在 Kubernetes 保護原則的進階設定中啟用備份重試，並設定重試次數和重試間隔。</block>
+  <block id="af4a914ceb04d24e26988f7034d17a6a" category="list-text">*部分備份成功*：您現在可以在 Kubernetes 保護原則中設定進階設定，以便在個別資源發生故障時繼續備份，從而使備份作業部分成功完成。這樣，即使某些資源在備份作業期間發生故障，您仍然可以還原已備份的資源。</block>
+  <block id="51d0bd2fc2cb031a5bd97ec4521df850" category="list-text">*損毀狀況一致與 VM 一致備份*：Backup and Recovery for NetApp Console 服務現在支援設定保護原則，以建立損毀狀況一致或 VM 一致的備份或快照。您還可以自訂在保護作業期間執行 VM 凍結的方式。</block>
+  <block id="f1aeeb7adfac5302d8957879854e8855" category="list-text">*Console 代理程式 IP 位址變更時重新連接 Kubernetes 叢集*：Backup and Recovery for NetApp Console 服務現在可讓您在代理程式的 IP 位址變更時，將叢集重新連接至其 Console 代理程式。</block>
+  <block id="137aac5acf6a89b5f2b8d01617331ec5" category="list-text">*將叢集移轉至新的 Console 代理程式*：Backup and Recovery for NetApp Console 服務現在可讓您在原始代理程式失敗或被刪除時，將叢集移轉至新的 Console 代理程式，以確保應用程式保護不中斷。</block>
+  <block id="5bac8342d3d15811fd4569a62898855c" category="inline-link">了解如何使用 NetApp Backup and Recovery 保護 Kubernetes 工作負載</block>
+  <block id="9768ac88d7eeb5d6d2192e590de89bb4" category="paragraph">有關保護 Kubernetes 工作負載的詳細資訊，請參閱<block ref="1288e5e7d4fc4b4cb3f5e18b91f79147" category="inline-link-rx"></block>。</block>
+  <block id="c85cd7cc7711f70f8bc51d35495063e2" category="section-title">Oracle 資料庫工作負載增強</block>
+  <block id="26d43fe933dfc83c3004371ec611ca0f" category="list-text">*可插拔資料庫 (PDB) 還原*：現在可以還原單一可插拔資料庫 (PDB) 和 PDB 表空間，包括時間點恢復。</block>
+  <block id="ba1d750ea9570e1e14902f85cdd21fbd" category="list-text">*可插拔資料庫 (PDB) Clone*：現在可以將單一 PDB Clone 到現有的目標 Container 資料庫 （CDB） 中，並且可以選擇在 Clone 整個 Container 資料庫時排除 PDB。</block>
+  <block id="c7b95907073ba49194dd07ae01b56f96" category="list-text">在「目標儲存設備」部分（僅從物件存放區還原時可見）：</block>
+  <block id="f771ab6fc3300e0b07bde061e3f606f7" category="list-text">*變更預設儲存設備位置*：啟用此選項可在來源儲存設備位置無法存取或已滿時，將物件存放區備份還原到其他位置。選擇要使用的其他叢集、儲存設備虛擬機器或彙總。</block>
+  <block id="7c3780c8bbc09e634d77ec9249acfb5c" category="section-title">2026年8月17日</block>
 </blocks>

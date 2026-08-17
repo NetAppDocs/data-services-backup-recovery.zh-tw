@@ -1,0 +1,44 @@
+= Hyper-V 工作負載增強功能
+:allow-uri-read: 
+
+
+
+
+[[hyper-v-workloads-enhancements]]
+=== Hyper-V 工作負載增強功能
+
+在此版本中，Hyper-V 工作負載引入了以下增強功能：
+
+*將物件儲存備份還原到備用位置*：您現在可以將 Hyper-V 虛擬機器、檔案和資料夾從物件存放區還原到備用儲存設備位置。
+
+有關保護 Hyper-V 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 Hyper-V 工作負載"]。
+
+
+
+[[kubernetes-workloads-enhancements]]
+=== Kubernetes 工作負載增強功能
+
+在此版本中、Kubernetes 工作負載引入了以下增強功能：
+
+* *Trident Protect 26.08*：此版本包含 Trident Protect 26.08。
+* *備份重試*：您現在可以在 Kubernetes 保護原則的進階設定中啟用備份重試，並設定重試次數和重試間隔。
+* *部分備份成功*：您現在可以在 Kubernetes 保護原則中設定進階設定，以便在個別資源發生故障時繼續備份，從而使備份作業部分成功完成。這樣，即使某些資源在備份作業期間發生故障，您仍然可以還原已備份的資源。
+* *損毀狀況一致與 VM 一致備份*：Backup and Recovery for NetApp Console 服務現在支援設定保護原則，以建立損毀狀況一致或 VM 一致的備份或快照。您還可以自訂在保護作業期間執行 VM 凍結的方式。
+* *Console 代理程式 IP 位址變更時重新連接 Kubernetes 叢集*：Backup and Recovery for NetApp Console 服務現在可讓您在代理程式的 IP 位址變更時，將叢集重新連接至其 Console 代理程式。
+* *將叢集移轉至新的 Console 代理程式*：Backup and Recovery for NetApp Console 服務現在可讓您在原始代理程式失敗或被刪除時，將叢集移轉至新的 Console 代理程式，以確保應用程式保護不中斷。
+
+
+有關保護 Kubernetes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 Kubernetes 工作負載"]。
+
+
+
+[[oracle-database-workloads-enhancement]]
+=== Oracle 資料庫工作負載增強
+
+在此版本中、Oracle Database 工作負載引進下列增強功能：
+
+* *可插拔資料庫 (PDB) 還原*：現在可以還原單一可插拔資料庫 (PDB) 和 PDB 表空間，包括時間點恢復。
+* *可插拔資料庫 (PDB) Clone*：現在可以將單一 PDB Clone 到現有的目標 Container 資料庫 （CDB） 中，並且可以選擇在 Clone 整個 Container 資料庫時排除 PDB。
+
+
+有關保護 Oracle Database 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 Oracle 資料庫工作負載"]。
