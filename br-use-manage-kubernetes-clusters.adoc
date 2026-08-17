@@ -68,3 +68,44 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 
 
 
+
+
+
+[[reconnect-a-kubernetes-cluster-to-a-console-agent]]
+== 將 Kubernetes 叢集重新連線到控制台代理程式
+
+如果您的 Console 代理程式的 IP 位址發生變更（例如，重新啟動後），您的 Kubernetes 叢集將失去與代理程式的連線，您需要重新連線。
+
+.步驟
+. 在NetApp Backup and Recovery中，選擇 *Inventory* > *Clusters*。
+. 選擇已中斷連線的 Kubernetes 叢集，然後選取動作圖示 image:../media/icon-action.png["操作選項"] > *修改叢集* > *重新連線叢集*。
+. 在「重新連接叢集」對話方塊中，複製命令列指令並在叢集上執行。
++
+命令執行完畢後，您的叢集應該會自動重新連線。
+
+. 選擇*關閉*。
+
+
+
+
+[[migrate-a-kubernetes-cluster-to-a-new-console-agent]]
+== 將 Kubernetes 叢集移轉至新的 Console 代理程式
+
+如果您的 Console 代理程式遭到刪除或變得無法使用，請將使用該代理程式的所有叢集移轉至新的代理程式，以避免中斷應用程式保護。
+
+.開始之前
+* https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["部署新的 Console 代理程式。"^]
+* 選擇要與新的 Console 代理程式搭配使用的保護原則，link:br-use-policies-kubernetes-create.html#edit-a-policy["編輯原則"^]，並將該保護原則與新的 Console 代理程式建立關聯。
+
+
+.步驟
+. 在NetApp Backup and Recovery中，選擇 *Inventory* > *Clusters*。
+. 選擇已中斷連線的 Kubernetes 叢集，然後選擇動作圖示 image:../media/icon-action.png["操作選項"] > *修改叢集* > *管理代理程式*。
+. 從清單中選取新的 Console 代理程式。
+. 檢查代理程式資訊，確保新的 Console 代理程式可以存取此叢集上受保護應用程式使用的系統、備份目標和次要目標。
+. 複製每個部分的命令列指令，並在叢集上執行這些命令。
++
+此操作會重新建立 Kubernetes 金鑰，將 Trident Protect 重新導向至新的 Console 代理程式，並重新載入設定。命令執行完畢後，叢集將使用新的 Console 代理程式。
+
+. 選擇*關閉*。
+

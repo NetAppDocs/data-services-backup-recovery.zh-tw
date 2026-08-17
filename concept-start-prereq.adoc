@@ -409,8 +409,8 @@ NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（�
 NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程式指派靜態 IP 位址，以避免在代理程式 IP 位址變更時出現問題。
 
 * 主要 ONTAP 系統（不支援 ASA r2 系統）
-* NetApp Trident 25.06 至 26.02.1
-* NetApp Trident Protect 26.06（在 Kubernetes 叢集探索期間安裝）
+* NetApp Trident 25.06 至 26.06
+* NetApp Trident Protect 26.08 或更高版本（在 Kubernetes 叢集發現期間安裝）
 * Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括  https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["Trident Protect"] 支援的版本。
 +
 ** 確保 Kubernetes 叢集、Trident Protect Connector 和 Trident Protect Proxy 之間的出站方向 TCP 連接埠 443 未被過濾。

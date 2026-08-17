@@ -1463,10 +1463,6 @@
   <block id="3ce2a491ae98ac2e9d6b23907b1dcd27" category="list-text">*將備份從物件儲存分層到檔案儲存*：如果您選擇將備份分層到檔案儲存（例如，AWS Glacier），請選擇層選項和存檔天數。</block>
   <block id="a4ddb079e754d05f977f299ecb91e78e" category="list-text">*備份目標*：選擇已註冊的物件儲存目標。確保目標在您的備份環境中可存取。</block>
   <block id="749ef9bfd50fd41baeffea89c1ed7056" category="list-text">*提供者*：選擇* StorageGRID*。</block>
-  <block id="40f2be2919d2f491fc533133b0784afb" category="section-title">在策略中配置進階設定</block>
-  <block id="5a0e602c662c4aadb0e187c46db2f1be" category="list-text">在「*策略 &gt; 進階*」設定部分中，選擇「*選擇進階操作*」選單，從進階設定清單中進行選擇。</block>
-  <block id="e9dbaabb96bed2c8d241fb55527037d6" category="list-text">啟用您想要查看或更改的任何設置，然後選擇*接受*。</block>
-  <block id="13c1455885d16af64f1bb96c4e48680a" category="list-text">提供以下資訊：</block>
   <block id="ebc38593846bd56262189cdea41159c0" category="admonition">如果快照頻率設定為 1 小時，則最大延遲以及重試次數不應超過 45 分鐘。</block>
   <block id="febcf1de845ae5c111f7fe2fdf9a0023" category="list-text">*勒索軟體掃描*：選擇是否要在每個儲存桶上啟用勒索軟體掃描。這需要對物件儲存進行 DataLock 鎖定。輸入掃描頻率（以天為單位）。此選項適用於 AWS 和 Microsoft Azure 物件儲存。請注意，此選項可能會產生額外費用，具體取決於雲端提供者。</block>
   <block id="5c9b86ff3ed09d60fd7e04707b95622a" category="paragraph">此外，配置以下選項：</block>
@@ -5189,7 +5185,6 @@
   <block id="f7b0b716a4d4de499a271912b85547c3" category="list-text">*備份後清理歸檔日誌*：如果啟用了日誌備份、您可以選擇啟用此功能來限制 Backup and Recovery 保留 Oracle 歸檔日誌的時間。您可以選擇保留期限、以及 Backup and Recovery 應從何處刪除歸檔日誌。</block>
   <block id="588a429e835850f3df8205535e7b98e2" category="list-text">*Provider*：選擇託管 Kubernetes 應用程式資源的儲存提供者，並輸入憑證以向提供者進行身份驗證。</block>
   <block id="5f635536567962115552d73c6587c483" category="list-text">*啟用完整性掃描*：選擇是否在物件儲存上啟用完整性掃描（快照鎖定）。這可確保備份有效且可恢復。完整性掃描頻率預設為 7 天。為防止備份被修改或刪除，請選擇 *完整性掃描* 選項。掃描僅在最新快照上進行。您可以啟用或停用最新快照的完整性掃描。</block>
-  <block id="c0801323bf0a74b01c384bdda3518dd5" category="paragraph">您可以選擇在原則中設定進階設定。您可以將這些選項用於所有備份架構和儲存目的地。可用的進階選項取決於您在頁面頂端選取的工作負載，因此此處說明的部分選項可能不適用於所有工作負載。</block>
   <block id="6a4ad7a285f68160638ebf2d62693e0b" category="list-text">*VM 設定*：</block>
   <block id="3000cf6903596d6eddfc672177a67f40" category="list-text">*啟用應用程式一致性快照*：啟用此選項可建立應用程式一致性快照。這要求 Hyper-V Integration Services 和 VSS 均在 VM 上執行。如果任一服務未執行，則會改為建立當機一致性備份。請注意，啟用應用程式一致性可能會增加備份時間和儲存使用量。此外，VM 的客體記憶體（RAM）不包含在應用程式一致性快照中。</block>
   <block id="250dc6eb1ac44efaa2d588f670d05490" category="list-text">*備份重試*：若要在發生故障或中斷時重試作業，請選擇*啟用故障期間作業重試*。輸入快照和備份作業的最大重試次數以及重試時間間隔。重試次數必須小於 10。</block>
@@ -5656,8 +5651,6 @@
   <block id="951c1419bc6678a290628918eb471078" category="paragraph">有關身分和存取的資訊，請參閱<block ref="ea5b8c83a53307fc473cf87abf76dc05" category="inline-link-rx"></block>。</block>
   <block id="614c9b8c0079226ae2c76caf00bdc9d7" category="list-text">ASP.NET Core Runtime 10.0.10 Hosting Bundle</block>
   <block id="2c03c04d013cd18a2b08ffdaa3807fc6" category="list-text">PowerShell 7.6.4</block>
-  <block id="3b93068d4eec990f1969b952fef82849" category="list-text">NetApp Trident 25.06 至 26.02.1</block>
-  <block id="c6ee0c0b0d79479e99725d43f4f2b0f8" category="list-text">NetApp Trident Protect 26.06（在 Kubernetes 叢集探索期間安裝）</block>
   <block id="e75b3a902ee99b25571be4a98b084a31" category="summary">無需啟動 NetApp Backup and Recovery 即可探索系統和 Volume。</block>
   <block id="bf768851617c703a4014233f58b31de3" category="doc">無需啟動即可探索 ONTAP 系統和 Volume</block>
   <block id="2887d4ffc35ab6898bed2a982c5423a2" category="paragraph">您可以在啟動 Volume 的備份和復原功能時探索系統和 Volume，也可以在啟動 NetApp Backup and Recovery 之前探索。如果您在未啟動備份和復原功能的情況下探索 Volume，則必須先啟動備份和復原功能才能保護這些 Volume。</block>
@@ -5832,4 +5825,34 @@
   <block id="c7b95907073ba49194dd07ae01b56f96" category="list-text">在「目標儲存設備」部分（僅從物件存放區還原時可見）：</block>
   <block id="f771ab6fc3300e0b07bde061e3f606f7" category="list-text">*變更預設儲存設備位置*：啟用此選項可在來源儲存設備位置無法存取或已滿時，將物件存放區備份還原到其他位置。選擇要使用的其他叢集、儲存設備虛擬機器或彙總。</block>
   <block id="7c3780c8bbc09e634d77ec9249acfb5c" category="section-title">2026年8月17日</block>
+  <block id="6319d2a187c14a056a2451e457680ac9" category="section-title">將 Kubernetes 叢集重新連線到控制台代理程式</block>
+  <block id="57f5244800d20c454a8ae6a99f0c2690" category="paragraph">如果您的 Console 代理程式的 IP 位址發生變更（例如，重新啟動後），您的 Kubernetes 叢集將失去與代理程式的連線，您需要重新連線。</block>
+  <block id="5be36b04c01bb2ce7d5c47828c04d62f" category="list-text">選擇已中斷連線的 Kubernetes 叢集，然後選取動作圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *修改叢集* &gt; *重新連線叢集*。</block>
+  <block id="375ee855bb819796d52335f7855a9da5" category="list-text">在「重新連接叢集」對話方塊中，複製命令列指令並在叢集上執行。</block>
+  <block id="ba2444c182512882ef30cd6d790a989d" category="paragraph">命令執行完畢後，您的叢集應該會自動重新連線。</block>
+  <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">選擇*關閉*。</block>
+  <block id="145531d0ec6b6e87e457833c515d18eb" category="section-title">將 Kubernetes 叢集移轉至新的 Console 代理程式</block>
+  <block id="1b486f8a72df0cfb12154c0df2fd8aeb" category="paragraph">如果您的 Console 代理程式遭到刪除或變得無法使用，請將使用該代理程式的所有叢集移轉至新的代理程式，以避免中斷應用程式保護。</block>
+  <block id="71a73d38aa411b8cf3ac97aaed6598a9" category="inline-link">部署新的 Console 代理程式。</block>
+  <block id="33a9e40bf5b5a104de590c6bff396f18" category="list-text"><block ref="33a9e40bf5b5a104de590c6bff396f18" category="inline-link-rx"></block></block>
+  <block id="d9242f3eedaff2dd2340291d99231a47" category="inline-link-macro">編輯原則</block>
+  <block id="fa3b348cc9530bb5ac015d82e4e040e1" category="list-text">選擇要與新的 Console 代理程式搭配使用的保護原則，<block ref="76486ada0fcb46ea61a3a5b5982e0538" category="inline-link-macro-rx"></block>，並將該保護原則與新的 Console 代理程式建立關聯。</block>
+  <block id="c4c6fed90845c12d98d007fabe47faee" category="list-text">選擇已中斷連線的 Kubernetes 叢集，然後選擇動作圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *修改叢集* &gt; *管理代理程式*。</block>
+  <block id="015618238817546f4ea79a394e3efe47" category="list-text">從清單中選取新的 Console 代理程式。</block>
+  <block id="3d792ac4e0cb4d4880f9939229e42792" category="list-text">檢查代理程式資訊，確保新的 Console 代理程式可以存取此叢集上受保護應用程式使用的系統、備份目標和次要目標。</block>
+  <block id="ee0747c1045ece83b008c6a99da98042" category="list-text">複製每個部分的命令列指令，並在叢集上執行這些命令。</block>
+  <block id="3f4860c454843e96c570a7a7e08c6fc5" category="paragraph">此操作會重新建立 Kubernetes 金鑰，將 Trident Protect 重新導向至新的 Console 代理程式，並重新載入設定。命令執行完畢後，叢集將使用新的 Console 代理程式。</block>
+  <block id="507751f4ca984ea347c86a3935fe5f62" category="list-text">（可選）在原則中設定進階設定。</block>
+  <block id="5cac079a880c4090fb111d3d7dc5ac2f" category="list-text">完成後，選取 *Create*。</block>
+  <block id="a05902bc3173c2d2f35fa06f3fc2b475" category="list-text">編輯完成後，選擇 *Done*。</block>
+  <block id="83cb560a6d582d4380d5e101891dd816" category="list-text">在確認對話方塊中，輸入原則名稱以確認變更。</block>
+  <block id="28039d0c99b854c578ceb6eafae747f0" category="paragraph">儲存變更會影響受此原則保護的所有應用程式。</block>
+  <block id="db4719fc900debc3b840d973bdd5da13" category="list-text">選擇 *Done* 進行確認。</block>
+  <block id="51f2e38f4d3b411fb5624e01d4b82ac9" category="list-text">*備份重試次數*：若要在故障或中斷時重試作業一定次數，請展開*備份重試次數*區段，並輸入快照和備份作業的最大重試次數以及重試時間間隔。</block>
+  <block id="684680301d935dbb141d7b78ed7ac836" category="list-text">*部分成功*：啟用此選項，即使備份與還原未能備份所有資源，也允許備份作業成功完成。</block>
+  <block id="3f0ce7e1f58d47249ae783e782637dbe" category="list-text">*VM 組態*：選擇所需的備份一致性類型：</block>
+  <block id="159c9eb77d7689e3c9929376462e4e72" category="list-text">*損毀狀況一致備份*：選擇此選項可在建立快照或備份之前跳過虛擬機器凍結。快照或備份將保持損毀狀況一致，這意味著不會擷取建立快照或備份時的系統記憶體容量。</block>
+  <block id="e2b89730d92fc1a6537f9f1a6d260320" category="list-text">*虛擬機器一致性備份*：選擇此選項可在建立快照或備份之前凍結虛擬機器。這將擷取完整的虛擬機器狀態（包括記憶體容量），以提供虛擬機器一致性保護。您也可以選擇在 *Max VMs at once* 中指定備份和復原功能可以同時凍結和備份的虛擬機器數量。如果啟用 *Freeze all VMs* 選項，備份和復原功能將同時凍結所有虛擬機器、啟動備份，並在所有備份作業完成後解凍所有虛擬機器。</block>
+  <block id="39fb697df37b9cc018d60de1a0ca0c05" category="list-text">NetApp Trident 25.06 至 26.06</block>
+  <block id="b1e4f0956582086a73a58e751c8e6b5d" category="list-text">NetApp Trident Protect 26.08 或更高版本（在 Kubernetes 叢集發現期間安裝）</block>
 </blocks>
