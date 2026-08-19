@@ -14,14 +14,14 @@ summary: '您可以從 Windows 用戶作業系統上的虛擬機器磁碟 (VMDK)
 
 
 [role="lead"]
-您可以從 Windows 或 Linux 客體作業系統上的虛擬機器磁碟（VMDK）還原檔案或資料夾。
+使用客體檔案還原，可以從 Windows 或 Linux 客體作業系統上的虛擬機器磁碟 （VMDK） 還原檔案或資料夾。
 
 
 
-[[guest-restore-workflow]]
-== 來賓還原工作流程
+[[guest-file-restore-workflow]]
+== 訪客檔案還原工作流程
 
-客戶作業系統還原操作包含以下步驟：
+訪客檔案還原包括下列步驟：
 
 . 附
 +
@@ -48,12 +48,12 @@ summary: '您可以從 Windows 用戶作業系統上的虛擬機器磁碟 (VMDK)
 
 從 VMDK 還原檔案或資料夾之前，請檢閱所有需求。
 
-* 必須安裝並執行 VMware 工具。
+* 必須安裝並執行 VMware Tools。
 +
-NetApp Backup and Recovery 使用來自 VMware tools 的資訊來建立與 VMware guest OS 的連線。
+NetApp Backup and Recovery 使用來自 VMware Tools 的資訊來建立與 VMware 客體作業系統的連線。
 
 * 您必須知道要從中還原的備份快照和 VMDK。
-* 要附加的虛擬磁碟必須位於NetApp Backup and Recovery備份中。
+* 您附加的虛擬磁碟必須位於 NetApp Backup and Recovery 備份中。
 +
 包含要還原的檔案或資料夾的虛擬磁碟必須位於使用NetApp Backup and Recovery執行的 VM 備份中。
 
@@ -61,9 +61,9 @@ NetApp Backup and Recovery 使用來自 VMware tools 的資訊來建立與 VMwar
 +
 如果要將虛擬磁碟附加到 proxy VM，則必須在附加和還原作業開始之前設定 proxy VM。
 
-* 對於名稱非英文字母的文件，您必須將它們恢復到目錄中，而不是單一文件。
+* 對於檔案名稱包含非英文字元的檔案，必須將其還原至目錄中，而非還原為單一檔案。
 +
-您可以透過恢復文件所在的目錄來恢復具有非字母名稱的文件，例如日語漢字。
+您可以透過恢復檔案所在的目錄來還原包含非英文字元（例如日文漢字）的檔案。
 
 
 
@@ -106,14 +106,14 @@ IMPORTANT: 如果您必須使用非內建管理員帳戶但在 VM 內具有管�
 [[guest-file-restore-limitations]]
 == 來賓檔案還原限制
 
-在從客戶作業系統還原檔案或資料夾之前，您應該了解其功能限制。
+從客體作業系統還原檔案或資料夾之前，請審查這些限制。
 
 * 您無法在來賓作業系統內還原動態磁碟類型。
 * 如果還原加密的檔案或資料夾，則不會保留加密屬性。
 * 您無法將檔案或資料夾還原到加密資料夾。
 * 隱藏的文件和資料夾會顯示在文件瀏覽頁面中，但您無法對其進行篩選。
 * 您無法在作業系統不同的客體之間還原檔案或資料夾（還原到不同的 VM 時,目的地作業系統類型必須與來源作業系統類型相同）。
-* 您無法從 NTFS 檔案系統還原到 FAT 檔案系統。
+* 您無法將 NTFS 檔案系統還原到 FAT 檔案系統。
 +
 當您嘗試從 NTFS 格式還原為 FAT 格式時，不會複製 NTFS 安全性描述符，因為 FAT 檔案系統不支援 Windows 安全性屬性。
 

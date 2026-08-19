@@ -14,7 +14,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 VMware 工作負載的�
 
 
 [role="lead"]
-建立保護組來管理一組工作負載的備份和還原作業。保護群組是您想要一起保護的資源（例如虛擬機器和資料儲存區）的邏輯分組。
+建立保護群組來管理一組工作負載的備份與恢復作業。保護群組是將要一起保護的資源（例如虛擬機器和資料存放區）進行邏輯分組。
 
 您可以執行與保護群組相關的以下任務：
 
@@ -32,7 +32,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 VMware 工作負載的�
 
 選擇要新增至保護群組的資源時，可以按資料儲存區、虛擬機器或 vSphere 標籤進行組織。
 
-基於標籤的保護 （使用 vSphere 標籤） 簡化了 Backup and Recovery 中保護群組的管理。
+基於標籤的保護（使用 vSphere 標籤）簡化了 NetApp Backup and Recovery 中的保護群組管理。
 
 使用基於標籤的保護具有一些優點：
 
@@ -56,7 +56,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 VMware 工作負載的�
 .開始之前
 * 請確保您的環境使用的是受支援的 VMware vSphere 版本。
 * 在建立以標籤為基礎的保護群組時，請確保您要保護的虛擬機器和資料存放區已經在 vCenter 中關聯了一個或多個 vSphere 標籤。
-* 請注意，對於 VMware 工作負載，排程備份時間會以管理主機的時區為準。如需詳細資訊，請參閱 link:br-use-policies-vmware-create.html["在 NetApp Backup and Recovery 中建立及管理 VMware 備份原則"]。
+* 對於 VMware 工作負載，排程備份時間使用管理主機的時區。如需詳細資訊，請參閱 link:br-use-policies-vmware-create.html["在 NetApp Backup and Recovery 中建立及管理 VMware 備份原則"]。
 
 
 .步驟
@@ -172,7 +172,7 @@ NOTE: 只有在您修改保護群組名稱、新增或刪除虛擬機器、變�
 [[delete-a-protection-group]]
 == 刪除保護群組
 
-刪除保護群組時，也會刪除該群組以及該群組的所有備份計畫。如果不再需要某個保護群組，請將其刪除。
+刪除保護群組時，該保護群組及其所有備份計畫都會移除。如果您不再需要某個保護群組，請將其刪除。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。

@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 
 
 [role="lead"]
-如果您需要在受控狀態下存取資料庫以執行還原作業，則可能需要掛載 Oracle Database 還原點。如果您需要在 RMAN 還原目錄中儲存備份和還原作業中繼資料，且未啟用自動編目中繼資料的選項，則需要手動編目還原點。
+當您需要在受控狀態下存取資料庫以進行恢復作業時，請裝載 Oracle 資料庫恢復點。如果自動編目功能已停用，您可以手動將恢復點中繼資料目錄入 RMAN 恢復目錄。
 
 
 
@@ -52,7 +52,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 
 
 [[unmount-an-oracle-database-recovery-point]]
-== 卸載 Oracle 資料庫復原點
+== 解除安裝 Oracle 資料庫恢復點
 
 當您不再需要查看對該資料庫所做的變更時，請卸載復原點。
 
@@ -73,7 +73,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 
 
 [[catalog-an-oracle-database-recovery-point]]
-== 編目 Oracle 資料庫還原點
+== 編目 Oracle 資料庫恢復點
 
 當您需要保留還原點的備份與還原作業中繼資料時，請手動編目該還原點。中繼資料將根據您為資料庫選擇的 *Configure RMAN catalog* 設定進行儲存（預設位於目標控制檔案中）。只有當關聯的保護原則中停用了自動編目時，才需要手動編目。
 

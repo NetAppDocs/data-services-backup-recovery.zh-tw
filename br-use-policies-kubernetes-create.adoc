@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: br-use-policies-kubernetes-create.html 
-keywords: backing up, back up, backup, backup on-prem ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
+keywords: backing up, back up, backup, backup on-premises ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
 summary: 在NetApp Backup and Recovery中，建立您自己的策略來管理備份頻率、備份時間以及保留的備份檔案數量。 
 ---
 = 在 NetApp Backup and Recovery 中建立及管理 Kubernetes 備份原則
@@ -12,7 +12,7 @@ summary: 在NetApp Backup and Recovery中，建立您自己的策略來管理備
 
 
 [role="lead"]
-在 NetApp Backup and Recovery 中，建立您自己的 Kubernetes 備份政策，以管理備份頻率、備份執行時間，以及保留的備份檔案數量。
+使用 NetApp Backup and Recovery 建立 Kubernetes 備份原則，以控制備份頻率、排程和保留。
 
 
 NOTE: 其中一些選項和配置部分並不適用於所有工作負載。
@@ -56,7 +56,7 @@ NOTE: 其中一些選項和配置部分並不適用於所有工作負載。
 *必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .開始之前
-如果您打算複製到二級儲存並希望在本機快照或遠端ONTAP二級儲存上使用快照鎖定，則首先需要在叢集層級初始化ONTAP合規時脈。這是在政策中啟用快照鎖定的要求。
+如果您打算複寫到次要儲存設備，並希望在本機 Snapshot 快照技術或遠端 ONTAP 次要儲存設備上使用 Snapshot 快照技術鎖定，則首先需要在叢集層級初始化 ONTAP 法規遵循時鐘。這是在原則中啟用 Snapshot 快照技術鎖定的要求。
 
 有關如何執行此操作的說明，請參閱 https://docs.netapp.com/us-en/ontap/snaplock/initialize-complianceclock-task.html["在ONTAP中初始化合規性時鐘"^]。
 
@@ -77,15 +77,15 @@ NOTE: 其中一些選項和配置部分並不適用於所有工作負載。
 
 . 在 *Backup architecture* 區段中輸入資訊。從清單中選擇備份的資料流：
 +
-** *3-2-1 fanout*：主儲存（磁碟）到輔助儲存（磁碟）到雲端（物件儲存）。此配置會在不同的儲存系統中建立多個資料副本，例如 ONTAP 到 ONTAP 以及 ONTAP 到物件儲存。物件存儲可以是雲端超大規模物件存儲，也可以是私有物件存儲。此配置最適合實現最佳資料保護和災難復原。此選項不適用於 Amazon FSx for NetApp ONTAP。
+** *3-2-1 扇出*：主儲存設備（磁碟）到次要儲存設備（磁碟）到雲端（物件存放區）。它會在不同的儲存設備系統中建立多個資料複本，例如 ONTAP 到 ONTAP 以及 ONTAP 到物件存放區的配置。物件儲存可以是雲端供應商的物件存放區，也可以是私有物件存放區。最適合實現最佳資料保護和災難恢復。此選項不適用於 Amazon FSx for NetApp ONTAP。
 ** *磁碟到磁碟*：主儲存設備（磁碟）到次要儲存設備（磁碟）。ONTAP 到 ONTAP 資料保護策略會在兩個 ONTAP 系統之間複寫資料，以確保高可用度和災難恢復。這通常使用 SnapMirror 來實現，它支援同步和非同步複寫。此方法可讓您的資料在不同位置保持更新並可用，以實現強大的資料保護。
-** *磁碟到物件儲存*：主要儲存設備（磁碟）到雲端（物件存放區）。這會將資料從 ONTAP 系統複寫到物件儲存系統。這可以是超大規模雲端物件存儲，也可以是私有物件存儲，例如 StorageGRID。此方法非常適合長期資料保留和歸檔。此選項不適用於 Amazon FSx for NetApp ONTAP。
+** *磁碟到物件儲存*：將主儲存設備（磁碟）的資料複製到雲端（物件存放區）。此方法將 ONTAP 系統中的資料複製到物件儲存系統。物件儲存可以是雲端供應商物件存放區，也可以是私有物件存放區，例如 StorageGRID。此方法非常適合長期資料保留和歸檔。此選項不適用於 Amazon FSx for NetApp ONTAP。
 ** *本機快照*：選定磁碟區上的本機快照。這會建立執行工作負載之正式作業磁碟區的唯讀時間點複本。您可以使用本機快照從資料遺失或毀損中恢復，也可以建立用於災難恢復的備份。
 
 
 . 提供 *Local snapshot settings* 部分的資訊：
 +
-** 選擇“*新增計劃*”選項來選擇快照計劃或計劃。您最多可以有 5 個時間表。
+** 選擇「新增排程」選項，選擇 Snapshot 快照技術排程或多個排程。最多可以新增五個排程。
 ** *快照頻率*：選擇每小時、每天、每週、每月或每年的頻率。  Kubernetes 工作負載沒有年度頻率。
 ** *快照保留*：輸入要保留的快照數量。
 ** *Provider*：選擇託管 Kubernetes 應用程式資源的儲存提供者，並輸入憑證以向提供者進行身份驗證。
@@ -106,7 +106,7 @@ NOTE: 出現的欄位會根據所選的提供者和架構而有所不同。
 
 +
 ** *Provider*：選擇物件儲存的提供者，並在對應的欄位中輸入憑證（憑證欄位因提供者而異）。
-** *備份目標*：選擇已註冊的物件儲存目標。確保目標在您的備份環境中可存取。
+** *備份目標*：選擇一個已註冊的物件儲存目標。確認該目標在您的備份環境中可存取。
 ** *IPspace*：選擇用於備份作業的 IP 空間。如果您有多個 IP 空間並想要控制哪一個用於備份，這將非常有用。
 ** *計畫設定*：選擇為本機快照設定的計畫。您可以刪除計劃，但不能新增計劃，因為計劃是根據本機快照計劃設定的。
 ** *保留副本*：輸入要保留的快照數量。
@@ -122,15 +122,15 @@ NOTE: 出現的欄位會根據所選的提供者和架構而有所不同。
 
 
 
-TIP: 如果快照頻率設定為 1 小時，則最大延遲以及重試次數不應超過 45 分鐘。
+TIP: 如果 Snapshot 快照技術頻率設定為一小時，則最大延遲加上重試次數不應超過 45 分鐘。
 
-** *部分成功*：啟用此選項，即使備份與還原未能備份所有資源，也允許備份作業成功完成。
 ** *VM 組態*：選擇所需的備份一致性類型：
 +
 *** *損毀狀況一致備份*：選擇此選項可在建立快照或備份之前跳過虛擬機器凍結。快照或備份將保持損毀狀況一致，這意味著不會擷取建立快照或備份時的系統記憶體容量。
 *** *虛擬機器一致性備份*：選擇此選項可在建立快照或備份之前凍結虛擬機器。這將擷取完整的虛擬機器狀態（包括記憶體容量），以提供虛擬機器一致性保護。您也可以選擇在 *Max VMs at once* 中指定備份和復原功能可以同時凍結和備份的虛擬機器數量。如果啟用 *Freeze all VMs* 選項，備份和復原功能將同時凍結所有虛擬機器、啟動備份，並在所有備份作業完成後解凍所有虛擬機器。
 
 
+** *部分成功*：啟用此選項，即使備份與還原未能備份所有資源，也允許備份作業成功完成。
 
 
 ====
@@ -148,13 +148,13 @@ TIP: 如果快照頻率設定為 1 小時，則最大延遲以及重試次數不
 
 如果您正在編輯備份到物件儲存的策略，則可以啟用存檔。
 
-如果您從SnapCenter匯入資源，您可能會遇到SnapCenter中使用的政策與NetApp Backup and Recovery中使用的策略之間的一些差異。看link:reference-policy-differences-snapcenter.html["SnapCenter與NetApp Backup and Recovery之間的策略差異"]。
+如果您從 SnapCenter 匯入資源，您可能會遇到 SnapCenter 中使用的原則與 NetApp Backup and Recovery 中使用的原則存在一些差異的情況。請參閱 link:reference-policy-differences-snapcenter.html["SnapCenter與NetApp Backup and Recovery之間的策略差異"]。
 
 .所需的NetApp Console角色
 備份和恢復超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
-. 在NetApp Console中，前往 *保護* > *備份和還原*。
+. 在 NetApp Console 中，前往 *Protection* > *Backup and Recovery*。
 . 選擇*政策*選項。
 . 選擇要編輯的策略。
 . 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*編輯*。
@@ -177,7 +177,7 @@ TIP: 如果快照頻率設定為 1 小時，則最大延遲以及重試次數不
 TIP: 您無法刪除與工作負載關聯的策略。
 
 .步驟
-. 在控制台中，前往*保護*>*備份和還原*。
+. 在 NetApp Console 中，前往 *Protection* > *Backup and Recovery*。
 . 選擇*政策*選項。
 . 選擇要刪除的策略。
 . 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*刪除*。

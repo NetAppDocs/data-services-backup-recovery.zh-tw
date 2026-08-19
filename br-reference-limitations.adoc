@@ -14,7 +14,7 @@ summary: 已知限制標識了該產品的此版本不支援的功能，或無�
 
 
 [role="lead"]
-此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
+在使用 NetApp Backup and Recovery 備份 ONTAP 磁碟區之前，請先查看這些限制。
 
 * NetApp Backup and Recovery可以將Cloud Volumes ONTAP備份到 AWS 中國區域（包括北京和寧夏）的物件儲存；但是，您可能需要先手動修改身分和存取策略。
 +
@@ -35,9 +35,9 @@ summary: 已知限制標識了該產品的此版本不支援的功能，或無�
 [[replication-limitations-for-ontap-volumes]]
 == ONTAP磁碟區的複製限制
 
-* 您一次只能選擇一個FlexGroup磁碟區進行複製。您需要為每個FlexGroup磁碟區單獨啟動備份。
+* 一次只能選取一個 FlexGroup Volume 進行複寫。您需要為每個 FlexGroup Volume 分別啟動備份。
 +
-FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區並指派相同的備份原則。
+FlexVol® Volume 沒有此類限制：您可以選擇系統中的所有 FlexVol® Volume，並指派相同的備份原則。
 
 * 支援以下功能 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"]，但使用NetApp Backup and Recovery的複製功能時則不然：
 +
@@ -64,11 +64,11 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 * 當您建立或編輯備份策略但未向該策略指派任何磁碟區時，保留的備份數量最多可為 1018。將磁碟區指派給策略後，您可以編輯該策略以建立最多 4000 個備份。
 * 備份資料保護 (DP) 磁碟區時：
 +
-** 與SnapMirror標籤的關係 `app_consistent`和 `all_source_snapshot`不會備份到雲端。
-** 如果您在SnapMirror目標磁碟區上建立快照的本機副本（無論使用何種SnapMirror標籤），這些快照都不會作為備份移至雲端。此時，您需要為來源 DP 磁碟區建立一個具有所需標籤的 Snapshot 策略，以便NetApp Backup and Recovery對其進行備份。
+** 具有 SnapMirror 標籤 `app_consistent` 和 `all_source_snapshot` 的關係將不會備份到雲端。
+** 如果在 SnapMirror 目的地 Volume 上建立 Snapshot 的本機副本（無論 SnapMirror 使用何種標籤），這些 Snapshot 將不會作為備份移至雲端。您必須在來源 DP Volume 上建立具有所需標籤的 Snapshot 原則，以便 NetApp Backup and Recovery 可以備份這些 Snapshot。
 
 
-* FlexGroup卷備份無法移動到檔案儲存。
+* FlexGroup Volume 備份無法移至歸檔儲存設備。
 * 如果叢集運作的是ONTAP 9.13.1 或更高版本， FlexGroup磁碟區備份可以使用 DataLock 和勒索軟體保護。
 * SVM-DR 磁碟區備份受下列限制支援：
 +
@@ -79,14 +79,14 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 
 * MetroCluster支援：
 +
-** 當您使用ONTAP 9.12.1 GA 或更高版本時，連接到主系統時支援備份。整個備份配置會傳輸到輔助系統，以便在切換後自動繼續備份到雲端。您不需要在輔助系統上設定備份（事實上，您被禁止這樣做）。
+** 當您使用 ONTAP 9.12.1 GA 或更高版本時，連接到主要系統即可支援備份。所有備份組態都會傳輸到二線系統，以便在切換後自動繼續進行雲端備份。您無需在二線系統上設定備份（實際上，您也無法這樣做）。
 ** 當您使用ONTAP 9.12.0 及更早版本時，僅支援從ONTAP輔助系統進行備份。
 ** 從 ONTAP 9.18.1 開始，FlexGroup 磁碟區備份已支援於 MetroCluster 組態中。
 
 
-* 資料保護卷不支援使用「*立即備份*」按鈕進行臨時磁碟區備份。
+* 資料保護 Volume 不支援使用「立即備份」按鈕進行臨時 Volume 備份。
 * 不支援 SM-BC 配置。
-* ONTAP不支援從單一磁碟區到多個物件儲存的SnapMirror關係扇出；因此， NetApp Backup and Recovery不支援此配置。
+* ONTAP 不支援從單一 Volume 將 SnapMirror 關係連出至多個物件存放區；因此，NetApp Backup and Recovery 不支援此組態。
 * 目前，Amazon S3、Google Cloud Platform（GCP）、Azure 和 StorageGRID 均支援物件儲存上的 WORM／合規模式。這稱為 DataLock 功能，必須透過 NetApp Backup and Recovery 設定來管理，而不是透過雲端供應商介面。
 
 
@@ -100,7 +100,7 @@ FlexVol磁碟區沒有限制 - 您可以選擇系統中的所有FlexVol磁碟區
 * 不支援從本機 Snapshot 還原資料夾。
 * 在災難復原（DR）設定中還原檔案和資料夾：故障轉移後、為 DR 設定的儲存 VM 上的磁碟區會以中斷狀態保留既有的 SnapMirror 關係。由於目的地磁碟區已有關係、因此 ONTAP 會封鎖嘗試還原會建立暫時性 SnapMirror RST 關係的檔案或資料夾。
 * 瀏覽和恢復一次最多可以恢復 100 個單獨的檔案。
-* 搜尋和恢復一次可以恢復 1 個檔案。
+* 搜尋和恢復功能一次只能還原一個檔案。
 * 使用ONTAP 9.13.0 或更高版本時，「瀏覽和還原」和「搜尋和還原」可以還原資料夾及其內的所有檔案和子資料夾。
 +
 使用高於 9.11.1 但低於 9.13.0 的ONTAP版本時，還原操作只能還原選定的資料夾及其中的文件，而不會還原子資料夾或子資料夾中的檔案。

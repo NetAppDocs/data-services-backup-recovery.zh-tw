@@ -4,7 +4,7 @@ permalink: br-use-kubernetes-protect-overview.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID 的Kubernetes 應用程式和應用程式數據，確保您的資料受到保護。 
 ---
-= 了解如何使用 NetApp Backup and Recovery 管理 Kubernetes 工作負載
+= 使用 NetApp Backup and Recovery 的 Kubernetes 保護工作流程
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,20 +14,20 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 
 
 [role="lead"]
-在 NetApp Backup and Recovery 中管理 Kubernetes 工作負載，讓您能夠在一個平台上發現、管理和保護 Kubernetes 叢集和應用程式。您可以管理託管在 Kubernetes 叢集上的資源和應用程式。還可以建立保護原則並將其與 Kubernetes 應用程式關聯，所有操作均可透過單一介面完成。
+使用 NetApp Backup and Recovery，透過單一介面探索、管理和保護 Kubernetes 叢集和應用程式。
 
-下圖展示了 Kubernetes 工作負載的備份和還原的元件和基本架構，以及如何將資料的不同副本儲存在不同位置：
+下圖展示了 Kubernetes 備份與恢復的元件和基本架構，以及如何將資料複本儲存在不同的位置：
 
 image:../media/backup-recovery-architecture-diagram.png["Kubernetes 工作負載備份與復原架構圖"]
 
 NetApp Backup and Recovery為管理 Kubernetes 工作負載提供了以下優點：
 
-* 單一控制平面，用於保護跨多個 Kubernetes 叢集運行的應用程式。這些應用程式可以包括在 Kubernetes 叢集上執行的容器或虛擬機器。
-* 與NetApp SnapMirror本機集成，為所有備份和恢復工作流程提供儲存卸載功能。
+* 用於保護跨多個 Kubernetes 叢集（包括容器和虛擬機器）的應用程式的單一控制平面。
+* 與 NetApp SnapMirror 的原生整合可支援備份與還原工作流程的儲存設備卸載。
 * Kubernetes 應用程式的永久增量備份，轉換為更低的復原點目標 (RPO) 和復原時間目標 (RTO)。
 
 
-您可以完成與管理 Kubernetes 工作負載相關的下列任務：
+您可以對 Kubernetes 工作負載執行下列任務：
 
 * link:br-start-discover-kubernetes.html["發現 Kubernetes 工作負載"]。
 * link:br-use-manage-kubernetes-clusters.html["在 NetApp Backup and Recovery 中管理 Kubernetes 叢集"]。

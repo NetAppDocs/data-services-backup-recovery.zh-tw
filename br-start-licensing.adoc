@@ -14,7 +14,7 @@ summary: 向您的雲端供應商購買隨用隨付或年度市場訂閱，或�
 
 
 [role="lead"]
-根據您使用的是 NetApp Console 還是 NetApp Console （本地部署），您可以透過以下方式取得 NetApp Backup and Recovery 的授權：從雲端供應商購買隨用隨付 （PAYGO） 或年度市場訂閱的 *NetApp Intelligent Services*；或從 NetApp 購買自帶授權 （BYOL）。在系統上啟動 NetApp Backup and Recovery、建立正式作業資料的備份，以及將備份資料還原至正式作業系統，均需要有效的授權。
+透過 NetApp 市場訂閱或自帶授權 （BYOL），在 NetApp Console 或 NetApp Console 本機部署中設定 NetApp Backup and Recovery 的授權。需要有效的授權才能啟動服務、建立備份，以及將資料還原至正式作業系統。
 
 關於授權運作方式的幾點說明：
 
@@ -22,19 +22,19 @@ summary: 向您的雲端供應商購買隨用隨付或年度市場訂閱，或�
 * 如果您正在搭配 NetApp Console 本機部署使用 Backup and Recovery，則只能購買自備授權（BYOL）授權。
 * NetApp Backup and Recovery自帶許可證 (BYOL) 是一種浮動許可證，您可以在與NetApp Console組織或帳戶關聯的所有系統中使用它。因此，如果您現有的 BYOL 授權具有足夠的備份容量，則無需購買另一個 BYOL 授權。
 * 如果您使用自帶授權 （BYOL） 授權搭配 NetApp Console，建議您同時訂閱隨用隨付 （PAYGO） 訂閱。如果您備份的資料超過 BYOL 授權允許的範圍，或您的授權到期，備份將繼續透過您的隨用隨付 （PAYGO） 訂閱進行，服務不會中斷。
-* 將本機ONTAP資料備份到StorageGRID時，您需要 BYOL 許可證，但雲端提供者儲存空間無需付費。
+* 將內部部署 ONTAP 資料備份到 StorageGRID 時，您需要 BYOL 授權，但雲端供應商儲存空間是免費的。
 
 
 link:concept-backup-to-cloud.html["了解有關使用NetApp Backup and Recovery 的成本的更多資訊。"]
 
 
 
-[[set-up-licensing-for-netapp-backup-and-recovery]]
-== 設定NetApp Backup and Recovery 的許可
+[[licensing-options-for-netapp-backup-and-recovery]]
+== NetApp 備份與還原的授權選項
 
 NetApp Backup and Recovery 有三種授權選項：
 
-* 直接從 NetApp 購買授權，也稱為自帶授權 (BYOL)。此選項適用於 NetApp Console 和 Console 本機部署。
+* 直接從 NetApp 購買授權，也稱為自帶授權 (BYOL)。此選項適用於 NetApp Console 和 Console 本地部署。
 * 從大型公有雲市場購買年度合約。此選項僅適用於 NetApp Console。
 * 從大型公有雲市場訂閱隨用隨付 （PAYGO） 授權。此選項僅適用於 NetApp Console。
 
@@ -68,11 +68,11 @@ NetApp提供的自備授權的有效期限為 1 年、2 年或 3 年。您只需
 
 BYOL NetApp Backup and Recovery許可證是一種浮動許可證，其總容量在與您的NetApp Console組織或帳戶關聯的所有系統之間共用。對於ONTAP系統，您可以透過執行 CLI 命令來粗略估計所需的容量 `volume show -fields logical-used-by-afs`對於您計劃備份的磁碟區。
 
-如果您沒有NetApp Backup and Recovery BYOL 許可證，請點擊控制台右下角的聊天圖示購買。
+如果您沒有 NetApp Backup and Recovery BYOL 授權，請選擇 Console 右下角的聊天圖示進行購買。
 
 或者，如果您擁有未指派的基於節點的Cloud Volumes ONTAP授權但不會使用，則可以將其轉換為具有相同美元等值和相同到期日的NetApp Backup and Recovery授權。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["點此了解詳情"^] 。
 
-您可以使用 NetApp Console 或 Console 本機部署來管理 BYOL 授權。您可以從 Console 新增授權、更新現有授權以及檢視授權狀態。
+您可以使用 NetApp Console 或 NetApp Console 本機部署來管理自帶授權 （BYOL） 授權。您可以從 Console 新增授權、更新現有授權，以及檢視授權狀態。
 
 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["了解如何新增許可證"^]。
 
@@ -124,7 +124,7 @@ NetApp提供您專屬優惠後，您可以在啟動NetApp Backup and Recovery時
 [[use-a-netapp-backup-and-recovery-paygo-subscription-applies-to-netapp-console-only]]
 === 使用 NetApp Backup and Recovery 隨用隨付訂閱（僅適用於 NetApp Console）
 
-對於即用即付，您將在單一訂閱中按小時向雲端供應商支付物件儲存成本和NetApp備份授權成本。即使您有免費試用版或自帶授權 (BYOL)，也應該在 Marketplace 中訂閱 * NetApp Intelligent Services*：
+對於隨用隨付，您可以在單一訂閱中，按小時向您的雲端供應商支付物件儲存成本和 NetApp 備份授權成本。即使您使用的是免費試用版或自備授權 （BYOL），您也應該在市場中訂閱 *NetApp Intelligent Services*：
 
 * 訂閱可確保免費試用結束後服務不會中斷。試用期結束後，我們將根據您備份的資料量按小時向您收費。
 * 如果您備份的資料超出了 BYOL 授權允許的範圍，則資料備份和復原作業將透過即用即付訂閱繼續進行。例如，如果您擁有 10 TiB BYOL 許可證，則超過 10 TiB 的所有容量都將透過 PAYGO 訂閱收費。
@@ -137,7 +137,7 @@ NetApp Backup and Recovery有幾種 PAYGO 計畫：
 * 「雲端備份」套件可讓您備份Cloud Volumes ONTAP資料和本機ONTAP資料。
 * “CVO Professional” 軟體包可讓您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery。這包括使用許可證對Cloud Volumes ONTAP系統進行無限制備份（備份容量不計入許可容量）。此選項不允許您備份本機ONTAP資料。
 +
-請注意，此選項還需要備份和還原 PAYGO 訂閱，但符合資格的Cloud Volumes ONTAP系統不會產生任何費用。
+此選項也需要備份與還原隨用隨付訂閱，但符合資格的 Cloud Volumes ONTAP 系統不會產生費用。
 
 
 
@@ -155,7 +155,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 [[exceeding-license-capacity]]
 == 超出授權容量
 
-超出許可容量將觸發 PAYGO 費率；如果沒有 PAYGO 訂閱，您將無法建立新的備份，但現有備份仍可恢復，只是服務不再有保障。請務必在許可證到期前續訂；過期的許可證將阻止建立新的備份並中斷服務。
+超出授權容量將觸發隨用隨付 （PAYGO） 費率。如果沒有隨用隨付訂閱，您將無法建立新的備份，但仍可還原現有備份，只是服務品質無法保證。請在授權到期前續訂，因為過期的授權會阻止建立新的備份並中斷服務。
 
 
 

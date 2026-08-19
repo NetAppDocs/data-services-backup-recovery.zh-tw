@@ -4,7 +4,7 @@ permalink: prev-ontap-discover-no-activate.html
 keywords: activate, backup and recovery, volumes, back up, discover 
 summary: 無需啟動 NetApp Backup and Recovery 即可探索系統和 Volume。 
 ---
-= 在 NetApp Backup and Recovery 中探索未啟動的 ONTAP 系統和磁碟區
+= 無需啟動 NetApp Backup and Recovery 即可探索 ONTAP 系統和 Volume
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 無需啟動 NetApp Backup and Recovery 即可探索系統和 Volume。
 
 
 [role="lead"]
-您可以在啟動 Volume 的備份和復原功能時探索系統和 Volume，也可以在啟動 NetApp Backup and Recovery 之前探索。如果您在未啟動備份和復原功能的情況下探索 Volume，則必須先啟動備份和復原功能才能保護這些 Volume。
+在啟動 NetApp Backup and Recovery 之前，請先探索 ONTAP 系統和 Volume。探索之後，您可以審查這些 Volume，但必須啟動 Backup and Recovery 才能加以保護。
 
 .步驟
 . 前往 *Protection > Backup and Recovery*。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-back-up-now-kubernetes-applications-cr.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
-summary: NetApp Backup and Recovery 可讓您使用自訂資源（CR）手動備份 Kubernetes 應用程式。 
+summary: '使用自訂資源 (CR) 按需建立 Kubernetes 應用程式的 Snapshot 快照技術和備份，建立基準或保護您最新的資料變更。' 
 ---
 = 現在可以使用 NetApp Backup and Recovery 中的自訂資源備份 Kubernetes 應用程式
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery 可讓您使用自訂資源（CR）手動備
 
 
 [role="lead"]
-NetApp Backup and Recovery 可讓您使用自訂資源（CR）手動備份 Kubernetes 應用程式。
+使用自訂資源 (CR) 按需建立 Kubernetes 應用程式的 Snapshot 快照技術和備份，建立基準或保護您最新的資料變更。
 
 
 
@@ -47,7 +47,7 @@ NOTE: 如果叢集範圍的資源在應用程式定義中被明確引用，或�
 ** *metadata.name*：（_必填_）此自訂資源的名稱；請為您的環境選擇一個唯一且有意義的名稱。
 ** *spec.applicationRef*：要建立快照的應用程式的 Kubernetes 名稱。
 ** *spec.appVaultRef*：（_必填_）應儲存快照內容（元資料）的 AppVault 名稱。
-** *spec.reclaimPolicy*：（選用）定義當快照 CR 刪除時，快照的 AppArchive 會發生什麼情況。這意味著即使設為 `Retain`，快照也會被刪除。有效選項：
+** *spec.reclaimPolicy*: （_可選_）定義當 Snapshot 快照技術 CR 被刪除時，快照的 AppArchive 會發生什麼情況。即使設定為 `Retain`，Snapshot 快照技術 CR 本身仍然會被刪除；只有 AppArchive 會被保留。有效選項：
 +
 *** `Retain` (預設)
 *** `Delete`
@@ -228,5 +228,5 @@ kubectl apply -f 3-2-1-fanout-backup-cr.yaml
 | protect.trident.netapp.io/volume-snapshots-created-timeout | 字串 | 建立磁碟區快照所允許的最長時間。 | "5 分鐘" 
 
 
-| protect.trident.netapp.io/pvc-bind-timeout-sec | 字串 | 等待新建立的任何 PersistentVolumeClaims （PVC） 到達該  `Bound` 階段的最大時間 （以秒為單位），超過此時間操作將失敗。 | "1200"（20 分鐘） 
+| protect.trident.netapp.io/pvc-bind-timeout-sec | 字串 | 等待任何新建立的 PersistentVolumeClaims （PVC）到達 `Bound`階段的最長時間（以秒為單位），超過此時間操作將失敗。 | "1200"（20 分鐘） 
 |===

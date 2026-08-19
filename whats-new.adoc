@@ -14,7 +14,7 @@ summary: 了解NetApp Backup and Recovery的新功能。
 
 
 [role="lead"]
-了解NetApp Backup and Recovery的新功能。
+了解 NetApp Backup and Recovery 中的新功能、增強功能和修復。
 
 
 
@@ -807,7 +807,7 @@ link:br-use-vmware-protect-overview.html["了解有關使用NetApp Backup and Re
 [[microsoft-sql-server-workload-supported-in-general-availability-ga]]
 === 通用可用性 (GA) 中支援 Microsoft SQL Server 工作負載
 
-Microsoft SQL Server 工作負載支援現已在NetApp Backup and Recovery中正式推出 (GA)。在ONTAP、 Cloud Volumes ONTAP和Amazon FSx for NetApp ONTAP儲存上使用 MSSQL 環境的組織現在可以利用這項新的備份和復原服務來保護他們的資料。
+Microsoft SQL Server 工作負載支援現已在 NetApp Backup and Recovery 中正式發布 （GA）。在 ONTAP、Cloud Volumes ONTAP 和 Amazon FSx for NetApp ONTAP 儲存設備上使用 MSSQL 環境的組織，現在可以利用這項新的 Backup and Recovery 服務來保護其資料。
 
 與先前的預覽版本相比，此版本對 Microsoft SQL Server 工作負載支援進行了以下增強：
 
@@ -1066,7 +1066,7 @@ NetApp Backup and Recovery現在將其支援擴展到第三方物件存儲，主
 
 ==== 開始使用 Wasabi
 
-要開始使用第三方存儲作為物件存儲，您必須在控制台代理中啟用一個標誌。然後，您可以輸入第三方物件儲存的連接詳細資訊並將其整合到備份和還原工作流程中。
+要開始使用第三方儲存設備作為物件存放區，您必須在 Console 代理程式中啟用一個標誌。然後，您可以輸入第三方物件存放區的連線詳細資訊，並將其整合到備份與恢復工作流程中。
 
 .步驟
 . 透過 SSH 進入您的連接器。
@@ -1218,7 +1218,7 @@ NOTE: 本文檔作為技術預覽提供。對於此預覽版產品， NetApp保�
 
 此版本的NetApp Backup and Recovery Preview 2025 包含以下更新。
 
-* 重新設計的使用者介面為管理備份和復原任務提供了更直覺的體驗。
+* 重新設計的使用者介面，為管理備份與恢復任務提供更直覺式的體驗。
 * 預覽版可讓您備份和還原 Microsoft SQL Server 資料庫。（未來版本將添加對其他工作負載的支援。）
 * 此版本整合了SnapCenter功能，使您能夠透過NetApp Backup and Recovery使用者介面使用 3-2-1 資料保護策略來管理和保護您的SnapCenter資源。
 * 此版本可讓您將SnapCenter工作負載匯入NetApp Backup and Recovery。

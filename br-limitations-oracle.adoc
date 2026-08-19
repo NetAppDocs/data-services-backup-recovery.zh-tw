@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-limitations-oracle.html 
 keywords: NetApp Backup and Recovery, Oracle Database 
-summary: 在您的環境中使用 Backup and Recovery 之前，請先檢閱這些 NetApp Backup and Recovery 限制。 
+summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢閱這些 Backup and Recovery 限制。 
 ---
 = Oracle 資料庫工作負載的 NetApp Backup and Recovery 已知限制
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: 在您的環境中使用 Backup and Recovery 之前，請先檢閱這�
 
 
 [role="lead"]
-此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
+查看 NetApp Backup and Recovery 中 Oracle 資料庫工作負載的目前限制和不支援的動作。
 
-在 NetApp Backup and Recovery 的 Oracle Database 工作負載預覽版本中，不支援下列動作：
+在 NetApp Backup and Recovery 預覽版本中，以下動作不支援 Oracle 資料庫工作負載：
 
 * 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
 * 離線備份

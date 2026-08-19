@@ -14,9 +14,9 @@ summary: 此版本的NetApp Backup and Recovery具有以下已知限制。
 
 
 [role="lead"]
-此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
+查看 NetApp Backup and Recovery 中 KVM 工作負載的目前限制。
 
-在 NetApp Backup and Recovery 中，KVM 工作負載不支援以下操作和設定：
+以下不支援的動作和組態適用於 NetApp Backup and Recovery 中的 KVM 工作負載：
 
 
 
@@ -53,5 +53,5 @@ summary: 此版本的NetApp Backup and Recovery具有以下已知限制。
 
 使用 KVM 工作負載搭配 NetApp Backup and Recovery 時，請注意以下事項。
 
-* 如果受保護的虛擬機器中未執行 QEMU Guest Agent，則備份可能會失敗。作為解決方法，請確保 `qemu-guest-agent`守護程序在啟動備份之前已在虛擬機器上執行。
+* 如果受保護的虛擬機器中未執行 QEMU Guest Agent，則備份可能會失敗。為避免此問題，請確保 `qemu-guest-agent`精靈已在虛擬機器上執行，再啟動備份。
 

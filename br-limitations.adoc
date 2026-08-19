@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery需要先發現數據，以便您使用該服
 
 
 [role="lead"]
-此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
+在使用 NetApp Backup and Recovery 處理 SQL Server 工作負載之前，請先查看這些限制。
 
 
 
@@ -71,7 +71,7 @@ Windows 叢集名稱不能包含底線 (_) 字元。
 [[resources-with-multiple-policies-using-the-same-schedule-tier-not-supported]]
 === 不支援使用相同計劃層的多個策略的資源
 
-您無法為資源指派使用相同計畫層級（例如，每小時、每天、每週等）的多個策略。  NetApp Backup and Recovery不會從SnapCenter匯入這些資源。
+您無法將使用相同排程分層（例如，每小時、每天或每週）的多個原則指派給相同資源。NetApp Backup and Recovery 不會從 SnapCenter 匯入這些資源。
 
 *解決方法*：僅將使用相同計劃層的一項策略附加到資源。
 
@@ -89,18 +89,18 @@ Windows 叢集名稱不能包含底線 (_) 字元。
 [[both-daily-and-monthly-policies-attached-to-one-resource-not-supported]]
 === 不支援將每日和每月策略附加到同一個資源
 
-如果SnapCenter策略以天和月為間隔重複，則NetApp Backup and Recovery將不會匯入該策略。
+如果 SnapCenter 原則在日和月間隔中重複出現，NetApp Backup and Recovery 將不會匯入該原則。
 
-例如，您無法將每日策略（少於或等於 7 天或大於 7 天）附加到資源，也無法將每月策略附加到相同資源。
+例如，您無法將每日原則（間隔為 7 天或更短，或超過 7 天）附加到某個資源，同時又將每月原則附加到同一個資源。
 
 *解決方法*：使用以每日或每月為間隔的策略，但不能同時使用兩者。
 
 
 
 [[on-demand-backup-policies-not-migrated]]
-=== 按需備份策略未遷移
+=== 隨需備份原則未移轉
 
-NetApp Backup and Recovery不會從SnapCenter匯入按需備份原則。
+NetApp Backup and Recovery 不會從 SnapCenter 匯入隨需備份原則。
 
 
 
@@ -116,7 +116,7 @@ NetApp Backup and Recovery不會從SnapCenter匯入僅日誌備份原則。如�
 [[host-mapping]]
 === 主機映射
 
-SnapCenter 不會將儲存叢集或儲存 VM 對應到資源的主機，但 NetApp Backup and Recovery 支援此功能。在 NetApp Backup and Recovery 預覽版中，內部部署 ONTAP 叢集或儲存 VM 不會對應到主機。此外，NetApp Console 不支援儲存 VM。
+SnapCenter 不會將儲存叢集或儲存 VM 對應到主機，但 NetApp Backup and Recovery 會。在 NetApp Backup and Recovery 預覽版中，內部部署 ONTAP 叢集或儲存 VM 不會對應到主機。此外，NetApp Console 不支援儲存 VM。
 
 *解決方法*：從SnapCenter匯入資源之前，請在NetApp Backup and Recovery中為在本機SnapCenter中註冊的所有本機ONTAP儲存系統建立一個系統。然後，將該叢集的資源從SnapCenter匯入NetApp Backup and Recovery。
 

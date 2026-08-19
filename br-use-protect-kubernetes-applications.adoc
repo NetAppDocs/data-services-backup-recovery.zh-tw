@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery讓您能夠管理工作負載主機資訊、
 
 
 [role="lead"]
-NetApp Backup and Recovery 可讓您透過網頁 UI 或套用自訂資源檔案來新增 Kubernetes 應用程式。應用程式可以是以命名空間為基礎，由標準 Kubernetes 資源組成，或是以 VM 為基礎，由一個或多個虛擬機組成。
+使用 NetApp Backup and Recovery Web 使用者介面或自訂資源檔案來新增要保護的 Kubernetes 應用程式。您可以新增使用標準 Kubernetes 資源的命名空間型應用程式，或新增使用一或多個虛擬機器的虛擬機器型應用程式。
 
 .所需的NetApp Console角色
 組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
@@ -24,7 +24,7 @@ NetApp Backup and Recovery 可讓您透過網頁 UI 或套用自訂資源檔案�
 [[add-and-protect-a-new-kubernetes-application]]
 == 新增並保護新的 Kubernetes 應用程式
 
-保護 Kubernetes 應用程式的第一步是在 NetApp Backup and Recovery 中建立應用程式。建立應用程式後，Backup and Recovery 功能就能辨識 Kubernetes 叢集上正在執行的應用程式。
+要保護 Kubernetes 應用程式，首先需要在 NetApp Backup and Recovery 中建立該應用程式。建立應用程式後，NetApp Backup and Recovery 就能感知 Kubernetes 叢集上正在執行的應用程式。
 
 .開始之前
 在新增和保護 Kubernetes 應用程式之前，您需要link:br-start-discover.html["發現 Kubernetes 工作負載"]。
@@ -83,7 +83,7 @@ NOTE: Backup and Recovery 不會儲存搜尋參數或結果；這些參數用於
 . 透過選擇命名空間並可選擇性地包含標籤選取器，尋找要新增至應用程式的虛擬機器。
 +
 
-NOTE: 如果您從清單中選擇 VM，則應用程式定義是靜態的——之後不會向應用程式新增新的 VM（您需要編輯應用程式才能新增和保護它們）。如果您使用標籤選擇器，則無法選擇個別 VM 或編輯產生的清單，但之後任何與選擇器相符的 VM 都會自動包含在內並受到保護。
+NOTE: 如果您從清單中選擇虛擬機器，則應用程式定義是靜態的——之後不會將新的虛擬機器新增至應用程式（您需要編輯應用程式才能新增並保護它們）。如果您使用標籤選擇器，則無法選擇單一虛擬機器或編輯產生的清單，但之後任何與選擇器相符的虛擬機器都會自動包含在內並受到保護。
 
 +
 選取的虛擬機器會顯示在右側清單中。
@@ -95,7 +95,7 @@ NOTE: 如果您從清單中選擇 VM，則應用程式定義是靜態的——�
 
 
 .結果
-應用程式已建立並出現在 Kubernetes 清單的 *應用程式* 標籤中的應用程式清單中。  NetApp Console會根據您的設定啟用對應用程式的保護，並且您可以在備份和還原的*監控*區域中監控進度。
+應用程式建立完成後，將顯示在 Kubernetes 清單的「應用程式」標籤中的應用程式清單中。NetApp Backup and Recovery 可根據您的設定保護應用程式，您可以在「監控」區域中監控進度。
 
 --
 .新增基於命名空間的應用程式（CR）

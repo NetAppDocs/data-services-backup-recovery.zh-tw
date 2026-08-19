@@ -4,7 +4,7 @@ permalink: prev-ontap-protect-overview.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
 ---
-= 了解 NetApp Backup and Recovery for ONTAP 磁碟區
+= 了解使用 NetApp Backup and Recovery 的 ONTAP Volume 保護
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,12 +14,12 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-NetApp Backup and Recovery功能，用於保護和長期存檔您的ONTAP磁碟區資料。您可以實施 3-2-1 策略，即在 2 個不同的儲存系統上保留 3 個來源資料副本，並在雲端中保留 1 個副本。
+使用 NetApp Backup and Recovery 來保護和還原您的 ONTAP Volume 資料，並長期歸檔備份。您可以實作 3-2-1 策略，即在兩個不同的儲存設備系統上保留三份來源資料複本，並在雲端保留一份複本。
 
 
 NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-啟動後，備份和復原會建立區塊級、增量永久備份，這些備份儲存在另一個ONTAP叢集和雲端中的物件儲存中。除了來源磁碟區之外，您還將擁有：
+啟動後，備份與還原功能會建立區塊層級的遞增永久備份，這些備份儲存在另一個 ONTAP 叢集和雲端物件儲存設備中。除了來源 Volume 之外，您還將擁有：
 
 * 來源系統上磁碟區的快照
 * 不同儲存系統上的複製卷
@@ -28,7 +28,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 image:diagram-321-overview-unified.png["一張圖表顯示了備份檔案在來源系統中以快照形式存在，在輔助儲存系統中以複製磁碟區形式存在，以及在物件儲存中以備份檔案形式存在。"]
 
-NetApp Backup and Recovery利用 NetApp 的SnapMirror資料複製技術，透過建立快照並將其傳輸到備份位置，確保所有備份完全同步。
+NetApp 備份與還原使用 NetApp 的 SnapMirror 資料複寫技術，透過建立快照並將其傳輸至備份位置來保持備份同步。
 
 3-2-1 方法的優點包括：
 
@@ -48,10 +48,10 @@ NetApp Backup and Recovery利用 NetApp 的SnapMirror資料複製技術，透過
 
 * 在ONTAP儲存系統之間複製資料以支援備份和災難復原。
 * 透過高可用性確保您的 DR 環境的可靠性。
-* 透過兩個系統之間的預先共用金鑰 (PSK) 設定的本機ONTAP動態加密。
+* 使用兩個系統之間的預共用金鑰 (PSK) 設定原生 ONTAP 飛行中加密。
 * 複製的資料是不可變的，直到您使其可寫入並可供使用為止。
 * 如果傳輸失敗，複製可以自我修復。
-* 與……相比 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"^]， NetApp Backup and Recovery中的複製包括以下功能：
+* 與 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"^]相比，NetApp 備份與還原中的複寫包含下列功能：
 +
 ** 一次將多個FlexVol磁碟區複製到輔助系統。
 ** 使用 UI 將複製的磁碟區還原到來源系統或其他系統。
@@ -67,7 +67,7 @@ NetApp Backup and Recovery利用 NetApp 的SnapMirror資料複製技術，透過
 * 將單一備份策略套用至群集中的所有捲，或為具有唯一還原點目標的磁碟區指派不同的備份策略。
 * 建立備份策略，以應用於叢集中建立的所有未來磁碟區。
 * 製作不可變的備份文件，以便在保留期內鎖定和保護它們。
-* 掃描備份檔案以查找可能的勒索軟體攻擊 - 並自動刪除/替換受感染的備份。
+* 掃描備份檔案是否有勒索軟體攻擊，並自動移除或替換受感染的備份。
 * 將較舊的備份文件分層到檔案儲存以節省成本。
 * 刪除備份關係，以便您可以存檔不需要的來源卷，同時保留磁碟區備份。
 * 從雲端備份到雲，從本機系統備份到公有雲或私有雲。
@@ -107,7 +107,7 @@ https://bluexp.netapp.com/cloud-volumes-global-regions["使用全球區域地圖
 [[supported-backup-destinations]]
 === 支援的備份目標
 
-NetApp Backup and Recovery讓您能夠將ONTAP磁碟區從下列來源系統備份到下列輔助系統以及公有雲和私有雲供應商中的物件儲存。快照保留在來源系統上。
+NetApp Backup and Recovery 可讓您將 ONTAP Volume 從下列來源系統備份到下列二線系統，以及公有雲和私有雲供應商中的物件儲存。Snapshot 位於來源系統上。
 
 
 NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。其他 S3 相容提供者尚未通過驗證。
@@ -147,7 +147,7 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 * S3 相容儲存設備
 * Azure Blob
 * Google 雲端儲存
-* NetAppStorageGRID
+* StorageGRID
 * ONTAP S3
 
 
@@ -157,7 +157,7 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 [[supported-restore-destinations]]
 === 支援的還原目標
 
-您可以將ONTAP資料從位於輔助系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照位於來源系統上，並且只能還原到同一系統。
+您可以將ONTAP資料從位於二級系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。
 
 
 NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。其他 S3 相容提供者尚未通過驗證。
@@ -203,7 +203,7 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 
 
 
-| NetAppStorageGRID  a| 
+| StorageGRID  a| 
 * 本地ONTAP系統
 * Cloud Volumes ONTAP
 
@@ -220,7 +220,7 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 | S3 相容物件儲存設備 | 本地ONTAP系統 | 本地ONTAP系統 
 |===
 
-NOTE: 文中提及的「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
+NOTE: 文中提到的「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
 
 
 
@@ -266,7 +266,7 @@ NOTE: NetApp Backup and Recovery不支援FlexCache磁碟區的備份。
 
 
 * 如果您打算從已移動到檔案物件儲存的備份檔案中恢復磁碟區數據，則雲端提供者會收取額外的每 GiB 檢索費用和每個請求費用。
-* 如果您打算在還原磁碟區資料的過程中掃描備份檔案是否存在勒索軟體（如果您已為雲端備份啟用 Datalock 和勒索軟體保護），那麼您還將產生來自雲端供應商的額外輸出成本。
+* 如果您打算在還原 Volume 資料的過程中掃描備份檔案是否存在勒索軟體（如果您已為雲端備份啟用 DataLock 和勒索軟體保護），那麼您還將產生來自雲端供應商的額外輸出費用。
 
 
 *服務費*
@@ -392,7 +392,7 @@ TIP: 資料保護磁碟區備份的保留期與來源SnapMirror關係中定義�
 [[backup-file-protection-settings]]
 === 備份檔案保護設定
 
-如果您的叢集使用的是 ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份免受刪除和勒索軟體攻擊。每個備份原則都提供了一個 _Datalock 和 Ransomware 保護_ 部分，可以將其應用於備份檔案，並設定保護期限（即 _保留期_）。
+如果您的叢集使用 ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份，使其免受刪除和勒索軟體攻擊。每個備份原則都提供了一個用於 _DataLock 和勒索軟體保護_ 的區段，可在特定期間內套用至您的備份檔案，即 _保留期間_。
 
 * _DataLock_ 保護您的備份檔案不被修改或刪除。
 * _勒索軟體保護_會在建立備份檔案時以及恢復備份檔案中的資料時掃描您的備份檔案以查找勒索軟體攻擊的證據。
@@ -402,7 +402,7 @@ TIP: 資料保護磁碟區備份的保留期與來源SnapMirror關係中定義�
 
 備份保留期與備份計畫保留期相同，再加上最多 31 天的緩衝期。例如，每週備份保留 5 份副本，每個備份檔案將鎖定 5 週。每月備份保留 6 份副本，每個備份檔案將鎖定 6 個月。
 
-當您的備份目標是 Amazon S3、Azure Blob 或NetApp StorageGRID時，目前可獲得支援。未來版本中將新增其他儲存提供者目的地。
+目前，當備份目的地為 Amazon S3、Azure Blob 或 StorageGRID 時，此功能受到支援。其他儲存設備供應商目的地將在未來的版本中新增。
 
 欲了解更多詳細信息，請參閱以下信息：
 
@@ -438,11 +438,11 @@ TIP: 如果您將備份分層到檔案存儲，則無法啟用 DataLock。
 
 * 在StorageGRID中，備份與 _Standard_ 儲存類別相關聯。
 +
-如果您的本機叢集使用的是ONTAP 9.12.1 或更高版本，而您的StorageGRID系統使用的是 11.4 或更高版本，則可以在一定天數後將較舊的備份檔案存檔到公有雲存檔儲存。目前支援 AWS S3 Glacier/S3 Glacier Deep Archive 或 Azure Archive 儲存層。link:prev-ontap-backup-onprem-storagegrid.html["了解有關從StorageGRID歸檔備份檔案的更多信息"]。
+如果您的本機叢集使用的是 ONTAP 9.12.1 或更高版本，而您的 StorageGRID 系統使用的是 11.4 或更高版本，則可以在一定天數後將較舊的備份檔案歸檔到公有雲歸檔儲存設備。目前支援 AWS S3 Glacier/S3 Glacier Deep Archive 或 Azure Archive 儲存設備層。link:prev-ontap-backup-onprem-storagegrid.html["了解有關從StorageGRID歸檔備份檔案的更多信息"]。
 
 
 
-有關存檔舊備份文件的詳細信息，請參閱 link:prev-ontap-policy-object-options.html]。
+請參閱link:prev-ontap-policy-object-options.html["舊備份檔案歸檔的工作原理"]。
 
 
 

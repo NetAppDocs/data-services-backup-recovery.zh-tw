@@ -4,7 +4,7 @@ permalink: br-limitations-vmware.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, vmware, vcenter 
 summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢閱這些 Backup and Recovery 限制。 
 ---
-= NetApp Backup and Recovery針對 VMware 工作負載的已知限制
+= VMware 工作負載在 NetApp Backup and Recovery 中的已知限制
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢�
 
 
 [role="lead"]
-此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
+在使用 NetApp Backup and Recovery 處理 VMware 工作負載之前，請先查看這些限制。
 
-在 NetApp Backup and Recovery 中，VMware 工作負載不支援以下操作：
+NetApp Backup and Recovery 不支援對 VMware 工作負載執行下列操作：
 
 * 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
 * vVol 支持

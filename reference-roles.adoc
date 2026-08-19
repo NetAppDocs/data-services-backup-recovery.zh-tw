@@ -14,6 +14,6 @@ summary: NetApp Backup and Recovery採用 IAM 角色來管理每個使用者對�
 
 
 [role="lead"]
-NetApp Backup and Recovery and Recovery採用身分識別和存取管理 (IAM) 來管理每個使用者對特定功能和操作的存取權限。
+使用身分和存取管理 (IAM) 來控制每個使用者可以存取哪些 NetApp Backup and Recovery 功能和行動。
 
-若要了解位於NetApp Backup and Recovery特定的IAM 角色，請參閱 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp Console中的NetApp Backup and Recovery角色"^]。
+若要了解特定於 NetApp Backup and Recovery 的 IAM 角色，請參閱 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-backup-rec-roles.html["NetApp Console中的NetApp Backup and Recovery角色"^]。

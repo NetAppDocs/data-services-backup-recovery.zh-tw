@@ -4,7 +4,7 @@ permalink: br-use-kvm-protect-overview.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID 的KVM 虛擬機，確保您的資料受到保護。 
 ---
-= 了解如何使用 NetApp Backup and Recovery 保護 KVM 工作負載
+= KVM 保護工作流程與 NetApp Backup and Recovery
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 
 
 [role="lead"]
-使用NetApp Backup and Recovery保護您的託管 KVM 虛擬機器和儲存池。NetApp Backup and Recovery提供快速、節省空間、崩潰一致性和 VM 一致性的備份和復原作業。在使用備份和復原功能保護 KVM 主機和虛擬機器之前，必須先使用 Apache CloudStack 等管理平台來管理它們。
+使用 NetApp Backup and Recovery 保護您代管的 KVM 虛擬機器和儲存資源池。此服務提供快速、極具空間效率、損毀狀況一致且 VM 一致的備份與還原作業。
 
-您可以將 KVM 工作負載備份到 Amazon Web Services S3、 Azure NetApp Files或StorageGRID ，並將 KVM 工作負載還原到本機 KVM 主機。
+您的 KVM 主機和虛擬機器必須由 Apache CloudStack 等平台進行代管，然後才能使用 NetApp Backup and Recovery 加以保護。
 
 使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：
 
 * 多個資料副本可防止內部和外部網路安全威脅。
-* 如果一種媒體發生故障，使用不同類型的媒體可以幫助您恢復。
+* 使用不同類型的媒體有助於在一種媒體發生故障時進行還原。
 * 您可以從現場副本快速恢復，如果現場副本受到損害，則可以使用異地副本。
 
 
-您可以使用NetApp Backup and Recovery執行與 KVM 工作負載相關的下列任務：
+您可以使用 NetApp Backup and Recovery 對 KVM 工作負載執行下列任務：
 
 * link:br-start-discover-kvm.html["發現 KVM 工作負載"]
 * link:br-use-kvm-protection-groups.html["為 KVM 工作負載建立和管理保護群組"]

@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從本機ONTAP系統備份到二級儲存系統和 Azure Blob 儲存體。
+在 NetApp 備份與還原中，您可以將內部部署 ONTAP 系統中的 Volume 資料備份到次要儲存設備和 Azure Blob。請使用此頁面準備您的環境並啟動備份。
 
 
 NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
@@ -64,7 +64,7 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在您的場所安裝控制台代理"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html["在 Azure 政府區域安裝控制台代理"^]
 +
-當控制台代理部署在雲端時（而不是安裝在您的場所），Azure 政府區域支援NetApp Backup and Recovery。此外，您必須從 Azure 市場部署控制台代理程式。您無法從 Console SaaS 網站在政府區域部署 Console 代理程式。
+NetApp Backup and Recovery 在 Azure 政府區域中受到支援，前提是 Console 代理程式部署在雲端，而非安裝在您的本機環境中。此外，您必須從 Azure Marketplace 部署 Console 代理程式。您無法從 NetApp Console SaaS 網站在政府區域部署 Console 代理程式。
 
 
 
@@ -290,7 +290,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 . 您可以在啟動精靈中使用自己的自訂管理金鑰進行資料加密，而不是使用預設的 Microsoft 管理加密金鑰。在這種情況下，您將需要有 Azure 訂閱、Key Vault 名稱和金鑰。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["了解如何使用自己的密鑰"^] 。
 +
-請注意，備份和復原支援_Azure 存取策略_作為權限模型。目前不支援 Azure 基於角色的存取控制 (Azure RBAC) 權限模型。
+請注意，NetApp Backup and Recovery 支援 _Azure 存取原則_ 作為權限模型。目前不支援 _Azure 角色型存取控制_（Azure RBAC）權限模型。
 
 . 如果您希望透過公共網際網路從本機資料中心到 VNet 建立更安全的連接，則可以在啟動精靈中設定 Azure 專用端點。在這種情況下，您需要了解此連接的 VNet 和子網路。 https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview["請參閱有關使用私有端點的詳細信息"^] 。
 
@@ -326,9 +326,9 @@ link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的
 === 啟動精靈
 
 .步驟
-. 使用以下方式之一存取啟動備份和復原精靈：
+. 您可以透過以下方式之一存取「啟動備份與恢復」精靈：
 +
-** 從控制台*系統*頁面中，選擇系統並選擇右側面板中備份和還原服務旁邊的*啟用>備份磁碟區*。
+** 在 Console 的 *Systems* 頁面中，選擇系統，然後在右側面板的備份與還原服務旁選擇 *Enable > Backup Volumes*。
 +
 如果控制台*系統*頁面上存在備份的 Azure 目標，則可以將ONTAP叢集拖曳到 Azure Blob 物件儲存體上。
 
@@ -336,7 +336,7 @@ link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的
 
 
 +
-精靈的介紹頁面顯示保護選項，包括本機快照、複製和備份。如果您在此步驟中選擇了第二個選項，則會出現「定義備份策略」頁面，其中選擇一個磁碟區。
+精靈的「簡介」頁面顯示了保護選項，包括本機快照、複寫和備份。如果您在此步驟中選擇了第二個選項，則會顯示「定義備份策略」頁面，並已選取一個 Volume。
 
 . 繼續以下選項：
 +
@@ -493,7 +493,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 +
 *** 輸入策略的名稱。
 *** 選擇最多五個時間表，通常頻率不同。
-*** 對於備份到物件原則，請設定 Datalock 和 Ransomware 保護設定。如需 Datalock 和 Ransomware 保護的詳細資訊，請參閱link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
+*** 對於備份至物件原則，請設定 DataLock 和勒索軟體保護設定。如需 DataLock 和勒索軟體保護的詳細資訊，請參閱 link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
 *** 選擇“*創建*”。
 
 
@@ -530,9 +530,9 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 [[show-the-api-commands]]
 === 顯示 API 命令
 
-您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。
+您可能需要顯示並（可選）複製「啟動備份與還原」精靈中使用的 API 命令。您可能需要執行此操作，以便在未來的系統中自動化備份啟動。
 
 .步驟
-. 從啟動備份和復原精靈中，選擇*查看 API 請求*。
+. 在「啟動備份與還原」精靈中，選取 *View API request*。
 . 若要將指令複製到剪貼簿，請選擇*複製*圖示。
 

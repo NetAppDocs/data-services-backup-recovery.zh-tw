@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: br-use-oracle-backup.html 
-keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
-summary: 使用 NetApp 備份和復原功能保護您的 Oracle Database 工作負載。 
+keywords: backing up, back up, backup, backup application data, Amazon Web Services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
+summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作負載。 
 ---
 = 使用 NetApp Backup and Recovery 備份 Oracle Database 工作負載
 :hardbreaks:
@@ -14,22 +14,22 @@ summary: 使用 NetApp 備份和復原功能保護您的 Oracle Database 工作�
 
 
 [role="lead"]
-使用NetApp Backup and Recovery將 Oracle 資料庫保護群組或資料庫從本機ONTAP系統備份到雲端存儲，包括 Amazon S3、 NetApp StorageGRID、Microsoft Azure Blob Storage 或ONTAP S3。  NetApp Backup and Recovery每個保護群組中的資料庫和日誌資料。
+使用 NetApp 備份與還原，從本機 ONTAP 系統備份 Oracle 資料庫保護群組或單一資料庫。將備份傳送到雲端儲存，包括 Amazon S3、NetApp StorageGRID、Microsoft Azure Blob Storage 或 ONTAP S3。
 
 
 NOTE: 若要按排程備份保護群組或單一資料庫，請建立管理備份和還原作業的策略。看link:br-use-policies-create.html["創建策略"]以取得說明。
 
-* 建立保護群組以管理一組資源的備份和還原作業。如需詳細資訊，請參閱 link:br-use-kvm-protection-groups.html["使用 NetApp Backup and Recovery 為 Oracle Database 工作負載建立及管理保護群組"]。
-* 立即備份保護群組（立即建立按需備份）。
-* 立即備份資料庫。
+* 建立保護群組以管理一組資源的備份與還原作業。如需詳細資訊、請參閱 link:br-use-kvm-protection-groups.html["使用 NetApp Backup and Recovery 為 Oracle Database 工作負載建立及管理保護群組"]。
+* 建立保護群組的隨需備份。
+* 建立資料庫的隨需備份。
 
 
 
 
-[[back-up-protection-groups-now-with-an-on-demand-backup]]
-== 立即使用按需備份來備份保護群組
+[[create-an-on-demand-backup-of-a-protection-group]]
+== 建立保護群組的隨需備份
 
-在進行系統變更之前執行按需備份以確保您的資料受到保護。
+在進行系統變更之前，請建立隨需備份以保護您的資料。
 
 *所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
@@ -39,7 +39,7 @@ NOTE: 若要按排程備份保護群組或單一資料庫，請建立管理備�
 . 選擇*庫存*。
 . 選擇一個工作負載來查看保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
-. 選擇「*保護群組*」、「*資料儲存*」或「*虛擬機器*」標籤。
+. 選擇*保護群組*索引標籤。
 . 選擇要備份的保護組。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *立即備份*。
 +
@@ -52,10 +52,10 @@ NOTE: NetApp Backup and Recovery使用相同的策略。
 
 
 
-[[back-up-a-database-now-with-an-on-demand-backup]]
-== 立即使用按需備份來備份資料庫
+[[create-an-on-demand-backup-of-a-database]]
+== 建立資料庫的隨需備份
 
-您可以執行單一資料庫的按需備份。
+在進行系統變更之前，請建立隨需備份以保護您的資料。
 
 *所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 

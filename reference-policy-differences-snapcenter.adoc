@@ -4,7 +4,7 @@ permalink: reference-policy-differences-snapcenter.html
 keywords: backup policy, backup policies, snapcenter, migration 
 summary: NetApp Backup and Recovery中使用的政策與SnapCenter中使用的策略之間存在一些差異。 
 ---
-= SnapCenter中的策略與NetApp Backup and Recovery中的策略比較
+= SnapCenter與NetApp Backup and Recovery之間的策略差異
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: NetApp Backup and Recovery中使用的政策與SnapCenter中使用的�
 
 
 [role="lead"]
-SnapCenter中使用的策略與NetApp Backup and Recovery中使用的策略之間存在一些差異，這可能會影響您從SnapCenter匯入資源和策略後看到的內容。
+使用此參考資料了解 SnapCenter 與 NetApp Backup and Recovery 之間的原則差異，這些差異可能會影響匯入的資源和原則。
 
 
 
@@ -27,7 +27,7 @@ SnapCenter使用以下計劃層：
 * *每月*：一月至十二月，可選擇每月特定日期或多日演出，例如 7 號。
 
 
-NetApp Backup and Recovery使用以下計劃層，它們略有不同：
+NetApp Backup and Recovery 使用以下幾種排程分層，各層級略有不同：
 
 * *每小時*：僅以 15 分鐘為間隔執行快照，例如 1 小時或 15 分鐘間隔小於 60。
 * *每日*：一天中的小時數（0-23），開始時間例如為上午 10:00，並可選擇每隔幾小時執行一次。
@@ -50,7 +50,7 @@ NetApp Backup and Recovery使用以下計劃層，它們略有不同：
 [[imported-snapcenter-daily-schedules]]
 == 導入的SnapCenter每日計劃
 
-NetApp Backup and Recovery如下調整SnapCenter方案：
+NetApp Backup and Recovery 會依照下列方式調整 SnapCenter 排程：
 
 * 如果SnapCenter計劃設定為小於或等於 7 天，NetApp Backup and Recovery會將計畫設定為每週。本週內有些快照被跳過。
 +

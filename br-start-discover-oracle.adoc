@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-oracle.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, workloads, protect, Oracle 
-summary: NetApp Backup and Recovery需要先發現工作負載，以便您保護它們。 
+summary: NetApp Backup and Recovery 必須先探索工作負載，才能加以保護。 
 ---
 = 在 NetApp Backup and Recovery 中探索 Oracle Database 工作負載
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您保護
 
 
 [role="lead"]
-發現 Oracle 資料庫可讓 NetApp Backup and Recovery 透過建立及還原備份和快照來保護這些資料庫。
+在 NetApp Backup and Recovery 中探索 Oracle Database 工作負載，以便使用備份和 Snapshot 快照技術加以保護。
 
-*所需的控制台角色* 備份和還原超級管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* 備份與還原超級管理員。了解 link:reference-roles.html["備份與恢復角色及權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 
 
@@ -130,10 +130,10 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 [[add-an-oracle-database-host-and-discover-resources]]
 == 新增 Oracle Database 主機並探索資源
 
-新增 Oracle 主機資訊並讓NetApp Backup and Recovery發現工作負載。在每個控制台代理程式中，選擇您想要發現工作負載的系統。
+新增 Oracle 資料庫主機資訊，並讓 NetApp Backup and Recovery 探索工作負載。對於每個 Console 代理程式，選擇要探索的系統。
 
 .步驟
-. 從NetApp Console選單中，選擇「保護」>「備份和復原」。
+. 從 NetApp Console 選單中，選取 *Protection* > *Backup and Recovery*。
 . 在“工作負載”下，選擇“Oracle”磁貼。
 . 選擇*發現資源*。
 . 在 *Workload type* 欄位中選擇 *Oracle*。
@@ -145,10 +145,10 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 .. 選擇*完成*。
 
 
-. *主機註冊*：新增 Oracle Database 主機。在 *Host FQDN or IP address* 欄位中，輸入主機的 FQDN 或 IP 位址 - 對於叢集資料庫，您可以輸入叢集中任何節點的 FQDN 或 IP。然後提供認證資料、NetApp Console 代理程式和連接埠號碼。
+. *主機註冊*：新增新的 Oracle 資料庫主機。在「主機 FQDN 或 IP 位址」欄位中，輸入主機的 FQDN 或 IP 位址。對於叢集資料庫，您可以輸入叢集中任意節點的 FQDN 或 IP 位址。然後提供憑證、Console 代理程式和連接埠號碼。
 . （可選）如果您為非 root 使用者選擇憑證，請執行下列操作：
 +
-.. 有關如何將您選擇的非 root 使用者新增至 Oracle Database 主機上的 sudoers 檔案中的說明，請選擇 *Configure sudoers* 。
+.. 有關將選定的非 root 使用者新增至 Oracle 資料庫主機上的 sudoers 檔案的說明，請選擇 *Configure sudoers*。
 .. 按照對話框中的說明操作，完成後啟用核取方塊，然後選取 *Done* 。
 
 
@@ -159,7 +159,7 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 +
 [NOTE]
 ====
-NetApp Backup and Recovery 透過 SSH 連線至每個主機，以自動安裝外掛程式。當出現以下任一情況時，請啟用*使用手動安裝*：
+NetApp Backup and Recovery 透過 SSH 連接到每台主機以自動安裝外掛。當出現以下任一情況時，請啟用 *Use manual installation*：
 
 *** 一個或多個主機未執行 SSH 服務。
 *** 任何主機都已安裝 NetApp 外掛程式（包括僅部分叢集成員安裝的情況）。
@@ -174,20 +174,20 @@ NetApp Backup and Recovery 透過 SSH 連線至每個主機，以自動安裝外
 . 選擇*發現*。
 +
 
-TIP: 新增資源可能需要幾分鐘。若要查看進度，請在 Inventory 頁面底部的狀態對話方塊中選取 *Track progress* ，或從左側選單中選取 *Monitoring* 。
+TIP: 新增資源可能需要幾分鐘。若要查看進度，請在庫存頁面底部的狀態對話方塊中選取 *Track progress*，或從左側導覽列中選取 *Monitoring*。
 
 
 
 .結果
-Oracle Database 工作負載顯示在「清單」頁面的工作負載清單中。
+Oracle 資料庫工作負載會顯示在「清單」頁面的工作負載清單中。
 
 
 
 [[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == 繼續存取NetApp Backup and Recovery儀表板
 
-. 從NetApp Console選單中，選擇 *保護* > *備份和還原*。
-. 選擇一個工作負載圖塊（例如，Microsoft SQL Server）。
+. 從 NetApp Console 選單中，選取 *Protection* > *Backup and Recovery*。
+. 選擇一個工作負載圖塊（例如，Oracle 資料庫）。
 . 從備份和還原選單中，選擇*儀表板*。
-. 檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。
+. 審查資料保護健全狀況。面臨風險或受到保護的工作負載數量會根據新探索、受到保護和備份的工作負載而增加。
 

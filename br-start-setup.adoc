@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-setup.html 
 keywords: backup, back up, restore, recovery, aws, azure 
-summary: 在使用NetApp Backup and Recovery之前，請執行幾個步驟來設定備份目標。 
+summary: 準備一個異地位置，例如 StorageGRID、AWS 或 Azure，並設定所需的權限，使其可以用作備份目的地。 
 ---
-= 在使用NetApp Backup and Recovery之前設定備份目標
+= 設定備份目的地
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: 在使用NetApp Backup and Recovery之前，請執行幾個步驟來設
 
 
 [role="lead"]
-在使用NetApp Backup and Recovery之前，請執行幾個步驟來設定備份目標。
+準備一個異地位置，例如 StorageGRID、AWS 或 Azure，並設定所需的權限，使其可以用作備份目的地。
 
 在開始之前，請查看link:concept-start-prereq.html["先決條件"]以確保您的環境已準備就緒。
 
@@ -25,32 +25,32 @@ summary: 在使用NetApp Backup and Recovery之前，請執行幾個步驟來設
 
 * NetAppStorageGRID。
 +
-參考 https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["了解StorageGRID"^]。
+請參閱 https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["了解StorageGRID"^]。
 
 +
-參考 https://docs.netapp.com/us-en/storagegrid/index.html["StorageGRID文檔"^]有關StorageGRID的詳細資訊。
+如需有關 StorageGRID 的詳細資訊，請參閱 https://docs.netapp.com/us-en/storagegrid/index.html["StorageGRID文檔"^]。
 
-* 亞馬遜網路服務。參考 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Amazon S3 文檔"^]。
+* Amazon Web Services。參見 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Amazon S3 文檔"^]。
 +
 執行下列操作以準備將 AWS 作為備份目標：
 
 +
 ** 在 AWS 中設定一個帳戶。
 ** 在 AWS 中配置 S3 權限，列於下一節。
-** 有關在控制台中管理 AWS 儲存的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-viewing-amazon-s3.html["管理您的 Amazon S3 儲存桶"^]。
+** 有關在 Console 中管理 AWS 儲存設備的詳細資訊，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-viewing-amazon-s3.html["管理您的 Amazon S3 儲存桶"^]。
 
 
 * 微軟 Azure。
 +
-** 參考 https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html["Azure NetApp Files文檔"^]。
+** 請參閱 https://docs.netapp.com/us-en/storage-management-blob-storage/index.html["Azure Blob 儲存設備文件"^]。
 ** 在 Azure 中設定一個帳戶。
 ** 配置 https://docs.netapp.com/us-en/console-setup-admin/reference-permissions.html["Azure 權限"^]在 Azure 中。
-** 有關在控制台中管理 Azure 儲存體的詳細信息，請參閱 https://docs.netapp.com/us-en/storage-management-blob-storage/task-view-azure-blob-storage.html["管理 Azure 儲存體帳戶"^]。
+** 有關在 Console 中管理 Azure 儲存設備的詳細資訊，請參閱 https://docs.netapp.com/us-en/storage-management-blob-storage/task-view-azure-blob-storage.html["管理 Azure 儲存體帳戶"^]。
 
 
 
 
-在備份目標本身配置選項後，您稍後會將其配置為NetApp Backup and Recovery中的備份目標。有關如何在NetApp Backup and Recovery中配置備份目標的詳細信息，請參閱link:br-start-discover-backup-targets.html["發現備份目標"]。
+在備份目的地本身設定好選項後，稍後您需要在 NetApp Backup and Recovery 中將其設定為備份目的地。有關如何在 NetApp Backup and Recovery 中設定備份目的地的詳細資訊，請參閱 link:br-start-discover-backup-targets.html["發現備份目標"]。
 
 
 
@@ -71,7 +71,7 @@ NOTE: 在 AWS 中國區域建立備份時，您需要將 IAM 政策中所有_Res
 
 . 當您啟動服務時，備份精靈會提示您輸入存取金鑰和金鑰。這些憑證會傳遞到ONTAP集群，以便ONTAP可以將資料備份和還原到 S3 儲存桶。為此，您需要建立具有以下權限的 IAM 使用者。
 +
-請參閱 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS 文件：建立角色以將權限委託給 IAM 用戶"^]。
+請參閱  https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS 文件：建立角色以將權限委託給 IAM 用戶"^]。
 
 +
 [%collapsible]

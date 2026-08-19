@@ -12,7 +12,7 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 
 
 [role="lead"]
-在 NetApp Backup and Recovery 中，為 Kubernetes 工作負載建立保護報告，以檢視保護狀態與詳細資訊，包括成功與失敗備份的數量、備份類型、叢集健康資訊等。
+在 NetApp Backup and Recovery 中建立 Kubernetes 保護報告，以監控備份狀態、備份類型和叢集健全狀況。
 
 *必要的 NetApp Console 角色* 備份與還原超級管理員、備份與還原備份管理員或備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
@@ -24,7 +24,7 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 建立保護報告以檢視叢集的保護狀態。
 
 .步驟
-. 從NetApp Backup and Recovery選單中，選擇 *報告* 選項。
+. 從 NetApp Backup and Recovery 選單中，選取 * 報告 *。
 . 選擇*建立報告*。
 . 輸入報告範圍詳細資料：
 +
@@ -34,13 +34,13 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 
 
 . 輸入報告範圍：選擇您希望報告包含過去一天、過去 7 天、過去 30 天、過去一個季度或過去一年的資料。
-. 輸入報表配置詳細資料：選擇報表是僅執行一次還是排程定期產生報表。對於排程報表，請選擇重複頻率並選取開始日期。
+. 輸入報告組態詳細資料：選擇報告是執行一次還是按排程定期執行。對於排程報告，請選擇重複頻率並選取開始日期。
 +
-.. 輸入電子郵件傳送詳細資料：（僅適用於排程報告）如果您希望透過電子郵件傳送報告，請輸入一個或多個應接收排程報告的電子郵件地址。
+.. 輸入電子郵件傳送詳細資料：僅針對排程報告，請輸入一個或多個電子郵件地址以接收報告。
 
 
 +
-在設定頁面配置電子郵件通知。有關配置電子郵件通知的詳細信息，請參閱link:br-start-configure.html["配置設定"]。
+在「設定」頁面設定電子郵件通知。有關設定電子郵件通知的詳細資訊，請參閱link:br-start-configure.html["配置設定"]。
 
 . 選擇“*創建*”。
 
@@ -53,7 +53,7 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 下載產生的保護報告，報告格式可以是 JSON 檔案或 PDF 文件，以便查看和分享。
 
 .步驟
-. 從NetApp Backup and Recovery選單中，選擇 *報告* 選項。
+. 從 NetApp Backup and Recovery 選單中，選取 * 報告 *。
 . 在 *Reports* 頁面上，選擇 *Reports* 選單，即可查看產生的保護報告清單。
 . 若要下載報告，請選擇「操作」圖示 image:../media/icon-action.png["操作選項"] > *下載*。
 +
@@ -68,10 +68,10 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 [[view-a-protection-report]]
 == 檢視保護報告
 
-可在 NetApp Backup and Recovery 內快速檢視保護報告的互動式詳細資訊。您可以查看作業摘要資訊、資料保護狀態、組態詳細資料等。
+在 NetApp Backup and Recovery 中檢視保護報告的互動式詳細資料。您可以查看工作總結資訊、資料保護狀態、組態詳細資訊等。
 
 .步驟
-. 從NetApp Backup and Recovery選單中，選擇 *報告* 選項。
+. 從 NetApp Backup and Recovery 選單中，選取 * 報告 *。
 . 在 *Reports* 頁面上，選擇 *Reports* 選單，即可查看產生的保護報告清單。
 . 若要查看報告，請選擇「操作」圖示 image:../media/icon-action.png["操作選項"] > *查看報告*。
 +
@@ -87,7 +87,7 @@ summary: 建立 Kubernetes 工作負載的保護報告，以檢視保護狀態�
 當您不再需要保護報告時，請將其刪除。
 
 .步驟
-. 從NetApp Backup and Recovery選單中，選擇 *報告* 選項。
+. 從 NetApp Backup and Recovery 選單中，選取 * 報告 *。
 . 在 *Reports* 頁面上，選擇 *Reports* 選單，即可查看產生的保護報告清單。
 . 若要刪除報告，請選擇 Actions 圖示 image:../media/icon-action.png["操作選項"] > *Delete* 。
 . 選擇 *Delete* 以確認操作。

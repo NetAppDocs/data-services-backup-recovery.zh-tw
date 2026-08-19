@@ -14,12 +14,12 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 
 
 [role="lead"]
-建立保護群組來管理一組虛擬機器的備份作業。保護群組是您想要一起保護的資源（例如虛擬機器）的邏輯分組。
+建立保護群組，將相關的 Hyper-V 虛擬機器一起保護，並在 NetApp Backup and Recovery 中管理其備份作業。
 
 您可以執行與保護群組相關的以下任務：
 
 * 建立保護組。
-* 查看保護詳情。
+* 檢視保護群組詳細資料。
 * 立即備份保護組。看link:br-use-hyperv-backup.html["立即備份 Hyper-V 工作負載"]。
 * 刪除保護組。
 
@@ -29,21 +29,21 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 [[create-a-protection-group]]
 == 建立保護組
 
-將您想要保護的工作負載分組到一個保護群組。建立保護組來一起備份和還原工作負載。
+將您要一起保護的工作負載分組到保護群組中。建立保護群組，以便一起備份和還原這些工作負載。
 
 *所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
 .開始之前
-* 請注意，對於 Hyper-V 工作負載，排程備份時間會以管理主機的時區為準。如需更多資訊，請參閱 link:br-use-policies-hyper-v-create.html["在 NetApp Backup and Recovery 中建立及管理 Hyper-V 備份原則"]。
+* 請注意，對於 Hyper-V 工作負載，排程備份時間會以管理主機的時區為準。如需詳細資訊，請參閱 link:br-use-policies-hyper-v-create.html["在 NetApp Backup and Recovery 中建立及管理 Hyper-V 備份原則"]。
 
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
-. 選擇一個工作負載來查看保護詳細資訊。
+. 選擇工作負載以檢視其保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
-. 選擇“保護組”選單。
+. 選擇*保護群組*標籤。
 . 選擇*建立保護組*。
-. 為保護組提供名稱。
+. 請輸入保護群組的名稱。
 . 選擇要包含在保護群組中的虛擬機器。
 . 選擇“下一步”。
 . 選擇要套用於保護群組的*備份策略*。
@@ -81,7 +81,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 排程備份使用 Hyper-V 主機的時區，該時區在建立保護群組排程時記錄。如果您變更主機的時區，現有保護群組將繼續以其原始時區（通常為 UTC）執行，直到您更新其排程為止。
 
 
-NOTE: 只有在您修改保護群組名稱、新增或刪除虛擬機器、變更指派的原則或更新備份前/後腳本時，才會重新建立排程。如果未進行任何變更而直接儲存，則不會更新排程。此排程更新對於每個保護群組而言是一次性操作，不會立即啟動備份。
+NOTE: 只有在您修改保護群組名稱、新增或移除虛擬機器、變更指派的原則或更新備份前/後腳本時，才會重新建立排程。儲存而不做任何變更，將不會更新排程。此一次性排程更新不會立即啟動備份。
 
 .步驟
 . 刷新 Hyper-V 主機，以便取得其目前時區。
@@ -97,7 +97,7 @@ NOTE: 只有在您修改保護群組名稱、新增或刪除虛擬機器、變�
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
-. 選擇一個工作負載來查看保護詳細資訊。
+. 選擇工作負載以檢視其保護詳細資訊。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*。
 . 選擇*保護群組*標籤。
 . 選擇要刪除的保護組。

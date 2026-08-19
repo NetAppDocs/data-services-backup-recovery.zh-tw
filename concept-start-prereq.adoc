@@ -21,7 +21,7 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 [[prepare-to-use-netapp-backup-and-recovery]]
 == 準備使用 NetApp Backup and Recovery
 
-您可以透過 NetApp Console 存取 NetApp Backup and Recovery。根據您使用的是 NetApp Console 還是 NetApp Console 本機部署，請執行下列任務以準備 Console 進行備份和還原。
+您可以透過 NetApp Console 存取 NetApp Backup and Recovery。根據您使用的是 NetApp Console 還是 NetApp Console 本機部署，請執行下列任務以準備 Console 進行備份與恢復。
 
 
 
@@ -148,7 +148,7 @@ link:br-start-enable.html#enable-backup-and-recovery-in-netapp-console-local-dep
 [[requirements-for-backups-to-object-storage]]
 == 物件儲存備份的要求
 
-若要使用物件儲存作為備份目標，您需要擁有 AWS S3、Google Cloud Storage、Microsoft Azure Blob、StorageGRID 或 ONTAP 帳戶，並設定對應的存取權限。
+若要使用物件儲存作為備份目標，您需要擁有 AWS S3、Google Cloud Storage、Azure Blob 儲存設備、StorageGRID 或 ONTAP 的帳戶，並設定對應的存取權限。
 
 
 
@@ -187,7 +187,7 @@ Microsoft Windows 有關受支援版本的最新信息，請參閱 https://imt.n
 
 
 | Microsoft SQL Server 版本  a| 
-VMware 虛擬機器檔案系統 (VMFS) 和 VMware 虛擬機器磁碟 (VMDK) NFS 支援 2012 及更高版本。
+2012 及更高版本支援 NFS 上的 VMware 虛擬機器檔案系統 (VMFS) 和 VMware 虛擬機器磁碟 (VMDK)。
 
 
 
@@ -266,7 +266,7 @@ NOTE: 不支援保護儲存在直通磁碟或 VHD/VHDX 檔案中的資料庫，�
 | VMware vCenter vSphere 版本 | 7.0U1 及更高版本 
 
 
-| VMware Tools | 使用檔案和資料夾還原功能以及 VM 一致性備份時，需要 VMWare Tools。若要確保 VMware Tools 版本與 ESXi Server 版本相符，請參閱 https://packages.vmware.com/tools/versions["VMware 版本對應資訊"]。 
+| VMware Tools | 使用檔案和資料夾還原功能以及虛擬機器一致性備份時，需要 VMware Tools。若要確保 VMware Tools 版本與 ESXi Server 版本相符，請參閱 https://packages.vmware.com/tools/versions["VMware 版本對應資訊"]。 
 
 
 | IP 位址類型 | IPv4、IPv6 
@@ -332,7 +332,7 @@ NOTE: 為確保 KVM 工作負載復原成功完成，請確保在用於 KVM 備�
 若要啟用對非 root 使用者管理的 KVM 虛擬機器的保護，請依照下列步驟操作：
 
 . 將磁碟區掛載為 NFS3 類型，以避免使用 `nobody` 使用者和群組。
-. 使用以下命令將非root使用者新增至 `qemu` 在保留現有群體的同時，組成新的群體：
+. 使用以下命令將非 root 使用者新增至  `qemu` 群組，同時保留其現有群組：
 +
 [source, shell]
 ----
@@ -388,8 +388,8 @@ NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（�
 
 
 | 物件儲存 （備份目標）  a| 
-* Azure 物件儲存
-* 亞馬遜 AWS
+* Azure Blob 儲存設備
+* AWS S3
 * NetAppStorageGRID
 * ONTAP S3
 

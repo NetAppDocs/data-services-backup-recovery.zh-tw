@@ -14,14 +14,14 @@ summary: NetApp Backup and Recovery支援一個 Azure 存檔存取層和大多�
 
 
 [role="lead"]
-NetApp Backup and Recovery支援一個 Azure 存檔存取層和大多數區域。
+利用這些資訊，您可以了解 NetApp Backup and Recovery 支援的 Azure 歸檔層。您也可以審查已歸檔備份的還原成本和擷取時間。
 
 
 
 [[supported-azure-blob-access-tiers-for-netapp-backup-and-recovery]]
 == NetApp Backup and Recovery支援的 Azure Blob 存取層
 
-當最初建立備份檔案時，它們儲存在_Cool_存取層中。此層針對儲存不經常存取的資料進行了最佳化；但在需要時可以立即存取。
+備份檔案最初建立時，會儲存在「冷存取分層」。該分層針對儲存不經常存取的資料進行了最佳化，但需要時可以立即存取。
 
 如果您的來源叢集運行的是ONTAP 9.10.1 或更高版本，您可以選擇在一定天數（通常超過 30 天）後將備份從「Cool_」儲存分層到「Azure Archive_」存儲，以進一步最佳化成本。此層中的資料在需要時無法立即訪問，並且需要更高的檢索成本，因此您需要考慮可能需要多久從這些存檔的備份檔案中恢復資料。請參閱此頁面上有關從檔案儲存復原資料的部分。
 
@@ -49,7 +49,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["了�
 
 
 
-NOTE: 將資料從 Azure 還原到StorageGRID系統時不支援高優先權。
+NOTE: 從 Azure 還原資料到 StorageGRID 系統時，不支援高優先權。
 
 恢復 Azure 存檔中存檔的資料需要多長時間？:: 恢復時間由兩部分組成：
 +

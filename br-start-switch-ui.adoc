@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-start-switch-ui.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 您可以在不同的NetApp Backup and Recovery工作負載之間切換。某些工作負載使用不同的 UI。 
+summary: NetApp Backup and Recovery 支援多種工作負載類型，某些工作負載使用不同的使用者介面。使用工作負載切換器可以在它們之間切換。 
 ---
-= 切換到不同的NetApp Backup and Recovery工作負載
+= 切換到不同的 NetApp 備份與還原工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 您可以在不同的NetApp Backup and Recovery工作負載之間切換
 
 
 [role="lead"]
-您可以在不同的NetApp Backup and Recovery工作負載之間切換。
+NetApp Backup and Recovery 支援多種工作負載類型，某些工作負載使用不同的使用者介面。使用工作負載切換器可以在它們之間切換。
 
 
 

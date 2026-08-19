@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-完成 NetApp Backup and Recovery 中的幾個步驟，即可開始備份本機主要 ONTAP 系統中的 Volume 資料。您可以將備份傳送到輔助 ONTAP 儲存系統（複寫的 Volume）或 S3 相容儲存系統上的儲存桶，或同時傳送至兩者。
+使用此頁面驗證您的組態是否受支援，並設定從您的主要內部部署 ONTAP 系統到 NetApp Backup and Recovery 中的 S3 相容物件儲存設備的備份。
 
 
 
@@ -71,7 +71,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 [[prepare-your-console-agent]]
 == 準備控制台代理
 
-控制台代理程式是控制台功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
+控制台代理程式是NetApp Console功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
 
 
 
@@ -232,9 +232,9 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 === 啟動精靈
 
 .步驟
-. 使用以下方式之一存取啟動備份和復原精靈：
+. 您可以透過以下方式之一存取「啟動備份與恢復」精靈：
 +
-** 從控制台*系統*頁面中，選擇系統，然後選擇右側面板中備份和還原旁邊的*啟用>備份磁碟區*。
+** 在 Console 的 *Systems* 頁面中，選擇系統，然後在右側面板的 Backup and Recovery 旁邊選擇 *Enable > Backup Volumes*。
 ** 在備份和復原欄中選擇*卷*。從「磁碟區」標籤中，選擇「操作 (...)」選項，然後為單一磁碟區（尚未啟用複製或備份到物件儲存）選擇「啟動備份」。
 
 
@@ -369,7 +369,7 @@ TIP: 若要使用備份和復原建立自訂策略，請參閱link:br-use-polici
 +
 *** 輸入策略的名稱。
 *** 選擇最多五個時間表，通常頻率不同。
-*** 對於備份到物件原則，請設定 Datalock 和 Ransomware 保護設定。如需 Datalock 和 Ransomware 保護的詳細資訊，請參閱link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
+*** 對於備份至物件原則，請設定 DataLock 和勒索軟體保護設定。如需 DataLock 和勒索軟體保護的詳細資訊，請參閱 link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
 *** 選擇“*創建*”。
 
 
@@ -408,9 +408,9 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 [[show-the-api-commands]]
 === 顯示 API 命令
 
-您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。
+您可能需要顯示並（可選）複製「啟動備份與還原」精靈中使用的 API 命令。您可能需要執行此操作，以便在未來的系統中自動化備份啟動。
 
 .步驟
-. 從啟動備份和復原精靈中，選擇*查看 API 請求*。
+. 在「啟動備份與還原」精靈中，選取 *View API request*。
 . 若要將指令複製到剪貼簿，請選擇*複製*圖示。
 

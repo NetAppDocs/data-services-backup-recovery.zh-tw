@@ -14,9 +14,9 @@ summary: 由 NetApp Console 稽核所支援的備份與還原動作參考。
 
 
 [role="lead"]
-NetApp Console 稽核頁面會記錄使用者在 NetApp Backup and Recovery 中執行的下列操作，作為其稽核功能的一部分。如需瞭解如何檢視及篩選稽核事件，請參閱 Console 文件中的 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["從「稽核」頁面稽核使用者活動"^]。
+使用此參考資訊可查看 NetApp Console 在「稽核」頁面上記錄的 NetApp Backup and Recovery 行動。有關查看和篩選稽核事件的詳細資訊，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["從「稽核」頁面稽核使用者活動"^]（位於 NetApp Console 文件中）。
 
-對於每個已審核的操作、NetApp Console 會記錄服務名稱、代理程式、資源、使用者和操作狀態。
+對於每個已稽核的行動，NetApp Console 會記錄服務名稱、代理程式、資源、使用者和行動狀態。
 
 .已審核的 NetApp Backup and Recovery 作業
 * 從備份還原磁碟區或檔案

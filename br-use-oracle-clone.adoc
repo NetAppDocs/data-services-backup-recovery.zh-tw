@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: br-use-oracle-clone.html 
-keywords: clone, clone application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
+keywords: clone, clone application data, Amazon Web Services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
 summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作負載。 
 ---
-= 使用 NetApp Backup and Recovery 複製 Oracle Database 工作負載
+= 使用 NetApp Backup and Recovery Clone Oracle 資料庫工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 
 
 [role="lead"]
-使用 NetApp Backup and Recovery 從內部部署 ONTAP 系統建立 Oracle 資料庫的可寫入複本至主要或次要儲存設備。管理複本的生命週期，以便根據排程定期重新整理。
+使用 NetApp Backup and Recovery，從內部部署 ONTAP 系統的主儲存設備或次要儲存設備建立 Oracle 資料庫工作負載的可寫入 Clone。您也可以排程 Clone 重新整理，以符合您的要求。
 
 *所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
@@ -36,7 +36,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 . 在 *Select restore point* 頁面的 *Clone from* 部分中，選擇 *Existing snapshots*。
 . 從清單中選擇一個現有的快照（還原點）作為克隆的基礎，然後選擇 *Next* 。
 +
-如果快照儲存在多個位置，則會顯示 *Select snapshot location*。
+如果 Snapshot 快照技術儲存在多個位置，則會顯示「選擇 Snapshot 快照技術位置」頁面。
 
 . 選擇要使用的快照位置，然後選取 *Next* 。
 . 在 *Advanced options* 頁面上、執行以下操作：
@@ -54,7 +54,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 [[schedule-a-clone-of-an-oracle-database]]
 == 排程複製 Oracle 資料庫
 
-排程立即建立複本並持續重新整理複本。這會建立資料庫的最新複本。如果您想要根據所選排程持續從資料庫的最新狀態重新整理複本，請使用此方法。
+建立即時 Clone 並安排定期重新整理，使其與最新的資料庫狀態保持同步。
 
 .步驟
 . 從NetApp Console選單中，選擇「保護」>「備份和復原」。
@@ -70,7 +70,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 . 在 *Advanced options* 頁面上、執行以下操作：
 +
 .. 若要自訂複製資料庫的設定，請啟用 *自訂目標資料庫參數* 選項。如果您之前已儲存過規格檔案，則可以使用此選項上傳該檔案以自訂複製資料庫的設定。您也可以下載反映資料庫目前設定的預設規格檔案。
-.. 在 *Clone refresh schedule* 部分，選擇何時以及多久刷新一次克隆。刷新克隆會重新建立即時快照，並將現有克隆覆蓋為新克隆。
+.. 在「Clone 重新整理排程」部分，選擇何時以及多久重新整理 Clone。重新整理會更新即時 Snapshot 快照技術，並將現有 Clone 覆寫為新複本。
 .. 在 *Prescripts and postscripts* 部分，啟用 *Prescript* 和 / 或 *Postscript* 選項，以便在複製作業開始前或完成後執行腳本。對於每個選項，請輸入完整的腳本路徑和任何必要的參數。
 
 
@@ -82,11 +82,9 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 [[split-a-clone]]
 == 分裂克隆
 
-您可以拆分 Oracle Database 工作負載的複製。拆分複製會從複製建立新的備份。您可以使用新的備份來還原資料庫。
+您可以分割 Oracle 資料庫工作負載的 Clone，以建立獨立或長期複本。分割 Clone 會從 Clone 建立新的備份，該備份可用於保護和還原作業。
 
-您可以選擇將 Clone 分割為獨立 Clone 或長期 Clone。精靈會顯示儲存設備虛擬機器中包含的 Aggregate 清單、其大小以及複製 Volume 的位置。NetApp Backup and Recovery 也會指示是否有足夠的空間來分割 Clone。Clone 分割後，Clone 將成為獨立的資料庫以供保護。
-
-複製工作不會移除，可以再次用於其他複製作業。
+分割操作會顯示儲存設備虛擬機器中包含的集合體、其大小以及 Clone Volume 的所在位置。NetApp Backup and Recovery 會指示是否有足夠的空間來完成分割。分割後，Clone 將獨立存在。原始 Clone 作業仍可用於後續操作。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *複製*。
@@ -101,15 +99,13 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 [[delete-a-clone]]
 == 刪除克隆
 
-您可以刪除 Oracle Database 工作負載的複本。刪除複本後，它將從物件儲存中移除，從而釋放儲存空間。
-
-如果策略保護克隆，則克隆及其作業都會被刪除。
+刪除 Oracle 資料庫工作負載的 Clone，以釋放儲存空間。如果 Clone 受到原則保護，則 Clone 及其關聯的作業都將被刪除。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *複製*。
 . 選擇一個克隆。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *刪除克隆*。
-. 在複製刪除確認對話方塊中，查看刪除詳細資訊。
+. 在「刪除 Clone」確認對話方塊中，審查刪除詳細資料。
 +
 .. 若要從SnapCenter中刪除克隆的資源，即使複製或其儲存不可訪問，也請選擇「強制刪除」。
 .. 選擇*刪除*。

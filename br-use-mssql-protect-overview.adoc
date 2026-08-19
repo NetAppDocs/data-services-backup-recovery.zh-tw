@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: br-use-mssql-protect-overview.html 
-keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: 使用NetApp Backup and Recovery保護您的 Microsoft SQL Server 應用程式數據，從本機ONTAP系統到 Amazon Web Services、Microsoft Azure 或StorageGRID 。 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, on-premises, applications, virtual machines, backup and recovery 
+summary: 使用 NetApp Backup and Recovery，將內部部署 ONTAP 系統中的 Microsoft SQL Server 應用程式資料保護至 Amazon Web Services、Microsoft Azure 或 StorageGRID。 
 ---
-= Microsoft SQL Server 在 NetApp Backup and Recovery 中的保護工作流程
+= 使用 NetApp Backup and Recovery 保護 Microsoft SQL Server 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,11 @@ summary: 使用NetApp Backup and Recovery保護您的 Microsoft SQL Server 應�
 
 
 [role="lead"]
-使用NetApp Backup and Recovery將 Microsoft SQL Server 應用程式資料從本機ONTAP系統備份到 AWS、Azure 或StorageGRID 。系統會根據您的政策自動在您的雲端帳戶中建立並儲存備份。使用 3-2-1 策略：在兩個儲存系統上保留資料的三個副本，在雲端中保留一個副本。
-
-3-2-1 方法的優點包括：
-
-* 多個資料副本可防止內部和外部網路安全威脅。
-* 如果一種媒體發生故障，使用不同類型的媒體可以幫助您恢復。
-* 您可以從現場副本快速恢復，如果現場副本受到損害，則可以使用異地副本。
-
+使用 NetApp Backup and Recovery，將內部部署 ONTAP 系統中的 Microsoft SQL Server 資料庫備份到 AWS、Azure 或 StorageGRID。實作 3-2-1 備份策略，即在主儲存設備上建立 Snapshot 快照技術、複寫到次要儲存設備，以及複製到物件儲存。
 
 NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照並將其傳輸到備份位置來同步備份。
 
-您可以執行以下操作來保護您的資料：
+請使用以下工作流程來保護您的資料：
 
 * link:concept-start-prereq-snapcenter-import.html["如果從SnapCenter匯入，則配置其他項目"]
 * link:br-start-discover.html["發現 Microsoft SQL Server 工作負載並選擇性地匯入SnapCenter資源"]
@@ -42,11 +35,11 @@ NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照並將其傳�
 若要備份工作負載，您需要建立管理備份和復原作業的策略。看link:br-use-policies-create.html["創建策略"]了解更多。
 
 .支援的備份目標
-NetApp Backup and Recovery可讓您將下列來源系統中的 Microsoft SQL Server 執行個體和資料庫備份到下列輔助系統以及公有雲和私有雲供應商中的物件儲存。快照保留在來源系統上。
+NetApp Backup and Recovery 支援將下列來源系統中的 Microsoft SQL Server 個體和資料庫備份到公有雲和私有雲中列出的二線系統和物件存放區。Snapshot 快照技術保留在來源系統上。
 
 [cols="33,33,33"]
 |===
-| 來源系統 | 輔助系統（複製） | 目標物件儲存（備份） 
+| 來源系統 | 二線系統（複寫） | 目標物件存放區（備份） 
 
 
 | AWS 中的Cloud Volumes ONTAP | AWS 本機ONTAP系統中的Cloud Volumes ONTAP | 亞馬遜 S3 ONTAP S3 
@@ -61,17 +54,17 @@ NetApp Backup and Recovery可讓您將下列來源系統中的 Microsoft SQL Ser
 | Amazon FSx for NetApp ONTAP | Amazon FSx for NetApp ONTAP | 不適用 
 |===
 .支援的還原目標
-您可以將 Microsoft SQL Server 執行個體和資料庫從駐留在主儲存或輔助系統（複製磁碟區）或物件儲存（備份檔案）中的備份還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。
+您可以將位於主儲存設備、二線系統（複寫 Volume）或物件儲存（備份檔案）中的備份還原至下列目的地系統，以還原 Microsoft SQL Server 個體和資料庫。Snapshot 快照技術位於來源系統上，且只能還原至同一系統。
 
 [cols="33,33,33"]
 |===
 2+| 從備份檔案位置 | 至目的地系統 
 
 
-| *物件儲存（備份）* | *輔助系統（複製）* |  
+| *物件存放區（備份）* | *二線系統（複寫）* |  
 
 
-| 亞馬遜 S3 | AWS 本機ONTAP系統中的Cloud Volumes ONTAP | AWS 本機ONTAP系統ONTAP S3 中的雲端磁碟區 
+| 亞馬遜 S3 | AWS 本機ONTAP系統中的Cloud Volumes ONTAP | AWS 上的 Cloud Volumes ONTAP 內部部署 ONTAP 系統 ONTAP S3 
 
 
 | Azure Blob | Azure 本地端ONTAP系統中的Cloud Volumes ONTAP | Azure 中的Cloud Volumes ONTAP本機ONTAP系統ONTAP S3 

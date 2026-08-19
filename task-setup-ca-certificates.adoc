@@ -4,7 +4,7 @@ permalink: task-setup-ca-certificates.html
 keywords: cloud backup, backup and recovery, backup, restore, certificates, protection, security, storagegrid, backup, back up 
 summary: 建立安全性憑證以啟用NetApp Backup and Recovery與StorageGRID或ONTAP之間的通訊。 
 ---
-= 為 NetApp Backup and Recovery 設定安全性憑證
+= 為 NetApp Backup and Recovery 設定 CA 憑證
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ summary: 建立安全性憑證以啟用NetApp Backup and Recovery與StorageGRID�
 
 
 [role="lead"]
-建立安全性憑證以啟用NetApp Backup and Recovery與StorageGRID或ONTAP之間的通訊。
+設定 CA 憑證，以便 NetApp Backup and Recovery 可以驗證與 StorageGRID 或 ONTAP 的安全連線。請依照適用於您的環境和您要保護的系統的步驟進行操作。
 
 
 
-[[create-a-security-certificate-for-storagegrid]]
-== 為StorageGRID建立安全性證書
+[[create-a-ca-certificate-for-storagegrid]]
+== 為 StorageGRID 建立 CA 憑證
 
-如果 NetApp Backup and Recovery 容器與 StorageGRID 之間的通訊需要驗證 StorageGRID 憑證，請完成以下步驟。
+如果 NetApp Backup and Recovery Container 與 StorageGRID 之間的通訊應驗證 StorageGRID 憑證，請完成下列步驟。
 
-產生的憑證應具有 CN 和主題備用名稱，作為啟動備份時NetApp Backup and Recovery中提供的名稱。
+產生的憑證應使用您在啟動備份時在 NetApp Backup and Recovery 中提供的相同通用名稱 （CN） 和主體替代名稱。
 
 .步驟
 . 請依照StorageGRID文件中的步驟建立StorageGRID憑證。
@@ -31,13 +31,13 @@ summary: 建立安全性憑證以啟用NetApp Backup and Recovery與StorageGRID�
 https://docs.netapp.com/us-en/storagegrid-118/admin/configuring-load-balancer-endpoints.html#attach-certificate["有關配置證書的StorageGRID信息"]
 
 . 如果您尚未更新StorageGRID ，請使用憑證進行更新。
-. 以 root 使用者登入控制台代理程式。跑步：
+. 以 root 使用者身分登入 Console 代理程式。執行：
 +
 [source, shell]
 ----
 sudo su
 ----
-. 取得NetApp Backup and Recovery（Cloud Backup Service）Docker 磁碟區。跑步：
+. 找到 NetApp Backup and Recovery （Cloud Backup Service） Docker volume。執行：
 +
 [source, shell]
 ----
@@ -79,32 +79,32 @@ NOTE: 標準、私有和受限部署模式的掛載點有所不同。此範例�
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
-. 如果 StorageGRID 的憑證由根 CA 和中間 CA 簽名，則附加 `pem`將兩個檔案合併到一個名為 `sgws.crt`在目前位置。不要將葉證書新增至此文件。
+. 如果 StorageGRID 憑證由根目錄 CA 和中間 CA 簽署，請將這兩個 `pem`檔案合併到目前位置中名為 `sgws.crt`的一個檔案中。請勿將葉憑證新增至此檔案。
 
 
 
 
-[[steps-for-cloudmanagercbs-container]]
-=== cloudmanager_cbs 容器的步驟
+[[steps-for-the-cloudmanagercbs-container]]
+=== cloudmanager_cbs Container 的步驟
 
-您需要在NetApp Backup and Recovery（Cloud Backup Service）中啟用StorageGRID伺服器憑證驗證。
+在 NetApp Backup and Recovery （Cloud Backup Service）中啟用 StorageGRID 伺服器憑證驗證。
 
-. 將目錄更改為前面步驟中獲得的 Docker 磁碟區。
+. 切換至您在先前步驟中找到的 Docker Volume。
 +
 [source, shell]
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
-. 將目錄變更為配置目錄。
+. 切換至組態目錄。
 +
 [source, shell]
 ----
 cd cbs_config
 ----
-. 根據您的部署環境，建立並儲存如下所示的設定文件，並使用以下名稱之一：
+. 根據您的部署環境，建立並儲存如下所示的組態檔案，並使用以下名稱之一：
 +
-** `production-customer.json`用於標準模式和限制模式部署。
-** `darksite-customer.json`用於私人模式部署。
+** `production-customer.json` 適用於標準模式和受限模式部署
+** `darksite-customer.json` 適用於私有模式部署
 +
 參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
@@ -143,12 +143,12 @@ docker restart cloudmanager_cbs
 
 
 
-[[steps-for-cloudmanagercbscatalog-container]]
-=== cloudmanager_cbs_catalog 容器的步驟
+[[steps-for-the-cloudmanagercbscatalog-container]]
+=== cloudmanager_cbs_catalog Container 的步驟
 
-接下來，您需要為編目服務啟用StorageGRID伺服器憑證驗證。
+接下來，為目錄服務啟用 StorageGRID 伺服器憑證驗證。
 
-. 將目錄更改為 Docker 磁碟區：
+. 切換到 Docker Volume：
 +
 [source, shell]
 ----
@@ -160,10 +160,10 @@ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
 cd cbs_catalog_config
 ----
-. 根據您的部署環境，使用以下名稱之一建立如下所示的設定檔：
+. 根據您的部署環境，建立一個如下所示的組態檔案，並使用以下名稱之一：
 +
-** `production-customer.json`用於標準模式和限制模式部署。
-** `darksite-customer.json`用於私人模式部署。
+** `production-customer.json` 適用於標準模式和受限模式部署
+** `darksite-customer.json` 適用於私有模式部署
 +
 參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
@@ -203,7 +203,7 @@ docker restart cloudmanager_cbs_catalog
 
 ==== Ubuntu
 
-. 將 SGWS 憑證複製到 `/usr/local/share/ca-certificates`。以下是一個例子：
+. 將 SGWS 憑證複製到 `/usr/local/share/ca-certificates`。以下是一個範例：
 +
 [source, shell]
 ----
@@ -212,7 +212,7 @@ cp /config/sgws.crt /usr/local/share/ca-certificates/
 +
 在哪裡 `sgws.crt`是根 CA 憑證。
 
-. 使用StorageGRID憑證更新主機憑證。跑步
+. 使用 StorageGRID 憑證更新主機憑證。執行：
 +
 [source, shell]
 ----
@@ -256,12 +256,12 @@ openssl crl2pkcs7 -nocrl -certfile /etc/pki/tls/certs/ca-bundle.crt | openssl pk
 
 
 
-[[create-a-security-certificate-for-ontap]]
-== 為ONTAP建立安全性證書
+[[create-a-ca-certificate-for-ontap]]
+== 為 ONTAP 建立 CA 憑證
 
-如果NetApp Backup and Recovery容器與ONTAP之間的通訊應驗證ONTAP證書，則完成以下步驟。
+如果 NetApp Backup and Recovery Container 與 ONTAP 之間的通訊應驗證 ONTAP 憑證，請完成下列步驟。
 
-NetApp Backup and Recovery使用 Cluster Management IP 連接到ONTAP。在憑證的主題備用名稱中輸入叢集的 IP 位址。使用系統管理員 UI 產生 CSR 時指定此步驟。
+NetApp Backup and Recovery 使用叢集管理 IP 位址連線至 ONTAP。請在憑證的「主體別名」欄位中輸入叢集 IP 位址。在 System Manager 中產生 CSR 時，請指定此值。
 
 使用系統管理員文件為ONTAP建立新的 CA 憑證。
 
@@ -276,7 +276,7 @@ NetApp Backup and Recovery使用 Cluster Management IP 連接到ONTAP。在憑�
 ----
 sudo su
 ----
-. 取得NetApp Backup and RecoveryDocker 磁碟區。跑步：
+. 找到 NetApp Backup and Recovery Docker Volume。執行：
 +
 [source, shell]
 ----
@@ -294,7 +294,7 @@ local service-manager-2_cloudmanager_cbs_volume
 
 NOTE: 標準、私有和受限部署模式的磁碟區名稱不同。此範例展示了標準雲端部署。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
-. 取得卷的掛載。跑步：
+. 找到 Volume 的安裝點。執行：
 +
 [source, shell]
 ----
@@ -312,7 +312,7 @@ docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoin
 
 NOTE: 標準、私有和受限部署模式的掛載點有所不同。此範例展示了標準雲端部署。參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
-. 變更為掛載點目錄。跑步：
+. 變更至掛載點目錄。執行：
 +
 [source, shell]
 ----
@@ -328,12 +328,12 @@ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 
 
 
-[[steps-for-cloudmanagercbs-container]]
-=== cloudmanager_cbs 容器的步驟
+[[steps-for-the-cloudmanagercbs-container]]
+=== cloudmanager_cbs Container 的步驟
 
-接下來，在NetApp Backup and Recovery Cloud Backup Service）中啟用ONTAP伺服器憑證驗證。
+接下來，在 NetApp Backup and Recovery （Cloud Backup Service）中啟用 ONTAP 伺服器憑證驗證。
 
-. 將目錄更改為前面步驟中獲得的 Docker 磁碟區。
+. 切換至您在先前步驟中找到的 Docker Volume。
 +
 [source, shell]
 ----
@@ -345,10 +345,10 @@ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
 cd cbs_config
 ----
-. 根據您的部署環境，建立一個如下所示的設定文件，並使用以下名稱之一：
+. 根據您的部署環境，建立一個如下所示的組態檔案，並使用以下名稱之一：
 +
-** `production-customer.json`用於標準模式和限制模式部署。
-** `darksite-customer.json`用於私人模式部署。
+** `production-customer.json` 適用於標準模式和受限模式部署
+** `darksite-customer.json` 適用於私有模式部署
 +
 參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 
@@ -385,12 +385,12 @@ docker restart cloudmanager_cbs
 
 
 
-[[steps-for-cloudmanagercbscatalog-container]]
-=== cloudmanager_cbs_catalog 容器的步驟
+[[steps-for-the-cloudmanagercbscatalog-container]]
+=== cloudmanager_cbs_catalog Container 的步驟
 
-為編目服務啟用ONTAP伺服器憑證驗證。
+為目錄服務啟用 ONTAP 伺服器憑證驗證。
 
-. 將目錄更改為 Docker 磁碟區。跑步：
+. 切換到 Docker Volume。執行：
 +
 [source, shell]
 ----
@@ -402,10 +402,10 @@ cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data
 ----
 cd cbs_catalog_config
 ----
-. 根據您的部署環境，建立一個如下所示的設定文件，並使用以下名稱之一：
+. 根據您的部署環境，建立一個如下所示的組態檔案，並使用以下名稱之一：
 +
-** `production-customer.json`用於標準模式和限制模式部署。
-** `darksite-customer.json`用於私人模式部署。
+** `production-customer.json` 適用於標準模式和受限模式部署
+** `darksite-customer.json` 適用於私有模式部署
 +
 參考 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Console部署模式"]。
 

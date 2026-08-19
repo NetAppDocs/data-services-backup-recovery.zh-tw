@@ -14,15 +14,15 @@ summary: 您使用NetApp Console登入NetApp Backup and Recovery服務。
 
 
 [role="lead"]
-您可以使用NetApp Console登入NetApp Backup and Recovery。
+從 NetApp Console 登入 NetApp Backup and Recovery，以探索工作負載並管理保護作業。
 
 NetApp Backup and Recovery使用身分和存取管理來控制每個使用者可以做什麼。
 
 有關每個角色可以執行的操作的詳細信息，請參閱link:reference-roles.html["NetApp Backup and Recovery使用者角色"]。
 
-若要登入NetApp Console，您可以使用您的NetApp支援網站憑證，也可以使用您的電子郵件和密碼註冊NetApp Console登入。 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["了解有關登入的更多信息"^] 。
+若要登入 NetApp Console，您可以使用 NetApp 支援網站憑證，也可以使用電子郵件地址和密碼註冊 NetApp Console 帳戶 https://docs.netapp.com/us-en/console-setup-admin/task-logging-in.html["了解有關登入的更多信息"^]。
 
-*必要的 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
+*必要的 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 要新增控制台代理，您必須具有備份和還原超級管理員角色。
 
@@ -39,17 +39,17 @@ NetApp Backup and Recovery使用身分和存取管理來控制每個使用者可
 . 登入控制台。
 . 從控制台左側導覽中，選擇*保護*>*備份和還原*。
 +
-** 如果您是第一次登入備份和恢復，並且尚未將系統新增至「系統」頁面，則備份和恢復將顯示「歡迎使用新的NetApp Backup and Recovery」登入頁面，並提供新增系統的選項。有關向“系統”頁面添加系統的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Console標準模式入門"^]。
+** 如果您是首次登入備份與還原服務，且尚未將系統新增至「系統」頁面，則備份與還原服務將顯示「歡迎使用全新 NetApp Backup and Recovery」活動網頁，其中包含新增系統的選項。有關將系統新增至「系統」頁面的詳細資訊，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-standard-mode.html["NetApp Console標準模式入門"^]。
 ** 如果您是第一次登入備份和恢復，並且在控制台中有一個系統但沒有發現任何資源，則會顯示「歡迎使用新的NetApp備份和恢復」頁面，其中包含「發現資源」選項。
 
 
-. 如果您還沒有這樣做，請選擇*發現和管理*選項。
+. 如果您尚未執行此操作，請選擇 *Discover and manage*。
 +
 ** 有關 Microsoft SQL Server 工作負載，請參閱link:br-start-discover.html["發現 Microsoft SQL Server 工作負載"]。
 ** 有關 VMware 工作負載，請參閱link:br-use-vmware-discovery.html["發現 VMware 工作負載"]。
 ** 有關 KVM 工作負載，請參閱link:br-start-discover-kvm.html["發現 KVM 工作負載"]。
-** 有關 Oracle Database 工作負載，請參閱 link:br-start-discover-oracle.html["探索 Oracle Database 工作負載"]。
-** 對於 Hyper-V 工作負載，請參閱link:br-start-discover-hyperv.html["發現 Hyper-V 工作負載"]。
+** 有關 Oracle 資料庫工作負載，請參閱link:br-start-discover-oracle.html["探索 Oracle Database 工作負載"]。
+** 有關 Hyper-V 工作負載，請參閱 link:br-start-discover-hyperv.html["發現 Hyper-V 工作負載"]。
 ** 有關 Kubernetes 工作負載，請參閱link:br-start-discover-kubernetes.html["發現 Kubernetes 工作負載"]。
 
 

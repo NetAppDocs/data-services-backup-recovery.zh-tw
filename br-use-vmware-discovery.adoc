@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-NetApp Backup and Recovery服務需要先發現在ONTAP系統上執行的 VMware 資料儲存和虛擬機，以便您可以使用該服務。如果您已安裝SnapCenter Plug-in for VMware vSphere匯入備份資料和政策。
+在保護運行於 ONTAP 系統上的 VMware 資料儲存和虛擬機器之前，您需要在 NetApp Backup and Recovery 中探索它們。如果您已安裝 SnapCenter Plug-in for VMware vSphere，也可以匯入其備份資料和原則。
 
 *所需的控制台角色* 備份和還原超級管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
@@ -56,7 +56,7 @@ NOTE: 如果您已有SnapCenter插件，請確保在從SnapCenter匯入之前已
 [[if-snapcenter-plug-in-is-not-already-installed-add-a-vcenter-and-discover-resources]]
 === 如果尚未安裝SnapCenter插件，請新增 vCenter 並發現資源
 
-如果您尚未安裝適用於 VMware 的SnapCenter插件，請新增 vCenter 資訊並讓NetApp Backup and Recovery發現工作負載。在每個控制台代理程式中，選擇您想要發現工作負載的系統。
+如果您尚未安裝 SnapCenter Plug-in for VMware，請新增 vCenter 相關資訊，以便 NetApp Backup and Recovery 能夠探索工作負載。在每個 Console 代理程式中，選擇要探索工作負載的系統。
 
 .步驟
 . 從NetApp Console左側導覽中，選擇 *保護* > *備份和還原*。
@@ -88,7 +88,7 @@ TIP: 此過程可能需要幾分鐘。
 [[if-snapcenter-plug-in-is-already-installed-import-snapcenter-plug-in-for-vmware-resources-into-netapp-backup-and-recovery]]
 === 如果已安裝SnapCenter插件，請將適用於 VMware 資源的SnapCenter插件匯入NetApp Backup and Recovery
 
-如果您已安裝適用於 VMware 的SnapCenter插件，請依照下列步驟將SnapCenter插件資源匯入NetApp Backup and Recovery 。控制台發現 vCenter 中的 ESXi 主機、資料儲存區和虛擬機，並從插件中安排時間表；您不必重新建立所有這些資訊。
+如果您已安裝 SnapCenter Plug-in for VMware，請依照下列步驟將 SnapCenter Plug-in 資源匯入 NetApp Backup and Recovery。Console 會從 Plug-in 中探索 ESXi 主機、資料存放區、虛擬機器和排程，因此您無需重新建立這些資訊。
 
 您可以透過以下方式執行此操作：
 
@@ -134,7 +134,7 @@ TIP: 從SnapCenter外掛程式匯入 vCenter 元資料後， NetApp Backup and R
 . 選擇“*導入*”來驗證您的條目並註冊SnapCenter插件。
 +
 
-NOTE: 如果SnapCenter插件已註冊，您可以更新現有的註冊詳細資訊。
+NOTE: 如果 SnapCenter 外掛程式已註冊，您可以更新現有的註冊資訊。
 
 
 
@@ -145,15 +145,15 @@ NOTE: 如果SnapCenter插件已註冊，您可以更新現有的註冊詳細資�
 
 ==== 管理從SnapCenter插件匯入的資源
 
-從適用於 VMware 的SnapCenter外掛程式匯入 vCenter 元資料後，管理NetApp Backup and Recovery中的資源。在您選擇管理這些資源後， NetApp Backup and Recovery and Recovery能夠備份並還原您匯入的資源。在NetApp Backup and Recovery中啟動管理後，您將不再在SnapCenter外掛程式中管理這些資源。
+從 SnapCenter Plug-in for VMware vSphere 匯入 vCenter 中繼資料後，請在 NetApp Backup and Recovery 中管理資源。選擇管理這些資源後，NetApp Backup and Recovery 即可備份與恢復您匯入的資源。在 NetApp Backup and Recovery 中啟動管理後，您將不再於 SnapCenter Plug-in for VMware vSphere 中管理這些資源。
 
-選擇管理資源後，資源、虛擬機器和政策將從 VMware 的SnapCenter插件匯入。資源組、策略和快照從外掛程式遷移並在NetApp Backup and Recovery中進行管理。
+選擇管理資源後，NetApp Backup and Recovery 會從 SnapCenter Plug-in for VMware 匯入資源、虛擬機器和原則。資源群組、原則和快照將從外掛程式移轉，並在 NetApp Backup and Recovery 中進行代管。
 
 .步驟
-. 從SnapCenter外掛程式匯入 VMware 資源後，從「備份和復原」選單中選擇「*Inventory*」。
-. 從「庫存」頁面中，選擇您希望從現在開始由NetApp Backup and Recovery管理的匯入 vCenter。
+. 從 SnapCenter Plug-in 匯入 VMware 資源後，從備份與恢復選單中選取 *Inventory*。
+. 在「清單」頁面中，選取您要讓 NetApp Backup and Recovery 管理的已匯入 vCenter。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*顯示工作量詳情。
-. 在清單 > 工作負載頁面中，選擇操作圖標image:../media/icon-action.png["操作選項"]> *管理* 顯示管理 vCenter 頁面。
+. 從「庫存」>「工作負載」頁面，選擇「動作」圖示 image:../media/icon-action.png["操作選項"] > *管理*，以開啟「管理 vCenter」頁面。
 . 選取「您想繼續遷移嗎？」複選框並選擇*遷移*。
 
 
@@ -164,7 +164,7 @@ NOTE: 如果SnapCenter插件已註冊，您可以更新現有的註冊詳細資�
 
 ==== 繼續存取NetApp Backup and Recovery儀表板
 
-. 若要顯示儀表板，請從「備份與還原」功能表中選擇「儀表板」。
+. 若要顯示 Dashboard，請從備份與恢復選單中選擇 *Dashboard*。
 . 檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。
 +
 link:br-use-dashboard.html["了解儀表板顯示的內容"]。

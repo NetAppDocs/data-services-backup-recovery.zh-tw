@@ -14,12 +14,12 @@ summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢�
 
 
 [role="lead"]
-此處列出了與此版本不相容或無法很好地相容的平台、裝置或功能。仔細閱讀這些限制。
+查看 NetApp Backup and Recovery 中 Kubernetes 工作負載的目前限制和因應措施。
 
 
 
-[[backup-and-recovery-preview-for-netapp-console-local-deployment-limitation]]
-== NetApp Console 本機部署的 Backup and Recovery 預覽版限制
+[[limitation-in-the-backup-and-recovery-preview-for-netapp-console-local-deployment]]
+== NetApp Console 本地部署的 Backup and Recovery 預覽版限制
 
 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
 
@@ -28,15 +28,15 @@ summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢�
 [[changing-the-protection-policy-for-an-application]]
 == 變更應用程式的保護原則
 
-當您變更應用程式的關聯保護原則以使用不同的儲存區或次要複寫目標時、保護原則可能會失敗。
+如果變更應用程式的保護原則以使用不同的儲存桶或次要複寫目標，則保護可能會失敗。
 
-*因應措施*：移除並重新新增應用程式。
+*解決方法*：刪除該應用程式，然後重新新增。
 
 
 
 [[3-2-1-protection-policy-configuration-limitation]]
 == 3-2-1 保護原則組態限制
 
-當您建立 3-2-1 保護策略時，如果物件儲存備份不會與複製到次要儲存設備同時發生，則在保護應用程式時，保護策略會掛起。
+如果您建立 3-2-1 保護原則，將物件儲存備份與複寫到次要儲存設備分開排程，則保護可能會停滯。
 
-*因應措施*：移除並重新新增應用程式，並使用不同的保護原則加以保護。
+*解決方法*：移除應用程式並重新新增，然後使用不同的保護原則加以保護。

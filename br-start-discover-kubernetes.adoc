@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您使用
 
 
 [role="lead"]
-NetApp Backup and Recovery需要在保護 Kubernetes 工作負載之前發現它們。
+在 NetApp Backup and Recovery 中探索 Kubernetes 叢集及其工作負載，以便使用保護原則加以保護。
 
 *必要的 NetApp Console 角色* 備份與還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
@@ -23,11 +23,11 @@ NetApp Backup and Recovery需要在保護 Kubernetes 工作負載之前發現它
 [[discover-kubernetes-workloads]]
 == 發現 Kubernetes 工作負載
 
-在 Backup and Recovery 清單中，探索環境中的 Kubernetes 工作負載。新增工作負載會將 Kubernetes 叢集新增至 NetApp Backup and Recovery。然後，您可以新增應用程式並保護叢集資源。您也可以選擇使用 NetApp Console 本機部署來探索氣隙隔離的本機 Kubernetes 資源。
+在備份與還原清單中，探索環境中的 Kubernetes 叢集和工作負載。新增叢集後，您可以將其註冊到 NetApp Backup and Recovery 中，並探索其應用程式和資源以進行保護。您也可以選擇使用 NetApp Console 本機部署來探索與外部網路隔離的本機 Kubernetes 資源。
 
 [NOTE]
 ====
-當您發現目前受 Trident Protect 保護的叢集時，所有與 Trident Protect 一起使用的備份計畫都會在發現過程中停用（Trident Protect 備份計畫與 Backup and Recovery 不相容）。若要保護叢集中的應用程式，link:br-use-policies-create.html["建立新的保護原則"]或將應用程式與現有原則建立關聯。之後，您可以視需要移除 Trident Protect 備份計畫。
+當您探索目前受 Trident Protect 保護的叢集時，由於 Trident Protect 備份排程與備份與還原不相容，因此在探索過程中，所有與 Trident Protect 搭配使用的備份排程都會停用。若要保護叢集的應用程式，link:br-use-policies-create.html["建立新的保護原則"]或將應用程式與現有原則建立關聯。您可以視需要移除 Trident Protect 備份排程。
 
 ====
 .步驟
@@ -40,7 +40,7 @@ NetApp Backup and Recovery需要在保護 Kubernetes 工作負載之前發現它
 . 選擇 *Kubernetes* 工作負載類型。
 . 輸入叢集名稱並選擇要與叢集搭配使用的 Console 代理程式。
 +
-備份與還原提供的說明會根據您選擇的安裝類型而有所不同。如果您使用 NetApp Console 本機部署，則可以選擇相關說明，以探索沒有外部網路連線的氣隙資源。
+備份與還原提供的說明會根據您選擇的安裝類型而變更。如果您使用 NetApp Console 本機部署，則可以選擇用於探索與外部網路連線不相連的氣隙資源的說明。
 
 . 選擇安裝類型以檢視在 Kubernetes 叢集上安裝 Trident Protect 的說明：
 +
@@ -89,7 +89,7 @@ NetApp Backup and Recovery需要在保護 Kubernetes 工作負載之前發現它
 [[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == 繼續存取NetApp Backup and Recovery儀表板
 
-請依照以下步驟查看NetApp Backup and Recovery儀表板。
+請按照以下步驟檢視 NetApp 備份與還原儀表板並驗證已探索的資源。
 
 . 從NetApp Console選單中，選擇 *保護* > *備份和還原*。
 . 選擇 Kubernetes 工作負載磁貼。

@@ -14,13 +14,13 @@ summary: 在 NetApp Backup and Recovery 中建立和管理 Oracle Database 工�
 
 
 [role="lead"]
-建立保護群組來管理一組 Oracle 資料庫資源的備份作業。保護組是您想要一起保護的資源（例如資料庫）的邏輯分組。您需要建立一個保護群組來備份 Oracle 資料庫。
+建立保護群組以管理 Oracle 資料庫資源的備份作業。保護群組是將要一起保護的資源（例如資料庫）進行邏輯分組。
 
 您可以執行與保護群組相關的以下任務：
 
 * 建立保護組。
 * 查看保護詳情。
-* 立即備份保護群組。請參閱 link:br-use-kvm-backup.html["立即備份 Oracle Database 工作負載"]。
+* 立即備份保護群組。請參閱link:br-use-oracle-backup.html["立即備份 Oracle Database 工作負載"]。
 * 刪除保護組。
 
 
@@ -29,7 +29,7 @@ summary: 在 NetApp Backup and Recovery 中建立和管理 Oracle Database 工�
 [[create-a-protection-group]]
 == 建立保護組
 
-將您想要保護的虛擬機器和儲存池分組到保護群組中。
+將您要保護的 Oracle 資料庫資源分組到保護群組中。
 
 *所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
@@ -40,7 +40,7 @@ summary: 在 NetApp Backup and Recovery 中建立和管理 Oracle Database 工�
 . 選擇*保護群組*標籤。
 . 選擇*建立保護組*。
 . 為保護組提供名稱。
-. 選擇要包含在保護群組中的虛擬機器或儲存池。
+. 選擇要納入保護群組的資料庫。
 . 選擇“下一步”。
 . 選擇要套用於保護群組的*備份策略*。
 +

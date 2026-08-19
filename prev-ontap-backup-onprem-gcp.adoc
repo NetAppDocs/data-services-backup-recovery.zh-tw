@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從本機主ONTAP系統備份到二級儲存系統和 Google Cloud Storage。
+在 NetApp 備份與還原中，您可以將內部部署 ONTAP 系統的 Volume 資料備份至次要儲存設備和 Google Cloud Storage。請使用此頁面準備您的環境並啟動備份。
 
 
 NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
@@ -48,7 +48,7 @@ image:diagram_cloud_backup_onprem_gcp_private.png["此圖表展示了NetApp Back
 [[prepare-your-console-agent]]
 == 準備控制台代理
 
-控制台代理程式是控制台功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
+控制台代理程式是NetApp Console功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
 
 
 
@@ -283,7 +283,7 @@ storage.objects.update
 . 前往 https://console.cloud.google.com/storage/settings["GCP 儲存設定"^]並為服務帳戶建立存取金鑰：
 +
 .. 選擇一個項目，然後選擇*互通性*。如果您還沒有這樣做，請選擇*啟用互通性存取*。
-.. 在*服務帳戶的存取金鑰*下，選擇*為服務帳戶建立金鑰*，選擇剛剛建立的服務帳戶，然後按一下*建立金鑰*。
+.. 在 *服務帳戶的存取金鑰* 下，選取 *為服務帳戶建立金鑰*，選取您剛建立的服務帳戶，然後選取 *建立金鑰*。
 +
 稍後設定備份服務時，您需要在NetApp Backup and Recovery中輸入金鑰。
 
@@ -357,17 +357,17 @@ cloudkms.keyRings.setIamPolicy
 === 啟動精靈
 
 .步驟
-. 使用以下方式之一存取啟動備份和復原精靈：
+. 您可以透過以下方式之一存取「啟動備份與恢復」精靈：
 +
-** 從控制台*系統*頁面中，選擇系統，然後選擇右側面板中備份和還原旁邊的*啟用>備份磁碟區*。
+** 在 Console 的 *Systems* 頁面中，選擇系統，然後在右側面板的 Backup and Recovery 旁邊選擇 *Enable > Backup Volumes*。
 +
-如果您的備份的 Google Cloud Storage 目標存在於控制台 *系統* 頁面上，則可以將ONTAP叢集拖曳到 Google Cloud 物件儲存上。
+如果您的備份目的地 Google Cloud Storage 存在於 NetApp Console 的「系統」頁面上，您可以將 ONTAP 叢集拖曳到 Google Cloud Storage 上。
 
 ** 在備份和復原欄中選擇*卷*。從磁碟區選項卡中，選擇*操作*image:icon-action.png["操作圖示"]圖示並選擇單一磁碟區（尚未啟用複製或備份到物件儲存）的*啟動備份*。
 
 
 +
-精靈的介紹頁面顯示保護選項，包括本機快照、複製和備份。如果您在此步驟中選擇了第二個選項，則會出現「定義備份策略」頁面，其中選擇一個磁碟區。
+精靈的「簡介」頁面顯示了保護選項，包括本機快照、複寫和備份。如果您在此步驟中選擇了第二個選項，則會顯示「定義備份策略」頁面，並已選取一個 Volume。
 
 . 繼續以下選項：
 +
@@ -488,10 +488,10 @@ TIP: 如果您希望將較舊的備份檔案分層到 Google Cloud Archive 儲�
 +
 輸入 Google Cloud 存取金鑰和金鑰。
 
-** *加密金鑰*：如果您建立了新的 Google Cloud 儲存帳戶，請輸入提供者提供給您的加密金鑰資訊。選擇是否使用預設的 Google Cloud 加密金鑰，或從您的 Google Cloud 帳戶中選擇您自己的客戶管理金鑰來管理您的資料加密。
+** *加密金鑰*：如果您建立了一個新的 Google Cloud Storage 儲存桶，請輸入供應商提供給您的加密金鑰資訊。您可以選擇使用預設的 Google Cloud 加密金鑰，或從您的 Google Cloud 帳戶中選擇您自己的客戶管理金鑰，以管理資料的加密。
 +
 
-NOTE: 如果您選擇了現有的 Google Cloud 儲存帳戶，加密資訊已經可用，因此您現在無需輸入。
+NOTE: 如果您選擇的是現有的 Google Cloud Storage 儲存桶，則加密資訊已可使用，因此您現在無需輸入。
 
 +
 如果您選擇使用自己的客戶管理金鑰，請輸入金鑰環和金鑰名稱。 https://cloud.google.com/kms/docs/cmek["了解有關客戶管理加密金鑰的更多信息"^] 。
@@ -547,9 +547,9 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 [[show-the-api-commands]]
 === 顯示 API 命令
 
-您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。
+您可能需要顯示並（可選）複製「啟動備份與還原」精靈中使用的 API 命令。您可能需要執行此操作，以便在未來的系統中自動化備份啟動。
 
 .步驟
-. 從啟動備份和復原精靈中，選擇*查看 API 請求*。
+. 在「啟動備份與還原」精靈中，選取 *View API request*。
 . 若要將指令複製到剪貼簿，請選擇*複製*圖示。
 

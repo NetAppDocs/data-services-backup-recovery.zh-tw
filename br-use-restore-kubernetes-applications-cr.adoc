@@ -4,7 +4,7 @@ permalink: br-use-restore-kubernetes-applications-cr.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
 summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用程式。 
 ---
-= 使用自訂資源透過 NetApp Backup and Recovery 還原 Kubernetes 應用程式
+= 使用自訂資源恢復 Kubernetes 應用程式
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護
 
 
 [role="lead"]
-您可以使用自訂資源從快照或備份還原應用程式。如果要將應用程式還原到同一個叢集，從現有快照還原速度會更快。
+使用自訂資源從快照或備份還原應用程式。將應用程式還原到同一叢集時，從現有快照還原通常速度更快。
 
 [NOTE]
 ====
@@ -34,7 +34,7 @@ summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護
 [NOTE]
 ====
 * 將備份還原到具有現有資源的不同命名空間不會變更與備份中資源同名的任何資源。若要還原備份中的所有資源，請刪除並重新建立目標命名空間，或將備份還原到新的命名空間。
-* 使用 CR 還原到新命名空間時，必須先手動建立目標命名空間，然後再套用 CR。NetApp Backup and Recovery 僅在使用 CLI 時才會自動建立命名空間。
+* 使用 CR 還原到新命名空間時，必須先手動建立目的地命名空間，然後再套用 CR。備份與恢復功能僅在使用 CLI 時才會自動建立命名空間。
 
 
 ====
@@ -307,7 +307,7 @@ kubectl get backups <BACKUP_NAME> -n my-app-namespace -o jsonpath='{.status.appA
 ----
 +
 
-NOTE: 如果 BackupRestore CR 不可用，您可以使用步驟 2 中提到的指令來查看備份內容。
+NOTE: 如果 BackupRestore CR 不可用，您可以使用步驟 2 中的命令檢視備份內容。
 
 ** *spec.namespaceMapping*：復原作業的來源命名空間到目標命名空間的對應。請將 `my-source-namespace`和 `my-destination-namespace`替換為您環境中的資訊。
 +

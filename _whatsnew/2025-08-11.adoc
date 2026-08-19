@@ -7,7 +7,7 @@
 [[microsoft-sql-server-workload-supported-in-general-availability-ga]]
 === 通用可用性 (GA) 中支援 Microsoft SQL Server 工作負載
 
-Microsoft SQL Server 工作負載支援現已在NetApp Backup and Recovery中正式推出 (GA)。在ONTAP、 Cloud Volumes ONTAP和Amazon FSx for NetApp ONTAP儲存上使用 MSSQL 環境的組織現在可以利用這項新的備份和復原服務來保護他們的資料。
+Microsoft SQL Server 工作負載支援現已在 NetApp Backup and Recovery 中正式發布 （GA）。在 ONTAP、Cloud Volumes ONTAP 和 Amazon FSx for NetApp ONTAP 儲存設備上使用 MSSQL 環境的組織，現在可以利用這項新的 Backup and Recovery 服務來保護其資料。
 
 與先前的預覽版本相比，此版本對 Microsoft SQL Server 工作負載支援進行了以下增強：
 

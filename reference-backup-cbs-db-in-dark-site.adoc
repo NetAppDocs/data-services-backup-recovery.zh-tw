@@ -72,7 +72,7 @@ TIP: NetApp Backup and Recovery資料庫或索引目錄檔案中從未包含任�
 安裝新的 Console 代理程式時、請下載與原始代理程式相同的軟體版本。對 NetApp Backup and Recovery 資料庫的變更可能會導致較新的軟體版本無法與舊的資料庫備份搭配使用。您可以 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["恢復備份資料庫後，將控制台代理軟體升級至最新版本"^]。
 
 . https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["在新的本機 Linux 主機上安裝控制台代理"^]
-. 使用您剛剛建立的管理員使用者憑證登入控制台。
+. 使用您剛剛建立的管理員使用者憑證登入 NetApp Console。
 
 
 
@@ -80,7 +80,7 @@ TIP: NetApp Backup and Recovery資料庫或索引目錄檔案中從未包含任�
 [[restore-the-netapp-backup-and-recovery-database]]
 === 還原NetApp Backup and Recovery資料庫
 
-. 將 MySQL 備份從備份位置複製到新的控制台代理主機。下面我們將使用範例檔案名稱「CBS_DB_Backup_23_05_2023.sql」。
+. 將 MySQL 備份從備份位置複製到新的 Console 代理程式主機。以下範例使用檔案名稱 `CBS_DB_Backup_23_05_2023.sql`。
 . 根據您使用的是 Docker 還是 Podman 容器，使用以下命令之一將備份複製到 MySQL docker 容器：
 +
 [source, cli]
@@ -132,7 +132,7 @@ mysql> select * from volume;
 [[restore-the-indexed-catalog-files]]
 === 恢復索引目錄文件
 
-. 將 Indexed Catalog 備份 zip 檔案（我們將使用範例檔案名稱「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」）從備份位置複製到「/opt/application/netapp/cbs」資料夾中的新控制台代理主機。
+. 將索引目錄備份 ZIP 檔案從備份位置複製到新 Console 代理程式主機上的 `/opt/application/netapp/cbs`資料夾。以下範例使用檔案名稱 `Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip`。
 . 使用下列命令解壓縮「Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip」檔案：
 +
 [source, cli]
@@ -156,7 +156,7 @@ unzip Indexed_Catalog_DB_Backup_catalogdb1_23_05_2023.zip -d catalogdb1
 [[set-up-the-storagegrid-environment-details]]
 === 設定StorageGRID環境詳細信息
 
-添加與您的ONTAP系統關聯的StorageGRID系統的詳細信息，因為它們是在原始控制台代理設定上使用 https://docs.netapp.com/us-en/console-automation/index.html["NetApp ConsoleAPI"^]。
+使用 https://docs.netapp.com/us-en/console-automation/index.html["NetApp ConsoleAPI"^]新增與您的 ONTAP 系統關聯的 StorageGRID 系統詳細資訊，這些詳細資訊是在原始 Console 代理程式設定中所配置的。
 
 以下資訊適用於從NetApp Console 3.9.xx 開始的私有模式安裝。對於舊版本，請使用以下步驟： https://community.netapp.com/t5/Tech-ONTAP-Blogs/DarkSite-Cloud-Backup-MySQL-and-Indexed-Catalog-Backup-and-Restore/ba-p/440800["DarkSite 雲端備份：MySQL 和索引目錄備份和還原"^] 。
 
@@ -170,10 +170,10 @@ curl 'http://10.193.192.202/oauth/token' -X POST -H 'Accept: application/json' -
 > '
 ----
 +
-雖然 IP 位址、使用者名稱和密碼是自訂值，但帳戶名稱不是。帳戶名稱始終為“account-DARKSITE1”。此外，使用者名稱必須使用電子郵件格式的名稱。
+IP 位址、使用者名稱和密碼均為自訂值，但帳戶名稱不可自訂。帳戶名稱始終為 `account-DARKSITE1`。此外，使用者名稱必須使用電子郵件格式的名稱。
 
 +
-此 API 將傳回以下回應。您可以如下所示檢索授權令牌。
+此 API 傳回如下所示的回應。您可以如下所示擷取授權權杖。
 
 +
 [source, text]
@@ -187,14 +187,14 @@ curl 'http://10.193.192.202/oauth/token' -X POST -H 'Accept: application/json' -
 curl -X GET http://10.193.192.202/tenancy/external/resource?account=account-DARKSITE1 -H 'accept: application/json' -H 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjJlMGFiZjRiIn0eyJzdWIiOiJvY2NtYXV0aHwxIiwiYXVkIjpbImh0dHBzOi8vYXBpLmNsb3VkLm5ldGFwcC5jb20iXSwiaHR0cDovL2Nsb3VkLm5ldGFwcC5jb20vZnVsbF9uYW1lIjoiYWRtaW4iLCJodHRwOi8vY2xvdWQubmV0YXBwLmNvbS9lbWFpbCI6ImFkbWluQG5ldGFwcC5jb20iLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIiwiaWF0IjoxNjcyNzIyNzEzLCJleHAiOjE2NzI3NDQzMTMsImlzcyI6Imh0dHA6Ly9vY2NtYXV0aDo4NDIwLyJ9X_cQF8xttD0-S7sU2uph2cdu_kN-fLWpdJJX98HODwPpVUitLcxV28_sQhuopjWobozPelNISf7KvMqcoXc5kLDyX-yE0fH9gr4XgkdswjWcNvw2rRkFzjHpWrETgfqAMkZcAukV4DHuxogHWh6-DggB1NgPZT8A_szHinud5W0HJ9c4AaT0zC-sp81GaqMahPf0KcFVyjbBL4krOewgKHGFo_7ma_4mF39B1LCj7Vc2XvUd0wCaJvDMjwp19-KbZqmmBX9vDnYp7SSxC1hHJRDStcFgJLdJHtowweNH2829KsjEGBTTcBdO8SvIDtctNH_GAxwSgMT3zUfwaOimPw'
 ----
 +
-此 API 將傳回以下回應。「resourceIdentifier」下的值表示_WorkingEnvironment Id_，「agentId」下的值表示_x-agent-id_。
+此 API 傳回如下回應。 `resourceIdentifier` 下的值表示 _WorkingEnvironment ID_， `agentId` 下的值表示 _x-agent-id_。
 
 +
 [source, text]
 ----
 [{"resourceIdentifier":"OnPremWorkingEnvironment-pMtZND0M","resourceType":"ON_PREM","agentId":"vB_1xShPpBtUosjD7wfBlLIhqDgIPA0wclients","resourceClass":"ON_PREM","name":"CBSFAS8300-01-02","metadata":"{\"clusterUuid\": \"2cb6cb4b-dc07-11ec-9114-d039ea931e09\"}","workspaceIds":["workspace2wKYjTy9"],"agentIds":["vB_1xShPpBtUosjD7wfBlLIhqDgIPA0wclients"]}]
 ----
-. 使用與系統關聯的StorageGRID系統的詳細資訊更新NetApp Backup and Recovery資料庫。確保輸入StorageGRID的完全限定網域名稱以及存取金鑰和儲存金鑰，如下所示：
+. 使用與系統關聯的 StorageGRID 系統詳細資訊更新 NetApp Backup and Recovery 資料庫。請確保輸入 StorageGRID 的完整網域名稱，以及存取金鑰和儲存設備金鑰，如下所示：
 +
 [source, shell]
 ----
@@ -211,13 +211,13 @@ curl -X POST 'http://10.193.192.202/account/account-DARKSITE1/providers/cloudman
 [[verify-netapp-backup-and-recovery-settings]]
 === 驗證NetApp Backup and Recovery設置
 
-. 選擇每個ONTAP系統，然後點擊右側面板中備份和還原服務旁邊的「檢視備份」。
+. 選擇每個 ONTAP 系統，然後在右側面板的「備份與還原」服務旁邊選擇 *View Backups*。
 +
 您應該會看到為您的磁碟區建立的所有備份。
 
-. 在「恢復儀表板」的「搜尋與復原」部分下，按一下「*索引設定*」。
+. 在「還原儀表板」的「搜尋與還原」部分下，選擇 *Indexing Settings*。
 +
-確保先前啟用了索引編目的系統仍然保持啟用狀態。
+確保先前已啟用索引編目的系統保持啟用狀態。
 
 . 在「搜尋和復原」頁面中，執行一些目錄搜尋以確認索引目錄復原已成功完成。
 

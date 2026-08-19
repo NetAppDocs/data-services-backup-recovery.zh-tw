@@ -4,7 +4,7 @@ permalink: br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html
 keywords:  
 summary: 嘗試還原用戶端檔案時，您可能會遇到用戶端檔案還原工作階段為空白、用戶端檔案還原附加磁碟作業失敗或用戶端檔案還原工作階段停止後備份未分離的情況。 
 ---
-= NetApp Backup and Recovery 中的訪客檔案還原疑難排解
+= 在 NetApp Backup and Recovery 中疑難排解 VMware 來賓檔案還原問題
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 嘗試還原用戶端檔案時，您可能會遇到用戶端檔案還�
 
 
 [role="lead"]
-嘗試恢復訪客文件時，您可能會遇到以下任一情況。
+如果在還原訪客檔案時遇到問題，請使用以下情境來識別並修正問題。
 
 
 
@@ -30,11 +30,11 @@ summary: 嘗試還原用戶端檔案時，您可能會遇到用戶端檔案還�
 [[guest-file-restore-attach-disk-operation-fails]]
 == 來賓檔案恢復附加磁碟操作失敗
 
-當您啟動用戶機檔案還原作業時會出現此問題，但即使 VMware 工具正在運作且用戶端作業系統憑證正確，連線磁碟操作也會失敗。如果發生這種情況，則會傳回下列錯誤：
+當您啟動訪客檔案還原作業時，即使 VMware Tools 正在執行且訪客作業系統憑證正確，附加磁碟作業也會失敗，此時會發生此問題。如果發生這種情況，則會傳回下列錯誤：
 
 `Error while validating guest credentials, failed to access guest system using specified credentials: Verify VMware Tools is running properly on the system and that the account used is an Administrator account. Error is SystemError vix error codes = (3016, 0).`
 
-若要解決此問題，請在用戶端作業系統上重新啟動 VMware Tools Windows 服務，然後重試用戶端檔案還原作業。
+若要解決此問題，請在客體作業系統上重新啟動 VMware Tools Windows 服務，然後重試客體檔案還原作業。
 
 
 

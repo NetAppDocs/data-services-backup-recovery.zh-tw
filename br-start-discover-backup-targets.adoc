@@ -14,25 +14,24 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 
 
 [role="lead"]
-完成幾個步驟即可在NetApp Backup and Recovery中發現或手動新增異地備份目標。
+探索或手動新增異地備份目標，例如 AWS S3、Azure Blob Storage、Google Cloud Storage 或 StorageGRID，以便將備份儲存在主要環境之外。
 
 
 
 [[discover-a-backup-target]]
 == 發現備份目標
 
-在使用NetApp Backup and Recovery之前，請先設定您的備份目標（Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage 或StorageGRID ）。
+在使用 NetApp Backup and Recovery 之前，請先設定您的備份目標（Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage 或 StorageGRID）。
 
 您可以自動發現這些目標或手動新增它們。
 
-提供存取儲存帳戶的憑證。  NetApp Backup and Recovery使用這些憑證來發現您想要備份的工作負載。
+提供存取儲存設備帳戶的憑證。NetApp Backup and Recovery 會使用這些憑證來探索並驗證備份目標儲存桶的存取。
 
 .開始之前
 您需要先發現至少一個工作負載，然後才能新增異地備份目標。
 
 .步驟
-. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
-. 選擇 *Managed offsite backup targets* 標籤。
+. 從 NetApp Backup and Recovery 功能表中，選取 * 備份目標 *。
 . 選擇*發現備份目標*。
 . 選擇以下可用備份目標類型之一：*AWS*、*Azure*、*StorageGRID*、*ONTAP S3* 或 *GCP*。
 . 選擇“下一步”。
@@ -43,7 +42,7 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 ** 對於 AWS：
 +
 *** *憑證名稱*：輸入 AWS 憑證名稱。
-*** *存取金鑰*：輸入 AWS 金鑰。
+*** *存取金鑰*：請輸入 AWS 存取金鑰。
 *** *金鑰*：輸入 AWS 金鑰。
 
 
@@ -51,14 +50,14 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 +
 *** *憑證名稱*：輸入 Azure Blob 儲存憑證名稱。
 *** *客戶端金鑰*：輸入 Azure Blob 儲存客戶端金鑰。
-*** *應用程式（用戶端）ID*：選擇 Azure Blob 儲存應用程式 ID。
+*** *應用程式（用戶端）ID*：輸入 Azure Blob Storage 應用程式 ID。
 *** *目錄租用戶 ID*：輸入 Azure Blob 儲存租用戶 ID。
 
 
 ** 對於StorageGRID：
 +
 *** *憑證名稱*：輸入StorageGRID憑證名稱。
-*** *網關節點 FQDN*：輸入StorageGRID的 FQDN 名稱。
+*** *閘道節點 FQDN*：輸入 StorageGRID 閘道節點的 FQDN。
 *** *連接埠*：輸入StorageGRID的連接埠號碼。
 *** *存取金鑰*：輸入StorageGRID S3 存取金鑰。
 *** *金鑰*：輸入StorageGRID S3 金鑰。
@@ -67,7 +66,7 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 ** 對於ONTAP S3：
 +
 *** *憑證名稱*：輸入ONTAP S3 憑證名稱。
-*** *網關節點 FQDN*：輸入ONTAP S3 的 FQDN 名稱。
+*** *Gateway Node FQDN*：輸入 ONTAP S3 閘道節點的 FQDN。
 *** *連接埠*：輸入ONTAP S3 的連接埠號碼。
 *** *存取金鑰*：輸入ONTAP S3 存取金鑰。
 *** *金鑰*：輸入ONTAP S3 金鑰。
@@ -90,12 +89,11 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 [[add-a-bucket-for-a-backup-target]]
 == 為備份目標新增儲存桶
 
-您可以手動將儲存桶新增至異地備份目標，而不是讓NetApp Backup and Recovery自動發現儲存桶。
+手動將儲存桶新增至異地備份目標，而不是讓 NetApp Backup and Recovery 自動探索儲存桶。
 
 .步驟
-. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
-. 選擇 *Managed offsite backup targets* 。
-. 選擇目標，然後在右側選擇“操作”image:icon-action.png["操作圖示"]圖示並選擇*新增儲存桶*。
+. 從 NetApp Backup and Recovery 功能表中，選取 * 備份目標 *。
+. 選擇目標，然後在右側選擇 *Actions* image:icon-action.png["操作圖示"] 圖示，再選擇 *Add bucket*。
 . 輸入儲存桶資訊。根據您選擇的備份目標類型，資訊會有所不同。
 +
 ** 對於 AWS：
@@ -116,21 +114,21 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 
 ** 對於 Azure：
 +
-*** *訂閱*：選擇 Azure Blob 儲存容器的名稱。
+*** *訂閱*：選擇 Azure 訂閱的名稱。
 *** *資源組*：選擇 Azure 資源組的名稱。
 *** *實例詳情*：
 +
-**** *儲存帳戶名稱*：輸入 Azure Blob 儲存容器的名稱。
-**** *Azure 區域*：輸入容器的 Azure 區域。
-**** *效能類型*：為 Azure Blob 儲存容器選擇標準或進階效能類型，以指示所需的效能等級。
-**** *加密*：選擇 Azure Blob 儲存容器的加密類型。選項包括 Microsoft 管理的金鑰或客戶管理的金鑰。如果選擇客戶管理的金鑰，則必須提供金鑰保管庫名稱和金鑰名稱。
+**** *儲存帳戶名稱*：輸入 Azure Blob 儲存帳戶的名稱。
+**** *Azure 區域*：輸入儲存帳戶的 Azure 區域。
+**** *效能類型*：選擇 Azure Blob 儲存帳戶的標準或進階效能類型，以指示所需的效能層級。
+**** *加密*：選擇 Azure Blob 儲存帳戶的加密類型。選項包括 Microsoft 管理的金鑰和客戶管理的金鑰。如果選擇客戶管理的金鑰，則必須提供金鑰保存庫名稱和金鑰名稱。
 
 
 
 
 ** 對於StorageGRID：
 +
-*** *備份目標名稱*：選擇StorageGRID桶的名稱。
+*** *備份目標*：選擇 StorageGRID 備份目標的名稱。
 *** *儲存桶名稱*：輸入StorageGRID桶的名稱。
 *** *區域*：輸入儲存桶的StorageGRID區域。
 *** *啟用版本控制*：選擇此選項可為StorageGRID桶啟用版本控制。版本控制使您能夠在儲存桶中保留物件的多個版本，這對於備份和復原目的很有用。
@@ -140,8 +138,8 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 
 ** 對於ONTAP S3：
 +
-*** *備份目標名稱*：選擇ONTAP S3 儲存桶的名稱。
-*** *儲存桶目標名稱*：輸入ONTAP S3 儲存桶的名稱。
+*** *備份目標*：選擇 ONTAP S3 備份目標的名稱。
+*** *儲存桶名稱*：輸入 ONTAP S3 儲存桶的名稱。
 *** *容量*：輸入ONTAP S3 儲存桶的容量。這是儲存桶中可以儲存的最大資料量。
 *** *啟用版本控制*：選擇此選項可為ONTAP S3 儲存桶啟用版本控制。版本控制使您能夠在儲存桶中保留物件的多個版本，這對於備份和復原目的很有用。
 *** *物件鎖定*：選擇此選項可為ONTAP S3 儲存桶啟用物件鎖定。物件鎖定可防止物件在指定的保留期內被刪除或覆蓋，從而提供額外的資料保護層。您只能在建立儲存桶時啟用此功能，並且以後無法將其關閉。
@@ -168,9 +166,8 @@ summary: '完成幾個步驟即可在NetApp Backup and Recovery中發現異地�
 輸入存取備份目標所需的憑證。
 
 .步驟
-. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
-. 選擇*異地備份目標*。
-. 選擇目標，然後在右側選擇“操作”image:icon-action.png["操作圖示"]圖示並選擇*變更憑證*。
+. 從 NetApp Backup and Recovery 功能表中，選取 * 備份目標 *。
+. 選取目標，然後在右側選取 *動作* image:icon-action.png["操作圖示"] 圖示，再選取 *變更認證*。
 . 輸入備份目標的新憑證。根據您選擇的備份目標類型，資訊會有所不同。
 . 選擇*完成*。
 

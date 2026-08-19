@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-使用NetApp Backup and Recovery從快照、複製到輔助儲存的工作負載備份或儲存在物件儲存中的備份還原 VMware 工作負載。
+使用 NetApp Backup and Recovery 從快照、次要儲存設備上的複寫備份或儲存在物件儲存中的備份來還原 VMware 工作負載。
 
 .從這些位置恢復
 您可以從不同的起始位置恢復工作負載：
@@ -39,8 +39,8 @@ TIP: 您可能需要向雲端提供者支付額外費用才能存取備份檔案
 
 
 
-[[how-restoring-workloads-works]]
-== 恢復工作負載的工作原理
+[[how-vmware-workload-restore-works]]
+== VMware 工作負載還原的運作方式
 
 恢復工作負載時，會發生以下情況：
 
@@ -57,7 +57,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 [[restore-workload-data-from-the-restore-option-search-restore]]
 == 從恢復選項恢復工作負載資料（搜尋和恢復）
 
-使用復原選項還原 VMware 工作負載。您可以按名稱或使用篩選器來搜尋快照。
+使用「還原」選項還原 VMware 工作負載。您可以按名稱或使用篩選器搜尋快照。
 
 *必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
@@ -102,7 +102,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 ====
 .恢復到原始位置
 --
-還原到原始位置時，您無法變更目標 vCenter、ESXi 主機、資料儲存或虛擬機器的名稱。復原操作會覆蓋原始虛擬機器。
+還原到原始位置時，您無法變更虛擬機器的目的地 vCenter、ESXi 主機、資料儲存或名稱。還原作業會覆寫原始虛擬機器。
 
 . 選擇「原始位置」窗格。
 . 請從以下選項中選擇：
@@ -137,7 +137,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 *** *ESXi 主機*：選擇要將快照還原到的主機。
 *** *網路*：選擇要將快照還原到的網路。
 *** *資料儲存*：從下拉清單中，選擇要將快照還原到的資料儲存體的名稱。
-*** *虛擬機器名稱*：輸入要將快照還原到的虛擬機器的名稱。如果名稱與資料儲存中已存在的虛擬機器匹配，備份和復原功能會透過附加目前時間戳來使名稱唯一。
+*** *虛擬機器名稱*：輸入要將快照還原的虛擬機器的名稱。如果名稱與資料存放區中已存在的虛擬機器名稱相同，NetApp Backup and Recovery 會附加目前的時間戳記，使名稱具有唯一性。
 
 
 ** *目的地儲存設備* 區段（僅在從物件存放區還原時可見）：

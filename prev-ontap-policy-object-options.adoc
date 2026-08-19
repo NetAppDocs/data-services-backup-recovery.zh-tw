@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-NetApp Backup and Recovery讓您能夠為本機ONTAP和Cloud Volumes ONTAP系統建立具有各種設定的備份策略。
+在 NetApp Backup and Recovery 中使用備份至物件原則，為您的內部部署 ONTAP 和 Cloud Volumes ONTAP 系統定義排程、保留、DataLock、勒索軟體保護和歸檔設定。
 
 
 NOTE: 這些策略設定僅與備份到物件儲存相關。這些設定都不會影響您的快照或複製策略。
@@ -59,7 +59,7 @@ NetApp Backup and Recovery使您能夠為每個系統（叢集）建立具有唯
 
 NetApp Backup and Recovery為您的磁碟區備份提供 DataLock 和勒索軟體保護支援。這些功能使您能夠鎖定備份檔案並對其進行掃描以偵測備份檔案上可能存在的勒索軟體。這是一個可選設置，當您希望為叢集的磁碟區備份提供額外保護時，可以在備份策略中定義它。
 
-這兩項功能都能保護您的備份檔案，確保您始終擁有有效的備份檔案，以便在備份遭受勒索軟體攻擊時能夠恢復資料。此外，它們還有助於滿足某些法規要求，例如備份需要鎖定並保留一段時間。啟用 *Datalock and Ransomware protection* 選項後，作為 NetApp Backup and Recovery 啟動的一部分而佈建的雲端儲存貯體將啟用物件鎖定和物件版本控制功能。
+這兩項功能可保護您的備份檔案，確保您在備份遭受勒索軟體攻擊時，始終擁有有效的備份檔案以還原資料。此外，這些功能也有助於滿足某些法規要求，例如備份需要鎖定並保留特定一段時間。啟用「*DataLock 和勒索軟體保護*」選項後，作為 NetApp Backup and Recovery 啟動一部分而佈建的雲端儲存桶將啟用物件鎖定和物件版本控制功能。
 
 此功能不會為您的來源磁碟區提供保護；僅為這些來源磁碟區的備份提供保護。使用一些 https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ONTAP提供的反勒索軟體保護"^]保護您的來源磁碟區。
 
@@ -125,7 +125,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 
 您可以在建立策略時啟用 DataLock 和勒索軟體保護。建立策略後，您無法啟用、修改或停用此功能。
 
-. 建立原則時、請展開 *Datalock 和勒索軟體保護* 區段。
+. 建立原則時，展開 *DataLock 和勒索軟體保護* 區段。
 . 選擇下列選項之一：
 +
 ** *無*：DataLock 保護和勒索軟體保護均已停用。
@@ -181,7 +181,7 @@ DataLock 保留設定將覆蓋備份策略中的策略保留設定。這可能�
 | Azure 中的Cloud Volumes ONTAP | Azure Blob 
 
 
-| Google Cloud 中的Cloud Volumes ONTAP | Google雲 
+| Google Cloud 中的Cloud Volumes ONTAP | Google 雲端儲存 
 
 
 | 本地ONTAP系統 | Amazon S3 Azure Blob Google Cloud NetApp StorageGRID 
@@ -334,7 +334,7 @@ NOTE: Microsoft Azure 使用鎖定和解鎖模式。
 [[archival-storage-options]]
 == 檔案存儲選項
 
-使用 AWS、Azure 或 Google 雲端儲存時，您可以在一定天數後將較舊的備份檔案移至較便宜的存檔儲存類別或存取層。您也可以選擇立即將備份檔案傳送到檔案存儲，而無需寫入標準雲端儲存。只需輸入 *0* 作為「幾天後存檔」即可將備份檔案直接傳送到檔案儲存。對於很少需要存取雲端備份資料的用戶或正在替換磁帶備份解決方案的用戶來說，這尤其有用。
+使用 AWS、Azure 或 Google Cloud Storage 時，您可以將較舊的備份檔案在一定天數後移至成本較低的歸檔儲存設備層級或存取分層。您也可以選擇立即將備份檔案傳送到歸檔儲存設備，而無需寫入標準雲端儲存。只需將「歸檔天數」設定為 *0*，即可將備份檔案直接傳送到歸檔儲存設備。這對於很少需要存取雲端備份資料的使用者或正在替換磁帶備份解決方案的使用者尤其有用。
 
 存檔層中的資料在需要時無法立即訪問，並且需要更高的檢索成本，因此在決定存檔備份檔案之前，您需要考慮需要多久從備份檔案中還原一次資料。
 

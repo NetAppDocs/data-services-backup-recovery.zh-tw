@@ -4,7 +4,7 @@ permalink: prev-ontap-backup-cvo-aws.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
 ---
-= 使用NetApp Backup and Recovery將Cloud Volumes ONTAP資料備份到 Amazon S3
+= 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 備份至 Amazon S3
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-完成NetApp Backup and Recovery中的幾個步驟即可開始將磁碟區資料從Cloud Volumes ONTAP系統備份到 Amazon S3。
+使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 系統中的 Volume 資料備份到 Amazon S3。
 
 
 NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
@@ -51,7 +51,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 
 對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。當控制台代理程式和Cloud Volumes ONTAP系統部署在暗站時，您必須使用 BYOL 授權。
 
-並且您需要有一個 AWS 帳戶，用於儲存備份所在的儲存空間。
+您還需要一個 AWS 帳戶，用於存放備份檔案的儲存空間。
 
 
 
@@ -208,7 +208,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 [[enable-netapp-backup-and-recovery-on-cloud-volumes-ontap]]
 == 在Cloud Volumes ONTAP上啟用NetApp Backup and Recovery
 
-啟用NetApp Backup and Recovery非常簡單。根據您擁有的是現有Cloud Volumes ONTAP系統還是新系統，步驟略有不同。
+您可以在新建或現有的 Cloud Volumes ONTAP 系統上啟用 NetApp Backup and Recovery。不同選項的步驟略有不同。
 
 *在新系統上啟用NetApp Backup and Recovery*
 
@@ -232,9 +232,9 @@ NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保
 隨時直接從控制台在現有系統上啟用NetApp Backup and Recovery。
 
 .步驟
-. 從控制台*系統*頁面中，選擇叢集並選擇右側面板中備份和還原旁邊的*啟用*。
+. 在 NetApp Console 的 *Systems* 頁面中，選取叢集，然後在右側面板的 Backup and Recovery 旁邊選取 *Enable*。
 +
-如果備份的 Amazon S3 目標在 *系統* 頁面上以叢集形式存在，則可以將該叢集拖曳到 Amazon S3 系統上以啟動設定精靈。
+如果您備份的 Amazon S3 目的地以系統形式存在於「系統」頁面上，您可以將叢集拖曳到 Amazon S3 系統上以啟動設定精靈。
 
 
 
@@ -243,7 +243,7 @@ NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保
 [[activate-backups-on-your-ontap-volumes]]
 == 啟動ONTAP磁碟區上的備份
 
-隨時直接從您的本機系統啟動備份。
+您可以隨時直接從 Cloud Volumes ONTAP 系統啟動備份。
 
 嚮導將引導您完成以下主要步驟：
 
@@ -260,17 +260,17 @@ NetApp Backup and Recovery在系統精靈中預設為啟用。確保該選項保
 === 啟動精靈
 
 .步驟
-. 使用以下方式之一存取啟動備份和復原精靈：
+. 您可以透過以下方式之一存取「啟動備份與恢復」精靈：
 +
-** 從控制台*系統*頁面中，選擇系統，然後選擇右側面板中備份和還原旁邊的*啟用>備份磁碟區*。
+** 在 Console 的 *Systems* 頁面中，選擇系統，然後在右側面板的 Backup and Recovery 旁邊選擇 *Enable > Backup Volumes*。
 +
-如果備份的 AWS 目標作為系統存在於控制台 *系統* 頁面上，則可以將ONTAP叢集拖曳到 AWS 物件儲存上。
+如果您的備份 Amazon S3 目的地作為系統存在於 Console *Systems* 頁面上，您可以將 ONTAP 叢集拖曳到 Amazon S3 系統上。
 
-** 在備份和復原欄中選擇“磁碟區”。在「卷」標籤中，選擇「操作」。 image:icon-action.png["操作圖示"] 圖示選項，選擇“啟動 3-2-1 保護”，適用於單一磁碟區（尚未啟用複製或備份到物件儲存）。
+** 在 Backup and Recovery 列中選取 *Volumes*。在 Volumes 索引標籤中，選取 *Actions* image:icon-action.png["操作圖示"] 圖示，然後針對單一 Volume （尚未啟用複寫或備份至物件儲存）選取 *Activate 3-2-1 Protection*。
 
 
 +
-精靈的介紹頁面顯示保護選項，包括本機快照、複製和備份。如果您在此步驟中選擇了第二個選項，則會出現「定義備份策略」頁面，其中選擇一個磁碟區。
+精靈的「簡介」頁面顯示了保護選項，包括本機快照、複寫和備份。如果您在此步驟中使用了第二個選項，則會顯示「定義備份策略」頁面，並預設選擇一個 Volume。
 
 . 繼續以下選項：
 +
@@ -395,7 +395,7 @@ TIP: 若要建立自訂策略，請參閱link:br-use-policies-create.html["創�
 
 ** *加密*：如果您建立了一個新的儲存桶，請輸入提供者提供給您的加密金鑰資訊。您可以選擇使用預設的 AWS 加密金鑰，或從您的 AWS 帳戶中選擇您自己的客戶管理金鑰來管理資料的加密。(https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["了解如何使用您自己的加密金鑰"^]）。
 +
-如果您選擇使用自己的客戶管理金鑰，請輸入金鑰保管庫和金鑰資訊。
+如果您選擇使用自己的客戶管理金鑰，請輸入金鑰資訊。
 
 +
 
@@ -443,7 +443,7 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 
 在您輸入的 S3 存取金鑰和金鑰指示的服務帳戶中建立一個 S3 儲存桶，並將備份檔案儲存在那裡。
 
-顯示磁碟區備份儀表板，以便您可以監控備份的狀態。
+將顯示 Volume 備份儀表板，以便您監控備份狀態。
 
 您也可以使用link:br-use-monitor-tasks.html["作業監控頁面"]。
 
@@ -452,9 +452,9 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 [[show-the-api-commands]]
 === 顯示 API 命令
 
-您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。
+您可能需要顯示並（可選）複製「啟動備份與還原」精靈中使用的 API 命令。您可能需要執行此操作，以便在未來的系統中自動化備份啟動。
 
 .步驟
-. 從啟動備份和復原精靈中，選擇*查看 API 請求*。
+. 在「啟動備份與還原」精靈中，選取 *View API request*。
 . 若要將指令複製到剪貼簿，請選擇*複製*圖示。
 

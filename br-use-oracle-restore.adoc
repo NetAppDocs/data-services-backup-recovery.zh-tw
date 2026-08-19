@@ -4,7 +4,7 @@ permalink: br-use-oracle-restore.html
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作負載。 
 ---
-= 使用NetApp Backup and RecoveryOracle 資料庫
+= 使用 NetApp Backup and Recovery 還原 Oracle 資料庫工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 
 
 [role="lead"]
-使用NetApp Backup and Recovery從快照、複製到輔助儲存的備份或儲存在物件儲存中的備份還原 Oracle 資料庫。
+使用 NetApp Backup and Recovery，從 Snapshot 快照技術、次要儲存設備上的複寫備份或儲存在物件儲存中的備份還原 Oracle 資料庫工作負載。
 
 .從這些位置恢復
 您可以從不同的起始位置還原資料庫：
@@ -32,10 +32,10 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 
 
 
-[[how-restoring-oracle-databases-works]]
-== Oracle 資料庫復原的工作原理
+[[how-oracle-database-restore-works]]
+== Oracle 資料庫還原的工作原理
 
-還原 Oracle 資料庫時，會發生以下情況：
+還原 Oracle 資料庫工作負載時，會發生以下情況：
 
 * 當您從本機快照還原資料庫時， NetApp Backup and Recovery會使用備份中的資料建立_新_資源。
 * 從複製的儲存空間還原時，您可以將其恢復到原始位置。
@@ -49,9 +49,9 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 [[restore-an-oracle-database]]
 == 還原 Oracle 資料庫
 
-根據您的需要，將 Oracle 資料庫還原到特定時間點、特定係統變更號碼 (SCN) 或最後的良好狀態。您也可以簡單地從快照還原資料庫並跳過自動復原程序。如果您想手動執行恢復，您可能想要跳過自動恢復程序。您可以使用資料庫名稱或特定篩選器來搜尋資料庫。
+根據您的需求，您可以將 Oracle 資料庫還原到特定時間點、特定系統變更號碼 （SCN） 或上次正常狀態。您也可以從 Snapshot 快照技術還原資料庫，並跳過自動恢復程序，例如，若您想手動執行恢復。您可以使用資料庫名稱或特定篩選條件搜尋資料庫。
 
-*所需的控制台角色* 備份和還原超級管理員或備份和還原復原管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*所需 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從NetApp Console選單中，選擇「保護」>「備份和復原」。
@@ -130,13 +130,13 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 . *預恢復選項*：
 +
 ** 或者，啟用此選項並輸入應在還原作業之前執行的腳本的完整路徑以及該腳本所採用的任何參數。
-** 為腳本選擇一個超時值。如果腳本未能在此時間段內執行，則復原仍將繼續。
+** 為指令碼選擇逾時值。如果指令碼在此時間段內未能執行，還原仍將繼續進行。
 
 
 . *恢復後選項*：
 +
 ** *後記*：可選地，啟用此選項並輸入應在復原作業後執行的腳本的完整路徑以及該腳本所採用的任何參數。
-** *恢復後以 READ-WRITE 模式開啟資料庫或容器資料庫*：復原作業完成後，備份和復原將為資料庫啟用 READ-WRITE 模式。
+** *恢復後以讀寫模式開啟資料庫或 Container 資料庫*：還原作業完成後，備份與還原功能將為資料庫啟用讀寫模式。
 
 
 . *通知*部分：
@@ -150,7 +150,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作�
 --
 .恢復至備用位置
 --
-不適用於 Oracle Database 工作負載預覽。
+此預覽版本不適用於 Oracle 資料庫工作負載。
 
 --
 ====

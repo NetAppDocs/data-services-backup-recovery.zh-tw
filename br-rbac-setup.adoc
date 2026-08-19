@@ -12,20 +12,20 @@ summary: 為了提高安全性，請在 NetApp Backup and Recovery 中配置特�
 
 
 [role="lead"]
-為了提高安全性並控制資源存取，請為 NetApp Backup and Recovery 設定角色型存取。NetApp Console 支援部分 Backup and Recovery 工作負載的角色型存取控制 （RBAC）。您可以為這些工作負載指派特定的管理員或檢視者角色。其他尚不支援角色型存取控制的工作負載，在支援專案層級或機組層級關聯之前，仍可供所有具有 Backup and Recovery 角色的使用者存取。
+在 NetApp Console 中設定角色型存取控制 （RBAC），以控制哪些使用者可以存取 NetApp Backup and Recovery 資源。您可以將管理員或檢視者角色指派給支援 RBAC 的工作負載。在專案層級或機群層級關聯可用之前，所有具備 Backup and Recovery 角色的使用者仍可存取尚未支援 RBAC 的工作負載。
 
 
 NOTE: NetApp Console 使用專案來組織資料夾中的資源，而 NetApp Console 本地部署則將專案稱為機組。
 
-請依照以下步驟控制對組織內資源的存取權限。在 NetApp Console 選單的「管理 > 身分和存取」頁面中進行變更。
+若要控制對組織中資源的存取，請在 NetApp Console 的「管理 > 身分和存取」頁面中完成下列步驟。
 
 
-NOTE: 這些步驟假設您在 Console 中被指派了組織管理員角色。
+NOTE: 這些步驟假設您已在 NetApp Console 中獲指派組織管理員角色。
 
 .步驟
 . 建立身分和存取專案結構。
 +
-作為組織管理員，設定 Identity and access 資料夾以及工作負載將存放的專案結構。
+作為組織管理員，設定工作負載將位於的資料夾和專案結構。
 
 . 分配使用者角色。
 +
@@ -34,8 +34,8 @@ NOTE: 這些步驟假設您在 Console 中被指派了組織管理員角色。
 將使用者新增至每個用於處理工作負載的專案中，並授予他們相應的角色。例如：
 
 +
-*** *組織管理員*和 *Backup and Recovery 超級管理員*：擁有這些角色的使用者可以查看所有組織中的所有資源，並發現 Backup and Recovery 工作負載，並將其分配給專案（例如，美國東部或美國西部）。
-*** *資料夾或專案管理員*和 *Backup and Recovery 超級管理員*：擁有這些角色的使用者只能看到他們擁有權限的資料夾或專案中的資源，但可以發現 Backup and Recovery 工作負載並將其分配給該專案。
+*** *Organization admin* 和 *Backup and Recovery super admin*：擁有這些角色的使用者可以檢視所有組織的資源，並且可以探索備份與恢復工作負載並將其指派給專案（例如，US East 或 US West）。
+*** *資料夾或專案管理員*和*Backup and Recovery 超級管理員*：擁有這些角色的使用者只能檢視其指派的資料夾或專案中的資源，但可以探索 Backup and Recovery 工作負載並將其指派給該專案。
 
 
 .. 替代方案：
@@ -46,11 +46,11 @@ NOTE: 這些步驟假設您在 Console 中被指派了組織管理員角色。
 
 . 探索 Backup and Recovery 中的工作負載。
 +
-組織管理員、資料夾管理員或專案管理員可以發現可用的工作負載，並選擇相應的專案（例如 US East 或 US West）。每個工作負載都會自動關聯到所選專案。
+組織管理員、資料夾管理員或專案管理員可以探索可用的工作負載，並選擇適當的專案（例如美國東部或美國西部）。每個工作負載都會自動關聯到所選專案。
 
 . 將使用者新增至專案。
 +
-組織管理員或資料夾/專案管理員可將 Console 使用者新增至包含工作負載的專案中。根據使用者的存取需求，為其指派組織檢視者角色和 Backup and Recovery 角色。擁有相應 Backup and Recovery 角色的使用者將自動獲得對這些專案中新工作負載的存取權限。
+組織管理員、資料夾管理員或專案管理員可以將 NetApp Console 使用者新增至包含工作負載的專案中。根據使用者的存取需求，為其指派「組織檢視者」角色和「備份與恢復」角色。擁有適當「備份與恢復」角色的使用者將自動取得這些專案中新工作負載的存取權。
 
 
 

@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您保護
 
 
 [role="lead"]
-NetApp Backup and Recovery需要先發現 KVM 主機和虛擬機，然後才能對其進行保護。必須先使用 Apache CloudStack 等管理平台管理您的 KVM 主機和虛擬機，然後才能將其新增至備份和復原。
+在 NetApp 備份與還原中探索 KVM 主機和虛擬機器，以便使用保護原則加以保護。在探索之前，您的 KVM 環境必須由管理平台（例如 Apache CloudStack）進行管理。
 
 *所需的控制台角色* 備份和還原超級管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
 
@@ -26,10 +26,10 @@ NetApp Backup and Recovery需要先發現 KVM 主機和虛擬機，然後才能�
 新增管理平台和 KVM 主機訊息，讓NetApp Backup and Recovery發現工作負載。
 
 .步驟
-. 從NetApp Console選單中，選擇「保護」>「備份和復原」。
+. 從NetApp Console選單中，選擇 *保護* > *備份和還原*。
 . 在“工作負載”下，選擇“KVM”磁貼。
 +
-如果您是第一次登入備份和恢復，並且在控制台中有一個系統但沒有發現任何資源，則會顯示「歡迎使用新的NetApp備份和恢復」頁面，其中包含「發現資源」選項。
+如果您是第一次登入 NetApp Backup and Recovery，且您的 Console 中已有系統但尚未探索任何資源，則會顯示「歡迎使用新的 NetApp Backup and Recovery」頁面，其中包含*探索資源*選項。
 
 . 選擇*發現資源*。
 . 輸入以下資訊：
@@ -39,7 +39,7 @@ NetApp Backup and Recovery需要先發現 KVM 主機和虛擬機，然後才能�
 +
 ... 輸入以下資訊：
 +
-**** *管理平台 IP 位址或 FQDN*：輸入管理平台的 IP 位址或完全限定網域名稱。
+**** *管理平台 IP 位址或 FQDN*：輸入管理平台的 IP 位址或 FQDN。
 **** *API金鑰*：輸入用於驗證API請求的API金鑰。
 **** *金鑰*：輸入用於驗證 API 請求的金鑰。
 **** *連接埠*：輸入備份和還原與管理平台之間通訊所使用的連接埠。
@@ -77,7 +77,7 @@ KVM 工作負載顯示在「庫存」頁面的工作負載清單中。
 
 .步驟
 . 從NetApp Console選單中，選擇 *保護* > *備份和還原*。
-. 選擇一個工作負載圖塊（例如，Microsoft SQL Server）。
+. 選擇 KVM 工作負載磁貼。
 . 從備份和還原選單中，選擇*儀表板*。
 . 檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。
 

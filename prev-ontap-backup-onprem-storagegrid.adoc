@@ -14,7 +14,7 @@ summary: 完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區
 
 
 [role="lead"]
-完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從本機主ONTAP系統備份到二級儲存系統以及NetApp StorageGRID系統中的物件儲存。
+在 NetApp Backup and Recovery 中，您可以將主要內部部署 ONTAP 系統的 Volume 資料備份至次要儲存設備和 StorageGRID 物件儲存。請使用此頁面準備您的環境並啟動備份。
 
 
 NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
@@ -40,7 +40,7 @@ image:diagram_cloud_backup_onprem_storagegrid.png["此圖顯示了NetApp Backup 
 [[prepare-your-console-agent]]
 == 準備控制台代理
 
-控制台代理程式是控制台功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
+控制台代理程式是NetApp Console功能的主要軟體。需要控制台代理程式來備份和還原您的ONTAP資料。
 
 
 
@@ -73,7 +73,7 @@ image:diagram_cloud_backup_onprem_storagegrid.png["此圖顯示了NetApp Backup 
 
 * NetApp Backup and Recovery功能內建於控制台代理程式中。以私人模式安裝時，您需要定期更新控制台代理軟體才能存取新功能。檢查link:whats-new.html["NetApp Backup and Recovery新功能"]查看每個NetApp Backup and Recovery版本中的新功能。當您想要使用新功能時，請按照以下步驟操作 https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html["升級控制台代理軟體"^]。
 +
-新版NetApp Backup and Recovery除了可以建立物件儲存備份外，還增加了規劃和建立快照及複製磁碟區的功能，但需要使用 3.9.31 或更高版本的控制台代理。因此建議您取得此最新版本來管理所有備份。
+新版 NetApp Backup and Recovery 除了支援建立物件儲存備份外，還新增了排程和建立快照及複寫 Volume 的功能，但需要使用 3.9.31 或更高版本的 Console 代理程式。NetApp 建議您使用此最新版本來管理所有備份。
 
 * 當您在 SaaS 環境中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將會備份到雲端。當您在沒有網路存取的網站中使用NetApp Backup and Recovery時， NetApp Backup and Recovery設定資料將備份到儲存備份的StorageGRID桶中。
 
@@ -196,7 +196,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 StorageGRID必須符合以下要求。查看 https://docs.netapp.com/us-en/storagegrid-117/["StorageGRID文檔"^]了解更多。
 
-如需 StorageGRID 的 Datalock 和 Ransomware 保護需求詳細資訊，請參閱link:prev-ontap-policy-object-options.html["備份到物件策略選項"]。
+有關 StorageGRID 的 DataLock 和勒索軟體保護要求的詳細資訊，請參閱 link:prev-ontap-policy-object-options.html["備份到物件策略選項"]。
 
 支援的StorageGRID版本:: 支援StorageGRID 10.3 及更高版本。
 +
@@ -306,9 +306,9 @@ image:screenshot_sg_archive_to_cloud.png["將備份檔案從StorageGRID到 AWS S
 === 啟動精靈
 
 .步驟
-. 使用以下方式之一存取啟動備份和復原精靈：
+. 您可以透過以下方式之一存取「啟動備份與恢復」精靈：
 +
-** 從控制台*系統*頁面中，選擇系統，然後選擇右側面板中備份和還原旁邊的*啟用>備份磁碟區*。
+** 在 Console 的 *Systems* 頁面中，選擇系統，然後在右側面板的 Backup and Recovery 旁邊選擇 *Enable > Backup Volumes*。
 +
 如果備份目標在控制台*系統*頁面上作為系統存在，則可以將ONTAP叢集拖曳到物件儲存上。
 
@@ -316,7 +316,7 @@ image:screenshot_sg_archive_to_cloud.png["將備份檔案從StorageGRID到 AWS S
 
 
 +
-精靈的介紹頁面顯示保護選項，包括本機快照、複製和備份。如果您在此步驟中選擇了第二個選項，則會出現「定義備份策略」頁面，其中選擇一個磁碟區。
+精靈的「簡介」頁面顯示了保護選項，包括本機快照、複寫和備份。如果您在此步驟中選擇了第二個選項，則會顯示「定義備份策略」頁面，並已選取一個 Volume。
 
 . 繼續以下選項：
 +
@@ -446,9 +446,9 @@ TIP: 若要建立自訂策略，請參閱link:br-use-policies-create.html["創�
 +
 *** 輸入策略的名稱。
 *** 選擇最多五個時間表，通常頻率不同。
-*** 對於備份到物件原則，請設定 Datalock 和 Ransomware 保護設定。如需 Datalock 和 Ransomware 保護的詳細資訊，請參閱link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
+*** 對於備份至物件原則，請設定 DataLock 和勒索軟體保護設定。如需 DataLock 和勒索軟體保護的詳細資訊，請參閱 link:prev-ontap-policy-object-options.html["備份到對象策略設置"]。
 +
-如果您的叢集使用的是 ONTAP 9.11.1 或更高版本，您可以選擇設定 _Datalock 和 Ransomware 保護_ 來保護備份檔案免於刪除和勒索軟體攻擊。_DataLock_ 可防止備份檔案修改或刪除，_ransomware protection_ 則掃描備份檔案，尋找備份檔案中勒索軟體攻擊的跡象。
+如果您的叢集使用的是 ONTAP 9.11.1 或更高版本，您可以選擇設定 _DataLock and Ransomware protection_ 來保護備份檔案免於刪除和勒索軟體攻擊。_DataLock_ 可防止備份檔案遭到修改或刪除，_ransomware protection_ 則掃描備份檔案，尋找備份檔案中勒索軟體攻擊的跡象。
 
 *** 選擇“*創建*”。
 
@@ -498,9 +498,9 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 [[show-the-api-commands]]
 === 顯示 API 命令
 
-您可能想要顯示並選擇性地複製啟動備份和還原精靈中使用的 API 命令。您可能希望這樣做以便在未來的系統中自動啟動備份。
+您可能需要顯示並（可選）複製「啟動備份與還原」精靈中使用的 API 命令。您可能需要執行此操作，以便在未來的系統中自動化備份啟動。
 
 .步驟
-. 從啟動備份和復原精靈中，選擇*查看 API 請求*。
+. 在「啟動備份與還原」精靈中，選取 *View API request*。
 . 若要將指令複製到剪貼簿，請選擇*複製*圖示。
 

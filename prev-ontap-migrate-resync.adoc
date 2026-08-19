@@ -14,11 +14,9 @@ summary: NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能�
 
 
 [role="lead"]
-NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。當使用SnapMirror邏輯複製 (LRSE) 將磁碟區從一個本地NetApp部署遷移到另一個部署，或遷移到基於雲端的解決方案（例如Cloud Volumes ONTAP）時， SnapMirror到 Cloud Resync 可確保現有的雲端備份保持完整且可正常運作。
+使用 NetApp Backup and Recovery 中的 SnapMirror to Cloud Resync，可在您使用 SnapMirror 邏輯複寫（LRSE）移轉 Volume 後，保持現有雲端備份可用。此功能可讓備份繼續進行而無需重新建立基準，並自 ONTAP 9.16.1 起提供。
 
-此功能無需重新建立基線，即可在遷移後繼續備份。此功能在工作負載遷移場景中很有價值，支援 FlexVols 和 FlexGroups，並且從ONTAP版本 9.16.1 開始可用。
-
-SnapMirror到 Cloud Resync 可跨環境保持備份連續性，因此更容易在混合雲和多雲環境中管理資料。
+SnapMirror to Cloud Resync 支援 FlexVol® 和 FlexGroup 移轉，並協助您在混合雲和多雲環境中維持備份連續性。
 
 
 NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
@@ -46,7 +44,7 @@ NOTE: 目前不支援使用 SVM-Migrate、SVM-DR 或 Head Swap 方法遷移後�
 
 以下是一個例子：
 
-假設您有一個名為 Vol1a 的本機磁碟區。該卷有三個快照：S1、S2 和 S3。這些快照就是還原點。  Vol1 使用SnapMirror to Cloud (SM-C) 備份到雲端，但物件儲存中只有 S1 和 S2。
+假設您有一個名為 Vol1a 的內部部署 Volume。該 Volume 有三個快照：S1、S2 和 S3。這些快照就是還原點。Vol1a 使用 SnapMirror to Cloud （SM-C） 備份到雲端，但物件存放區中只有 S1 和 S2。
 
 現在，您想要將 Vol1 遷移到另一個ONTAP叢集。為此，您需要建立與名為 Vol1b 的新雲端磁碟區的SnapMirror邏輯複製 (LRSE) 關係。這會將所有三個快照（S1、S2 和 S3）從 Vol1a 傳輸到 Vol1b。
 
@@ -168,7 +166,7 @@ NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例
 NetApp Backup and Recovery 會驗證每個選擇重新同步的磁碟區是否與物件儲存區共享相同的快照。具體來說，儲存在物件儲存區中的最新快照也必須存在於新複製磁碟區的本地快照中。此檢查可確保這些磁碟區已準備好進行 SnapMirror to Cloud Resync 作業。
 
 . 查看驗證結果，包括新的來源磁碟區名稱和每個磁碟區的重新同步狀態。
-. 檢查磁碟區資格。系統會檢查磁碟區是否符合重新同步的條件。如果某個磁碟區不符合條件，則表示未建立通用 Snapshot 標準。
+. 檢查 Volume 資格。系統會檢查 Volume 是否符合重新同步的條件。如果某個 Volume 不符合條件，則表示未符合通用 Snapshot 標準。
 +
 
 IMPORTANT: 為了確保磁碟區仍然符合SnapMirror到 Cloud Resync 操作的條件，請在遷移前階段刪除任何SnapMirror關係之前，為每個磁碟區拍攝最終快照。這保留了資料的最新狀態。

@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護
 
 
 [role="lead"]
-NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用程式。要恢復應用程序，應用程式需要至少有一個可用的恢復點。復原點由本機快照或物件儲存備份（或兩者）組成。您可以使用本機、輔助或物件儲存存檔來還原應用程式。
+在 NetApp Backup and Recovery 中還原受保護原則保護的應用程式。若要還原應用程式，您至少需要一個還原點，該還原點可以是本機快照、物件存放區備份或兩者兼有。您可以從本機、次要或物件存放區複本還原。
 
 
 
@@ -57,7 +57,7 @@ Backup and Recovery 超級管理員或 Backup and Recovery 還原管理員。lin
 
 . 選擇要使用的還原點的 *Restore* 按鈕。
 +
-Restore data 精靈隨即開始，並顯示「一般設定」頁面。
+「還原資料」精靈隨即開啟，並顯示「一般設定」頁面。
 
 . 選擇要從中還原的來源位置。
 . 從*Cluster*清單中選擇目標群集。
@@ -89,7 +89,7 @@ Restore data 精靈隨即開始，並顯示「一般設定」頁面。
 --
 .特定命名空間型應用程式資源
 --
-.. 選擇 *Selective resources* 並選擇是根據規則還是根據命名空間來篩選所選資源。
+.. 選擇 *Selective resources* ，然後選擇使用規則篩選資源還是手動選擇資源。
 +
 [cols="1,1"]
 |===
@@ -152,7 +152,7 @@ Backup and Recovery 會列出復原點中的所有持久性磁碟區宣告。您
 
 . 展開 *Destination settings* 部分，然後選擇還原至預設儲存類別、不同的儲存類別，或者如果您要還原至不同的叢集，則將儲存類別對應至目的地叢集。
 . 如果選擇還原到不同的儲存類別，請選擇與每個來源儲存類別相符的目標儲存類別。
-. 如果您要還原使用 Trident Protect 建立的備份或快照，則可以選擇查看用作還原作業儲存貯體的 AppVault 詳細資訊。如果您的環境或 AppVault 狀態發生變更，請選取 *Sync App Vault* 以重新整理詳細資訊。
+. 如果您要還原使用 Trident Protect 建立的備份或快照，則可以選擇檢視 AppVault 用作還原作業儲存設備桶的詳細資訊。如果您的環境或 AppVault 狀態發生變更，請選擇 *Sync App Vault* 以重新整理詳細資訊。
 +
 
 NOTE: 如果您需要在 Kubernetes 叢集上建立 AppVault 以方便還原使用 Trident Protect 建立的備份或快照，請參閱 https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-appvault-custom-resources.html["使用 Trident Protect AppVault 物件來管理儲存桶"]。

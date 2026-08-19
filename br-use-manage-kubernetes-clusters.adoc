@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery使您能夠發現和管理 Kubernetes 集群
 
 
 [role="lead"]
-NetApp Backup and Recovery使您能夠發現和管理 Kubernetes 集群，以便保護集群託管的資源。
+探索並管理 Kubernetes 叢集，以保護其託管資源。
 
 .所需的NetApp Console角色
 組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
@@ -31,9 +31,9 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory* > *Clusters*。
-. 在群集清單中，選擇要編輯的群集並選擇相關的操作選單。
+. 在叢集清單中，選擇要編輯的叢集，然後選擇關聯的「行動」功能表。
 . 選擇*編輯集群*。
-. 對叢集名稱進行任何必要的更改。叢集名稱需要與您在發現過程中使用 Helm 命令的名稱相符。
+. 根據需要修改叢集名稱。叢集名稱必須與您在探索過程中使用 Helm 命令時使用的名稱一致。
 . 選擇*完成*。
 
 
@@ -46,7 +46,7 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory* > *Clusters*。
-. 在群集清單中，選擇要編輯的群集並選擇相關的操作選單。
+. 在叢集清單中，選擇要移除的叢集，然後選擇關聯的「行動」功能表。
 . 選擇*刪除群集*。
 . 查看確認對話方塊中的信息，然後選擇*刪除*。
 
@@ -60,7 +60,7 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory* > *Clusters*。
-. 選擇要升級的 Kubernetes 叢集，然後選取 Actions 圖示 image:../media/icon-action.png["操作選項"] > *Upgrade cluster*。
+. 選擇要升級的 Kubernetes 叢集，然後選擇「動作」圖示 image:../media/icon-action.png["操作選項"] > *升級叢集*。
 . 在升級對話方塊中、請執行下列動作：
 +
 .. 從清單中選擇要升級的版本。
@@ -78,7 +78,7 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory* > *Clusters*。
-. 選擇已中斷連線的 Kubernetes 叢集，然後選取動作圖示 image:../media/icon-action.png["操作選項"] > *修改叢集* > *重新連線叢集*。
+. 選取已中斷連線的 Kubernetes 叢集，然後選取「行動」圖示 image:../media/icon-action.png["操作選項"] > *修改叢集* > *重新連線叢集*。
 . 在「重新連接叢集」對話方塊中，複製命令列指令並在叢集上執行。
 +
 命令執行完畢後，您的叢集應該會自動重新連線。
@@ -95,12 +95,12 @@ NOTE: 要發現 Kubernetes 集群，請參閱link:br-start-discover.html["發現
 
 .開始之前
 * https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["部署新的 Console 代理程式。"^]
-* 選擇要與新的 Console 代理程式搭配使用的保護原則，link:br-use-policies-kubernetes-create.html#edit-a-policy["編輯原則"^]，並將該保護原則與新的 Console 代理程式建立關聯。
+* 選擇要與新 Console 代理程式搭配使用的保護原則，link:br-use-policies-kubernetes-create.html#edit-a-policy["編輯原則"^]，並將該保護原則與新 Console 代理程式建立關聯。
 
 
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory* > *Clusters*。
-. 選擇已中斷連線的 Kubernetes 叢集，然後選擇動作圖示 image:../media/icon-action.png["操作選項"] > *修改叢集* > *管理代理程式*。
+. 選擇已中斷連線的 Kubernetes 叢集，然後選擇「行動」圖示 image:../media/icon-action.png["操作選項"] > *修改叢集* > *管理代理程式*。
 . 從清單中選取新的 Console 代理程式。
 . 檢查代理程式資訊，確保新的 Console 代理程式可以存取此叢集上受保護應用程式使用的系統、備份目標和次要目標。
 . 複製每個部分的命令列指令，並在叢集上執行這些命令。
