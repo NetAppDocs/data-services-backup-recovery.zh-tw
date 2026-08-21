@@ -17,7 +17,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 啟動 NetApp Backup and Recovery 後，您可以使用「進階設定」頁面變更每個 ONTAP 系統的叢集層級備份至物件儲存設定。您可以調整頻寬、歷史 Snapshot 匯出、年度 Snapshot 刪除和勒索軟體掃描設定。
 
 
-NOTE: 這些設定僅適用於備份到物件儲存。這些設定都不會影響您的快照或複製設定。
+NOTE: 這些設定僅適用於備份到物件儲存設備。這些設定不會影響您的快照或複寫設定。
 
 
 NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。

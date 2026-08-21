@@ -32,7 +32,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 KVM 工作負載的保�
 
 將您要保護的虛擬機器和儲存資源池分組到一個保護群組中。
 
-*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*所需 NetApp Console 角色* Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。

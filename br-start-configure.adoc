@@ -25,8 +25,6 @@ summary: 完成幾個步驟來設定NetApp Backup and Recovery。
 * <<建立資源轉換範本>>在還原資源時進行修改。
 
 
-*必要的 NetApp Console 角色* 備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
-
 
 
 [[add-credentials-for-host-resources]]
@@ -44,6 +42,8 @@ summary: 完成幾個步驟來設定NetApp Backup and Recovery。
 * Oracle 資料庫憑證
 * Linux 主機憑證
 
+
+*必要的 NetApp Console 角色* 備份與還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *設定*。
@@ -122,6 +122,8 @@ TIP: 對於 Microsoft SQL Server 工作負載，您必須輸入 Windows 和 Micr
 
 您之後可以編輯您建立的任何憑證的密碼。
 
+*必要的 NetApp Console 角色* 備份與還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
+
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *設定*。
 . 選擇向下箭頭以展開“*Credentials*”部分。
@@ -139,6 +141,8 @@ TIP: 對於 Microsoft SQL Server 工作負載，您必須輸入 Windows 和 Micr
 == 維護 VMware vCenter 設定
 
 提供 VMware vCenter Server 憑證以探索要備份的工作負載。如果您沒有憑證，請建立憑證並授予其存取和管理 VMware vCenter Server 工作負載的權限。
+
+*必要的 NetApp Console 角色* 備份與還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *設定*。
@@ -167,6 +171,8 @@ TIP: 對於 Microsoft SQL Server 工作負載，您必須輸入 Windows 和 Micr
 * 匯入SnapCenter Server 應用程式和主機資源
 * 管理選定的SnapCenter主機資源
 
+
+*必要的 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 
 
@@ -249,6 +255,8 @@ NOTE: 如果 SnapCenter Server 已註冊，您可以更新現有的註冊資訊�
 
 如果您使用 Apache CloudStack 管理平台來管理 KVM 資源，請將其與 NetApp Backup and Recovery 整合，以便 Backup and Recovery 能夠探索和保護代管的 KVM 主機和虛擬機器。
 
+*必要的 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
+
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *設定*。
 . 選擇向下箭頭展開「管理平台」部分。
@@ -271,6 +279,8 @@ NOTE: 如果 SnapCenter Server 已註冊，您可以更新現有的註冊資訊�
 == 在 Windows 主機的快照中設定日誌目錄
 
 在為 Windows 主機建立原則之前，請設定 Snapshot 中的日誌目錄，以儲存備份程序中產生的日誌。
+
+*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員或 Backup and Recovery 還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
@@ -311,6 +321,8 @@ NOTE: 您在此處建立的範本僅可用於保護 Kubernetes 工作負載。
 == 建立資源轉換範本
 
 建立資源轉換範本，用於儲存您在還原作業期間套用至資源的通用轉換。
+
+*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員或 Backup and Recovery 還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *設定*。

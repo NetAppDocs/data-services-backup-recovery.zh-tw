@@ -53,7 +53,7 @@ NOTE: 對於 Hyper-V 工作負載，備份排程使用 Hyper-V 主機的時區�
 
 您可以建立策略來管理本機快照、複製到二級儲存以及備份到物件儲存。3-2-1 策略的一部分包括建立主儲存系統上的實例、資料庫、應用程式或虛擬機器的快照。
 
-*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
+*必要的 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .開始之前
 如果您打算複製到二級儲存並希望在本機快照或遠端ONTAP二級儲存上使用快照鎖定，則首先需要在叢集層級初始化ONTAP合規時脈。這是在政策中啟用快照鎖定的要求。
@@ -166,8 +166,9 @@ TIP: 如果 Snapshot 快照技術頻率設定為一小時，則最大延遲加�
 
 如果您從 SnapCenter 匯入資源，您可能會發現 SnapCenter 中使用的原則與 NetApp Backup and Recovery 中使用的原則存在一些差異。請參閱link:reference-policy-differences-snapcenter.html["SnapCenter與NetApp Backup and Recovery之間的策略差異"]。
 
-.所需的NetApp Console角色
-備份和恢復超級管理員。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必備的 NetApp Console 角色*
+
+Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 在 NetApp Console 中，前往 *Protection* > *Backup and Recovery*。

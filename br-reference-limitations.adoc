@@ -65,7 +65,7 @@ FlexVol® Volume 沒有此類限制：您可以選擇系統中的所有 FlexVol�
 * 備份資料保護 (DP) 磁碟區時：
 +
 ** 具有 SnapMirror 標籤 `app_consistent` 和 `all_source_snapshot` 的關係將不會備份到雲端。
-** 如果在 SnapMirror 目的地 Volume 上建立 Snapshot 的本機副本（無論 SnapMirror 使用何種標籤），這些 Snapshot 將不會作為備份移至雲端。您必須在來源 DP Volume 上建立具有所需標籤的 Snapshot 原則，以便 NetApp Backup and Recovery 可以備份這些 Snapshot。
+** 如果在 SnapMirror 目的地 Volume 上建立快照的本機副本（無論 SnapMirror 使用何種標籤），這些快照都不會作為備份移至雲端。您必須在來源 DP Volume 上建立具有所需標籤的快照原則，以便 NetApp Backup and Recovery 可以備份這些快照。
 
 
 * FlexGroup Volume 備份無法移至歸檔儲存設備。
@@ -73,7 +73,7 @@ FlexVol® Volume 沒有此類限制：您可以選擇系統中的所有 FlexVol�
 * SVM-DR 磁碟區備份受下列限制支援：
 +
 ** 僅支援從ONTAP輔助節點進行備份。
-** 應用於磁碟區的快照策略必須是NetApp Backup and Recovery可識別的策略之一，包括每日、每週、每月等。預設的「sm_created」策略（用於*鏡像所有快照*）無法識別，且 DP 磁碟區不會顯示在可備份的磁碟區清單中。
+** 套用至 Volume 的快照原則必須是 NetApp Backup and Recovery 所識別的原則之一，包括每日、每週、每月等。預設的「sm_created」原則（用於*鏡像所有快照*）不被識別，因此 DP Volume 不會顯示在可備份 Volume 的清單中。
 ** 當備份來自來源或目的地時，SVM-DR 和 Volume 備份與還原完全獨立運作。唯一的限制是 SVM-DR 不會複寫 SnapMirror 雲端關係。在災難復原場景中，當儲存 VM 在輔助位置線上時，您必須手動更新 SnapMirror 雲端關係。
 
 

@@ -23,7 +23,8 @@ summary: NetApp Backup and Recovery使您能夠恢復已透過保護策略保護
 
 對於使用 Backup and Recovery 保護的每個應用程式、您可以檢視已針對特定還原點備份的資源。
 
-.所需的NetApp Console角色
+*必備的 NetApp Console 角色*
+
 Backup and Recovery 檢視器。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^].
 
 .步驟
@@ -46,7 +47,8 @@ Backup and Recovery 檢視器。link:reference-roles.html["了解NetApp Backup a
 .開始之前
 如果您要還原使用 Trident Protect 備份的應用程式、請確保來源叢集和目的地叢集上都安裝了 Trident Protect。
 
-.所需的NetApp Console角色
+*必備的 NetApp Console 角色*
+
 Backup and Recovery 超級管理員或 Backup and Recovery 還原管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^].
 
 .步驟

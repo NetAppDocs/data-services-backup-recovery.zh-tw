@@ -26,7 +26,8 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 您可以使用 NetApp Backup and Recovery 來執行下列與 Oracle Database 工作負載相關的任務：
 
 * link:br-start-discover-oracle.html["探索 Oracle Database 工作負載"]
-* link:br-use-oracle-protection-groups.html["建立和管理 Oracle Database 工作負載的保護群組"]
+* link:br-use-oracle-protection-groups.html["管理 Oracle 資料庫工作負載的保護群組"]
 * link:br-use-oracle-backup.html["備份 Oracle Database 工作負載"]
+* link:br-use-oracle-clone.html["複製 Oracle 資料庫工作負載"]
 * link:br-use-oracle-restore.html["還原 Oracle Database 工作負載"]
 

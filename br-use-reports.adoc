@@ -19,7 +19,7 @@ summary: 在NetApp Backup and Recovery中，建立報告以查看備份狀態，
 [[create-a-protection-report]]
 == 建立保護報告
 
-*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員、備份與還原複製管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
+*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員、Backup and Recovery 還原管理員、Backup and Recovery Clone 管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從 NetApp Backup and Recovery 選單中，選取 * 報告 *。

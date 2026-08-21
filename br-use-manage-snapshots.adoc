@@ -23,7 +23,7 @@ summary: 您可以透過從NetApp Backup and Recovery中刪除 Microsoft SQL Ser
 
 您只能刪除本機快照。
 
-*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員或備份與還原備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
+*必要的 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory*。

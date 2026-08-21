@@ -16,7 +16,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 VMware 虛擬機器工�
 [role="lead"]
 使用 NetApp Backup and Recovery，從主要或次要快照建立 VMware 虛擬機器的可寫入複本。您可以建立和管理複製的虛擬機器，用於測試、整合和訓練，而不會影響正式作業資料。
 
-*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*所需 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復 Clone 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .開始之前
 請確保所有要複製快照的 VM 都已新增至保護群組並已備份。

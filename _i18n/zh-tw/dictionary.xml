@@ -376,7 +376,6 @@
   <block id="5e5c52eb046d9534a5304cfb91b3736a" category="list-text">如果叢集運作的是ONTAP 9.13.1 或更高版本， FlexGroup磁碟區備份可以使用 DataLock 和勒索軟體保護。</block>
   <block id="09f886550e235192e436c0e4a062288b" category="list-text">SVM-DR 磁碟區備份受下列限制支援：</block>
   <block id="ed09c1b67736709db40a3664c46e855a" category="list-text">僅支援從ONTAP輔助節點進行備份。</block>
-  <block id="d587577f2a166dd11688b6c30c3d3cf9" category="list-text">應用於磁碟區的快照策略必須是NetApp Backup and Recovery可識別的策略之一，包括每日、每週、每月等。預設的「sm_created」策略（用於*鏡像所有快照*）無法識別，且 DP 磁碟區不會顯示在可備份的磁碟區清單中。</block>
   <block id="27e92fcddc23071f7a376e1c06fa20d6" category="list-text">MetroCluster支援：</block>
   <block id="a1e9108dbd21ffa07a61d3c3e7ecf506" category="list-text">當您使用ONTAP 9.12.0 及更早版本時，僅支援從ONTAP輔助系統進行備份。</block>
   <block id="3dd0180637528cde8671a0c957cf90da" category="list-text">不支援 SM-BC 配置。</block>
@@ -522,7 +521,6 @@
   <block id="65aa0e52587b5f59eb26af06ddeef28a" category="list-text">選擇*完成*。</block>
   <block id="6d655e5ab4c22c9a5dd1c7b3cc53bcd4" category="summary">NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您才能保護它們。</block>
   <block id="ebe1fa7e8a9f4c3139f8657f10a169ee" category="doc">在NetApp Backup and Recovery中發現 Hyper-V 工作負載</block>
-  <block id="02389fe69365606d1e090c58a1a6ccb3" category="paragraph">*所需的控制台角色* 備份和還原超級管理員。了解詳情<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="ccb99cc37b628cd3d05ccf85f8c0c579" category="section-title">新增 Hyper-V 主機並發現資源</block>
   <block id="6512c2901e9f9eae6ce40754ef6845cb" category="admonition">當您新增 Hyper-V 主機並發現資源時， NetApp Backup and Recovery會在 Hyper-V 主機上安裝NetApp Hyper-V 插件和NetApp SnapCenter Windows FileSystem 插件，以協助管理和保護虛擬機器。</block>
   <block id="dd38712b98e7db15ffc7ca4ac996020c" category="list-text">從NetApp Console選單中，選擇 *保護* &gt; *備份和還原*。</block>
@@ -701,7 +699,6 @@
   <block id="663b8460da445a8bdcdacd5586794a5a" category="inline-link-macro">創建策略</block>
   <block id="05b46e53cea9fa986faee5585257dc74" category="list-text">若要按排程備份工作負載，請建立管理備份和還原作業的策略。看<block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>以取得說明。</block>
   <block id="7eb85b9ab846044a4d26b2851ea3e18c" category="section-title">立即使用按需備份來備份工作負載</block>
-  <block id="62bc49b7db8523d3243d25f81a8028ad" category="paragraph">*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="13ed80e7f4035afba1bfc9687795be5e" category="list-text">從選單中選擇*庫存*。</block>
   <block id="291d091c1411150a9bc3fc401cfdfba6" category="list-text">選擇一個工作負載來查看保護詳細資訊。</block>
   <block id="7a770d938aba1440464532a20ae420f2" category="list-text">選擇“操作”圖標<block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block>&gt; *查看詳情*。</block>
@@ -755,7 +752,6 @@
   <block id="3850249b64193fae9627627088cec7a4" category="list-text">當您從本機備份檔案還原工作負載時， NetApp Backup and Recovery and Recovery會使用備份中的資料建立一個_新_資源。</block>
   <block id="b0ea04995bb7a05b4310a459f5315a78" category="list-text">從複製的工作負載復原時，您可以將工作負載還原到原始系統或本機ONTAP系統。</block>
   <block id="4967eb3bddc1aeeafa7fa83be9252bb4" category="section-title">從恢復選項恢復工作負載資料（搜尋和恢復）</block>
-  <block id="d1e52fcdb63677c060eb2093a79135fe" category="paragraph">*所需的控制台角色* 備份和還原超級管理員或備份和還原復原管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="f0b7d058add557b4607545e73a9337e1" category="list-text">從NetApp Backup and Recovery選單中，選擇 *復原*。</block>
   <block id="29020414ea8232d236539005c93e656b" category="list-text">從名稱搜尋欄位右側的下拉清單中，選擇 *Hyper-V*。</block>
   <block id="7dd676e6cf5a1d7d0e7086f82a5a3719" category="paragraph">出現符合您的搜尋條件的快照清單。</block>
@@ -767,8 +763,6 @@
   <block id="abfc7c0c366258e23e15cd12a5f89811" category="open-title">恢復到原始位置</block>
   <block id="f6987a32d735b6271ff912d44965c894" category="list-text">*恢復後選項*：</block>
   <block id="7372225e7abae430b5d3b91b0083eed6" category="list-text">*後記*：輸入恢復操作後應執行的腳本的完整路徑以及腳本所採用的任何參數。</block>
-  <block id="8dee103972185c1aba0e0c814961a8db" category="list-text">*通知*部分：</block>
-  <block id="d705348f84095bf9f266942da2cf2b84" category="list-text">*啟用電子郵件通知*：選擇此選項可接收有關復原作業的電子郵件通知，並指示您想要接收的通知類型。</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">選擇*恢復*。</block>
   <block id="4c931104d6ff5fdc2a76bdfc6fba4662" category="summary">您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID 的Kubernetes 應用程式和應用程式數據，確保您的資料受到保護。</block>
   <block id="47cae08dce34f06a5f1a2add5c4d92c4" category="inline-image-macro">Kubernetes 工作負載備份與復原架構圖</block>
@@ -809,9 +803,7 @@
   <block id="e71db3dcefde23f3505bd780d11437a6" category="list-text">若要為所有應用程式停用此行為，請參閱<block ref="cdee12d0fdecb470fee17a09aa7ec297" category="inline-link-rx"></block>。</block>
   <block id="2fd92693952062fc00d949899370185d" category="inline-link">定義應用程式</block>
   <block id="036aac0642f3af1dc8d2725fea34ffc0" category="list-text">若要針對特定應用程式停用此行為，請參閱<block ref="f71f47db01d2016b07aab53f31e42ddd" category="inline-link-rx"></block>。</block>
-  <block id="1c0afd8bffbeea6059a5f5fedd5fe377" category="paragraph-title">所需的NetApp Console角色</block>
   <block id="190614cb93ffed593d4a6f4d71007421" category="inline-link-macro">了解NetApp Backup and Recovery存取角色</block>
-  <block id="2002c1158400585ea330a03ddd71d32e" category="paragraph">組織管理員或SnapCenter管理員。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block> 。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="83fbf1604bedff410ea11872b40ab9f0" category="section-title">執行鉤子的類型</block>
   <block id="9c6a9cc04a4d5840a5d237b232190a35" category="list-text">預快照</block>
   <block id="65db6b15c7f05c97a1647c11699053e3" category="list-text">快照後</block>
@@ -879,7 +871,6 @@
   <block id="40596958221d9e7275ed2d84874e8433" category="list-text">關聯憑證</block>
   <block id="8e991c6ccf41cea57080dd6b693e3d7c" category="list-text">取消關聯憑證</block>
   <block id="0e2386ee61a52478d5ac90e50e96c567" category="list-text">立即備份</block>
-  <block id="3b2d27c432f30117a0f2fbbeb5548ca5" category="paragraph">*所需的NetApp Console角色* 儲存檢視器、備份和還原超級管理員、備份和還原備份管理員角色。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="b22d1168135f7bc32726518d37d83a8e" category="section-title">保護資料庫實例</block>
   <block id="dce0570aa6d4093c9a1b9592fd36392a" category="list-text">選擇您想要查看的工作負載並選擇*查看*。</block>
   <block id="968e1e1e0d9bdbc5d123e7fe52928ccf" category="list-text">選擇“*實例*”標籤。</block>
@@ -1172,9 +1163,6 @@
   <block id="e9bde7b168cf5fbb3d9d5b297ca8bfb2" category="list-text">選擇*從沒有恢復的快照中恢復*。</block>
   <block id="002b8c566162a2cd02c4e355805ac3f6" category="paragraph">顯示符合的快照。</block>
   <block id="98b2af096c36f02920b21c788a2a0dc6" category="list-text">*目的地設定*：</block>
-  <block id="12c0707880528cef62d0f97d7a498d1a" category="list-text">選擇還原整個資料庫或僅還原資料庫的表空間。</block>
-  <block id="78847577cebd91850d891ed95fe6bce3" category="list-text">*控制檔案*：可選地，啟用此選項也可以還原資料庫控製檔案。</block>
-  <block id="c553388e0d00fbbbe3216bca495bedb5" category="list-text">或者，啟用此選項並輸入應在還原作業之前執行的腳本的完整路徑以及該腳本所採用的任何參數。</block>
   <block id="f3d19f008b19feab896904cb50b1a321" category="list-text">*後記*：可選地，啟用此選項並輸入應在復原作業後執行的腳本的完整路徑以及該腳本所採用的任何參數。</block>
   <block id="b82be1f9be4e926901513f5106f48a87" category="summary">在NetApp Backup and Recovery中，建立您自己的策略來管理備份頻率、備份時間以及保留的備份檔案數量。</block>
   <block id="e10aa0ad03a30aedbdc16bf5e8954db5" category="admonition">其中一些選項和配置部分並不適用於所有工作負載。</block>
@@ -1227,7 +1215,6 @@
   <block id="fb6e9d876191a4c0c156e739e377be59" category="section-title">編輯策略</block>
   <block id="f985f1951686384a15ea5ddf855b3cab" category="paragraph">您可以在編輯策略時新增另一個保護級別，但不能刪除保護級別。例如，如果策略僅保護本機快照，則可以將複製新增至輔助儲存或將備份新增至物件儲存。如果您有本機快照和複製，則可以新增物件儲存。但是，如果您有本機快照、複製和物件存儲，則不能刪除其中一個層級。</block>
   <block id="f28c1acceb60dde3fa2b864db8f83957" category="paragraph">如果您正在編輯備份到物件儲存的策略，則可以啟用存檔。</block>
-  <block id="14230adaf41f6db735e7845098461fcb" category="paragraph">備份和恢復超級管理員。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block> 。</block>
   <block id="c3be1ab29368bfca9929503e6810fe39" category="list-text">選擇*政策*選項。</block>
   <block id="5d7cb595562fb7decc7d53373bf00ebe" category="list-text">選擇要編輯的策略。</block>
   <block id="e76c2b523f1a9b957f5d1a4b239018e5" category="list-text">選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*編輯*。</block>
@@ -1627,7 +1614,6 @@
   <block id="279860fbcfaa6a21c8cc8d5f6caec531" category="list-text">如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。</block>
   <block id="378a7c9293e3238cf8dc268c9f98d2a1" category="list-text">如果您還沒有控制台代理，則會出現「新增控制台代理」選項。參考<block ref="9fa9ecad0fff4855b8674bbd19f98b10" category="inline-xref-macro-rx"></block>。</block>
   <block id="cf91ffe6a0830c1180e10ae661bd5c8f" category="section-title">選擇要備份的捲</block>
-  <block id="51c1c5aa077ac8366955ff0cfc3e181a" category="paragraph">選擇您想要保護的磁碟區。受保護的磁碟區是具有以下一項或多項的磁碟區：快照策略、複製策略、備份到物件策略。</block>
   <block id="bade104de773419f0c559bd71478cc40" category="inline-link-macro">啟動系統中附加磁碟區的備份</block>
   <block id="7b58ae9806fd4e9bf78fdc8568395ab6" category="paragraph">您可以選擇保護FlexVol或FlexGroup磁碟區；但是，在啟動系統備份時不能選擇這些磁碟區的混合。了解如何<block ref="7239f8ae1ce8c5a40d4003de7480554a" category="inline-link-macro-rx"></block>（FlexVol或FlexGroup）在為初始磁碟區配置備份後。</block>
   <block id="e9dfd7a5bc1d9c55d3cafeb50c863440" category="list-text">您一次只能在單一FlexGroup磁碟區上啟動備份。</block>
@@ -1638,7 +1624,6 @@
   <block id="631d9018e253b4c43bff1d2433a04b6a" category="list-text">若要備份單一卷，請選取每個卷對應的複選框。</block>
   <block id="e86c0bbd7ee4d15caae7a8ecccbed461" category="section-title">定義備份策略</block>
   <block id="e531ad80bfdacf5f99b3e54ca953ed6e" category="paragraph">定義備份策略涉及設定以下選項：</block>
-  <block id="a2a7cb13e3427eafd599ad3ae356d511" category="list-text">您是否需要一個或所有備份選項：本機快照、複製和備份到物件存儲</block>
   <block id="2d242bb36ec91b32005f9296ff03a912" category="list-text">架構</block>
   <block id="9c18b37abd6362037200982f09170052" category="list-text">本機快照策略</block>
   <block id="c23466225c738566b462c4c3dd7dc384" category="list-text">複製目標和策略</block>
@@ -1736,7 +1721,6 @@
   <block id="88a7904e700f31e4cf7bb57f46eb7a09" category="list-text">當您想要啟動備份時，請繼續<block ref="cf0309d29ec4628c69a24a15a021ad35" category="inline-xref-macro-rx"></block>。</block>
   <block id="b96778e4cd2c48436423057f2b9568a3" category="paragraph">如果備份的 Azure 目標作為系統存在於 *系統* 頁面上，則可以將ONTAP叢集拖曳到 Azure Blob 物件儲存體上。</block>
   <block id="a2b724613c39ef29deebeb977e432480" category="list-text">在備份和復原欄中選擇*卷*。從磁碟區選項卡中，選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖示並選擇單一磁碟區（尚未啟用複製或備份到物件儲存）的*啟動備份*。</block>
-  <block id="2ce2db49b07d0bd2d1dada807c65d175" category="paragraph">選擇您想要保護的磁碟區。受保護的磁碟區是具有以下一項或多項的磁碟區：快照策略、複製策略、備份到物件策略。</block>
   <block id="c3694a048dbc829bb10fdffdf4d06cfe" category="list-text">選擇第一個磁碟區後，您可以選擇所有FlexVol磁碟區。 （一次只能選擇一個FlexGroup磁碟區。）若要備份所有現有的FlexVol卷，請先選取一個卷，然後選取標題行中的框。</block>
   <block id="421239975ac0190f099c7d9e7999845f" category="list-text">您是否需要一個或所有備份選項：本機快照、複製和備份到物件存儲</block>
   <block id="c261701c0a638fff16b256b7172f9ad8" category="list-text">*本機快照*：選擇現有的快照原則或建立一個。</block>
@@ -1758,7 +1742,6 @@
   <block id="397c2eb57e908a7a0dfd7a5b9a549eb3" category="inline-link">了解如何使用 Azure 專用終結點</block>
   <block id="d141f0c2447307010bfe69b567dcec15" category="list-text">或者，選擇是否使用先前設定的 Azure 專用終端點。<block ref="8692a626a666ec68cdf3ab557e9f55c0" category="inline-link-rx"></block> 。</block>
   <block id="6f016177210af1e863aa59b8f2e97752" category="list-text">*備份策略*：選擇現有的備份到物件儲存策略。</block>
-  <block id="dfa0e65275e79a512c005617a18e8851" category="list-text">（可選）選取核取方塊*自動將快照原則標籤與複製和備份策略標籤同步*。這將建立具有與複製和備份策略中的標籤相符的標籤的快照。</block>
   <block id="ffec7ec0cd271a5f8e4f646a0028cabb" category="paragraph">在目標群集中建立一個複製卷，該複製卷將與主卷同步。</block>
   <block id="fd8e00004c8fa188a1fbd959a0eb17ba" category="paragraph">在您輸入的資源組中建立一個 Blob 儲存容器，並將備份檔案儲存在那裡。</block>
   <block id="a384f6970ddbfebee596f46795e91c90" category="paragraph">預設情況下， NetApp Backup and Recovery為 Blob 容器提供本機冗餘 (LRS) 以優化成本。如果您想確保資料在不同區域之間複製，則可以將此設定變更為區域冗餘（ZRS）。請參閱 Microsoft 說明<block ref="c549763665cfbb93dbccfdbf667aa0f2" category="inline-link-rx"></block>。</block>
@@ -1842,8 +1825,6 @@
   <block id="309939239d7103f08e00804428d22284" category="paragraph">如果您打算使用自己的客戶管理金鑰：</block>
   <block id="db058563d6eb243b453d48635769d049" category="list-text">支援 HSM（硬體支援）和軟體產生的金鑰。</block>
   <block id="2b3b83fb44538b632325042aba519ab5" category="list-text">僅支援區域密鑰，不支援全域密鑰。</block>
-  <block id="cc54d40dc91fd9f2adf463d5e6a20e64" category="paragraph">請注意，如果您選擇的磁碟區已經套用了快照或複製策略，那麼您稍後選擇的策略將覆寫這些現有策略。</block>
-  <block id="1605cf9a721d88df92a0b71e1a8b76fe" category="admonition">如果您選擇的磁碟區具有與您在此步驟中選擇的策略不同的快照和複製策略，則現有策略將被覆寫。</block>
   <block id="ce182ee406d8f3ee95a365ecbd21b287" category="list-text">*提供者*：選擇*Google Cloud*。</block>
   <block id="da0548d3a8553d8564284dcd029706f5" category="list-text">*加密金鑰*：如果您建立了新的 Google 儲存桶，請輸入提供者提供給您的加密金鑰資訊。選擇是否使用預設的 Google Cloud 加密金鑰，或從您的 Google 帳戶中選擇您自己的客戶管理金鑰來管理您的資料加密。</block>
   <block id="b3aa83b2922f617a64fa1875bdb6aad9" category="admonition">如果您選擇了現有的 Google Cloud 儲存桶，則加密資訊已經可用，因此您現在無需輸入。</block>
@@ -1886,8 +1867,6 @@
   <block id="2df585918dfe79cb1c0f8dfb403b8933" category="paragraph">您可以隨時建立按需備份來擷取磁碟區的當前狀態。如果對磁碟區進行了非常重要的更改並且您不想等待下一次計劃的備份來保護該數據，這將非常有用。您也可以使用此功能為目前未備份且想要擷取其目前狀態的磁碟區建立備份。</block>
   <block id="75f0ab2aa06321fc5a92c205273b43b6" category="paragraph">備份名稱包含時間戳，以便您可以從其他計畫備份中識別出您的按需備份。</block>
   <block id="6ee3062ac668cf28f71bf489fd741bcd" category="inline-link-macro">了解有關 DataLock 和勒索軟體保護的更多信息</block>
-  <block id="34654042ecfc4226d89a0eec5901d43e" category="inline-link">了解如何使用ONTAP CLI 刪除快照</block>
-  <block id="4786401e865ef261720869019898fa6c" category="paragraph">當您建立臨時備份時，會在來源磁碟區上建立快照。由於此快照不是正常快照計劃的一部分，因此它不會旋轉。備份完成後，您可能會想要從來源磁碟區手動刪除此快照。這將允許釋放與此快照相關的區塊。快照名稱將以<block ref="3fbd2a9ee3863b8841029b21d6bf8e89" prefix=" " category="inline-code"></block>。<block ref="7e565776b86561f26a3208af24c76dc9" category="inline-link-rx"></block> 。</block>
   <block id="a7ddc69bf51887dfb9d3f72e57328bff" category="admonition">資料保護卷不支援按需卷備份。</block>
   <block id="a3a79b7922be865cd616e69067801948" category="list-text">從「卷」標籤中選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於磁碟區並選擇*備份*&gt;*建立臨時備份*。</block>
   <block id="bcaabcee4e1c8919ebfda54851da87e4" category="paragraph">此磁碟區的備份狀態列顯示“進行中”，直到備份建立完成。</block>
@@ -2155,7 +2134,6 @@
   <block id="8bdfdad72ee7298056198e1b5d8fb704" category="list-text">節點的叢集間 LIF 能夠存取物件儲存。</block>
   <block id="7dfd82301201229d10d2b7f30a3a9e1e" category="paragraph">如果您使用的是 Private Google Access 或 Private Service Connect，請確保您的 DNS 伺服器已設定為指向<block ref="3f4ca1d8ed90e1a3c0451eb42e58e5ef" prefix=" " category="inline-code"></block>到正確的內部（私有）IP 位址。</block>
   <block id="a62451f46dc42982cf209550cb11486e" category="list-text">如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery透過連接埠 443 從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。</block>
-  <block id="8b7d5c44d9577dfc1c061905392bd3f1" category="list-text">*本機快照*：如果您正在執行複製或備份到物件存儲，則必須建立本機快照。</block>
   <block id="6726285215cd3fb82b2bc565d1c05a91" category="list-text">*級聯*：資訊從主存儲流向輔助存儲，再從輔助存儲流向物件存儲。</block>
   <block id="62f87cf8c16c2da5d5b4f260c306b995" category="paragraph">建立新儲存桶或選擇已建立的儲存桶。</block>
   <block id="a7ac655633c5fce489e564d5265f26b9" category="admonition">如果您希望將較舊的備份檔案分層到 Google Cloud Archive 儲存空間以進一步優化成本，請確保儲存桶具有適當的生命週期規則。</block>
@@ -2226,7 +2204,6 @@
   <block id="114e1e484d37f8ec51f8c9bd144982c0" category="list-text">*級聯*：備份資料從主系統流向輔助系統，然後從輔助系統流向物件儲存。</block>
   <block id="2b9ff2b52d8ab869fa0fe6ca5039e723" category="list-text">*扇出*：備份資料從主系統流向輔助系統，並從主系統流向物件儲存。</block>
   <block id="bb259e1451f14e6ee7317954d4ae3d1f" category="inline-link">ONTAP CLI 適用於&lt;block ref="9548712dac96ee54830150eacbdaba5e" prefix=" " category='inline-code'/&gt;</block>
-  <block id="1a9240d843443385061b2272dcfbfff0" category="admonition">如果您想要在啟動快照之前建立自訂策略，則可以使用 System Manager 或ONTAP CLI<block ref="21daf815c4decbf3cba733c88297587b" prefix=" " category="inline-code"></block>命令。參考<block ref="ec3ed4692ea8e2ea03ef1cb28143229e" category="inline-link-rx"></block>。</block>
   <block id="ee885caa95dc922f4f4ba9860f7342f6" category="admonition">若要使用備份和復原建立自訂策略，請參閱<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block>。</block>
   <block id="18fca8639648ce6584848958e6930ab7" category="list-text">*複製*：如果選擇了*複製*，請設定以下選項：</block>
   <block id="f7a5b18ef1b37d992674325263d195c7" category="list-text">*提供者*：選擇* ONTAP S3*。</block>
@@ -2236,7 +2213,6 @@
   <block id="bb248f7221f98ec46ba72866b8f97fb1" category="admonition">選擇正確的 IP 空間可確保NetApp Backup and Recovery可以建立從ONTAP到ONTAP S3 物件儲存的連線。</block>
   <block id="0773e77bb0db21a781b5bbb39f7a4ee7" category="list-text">*備份策略*：選擇現有的備份策略或建立新的備份策略。</block>
   <block id="c14db437f776a13459f3d49279cc036d" category="admonition">您可以使用 System Manager 或ONTAP CLI 建立政策。使用ONTAP CLI 建立自訂策略<block ref="21daf815c4decbf3cba733c88297587b" prefix=" " category="inline-code"></block>命令，請參閱<block ref="ec3ed4692ea8e2ea03ef1cb28143229e" category="inline-link-rx"></block>。</block>
-  <block id="682f8e921eb37ddb3e47689c62db0a2e" category="list-text">（可選）選取核取方塊*自動將快照原則標籤與複製和備份策略標籤同步*。這將建立具有與複製和備份策略中的標籤相符的標籤的快照。如果策略不匹配，則不會建立備份。</block>
   <block id="da89f84b672c457d24c04269e668b99b" category="summary">完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從本機主ONTAP系統備份到二級儲存系統以及NetApp StorageGRID系統中的物件儲存。</block>
   <block id="7118c1a3bbb6dabf070fc402ff8a9fd3" category="doc">使用NetApp Backup and Recovery將本機ONTAP資料備份到StorageGRID</block>
   <block id="3fa08464a9a599a3c36d5915624e40cf" category="paragraph">下圖顯示了將本機ONTAP系統備份到StorageGRID時的每個元件以及您需要在它們之間準備的連線。</block>
@@ -2376,7 +2352,6 @@
   <block id="8d2d3fb9cf8aa026f491048ab9fdf368" category="list-text">在作業監視器頁面中監視重新同步過程。</block>
   <block id="5affede8c37588de6401be95e2404da0" category="doc">使用NetApp Backup and Recovery管理ONTAP磁碟區的備份策略</block>
   <block id="d683b5a068fd3bc0acd433ee36b8e172" category="paragraph">若要了解提供的預設備份策略，請參閱<block ref="586d9517f9118e1d4d7dcfa262c8e08f" category="inline-link-macro-rx"></block>。</block>
-  <block id="359dca3cc1bb628956893ac834156c53" category="paragraph">NetApp Backup and Recovery提供三種類型的ONTAP資料備份：快照、複製和物件儲存備份。根據您使用的架構和備份類型，它們的策略位於不同的位置：</block>
   <block id="9c2cf3d903ec11e031aac200337d550f" category="cell">快照策略儲存位置</block>
   <block id="03cef7774b631377e1518e05ea03e5f0" category="cell">複製策略儲存位置</block>
   <block id="47678324688906f6896f307bc4023541" category="cell">備份到物件策略儲存位置</block>
@@ -2445,14 +2420,10 @@
   <block id="7c8a6ef0dcbcbfb263df1c751ccb1918" category="list-text">在策略管理頁面中，選擇策略，選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖標，然後選擇*刪除快照策略*。</block>
   <block id="9c83e144e5481ac6766f4055e566594d" category="section-title">查找更多信息</block>
   <block id="739525550bd3f8378558eb1d87764bde" category="paragraph">有關使用 System Manager 或ONTAP CLI 建立政策的說明，請參閱下列內容：</block>
-  <block id="4a7bfaa61b260e84e240b222e517825e" category="inline-link">使用 System Manager 建立 Snapshot 策略</block>
-  <block id="18f722142cf1242ec6d2b1e76122b14a" category="inline-link">使用ONTAP CLI 建立 Snapshot 策略</block>
   <block id="c614d93309389f7373130aa7f9186f5d" category="inline-link">使用 System Manager 建立複製策略</block>
   <block id="8a95d969b59555a0a73e2a674b580a6e" category="inline-link">使用ONTAP CLI 建立複製策略</block>
   <block id="9d089a52567a29f4f420f7f2f76246ac" category="inline-link">使用 System Manager 建立物件儲存策略的備份</block>
   <block id="fb258284d7569744ca758873d339532b" category="inline-link">使用ONTAP CLI 建立物件儲存策略備份</block>
-  <block id="bc7ba4c7d62d6d4917e638edbc43dbb5" category="paragraph"><block ref="1d5508fcd8027e26b48962bd984558d5" category="inline-link-rx"></block> <block ref="25d9216966497b44f1274c2fdc3f62ee" category="inline-link-rx"></block> <block ref="6a671fae687ae09ed6ec2eb759a70329" category="inline-link-rx"></block> <block ref="76f9b86225921137bc166f71caebf3f1" category="inline-link-rx"></block> <block ref="ab2445e139747cf732d46d877cc62a64" category="inline-link-rx"></block> <block ref="9c225a8772c7b3c40b62701739b123cf" category="inline-link-rx"></block></block>
-  <block id="2f5538c2e34ba12aae307adeb8e9361f" category="admonition">這些設定僅適用於備份到物件儲存。這些設定都不會影響您的快照或複製設定。</block>
   <block id="c7097337eab210464618620268aa80bc" category="paragraph">您可以在進階設定頁面中變更以下選項：</block>
   <block id="90262b49b516aea0770d54c5389860ab" category="list-text">更改是否從來源系統中刪除“年度”快照</block>
   <block id="6866e75c6eebeffef8ecc7e577b86a5c" category="list-text">啟用或停用系統的勒索軟體掃描，包括計畫掃描</block>
@@ -2481,7 +2452,6 @@
   <block id="d18386c60f5f586cbc0c07b572754bc0" category="admonition">這些策略設定僅與備份到物件儲存相關。這些設定都不會影響您的快照或複製策略。</block>
   <block id="a2e6f50bd5494a56ee0794883aeee5e5" category="section-title">備份計畫選項</block>
   <block id="8ccbaa98d8631f522e71476bfd3fcd37" category="paragraph">NetApp Backup and Recovery使您能夠為每個系統（叢集）建立具有唯一計劃的多個備份策略。您可以為具有不同復原點目標 (RPO) 的磁碟區指派不同的備份策略。</block>
-  <block id="5b4bf3566416dd4da103a5b88e54f6e1" category="paragraph">每個備份策略都提供了一個「標籤和保留」部分，您可以將其套用至備份檔案。請注意，應用於磁碟區的 Snapshot 策略必須是NetApp Backup and Recovery識別的策略之一，否則將不會建立備份檔案。</block>
   <block id="dca086ae01946b6cf950f1291d93aac6" category="paragraph">該計劃分為兩部分：標籤和保留值：</block>
   <block id="3b190b83ddc2ee9e610caa6dc209fbaf" category="list-text">*標籤* 定義了從磁碟區建立（或更新）備份檔案的頻率。您可以從以下標籤類型中進行選擇：</block>
   <block id="5a35ddef63d61c71445e13d3c9588a2d" category="list-text">您可以選擇*每小時*、*每天*、*每週*、*每月*和*每年*時間範圍中的一個或多個組合。</block>
@@ -3366,7 +3336,6 @@
   <block id="bd45d990ee6243026d43e7ba09d9dcc7" category="list-text">從SnapCenter Plug-in for VMware vSphere匯入現有的保護策略、快照以及備份和復原選項。</block>
   <block id="c7216ade1ce2641cd0b5ceae5c192aea" category="paragraph">建立快照或複製磁碟區不收取任何費用—除了儲存快照和複製磁碟區所需的磁碟空間。</block>
   <block id="ec5903fe264ba75792e588ee687f9158" category="paragraph">僅當從物件儲存進行備份和還原時才需要備份許可證。建立快照和複製磁碟區不需要許可證。</block>
-  <block id="0f3f39435676ffeef4ba4ef82d2d4b94" category="list-text">*將現有快照匯出至物件儲存作為備份副本*：如果此系統中存在與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
   <block id="b26fafb8754488cba5d1c6f4c35f4b89" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含快照中包含的主儲存系統資料的差異副本。</block>
   <block id="bb5dc31143cea02e04349aa386dc4c27" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含快照中包含的主儲存資料的差異副本。</block>
   <block id="294441075d63ebaf575b2bea27e26a8b" category="paragraph">您可以在磁碟區備份儀表板中查看目前正在備份的所有磁碟區的清單。這包括所有類型的備份，包括快照、複製磁碟區和物件儲存中的備份檔案。您也可以查看系統中目前未備份的磁碟區。</block>
@@ -3381,7 +3350,6 @@
   <block id="7c5de50c41f0a8634817597808c6df4b" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括主儲存系統資料的完整副本。後續傳輸包含快照中所含主資料的差異副本。</block>
   <block id="d35a77cfe575d13394b221b746fe1f0b" category="paragraph">在為叢集啟動NetApp Backup and Recovery之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此授權用於備份和還原物件儲存 - 建立快照或複製磁碟區不需要授權。此許可證適用於該帳戶，可跨多個系統使用。</block>
   <block id="4ae0ae424ac8104b3b6379720f5d11c7" category="list-text">*本機快照*：建立本機快照。</block>
-  <block id="45f89ff96066abe8d4fab644a72cff53" category="list-text">*將現有快照匯出至物件儲存作為備份檔案*：如果此系統中存在與您剛剛選擇的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則會顯示此附加提示。選取此方塊可將所有歷史快照複製到物件儲存作為備份文件，以確保對您的磁碟區進行最全面的保護。</block>
   <block id="3a4f7228272f3d796e47dc3105df1408" category="paragraph">NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲和備份檔案的基線傳輸包括來源資料的完整副本。後續傳輸包含快照中包含的主儲存資料的差異副本。</block>
   <block id="33b4029bcdc81d3d05791f1403584ca0" category="paragraph">您可以建立策略來管理物件儲存的快照、複製和備份：</block>
   <block id="6a765f5fb9e687173df4e2b03937673d" category="paragraph">3-2-1 策略的一部分包括建立主儲存系統上磁碟區的快照。</block>
@@ -3412,11 +3380,9 @@
   <block id="4d9a28db017266e35e5d4203c8c74098" category="list-text">從物件儲存中的本機快照、複製磁碟區或備份磁碟區還原特定時間點的資料。</block>
   <block id="45374e4c2372e5efe029c3622265209a" category="list-text">快照儲存在來源系統的來源磁碟區上。</block>
   <block id="30e07a9dd02dd98f372bd162ec8456ef" category="paragraph">當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您選擇的策略進行備份。您可以為快照、複製磁碟區和備份檔案選擇不同的策略。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，則可以為該叢集建立其他策略，並在啟動NetApp Backup and Recovery後將這些原則指派給其他磁碟區。</block>
-  <block id="fa3dd3bcafecb630044b7d1eddb7cd43" category="admonition">應用於磁碟區的快照策略必須具有您在複製策略和備份到物件策略中使用的標籤之一。如果未找到符合的標籤，則不會建立備份檔案。例如，如果您想要建立「每週」複製磁碟區和備份文件，則必須使用建立「每週」快照的快照策略。</block>
   <block id="9e813756b5af6bc196c66209061d9d1a" category="paragraph">預設啟用計劃的勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照上。可以停用計劃掃描以降低成本。您可以透過「進階設定」頁面上的選項，啟用或停用最新快照上的計畫勒索軟體掃描。如果啟用它，則預設每週執行一次掃描。您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。</block>
   <block id="02c75a95538b43e9e819f0d1b0cc19f2" category="list-text">快照 -&gt; 已恢復磁碟區</block>
   <block id="68601916ccf016a3cbb9b91a847005f5" category="paragraph">您可以將ONTAP資料從位於二級系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。</block>
-  <block id="2b3e9f7492129e1cad66eb9ef0df47d2" category="paragraph">「位置」欄位顯示備份檔案（快照）是「本機」（來源系統上的快照）、「輔助」（輔助ONTAP系統上的複製磁碟區）或「物件儲存」（物件儲存中的備份檔案）。選擇您想要恢復的檔案。</block>
   <block id="8ba8feef9dc91a81337c3e1c3f636d2e" category="admonition">目前，您只能從物件儲存中的備份檔案還原資料夾或單一檔案。目前不支援從本機快照或位於輔助系統（複製磁碟區）中的備份檔案還原檔案和資料夾。</block>
   <block id="49b1bd86131611255094bea2f77118b7" category="paragraph">裝訂體積，請參考以下尺寸指南：</block>
   <block id="aa45cf8d923bfb8185fed2178e78d921" category="list-text">建議使用磁碟吞吐量為 300 MB/s 的AFF儲存。吞吐量降低會影響搜尋和其他操作。</block>
@@ -3696,7 +3662,6 @@
   <block id="59d7aa0f1f316dd1d14b5bbe02d4d985" category="list-text">*加密*：如果您建立了一個新的儲存桶，請輸入提供者提供給您的加密金鑰資訊。您可以選擇使用預設的 AWS 加密金鑰，或從您的 AWS 帳戶中選擇您自己的客戶管理金鑰來管理資料的加密。<block ref="d92909932e1ff9d87b508ff8380d446c" category="inline-link-rx"></block>）。</block>
   <block id="5cf85684b99a8b0df0187c0fddfe9241" category="list-text">*網路*：配置此提供者的網路選項。</block>
   <block id="5a3443bdabcca33a88f837ed431e4140" category="list-text">*匯出現有快照*：如果此系統中存在與您剛剛為此系統選擇的備份計畫標籤（例如，每日、每週等）相符的磁碟區的本機快照，則會顯示此附加提示。選取此框，即可將所有歷史快照複製到物件儲存作為備份文件，以確保您的磁碟區得到最全面的保護。</block>
-  <block id="fd5c6f657b9b82dc2fc86f506dacc05d" category="list-text">（可選）選取此複選框可「自動修復本機快照、複製和備份中不符的標籤」。這將建立與快照、複製和備份策略中的標籤相符的標籤的快照。</block>
   <block id="a85910c6eeb75a045489c2b16a61b922" category="paragraph">當此備份類型啟動時，對應的圖示會亮起；當該備份類型未啟動時，圖示會變為灰色。您可以將遊標停留在每個圖示上，查看正在使用的備份策略以及每種備份類型的其他相關資訊。</block>
   <block id="1ae9b0331f20d420feb95df3c5f492ec" category="list-text">從「卷」選單中，找到要修改策略設定的捲，然後選擇「操作」選單。 <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block> 在行尾，選擇「編輯備份策略」。</block>
   <block id="7a8eafe0820d78646db0118a296f0af3" category="paragraph">當啟用備份的磁碟區超過五個時， NetApp Backup and Recovery一次只會初始化五個磁碟區。當這些完成後，它會以 5 個為一組繼續進行，直到所有捲都初始化完畢。</block>
@@ -3898,7 +3863,6 @@
   <block id="62a3e51100215ef17a24383d5729e00e" category="paragraph">您可以使用 NetApp Backup and Recovery 來執行下列與 Oracle Database 工作負載相關的任務：</block>
   <block id="c9b387ac576fa007292bb17c9c97e163" category="list-text"><block ref="c9b387ac576fa007292bb17c9c97e163" category="inline-link-macro-rx"></block></block>
   <block id="0c455356b172e0f15e2d62ca94bfa5c6" category="inline-link-macro">建立和管理 Oracle Database 工作負載的保護群組</block>
-  <block id="ce4ef45ffb0bf8da9fa1877ae859c0e3" category="list-text"><block ref="ce4ef45ffb0bf8da9fa1877ae859c0e3" category="inline-link-macro-rx"></block></block>
   <block id="88ed72683238588c2440ec4dd0ab3eca" category="inline-link-macro">備份 Oracle Database 工作負載</block>
   <block id="0d34b4ba574939ced489d0243500c926" category="list-text"><block ref="0d34b4ba574939ced489d0243500c926" category="inline-link-macro-rx"></block></block>
   <block id="7e96e8e02dab57292bff1e9f31e0c7df" category="inline-link-macro">還原 Oracle Database 工作負載</block>
@@ -4045,8 +4009,6 @@
   <block id="250bd2e0fd20f197756f90da65d7b032" category="paragraph">如果快照儲存在多個位置，則會顯示 *Select snapshot location*。</block>
   <block id="59b1d9c0faeccb050b2ae82254459fd3" category="list-text">選擇要使用的快照位置，然後選取 *Next* 。</block>
   <block id="b2fe9cdb3dfb44588722f86420682e65" category="list-text">在 *Advanced options* 頁面上、執行以下操作：</block>
-  <block id="20decfe57e54a87359cea95bba79c274" category="list-text">如果您之前曾儲存過規範文件，可以上傳該文件以自訂複製資料庫的設定。您也可以下載資料庫快照的預設規範文件。</block>
-  <block id="3c7b24476512ff19d3887cbbaf0c549e" category="list-text">在 *Recovery scope* 部分中，選擇如何限制要還原的內容以建立複本，並輸入所選選項所需的資訊。選擇 *None* 會還原所有資料。</block>
   <block id="3360c6db4a303d4e7db0bf74d740c00f" category="list-text">在 *Prescripts and postscripts* 部分，啟用 *Prescript* 和 / 或 *Postscript* 選項，以便在複製作業開始前或完成後執行腳本。對於每個選項，請輸入完整的腳本路徑和任何必要的參數。</block>
   <block id="50059824044533f44d3ae954c21388e4" category="section-title">排程複製 Oracle 資料庫</block>
   <block id="beed2b8d7c8943c45007114d3902e342" category="list-text">在 *選擇還原點* 頁面的 *複製自* 部分中，選取 *即時快照和複製* 。</block>
@@ -4807,19 +4769,9 @@
   <block id="81bdc0623ea533b24d0e11cb1d26ba25" category="list-text">對於使用 SMB 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在 ONTAP 系統上啟用持續可用性共用屬性。請參閱<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>以取得相關說明。</block>
   <block id="09e4a6980ec8e49e9c338d71a078b029" category="paragraph">如果您與市場平台簽訂了年度合約，則所有 NetApp Backup and Recovery 的使用費用都將計入該合約。</block>
   <block id="fe336167ccf46f9fb348006254d0f3ee" category="list-text">輸入叢集名稱並選擇要與叢集搭配使用的 Console 代理程式。</block>
-  <block id="c1ec49703505f57531225059c7c36779" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="6dd3c7c1ba8e65da85c3e2fe08fa8a94" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="44371de0a029c248f1a90987cb1f4534" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員、備份與還原備份管理員或備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="00175b45adeb2fd0dadf3cbebb6a6e1a" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員或備份與還原複製管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="245c869d7d516179ee0d44de43c6a4dc" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器，或備份和還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP Admin 角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="8d7814801e68bc09e7c15034344e4fb2" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="52d42f2d4b51510352e6a5d5264a2324" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
-  <block id="1f878dc7bdb71ee28c2c50bc232dfae8" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員或備份與還原備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="795e84085ddc80428b97bda253086f11" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 <block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="9e29ab9466f0bd217537f14714daa46c" category="paragraph">備份和恢復超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="f086ad71d827eb87743f472c780e2446" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員、備份與還原複製管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 <block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="e5b682be117d99f07d8f1223cbe827ea" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員、備份與還原複製管理員或備份與還原檢視器角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="6077c15fad6f07f1de9a676f2c04e33a" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="de2e4685966d24481dfab35c95ad44dc" category="section-title">2026年7月13日</block>
   <block id="66591c0e71be05bd24e1869944b92db6" category="doc">增強對所有工作負載的多儲存貯體支援</block>
   <block id="9bf2c1ebc9be74ae2e995a0a4dab1fec" category="paragraph">有關 NetApp Backup and Recovery 的詳細資訊，請參閱<block ref="a026c5bec08ff7bb5b963e48c0daa63e" category="inline-link-rx"></block>。</block>
@@ -5187,7 +5139,6 @@
   <block id="d04c100aa8e9be0aa91497c899b0ae70" category="list-text">一次只能選取一個 FlexGroup Volume 進行複寫。您需要為每個 FlexGroup Volume 分別啟動備份。</block>
   <block id="0a1be80c0c91abdd10a795c65987cc4c" category="paragraph">FlexVol® Volume 沒有此類限制：您可以選擇系統中的所有 FlexVol® Volume，並指派相同的備份原則。</block>
   <block id="8e46cbca822594e1ba592a2db6c34e21" category="list-text">具有 SnapMirror 標籤<block ref="b17c9a947d4e38d7975718380fab6b7a" prefix=" " category="inline-code"></block> 和<block ref="02d69a40f5f4cdc817176fabd085b511" prefix=" " category="inline-code"></block> 的關係將不會備份到雲端。</block>
-  <block id="747364ba6f56a1a04ae28c582a967699" category="list-text">如果在 SnapMirror 目的地 Volume 上建立 Snapshot 的本機副本（無論 SnapMirror 使用何種標籤），這些 Snapshot 將不會作為備份移至雲端。您必須在來源 DP Volume 上建立具有所需標籤的 Snapshot 原則，以便 NetApp Backup and Recovery 可以備份這些 Snapshot。</block>
   <block id="bc8f35b9487526460c11bfe34f51c19b" category="list-text">FlexGroup Volume 備份無法移至歸檔儲存設備。</block>
   <block id="48bd35dd5aa1abd5561ff77719e85e73" category="list-text">當您使用 ONTAP 9.12.1 GA 或更高版本時，連接到主要系統即可支援備份。所有備份組態都會傳輸到二線系統，以便在切換後自動繼續進行雲端備份。您無需在二線系統上設定備份（實際上，您也無法這樣做）。</block>
   <block id="c005b36a6e6d88a6fc0763aa6caae7fb" category="list-text">資料保護 Volume 不支援使用「立即備份」按鈕進行臨時 Volume 備份。</block>
@@ -5232,7 +5183,6 @@
   <block id="730acae7684dfbf79ddf6b1f05ea9f75" category="list-text">*儲存桶名稱*：輸入 ONTAP S3 儲存桶的名稱。</block>
   <block id="6caed87fa2992f2b01dad7a3a9dc41eb" category="list-text">選取目標，然後在右側選取 *動作* <block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block> 圖示，再選取 *變更認證*。</block>
   <block id="d15ce5f7b11589a195af27e9552d666f" category="paragraph">在 NetApp Backup and Recovery 中探索 Hyper-V 虛擬機器，以便使用保護原則來保護它們。</block>
-  <block id="c9c9b6894824e1360b072d40ca321caf" category="paragraph">*必要的 Console 角色* 備份與還原超級管理員。了解<block ref="12964e9f6d86f445e6ad568e453a77e2" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="b2d7b24c3bf71ab6e29740c4642ffafe" category="paragraph">新增 Hyper-V 主機資訊，以便 NetApp 備份與還原功能探索虛擬機器。在每個 Console 代理程式中，選擇要探索資源的系統。</block>
   <block id="b7f882b06eddf2dfd9de57436d956c2c" category="list-text">從 NetApp Console 選單中，選取 *Protection* &gt; *Backup and Recovery*。</block>
   <block id="c4aea5e44a79c8aa4bb534878de9f3a0" category="paragraph">如果您是第一次登入 NetApp Backup and Recovery，且已在 Console 中擁有系統但尚未探索資源，則會顯示「歡迎使用新的 NetApp Backup and Recovery」活動網頁，其中包含 *探索資源* 選項。</block>
@@ -5335,7 +5285,6 @@
   <block id="3a732dfd8979773d840d4c6a5ee6932a" category="list-text">請確認已選擇正確的應用程式。</block>
   <block id="0637f2b7220c73c5814a06cee1e66d5f" category="doc">在備份與還原儀表板上檢視保護健全狀況</block>
   <block id="91f5072da96b77071890dfb731705999" category="paragraph">監控工作負載的健全狀況，以識別保護問題並回應警報。檢視備份與還原的狀態，並在 NetApp Backup and Recovery 儀表板上審查系統、保護、作業和還原總結。</block>
-  <block id="7ae67c349587ebebec87539ad1c32c81" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員、備份與還原複製管理員或備份與還原檢視器角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 <block ref="12964e9f6d86f445e6ad568e453a77e2" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="7dfe2693eef41656f0a4c43066a6950b" category="paragraph">在「作業總結」中審查已完成、正在執行或失敗的作業總數。</block>
   <block id="6ae76fe3d05c0e154dbdbb441c9548ac" category="list-text">對於每個作業經銷，變更篩選器以根據天數顯示失敗、執行中和已完成作業的總結，例如，過去 30 天、過去 7 天、過去 24 小時或過去一年。</block>
   <block id="63e0a49e4c65e31bda356b573f1ed3f9" category="list-text">選取「檢視作業監控」即可查看失敗、正在執行和已完成的作業詳細資訊。</block>
@@ -5514,9 +5463,7 @@
   <block id="2539f8afd971a66035d430f5ec9a298a" category="paragraph">將內部部署 ONTAP 系統中的 Microsoft SQL Server 工作負載備份到 Amazon Web Services、Microsoft Azure 或 StorageGRID。</block>
   <block id="c55df281a65ee03a6dadde4fb2f5e3f2" category="list-text">建立原則以按排程備份工作負載，並管理備份與恢復作業。請參閱 <block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block> 相關說明。</block>
   <block id="2143b36441bbedcc5ffffdb891cdbe87" category="list-text">建立隨需備份，立即備份工作負載。</block>
-  <block id="ae6c4b05836ceed04fe1a2ba7cec8e7f" category="paragraph">*必要的 NetApp Console 角色* 儲存空間檢視器、備份與還原超級管理員、備份與還原備份管理員或備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 <block ref="12964e9f6d86f445e6ad568e453a77e2" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="d29168feb6ab8e25e22d38717cab5984" category="list-text">選擇要儲存日誌的主機或節點。</block>
-  <block id="29d718441b51de48b372dda920c034fd" category="paragraph">*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員或備份與還原備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 <block ref="12964e9f6d86f445e6ad568e453a77e2" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="e7c80d2a8befd39ab680e911906dab86" category="paragraph">如果您想建立原則，請選擇 *Create new policy* 並依照提示操作。如需更多資訊，請參閱 <block ref="08bf6451e8be54326517c755d3e4cd23" category="inline-link-macro-rx"></block>。</block>
   <block id="e0e2d998b14d6c84eb3802685f83612a" category="list-text">選擇「保護群組」、「執行個體」或「資料庫」索引標籤。</block>
   <block id="c6cf32207591675034ca7c2e36587a50" category="list-text">選擇要套用於備份的原則。</block>
@@ -5608,8 +5555,6 @@
   <block id="27bb0e289edab1132883935e52645683" category="paragraph">還原 Oracle 資料庫工作負載時，會發生以下情況：</block>
   <block id="4e3fce457d1a9a8459a6a5ea98a6e9fc" category="paragraph">根據您的需求，您可以將 Oracle 資料庫還原到特定時間點、特定系統變更號碼 （SCN） 或上次正常狀態。您也可以從 Snapshot 快照技術還原資料庫，並跳過自動恢復程序，例如，若您想手動執行恢復。您可以使用資料庫名稱或特定篩選條件搜尋資料庫。</block>
   <block id="4c82cd55e9c216695cfce74c86a368dd" category="paragraph">*所需 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="c474e9933ac445797696e2191d49f062" category="list-text">為指令碼選擇逾時值。如果指令碼在此時間段內未能執行，還原仍將繼續進行。</block>
-  <block id="94bb7dbadec1bf9c4708c5b400353e87" category="list-text">*恢復後以讀寫模式開啟資料庫或 Container 資料庫*：還原作業完成後，備份與還原功能將為資料庫啟用讀寫模式。</block>
   <block id="37141d7af0dc9b5fc98cbb0382dab44e" category="paragraph">此預覽版本不適用於 Oracle 資料庫工作負載。</block>
   <block id="31f78782ca396cf4a28f08976d81c51b" category="paragraph">使用 NetApp Backup and Recovery 建立 Hyper-V 備份原則，以控制備份頻率、排程和保留。</block>
   <block id="69447293a8590769734416cbc1de503e" category="list-text">*3-2-1 扇出*：主儲存設備（磁碟）到次要儲存設備（磁碟）到雲端（物件存放區）。它會在不同的儲存設備系統中建立多個資料複本，例如 ONTAP 到 ONTAP 以及 ONTAP 到物件存放區的配置。物件儲存可以是雲端供應商的物件存放區，也可以是私有物件存放區。最適合實現最佳資料保護和災難恢復。此選項不適用於 Amazon FSx for NetApp ONTAP。</block>
@@ -5795,7 +5740,6 @@
   <block id="3d2bab3d4f2d57db34fabaeda49c774c" category="list-text">檢查 Volume 資格。系統會檢查 Volume 是否符合重新同步的條件。如果某個 Volume 不符合條件，則表示未符合通用 Snapshot 標準。</block>
   <block id="5c11396ac879be51a75ae297e460911d" category="paragraph">在 NetApp Backup and Recovery 中，您可以使用預設備份原則，也可以為 ONTAP Volume 建立自訂原則。原則可控制備份頻率、備份時間及保留期間。</block>
   <block id="9ae1ce5f908bcca832becc340fb5245f" category="paragraph">使用啟動精靈為 Volume 啟用備份與還原服務時，您可以從預設原則以及系統中已有的任何其他原則（Cloud Volumes ONTAP 或內部部署 ONTAP 系統）中進行選擇。如果您想使用與現有原則不同的原則，可以在使用啟動精靈之前或期間建立該原則。</block>
-  <block id="70e81c1519bde456d929e65b4e444cc3" category="list-text">在原則管理頁面中，選擇 *建立原則* &gt; *建立 Snapshot 原則*。</block>
   <block id="1536d738bfa2fc9da5f86a0afa864bc0" category="list-text">在「原則管理」頁面中，選擇 *建立原則* &gt; *建立複寫原則*。</block>
   <block id="3b4ec10ee7384a2d8000f420be1002ea" category="list-text">在原則管理頁面中，選擇 *建立原則* &gt; *建立備份原則*。</block>
   <block id="2e61b3d4958d5889782a20b21e7a4917" category="doc">在 NetApp Backup and Recovery 中管理備份至物件的進階設定</block>
@@ -5930,4 +5874,76 @@
   <block id="74c57c6e2fe5772a23c00b3f6235a6fd" category="paragraph">為目錄服務啟用 ONTAP 伺服器憑證驗證。</block>
   <block id="fb15b4874677cad58f8618e6f738a955" category="list-text">切換到 Docker Volume。執行：</block>
   <block id="97800d7777f06226529ba6da27a80393" category="paragraph">了解 NetApp Backup and Recovery 中的新功能、增強功能和修復。</block>
+  <block id="6ced7632c3b12a58dc567ff698cafc4e" category="list-text">在透過將資料庫還原到特定時間點或 SCN 執行不完全恢復後，如果您之後需要還原到該恢復之前的某個時間點，則必須在還原目的地設定中選擇 *控制檔*。如果不還原控制檔，則無法將資料庫還原到早於上次不完全恢復的時間點。</block>
+  <block id="cc48b2a3deb4974d05e24d22a06a4a3e" category="list-text">如果在 SnapMirror 目的地 Volume 上建立快照的本機副本（無論 SnapMirror 使用何種標籤），這些快照都不會作為備份移至雲端。您必須在來源 DP Volume 上建立具有所需標籤的快照原則，以便 NetApp Backup and Recovery 可以備份這些快照。</block>
+  <block id="758dbb9a669ecda5104bffb2df64f24c" category="list-text">套用至 Volume 的快照原則必須是 NetApp Backup and Recovery 所識別的原則之一，包括每日、每週、每月等。預設的「sm_created」原則（用於*鏡像所有快照*）不被識別，因此 DP Volume 不會顯示在可備份 Volume 的清單中。</block>
+  <block id="ea30aa7cd6ed1668956e501860886490" category="paragraph">*必要的 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 <block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="10da519ff92f824ca97336ad9b4a08e7" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員或 Backup and Recovery 還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 <block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="c3a291a73ba59b4d94eb6db3eaa2ff85" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員。了解<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="347406b3488a309d40aa38be005f1183" category="paragraph">*必備的 NetApp Console 角色*</block>
+  <block id="7c8daaee4590bb73b54a5663b1a3a5fc" category="paragraph">Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
+  <block id="e88385c744c67365d19fe37f07225708" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員、Backup and Recovery 還原管理員、Backup and Recovery Clone 管理員或 Backup and Recovery 備份檢視器角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 <block ref="12964e9f6d86f445e6ad568e453a77e2" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="564fd1170f3092b060c1cbc528cca32d" category="paragraph">*所需 NetApp Console 角色* Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="992aa2d8b0062f403cbf3d3a1b203ce9" category="paragraph">Backup and Recovery 超級管理員、Backup and Recovery 備份管理員或 Backup and Recovery 還原管理員。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
+  <block id="cbb73033231757e619e153377a9db1e2" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員、Backup and Recovery 還原管理員或 Backup and Recovery Clone 管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="3d573d5b6deb497b79f5b4eb6120d8d2" category="paragraph">*必要的 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="76bb051af67c57c45686816e2358f0ed" category="paragraph">*必要的 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="48581c2684fab807e94bda181c201389" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="6b9298c3572b2f52ac7ac8cdd54f4b16" category="paragraph">備份和恢復超級管理員。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
+  <block id="b6843261e21dcd949adfd0e3a8266096" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery super admin、Backup and Recovery backup admin、Backup and Recovery restore admin、Backup and Recovery clone admin 或 Backup and Recovery viewer 角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP Admin 角色。了解更多<block ref="12964e9f6d86f445e6ad568e453a77e2" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="2c0b085ebd95dcec22e3a367d800bcae" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員或 Backup and Recovery 還原管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多<block ref="12964e9f6d86f445e6ad568e453a77e2" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="733f1bc64b5fdff2e5d7cfed5bdbe254" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員角色，或 Backup and Recovery 備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 <block ref="12964e9f6d86f445e6ad568e453a77e2" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="b2fac50398cc9650a6761bae424bd2c8" category="paragraph">*必要的 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 <block ref="12964e9f6d86f445e6ad568e453a77e2" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="d33112fbbb8102c759b078e5935499af" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員或 Backup and Recovery Clone 管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="3718717110a944f12063e6951dd43689" category="paragraph">*所需 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復 Clone 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="8cddf22cdc234d64fb00c8001a383b6d" category="list-text">如果來源資料庫是 Container 資料庫 （CDB），請在「Clone 類型」部分選擇以下選項之一：</block>
+  <block id="73f98e8ea105f20f3b43d3010ad80a8e" category="list-text">*完整資料庫 Clone*：Clone 整個 Container 資料庫，包括所有 PDB。</block>
+  <block id="2a682420415a6cc91008f7c027323013" category="list-text">*PDB clone*：將 Container 資料庫備份中的特定 PDB Clone 到現有的目標 Container 資料庫中。</block>
+  <block id="677bd14687e2f3c9654053a2a6b8b177" category="list-text">如果您要 Clone 完整的多租戶資料庫，可以在「完整資料庫 Clone 設定」中選擇一個或多個要從 Clone 中排除的 PDB（PDB$SEED始終會被排除）。Clone 單一租戶資料庫時，不會顯示此部分。</block>
+  <block id="3236a3ead2580cd69a0c1bbe76714443" category="list-text">如果您之前已儲存過規範檔案，則可以啟用「自訂目標資料庫參數」選項來上傳該檔案並自訂 Clone 資料庫的設定。您也可以下載資料庫快照的預設規格檔案。</block>
+  <block id="b8dffce975466e9aee10a5740c7051ca" category="list-text">在「恢復範圍」部分，選擇一個選項以使用歸檔日誌恢復 Clone，並輸入任何必要的詳細資訊。選擇「無」將跳過恢復（Clone 將從快照建立，而不套用歸檔日誌中的變更）。「無」選項不適用於 PDB Clone。</block>
+  <block id="cab19a0ec02714b738f3cbdbbe75e358" category="admonition">建立具有重新整理排程的即時快照和 Clone 僅適用於完整資料庫 Clone。不適用於 PDB Clone。</block>
+  <block id="2a89654f2e87daae0211a674ae5febfc" category="inline-link-macro">管理 Oracle 資料庫工作負載的保護群組</block>
+  <block id="0a6313cec6301ae98c94e73ba522078e" category="list-text"><block ref="0a6313cec6301ae98c94e73ba522078e" category="inline-link-macro-rx"></block></block>
+  <block id="ef28f96440f72809a7152ffc66dd809c" category="list-text"><block ref="ef28f96440f72809a7152ffc66dd809c" category="inline-link-macro-rx"></block></block>
+  <block id="5527c64bc2c020672e46509a73b4e2a3" category="paragraph">如果需要將 PDB 或 PDB 表空間還原到特定時間點或 SCN：</block>
+  <block id="51c644b83084bd09a324c54def440e42" category="list-text">請僅選擇一個 PDB。時間點恢復與還原多個 PDB 不相容。</block>
+  <block id="d07bbaca1491351524d765cd27b2e463" category="list-text">PDB$SEED無法選取以進行時間點恢復。</block>
+  <block id="271fc080f7f715ac8f2462be5414bfba" category="list-text">控制檔還原不能與 PDB 或表空間的時間點恢復結合使用。</block>
+  <block id="1de84049759abb6734a6922f26da254f" category="list-text">確保資料備份和所需的日誌備份均已編入目錄。</block>
+  <block id="4422040316e7063d2b6eeee89d2cb610" category="list-text">選擇要還原的內容：</block>
+  <block id="edaeb35620b1bfb1682cb9dc8b30993d" category="list-text">選擇「所有資料檔案」以還原整個資料庫或 Container 資料庫 （CDB）。</block>
+  <block id="6ef18b5f7ddc8dccec3f8cfc05180417" category="list-text">選擇「可插拔資料庫 (PDBs)」可以從 CDB 還原一個或多個 PDB，而不會影響 Container 中的其他 PDB。然後從清單中選擇 PDB。</block>
+  <block id="c9bba403aa1a3b775c98bb8fe83a6a86" category="list-text">選擇「可插拔資料庫 （PDB） 表空間」（對於非 CDB 資料庫，顯示為「表空間」）以還原特定的 PDB 表空間。然後，選擇 PDB 和表空間。</block>
+  <block id="91cf6e173caf9f208d009579fae3cfba" category="list-text">您也可以選擇啟用「控制檔」選項來還原資料庫控制檔。此選項不適用於 PDB 或 PDB 表空間的時間點還原或 SCN 恢復。</block>
+  <block id="4b49aa44ab53622375dd4e4de6f229e3" category="list-text">（可選）啟用「如有需要，請變更資料庫狀態以進行還原和恢復」選項，以允許 Backup and Recovery 根據恢復類型管理資料庫狀態。</block>
+  <block id="4fb05c33c01facc6c181bfeee40ec5ec" category="list-text">您可以選擇啟用「強制就地還原」選項，以使用更快的還原方法還原 SAN/ASM 資料庫，並跳過外部檔案驗證檢查。資料庫和 ASM 磁碟群組將還原到備份建立點。</block>
+  <block id="4efc67368dfd729f9c295744e484fac3" category="list-text">如果要將 PDB 或 PDB 表空間還原到特定時間點或 SCN，請指定外部歸檔日誌檔案的位置。輸入 RMAN 建立輔助執行個體以執行恢復的位置。輸入以「/」開頭的檔案系統路徑或以「+」開頭的 ASM 磁碟群組。使用文字輸入欄位旁的「加號」和「減號」按鈕新增或移除位置。</block>
+  <block id="d76fe5c3d527bffb082aae2a4d6b5558" category="list-text">（可選）啟用「恢復後以讀寫模式開啟資料庫或Container資料庫」選項，以便在還原資料庫後以讀寫模式開啟資料庫。這會使還原的表空間上線。</block>
+  <block id="9470d5c114013f8b3d728de1df5dd487" category="list-text">*前置指令碼與後置指令碼*：</block>
+  <block id="17902e09130187fca130b259322f6340" category="list-text">*Prescript*：您可以選擇啟用此選項，並輸入在還原作業之前應執行的指令碼的完整路徑以及該指令碼接受的任何參數。</block>
+  <block id="a4aa2f0da5fe920e49b4efa7582a1089" category="list-text">為指令碼選擇一個逾時值。如果指令碼在此時間段內未能執行，還原仍將繼續進行。</block>
+  <block id="808c0184b1d838fe3f6240a02adeedf3" category="paragraph">Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="3079e07efcec8dc4c03ec09df82c5810" category="paragraph">Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="24bd8e8186e76baf41a1a139a325a041" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員、Backup and Recovery 還原管理員、Backup and Recovery Clone 管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="69a43e53caadcedb493c59719fb671f3" category="paragraph">*必要的 NetApp Console 角色* 備份與恢復超級管理員、備份與恢復備份管理員、備份與恢復 Clone 管理員或備份與恢復檢視者角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="a833b9bd73e803116825184a502ff988" category="list-text">您可以選擇勾選「自動修復本機快照、複寫和備份中的標籤不符」複選框。這將建立標籤與快照、複寫和備份原則中的標籤相符的快照。</block>
+  <block id="13c6aaa719abfb2f3c46b10b2329a40f" category="paragraph">選擇要保護的 Volume。受保護的 Volume 是指具有下列一項或多項原則的 Volume：快照原則、複寫原則、備份至物件原則。</block>
+  <block id="7bef56f7beea569a702a02cf02b7d4e0" category="list-text">您可以選擇勾選「自動將快照原則標籤與複寫和備份原則標籤同步」複選框。這將建立標籤與複寫和備份原則中的標籤相符的快照。</block>
+  <block id="70e465a4a9e185e99e11abd5a960c4dc" category="paragraph">請注意，如果您選擇的 Volume 已套用快照或複寫原則，則您稍後選擇的原則將覆寫這些現有原則。</block>
+  <block id="aec57e41584c2d59fb62acc9b2a636d5" category="inline-link">了解如何使用 ONTAP CLI 刪除快照</block>
+  <block id="e8e5aa2d2654a73a37c1fee8d91ad22c" category="paragraph">建立臨時備份時，會在來源 Volume 上建立快照。由於此快照不屬於一般快照排程，因此不會自動輪換刪除。備份完成後，您可能需要手動從來源 Volume 中刪除此快照。這將釋放與此快照相關的區塊。快照名稱將以<block ref="3fbd2a9ee3863b8841029b21d6bf8e89" prefix=" " category="inline-code"></block>.<block ref="ae9edb2f9eb9d8f71a20a16489812232" category="inline-link-rx"></block>開頭。</block>
+  <block id="4bf0252f0808b817ffeeb0f58c63a727" category="list-text">*本機快照*：選擇現有的快照原則或建立新的快照原則。</block>
+  <block id="5682a1986e8832ff7ea051903e5ac9fb" category="admonition">如果要在啟動快照之前建立自訂原則，可以使用 System Manager 或 ONTAP CLI<block ref="21daf815c4decbf3cba733c88297587b" prefix=" " category="inline-code"></block>命令。請參閱<block ref="ec3ed4692ea8e2ea03ef1cb28143229e" category="inline-link-rx"></block>。</block>
+  <block id="fc912dae2c2fbcc999c8e1a9c57ab7b9" category="list-text">*將現有快照匯出至物件儲存作為備份檔案*：如果此系統中存在與您剛剛選擇的備份排程標籤（例如，每日、每週等）相符的 Volume 的本機快照，則會顯示此附加提示。勾選此核取方塊，即可將所有歷史快照複製到物件儲存作為備份檔案，以確保您的 Volume 獲得最完整的保護。</block>
+  <block id="a947e7a2036119e5ebe9a76bbc637f52" category="list-text">您可以選擇勾選「自動將快照原則標籤與複寫和備份原則標籤同步」複選框。這樣，建立的快照標籤將與複寫和備份原則中的標籤相符。如果原則不相符，則不會建立備份。</block>
+  <block id="1cca5a906b432b9e2e6a4efafff6dc35" category="paragraph">NetApp Backup and Recovery 提供三種 ONTAP 資料備份類型：快照、複寫和物件儲存備份。其原則位於不同的位置，取決於您使用的架構和備份類型：</block>
+  <block id="9d582a10262b8b8510b9ae9b16886849" category="list-text">在原則管理頁面中，選擇 *Create policy* &gt; *Create snapshot policy*。</block>
+  <block id="3477dac7879a3f44096cb4f68455f180" category="inline-link">使用 System Manager 建立快照原則</block>
+  <block id="d4c627b86ea7fcc97aab9ca0d343fcbe" category="inline-link">使用 ONTAP CLI 建立快照原則</block>
+  <block id="4171790834a17f92e35176a29fd09458" category="paragraph"><block ref="244560fcf5d380e290ecd4b178a412c9" category="inline-link-rx"></block> <block ref="d8ea6acc45a89d2ab361031769419dd5" category="inline-link-rx"></block> <block ref="6a671fae687ae09ed6ec2eb759a70329" category="inline-link-rx"></block> <block ref="76f9b86225921137bc166f71caebf3f1" category="inline-link-rx"></block> <block ref="ab2445e139747cf732d46d877cc62a64" category="inline-link-rx"></block> <block ref="9c225a8772c7b3c40b62701739b123cf" category="inline-link-rx"></block></block>
+  <block id="32fe9a563ca84556ad18ae2933089bed" category="admonition">這些設定僅適用於備份到物件儲存設備。這些設定不會影響您的快照或複寫設定。</block>
+  <block id="96700d751785d80f017bf85fc1a4a76c" category="paragraph">每項備份原則都提供一個「標籤和保留」部分，您可以將其套用至備份檔案。請注意，套用至 Volume 的快照原則必須是 NetApp Backup and Recovery 所識別的原則之一，否則將不會建立備份檔案。</block>
+  <block id="6f8cf279072f687ab049a6dc930dfa1d" category="admonition">套用於 Volume 的快照原則必須包含您在複寫原則和備份到物件原則中使用的標籤之一。如果找不到符合的標籤，則不會建立備份檔案。例如，如果您想要建立「每週」複寫 Volume 和備份檔案，則必須使用建立「每週」快照的快照原則。</block>
+  <block id="3853002b75aefc21d388f510cae8f516" category="paragraph">「位置」欄位顯示備份檔案（快照）是位於「本機」（來源系統上的快照）、「輔助」（輔助 ONTAP 系統上的複寫 Volume）或「物件儲存」（物件儲存中的備份檔案）。選擇要還原的檔案。</block>
 </blocks>

@@ -31,7 +31,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 
 將您要一起保護的工作負載分組到保護群組中。建立保護群組，以便一起備份和還原這些工作負載。
 
-*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*所需 NetApp Console 角色* Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .開始之前
 * 請注意，對於 Hyper-V 工作負載，排程備份時間會以管理主機的時區為準。如需詳細資訊，請參閱 link:br-use-policies-hyper-v-create.html["在 NetApp Backup and Recovery 中建立及管理 Hyper-V 備份原則"]。

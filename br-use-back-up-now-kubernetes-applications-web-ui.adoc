@@ -16,8 +16,9 @@ summary: 使用 NetApp Backup and Recovery Web UI 手動建立 Kubernetes 應用
 [role="lead"]
 使用 Web UI 對 Kubernetes 應用程式執行隨需備份。
 
-.所需的NetApp Console角色
-組織管理員或SnapCenter管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"] 。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必備的 NetApp Console 角色*
+
+Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^].
 
 
 

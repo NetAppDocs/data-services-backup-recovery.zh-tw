@@ -18,6 +18,7 @@ summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢�
 
 在 NetApp Backup and Recovery 預覽版本中，以下動作不支援 Oracle 資料庫工作負載：
 
+* 在透過將資料庫還原到特定時間點或 SCN 執行不完全恢復後，如果您之後需要還原到該恢復之前的某個時間點，則必須在還原目的地設定中選擇 *控制檔*。如果不還原控制檔，則無法將資料庫還原到早於上次不完全恢復的時間點。
 * 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
 * 離線備份
 

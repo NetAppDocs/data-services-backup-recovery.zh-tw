@@ -16,7 +16,7 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 [role="lead"]
 使用 NetApp Backup and Recovery，從內部部署 ONTAP 系統的主儲存設備或次要儲存設備建立 Oracle 資料庫工作負載的可寫入 Clone。您也可以排程 Clone 重新整理，以符合您的要求。
 
-*所需的控制台角色* 備份和還原超級管理員或備份和還原備份管理員角色。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*所需 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復 Clone 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 
 
@@ -31,6 +31,15 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 . 選擇 *Clone* 。
 . 選擇*建立新克隆*。
 . 在 *Database source* 部分，從清單中選擇來源主機和資料庫。
++
+.. 如果來源資料庫是 Container 資料庫 （CDB），請在「Clone 類型」部分選擇以下選項之一：
++
+*** *完整資料庫 Clone*：Clone 整個 Container 資料庫，包括所有 PDB。
+*** *PDB clone*：將 Container 資料庫備份中的特定 PDB Clone 到現有的目標 Container 資料庫中。
+
+
+
+
 . 在 *Database target* 區段中，從清單中選擇目標主機和資料庫。目的地主機和資料庫可以與來源不同。
 . 選擇“下一步”。
 . 在 *Select restore point* 頁面的 *Clone from* 部分中，選擇 *Existing snapshots*。
@@ -41,8 +50,9 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 . 選擇要使用的快照位置，然後選取 *Next* 。
 . 在 *Advanced options* 頁面上、執行以下操作：
 +
-.. 如果您之前曾儲存過規範文件，可以上傳該文件以自訂複製資料庫的設定。您也可以下載資料庫快照的預設規範文件。
-.. 在 *Recovery scope* 部分中，選擇如何限制要還原的內容以建立複本，並輸入所選選項所需的資訊。選擇 *None* 會還原所有資料。
+.. 如果您要 Clone 完整的多租戶資料庫，可以在「完整資料庫 Clone 設定」中選擇一個或多個要從 Clone 中排除的 PDB（PDB$SEED始終會被排除）。Clone 單一租戶資料庫時，不會顯示此部分。
+.. 如果您之前已儲存過規範檔案，則可以啟用「自訂目標資料庫參數」選項來上傳該檔案並自訂 Clone 資料庫的設定。您也可以下載資料庫快照的預設規格檔案。
+.. 在「恢復範圍」部分，選擇一個選項以使用歸檔日誌恢復 Clone，並輸入任何必要的詳細資訊。選擇「無」將跳過恢復（Clone 將從快照建立，而不套用歸檔日誌中的變更）。「無」選項不適用於 PDB Clone。
 .. 在 *Prescripts and postscripts* 部分，啟用 *Prescript* 和 / 或 *Postscript* 選項，以便在複製作業開始前或完成後執行腳本。對於每個選項，請輸入完整的腳本路徑和任何必要的參數。
 
 
@@ -55,6 +65,9 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 == 排程複製 Oracle 資料庫
 
 建立即時 Clone 並安排定期重新整理，使其與最新的資料庫狀態保持同步。
+
+
+NOTE: 建立具有重新整理排程的即時快照和 Clone 僅適用於完整資料庫 Clone。不適用於 PDB Clone。
 
 .步驟
 . 從NetApp Console選單中，選擇「保護」>「備份和復原」。

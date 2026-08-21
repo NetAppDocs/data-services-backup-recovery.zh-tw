@@ -16,7 +16,7 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您保護
 [role="lead"]
 在 NetApp 備份與還原中探索 KVM 主機和虛擬機器，以便使用保護原則加以保護。在探索之前，您的 KVM 環境必須由管理平台（例如 Apache CloudStack）進行管理。
 
-*所需的控制台角色* 備份和還原超級管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* Backup and Recovery 超級管理員。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 
 

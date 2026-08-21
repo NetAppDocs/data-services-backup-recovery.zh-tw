@@ -16,7 +16,7 @@ summary: 監控工作負載的健康狀況可確保您了解工作負載保護�
 [role="lead"]
 監控工作負載的健全狀況，以識別保護問題並回應警報。檢視備份與還原的狀態，並在 NetApp Backup and Recovery 儀表板上審查系統、保護、作業和還原總結。
 
-*必要的 NetApp Console 角色* 儲存檢視器、備份與還原超級管理員、備份與還原備份管理員、備份與還原還原管理員、備份與還原複製管理員或備份與還原檢視器角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 link:reference-roles.html["備份與恢復角色及權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
+*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員、Backup and Recovery 還原管理員、Backup and Recovery Clone 管理員或 Backup and Recovery 備份檢視器角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多 link:reference-roles.html["備份與恢復角色及權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
 . 從 NetApp Console 選單中，選取 *Protection* > *Backup and Recovery*。

@@ -29,7 +29,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 NetApp Backup and Recovery使您能夠為每個系統（叢集）建立具有唯一計劃的多個備份策略。您可以為具有不同復原點目標 (RPO) 的磁碟區指派不同的備份策略。
 
-每個備份策略都提供了一個「標籤和保留」部分，您可以將其套用至備份檔案。請注意，應用於磁碟區的 Snapshot 策略必須是NetApp Backup and Recovery識別的策略之一，否則將不會建立備份檔案。
+每項備份原則都提供一個「標籤和保留」部分，您可以將其套用至備份檔案。請注意，套用至 Volume 的快照原則必須是 NetApp Backup and Recovery 所識別的原則之一，否則將不會建立備份檔案。
 
 該計劃分為兩部分：標籤和保留值：
 

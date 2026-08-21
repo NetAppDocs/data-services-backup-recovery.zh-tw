@@ -16,7 +16,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 [role="lead"]
 在保護運行於 ONTAP 系統上的 VMware 資料儲存和虛擬機器之前，您需要在 NetApp Backup and Recovery 中探索它們。如果您已安裝 SnapCenter Plug-in for VMware vSphere，也可以匯入其備份資料和原則。
 
-*所需的控制台角色* 備份和還原超級管理員。了解詳情link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^] 。
+*必要的 NetApp Console 角色* Backup and Recovery 超級管理員。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 
 
