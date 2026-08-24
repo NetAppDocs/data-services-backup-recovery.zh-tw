@@ -16,7 +16,7 @@ summary: 使用NetApp Backup and Recovery作業。
 [role="lead"]
 監控 Snapshot 快照技術、複寫、備份和還原作業。設定電子郵件通知，並使用 Console Timeline 來調查活動。
 
-NetApp Backup and Recovery 會將作業資訊保留 15 天，然後將其刪除並從 Job Monitor 中移除。
+NetApp Backup and Recovery 會將作業資訊保留 90 天，然後將其刪除並從 Job Monitor 中移除。
 
 *必要的 NetApp Console 角色* Backup and Recovery super admin、Backup and Recovery backup admin、Backup and Recovery restore admin、Backup and Recovery clone admin 或 Backup and Recovery viewer 角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP Admin 角色。了解更多link:reference-roles.html["備份與恢復角色及權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
