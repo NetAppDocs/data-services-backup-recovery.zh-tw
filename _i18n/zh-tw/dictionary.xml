@@ -1151,18 +1151,13 @@
   <block id="5a0e55e0c971663f11ffa98ecb642d75" category="list-text">選擇恢復選項：</block>
   <block id="2a7de0c7b558a918c244ae825c46a356" category="list-text">選擇*恢復到特定時間點*。</block>
   <block id="ee66a549a7689aad7a05e70a3a1e9af0" category="list-text">從下拉式選單中選擇一個日期，然後選擇*搜尋*。</block>
-  <block id="be8647181bb6b528f220d7a2ea185a2f" category="paragraph">顯示指定日期的符合快照清單。</block>
   <block id="e7511ff89b416bba8be19b1b6fa19929" category="open-title">恢復到特定的系統變更號碼 (SCN)</block>
   <block id="29e5772da97d56f52500d5bb7c795955" category="list-text">選擇*恢復到特定的系統變更號碼 (SCN)*。</block>
   <block id="1d38433e132d1c9ace532efa4e1ca346" category="list-text">輸入要用作還原點的 SCN，然後選擇*搜尋*。</block>
-  <block id="9682c2aa6cb6b7b9f0e407d7ccdca848" category="paragraph">顯示指定 SCN 的符合快照清單。</block>
   <block id="f91416b4cce325c317c3bc6d09f4ecaf" category="open-title">恢復到最新備份（上次良好狀態）</block>
   <block id="d207ef420c0a9c86c4c49f855cf6ddb1" category="list-text">選擇*恢復到最新備份*。</block>
-  <block id="790d9ee95fb0b27d88ff783342f56ffb" category="paragraph">顯示最新的完整備份和日誌備份。</block>
   <block id="e778183067d12c261c4b71b0ccc4eaad" category="open-title">從快照還原，無需恢復</block>
   <block id="e9bde7b168cf5fbb3d9d5b297ca8bfb2" category="list-text">選擇*從沒有恢復的快照中恢復*。</block>
-  <block id="002b8c566162a2cd02c4e355805ac3f6" category="paragraph">顯示符合的快照。</block>
-  <block id="98b2af096c36f02920b21c788a2a0dc6" category="list-text">*目的地設定*：</block>
   <block id="f3d19f008b19feab896904cb50b1a321" category="list-text">*後記*：可選地，啟用此選項並輸入應在復原作業後執行的腳本的完整路徑以及該腳本所採用的任何參數。</block>
   <block id="b82be1f9be4e926901513f5106f48a87" category="summary">在NetApp Backup and Recovery中，建立您自己的策略來管理備份頻率、備份時間以及保留的備份檔案數量。</block>
   <block id="e10aa0ad03a30aedbdc16bf5e8954db5" category="admonition">其中一些選項和配置部分並不適用於所有工作負載。</block>
@@ -5906,21 +5901,13 @@
   <block id="2a89654f2e87daae0211a674ae5febfc" category="inline-link-macro">管理 Oracle 資料庫工作負載的保護群組</block>
   <block id="0a6313cec6301ae98c94e73ba522078e" category="list-text"><block ref="0a6313cec6301ae98c94e73ba522078e" category="inline-link-macro-rx"></block></block>
   <block id="ef28f96440f72809a7152ffc66dd809c" category="list-text"><block ref="ef28f96440f72809a7152ffc66dd809c" category="inline-link-macro-rx"></block></block>
-  <block id="5527c64bc2c020672e46509a73b4e2a3" category="paragraph">如果需要將 PDB 或 PDB 表空間還原到特定時間點或 SCN：</block>
   <block id="51c644b83084bd09a324c54def440e42" category="list-text">請僅選擇一個 PDB。時間點恢復與還原多個 PDB 不相容。</block>
-  <block id="d07bbaca1491351524d765cd27b2e463" category="list-text">PDB$SEED無法選取以進行時間點恢復。</block>
-  <block id="271fc080f7f715ac8f2462be5414bfba" category="list-text">控制檔還原不能與 PDB 或表空間的時間點恢復結合使用。</block>
   <block id="1de84049759abb6734a6922f26da254f" category="list-text">確保資料備份和所需的日誌備份均已編入目錄。</block>
   <block id="4422040316e7063d2b6eeee89d2cb610" category="list-text">選擇要還原的內容：</block>
   <block id="edaeb35620b1bfb1682cb9dc8b30993d" category="list-text">選擇「所有資料檔案」以還原整個資料庫或 Container 資料庫 （CDB）。</block>
   <block id="6ef18b5f7ddc8dccec3f8cfc05180417" category="list-text">選擇「可插拔資料庫 (PDBs)」可以從 CDB 還原一個或多個 PDB，而不會影響 Container 中的其他 PDB。然後從清單中選擇 PDB。</block>
   <block id="c9bba403aa1a3b775c98bb8fe83a6a86" category="list-text">選擇「可插拔資料庫 （PDB） 表空間」（對於非 CDB 資料庫，顯示為「表空間」）以還原特定的 PDB 表空間。然後，選擇 PDB 和表空間。</block>
-  <block id="91cf6e173caf9f208d009579fae3cfba" category="list-text">您也可以選擇啟用「控制檔」選項來還原資料庫控制檔。此選項不適用於 PDB 或 PDB 表空間的時間點還原或 SCN 恢復。</block>
   <block id="4b49aa44ab53622375dd4e4de6f229e3" category="list-text">（可選）啟用「如有需要，請變更資料庫狀態以進行還原和恢復」選項，以允許 Backup and Recovery 根據恢復類型管理資料庫狀態。</block>
-  <block id="4fb05c33c01facc6c181bfeee40ec5ec" category="list-text">您可以選擇啟用「強制就地還原」選項，以使用更快的還原方法還原 SAN/ASM 資料庫，並跳過外部檔案驗證檢查。資料庫和 ASM 磁碟群組將還原到備份建立點。</block>
-  <block id="4efc67368dfd729f9c295744e484fac3" category="list-text">如果要將 PDB 或 PDB 表空間還原到特定時間點或 SCN，請指定外部歸檔日誌檔案的位置。輸入 RMAN 建立輔助執行個體以執行恢復的位置。輸入以「/」開頭的檔案系統路徑或以「+」開頭的 ASM 磁碟群組。使用文字輸入欄位旁的「加號」和「減號」按鈕新增或移除位置。</block>
-  <block id="d76fe5c3d527bffb082aae2a4d6b5558" category="list-text">（可選）啟用「恢復後以讀寫模式開啟資料庫或Container資料庫」選項，以便在還原資料庫後以讀寫模式開啟資料庫。這會使還原的表空間上線。</block>
-  <block id="9470d5c114013f8b3d728de1df5dd487" category="list-text">*前置指令碼與後置指令碼*：</block>
   <block id="17902e09130187fca130b259322f6340" category="list-text">*Prescript*：您可以選擇啟用此選項，並輸入在還原作業之前應執行的指令碼的完整路徑以及該指令碼接受的任何參數。</block>
   <block id="a4aa2f0da5fe920e49b4efa7582a1089" category="list-text">為指令碼選擇一個逾時值。如果指令碼在此時間段內未能執行，還原仍將繼續進行。</block>
   <block id="808c0184b1d838fe3f6240a02adeedf3" category="paragraph">Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
@@ -5946,4 +5933,28 @@
   <block id="96700d751785d80f017bf85fc1a4a76c" category="paragraph">每項備份原則都提供一個「標籤和保留」部分，您可以將其套用至備份檔案。請注意，套用至 Volume 的快照原則必須是 NetApp Backup and Recovery 所識別的原則之一，否則將不會建立備份檔案。</block>
   <block id="6f8cf279072f687ab049a6dc930dfa1d" category="admonition">套用於 Volume 的快照原則必須包含您在複寫原則和備份到物件原則中使用的標籤之一。如果找不到符合的標籤，則不會建立備份檔案。例如，如果您想要建立「每週」複寫 Volume 和備份檔案，則必須使用建立「每週」快照的快照原則。</block>
   <block id="3853002b75aefc21d388f510cae8f516" category="paragraph">「位置」欄位顯示備份檔案（快照）是位於「本機」（來源系統上的快照）、「輔助」（輔助 ONTAP 系統上的複寫 Volume）或「物件儲存」（物件儲存中的備份檔案）。選擇要還原的檔案。</block>
+  <block id="bf550c792f32f60cca4d833c734e3139" category="paragraph">如果需要將 PDB 或表空間還原到特定時間點或 SCN：</block>
+  <block id="6d26fc4748876aad896b3483365ea28f" category="list-text"><block ref="d77f3c9db249e472a92ac4b41ecc4805" prefix="" category="inline-code"></block> 不能選擇進行時間點恢復。</block>
+  <block id="bba24b3818e297fabc67f6f7560b0988" category="list-text">控制檔案還原不能與 PDB 或 PDB 表空間的時間點恢復結合使用。</block>
+  <block id="08b60260a4bc5ba792144d142c950168" category="list-text"><block ref="fa177138f94a7ea01f549b1aa7893d03" prefix=" " category="inline-code"></block>、<block ref="2000a37455e46fd15ee265c2382b9741" prefix=" " category="inline-code"></block> 和 <block ref="269940bcad6fddf5c68d3e67f767c3d1" prefix=" " category="inline-code"></block> 表空間無法選取。</block>
+  <block id="9919b7cad46288ca29f8fb296dd13536" category="list-text">確認資料備份和所需的日誌備份已編入目錄。</block>
+  <block id="0b375c92f006ebc34ffb21da222ac752" category="paragraph">顯示最接近指定日期和時間的快照。</block>
+  <block id="cdb77aa4c72bd58fc3f38eb99937d3d7" category="list-text">（可選）選擇 *View log backups* 以查看相關的日誌備份。</block>
+  <block id="21df2c5f3ea31de3417da5d6b7a5af6f" category="list-text">請確認日誌備份已掛載。</block>
+  <block id="fe30a881b5d0622f2e579194115dc323" category="list-text">如果快照儲存在多個位置，請選擇要使用的來源位置，並新增或審查位置詳細資訊。</block>
+  <block id="1a0861850bbff5a4629682768903a6a8" category="paragraph">顯示指定 SCN 的最接近快照。</block>
+  <block id="190cbdc2fe368e8cdb928c64072a855e" category="paragraph">將顯示最新快照。還原作業將使用所有可用的日誌備份還原到上次的良好狀態。</block>
+  <block id="f7e9cc07ffeb39b44af9c81fc95ee80a" category="paragraph">選擇此選項意味著資料庫將從快照還原，但會跳過恢復（不會套用日誌備份）。</block>
+  <block id="12c36d7d5c6e22f7d7de9e842bd09185" category="paragraph">顯示可用的快照。</block>
+  <block id="97c49bc0b0e47bb6618c6550eaed4bd4" category="list-text">從清單中選取快照，然後選取 *Next*。</block>
+  <block id="84069594ae22604a5263ed16cc5c85d7" category="list-text">在「目標設定」部分，執行以下操作：</block>
+  <block id="a6bd46b772365e5b6c3e3ebcfb5d88ce" category="list-text">對於 RAC 資料庫，請選擇要執行還原的 RAC 節點。此選項僅適用於 RAC 資料庫。</block>
+  <block id="f788e090e936649cf2c5c0ff154c27a9" category="list-text">（可選）啟用「控制檔案」選項，即可同時還原資料庫控制檔。此選項不能用於 PDB 或 PDB 表空間的時間點還原或 SCN 恢復。</block>
+  <block id="79d30138f764cb5a18ef350673cd0630" category="list-text">您可以選擇啟用「強制原地還原」選項，以便在備份後新增了新的資料檔案，或在 LVM 磁碟群組中新增、刪除或重新建立 LUN 時執行原地還原。此選項會覆蓋外部檔案檢查；資料庫恢復將使用您選擇的還原選項進行。</block>
+  <block id="7c47104cd2fa4267b0939b38c887b1e1" category="list-text">如果您要將 PDB 或表空間還原到特定時間點或 SCN，而歸檔日誌不在設定的位置，請在「外部歸檔日誌檔案位置」欄位中指定外部歸檔日誌檔位置。輸入以<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>開頭的檔案系統路徑，或以<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>開頭的 ASM 磁碟群組。使用文字輸入欄位旁的「加號」和「減號」按鈕新增或移除位置。從快照還原且不進行任何恢復操作時，此欄位不會顯示。</block>
+  <block id="4a2e39bd630275c8eae0d833bd13f831" category="list-text">（可選）啟用「恢復後以讀寫模式開啟資料庫或 Container 資料庫」選項，並選擇與還原範圍相符的子選項（從無恢復的快照還原時，這些選項不會顯示）：</block>
+  <block id="1598545f145b423567a9960785cf8619" category="list-text">*所有資料檔案*：恢復後以讀寫模式開啟資料庫或 Container 資料庫。</block>
+  <block id="ebdcd90fa368ddf5616f4eacd06110a8" category="list-text">*PDB 或 PDB 表空間*：恢復後以讀寫模式開啟可插拔資料庫。</block>
+  <block id="e05364f3d78ebbf253882396f17dda00" category="list-text">*非 CDB 表空間*：恢復後將表空間上線。</block>
+  <block id="ee1ada4dd46ef0156c7c521a2fe33302" category="list-text">在「前置指令碼和後置指令碼」部分，執行以下操作：</block>
 </blocks>
