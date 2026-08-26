@@ -34,6 +34,9 @@ image:diagram_cloud_backup_cvo_aws.png["此圖顯示了NetApp Backup and Recover
 
 VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html["了解有關網關端點的更多信息"^] 。
 
+
+NOTE: 如果您使用私有 VPC 端點進行備份或還原資料傳輸，則其優先權高於任何已設定的 Proxy 連線。
+
 支援的 ONTAP 版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
 使用客戶管理的密鑰進行資料加密所需的信息:: 您可以在啟動精靈中選擇自己的客戶管理金鑰進行資料加密，而不是使用預設的 Amazon S3 加密金鑰。在這種情況下，您需要設定加密管理金鑰。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["了解如何使用自己的密鑰"^] 。
 

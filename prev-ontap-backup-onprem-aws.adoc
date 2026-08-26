@@ -44,6 +44,9 @@ image:diagram_cloud_backup_onprem_aws_public.png["此圖顯示了NetApp Backup a
 image:diagram_cloud_backup_onprem_aws_private.png["此圖表顯示了NetApp Backup and Recovery如何透過私有連線與叢集上的磁碟區以及備份檔案所在的 AWS S3 儲存進行通訊。"]
 
 
+NOTE: 如果您使用私有 VPC 端點進行備份或還原資料傳輸，則其優先權高於任何已設定的 Proxy 連線。
+
+
 
 [[prepare-your-console-agent]]
 == 準備控制台代理

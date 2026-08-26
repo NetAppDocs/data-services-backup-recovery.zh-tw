@@ -460,7 +460,7 @@ NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程�
 
 |===
 .Hyper-V 主機的硬體需求
-* 支援獨立主機和 FCI 叢集主機
+* 支援獨立式主機和容錯移轉叢集組態。
 * Hyper-V 主機上的NetApp Hyper-V 插件至少需要 1GB RAM
 * Hyper-V 主機上插件的最低安裝和日誌空間為 5GB
 +
