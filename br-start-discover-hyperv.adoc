@@ -26,6 +26,9 @@ summary: NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您
 新增 Hyper-V 主機資訊，以便 NetApp 備份與還原功能探索虛擬機器。在每個 Console 代理程式中，選擇要探索資源的系統。
 
 
+NOTE: 將儲存系統新增至 NetApp Console 後，請等待幾分鐘再進行資源探索。如果在新增儲存系統後立即進行資源探索，可能會導致探索失敗。
+
+
 NOTE: 當您新增 Hyper-V 主機並發現資源時， NetApp Backup and Recovery會在 Hyper-V 主機上安裝NetApp Hyper-V 插件和NetApp SnapCenter Windows FileSystem 插件，以協助管理和保護虛擬機器。
 
 .步驟

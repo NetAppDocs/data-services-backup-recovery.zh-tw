@@ -5959,4 +5959,5 @@
   <block id="1ee017b4f9f2424d881f97ae99e7a740" category="admonition">如果您使用私有 VPC 端點進行備份或還原資料傳輸，則其優先權高於任何已設定的 Proxy 連線。</block>
   <block id="e9595cd472d344aa937e119b35d5ad88" category="list-text">從 Amazon S3 還原時，請在 ONTAP 叢集中選擇目的地 Volume 所在的 IPspace，輸入您所建立的使用者存取金鑰和秘密金鑰（以授予 ONTAP 叢集存取 S3 儲存桶的權限），並可選擇使用私人 VPC 端點進行安全的資料傳輸。如果使用私人 VPC 端點，其優先權高於任何已設定的 Proxy 連線。</block>
   <block id="abefb361c80a6971ec2a25acc5be3b04" category="list-text">從 Amazon S3 還原時，請在 ONTAP 叢集中選擇目的地 Volume 所在的 IPspace，輸入您所建立的用於授予 ONTAP 叢集存取 S3 儲存桶權限的使用者存取金鑰和秘密金鑰，並可選擇使用私人 VPC 端點進行安全的資料傳輸。如果使用私人 VPC 端點，其優先順序高於任何已設定的 Proxy 連線。<block ref="f17b430f3a657465dd612b247a0f776f" category="inline-link-macro-rx"></block>.</block>
+  <block id="bc2daf193cd172b36617e5109a2ade38" category="admonition">將儲存系統新增至 NetApp Console 後，請等待幾分鐘再進行資源探索。如果在新增儲存系統後立即進行資源探索，可能會導致探索失敗。</block>
 </blocks>

@@ -28,6 +28,9 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 您可以將 VMware NFS 和 VMFS 資料儲存庫和虛擬機器從其內部部署的SnapCenter Plug-in for VMware vSphereNetApp Backup and Recovery庫存。
 
 
+NOTE: 將儲存系統新增至 NetApp Console 後，請等待幾分鐘再進行資源探索。如果在新增儲存系統後立即進行資源探索，可能會導致探索失敗。
+
+
 NOTE: 此版本的NetApp Backup and Recovery僅支援 VMware vCenter，且無法發現vVols或vVols上的 VM。
 
 在匯入過程中， NetApp Backup and Recovery執行下列任務：
