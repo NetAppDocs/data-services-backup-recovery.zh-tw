@@ -5627,7 +5627,6 @@
   <block id="e90dd1da7e3beb4b00ec4d71a841c82a" category="paragraph">使用客體檔案還原，可以從 Windows 或 Linux 客體作業系統上的虛擬機器磁碟 （VMDK） 還原檔案或資料夾。</block>
   <block id="7d11f0d164b3c2f24ac6ebba24d776fd" category="section-title">訪客檔案還原工作流程</block>
   <block id="132ce8102afdf85562e35cc5b0159f1e" category="paragraph">訪客檔案還原包括下列步驟：</block>
-  <block id="fa48228aaf71277e6bc2d05f062b62bb" category="list-text">必須安裝並執行 VMware Tools。</block>
   <block id="b7617062b51a8726ceb7fc1cef74fb14" category="paragraph">NetApp Backup and Recovery 使用來自 VMware Tools 的資訊來建立與 VMware 客體作業系統的連線。</block>
   <block id="b3e82e6ed4e9c1fea48b8efb84514fc0" category="list-text">您附加的虛擬磁碟必須位於 NetApp Backup and Recovery 備份中。</block>
   <block id="7882721ef3524a68e1e9dab8597db0a1" category="list-text">對於檔案名稱包含非英文字元的檔案，必須將其還原至目錄中，而非還原為單一檔案。</block>
@@ -5960,4 +5959,6 @@
   <block id="e9595cd472d344aa937e119b35d5ad88" category="list-text">從 Amazon S3 還原時，請在 ONTAP 叢集中選擇目的地 Volume 所在的 IPspace，輸入您所建立的使用者存取金鑰和秘密金鑰（以授予 ONTAP 叢集存取 S3 儲存桶的權限），並可選擇使用私人 VPC 端點進行安全的資料傳輸。如果使用私人 VPC 端點，其優先權高於任何已設定的 Proxy 連線。</block>
   <block id="abefb361c80a6971ec2a25acc5be3b04" category="list-text">從 Amazon S3 還原時，請在 ONTAP 叢集中選擇目的地 Volume 所在的 IPspace，輸入您所建立的用於授予 ONTAP 叢集存取 S3 儲存桶權限的使用者存取金鑰和秘密金鑰，並可選擇使用私人 VPC 端點進行安全的資料傳輸。如果使用私人 VPC 端點，其優先順序高於任何已設定的 Proxy 連線。<block ref="f17b430f3a657465dd612b247a0f776f" category="inline-link-macro-rx"></block>.</block>
   <block id="bc2daf193cd172b36617e5109a2ade38" category="admonition">將儲存系統新增至 NetApp Console 後，請等待幾分鐘再進行資源探索。如果在新增儲存系統後立即進行資源探索，可能會導致探索失敗。</block>
+  <block id="47e1adf864d09fb0e60489239284fdcf" category="list-text">VMware ESXi 伺服器上的 443 連接埠（HTTPS）必須開啟才能進行雙向通訊。</block>
+  <block id="b8b48a359182777f9c1858fe64bd41cf" category="list-text">VMware Tools 必須安裝在客體作業系統上並執行。</block>
 </blocks>

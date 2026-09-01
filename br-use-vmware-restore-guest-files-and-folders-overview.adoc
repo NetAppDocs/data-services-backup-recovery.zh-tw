@@ -48,7 +48,8 @@ summary: '您可以從 Windows 用戶作業系統上的虛擬機器磁碟 (VMDK)
 
 從 VMDK 還原檔案或資料夾之前，請檢閱所有需求。
 
-* 必須安裝並執行 VMware Tools。
+* VMware ESXi 伺服器上的 443 連接埠（HTTPS）必須開啟才能進行雙向通訊。
+* VMware Tools 必須安裝在客體作業系統上並執行。
 +
 NetApp Backup and Recovery 使用來自 VMware Tools 的資訊來建立與 VMware 客體作業系統的連線。
 
