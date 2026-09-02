@@ -4782,17 +4782,13 @@
   <block id="d2bf4d042aabc15b9ccde353c782a6f2" category="list-text">使用 Microsoft Windows Server 2025 時，不支援保護儲存在 SAN 儲存設備上的第二代虛擬機器。</block>
   <block id="b2d5ba8de92c18cbb9c45e01ad3f5509" category="list-text">還原至備用位置（從主要儲存設備、次要儲存設備和物件儲存）</block>
   <block id="62ff0d9db122207756fd73342a3eb3ad" category="paragraph">NetApp Backup and Recovery 現在支援保護系統中多達 100 個儲存桶（跨不同雲端供應商）的工作負載。每個系統支援超過 6 個儲存桶需要 ONTAP 9.19.1 或更新版本。</block>
-  <block id="a804a09090ab946ea48120427df5be47" category="paragraph">如果您在與網路隔離的環境中（資料庫主機無法透過標準 DNS 存取）使用 NetApp Console 本機部署，則必須暫時修改內部 RKE2 CoreDNS 組態。這可讓 Pod 將特定主機名稱解析為叢集內的 IP 位址，類似於在節點上新增<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block>項目。</block>
-  <block id="d38c5698c3f0a0cc565d84f0583ddbe8" category="admonition">在進行任何變更之前，請檢查現有的 CoreDNS 組態，以避免置換任何現有的自訂設定。使用 RKE2 清單套用此變更，確保由 RKE2 營運者和執行階段一致地管理。</block>
   <block id="0d1c49b7f34131be8c6ddbc862cc359d" category="list-text">盡可能將 HelmChartConfig 檔案置於變更控制之下。</block>
   <block id="feb789eaa0d039f7e4fc241b5a35b268" category="list-text">使用清晰的檔案名稱，以便明確 CoreDNS 置換的目的。</block>
   <block id="1c675544711def39976f57e2f6b7e39d" category="list-text">如果在 Corefile 中看不到預期的 DNS 記錄，請檢查 RKE2 伺服器日誌並確認清單檔案語法。</block>
   <block id="d36d322fa13411cc64a12177b6ad51ce" category="list-text">檢查現有的 CoreDNS 組態，確保您沒有置換現有的變更：</block>
-  <block id="f4edd834d634c666190d7b67f0c12622" category="list-text">複製以下命令區塊並編輯 <block ref="10e11b33e0776f6cd4b1e675accff1f5" prefix=" " category="inline-code"></block> 區域以新增您的靜態 DNS 記錄。這會在 RKE2 清單資料夾中建立一個 HelmChartConfig YAML 檔案，RKE2 會自動套用該檔案以置換 CoreDNS 組態：</block>
   <block id="b893a4548c6b5490f347a2312c465362" category="list-text">驗證 CoreDNS 是否已偵測到變更：</block>
   <block id="ad5eadc57f2e0ed4fdd17752bad0fe52" category="paragraph">如果幾分鐘後變更仍未生效，請重新啟動 CoreDNS 部署，然後再次驗證 Corefile：</block>
   <block id="9e04101c187aa923054a894c988f5aeb" category="list-text">如果在探索資料庫主機後需要移除條目，請執行下列操作：</block>
-  <block id="606b05130da19f4457434aa58ba985b8" category="list-text">從清單資料夾中刪除 HelmChartConfig 檔案。</block>
   <block id="5b25c5946d94965af8af242970d2aee2" category="list-text">重新啟動 CoreDNS 部署：</block>
   <block id="64c0705ecd150a07e521638d5157a4ec" category="doc">一般 NetApp Backup and Recovery 增強功能</block>
   <block id="7700d007f970d2c042d61e3551aa039e" category="list-text">*支援 NetApp Console 本機部署*：此 NetApp Backup and Recovery 版本以預覽狀態支援 NetApp Console 本機部署。</block>
@@ -5961,4 +5957,27 @@
   <block id="bc2daf193cd172b36617e5109a2ade38" category="admonition">將儲存系統新增至 NetApp Console 後，請等待幾分鐘再進行資源探索。如果在新增儲存系統後立即進行資源探索，可能會導致探索失敗。</block>
   <block id="47e1adf864d09fb0e60489239284fdcf" category="list-text">VMware ESXi 伺服器上的 443 連接埠（HTTPS）必須開啟才能進行雙向通訊。</block>
   <block id="b8b48a359182777f9c1858fe64bd41cf" category="list-text">VMware Tools 必須安裝在客體作業系統上並執行。</block>
+  <block id="30683bd981424213f9f341084dacc328" category="paragraph">如果您在與網路隔離的環境中使用 NetApp Console 本地部署，且資料庫主機無法透過標準 DNS 訪問，則需要暫時修改內部 RKE2 CoreDNS 組態。這將使 Pod 能夠將特定主機名稱解析為叢集內的 IP 位址，類似於在節點上的<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block>中新增條目。</block>
+  <block id="68916b141cb1549e4306b1426107693e" category="admonition">在進行任何變更之前，請檢查現有的 CoreDNS 組態和現有的<block ref="821b85d65c91bb0224e76904b78ee646" prefix=" " category="inline-code"></block> HelmChartConfig，以避免置換任何現有的自訂設定。在大多數 NetApp Console 本機部署節點上，此檔案已存在並已包含資源請求。如果該檔案已存在，請勿重新建立；而只需將<block ref="d2c09282f70bae1fe87ea34edd824858" prefix=" " category="inline-code"></block>區塊附加至現有的<block ref="f15029ddf2ec349489f6a578bf8ff002" prefix=" " category="inline-code"></block>即可。使用 RKE2 資訊清單套用此變更，以便 RKE2 營運者和執行階段能夠持續一致地對其進行代管。</block>
+  <block id="c83678dcc36ba7a58a3d2e313cdc5cb2" category="list-text">確認 HelmChartConfig 檔案是否存在：</block>
+  <block id="7cbf1254454bfb83ecf45d67569bb210" category="open-title">如果檔案存在</block>
+  <block id="dd8b91d84403e7c4c2df5612c3deb788" category="list-text">執行以下指令碼，將該<block ref="d2c09282f70bae1fe87ea34edd824858" prefix=" " category="inline-code"></block> 區塊追加到現有 HelmChartConfig 檔案中：</block>
+  <block id="df5298d33ab8b68cf08a5d8265ae6e02" category="list-text">確認 HelmChartConfig 檔案的唯一變更是新增了<block ref="d2c09282f70bae1fe87ea34edd824858" prefix=" " category="inline-code"></block>區塊。</block>
+  <block id="a405e148dd89c6d878f7202bd0acac46" category="open-title">如果檔案不存在</block>
+  <block id="f545e4267a4d131a69797e4afd537a05" category="list-text">編輯以下指令碼的<block ref="10e11b33e0776f6cd4b1e675accff1f5" prefix=" " category="inline-code"></block>區域，並新增您的靜態 DNS 記錄。這會在 RKE2 清單資料夾中建立一個 HelmChartConfig YAML 檔案，RKE2 會自動套用該檔案來置換 CoreDNS 組態：</block>
+  <block id="1c0fab9d442597478403d8226e5a2d16" category="list-text">複製並執行指令碼。</block>
+  <block id="e56134bb955e879714d813d368a791ce" category="open-title">如果您向現有檔案追加內容</block>
+  <block id="492165cbd490b6e6832804b381c9e69e" category="list-text">還原備份的檔案，或僅刪除檔案中的<block ref="d2c09282f70bae1fe87ea34edd824858" prefix=" " category="inline-code"></block>區塊：</block>
+  <block id="7d20cae7d54370385d0972a25df82057" category="paragraph">不要刪除該檔案，因為它包含現有的 RKE2 資源調校。</block>
+  <block id="86c39cd0104d9ef70cce9b5b29ee92f1" category="list-text">檔案恢復後，移除主機條目。過時的條目可能會導致主機探索和排程備份問題。</block>
+  <block id="cbfe0ed3153804b7d4fc2498c31941a1" category="open-title">如果您建立了一個新檔案</block>
+  <block id="0e5396fa21718b76cbd3c1a11136c9dc" category="list-text">從清單資料夾中刪除 HelmChartConfig 檔案：</block>
+  <block id="251aaa9a6d6dee8d3e892c83b282de62" category="list-text">刪除檔案後，移除主機條目。過時的條目可能會導致主機探索和排程備份問題。</block>
+  <block id="9fb67925a7099f4959311f91b028441f" category="section-title">管理可用度群組資訊</block>
+  <block id="e5e0bae15d01ae8a68af97e8ee4181d1" category="paragraph">管理可用度群組資訊以保護資源、編輯保護設定和執行備份：</block>
+  <block id="984cf8529e178e40665ddc1a3284488c" category="section-title">保護可用度群組</block>
+  <block id="b49fedaec38028e3cfd9d84a3c135474" category="paragraph">為可用度群組指派原則，以治理資源保護的排程和保留。</block>
+  <block id="f4c9691991fd542b1f48cc8fcbdef656" category="list-text">選擇 *可用度群組* 索引標籤。</block>
+  <block id="65fa180bca046084f17003e06ddb0b9f" category="list-text">選擇可用度群組。</block>
+  <block id="129dd3dd8cd4324317ed888dd78c8d3e" category="list-text">選擇「保護群組」、「可用度群組」、「執行個體」或「資料庫」索引標籤。</block>
 </blocks>

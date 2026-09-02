@@ -133,6 +133,45 @@ TIP: 若要管理主機，請在「主機」欄中尋找「未管理」狀態。
 
 
 
+[[manage-availability-group-information]]
+== 管理可用度群組資訊
+
+管理可用度群組資訊以保護資源、編輯保護設定和執行備份：
+
+* 保護實例
+* 編輯保護設定
+* 立即備份
+
+
+*必要的 NetApp Console 角色* 備份與恢復超級管理員或備份與恢復備份管理員角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
+
+
+
+[[protect-availability-groups]]
+=== 保護可用度群組
+
+為可用度群組指派原則，以治理資源保護的排程和保留。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
+. 選擇您想要查看的工作負載並選擇*查看*。
+. 選擇 *可用度群組* 索引標籤。
+. 選擇可用度群組。
+. 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*保護*。
+. 選擇一個策略或建立一個新策略。
++
+有關建立原則的詳細資訊，請參閱 link:br-use-policies-create.html["創建策略"]。
+
+. 提供備份前後要執行的指令碼。
++
+** *Pre-script*：輸入指令碼檔案名稱和位置，以便在保護行動開始前自動執行。使用此功能可在保護工作流程開始前執行其他任務或設定。
+** *Post-script*：輸入指令碼檔案名稱和位置，以便在保護行動完成後自動執行。使用此功能可在保護工作流程完成後執行其他任務或設定。
+
+
+
+
+
+
 [[manage-instance-information]]
 == 管理執行個體資訊
 
@@ -265,6 +304,12 @@ TIP: 若要管理主機，請在「主機」欄中尋找「未管理」狀態。
 . 選擇*操作*image:icon-action.png["操作圖示"]圖標，然後選擇*保護*。
 +
 有關建立原則的詳細資訊，請參閱 link:br-use-policies-create.html["創建策略"]。
+
+. 提供備份前後要執行的指令碼。
++
+** *Pre-script*：輸入指令碼檔案名稱和位置，以便在保護行動開始前自動執行。使用此功能可在保護工作流程開始前執行其他任務或設定。
+** *Post-script*：輸入指令碼檔案名稱和位置，以便在保護行動完成後自動執行。使用此功能可在保護工作流程完成後執行其他任務或設定。
+
 
 
 

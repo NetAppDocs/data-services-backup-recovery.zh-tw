@@ -23,10 +23,10 @@ summary: NetApp Backup and Recovery 必須先探索工作負載，才能加以�
 [[configure-dns-for-air-gapped-host-discovery-in-netapp-console-local-deployment]]
 == 在 NetApp Console 本機部署中設定 DNS 以實現氣隙主機探索
 
-如果您在與網路隔離的環境中（資料庫主機無法透過標準 DNS 存取）使用 NetApp Console 本機部署，則必須暫時修改內部 RKE2 CoreDNS 組態。這可讓 Pod 將特定主機名稱解析為叢集內的 IP 位址，類似於在節點上新增 `/etc/hosts`項目。
+如果您在與網路隔離的環境中使用 NetApp Console 本地部署，且資料庫主機無法透過標準 DNS 訪問，則需要暫時修改內部 RKE2 CoreDNS 組態。這將使 Pod 能夠將特定主機名稱解析為叢集內的 IP 位址，類似於在節點上的 `/etc/hosts`中新增條目。
 
 
-IMPORTANT: 在進行任何變更之前，請檢查現有的 CoreDNS 組態，以避免置換任何現有的自訂設定。使用 RKE2 清單套用此變更，確保由 RKE2 營運者和執行階段一致地管理。
+IMPORTANT: 在進行任何變更之前，請檢查現有的 CoreDNS 組態和現有的 `rke2-coredns-config.yaml` HelmChartConfig，以避免置換任何現有的自訂設定。在大多數 NetApp Console 本機部署節點上，此檔案已存在並已包含資源請求。如果該檔案已存在，請勿重新建立；而只需將 `servers:`區塊附加至現有的 `valuesContent`即可。使用 RKE2 資訊清單套用此變更，以便 RKE2 營運者和執行階段能夠持續一致地對其進行代管。
 
 .開始之前
 * 盡可能將 HelmChartConfig 檔案置於變更控制之下。
@@ -41,7 +41,79 @@ IMPORTANT: 在進行任何變更之前，請檢查現有的 CoreDNS 組態，以
 ----
 kubectl -n kube-system get cm rke2-coredns-rke2-coredns -o jsonpath='{.data.Corefile}'
 ----
-. 複製以下命令區塊並編輯  `configBlock` 區域以新增您的靜態 DNS 記錄。這會在 RKE2 清單資料夾中建立一個 HelmChartConfig YAML 檔案，RKE2 會自動套用該檔案以置換 CoreDNS 組態：
+. 確認 HelmChartConfig 檔案是否存在：
++
+[source, shell]
+----
+sudo cat /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
+----
++
+[role="tabbed-block"]
+====
+.如果檔案存在
+--
+.. 執行以下指令碼，將該 `servers:` 區塊追加到現有 HelmChartConfig 檔案中：
++
+[source, shell]
+----
+MANIFEST=/var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
+
+# 1. Back up first
+sudo cp -a "$MANIFEST" "$MANIFEST.bak.$(date +%Y%m%d-%H%M%S)"
+
+# 2. Safety checks: valuesContent must be the last key, no servers: block yet
+grep -n 'servers:' "$MANIFEST"        # must return nothing
+tail -c 1 "$MANIFEST" | od -c | head  # file must end with a newline
+
+# 3. Append ONLY the servers block (nothing above it changes)
+sudo tee -a "$MANIFEST" >/dev/null <<'YAML'
+    servers:
+    - zones:
+      - zone: .
+      port: 53
+      plugins:
+      - name: errors
+      - name: health
+        configBlock: |-
+          lameduck 10s
+      - name: ready
+      - name: kubernetes
+        parameters: cluster.local in-addr.arpa ip6.arpa
+        configBlock: |-
+          pods insecure
+          fallthrough in-addr.arpa ip6.arpa
+          ttl 30
+      # ───────────────────────── EDIT BELOW ─────────────────────────
+      # Static DNS records for hosts the corporate DNS cannot resolve.
+      # Format:  <IP>  <FQDN>  [optional aliases...]
+      # `fallthrough` MUST stay as the last line -- it lets every other
+      # name go to the upstream resolver via the `forward` plugin below.
+      - name: hosts
+        configBlock: |-
+          1.2.3.4 example.domain.com exampleshortname
+          fallthrough
+      # ───────────────────────── EDIT ABOVE ─────────────────────────
+      - name: prometheus
+        parameters: 0.0.0.0:9153
+      - name: forward
+        parameters: . /etc/resolv.conf
+      - name: cache
+        parameters: 30
+      - name: loop
+      - name: reload
+      - name: loadbalance
+YAML
+
+# 4. Confirm the merged result
+sudo cat "$MANIFEST"
+----
+.. 確認 HelmChartConfig 檔案的唯一變更是新增了 `servers:`區塊。
+
+
+--
+.如果檔案不存在
+--
+.. 編輯以下指令碼的 `configBlock`區域，並新增您的靜態 DNS 記錄。這會在 RKE2 清單資料夾中建立一個 HelmChartConfig YAML 檔案，RKE2 會自動套用該檔案來置換 CoreDNS 組態：
 +
 [source, shell]
 ----
@@ -98,6 +170,11 @@ spec:
 YAML
 sudo chmod 600 /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
 ----
+.. 複製並執行指令碼。
+
+
+--
+====
 . 驗證 CoreDNS 是否已偵測到變更：
 +
 [source, shell]
@@ -114,7 +191,21 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 ----
 . 如果在探索資料庫主機後需要移除條目，請執行下列操作：
 +
-.. 從清單資料夾中刪除 HelmChartConfig 檔案。
+[role="tabbed-block"]
+====
+.如果您向現有檔案追加內容
+--
+.. 還原備份的檔案，或僅刪除檔案中的 `servers:`區塊：
++
+[source, shell]
+----
+sudo cp -a /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml.bak.<timestamp> \
+/var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
+----
++
+不要刪除該檔案，因為它包含現有的 RKE2 資源調校。
+
+.. 檔案恢復後，移除主機條目。過時的條目可能會導致主機探索和排程備份問題。
 .. 重新啟動 CoreDNS 部署：
 +
 [source, shell]
@@ -123,6 +214,26 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 ----
 
 
+--
+.如果您建立了一個新檔案
+--
+.. 從清單資料夾中刪除 HelmChartConfig 檔案：
++
+[source, shell]
+----
+sudo rm /var/lib/rancher/rke2/server/manifests/rke2-coredns-config.yaml
+----
+.. 刪除檔案後，移除主機條目。過時的條目可能會導致主機探索和排程備份問題。
+.. 重新啟動 CoreDNS 部署：
++
+[source, shell]
+----
+kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
+----
+
+
+--
+====
 
 
 
