@@ -5980,4 +5980,5 @@
   <block id="f4c9691991fd542b1f48cc8fcbdef656" category="list-text">選擇 *可用度群組* 索引標籤。</block>
   <block id="65fa180bca046084f17003e06ddb0b9f" category="list-text">選擇可用度群組。</block>
   <block id="129dd3dd8cd4324317ed888dd78c8d3e" category="list-text">選擇「保護群組」、「可用度群組」、「執行個體」或「資料庫」索引標籤。</block>
+  <block id="6c2c266ca065311d4804d34cd534ac61" category="paragraph">從歸檔儲存設備還原 Volume 或檔案可能需要額外時間。在備份與還原功能根據所選優先順序重試還原期間，作業監視器中該作業將保持「進行中」狀態。請在「作業監視器」中監視還原；當所有重試嘗試後，作業達到最終狀態（例如「已完成」或「失敗」）時，還原才會完成。除非作業最終失敗，否則請勿啟動另一次還原。</block>
 </blocks>
