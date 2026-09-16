@@ -35,6 +35,9 @@ summary: 啟用 NetApp Backup and Recovery 的預覽和隱藏功能。
 
 
 | `"prioritize-restore": true` | 在 Backup and Recovery Web 使用者介面中，復原工作流程中可以選擇 *Prioritize restore over existing job queue* 選項。在復原工作流程中選擇此選項時，復原作業的優先權將高於其他排隊作業，即使佇列繁忙也能執行。 
+
+
+| `"data-transfer-report": true` | 在 NetApp Backup and Recovery for Volumes 的「報告」標籤下啟用每日備份資料傳輸報告。該報告提供整個環境中的每日備份與複寫資料傳輸活動資訊。 
 |===
 
 

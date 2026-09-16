@@ -1258,8 +1258,6 @@
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">刪除備份</block>
   <block id="d1980609675dd3ea40abaebd4a0989d8" category="doc">使用NetApp Backup and RecoveryVMware 工作負載</block>
   <block id="f1e9f00ae199ca6520d1d2e98102cd84" category="doc">使用NetApp Backup and Recovery發現 VMware 工作負載</block>
-  <block id="dcd2ed119bd25caa1d2e5fbbadd0e260" category="section-title">發現 VMware 工作負載並選擇性地匯入SnapCenter資源</block>
-  <block id="20224d78d1f591aa6ed092cd19c23642" category="paragraph">您可以將 VMware NFS 和 VMFS 資料儲存庫和虛擬機器從其內部部署的SnapCenter Plug-in for VMware vSphereNetApp Backup and Recovery庫存。</block>
   <block id="02bff5613eedf1bcc6846345d0b55fbd" category="admonition">此版本的NetApp Backup and Recovery僅支援 VMware vCenter，且無法發現vVols或vVols上的 VM。</block>
   <block id="fee320715a193861e4f6dc2068899465" category="paragraph">在匯入過程中， NetApp Backup and Recovery執行下列任務：</block>
   <block id="bd8db3845afb35c10e4abfbdf5709291" category="list-text">啟用對 vCenter 伺服器的安全 SSH 存取。</block>
@@ -1268,35 +1266,21 @@
   <block id="f3cd1cfa60b70ab3833f6ec373ec8327" category="list-text">配置資料庫存取。</block>
   <block id="ed39d64277006cf603e473c457526c25" category="list-text">發現 VMware vCenter、資料儲存區和虛擬機器。</block>
   <block id="9ebd805e73003051d15b45a35a4e54e5" category="list-text">顯示在NetApp Backup and Recovery清單頁面中發現的資源。</block>
-  <block id="48f6d5cbb866129c890c2677a75d46eb" category="list-text">如果您已經擁有SnapCenter Plug-in for VMware vSphere，請使用NetApp Backup and Recovery UI 將SnapCenter資源匯入NetApp Backup and Recovery 。</block>
-  <block id="b758229c4311907d27297d6e3812db06" category="admonition">如果您已有SnapCenter插件，請確保在從SnapCenter匯入之前已滿足先決條件。例如，您應該先在NetApp Console中為所有本機SnapCenter叢集儲存體建立系統，然後再從SnapCenter匯入。看<block ref="29f325191bf25e28eb924274ef794dd1" category="inline-link-macro-rx"></block>。</block>
   <block id="36b36cfb3f6fc12df63c864d8e7b40a1" category="list-text">如果您還沒有SnapCenter插件，您仍然可以透過手動新增 vCenter 並執行發現來發現系統中的工作負載。</block>
-  <block id="e3ee523018b6799a0939043eefc9098c" category="section-title">如果尚未安裝SnapCenter插件，請新增 vCenter 並發現資源</block>
   <block id="7248204ed2d72c7c934127b7789c6157" category="list-text">*工作負載類型*：選擇*VMware*。</block>
-  <block id="8d2f5acbe9ae8a7ad87b9b825c0e5f29" category="list-text">*vCenter 設定*：新增新的 vCenter。若要新增新的 vCenter，請輸入 vCenter FQDN 或 IP 位址、使用者名稱、密碼、連接埠和協定。</block>
-  <block id="1b7ab9fadabd410c692af601b6da1bd2" category="list-text">*主機註冊*：VMware 不需要。</block>
-  <block id="448e3bbdf47805516f7b529afcbedb47" category="section-title">如果已安裝SnapCenter插件，請將適用於 VMware 資源的SnapCenter插件匯入NetApp Backup and Recovery</block>
-  <block id="d7df5d5a7771d8964d3ad312a019f2a7" category="list-text">在發現期間，選擇一個選項從SnapCenter插件匯入資源。</block>
   <block id="d0a37c5f3a756f70f149387e5e024455" category="list-text">發現後，從「清單」頁面中選擇一個選項來匯入SnapCenter插件資源。</block>
-  <block id="72512ee3dbbd33b6b0e82862f004f7b4" category="list-text">發現後，從「設定」選單中選擇一個選項來匯入SnapCenter插件資源。有關詳細信息，請參閱<block ref="97d5ee4c1307bc47ebfffa62683db47d" category="inline-link-macro-rx"></block>。VMware 不支援此功能。</block>
   <block id="e68d5688d8ed4428f4698c24ecebe981" category="paragraph">本節描述了一個由兩部分組成的過程：</block>
   <block id="c6f071c40c15c848457f973025ccd0a6" category="list-text">從SnapCenter插件匯入 vCenter 元資料。導入的 vCenter 資源尚未由NetApp Backup and Recovery管理。</block>
-  <block id="cf47887931a3e51685acecf1df31898e" category="list-text">在NetApp Backup and Recovery中啟動選定 vCenter、VM 和資料儲存庫的管理。啟動管理後， NetApp Backup and Recovery會在 Inventory 頁面上將 vCenter 標記為“Managed”，並且能夠備份並還原您匯入的資源。在NetApp Backup and Recovery中啟動管理後，您將不再在SnapCenter外掛程式中管理這些資源。</block>
   <block id="53624320c75e524d23062b211afde11a" category="section-title">從SnapCenter插件匯入 vCenter 元數據</block>
   <block id="a0db4035e526ed9a7d3ab3f54948a1a1" category="paragraph">第一步是從SnapCenter插件匯入 vCenter 元資料。此時，資源尚未由NetApp Backup and Recovery管理。</block>
   <block id="d15a40324af88049d2add38cd8f56009" category="admonition">從SnapCenter外掛程式匯入 vCenter 元資料後， NetApp Backup and Recovery不會自動接手保護管理。為此，您必須明確選擇在NetApp Backup and Recovery中管理匯入的資源。這可確保您已準備好透過NetApp Backup and Recovery備份這些資源。</block>
-  <block id="4fa4bcc2a1f0d681fb390d96f9891a59" category="list-text">在「匯入自」欄位中，選擇「* SnapCenter Plug-in for VMware*」。</block>
   <block id="45ff731338448b957095de0f0c3fcd1f" category="list-text">輸入*VMware vCenter 憑證*：</block>
   <block id="87015fc1c283283c06b5b6f139ba1403" category="list-text">*vCenter IP/主機名稱*：輸入要匯入NetApp Backup and Recovery 的vCenter 的 FQDN 或 IP 位址。</block>
   <block id="83232179998a0e4df8a7fec8b01b073d" category="list-text">*vCenter 連接埠號碼*：輸入 vCenter 的連接埠號碼。</block>
   <block id="bf44275a582b218f2c18fd73a1b49f7d" category="list-text">*vCenter 使用者名稱* 和 *密碼*：輸入 vCenter 的使用者名稱和密碼。</block>
-  <block id="0e262289f889681dd134476e46394c9b" category="list-text">*連接器*：選擇 vCenter 的控制台代理程式。</block>
-  <block id="f8ccd2c36b2459b541ae637dac832e19" category="list-text">輸入* SnapCenter插件主機憑證*：</block>
-  <block id="60b1a925906e7fb4348924a6fdd9149b" category="list-text">*新增憑證*：如果您沒有現有的SnapCenter插件主機憑證，則可以新增憑證。輸入憑證名稱、身份驗證模式、使用者名稱和密碼。</block>
   <block id="7c2e72fe3815fa111632e0f221695e03" category="list-text">選擇“*導入*”來驗證您的條目並註冊SnapCenter插件。</block>
   <block id="17ffe2e72fe7b5b93cc83ba3b6aa34c1" category="paragraph">庫存頁面顯示 vCenter 在NetApp Backup and Recovery中處於未管理狀態，直到您明確選擇管理它。</block>
   <block id="25c0a491dae6caf57d57d941f0eb08d9" category="section-title">管理從SnapCenter插件匯入的資源</block>
-  <block id="4513150785c046bfbcd37a0b9dcb7a35" category="list-text">選取「您想繼續遷移嗎？」複選框並選擇*遷移*。</block>
   <block id="13be03aaa1d065e4e2a3d1cb64d9f254" category="paragraph">清單頁面顯示新管理的 vCenter 資源。</block>
   <block id="eb2d112b017e683992cc9b9b338c90a1" category="paragraph">您可以使用NetApp Backup and Recovery執行與 VMware 工作負載相關的下列任務：</block>
   <block id="4c90ef6c5dc037251bf65afdeeb1ee6c" category="list-text"><block ref="4c90ef6c5dc037251bf65afdeeb1ee6c" category="inline-link-macro-rx"></block></block>
@@ -3587,12 +3571,7 @@
   <block id="24e30755a36f1f0fbf2585a3d6fcea00" category="list-text">在“工作負載”下，選擇“KVM”磁貼。</block>
   <block id="99c78c9137cee80ce48d764854f4f37d" category="paragraph">如果您是第一次登入備份和恢復，並且在控制台中有一個系統但沒有發現任何資源，則會顯示「歡迎使用新的NetApp備份和恢復」頁面，其中包含「發現資源」選項。</block>
   <block id="72caa651e04c375669fa47d6d7c97bd8" category="list-text">如果您尚未將管理平台與備份和復原功能集成，請選擇「新增管理平台」。</block>
-  <block id="e48c46f67dcc12e71756d8f1484fd1e5" category="list-text">*KVM 設定*：透過輸入下列資訊新增新的 KVM 主機：</block>
   <block id="1379fbf6716203ac9b069e9dcb1b630e" category="list-text">*KVM FQDN 或 IP 位址*：輸入主機的 FQDN 或 IP 位址。</block>
-  <block id="a3b2bf747985ecc6d947647708117a50" category="list-text">*憑證*：輸入 KVM 主機的使用者名稱和密碼。</block>
-  <block id="9bf19b226e98ad82718a06ed1be0ccff" category="list-text">*控制台代理*：選擇用於備份和還原與 KVM 主機之間通訊的控制台代理程式。</block>
-  <block id="255d844db697f34dcf46b6abb2370218" category="list-text">*連接埠號碼*：輸入備份和復原與 KVM 主機之間通訊所使用的連接埠。</block>
-  <block id="cba87e6c48ee4064103429e66f87d737" category="list-text">*管理平台*：如果 KVM 主機是受管理的，並且您已將管理平台新增至備份和復原中，請從清單中選擇管理平台。</block>
   <block id="1ab61c2a203a782ffd6293f052fa3198" category="list-text">在“工作負載”下，選擇“Oracle”磁貼。</block>
   <block id="7f924709b4be1415b21d2f13de8768fc" category="section-title">編輯保護群組</block>
   <block id="d866b8b94a3e8b940c5c063a7cf79472" category="paragraph">編輯保護群組以變更其名稱或設定。如果保護群組中的資源發生了變化，您可能需要編輯該保護群組。</block>
@@ -5169,7 +5148,6 @@
   <block id="d15ce5f7b11589a195af27e9552d666f" category="paragraph">在 NetApp Backup and Recovery 中探索 Hyper-V 虛擬機器，以便使用保護原則來保護它們。</block>
   <block id="b2d7b24c3bf71ab6e29740c4642ffafe" category="paragraph">新增 Hyper-V 主機資訊，以便 NetApp 備份與還原功能探索虛擬機器。在每個 Console 代理程式中，選擇要探索資源的系統。</block>
   <block id="b7f882b06eddf2dfd9de57436d956c2c" category="list-text">從 NetApp Console 選單中，選取 *Protection* &gt; *Backup and Recovery*。</block>
-  <block id="c4aea5e44a79c8aa4bb534878de9f3a0" category="paragraph">如果您是第一次登入 NetApp Backup and Recovery，且已在 Console 中擁有系統但尚未探索資源，則會顯示「歡迎使用新的 NetApp Backup and Recovery」活動網頁，其中包含 *探索資源* 選項。</block>
   <block id="f449ed9853e04fc0b05aaa0a461c94c1" category="list-text">選擇 Hyper-V 工作負載磁貼。</block>
   <block id="c8c0b636c4dc30cad0d464be2b47090d" category="paragraph">在 NetApp Backup and Recovery 中探索 Kubernetes 叢集及其工作負載，以便使用保護原則加以保護。</block>
   <block id="6604e60d4f1c2e3c6bc9c63d2ee97067" category="paragraph">在備份與還原清單中，探索環境中的 Kubernetes 叢集和工作負載。新增叢集後，您可以將其註冊到 NetApp Backup and Recovery 中，並探索其應用程式和資源以進行保護。您也可以選擇使用 NetApp Console 本機部署來探索與外部網路隔離的本機 Kubernetes 資源。</block>
@@ -5177,7 +5155,6 @@
   <block id="b5db886dbc4143a50071b971de05c3b6" category="paragraph">備份與還原提供的說明會根據您選擇的安裝類型而變更。如果您使用 NetApp Console 本機部署，則可以選擇用於探索與外部網路連線不相連的氣隙資源的說明。</block>
   <block id="992e1a79c40146226d531b2d54202029" category="paragraph">請按照以下步驟檢視 NetApp 備份與還原儀表板並驗證已探索的資源。</block>
   <block id="d25cc2a23f6d490aa6ca66c1fc0a6982" category="paragraph">在 NetApp 備份與還原中探索 KVM 主機和虛擬機器，以便使用保護原則加以保護。在探索之前，您的 KVM 環境必須由管理平台（例如 Apache CloudStack）進行管理。</block>
-  <block id="64d1830b55112fb89c5efe473a488759" category="paragraph">如果您是第一次登入 NetApp Backup and Recovery，且您的 Console 中已有系統但尚未探索任何資源，則會顯示「歡迎使用新的 NetApp Backup and Recovery」頁面，其中包含*探索資源*選項。</block>
   <block id="d6a34cddcbce1ef6f28243118f9d171b" category="list-text">選擇 KVM 工作負載磁貼。</block>
   <block id="e3720b1dee4abe1712504428b0c4eee1" category="summary">NetApp Backup and Recovery 必須先探索工作負載，才能加以保護。</block>
   <block id="27f6c9f669ba02aa92df4193fd4d3367" category="paragraph">在 NetApp Backup and Recovery 中探索 Oracle Database 工作負載，以便使用備份和 Snapshot 快照技術加以保護。</block>
@@ -5591,9 +5568,6 @@
   <block id="3dd3ba4b63229b475a20f7cd9addb146" category="paragraph">將內部部署 ONTAP 系統中的 VMware 虛擬機器和資料存放區備份到 Amazon Web Services、Azure NetApp Files 或 StorageGRID，以協助保護您的資料。備份會自動產生並儲存在您的公有雲或私有雲帳戶的物件存放區中。</block>
   <block id="39e8552d644f5836bb606e9f024f8213" category="list-text">立即建立隨需備份，備份工作負載。</block>
   <block id="67815c5b8fc21f4677397c47a093cc04" category="paragraph">使用 NetApp Backup and Recovery，從主要或次要快照建立 VMware 虛擬機器的可寫入複本。您可以建立和管理複製的虛擬機器，用於測試、整合和訓練，而不會影響正式作業資料。</block>
-  <block id="0235c606522ad40f43092e88c70da6f4" category="paragraph">在保護運行於 ONTAP 系統上的 VMware 資料儲存和虛擬機器之前，您需要在 NetApp Backup and Recovery 中探索它們。如果您已安裝 SnapCenter Plug-in for VMware vSphere，也可以匯入其備份資料和原則。</block>
-  <block id="df1070d1677eb4e0f80ad6ffbd180001" category="paragraph">如果您尚未安裝 SnapCenter Plug-in for VMware，請新增 vCenter 相關資訊，以便 NetApp Backup and Recovery 能夠探索工作負載。在每個 Console 代理程式中，選擇要探索工作負載的系統。</block>
-  <block id="f0edd8cd666348783317b3a12c204778" category="paragraph">如果您已安裝 SnapCenter Plug-in for VMware，請依照下列步驟將 SnapCenter Plug-in 資源匯入 NetApp Backup and Recovery。Console 會從 Plug-in 中探索 ESXi 主機、資料存放區、虛擬機器和排程，因此您無需重新建立這些資訊。</block>
   <block id="79f1b2505db34bcc40686f104f76593a" category="admonition">如果 SnapCenter 外掛程式已註冊，您可以更新現有的註冊資訊。</block>
   <block id="2a1d91f94990e0b54f21a4a5400e5f85" category="paragraph">從 SnapCenter Plug-in for VMware vSphere 匯入 vCenter 中繼資料後，請在 NetApp Backup and Recovery 中管理資源。選擇管理這些資源後，NetApp Backup and Recovery 即可備份與恢復您匯入的資源。在 NetApp Backup and Recovery 中啟動管理後，您將不再於 SnapCenter Plug-in for VMware vSphere 中管理這些資源。</block>
   <block id="974ab6deb29dd728f277f1b504bbbd65" category="paragraph">選擇管理資源後，NetApp Backup and Recovery 會從 SnapCenter Plug-in for VMware 匯入資源、虛擬機器和原則。資源群組、原則和快照將從外掛程式移轉，並在 NetApp Backup and Recovery 中進行代管。</block>
@@ -5947,7 +5921,6 @@
   <block id="02164fcf87ac25e7b1e8147e2943b53e" category="paragraph">將雲端備份還原到執行 ONTAP 9.13.0 或更高版本的 Cloud Volumes ONTAP 系統，或還原到執行 ONTAP 9.14.1 的本機 ONTAP 系統時，您可以選擇執行「快速還原」作業。快速還原非常適合需要盡快提供 Volume 存取權限的災難恢復場景。快速還原會將備份檔案中的中繼資料還原到 Volume，而不是還原整個備份檔案。對於效能或延遲敏感型應用程式，不建議使用快速還原，且不支援對歸檔儲存設備中的備份執行快速還原作業。</block>
   <block id="a73fb6eabf726bf5ee3f07c45ffe0012" category="list-text">您可以選擇啟用 *Prioritize this restore over existing job queue* 選項，以提高此還原作業的優先權。啟用後，其他正在執行的作業可能會暫停或延遲，以便此還原能夠順利進行。</block>
   <block id="5f02d8d1cae515b7bc981f8e3a14acc4" category="paragraph">返回「還原」儀表板，以便審查還原作業的進度。</block>
-  <block id="0cf2d9f20f0932bf7e81cfd6634a5ced" category="list-text">*主機註冊*：新增新的 Hyper-V 主機時，請輸入主機的 FQDN 或 IP 位址、憑證、Console 代理程式和連接埠號碼。如果 Console 代理程式無法解析 FQDN，請改用 IP 位址。對於容錯移轉叢集，請輸入叢集管理 IP 位址。</block>
   <block id="5d2f99cd43d814823b35af3f0ece474e" category="paragraph">使用 NetApp Backup and Recovery 備份和還原託管在 CIFS 共用區上的獨立式 Hyper-V 虛擬機器、容錯移轉叢集執行個體和 SCVMM 佈建的虛擬機器。</block>
   <block id="ae9414d83e17965302547068ba4057f3" category="list-text">支援獨立式主機和容錯移轉叢集組態。</block>
   <block id="1ee017b4f9f2424d881f97ae99e7a740" category="admonition">如果您使用私有 VPC 端點進行備份或還原資料傳輸，則其優先權高於任何已設定的 Proxy 連線。</block>
@@ -5981,4 +5954,57 @@
   <block id="129dd3dd8cd4324317ed888dd78c8d3e" category="list-text">選擇「保護群組」、「可用度群組」、「執行個體」或「資料庫」索引標籤。</block>
   <block id="6c2c266ca065311d4804d34cd534ac61" category="paragraph">從歸檔儲存設備還原 Volume 或檔案可能需要額外時間。在備份與還原功能根據所選優先順序重試還原期間，作業監視器中該作業將保持「進行中」狀態。請在「作業監視器」中監視還原；當所有重試嘗試後，作業達到最終狀態（例如「已完成」或「失敗」）時，還原才會完成。除非作業最終失敗，否則請勿啟動另一次還原。</block>
   <block id="534cf708a73e1e3ff80e4b70322d78d6" category="paragraph"><block ref="534cf708a73e1e3ff80e4b70322d78d6" category="inline-link-rx"></block></block>
+  <block id="6c302dca9120d9212ecda9d1ad1f74c9" category="paragraph">在此版本中，KVM、Hyper-V 和 VMware 工作負載引入了以下增強功能：</block>
+  <block id="0898522d58ded515e98cbdbeae0b2894" category="paragraph">*VM 主機探索期間的認證資料選擇*：註冊 KVM、Hyper-V 或 VMware 主機時，您現在可以使用已新增至 Backup and Recovery 的認證資料。</block>
+  <block id="51b1f28526e9e7dfdb39548a8b5d4ac0" category="paragraph">*虛擬機器的跨磁碟保護*：對於 CIFS 配置，Backup and Recovery 現在支援保護保護群組中每個虛擬機器所連接的每個磁碟。這包括分佈在多個 ONTAP 磁碟區或 ONTAP 儲存設備系統上的檔案（跨磁碟），以及僅限於單一位置的檔案。</block>
+  <block id="1e62d1b5255654e86ebb8b223345252a" category="section-title">ONTAP Volumes 工作負載增強</block>
+  <block id="705eb27960b89edebb2b2269e939009b" category="paragraph">在此版本中，ONTAP Volumes 工作負載引入了以下預覽增強功能：</block>
+  <block id="921187f214ef75f0b99f59d69af64c46" category="paragraph">*每日備份資料傳輸報告*： NetApp Backup and Recovery for Volumes 現已在「報告」標籤下新增每日備份資料傳輸報告，讓您獲得整個環境中每日備份和複寫資料傳輸活動的可見度。您可以產生整個帳戶或選定儲存設備系統的報告，按日期範圍和保護類型進行篩選，並將結果下載為 CSV 檔案。</block>
+  <block id="6ca40fed8a7133003ac7b662160a7e13" category="paragraph">有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱<block ref="2a59f28eae334d4c500755e30c1cf84e" category="inline-link-rx"></block>。</block>
+  <block id="6670366d68c7a8ab46f10d0e7683eeb5" category="list-text">*Hyper-V 設定*：請執行下列操作：</block>
+  <block id="da0e1eca92a9eb1111443e96b8196d3a" category="list-text">若要新增新的 Hyper-V 主機，請輸入主機的 FQDN 或 IP 位址，然後選擇 Console 代理程式和認證資料。如果 Console 代理程式無法解析 FQDN，請改用 IP 位址。對於容錯移轉叢集，請輸入叢集管理 IP 位址。</block>
+  <block id="fabdd9e2388c21b1d1588e5f54160735" category="list-text">*進階設定*：可選擇輸入 NetApp Hyper-V 外掛的安裝路徑。</block>
+  <block id="c3b6f25d711d6680de1b5933b93726d7" category="list-text">*KVM 設定*：請執行下列操作：</block>
+  <block id="893154d2bbfb66474661f9a0545a1144" category="list-text">如果您尚未為此 KVM 主機儲存認證資料，請選擇 *新增認證資料*。</block>
+  <block id="d6c9f02ce1679400431070286136d97d" category="list-text">輸入下列資訊以新增 KVM 主機：</block>
+  <block id="8b215f293605af71d0430a32a7e80999" category="list-text">*代理程式*：選擇用於 Backup and Recovery 與 KVM 主機之間通訊的 Console 代理程式。</block>
+  <block id="a9c837a95e737168ee3ce1e980c47216" category="list-text">*認證資料*：選擇已儲存的 KVM 主機認證資料。</block>
+  <block id="d41a581fc85315dff70aff8313ea3257" category="list-text">*進階設定*：您可以選擇輸入與 KVM 主機通訊的連接埠，並從清單中選擇主機的管理平台。</block>
+  <block id="6ba9f255707f8a2103b20486c4949029" category="list-text">選擇跨磁碟的行為。目前支援 *始終包含所有跨磁碟*。</block>
+  <block id="f3a516904e0ccca6ef2462dfb7ce6d13" category="admonition">對於 CIFS 配置，Backup and Recovery 會自動保護保護群組中每個 VM 所連接的每個磁碟。這包括分佈在多個 ONTAP 磁碟區或 ONTAP 儲存設備系統上的檔案（跨區磁碟）以及僅限於單一位置的檔案（非跨區磁碟）。對於 SAN 配置，所有非跨區磁碟都將包含在保護群組中。</block>
+  <block id="eb66f05eb35d497da0a423fd13838c97" category="paragraph">您也可以選擇 *建立新原則* 來建立新的保護原則。選擇原則後，將顯示原則詳細資料。</block>
+  <block id="c2a9493df2887bffbf4d321961143b50" category="paragraph">在保護執行於 ONTAP 系統上的 VMware 資料存放區與虛擬機器之前，您需要在 NetApp Backup and Recovery 中探索它們。您也可以從 SnapCenter 匯入備份資料與原則。</block>
+  <block id="56ed800e3e95a86a0d288e29e284d3d6" category="section-title">探索 VMware 工作負載並可選擇匯入 SnapCenter 外掛資源</block>
+  <block id="e8b6f1046eb45e0d7c556fe91f209ff5" category="paragraph">如果您使用內部部署的 SnapCenter Plug-in for VMware vSphere，您可以將 VMware 資料存放區和資源 VM 匯入 NetApp Backup and Recovery。</block>
+  <block id="cb84b0bbbd691a54a50154950c0e836d" category="admonition">NetApp Backup and Recovery 僅支援 VMware vCenter，且不會探索 vVols 或 vVols 上的虛擬機器。</block>
+  <block id="2be89f2d64b748bc3ddbd4eda10bc1c4" category="list-text">如果您已經有 SnapCenter 或適用於 VMware vSphere 的 SnapCenter 外掛，請使用 NetApp Backup and Recovery UI 將 SnapCenter 資源匯入至 NetApp Backup and Recovery。</block>
+  <block id="59f63937cd6da6ec7cfb13fb8668ed43" category="admonition">如果您已經有 SnapCenter 外掛，請在從 SnapCenter 匯入之前，確保您已滿足先決條件。例如，在從 SnapCenter 匯入之前，您應該先在 NetApp Console 中為所有內部部署的 SnapCenter 叢集儲存設備建立系統。請參閱 <block ref="29f325191bf25e28eb924274ef794dd1" category="inline-link-macro-rx"></block>。若要直接從 SnapCenter 主機匯入資料，請參閱 <block ref="ee998d05cd5af30cbe5fb785a79b4f67" category="inline-link-macro-rx"></block>。</block>
+  <block id="9fa2560b9a95740336ffcc8454846563" category="section-title">如果未使用 SnapCenter 外掛，請新增 vCenter 並探索資源</block>
+  <block id="4845b75256c82f5f32280991198ad08e" category="paragraph">如果您尚未安裝 SnapCenter VMware 外掛，請新增 vCenter 資訊，以便 NetApp Backup and Recovery 能夠探索工作負載。在每個 Console 代理程式中，選擇您要探索工作負載的系統。</block>
+  <block id="18246d81fb68cd2343a12805d2791031" category="list-text">*vCenter 設定*：請執行以下操作：</block>
+  <block id="6719804654c600651d2cad23ec96bd88" category="list-text">如果您尚未為此 vCenter 伺服器儲存認證資料，請選擇 *新增認證資料*。</block>
+  <block id="4ba860007747821205fc10f3946288e4" category="list-text">選擇要與此 vCenter 搭配使用的 Console 代理程式。</block>
+  <block id="2e0a4ddd33096232c5d4c768a8314cd9" category="list-text">請輸入帳戶的網域、使用者名稱和密碼。</block>
+  <block id="06ddb25ccec51579cae2ff34e996f429" category="list-text">輸入 vCenter FQDN 或 IP 位址，選擇 Console 代理程式，然後選擇用於向 vCenter 驗證的認證資料。</block>
+  <block id="877a5658dfd839a5b12966f868d9de69" category="list-text">*進階設定*：您可以選擇輸入用於與 vCenter 通訊的連接埠，並啟用自簽憑證。不建議在生產環境中使用自簽憑證。</block>
+  <block id="d732956918570635dce1b2dd5dac6327" category="section-title">將 SnapCenter VMware 外掛資源匯入 NetApp Backup and Recovery</block>
+  <block id="9dec481cd8405cdbd8356bddea37a828" category="paragraph">將資源從 NetApp SnapCenter VMware 外掛匯入至 NetApp Backup and Recovery。在匯入期間，主控台會探索您的 ESXi 主機、資料存放區、VM 及排程，因此您不需要手動重新建立它們。</block>
+  <block id="eaaa8108cf51c6d618f2e2a4a0d4279b" category="list-text">在探索中，選擇從 SnapCenter 外掛匯入資源的選項。</block>
+  <block id="987a4493afe0cd7f8a796c3201ef8369" category="list-text">探索後，從「設定」選單中選擇匯入 SnapCenter 外掛資源的選項。如需詳細資訊，請參閱 <block ref="97d5ee4c1307bc47ebfffa62683db47d" category="inline-link-macro-rx"></block>。</block>
+  <block id="8505a079b03207a95c1bee8a5bb91488" category="list-text">在 NetApp Backup and Recovery 中啟動對選定 vCenters、VM 和資料存放區的管理。啟動管理後，NetApp Backup and Recovery 會在「清單」頁面上將 vCenter 標記為「已管理」，並能夠備份和恢復您匯入的資源。在 NetApp Backup and Recovery 中啟動管理後，您將不再使用 SnapCenter Plug-in 來管理這些資源。</block>
+  <block id="376ec8b3e51e6597fb939c31a3fe0e59" category="list-text">選擇 *設定*。</block>
+  <block id="dde557737b6adddb3b5ac63ab390444f" category="list-text">選取 *從 SnapCenter 匯入 &gt; 從 SnapCenter 匯入*。</block>
+  <block id="0b1c2288e02f81a5abc6efc0ad82c503" category="list-text">在「匯入自」欄位中，選擇 *SnapCenter VMware 外掛 (SCV)*。</block>
+  <block id="a9cd412f9615bdc45608d80d697cbdf9" category="list-text">輸入 *SnapCenter Plug-in for VMware 主機認證資料*：</block>
+  <block id="a0bfb2f62b787250e030fdf21138a6fd" category="list-text">*IP 位址*：輸入 SnapCenter Plug-in for VMware vSphere 的 IP 位址。</block>
+  <block id="a74ddb6f976bda860df11538fe8899ce" category="list-text">*連接埠號碼*：輸入外掛的連接埠號碼。</block>
+  <block id="17dd94ceb07f426452a46f98fc5f7178" category="list-text">*使用者名稱*和*密碼*：輸入您在 OVA 部署期間建立的使用者名稱和密碼。</block>
+  <block id="a446374c4c4c3fc2ce33e7d1111ab1b9" category="list-text">*SSH 密碼*：如果啟用了 SSH，請輸入 root 使用者的 SSH 密碼。</block>
+  <block id="5950f420ea00b053ec6dda54548967ec" category="list-text">*代理程式*：選擇與外掛一起使用的 Console 代理程式。</block>
+  <block id="89e0000dd56bdf10ae2847acdff0e6dd" category="list-text">*新增認證資料*：如果您沒有現有的 vCenter 認證資料，您可以新增認證資料。請輸入以下資訊：</block>
+  <block id="0af523844bb81bb0f65da936b7af72a6" category="list-text">*認證資料名稱*：輸入這組新認證資料的名稱。</block>
+  <block id="92e781ed9b2cbb1d2bb902abf023729d" category="list-text">勾選「是否繼續移轉？」核取方塊，然後選取 *管理*。</block>
+  <block id="8ec423cb544f5a4931b35174a601686c" category="cell"><block ref="a1eba06bd1db60b0b7acd47a98fdd405" prefix="" category="inline-code"></block></block>
+  <block id="def96a092a0c6947fcdadafb96edb659" category="cell">在 NetApp Backup and Recovery for Volumes 的「報告」標籤下啟用每日備份資料傳輸報告。該報告提供整個環境中的每日備份與複寫資料傳輸活動資訊。</block>
+  <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">2026 年 9 月 16 日</block>
 </blocks>

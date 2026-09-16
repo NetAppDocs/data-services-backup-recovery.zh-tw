@@ -1,0 +1,34 @@
+= 一般 NetApp Backup and Recovery 增強功能
+:allow-uri-read: 
+
+
+
+
+[[general-netapp-backup-and-recovery-enhancements]]
+=== 一般 NetApp Backup and Recovery 增強功能
+
+在此版本中，KVM、Hyper-V 和 VMware 工作負載引入了以下增強功能：
+
+*VM 主機探索期間的認證資料選擇*：註冊 KVM、Hyper-V 或 VMware 主機時，您現在可以使用已新增至 Backup and Recovery 的認證資料。
+
+
+
+[[hyper-v-workloads-enhancements]]
+=== Hyper-V 工作負載增強功能
+
+在此版本中，Hyper-V 工作負載引入了以下增強功能：
+
+*虛擬機器的跨磁碟保護*：對於 CIFS 配置，Backup and Recovery 現在支援保護保護群組中每個虛擬機器所連接的每個磁碟。這包括分佈在多個 ONTAP 磁碟區或 ONTAP 儲存設備系統上的檔案（跨磁碟），以及僅限於單一位置的檔案。
+
+有關保護 Hyper-V 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-hyperv-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 Hyper-V 工作負載"]。
+
+
+
+[[ontap-volumes-workloads-enhancement]]
+=== ONTAP Volumes 工作負載增強
+
+在此版本中，ONTAP Volumes 工作負載引入了以下預覽增強功能：
+
+*每日備份資料傳輸報告*： NetApp Backup and Recovery for Volumes 現已在「報告」標籤下新增每日備份資料傳輸報告，讓您獲得整個環境中每日備份和複寫資料傳輸活動的可見度。您可以產生整個帳戶或選定儲存設備系統的報告，按日期範圍和保護類型進行篩選，並將結果下載為 CSV 檔案。
+
+有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["了解使用 NetApp Backup and Recovery 的 ONTAP Volume 保護"]。

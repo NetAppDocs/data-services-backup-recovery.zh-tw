@@ -14,24 +14,24 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-在保護運行於 ONTAP 系統上的 VMware 資料儲存和虛擬機器之前，您需要在 NetApp Backup and Recovery 中探索它們。如果您已安裝 SnapCenter Plug-in for VMware vSphere，也可以匯入其備份資料和原則。
+在保護執行於 ONTAP 系統上的 VMware 資料存放區與虛擬機器之前，您需要在 NetApp Backup and Recovery 中探索它們。您也可以從 SnapCenter 匯入備份資料與原則。
 
 *必要的 NetApp Console 角色* Backup and Recovery 超級管理員。了解link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 
 
-[[discover-vmware-workloads-and-optionally-import-snapcenter-resources]]
-== 發現 VMware 工作負載並選擇性地匯入SnapCenter資源
+[[discover-vmware-workloads-and-optionally-import-snapcenter-plug-in-resources]]
+== 探索 VMware 工作負載並可選擇匯入 SnapCenter 外掛資源
 
 在發現過程中， NetApp Backup and Recovery會分析您組織內的 VMware 工作負載，並評估和匯入現有的保護策略、快照以及備份和復原選項。
 
-您可以將 VMware NFS 和 VMFS 資料儲存庫和虛擬機器從其內部部署的SnapCenter Plug-in for VMware vSphereNetApp Backup and Recovery庫存。
+如果您使用內部部署的 SnapCenter Plug-in for VMware vSphere，您可以將 VMware 資料存放區和資源 VM 匯入 NetApp Backup and Recovery。
 
 
 NOTE: 將儲存系統新增至 NetApp Console 後，請等待幾分鐘再進行資源探索。如果在新增儲存系統後立即進行資源探索，可能會導致探索失敗。
 
 
-NOTE: 此版本的NetApp Backup and Recovery僅支援 VMware vCenter，且無法發現vVols或vVols上的 VM。
+NOTE: NetApp Backup and Recovery 僅支援 VMware vCenter，且不會探索 vVols 或 vVols 上的虛擬機器。
 
 在匯入過程中， NetApp Backup and Recovery執行下列任務：
 
@@ -46,64 +46,68 @@ NOTE: 此版本的NetApp Backup and Recovery僅支援 VMware vCenter，且無法
 
 發現以下列方式發生：
 
-* 如果您已經擁有SnapCenter Plug-in for VMware vSphere，請使用NetApp Backup and Recovery UI 將SnapCenter資源匯入NetApp Backup and Recovery 。
+* 如果您已經有 SnapCenter 或適用於 VMware vSphere 的 SnapCenter 外掛，請使用 NetApp Backup and Recovery UI 將 SnapCenter 資源匯入至 NetApp Backup and Recovery。
 +
 
-NOTE: 如果您已有SnapCenter插件，請確保在從SnapCenter匯入之前已滿足先決條件。例如，您應該先在NetApp Console中為所有本機SnapCenter叢集儲存體建立系統，然後再從SnapCenter匯入。看link:concept-start-prereq-snapcenter-import.html["從SnapCenter匯入資源的先決條件"]。
+NOTE: 如果您已經有 SnapCenter 外掛，請在從 SnapCenter 匯入之前，確保您已滿足先決條件。例如，在從 SnapCenter 匯入之前，您應該先在 NetApp Console 中為所有內部部署的 SnapCenter 叢集儲存設備建立系統。請參閱 link:concept-start-prereq-snapcenter-import.html["從SnapCenter匯入資源的先決條件"]。若要直接從 SnapCenter 主機匯入資料，請參閱 link:br-start-configure.html#import-and-manage-snapcenter-host-resources["匯入並管理SnapCenter主機資源"]。
 
 * 如果您還沒有SnapCenter插件，您仍然可以透過手動新增 vCenter 並執行發現來發現系統中的工作負載。
 
 
 
 
-[[if-snapcenter-plug-in-is-not-already-installed-add-a-vcenter-and-discover-resources]]
-=== 如果尚未安裝SnapCenter插件，請新增 vCenter 並發現資源
+[[if-not-using-the-snapcenter-plug-in-add-a-vcenter-and-discover-resources]]
+=== 如果未使用 SnapCenter 外掛，請新增 vCenter 並探索資源
 
-如果您尚未安裝 SnapCenter Plug-in for VMware，請新增 vCenter 相關資訊，以便 NetApp Backup and Recovery 能夠探索工作負載。在每個 Console 代理程式中，選擇要探索工作負載的系統。
+如果您尚未安裝 SnapCenter VMware 外掛，請新增 vCenter 資訊，以便 NetApp Backup and Recovery 能夠探索工作負載。在每個 Console 代理程式中，選擇您要探索工作負載的系統。
 
 .步驟
 . 從NetApp Console左側導覽中，選擇 *保護* > *備份和還原*。
-+
-如果您是第一次登入備份和恢復，並且在控制台中有一個系統但沒有發現任何資源，則會顯示「歡迎使用新的NetApp備份和恢復」頁面，其中包含「發現資源」選項。
-
 . 選擇*發現資源*。
 . 輸入以下資訊：
 +
 .. *工作負載類型*：選擇*VMware*。
-.. *vCenter 設定*：新增新的 vCenter。若要新增新的 vCenter，請輸入 vCenter FQDN 或 IP 位址、使用者名稱、密碼、連接埠和協定。
+.. *vCenter 設定*：請執行以下操作：
++
+... 如果您尚未為此 vCenter 伺服器儲存認證資料，請選擇 *新增認證資料*。
++
+**** 選擇要與此 vCenter 搭配使用的 Console 代理程式。
+**** 輸入此憑證的名稱。
+**** 請輸入帳戶的網域、使用者名稱和密碼。
+**** 選擇*完成*。
+
+
+... 輸入 vCenter FQDN 或 IP 位址，選擇 Console 代理程式，然後選擇用於向 vCenter 驗證的認證資料。
 +
 
 TIP: 如果要輸入 vCenter 訊息，請輸入 vCenter 設定和主機註冊的資訊。如果您在這裡新增或輸入了 vCenter 訊息，接下來您還需要在進階設定中新增插件資訊。
 
-.. *主機註冊*：VMware 不需要。
+
+
+.. *進階設定*：您可以選擇輸入用於與 vCenter 通訊的連接埠，並啟用自簽憑證。不建議在生產環境中使用自簽憑證。
 
 
 . 選擇*發現*。
-+
-
-TIP: 此過程可能需要幾分鐘。
-
-. 繼續高級設定。
 
 
 
 
-[[if-snapcenter-plug-in-is-already-installed-import-snapcenter-plug-in-for-vmware-resources-into-netapp-backup-and-recovery]]
-=== 如果已安裝SnapCenter插件，請將適用於 VMware 資源的SnapCenter插件匯入NetApp Backup and Recovery
+[[import-snapcenter-plug-in-for-vmware-resources-into-netapp-backup-and-recovery]]
+=== 將 SnapCenter VMware 外掛資源匯入 NetApp Backup and Recovery
 
-如果您已安裝 SnapCenter Plug-in for VMware，請依照下列步驟將 SnapCenter Plug-in 資源匯入 NetApp Backup and Recovery。Console 會從 Plug-in 中探索 ESXi 主機、資料存放區、虛擬機器和排程，因此您無需重新建立這些資訊。
+將資源從 NetApp SnapCenter VMware 外掛匯入至 NetApp Backup and Recovery。在匯入期間，主控台會探索您的 ESXi 主機、資料存放區、VM 及排程，因此您不需要手動重新建立它們。
 
 您可以透過以下方式執行此操作：
 
-* 在發現期間，選擇一個選項從SnapCenter插件匯入資源。
+* 在探索中，選擇從 SnapCenter 外掛匯入資源的選項。
 * 發現後，從「清單」頁面中選擇一個選項來匯入SnapCenter插件資源。
-* 發現後，從「設定」選單中選擇一個選項來匯入SnapCenter插件資源。有關詳細信息，請參閱link:br-start-configure.html["配置NetApp Backup and Recovery"]。VMware 不支援此功能。
+* 探索後，從「設定」選單中選擇匯入 SnapCenter 外掛資源的選項。如需詳細資訊，請參閱 link:br-start-configure.html["配置NetApp Backup and Recovery"]。
 
 
 本節描述了一個由兩部分組成的過程：
 
 . 從SnapCenter插件匯入 vCenter 元資料。導入的 vCenter 資源尚未由NetApp Backup and Recovery管理。
-. 在NetApp Backup and Recovery中啟動選定 vCenter、VM 和資料儲存庫的管理。啟動管理後， NetApp Backup and Recovery會在 Inventory 頁面上將 vCenter 標記為“Managed”，並且能夠備份並還原您匯入的資源。在NetApp Backup and Recovery中啟動管理後，您將不再在SnapCenter外掛程式中管理這些資源。
+. 在 NetApp Backup and Recovery 中啟動對選定 vCenters、VM 和資料存放區的管理。啟動管理後，NetApp Backup and Recovery 會在「清單」頁面上將 vCenter 標記為「已管理」，並能夠備份和恢復您匯入的資源。在 NetApp Backup and Recovery 中啟動管理後，您將不再使用 SnapCenter Plug-in 來管理這些資源。
 
 
 
@@ -117,28 +121,35 @@ TIP: 從SnapCenter外掛程式匯入 vCenter 元資料後， NetApp Backup and R
 
 .步驟
 . 從控制台左側導覽中，選擇*保護*>*備份和還原*。
-. 選擇*庫存*。
-. 從NetApp Backup and Recovery Discover 工作負載資源頁面中，選擇 *從SnapCenter匯入*。
-. 在「匯入自」欄位中，選擇「* SnapCenter Plug-in for VMware*」。
+. 選擇 *設定*。
+. 選取 *從 SnapCenter 匯入 > 從 SnapCenter 匯入*。
+. 在「匯入自」欄位中，選擇 *SnapCenter VMware 外掛 (SCV)*。
+. 輸入 *SnapCenter Plug-in for VMware 主機認證資料*：
++
+如果 SnapCenter 外掛程式已註冊，您可以更新現有的註冊資訊。
+
++
+** *IP 位址*：輸入 SnapCenter Plug-in for VMware vSphere 的 IP 位址。
+** *連接埠號碼*：輸入外掛的連接埠號碼。
+** *使用者名稱*和*密碼*：輸入您在 OVA 部署期間建立的使用者名稱和密碼。
+** *SSH 密碼*：如果啟用了 SSH，請輸入 root 使用者的 SSH 密碼。
+** *代理程式*：選擇與外掛一起使用的 Console 代理程式。
+
+
 . 輸入*VMware vCenter 憑證*：
 +
-.. *vCenter IP/主機名稱*：輸入要匯入NetApp Backup and Recovery 的vCenter 的 FQDN 或 IP 位址。
-.. *vCenter 連接埠號碼*：輸入 vCenter 的連接埠號碼。
-.. *vCenter 使用者名稱* 和 *密碼*：輸入 vCenter 的使用者名稱和密碼。
-.. *連接器*：選擇 vCenter 的控制台代理程式。
-
-
-. 輸入* SnapCenter插件主機憑證*：
+** *現有憑證*：如果選擇此選項，則可以使用已新增的現有憑證。選擇憑證名稱。
+** *新增認證資料*：如果您沒有現有的 vCenter 認證資料，您可以新增認證資料。請輸入以下資訊：
 +
-.. *現有憑證*：如果選擇此選項，則可以使用已新增的現有憑證。選擇憑證名稱。
-.. *新增憑證*：如果您沒有現有的SnapCenter插件主機憑證，則可以新增憑證。輸入憑證名稱、身份驗證模式、使用者名稱和密碼。
+*** *認證資料名稱*：輸入這組新認證資料的名稱。
+*** *vCenter IP/主機名稱*：輸入要匯入NetApp Backup and Recovery 的vCenter 的 FQDN 或 IP 位址。
+*** *vCenter 使用者名稱* 和 *密碼*：輸入 vCenter 的使用者名稱和密碼。
+*** *vCenter 連接埠號碼*：輸入 vCenter 的連接埠號碼。
+
+
 
 
 . 選擇“*導入*”來驗證您的條目並註冊SnapCenter插件。
-+
-
-NOTE: 如果 SnapCenter 外掛程式已註冊，您可以更新現有的註冊資訊。
-
 
 
 .結果
@@ -157,7 +168,7 @@ NOTE: 如果 SnapCenter 外掛程式已註冊，您可以更新現有的註冊�
 . 在「清單」頁面中，選取您要讓 NetApp Backup and Recovery 管理的已匯入 vCenter。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*顯示工作量詳情。
 . 從「庫存」>「工作負載」頁面，選擇「動作」圖示 image:../media/icon-action.png["操作選項"] > *管理*，以開啟「管理 vCenter」頁面。
-. 選取「您想繼續遷移嗎？」複選框並選擇*遷移*。
+. 勾選「是否繼續移轉？」核取方塊，然後選取 *管理*。
 
 
 .結果
@@ -165,7 +176,8 @@ NOTE: 如果 SnapCenter 外掛程式已註冊，您可以更新現有的註冊�
 
 
 
-==== 繼續存取NetApp Backup and Recovery儀表板
+[[continue-to-the-netapp-backup-and-recovery-dashboard]]
+=== 繼續存取NetApp Backup and Recovery儀表板
 
 . 若要顯示 Dashboard，請從備份與恢復選單中選擇 *Dashboard*。
 . 檢討資料保護的健康狀況。處於危險中或受保護的工作負載的數量會根據新發現、受保護和備份的工作負載而增加。
