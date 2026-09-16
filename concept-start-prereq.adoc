@@ -123,7 +123,7 @@ https://forms.cloud.microsoft/pages/responsepage.aspx?id=oBEJS5uSFUeUS8A3RRZbOmN
 
 在 Backup and Recovery 中保護工作負載之前，您需要將 ONTAP 儲存系統新增至 Console。
 
-https://docs.netapp.com/us-en/console-local/task-discover-storage.html["在 NetApp Console 本地部署中新增儲存設備"^]
+https://docs.netapp.com/us-en/console-local/task-add-systems.html["在 NetApp Console 本地部署中新增儲存設備"^]
 
 
 

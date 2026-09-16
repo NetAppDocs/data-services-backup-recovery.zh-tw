@@ -4876,7 +4876,6 @@
   <block id="29baeb7c31a3e708d97805f86fcb505a" category="inline-link">填寫預覽報名表</block>
   <block id="4d405e082b9036b99ea8ef4d4c6b3cae" category="paragraph"><block ref="570de0e604bd7f8002cc6704e0146ea7" category="inline-link-rx"></block></block>
   <block id="a3b49aeb70a4060b1c36c4a694debc5c" category="inline-link">在 NetApp Console 本地部署中新增儲存設備</block>
-  <block id="de0f709d7b0812e121e9fa6bdb8b87b3" category="paragraph"><block ref="de0f709d7b0812e121e9fa6bdb8b87b3" category="inline-link-rx"></block></block>
   <block id="5867ad8a560196a64df2278876df70c2" category="paragraph"><block ref="fd61760e9709a64e2426151a909b6045" category="inline-link-macro-rx"></block>。</block>
   <block id="83524f1d1d58a585ea5008790d8e85cf" category="paragraph">了解身分和存取管理，然後為使用者設定執行其任務所需的適當權限。</block>
   <block id="acb0fa18e6cbdd062b1c342d22b5d7e9" category="inline-link">開始使用 NetApp Console 本機部署中的身分識別與存取管理</block>
@@ -5981,4 +5980,5 @@
   <block id="65fa180bca046084f17003e06ddb0b9f" category="list-text">選擇可用度群組。</block>
   <block id="129dd3dd8cd4324317ed888dd78c8d3e" category="list-text">選擇「保護群組」、「可用度群組」、「執行個體」或「資料庫」索引標籤。</block>
   <block id="6c2c266ca065311d4804d34cd534ac61" category="paragraph">從歸檔儲存設備還原 Volume 或檔案可能需要額外時間。在備份與還原功能根據所選優先順序重試還原期間，作業監視器中該作業將保持「進行中」狀態。請在「作業監視器」中監視還原；當所有重試嘗試後，作業達到最終狀態（例如「已完成」或「失敗」）時，還原才會完成。除非作業最終失敗，否則請勿啟動另一次還原。</block>
+  <block id="534cf708a73e1e3ff80e4b70322d78d6" category="paragraph"><block ref="534cf708a73e1e3ff80e4b70322d78d6" category="inline-link-rx"></block></block>
 </blocks>
