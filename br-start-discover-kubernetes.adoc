@@ -39,13 +39,27 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您使用
 
 . 選擇 *Kubernetes* 工作負載類型。
 . 輸入叢集名稱並選擇要與叢集搭配使用的 Console 代理程式。
+. （可選）選擇一個資料夾或專案，以確定此叢集的存取控制應用範圍。如果未選擇資料夾或專案，則會在組織層級新增叢集 IAM 資源：
++
+** *資料夾*：選擇此選項可在資料夾層級控制使用者對叢集資源的存取，並從清單中選擇資料夾。
++
+
+NOTE: 如果 Kubernetes 叢集或命名空間與資料夾關聯，使用者還需要擁有右上角專案選擇器中所選專案的 *Backup and Recovery viewer* 角色。此專案層級的存取可讓使用者開啟 Backup and Recovery 首頁。在資料夾層級指派的角色（例如 Backup and Recovery backup admin）決定了使用者進入工作負載頁面後可以執行的操作，但角色本身並不會授予對頁面的存取。請參閱 link:br-use-manage-kubernetes-access-control.html["管理 Kubernetes 資源存取"] 以取得更多資訊。
+
+** *專案*：選擇此選項可在專案層級控制使用者對叢集資源的存取，然後從清單中選擇一個專案。
++
+https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-management.html#netapp-console-organizational-components["深入瞭解"^] 關於 NetApp Console 中的組織元件。
+
+
+
+. 選擇 *產生安裝命令*。
 +
 備份與還原提供的說明會根據您選擇的安裝類型而變更。如果您使用 NetApp Console 本機部署，則可以選擇用於探索與外部網路連線不相連的氣隙資源的說明。
 
 . 選擇安裝類型以檢視在 Kubernetes 叢集上安裝 Trident Protect 的說明：
 +
-** 選擇「已連線」以探索具有外部網路連線的叢集。
-** 選擇 *Air-gapped* 以探索沒有外部網路連線的叢集。
+** 選擇 *已連線* 以探索具有外部網路連線的叢集。這些說明是專為已連線的叢集所設計。
+** 選擇 *Air-gapped* 以探索沒有外部網路連線的叢集。這些說明專門針對實體隔離（離線）叢集。
 +
 [role="tabbed-block"]
 ====

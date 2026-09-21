@@ -1,0 +1,17 @@
+= Kubernetes 工作負載增強功能
+:allow-uri-read: 
+
+
+
+
+[[kubernetes-workloads-enhancements]]
+=== Kubernetes 工作負載增強功能
+
+在此版本中、Kubernetes 工作負載引入了以下增強功能：
+
+* *Trident Protect 26.09*：此版本包含 Trident Protect 26.09。
+* *叢集和命名空間粒度的角色存取控制*：在 Kubernetes 叢集探索期間，您可以透過選擇要與新叢集關聯的專案或資料夾來控制對資源的存取。您也可以註冊特定的命名空間以進行存取控制。這可在叢集或命名空間層級實現更細微的存取控制。
+* *還原檔案和資料夾*：您現在可以從基於 Kubernetes VM 的應用程式備份中還原或下載特定的檔案和資料夾。
+
+
+有關保護 Kubernetes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 Kubernetes 工作負載"]。

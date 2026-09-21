@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: br-use-restore-kubernetes-files-folders.html 
+keywords: backing up, restoring, back up, backup, file, folder, files and folders, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
+summary: NetApp Backup and Recovery 可讓您還原和下載從基於 VM 的應用程式備份的檔案和資料夾。 
+---
+= 使用 NetApp Backup and Recovery 還原或下載基於虛擬機器的應用程式檔案和資料夾
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+還原或下載從以 VM 為基礎的 Kubernetes 應用程式備份的檔案和資料夾。若要還原或下載檔案和資料夾，您至少需要一個還原點，且 VM 必須具有受支援檔案系統的分割區。目前，您只能從本機快照還原和下載。
+
+支援的來賓作業系統和版本包括：
+
+* *Windows*：Windows Server 2022、Windows 10、Windows 11
+* *Linux*：Ubuntu 22.04、Red Hat Enterprise Linux 9、Fedora 39、CentOS Stream 9、openSUSE Leap 15.6
+
+
+支援的檔案系統包括：
+
+* BTRFS
+* exFAT
+* ext4
+* NTFS
+* XFS
+
+
+*必備的 NetApp Console 角色*
+
+Backup and Recovery 超級管理員或 Backup and Recovery 還原管理員。link:reference-roles.html["了解NetApp Backup and Recovery存取角色"]. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^].
+
+
+
+[[restore-vm-files-and-folders-from-a-vm-based-application]]
+== 從基於 VM 的應用程式還原 VM 檔案和資料夾
+
+當您需要將特定檔案或資料夾恢復至基於 VM 的應用程式，而無需還原整個應用程式時，可以從還原點還原基於 VM 的檔案和資料夾。預設情況下，現有檔案會被覆寫。
+
+.開始之前
+從基於 VM 的應用程式還原檔案和資料夾之前，請確認目的地 VM 符合下列要求：
+
+* 目的地 VM 正在執行，並且具有 IP 位址。
+* 使用者可以寫入還原目的地。
+* SSH 已啟用，並使用密碼驗證（不支援僅金鑰登入）。請確認 Linux 目的地主機上的 SSH 服務已啟用，且 Windows 目的地主機上已安裝並啟用 OpenSSH 伺服器。
+
+
+.步驟
+. 在 NetApp Backup and Recovery 選單中，選取 *還原*。
+. 從清單中選擇一個 Kubernetes 應用程式，然後選擇該應用程式的 *View and Restore* 。
++
+出現還原點清單。
+
+. 選擇還原點的 *Actions* image:icon-action.png["操作圖示"] 圖示，然後開啟 *還原檔案和資料夾* 功能表。
+. 選擇要從中還原的來源位置（目前僅支援快照）。
+. 從恢復點選擇虛擬機器，瀏覽其檔案和資料夾。
+. 選擇“下一步”。
++
+檔案瀏覽器出現。
+
+. 瀏覽檔案和資料夾列表，選擇要還原的檔案和資料夾。
++
+開啟分區即可瀏覽其中的檔案和資料夾。選取要還原的檔案或資料夾的核取方塊後，該檔案或資料夾將會新增至右側的「已選取」清單。
+
+. 完成後，選擇 *Next*。
+. 選擇 *傳輸至 VM* 傳輸模式。
+. 選擇目的地設定：
++
+** *還原至原始 VM*：啟用此選項以還原至原始虛擬機器。
++
+*** *還原到備份中的相同路徑*：啟用此選項以還原到備份中使用的相同路徑。
+*** *備用路徑*：若要還原到其他路徑，請啟用此選項並輸入首選路徑。
+
+
+** *還原至備用 VM*：啟用此選項可還原至叢集中的其他虛擬機器。從清單中選擇一個 VM，然後輸入已還原檔案或資料夾的目的地路徑。
+
+
+. 在 *來賓虛擬機器認證資料* 部分中，選取來賓 VM 的認證資料。
++
+如果您尚未為此來賓 VM 新增認證資料，請選擇 *新增認證資料* 為來賓 VM 新增新的認證資料。新增來賓 VM 認證資料後，新認證資料會顯示在認證資料清單中，您可以選擇它。這些認證資料對來賓 VM 而言是唯一的，並且可供使用相同 Console 代理程式的任何叢集重複使用。
+
+. 選擇“下一步”。
+. 檢查並確認檔案或資料夾還原設定。
+. 選擇*恢復*。
+
+
+
+
+[[download-kubernetes-vm-files-and-folders]]
+== 下載 Kubernetes VM 檔案和資料夾
+
+當您不想將檔案和資料夾還原至以 VM 為基礎的應用程式，而是想將其儲存至本機電腦時，可以從還原點下載檔案和資料夾。下載的檔案和資料夾會儲存為單一 .tar 歸檔。下載檔案和資料夾不需要來賓 VM 的認證資料。
+
+.步驟
+. 在 NetApp Backup and Recovery 選單中，選取 *還原*。
+. 從清單中選擇一個 Kubernetes 應用程式，然後選擇該應用程式的 *View and Restore* 。
++
+出現還原點清單。
+
+. 選擇還原點的 *Actions* image:icon-action.png["操作圖示"] 圖示，然後開啟 *還原檔案和資料夾* 功能表。
+. 選擇要下載的來源位置（目前僅支援快照）。
+. 從恢復點選擇虛擬機器，瀏覽其檔案和資料夾。
+. 選擇“下一步”。
++
+檔案瀏覽器出現。
+
+. 瀏覽檔案和資料夾清單，並選擇要下載的檔案和資料夾。
++
+開啟分區即可瀏覽其中的檔案和資料夾。選取要下載的檔案或資料夾的核取方塊後，該檔案或資料夾將會新增至右側的「已選取」清單。
+
+. 完成後，選擇 *Next*。
+. 選擇 *下載檔案* 傳輸模式。
+. 選擇“下一步”。
+. 檢閱並確認檔案或資料夾下載設定。
+. 選擇*恢復*。
++
+您的網頁瀏覽器會處理下載；請將 .tar 歸檔儲存到您的本機。
+
+

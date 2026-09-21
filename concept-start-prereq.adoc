@@ -416,6 +416,7 @@ NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程�
 ** 確保 Kubernetes 叢集、Trident Protect Connector 和 Trident Protect Proxy 之間的出站方向 TCP 連接埠 443 未被過濾。
 
 
+* 要從基於虛擬機器的應用程式還原檔案和資料夾，需要使用 SSH。請確認 Linux 目的地主機上已啟用 SSH 服務，且 Windows 目的地主機上已安裝並啟用 OpenSSH 伺服器。
 
 
 
