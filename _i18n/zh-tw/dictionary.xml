@@ -6072,102 +6072,36 @@
   <block id="ec893dccc7ac6d8784a958bfecf4c77c" category="list-text">檢閱並確認檔案或資料夾下載設定。</block>
   <block id="7f23c16aa83f6a964740b81d87655f97" category="paragraph">您的網頁瀏覽器會處理下載；請將 .tar 歸檔儲存到您的本機。</block>
   <block id="90ca43420c8056d84e6e779edc155a8e" category="list-text">要從基於虛擬機器的應用程式還原檔案和資料夾，需要使用 SSH。請確認 Linux 目的地主機上已啟用 SSH 服務，且 Windows 目的地主機上已安裝並啟用 OpenSSH 伺服器。</block>
-  <block id="d4184d6f2694971a164a302498e466fd" category="paragraph">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD == 2026年9月16日</block>
-  <block id="70a78291e1631b6cde41e3ade59523c8" category="paragraph">== 2026年9月21日</block>
-  <block id="a407b07e11f8594de68b112c2830fda6" category="paragraph">=== Kubernetes 工作負載增強功能 在此版本中，Kubernetes 工作負載引入了以下增強功能：</block>
-  <block id="89b0b0973ed7d73d233126a750ddfd6b" category="paragraph">有關保護 Kubernetes 工作負載的詳細資訊，請參閱<block ref="1288e5e7d4fc4b4cb3f5e18b91f79147" category="inline-link-rx"></block>。&gt;&gt;&gt;&gt;&gt;&gt;&gt; 13d089e3cffcfba837d21c436e1c43e2f3068e74</block>
-  <block id="8c728109c4958c7277d43ffe29c8ef0a" category="paragraph">== 2026 年 8 月 17 日</block>
-  <block id="6d069869f2c6037ee8457ac4c7624330" category="paragraph">=== Hyper-V 工作負載增強功能 在此版本中，Hyper-V 工作負載引入了以下增強功能：</block>
-  <block id="c3c5707bca281a527a83cf55e71d695a" category="paragraph">=== Oracle Database 工作負載增強 在此版本中，Oracle Database 工作負載引入了以下增強功能：</block>
-  <block id="b54e959e87bb5698a736e59d6f5a002d" category="paragraph">== 2026年8月10日</block>
-  <block id="f287b5654466c3abdeb336ac00d4d8f1" category="paragraph">=== 一般 NetApp Backup and Recovery 增強功能</block>
-  <block id="a82be18251af529c0b49e572ccfd11f9" category="paragraph">=== VMware 工作負載增強功能 在此版本中，VMware 工作負載引入了以下增強功能：</block>
-  <block id="ac971325f67b7b3a698cbc8351dcde0b" category="paragraph">=== ONTAP Volumes 工作負載增強功能 在此版本中，ONTAP Volumes 工作負載引進了下列增強功能：</block>
-  <block id="d09d785bf301546672ec03c2b0c11bfa" category="paragraph">== 2026年7月13日</block>
-  <block id="53f516dbc86d14a7304ee1e88bd3b704" category="paragraph">=== 增強對所有工作負載的多儲存桶支援 NetApp Backup and Recovery 現在支援保護系統中的工作負載，跨不同的雲端供應商最多可達 100 個儲存桶。需要 ONTAP 9.19.1 或更新版本，才能支援每個系統超過 6 個儲存桶。</block>
-  <block id="6c6621b112cd44e3f19750e5a39791d9" category="paragraph">== 2026年6月15日</block>
-  <block id="40b307f05c7032c9f85e40d510400893" category="paragraph">== 2026年6月8日</block>
-  <block id="f8ec275b7730fc2e595ba65b1c058574" category="paragraph">=== ONTAP Volumes 工作負載增強功能 在此版本中，ONTAP Volumes 工作負載引進了下列增強功能：</block>
-  <block id="4ec67842f40ea54ea5b438a562453cf1" category="paragraph">=== Hyper-V 工作負載增強功能 在此版本中，Hyper-V 工作負載引入了以下增強功能：</block>
-  <block id="dce1d5e7ae21e20ee89f0b1f101c9427" category="paragraph">=== VMware 工作負載增強功能 在此版本中，VMware 工作負載推出了下列增強功能：</block>
-  <block id="b1a3c2a41bb4bb53c561a85ae0cf1248" category="paragraph">== 2026年5月11日</block>
-  <block id="6f53909f8036ed38d1032aa4b3944e9e" category="paragraph">=== KVM 工作負載增強功能 在此版本中，KVM 工作負載引入了以下增強功能：</block>
-  <block id="ccc91e40b552042057b233583604db54" category="paragraph">=== Oracle Database 工作負載增強功能 在此版本中，Oracle Database 工作負載引進了下列增強功能：</block>
-  <block id="17be7a4c323a9fc3fab615c02397fd9f" category="paragraph">== 2026年5月5日</block>
-  <block id="f16933ec3d316d5e96a1236163dfb36d" category="paragraph">== 2026年4月20日</block>
-  <block id="b72d8649b2b356cbe5babbf6579add93" category="paragraph">== 2026年4月13日</block>
-  <block id="9126c21d90c9d7085f75c4d7f247aab6" category="paragraph">=== Kubernetes 工作負載增強功能 在此版本中，Kubernetes 工作負載引進了下列保護原則增強功能：</block>
-  <block id="7e78fd6a69cbbc1247db21cd6c8e13e5" category="paragraph">=== KVM 工作負載增強功能 在此版本中，KVM 工作負載引進了下列增強功能：</block>
-  <block id="f337e8ca08eaa583042989c10ca7899d" category="paragraph">== 2026年3月31日</block>
-  <block id="0815409b15848adeffaa0d8a922efd2f" category="paragraph">=== Oracle Database 工作負載增強功能 在此版本中，Oracle Database 工作負載引入了以下增強功能：</block>
-  <block id="4ae8b6ebbea1364ad8203f39139a37d8" category="paragraph">== 2026年3月16日</block>
-  <block id="51bb72becbf87859f54a607272e1a89b" category="paragraph">== 2026年3月9日</block>
-  <block id="67c4fddfe3106e9875c00dbee11011c7" category="paragraph">=== ONTAP Volumes 工作負載增強功能 在此版本中，ONTAP Volumes 工作負載引進了下列增強功能：</block>
-  <block id="cfb83f51d6065f322a228e358fc2f05c" category="paragraph">=== VMware 工作負載增強功能 在此版本中，VMware 工作負載引進了下列增強功能：</block>
-  <block id="fba7dd747540d75dba48cab698c23888" category="paragraph">== 2026年2月23日</block>
-  <block id="ec22006b7033685da69327f9cacc8d52" category="paragraph">=== 正式版（GA）中支援的 KVM 工作負載 NetApp Backup and Recovery 現已正式（GA）支援 KVM 工作負載。</block>
-  <block id="c5722c71a913190d380bf04e7a6ed4c8" category="paragraph">=== 支援正式發布（GA）的 Kubernetes 工作負載 Kubernetes 工作負載支援現已在 NetApp Backup and Recovery 中正式發布（GA）。此版本的 Kubernetes 工作負載也引進了下列增強功能：</block>
-  <block id="af3efc79adefb74a231f94f276e2ba5a" category="paragraph">== 2026年2月9日</block>
-  <block id="216eef97ecaa45079d18b2d34115bf4f" category="paragraph">=== Microsoft Hyper-V 工作負載現已在正式版（GA）中提供支援 Microsoft Hyper-V 工作負載支援現已在 NetApp Backup and Recovery 中正式推出（GA）。</block>
-  <block id="11e010e32e419136b508c8eef8c92091" category="paragraph">=== VMware 工作負載現已在正式版（GA）中支援 VMware 工作負載支援現已在 NetApp Backup and Recovery 中正式推出（GA）。</block>
-  <block id="8dd0df63c0a95649c686776beb799237" category="paragraph">=== Kubernetes 工作負載增強功能 此版本的 Kubernetes 工作負載引入了以下增強功能：</block>
-  <block id="9cc5423dda6fd5f38f97ac0bdeff0f58" category="paragraph">=== Oracle Database 工作負載增強功能 此版本的 Oracle Database 工作負載引進了下列增強功能：</block>
-  <block id="2d659e9a280c65c8deb8cc284fe3e14b" category="paragraph">== 2026年1月19日</block>
-  <block id="6fe165085cb2c3700be8e33e42e78a4a" category="paragraph">=== ONTAP Volume 工作負載增強功能 此版本的 ONTAP Volume 工作負載引入了以下增強功能：</block>
-  <block id="31297f3613c2e7b4115c474b28b1bff4" category="paragraph">=== VMware 工作負載增強功能 此版本的 VMware 工作負載引入了以下增強功能：</block>
-  <block id="cd89288e9d9f0858cc62aea350694825" category="paragraph">=== Hyper-V 工作負載預覽增強功能 此版本的 Hyper-V 工作負載引入了以下增強功能：</block>
-  <block id="17587842376df599ec875a3e9d797fdb" category="paragraph">=== KVM 工作負載預覽增強功能</block>
-  <block id="6e9768faae23340967eb21cf6919a719" category="paragraph">== 2025年12月8日</block>
-  <block id="a67d7f93f01478c246c7ca4cf3e556f8" category="paragraph">=== VMware 工作負載預覽版增強功能 VMware 工作負載預覽版本引入了以下增強功能：</block>
-  <block id="c39569cae750214b7a10df9d4fc733c8" category="paragraph">== 2025年10月6日</block>
-  <block id="442a41c8c8e85223fb05ea3c47074d13" category="paragraph">=== BlueXP 備份與還原現已更名為 NetApp Backup and Recovery</block>
-  <block id="803d3c219b80ad02de97580ab3a0aa72" category="paragraph">=== BlueXP 現在是 NetApp Console</block>
-  <block id="9c1f0b5f236d9f3bfe8051ad4f458d03" category="paragraph">=== Hyper-V 工作負載支援（私人預覽版）</block>
-  <block id="6ed94356caa3f2763b710210e9cc58e0" category="paragraph">=== KVM 工作負載支援（私人預覽版）</block>
-  <block id="a1c0d1219a2e15147d875bb6a67849c4" category="paragraph">=== Kubernetes 預覽版增強功能 Kubernetes 工作負載預覽版本引進了下列增強功能：</block>
-  <block id="a618eb256af85c299727bbfbd2b6522d" category="paragraph">=== VMware 預覽版增強功能 VMware 工作負載的預覽版本引進了下列增強功能：</block>
-  <block id="f5cdc7264c2c276ec322a71e23b24df2" category="paragraph">=== Oracle Database 工作負載支援（私人預覽版）</block>
-  <block id="b474bc0b0a63b4bbc898ae1fe117f1ba" category="paragraph">=== ONTAP Volume 工作負載增強功能 此版本的 ONTAP Volume 工作負載引入了以下增強功能：</block>
-  <block id="d637bd8fac0a994563b26e03c7073dca" category="paragraph">== 2025年8月25日</block>
-  <block id="ada048348a523ff085b1b54571c32450" category="paragraph">=== 支援在預覽版中保護 VMware 工作負載</block>
-  <block id="dcda6e92dec31087dfd18abb09cd8a8b" category="paragraph">=== 適用於 AWS、Azure 和 GCP 的高效能索引現已正式推出</block>
-  <block id="473aeee1269d3ae3a032ccecc98b140a" category="paragraph">== 2025年8月12日</block>
-  <block id="25a29f850eda37d86174a804209256e7" category="paragraph">=== 正式版（GA）中支援的 Microsoft SQL Server 工作負載</block>
-  <block id="19e2d12956734eb717874b0c2525f1c7" category="paragraph">=== ONTAP Volume 工作負載增強</block>
-  <block id="80762cca91d062aa19d9ba117f7bcb02" category="paragraph">== 2025年7月28日</block>
-  <block id="b35d6e4fcd3ada17b29bd076e8712792" category="paragraph">=== Kubernetes 工作負載支援預覽版</block>
-  <block id="0795a0a6340a6317bcf372e5b47219ff" category="paragraph">== 2025年7月14日</block>
-  <block id="22789abec35e37054d455eb8859c6d1a" category="paragraph">=== 增強型 ONTAP Volume 儀表板</block>
-  <block id="f28686752015d1a89012da407bfdf2d9" category="paragraph">=== Microsoft SQL Server 工作負載支援（公開技術預覽版）</block>
-  <block id="922f0a9687942be7fb7e984a6cc141e9" category="paragraph">== 2025 年 6 月 9 日</block>
-  <block id="a172b36c5c5acfe05abd9a21e1ab4eb8" category="paragraph">=== 索引目錄支援更新 2025 年 2 月，我們推出了更新的索引功能（索引目錄 v2），您可以在使用「搜尋與還原」方法還原資料時使用該功能。先前的版本顯著提升了內部部署環境中的資料索引效能。在此版本中，索引目錄現已支援 Amazon Web Services、Microsoft Azure 和 Google Cloud Platform （GCP） 環境。</block>
-  <block id="92735fea630fde61126769d266fe2cce" category="paragraph">=== Azure Private Link 端點與服務端點</block>
-  <block id="28a95f34107e73fb05adcb4edd7a11f4" category="paragraph">=== 支援 ONTAP S3 上的 SnapMirror 至雲端重新同步</block>
-  <block id="6cc3d130f68a0ffb5aaf8589cce54a9f" category="paragraph">=== 自備用於 StorageGRID 的儲存桶</block>
-  <block id="a9b1fae739f7787ee78ddd66bdcf424d" category="paragraph">== 2025年5月13日</block>
-  <block id="b14f61a5b0ebc487f0fd465e2c49e32e" category="paragraph">=== SnapMirror to Cloud Resync 以進行 Volume 移轉</block>
-  <block id="b8236f82b43383e75b5279f12c6f169f" category="paragraph">=== 支援第三方 MinIO 物件存放區（預覽版）</block>
-  <block id="ace15ffb1c420f4e688c4d753c91abc2" category="paragraph">== 2025年4月16日</block>
-  <block id="0070d3e95ff1aae8d3ffc352f20de8de" category="paragraph">=== 使用者介面改進</block>
-  <block id="bdb4578e43eced02c733a769b0983420" category="paragraph">=== 增強版 Volume 儀表板（預覽版）</block>
-  <block id="5815b41fc4b0b5fc6628f93e7610da48" category="paragraph">=== 支援第三方 Wasabi 物件存放區（預覽版）</block>
-  <block id="8db98b381aa8810a494943784a20424c" category="paragraph">==== Wasabi 入門指南</block>
-  <block id="bd3ba1c2e4596f28a9cd1ca91aedd3b4" category="paragraph">==== 預覽模式限制</block>
-  <block id="452567068925868042d7a22e17ca9307" category="paragraph">== 2025年3月17日</block>
-  <block id="0cb3dbd97c09eff0ce8678fb64b0f0a2" category="paragraph">=== SMB 快照瀏覽</block>
-  <block id="01498e8e7a0ef73ed93903ae97697e76" category="paragraph">=== AWS GovCloud 環境更新</block>
-  <block id="97ce2736e4c8bd5731515aa43edd75cb" category="paragraph">=== 備份原則保留限制</block>
-  <block id="7c58d26e0365b4a83e4f1d9c7e4ccc46" category="paragraph">=== SnapMirror Cloud 重新同步</block>
-  <block id="bfaeb1fd694cc75589ab779429dcc4ff" category="paragraph">== 2025年2月21日</block>
-  <block id="9c585448431d433a9610826f9f851c10" category="paragraph">=== 高效能索引</block>
-  <block id="6010004be43684b47a6d391957d245a8" category="paragraph">=== 全域搜尋效能改進</block>
-  <block id="aa58847eb73583c7e7eb13db78ec9fb7" category="paragraph">== 2025年2月13日</block>
-  <block id="08b91ed20ac84659f4ba722f1d440782" category="paragraph">=== NetApp Backup and Recovery 預覽版</block>
-  <block id="43c88f32a9f03a6d424d2ab921e0bd52" category="paragraph">== 2024年11月22日</block>
-  <block id="c53ce5def215e3c47008afa5fc69244c" category="paragraph">=== SnapLock Compliance 與 SnapLock Enterprise 保護模式</block>
-  <block id="b86cd1f26c5daf16ef31b85dc0ee88fd" category="paragraph">=== 在 Volume 頁面上為搜尋與還原程序建立索引 在使用「搜尋與還原」之前，您需要在每個要從中還原 Volume 資料的來源系統上啟用「索引」。這可讓索引目錄追蹤每個 Volume 的備份檔案。Volume 頁面現在會顯示索引狀態：</block>
-  <block id="79a2e1e9f6f67a669beec92e025f60e3" category="paragraph">== 2024年9月27日</block>
-  <block id="40df578728b85125ad87761e419299c8" category="paragraph">=== 透過 Browse and Restore 支援 RHEL 8 或 9 上的 Podman NetApp Backup and Recovery 現在支援使用 Podman 引擎在 Red Hat Enterprise Linux （RHEL） 8 和 9 版本上進行檔案與資料夾還原。這適用於 NetApp Backup and Recovery 的 Browse and Restore 方法。</block>
-  <block id="58d5a4dc289b7f40dd73921b8409511a" category="paragraph">=== 更快的目錄索引可改善搜尋與還原 此版本包含改良的目錄索引，可更快完成基準索引。更快的索引可讓您更快使用搜尋與還原功能。</block>
   <block id="b551b4701a9ff2b5829b492b9fb53e09" category="sidebar">從以 VM 為基礎的應用程式還原或下載檔案和資料夾</block>
+  <block id="6aa44f095b485d103684660cbb7f9328" category="section-title">2026 年 9 月 21 日</block>
+  <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">2026 年 9 月 16 日</block>
+  <block id="7c3780c8bbc09e634d77ec9249acfb5c" category="section-title">2026年8月17日</block>
+  <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">2026年8月10日</block>
+  <block id="de2e4685966d24481dfab35c95ad44dc" category="section-title">2026年7月13日</block>
+  <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026 年 6 月 15 日</block>
+  <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">2026 年 6 月 08 日</block>
+  <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026 年 5 月 11 日</block>
+  <block id="2966006d3447f3363606a7ddf7d88713" category="section-title">2026 年 5 月 05 日</block>
+  <block id="6dba6d956d3e495df0c0575cd1b23218" category="section-title">2026 年 4 月 20 日</block>
+  <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">2026 年 4 月 13 日</block>
+  <block id="d8fdc2681cdec613a02ac551c44a6e8c" category="section-title">2026 年 3 月 31 日</block>
+  <block id="69b1a964078d5301a2aa9822cb2304f2" category="section-title">2026 年 3 月 16 日</block>
+  <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">2026 年 3 月 09 日</block>
+  <block id="8b3c75a910501c009c7e86f190f1825d" category="section-title">2026 年 2 月 23 日</block>
+  <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026 年 2 月 09 日</block>
+  <block id="194a29c3464a05de3c32434145c0b5d6" category="section-title">2026 年 1 月 19 日</block>
+  <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">2025 年 12 月 08 日</block>
+  <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025 年 10 月 6 日</block>
+  <block id="0428e48e7f58929099e52febd0558232" category="section-title">2025年8月25日</block>
+  <block id="d341f0c47f4b7ad5cc1b4c9bb210cfda" category="section-title">2025年8月12日</block>
+  <block id="67c66b3b8df7b2dee0354dd9f9fcec17" category="section-title">2025年7月28日</block>
+  <block id="f2673d4a3fe0162a501d43f5168ae950" category="section-title">2025年7月14日</block>
+  <block id="791d05d0e9072626d0316ef0a7cf21bc" category="section-title">2025 年 6 月 9 日</block>
+  <block id="71df7d09aaee8e6796df0c3d10989fbd" category="section-title">2025 年 5 月 13 日</block>
+  <block id="801c0fa0d304ca22d8afec06189bcf93" category="section-title">2025 年 4 月 16 日</block>
+  <block id="499d067ffbbd553e23809aa38aa67bfa" category="section-title">2025 年 3 月 17 日</block>
+  <block id="09d7c2dac047caa965175fead07159aa" category="section-title">2025 年 2 月 21 日</block>
+  <block id="6cdd743b39af79062eb92fec70569354" category="section-title">2025 年 2 月 13 日</block>
+  <block id="008c6d012aabba0e44e2b94f8259635c" category="section-title">2024年11月22日</block>
+  <block id="5fcc5d3ffc4bbbcf6d018ab4a9639205" category="section-title">2024 年 9 月 27 日</block>
 </blocks>
