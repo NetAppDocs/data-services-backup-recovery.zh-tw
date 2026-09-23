@@ -1,20 +1,20 @@
-= 一般 NetApp Backup and Recovery 增強功能
+= 通用 NetApp Backup and Recovery 增強功能
 :allow-uri-read: 
 
 
 
 
-[[general-netapp-backup-and-recovery-enhancements]]
-=== 一般 NetApp Backup and Recovery 增強功能
+[[general-netapp-backup-and-recovery-enhancement]]
+=== 通用 NetApp Backup and Recovery 增強功能
 
 在此版本中，KVM、Hyper-V 和 VMware 工作負載引入了以下增強功能：
 
-*VM 主機探索期間的認證資料選擇*：註冊 KVM、Hyper-V 或 VMware 主機時，您現在可以使用已新增至 Backup and Recovery 的認證資料。
+*虛擬機器主機探索期間的憑證選擇*：當您探索 KVM、Hyper-V 或 VMware 主機時，現在可以使用已新增至 Backup and Recovery 的憑證。
 
 
 
-[[hyper-v-workloads-enhancements]]
-=== Hyper-V 工作負載增強功能
+[[hyper-v-workloads-enhancement]]
+=== Hyper-V 工作負載增強
 
 在此版本中，Hyper-V 工作負載引入了以下增強功能：
 
