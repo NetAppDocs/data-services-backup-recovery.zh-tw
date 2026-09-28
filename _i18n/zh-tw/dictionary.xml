@@ -5971,7 +5971,6 @@
   <block id="8ec423cb544f5a4931b35174a601686c" category="cell"><block ref="a1eba06bd1db60b0b7acd47a98fdd405" prefix="" category="inline-code"></block></block>
   <block id="def96a092a0c6947fcdadafb96edb659" category="cell">在 NetApp Backup and Recovery for Volumes 的「報告」標籤下啟用每日備份資料傳輸報告。該報告提供整個環境中的每日備份與複寫資料傳輸活動資訊。</block>
   <block id="200e15de6a3939fa4dda17a8836f5233" category="list-text">*Trident Protect 26.09*：此版本包含 Trident Protect 26.09。</block>
-  <block id="6e2d39e3670c746bf336eaad2e07b214" category="list-text">*叢集和命名空間粒度的角色存取控制*：在 Kubernetes 叢集探索期間，您可以透過選擇要與新叢集關聯的專案或資料夾來控制對資源的存取。您也可以註冊特定的命名空間以進行存取控制。這可在叢集或命名空間層級實現更細微的存取控制。</block>
   <block id="bc9e0a0c6dd42dbca705164e269a3b81" category="list-text">*還原檔案和資料夾*：您現在可以從基於 Kubernetes VM 的應用程式備份中還原或下載特定的檔案和資料夾。</block>
   <block id="0eae5eefe564ecf4ccbc3e8d5990e3e5" category="list-text">*其他 Backup and Recovery 角色*：為使用者指派所需的特定 Backup and Recovery 角色，例如 Backup and Recovery 檢視者或 Backup and Recovery Clone 管理員。這些角色允許使用者執行日常任務，例如檢視資源、保護工作負載、Clone 和還原。將 Backup and Recovery 角色與平台層級角色分開指派。如需詳細資訊，請參閱 <block ref="8432e361253dad22d74ca5fd3ad3c136" category="inline-link-macro-rx"></block>。</block>
   <block id="495d694fb4e6c9ffefefeddb8fb2c749" category="paragraph">組織管理員、資料夾管理員或專案管理員可以探索可用的工作負載並選擇適當的專案（例如美國東部或美國西部）。每個工作負載都會自動與所選專案關聯。對於 Kubernetes 叢集，您可以在探索期間選擇要與叢集關聯的資料夾或專案。</block>
@@ -6106,4 +6105,13 @@
   <block id="36d329847d8e5ae441cfdb0f4e5f6e2f" category="paragraph">*虛擬機器主機探索期間的憑證選擇*：當您探索 KVM、Hyper-V 或 VMware 主機時，現在可以使用已新增至 Backup and Recovery 的憑證。</block>
   <block id="ffe23fba63447ec89bcdd7bc0c48257f" category="section-title">Hyper-V 工作負載增強</block>
   <block id="8dbaebd91b282de2115c0933e53cc8b1" category="list-text">*優先執行還原作業而非備份*：現在，在還原磁碟區、檔案或資料夾時，您可以優先執行還原作業而非備份作業。</block>
+  <block id="419cd2b7ee4c4a768ccdb742a76a6d51" category="paragraph">*改進對隔離站台的支援*：適用於隔離站台的 NetApp Backup and Recovery 現在提供與 NetApp Backup and Recovery 相同的 ONTAP Volumes 資料保護功能。此增強功能包括更新的備份、還原和作業管理服務以及新的中繼資料資料庫。升級期間，現有資料庫資料將保留並自動移轉。升級後，審查稽核記錄以驗證移轉是否成功完成。適用於隔離站台的 NetApp Backup and Recovery 僅支援 ONTAP Volumes 工作負載。</block>
+  <block id="fc56ab1b23274c05b12ad0c8dc80ef1c" category="list-text">*叢集與命名空間精細度的角色型存取控制（RBAC）*：在 Kubernetes 叢集探索期間，您可以透過選取要與新叢集建立關聯的專案或資料夾，來控制對資源的存取。您也可以註冊特定的命名空間以進行存取控制。這可在叢集或命名空間層級實現更精細的存取控制。</block>
+  <block id="f7afeeafbf15177ad50522c2abcfb502" category="paragraph">*主控台角色型存取控制（RBAC）支援*：Hyper-V、KVM 和 VMware 工作負載現在支援 RBAC 的 NetApp Console 架構，可讓您管理對個別 Hyper-V、KVM 或 VMware 主機的存取。</block>
+  <block id="ba79eaf594c940e1fe41ef7be1d90de0" category="inline-link">深入了解在 NetApp Backup and Recovery 中使用 RBAC 的相關資訊</block>
+  <block id="c0efbe51bb7620993fb42a308c6ad8b2" category="paragraph"><block ref="d7adec871f52434e6c062a1e94dd0f14" category="inline-link-rx"></block>。</block>
+  <block id="fd2c958c800e793ec18ea2546e033c24" category="paragraph">*Google Cloud NetApp Volumes Flex Unified 支援*：適用於 VMware 工作負載的 NetApp Backup and Recovery 現已支援 Google Cloud NetApp Volumes 的 Flex Unified 服務層級。Flex Unified 僅在 ONTAP 模式下支援。</block>
+  <block id="af77598cf52235180b19bf359e518fc2" category="paragraph">有關保護 VMware 工作負載的詳細資訊，請參閱<block ref="d7977b9c562cb95be37532b996678207" category="inline-link-rx"></block>。</block>
+  <block id="b97cd70ddadb686487dcde47c3a4791d" category="list-text">Google Cloud NetApp Volumes（ONTAP 模式和 Flex Unified 服務層級）</block>
+  <block id="e133e28734ec4222b7f45792925cee97" category="section-title">2026 年 9 月 28 日</block>
 </blocks>

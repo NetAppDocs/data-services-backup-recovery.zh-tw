@@ -18,10 +18,50 @@ summary: 了解NetApp Backup and Recovery的新功能。
 
 
 
+[[28-september-2026]]
+== 2026 年 9 月 28 日
+
+此NetApp Backup and Recovery版本包含以下更新。
+
+
+
+[[general-netapp-backup-and-recovery-enhancement]]
+=== 通用 NetApp Backup and Recovery 增強功能
+
+在此版本中，KVM、Hyper-V 和 VMware 工作負載引入了以下增強功能：
+
+*主控台角色型存取控制（RBAC）支援*：Hyper-V、KVM 和 VMware 工作負載現在支援 RBAC 的 NetApp Console 架構，可讓您管理對個別 Hyper-V、KVM 或 VMware 主機的存取。
+
+https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["深入了解在 NetApp Backup and Recovery 中使用 RBAC 的相關資訊"]。
+
+
+
+[[vmware-workloads-enhancements]]
+=== VMware 工作負載增強功能
+
+在此版本中、VMware 工作負載引進下列增強功能：
+
+*Google Cloud NetApp Volumes Flex Unified 支援*：適用於 VMware 工作負載的 NetApp Backup and Recovery 現已支援 Google Cloud NetApp Volumes 的 Flex Unified 服務層級。Flex Unified 僅在 ONTAP 模式下支援。
+
+有關保護 VMware 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-vmware-protect-overview.html["使用 NetApp Backup and Recovery 保護 VMware 工作負載"]。
+
+
+
 [[21-september-2026]]
 == 2026 年 9 月 21 日
 
 此NetApp Backup and Recovery版本包含以下更新。
+
+
+
+[[ontap-volumes-workloads-enhancement]]
+=== ONTAP Volumes 工作負載增強
+
+在此版本中，ONTAP Volumes 工作負載引入了以下預覽增強功能：
+
+*改進對隔離站台的支援*：適用於隔離站台的 NetApp Backup and Recovery 現在提供與 NetApp Backup and Recovery 相同的 ONTAP Volumes 資料保護功能。此增強功能包括更新的備份、還原和作業管理服務以及新的中繼資料資料庫。升級期間，現有資料庫資料將保留並自動移轉。升級後，審查稽核記錄以驗證移轉是否成功完成。適用於隔離站台的 NetApp Backup and Recovery 僅支援 ONTAP Volumes 工作負載。
+
+有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["了解使用 NetApp Backup and Recovery 的 ONTAP Volume 保護"]。
 
 
 
@@ -31,7 +71,7 @@ summary: 了解NetApp Backup and Recovery的新功能。
 在此版本中、Kubernetes 工作負載引入了以下增強功能：
 
 * *Trident Protect 26.09*：此版本包含 Trident Protect 26.09。
-* *叢集和命名空間粒度的角色存取控制*：在 Kubernetes 叢集探索期間，您可以透過選擇要與新叢集關聯的專案或資料夾來控制對資源的存取。您也可以註冊特定的命名空間以進行存取控制。這可在叢集或命名空間層級實現更細微的存取控制。
+* *叢集與命名空間精細度的角色型存取控制（RBAC）*：在 Kubernetes 叢集探索期間，您可以透過選取要與新叢集建立關聯的專案或資料夾，來控制對資源的存取。您也可以註冊特定的命名空間以進行存取控制。這可在叢集或命名空間層級實現更精細的存取控制。
 * *還原檔案和資料夾*：您現在可以從基於 Kubernetes VM 的應用程式備份中還原或下載特定的檔案和資料夾。
 
 
