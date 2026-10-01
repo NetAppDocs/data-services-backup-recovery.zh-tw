@@ -241,7 +241,7 @@ NetApp Console 通知中心會追蹤您啟動的備份與恢復作業的進度�
 
 NOTE: 從ONTAP 9.13.0 開始，所有警報都會出現在Cloud Volumes ONTAP和本地ONTAP系統中。對於具有Cloud Volumes ONTAP 9.13.0 和本機ONTAP 的系統，僅出現與「復原作業已完成，但有警告」相關的警報。
 
-預設情況下， NetApp Console組織和帳戶管理員會收到所有「嚴重」和「建議」警報的電子郵件。預設情況下，系統不會設定其他使用者和收件者接收通知郵件。為NetApp雲端帳戶中的任何控制台使用者或需要了解備份和復原活動的其他收件者配置電子郵件警報。
+預設情況下，NetApp Console 組織和帳戶管理員會收到所有「緊急」和「建議」警報的電子郵件通知。其他使用者和收件者不會收到通知電子郵件，除非您進行設定。為您 NetApp 雲端帳戶中的 Console 使用者或其他需要監控備份與恢復活動的收件者設定電子郵件警報。
 
 若要接收NetApp Backup and Recovery電子郵件警報，您需要在通知設定頁面中選擇通知嚴重性類型「嚴重」、「警告」和「錯誤」。
 
@@ -259,6 +259,59 @@ https://docs.netapp.com/us-en/console-local/task-alert-rules-manage.html["在 Ne
 [[review-operation-activity-in-console-timeline]]
 == 在控制台時間軸中查看操作活動
 
-您可以在 Console Timeline 中檢視備份與恢復作業的詳細資料，以便進行進一步調查。Console Timeline 提供每個事件的詳細資料，無論是使用者發起的還是系統發起的，並顯示在 UI 中或透過 API 發起的行動。
+使用控制台時間軸來調查備份與恢復作業。它提供有關每個事件的詳細資訊，包括事件是由使用者還是系統所啟動，並顯示在使用者介面或透過 API 執行的行動。
 
 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html["了解如何監控 NetApp Console 操作"^]。
+
+
+
+[[cancel-an-ongoing-job]]
+== 取消後續的工作
+
+有些備份與恢復工作負載支援在作業完成時間過長且尚未失敗的情況下取消後續的作業。
+
+
+NOTE: 若要取消 ONTAP Volumes 還原作業，請參閱<<取消 ONTAP Volumes 還原作業>>。
+
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *監控*。
+. 您也可以擴充 *Advanced Search & Filtering* 區域，並選擇特定條件來聚焦作業搜尋結果。
+. 選擇 *搜尋* 以顯示符合的還原作業。
+. 從清單中選擇一個作業，選擇「行動」選單 image:icon-action.png["操作圖示"]，然後選擇 *取消* 行動（行動標籤因作業類型而異）。
+. 在確認對話方塊中，確認取消。
+
+
+
+
+[[cancel-an-ontap-volumes-restore-job]]
+== 取消 ONTAP Volumes 還原作業
+
+如果 ONTAP Volumes 還原作業耗時過長且尚未失敗，則取消該作業。
+
+取消 Volume 還原時，整個還原作業將會回滾，因此 Volume 的任何部分都不會還原。
+
+在檔案和資料夾還原過程中，「備份與還原」會分批還原檔案，每次還原八個檔案。如果在批次處理進行中取消檔案和資料夾還原，還原會在下一批次開始之前停止。任何已還原的檔案和資料夾都會保留在原處。
+
+.關於此任務
+請注意您可以取消與無法取消的工作類型：
+
+[cols="1,1"]
+|===
+| 您可以取消 | 您無法取消 
+
+
+| 從本地或雲端快照還原 Volume（FlexVol 和 FlexGroup） | 已排隊的還原作業 
+
+
+| 從雲端還原檔案和資料夾 | 歸檔還原 
+
+
+| 將檔案和資料夾從本機快照還原到不同的 Volume | 將檔案和資料夾從本機快照還原到同一 Volume 
+|===
+.步驟
+. 從NetApp Backup and Recovery選單中，選擇 *監控*。
+. 您也可以擴充 *Advanced Search & Filtering* 區域，並選擇特定條件來聚焦作業搜尋結果。
+. 選擇 *搜尋* 以顯示符合的還原作業。
+. 從清單中選擇一個作業，選擇「行動」選單 image:icon-action.png["操作圖示"]，然後選擇 *取消還原* 行動。
+. 在確認對話方塊中，選擇 *取消還原*。
+

@@ -3230,7 +3230,6 @@
   <block id="c06e8b3ad6c2a4bcf247b5b6ff031cbf" category="admonition">如果您已將ONTAP系統升級至 9.13.x，但在作業監視器中沒有看到正在進行的排程備份作業，請重新啟動NetApp Backup and Recovery。<block ref="bfa346a5b4e1ecd443201d95eab54eb4" category="inline-link-macro-rx"></block>。</block>
   <block id="2d7e91b503470d39f08e98b06f5d7864" category="paragraph">大多數的過濾器都是不言自明。透過「工作量」篩選器，您可以查看以下類別的作業：</block>
   <block id="9535df3e89123a36d140c06cf83471aa" category="paragraph">您可以在通知中心查看警報，並配置控制台以發送重要係統活動的電子郵件警報，即使您未登入。<block ref="a993635cface3018acf75d15a7289e44" category="inline-link-rx"></block> 。</block>
-  <block id="63369edef3fcbf27a13a1f4394250d9b" category="paragraph">預設情況下， NetApp Console組織和帳戶管理員會收到所有「嚴重」和「建議」警報的電子郵件。預設情況下，系統不會設定其他使用者和收件者接收通知郵件。為NetApp雲端帳戶中的任何控制台使用者或需要了解備份和復原活動的其他收件者配置電子郵件警報。</block>
   <block id="31aacaea95ea11818f2629af38fa3f2c" category="list-text">在開始備份之前配置已發現主機的日誌目錄。</block>
   <block id="6f74e6b5a59cfaab5656a1be6c164a0a" category="paragraph">在開始備份之前，請先查看工作負載的保護狀態。</block>
   <block id="457aa988b8eb5473cac5e0469be1df6a" category="paragraph">設定已發現主機的活動日誌路徑，以便在備份工作負載之前追蹤操作狀態。</block>
@@ -5380,7 +5379,6 @@
   <block id="c327b2b7ac3704c9c322df3bca8aab7e" category="paragraph">您可以篩選或排序結果後，將主要工作監控頁面的內容下載為報告。NetApp Backup and Recovery 會產生並下載 CSV 檔案，您可以審查該檔案並視需要傳送給其他群組。該 CSV 檔案最多包含 10,000 列資料。</block>
   <block id="714b7ef1018c44ef0c79e384540766a3" category="paragraph">監控保留（備份生命週期）作業，以追蹤備份複本何時過期並支援稽核。</block>
   <block id="ebb874a91308a9b8ae116acd0d55c0ce" category="paragraph">NetApp Console 通知中心會追蹤您啟動的備份與恢復作業的進度，以便您驗證作業是否成功。</block>
-  <block id="d951db5806c5dd9d8ec3269b27d8752b" category="paragraph">您可以在 Console Timeline 中檢視備份與恢復作業的詳細資料，以便進行進一步調查。Console Timeline 提供每個事件的詳細資料，無論是使用者發起的還是系統發起的，並顯示在 UI 中或透過 API 發起的行動。</block>
   <block id="84ecd721169d5c605dbcca8e4b87b0f6" category="inline-link">了解如何監控 NetApp Console 操作</block>
   <block id="1b0decc1adcbaa0df14dd4b8aa07c062" category="paragraph"><block ref="f68769e6bd56c2c042f91d6dd3d25dda" category="inline-link-rx"></block>。</block>
   <block id="33dfb641cd4d6acea75347380756a630" category="summary">將內部部署 ONTAP 系統中的 Microsoft SQL Server 應用程式資料備份到 Amazon Web Services、Microsoft Azure 和 StorageGRID，以確保您的資料受到保護。</block>
@@ -6114,4 +6112,32 @@
   <block id="af77598cf52235180b19bf359e518fc2" category="paragraph">有關保護 VMware 工作負載的詳細資訊，請參閱<block ref="d7977b9c562cb95be37532b996678207" category="inline-link-rx"></block>。</block>
   <block id="b97cd70ddadb686487dcde47c3a4791d" category="list-text">Google Cloud NetApp Volumes（ONTAP 模式和 Flex Unified 服務層級）</block>
   <block id="e133e28734ec4222b7f45792925cee97" category="section-title">2026 年 9 月 28 日</block>
+  <block id="935253a377b19143ee00ca184dec844f" category="paragraph">在此版本中，ONTAP Volumes 工作負載引入了以下預覽增強功能：</block>
+  <block id="cd4f576093d5ac341dfcb0aaa95386df" category="list-text">*取消 Volume 還原作業*：現在可以從作業監控頁面取消後續的 ONTAP Volume 還原作業，更容易管理長時間運作或運作緩慢的作業。</block>
+  <block id="f280b51545cc9233bf1322ad4aa41fc1" category="list-text">*改進的 Volume 索引狀態報告*：ONTAP Volumes 儀表板現在透過針對不符合索引條件的 Volume 和快照複本引入<block ref="6136261711c49bf0e8e1dcb22a2c524f" prefix=" " category="inline-code"></block>狀態，更準確地報告索引狀態。此<block ref="838534d879f74e7af515a7de57e72b71" prefix=" " category="inline-code"></block>狀態現在保留給等待索引的 Volume，且 Volume 詳細資料現在會顯示每個快照的索引狀態，並帶有懸停文字來解釋為何 Volume 或快照複本不會被索引。</block>
+  <block id="0ab4a270a7306aa53a9216568b919ddc" category="list-text">*NetApp AFX 支援*：您現在可以保護託管在 2 節點和 4 節點 NetApp AFX 叢集上的 Volume。</block>
+  <block id="84261bb42a8f4774a2a88f93ef2e7b97" category="paragraph">預設情況下，NetApp Console 組織和帳戶管理員會收到所有「緊急」和「建議」警報的電子郵件通知。其他使用者和收件者不會收到通知電子郵件，除非您進行設定。為您 NetApp 雲端帳戶中的 Console 使用者或其他需要監控備份與恢復活動的收件者設定電子郵件警報。</block>
+  <block id="98e79c21e7c10597997314959fdd10d0" category="paragraph">使用控制台時間軸來調查備份與恢復作業。它提供有關每個事件的詳細資訊，包括事件是由使用者還是系統所啟動，並顯示在使用者介面或透過 API 執行的行動。</block>
+  <block id="40305b815eb9b5fb3a975d34be14698f" category="section-title">取消後續的工作</block>
+  <block id="c8dd83bac545851e691ee53c6bf71118" category="paragraph">有些備份與恢復工作負載支援在作業完成時間過長且尚未失敗的情況下取消後續的作業。</block>
+  <block id="c137e799769a7454b6a1931c8d90a2bd" category="admonition">若要取消 ONTAP Volumes 還原作業，請參閱<block ref="96dd8a0343f48aea81970933eccfcd1d" category="inline-xref-macro-rx"></block>。</block>
+  <block id="354f26b8c487e6cf93a857c5b1295cef" category="list-text">您也可以擴充 *Advanced Search &amp; Filtering* 區域，並選擇特定條件來聚焦作業搜尋結果。</block>
+  <block id="b119d9b7e39888b824b9e76b1f3c1bb6" category="list-text">選擇 *搜尋* 以顯示符合的還原作業。</block>
+  <block id="30aba68ce2e20aad165f9dfea8e8da72" category="list-text">從清單中選擇一個作業，選擇「行動」選單 <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>，然後選擇 *取消* 行動（行動標籤因作業類型而異）。</block>
+  <block id="6c776a625685ac880249a673e78404e9" category="list-text">在確認對話方塊中，確認取消。</block>
+  <block id="2334788351c495c555cf1ec795d3a592" category="section-title">取消 ONTAP Volumes 還原作業</block>
+  <block id="1f6a2c06fc3eaf8246ba5bd164f21c2c" category="paragraph">如果 ONTAP Volumes 還原作業耗時過長且尚未失敗，則取消該作業。</block>
+  <block id="5f0c099781d2652d095607a987a47110" category="paragraph">取消 Volume 還原時，整個還原作業將會回滾，因此 Volume 的任何部分都不會還原。</block>
+  <block id="ee9f716edf70563519c906192c0b39e9" category="paragraph">在檔案和資料夾還原過程中，「備份與還原」會分批還原檔案，每次還原八個檔案。如果在批次處理進行中取消檔案和資料夾還原，還原會在下一批次開始之前停止。任何已還原的檔案和資料夾都會保留在原處。</block>
+  <block id="89bb68d2ba06c8f5ec94311dc846a22f" category="paragraph">請注意您可以取消與無法取消的工作類型：</block>
+  <block id="6e00df6cf203194e9db62250dcd59b84" category="cell">您可以取消</block>
+  <block id="c56beeb0de548206540e2478336371ea" category="cell">您無法取消</block>
+  <block id="75d6ce34553a749b1d6a586f79d9f1f6" category="cell">從本地或雲端快照還原 Volume（FlexVol 和 FlexGroup）</block>
+  <block id="e62abda2edc633553c509cf9fbdfd763" category="cell">已排隊的還原作業</block>
+  <block id="d4fecb1eeebc825130e17bc277c17bfb" category="cell">從雲端還原檔案和資料夾</block>
+  <block id="f6418296c6faecb259d5ebc86a7d65ca" category="cell">歸檔還原</block>
+  <block id="12ad3a859d20918ff344c7776abe3b50" category="cell">將檔案和資料夾從本機快照還原到不同的 Volume</block>
+  <block id="30144384865c9bc036707d99163c215c" category="cell">將檔案和資料夾從本機快照還原到同一 Volume</block>
+  <block id="b6a5b73bc90d7aa324c49f4f91a911c2" category="list-text">從清單中選擇一個作業，選擇「行動」選單 <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>，然後選擇 *取消還原* 行動。</block>
+  <block id="67221d952a3dfa81a9eee1d6fc312266" category="list-text">在確認對話方塊中，選擇 *取消還原*。</block>
 </blocks>

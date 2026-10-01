@@ -1,15 +1,19 @@
-= ONTAP Volumes 工作負載增強
+= ONTAP Volumes 工作負載增強功能
 :allow-uri-read: 
 
 
 
 
-[[ontap-volumes-workloads-enhancement]]
-=== ONTAP Volumes 工作負載增強
+[[ontap-volumes-workloads-enhancements]]
+=== ONTAP Volumes 工作負載增強功能
 
 在此版本中，ONTAP Volumes 工作負載引入了以下預覽增強功能：
 
-*改進對隔離站台的支援*：適用於隔離站台的 NetApp Backup and Recovery 現在提供與 NetApp Backup and Recovery 相同的 ONTAP Volumes 資料保護功能。此增強功能包括更新的備份、還原和作業管理服務以及新的中繼資料資料庫。升級期間，現有資料庫資料將保留並自動移轉。升級後，審查稽核記錄以驗證移轉是否成功完成。適用於隔離站台的 NetApp Backup and Recovery 僅支援 ONTAP Volumes 工作負載。
+* *改進對隔離站台的支援*：適用於隔離站台的 NetApp Backup and Recovery 現在提供與 NetApp Backup and Recovery 相同的 ONTAP Volumes 資料保護功能。此增強功能包括更新的備份、還原和作業管理服務以及新的中繼資料資料庫。升級期間，現有資料庫資料將保留並自動移轉。升級後，審查稽核記錄以驗證移轉是否成功完成。適用於隔離站台的 NetApp Backup and Recovery 僅支援 ONTAP Volumes 工作負載。
+* *取消 Volume 還原作業*：現在可以從作業監控頁面取消後續的 ONTAP Volume 還原作業，更容易管理長時間運作或運作緩慢的作業。
+* *改進的 Volume 索引狀態報告*：ONTAP Volumes 儀表板現在透過針對不符合索引條件的 Volume 和快照複本引入 `Not Applicable`狀態，更準確地報告索引狀態。此 `Not Indexed`狀態現在保留給等待索引的 Volume，且 Volume 詳細資料現在會顯示每個快照的索引狀態，並帶有懸停文字來解釋為何 Volume 或快照複本不會被索引。
+* *NetApp AFX 支援*：您現在可以保護託管在 2 節點和 4 節點 NetApp AFX 叢集上的 Volume。
+
 
 有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["了解使用 NetApp Backup and Recovery 的 ONTAP Volume 保護"]。
 
