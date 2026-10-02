@@ -32,7 +32,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
-支援的 ONTAP 版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
+支援的 ONTAP 版本:: 最低版本要求為 ONTAP 9.8；建議使用 ONTAP 9.8P13 或更新版本。如果針對 Azure 物件儲存使用 Microsoft Entra ID 驗證，則需要 ONTAP 9.16.1 或更新版本。
 支援的 Azure 區域:: 所有 Azure 區域（包括 Azure 政府區域）都支援NetApp Backup and Recovery。
 +
 --
@@ -52,6 +52,24 @@ image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recov
 對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。當控制台代理程式和Cloud Volumes ONTAP系統部署在暗站（「私有模式」）時，您必須使用 BYOL 授權。
 
 您還需要一個 Azure 訂閱，用於存放備份的儲存空間。
+
+
+
+[[requirements-for-using-microsoft-entra-id-authentication-with-azure-object-stores]]
+[[anchor-entraid]]
+== 搭配 Azure 物件存放區使用 Microsoft Entra ID 驗證的需求
+
+如果您不想使用儲存設備帳戶存取金鑰進行 Azure 驗證，可以在建立 Azure 物件儲存桶或編輯現有 Azure 儲存桶組態時，為 Azure 物件儲存啟用 Microsoft Entra ID 驗證。此選項適用於執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。
+
+
+NOTE: 您可以在同一 Cloud Volumes ONTAP 系統中為不同的物件存放區組態使用不同的驗證方法，但是在將物件存放區組態交換器為使用 Microsoft Entra ID 後，就無法再交換器回使用儲存設備帳戶金鑰。
+
+* 請確認 Cloud Volumes ONTAP 系統上已啟用「use-azure-msi-cvo」功能標誌。如需詳細資訊，請參閱 link:enable-preview-features.html["啟用預覽功能"]。
+* 僅支援自帶儲存桶備份策略選項。請確認 Azure 儲存設備帳戶已存在，並且包含一個與帳戶同名的 Container。
+* 在 Azure 儲存設備帳戶的 IAM 設定中，確認 `Storage Blob Data Contributor`角色已指派給 Azure 代理程式和 Cloud Volumes ONTAP 系統。如果使用 `Object lock`原則選項，還需在儲存設備帳戶上啟用版本控制，並將 `Storage Blob Data Owner`角色指派給 Azure 代理程式和 Cloud Volumes ONTAP 系統。
+
+
+如果您的環境符合這些需求，您可以在建立任何新的 Azure 物件儲存貯體時，於<<定義備份策略,制定備份策略>>中選取 `Entra ID`作為驗證類型。您也可以從 ONTAP Volumes 的「*Backup settings*」頁面link:prev-ontap-policy-object-advanced-settings.html#switch-an-azure-object-store-configuration-to-microsoft-entra-id-authentication["針對已設定的 Azure bucket 切換至 Entra ID"]。
 
 
 
@@ -146,8 +164,8 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 
 
-[[required-information-for-using-customer-managed-keys-for-data-encryption]]
-=== 使用客戶管理的密鑰進行資料加密所需的信息
+[[requirements-for-using-customer-managed-keys-for-data-encryption]]
+=== 使用客戶代管的金鑰進行資料加密的要求
 
 您可以在啟動精靈中使用自己的客戶管理金鑰進行資料加密，而不是使用預設的 Microsoft 管理加密金鑰。在這種情況下，您將需要有 Azure 訂閱、Key Vault 名稱和金鑰。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["了解如何使用自己的密鑰"^] 。
 
@@ -321,7 +339,7 @@ NOTE: 如果您選擇的磁碟區具有與您在此步驟中選擇的策略不�
 
 
 .步驟
-. 在「定義備份策略」頁面中，選擇以下一項或全部。預設情況下，所有三個都被選中：
+. 在「定義備份策略」頁面中，選擇以下一項或全部。預設情況下，這三項均已選取：
 +
 ** *本機快照*：如果您正在執行複製或備份到物件存儲，則必須建立本機快照。
 ** *複製*：在另一個ONTAP儲存系統上建立複製磁碟區。
@@ -370,25 +388,26 @@ TIP: 若要在啟動複製之前建立自訂策略，請參閱link:br-use-polici
 
 
 
-. *備份到物件*：如果您選擇了*備份*，請設定以下選項：
+. *備份*：設定以下選項：
 +
+** *備份目的地設定*：您可以選擇使用現有的備份目的地並從清單中選擇一個，或選擇設定新的備份目的地。
 ** *提供者*：選擇*Microsoft Azure*。
-** *提供者設定*：輸入提供者詳細資料。
+** *供應商設定*：輸入供應商詳細資料，例如儲存桶建立和驗證選項：
 +
-輸入儲存備份的區域。這可能與Cloud Volumes ONTAP系統所在的區域不同。
-
+*** *建立新儲存桶*：NetApp Backup and Recovery 會在您的供應商環境中建立儲存桶。
+*** *自備 Bucket*：使用您已建立的現有 Bucket。
+*** *驗證方法*：選擇使用儲存設備帳戶存取金鑰或 Microsoft Entra ID 向 Azure 進行驗證。只有當您的環境符合 Entra ID <<anchor-entraid,要求>> 時，才能選擇 *Entra ID*。如果選擇 *儲存設備帳戶存取金鑰*，請選擇下列項目：
 +
-建立一個新的儲存帳戶或選擇一個現有的儲存帳戶。
-
-+
-輸入用於儲存備份的 Azure 訂閱。這可能是與Cloud Volumes ONTAP系統所在的訂閱不同的訂閱。
-
-+
-建立自己的管理 Blob 容器的資源群組，或選擇資源組類型和群組。
-
+**** 選擇用於儲存備份的 Azure 訂閱。此訂閱可以與 Cloud Volumes ONTAP 系統所在的訂閱不同。
+**** 選擇儲存備份的區域。這可能與Cloud Volumes ONTAP系統所在的區域不同。
+**** 建立自己的管理 Blob 容器的資源群組，或選擇資源組類型和群組。
 +
 
 TIP: 如果您想保護備份檔案不被修改或刪除，請確保建立儲存帳戶時啟用了 30 天保留期的不可變儲存。
+
+
+
+
 
 ** *加密金鑰*：如果您建立了新的 Azure 儲存體帳戶，請輸入提供者提供給您的加密金鑰資訊。選擇是否使用預設 Azure 加密金鑰，或從 Azure 帳戶中選擇您自己的客戶管理金鑰來管理資料加密。
 +

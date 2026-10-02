@@ -154,3 +154,22 @@ TIP: 根據雲端提供者的不同，啟用勒索軟體掃描將產生額外費
 . 設定掃描運作的頻率（以天數或週數為單位）。
 . 選擇*應用*。
 
+
+
+
+[[switch-an-azure-object-store-configuration-to-microsoft-entra-id-authentication]]
+== 將 Azure 物件存放區組態切換至 Microsoft Entra ID 驗證
+
+如果您不想使用儲存設備帳戶存取金鑰進行 Azure 驗證，可以在編輯現有 Azure 儲存區組態時，針對 Azure 物件儲存切換至 Microsoft Entra ID 驗證。此選項適用於執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。
+
+.開始之前
+請確保您的環境符合使用 Entra ID 的 link:prev-ontap-backup-cvo-azure.html#anchor-entraid["要求"^]。
+
+.步驟
+. 從*Volumes*選項卡中，選擇*Backup Settings*。
+. 在「備份設定」頁面中，選擇 image:icon-actions-horizontal.gif["更多圖標"] 以選取系統，然後選擇*設定進階設定 > 供應商設定*。
+. 在出現的頁面頂部，選擇需要變更設定的儲存桶。
+. 展開 *驗證方法* 區段。
+. 選擇 *Entra ID（代管身分）*。
+. 選擇*應用*。
+

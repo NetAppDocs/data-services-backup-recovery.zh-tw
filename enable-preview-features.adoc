@@ -38,6 +38,9 @@ summary: 啟用 NetApp Backup and Recovery 的預覽和隱藏功能。
 
 
 | `"data-transfer-report": true` | 在 NetApp Backup and Recovery for Volumes 的「報告」標籤下啟用每日備份資料傳輸報告。該報告提供整個環境中的每日備份與複寫資料傳輸活動資訊。 
+
+
+| `"use-azure-msi-cvo": true` | 啟用使用 Microsoft Entra ID 代管身分識別驗證進行 Azure 物件儲存的選項，而不是使用儲存設備帳戶存取金鑰。支援在執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。如需詳細資訊，請參閱 link:prev-ontap-backup-cvo-azure.html["將 Cloud Volumes ONTAP 備份到 Azure Blob 儲存設備"]。 
 |===
 
 

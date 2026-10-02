@@ -155,14 +155,29 @@ link:br-start-enable.html#enable-backup-and-recovery-in-netapp-console-local-dep
 [[requirements-for-protecting-ontap-volume-workloads]]
 == 保護 ONTAP Volume 工作負載的需求
 
-若要使用 NetApp Backup and Recovery 進行 ONTAP 磁碟區工作負載，您需要滿足下列主機系統、空間和容量大小方面的先決條件。
+若要針對 ONTAP Volume 工作負載使用 NetApp Backup and Recovery，您需要具備下列先決條件。
 
-* 需要 ONTAP 9.8 或更高版本。
-* 若要啟用 FlexGroup 磁碟區保護功能，需要 ONTAP 9.12.1 或更新版本。請參閱 link:br-reference-limitations.html["NetApp Backup and Recovery for ONTAP磁碟區的已知限制"] 以取得更多資訊。
-* 備份或還原至 S3 相容物件儲存需要 ONTAP 9.17.1 或更新版本。
-* 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
-* 必須在內部部署 ONTAP 執行個體上啟用 ONTAP One 授權。
+[cols="2,1"]
+|===
+| 功能 | 所需的 ONTAP 版本 
 
+
+| 保護ONTAP卷 | 9.8 或更新版本 
+
+
+| 保護 FlexGroup Volume（如需詳細資訊，請參閱 link:br-reference-limitations.html["NetApp Backup and Recovery for ONTAP磁碟區的已知限制"]） | 9.12.1 或更新版本 
+
+
+| 在保護 Cloud Volumes ONTAP 時，請針對 Azure 儲存體桶使用 Microsoft Entra ID 驗證 | 9.16.1 或更新版本 
+
+
+| 備份或還原到與 S3 相容的物件儲存 | 9.17.1 或更新版本 
+
+
+| 每個系統在不同的雲端供應商之間使用超過 6 個儲存桶（最多 100 個儲存桶） | 9.19.1 或更新版本 
+|===
+
+NOTE: 必須在內部部署 ONTAP 執行個體上啟用 ONTAP One 授權。
 
 如需支援功能、磁碟區類型、備份與還原目的地等相關資訊，請參閱 link:prev-ontap-protect-overview.html["保護您的ONTAP卷數據"]。
 

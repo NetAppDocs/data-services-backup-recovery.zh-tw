@@ -1704,10 +1704,7 @@
   <block id="c261701c0a638fff16b256b7172f9ad8" category="list-text">*本機快照*：選擇現有的快照原則或建立一個。</block>
   <block id="b18210e92f4a87b1f7c6722188562864" category="admonition">若要在啟動複製之前建立自訂策略，請參閱<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block>。</block>
   <block id="af14ed236e1187cb69e6b99e4332efba" category="list-text">*提供者*：選擇*Microsoft Azure*。</block>
-  <block id="308ae624df45c66718b6d2cb73b83d14" category="list-text">*提供者設定*：輸入提供者詳細資料。</block>
-  <block id="e850b416e9c74abb2c30ff149c33b965" category="paragraph">輸入儲存備份的區域。這可能與Cloud Volumes ONTAP系統所在的區域不同。</block>
   <block id="e90f61567d45b4aa5a1f884395480afd" category="paragraph">建立一個新的儲存帳戶或選擇一個現有的儲存帳戶。</block>
-  <block id="fbbde4256c2fb5bda7558a46213f5d5a" category="paragraph">輸入用於儲存備份的 Azure 訂閱。這可能是與Cloud Volumes ONTAP系統所在的訂閱不同的訂閱。</block>
   <block id="4516b0da13e1509d57f15deb85fd4416" category="paragraph">建立自己的管理 Blob 容器的資源群組，或選擇資源組類型和群組。</block>
   <block id="933cc9e4a85b592d8fa25352508f2035" category="admonition">如果您想保護備份檔案不被修改或刪除，請確保建立儲存帳戶時啟用了 30 天保留期的不可變儲存。</block>
   <block id="fea7328886ae797091b7afcd97768302" category="admonition">如果您要將較舊的備份檔案分層到 Azure 存檔儲存體以進一步最佳化成本，請確保儲存帳戶具有適當的生命週期規則。</block>
@@ -4572,8 +4569,6 @@
   <block id="1ce75b5926383de539d27e838bd74b8a" category="paragraph">請參閱<block ref="04b01782baab49091268802b7f1423cb" category="inline-link-rx"></block>以瞭解在 NetApp Backup and Recovery 中執行操作所需的角色與權限詳細資訊。</block>
   <block id="6bb058e639cecc8051a99e8892400bd8" category="section-title">物件儲存備份的要求</block>
   <block id="fc0cba16e06b834a59ea2732ce15d74a" category="section-title">保護 ONTAP Volume 工作負載的需求</block>
-  <block id="0b0bee32bf0c7158fbba14e4b17f1e23" category="paragraph">若要使用 NetApp Backup and Recovery 進行 ONTAP 磁碟區工作負載，您需要滿足下列主機系統、空間和容量大小方面的先決條件。</block>
-  <block id="f17da14a026a5974537cf1303ac53974" category="list-text">需要 ONTAP 9.8 或更高版本。</block>
   <block id="45b096193f4470968c1063df19d1c253" category="list-text">必須在內部部署 ONTAP 執行個體上啟用 ONTAP One 授權。</block>
   <block id="ddaa1c8bd07bda0816a8b44d87c10997" category="paragraph">如需支援功能、磁碟區類型、備份與還原目的地等相關資訊，請參閱 <block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block>。</block>
   <block id="ba0f269b2bdb85161db3fe51338e6a7b" category="cell">資料庫主機</block>
@@ -4683,8 +4678,6 @@
   <block id="a7ffc4809e4a33a20f30769fc3e62703" category="list-text">S3 相容儲存（僅限 ONTAP Volumes 工作負載）</block>
   <block id="7229e78ecf33d07a5618d54695f22e2b" category="list-text">Microsoft Azure Blob 儲存</block>
   <block id="746c4e9758e4e986d2c5f289c1d7e4ed" category="list-text">已使用 Wasabi 物件儲存進行測試和驗證；客戶也報告已成功部署 MinIO 和 IBM Cloud Object Storage</block>
-  <block id="df9ce829d97bcaaccefd13ad9443c5fe" category="list-text">若要啟用 FlexGroup 磁碟區保護功能，需要 ONTAP 9.12.1 或更新版本。請參閱 <block ref="a1845bf1ef98236015caabc5bbd8f351" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
-  <block id="bc75b0ab08d9eba6d835f75a9dc3780f" category="list-text">備份或還原至 S3 相容物件儲存需要 ONTAP 9.17.1 或更新版本。</block>
   <block id="6e61da6259c2e5766003325feb7a477a" category="list-text">選擇要保護的來源磁碟區時，只能選擇具有相符 SnapLock 設定的磁碟區。所選磁碟區必須全部啟用 SnapLock 功能，或全部停用 SnapLock 功能。</block>
   <block id="fa428977bbfd079a1a152d734ac0da9a" category="list-text">*使用現有 SnapMirror 和 SyncMirror 輔助關係*：啟用此選項可使用現有 SnapMirror 或 SyncMirror 關係將快照傳輸到指定的目標叢集。</block>
   <block id="2d86afc1dea874d04cb6b44f9329cb39" category="list-text">*VMware workloads*：</block>
@@ -6140,4 +6133,43 @@
   <block id="30144384865c9bc036707d99163c215c" category="cell">將檔案和資料夾從本機快照還原到同一 Volume</block>
   <block id="b6a5b73bc90d7aa324c49f4f91a911c2" category="list-text">從清單中選擇一個作業，選擇「行動」選單 <block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>，然後選擇 *取消還原* 行動。</block>
   <block id="67221d952a3dfa81a9eee1d6fc312266" category="list-text">在確認對話方塊中，選擇 *取消還原*。</block>
+  <block id="2ae03161c414273a2c4ef1fbfecc2c18" category="paragraph">若要針對 ONTAP Volume 工作負載使用 NetApp Backup and Recovery，您需要具備下列先決條件。</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">功能</block>
+  <block id="35d371dfd4ffcaa6df33332c8e851cb6" category="cell">所需的 ONTAP 版本</block>
+  <block id="041dd7a51404fc5dc5a87c2a0bc90b15" category="cell">9.8 或更新版本</block>
+  <block id="5d373d06bd6c55f7acd2cd162140309b" category="cell">保護 FlexGroup Volume（如需詳細資訊，請參閱 <block ref="a1845bf1ef98236015caabc5bbd8f351" category="inline-link-macro-rx"></block>）</block>
+  <block id="384264f87c50753f2eb17ca87ee9effa" category="cell">9.12.1 或更新版本</block>
+  <block id="7302e093b366701b61b9e7ea1cf0d501" category="cell">在保護 Cloud Volumes ONTAP 時，請針對 Azure 儲存體桶使用 Microsoft Entra ID 驗證</block>
+  <block id="5d4f2555064c941936a870946b60b493" category="cell">9.16.1 或更新版本</block>
+  <block id="a3f248f0b42b591c55de4315dfe33cbf" category="cell">備份或還原到與 S3 相容的物件儲存</block>
+  <block id="a48a0937fc12df9714feb4f90708686d" category="cell">9.17.1 或更新版本</block>
+  <block id="8e8029d7ebad3152861cb8a5f298ff52" category="cell">每個系統在不同的雲端供應商之間使用超過 6 個儲存桶（最多 100 個儲存桶）</block>
+  <block id="33bb0fb1eb1d7544e65ed467aa0cf274" category="cell">9.19.1 或更新版本</block>
+  <block id="9ca7107af6688cc44a1bcc2ce2046b03" category="cell"><block ref="85f823e464828e8803d4ef0669c47bde" prefix="" category="inline-code"></block></block>
+  <block id="f4d8d86297c910edd07515360629dc8b" category="inline-link-macro">將 Cloud Volumes ONTAP 備份到 Azure Blob 儲存設備</block>
+  <block id="afdef63d55a31f83b0472ea15938d9cd" category="cell">啟用使用 Microsoft Entra ID 代管身分識別驗證進行 Azure 物件儲存的選項，而不是使用儲存設備帳戶存取金鑰。支援在執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。如需詳細資訊，請參閱 <block ref="233a4aa6c0a23fa528a31eee71ed15ac" category="inline-link-macro-rx"></block>。</block>
+  <block id="abe72bc586e5883f1af04cf80727dc68" category="list-text">最低版本要求為 ONTAP 9.8；建議使用 ONTAP 9.8P13 或更新版本。如果針對 Azure 物件儲存使用 Microsoft Entra ID 驗證，則需要 ONTAP 9.16.1 或更新版本。</block>
+  <block id="0c4cf99159d4cd1b532e2ab5e24174cb" category="section-title">搭配 Azure 物件存放區使用 Microsoft Entra ID 驗證的需求</block>
+  <block id="42920e377000a5bd5c1d6ca781abb0d8" category="paragraph">如果您不想使用儲存設備帳戶存取金鑰進行 Azure 驗證，可以在建立 Azure 物件儲存桶或編輯現有 Azure 儲存桶組態時，為 Azure 物件儲存啟用 Microsoft Entra ID 驗證。此選項適用於執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。</block>
+  <block id="19491804ac62048a8e851071df62ae81" category="admonition">您可以在同一 Cloud Volumes ONTAP 系統中為不同的物件存放區組態使用不同的驗證方法，但是在將物件存放區組態交換器為使用 Microsoft Entra ID 後，就無法再交換器回使用儲存設備帳戶金鑰。</block>
+  <block id="f423e3045bb39879808f640f6d3edc7a" category="list-text">請確認 Cloud Volumes ONTAP 系統上已啟用「use-azure-msi-cvo」功能標誌。如需詳細資訊，請參閱 <block ref="6da975d9d27e80cef2a7d63b105961f2" category="inline-link-macro-rx"></block>。</block>
+  <block id="393b26469137541bfe97a83dd8809ccc" category="list-text">僅支援自帶儲存桶備份策略選項。請確認 Azure 儲存設備帳戶已存在，並且包含一個與帳戶同名的 Container。</block>
+  <block id="c25166e827f3d8e40a7dc77175109dd0" category="list-text">在 Azure 儲存設備帳戶的 IAM 設定中，確認<block ref="43a75a85e4a5f4ca31d88a3753adbcea" prefix=" " category="inline-code"></block>角色已指派給 Azure 代理程式和 Cloud Volumes ONTAP 系統。如果使用<block ref="7a97177198173bd0b74d0f70c9d953e3" prefix=" " category="inline-code"></block>原則選項，還需在儲存設備帳戶上啟用版本控制，並將<block ref="74d42a47b950c356be555335ad7b2450" prefix=" " category="inline-code"></block>角色指派給 Azure 代理程式和 Cloud Volumes ONTAP 系統。</block>
+  <block id="61368bcd5b5179392ffa4405c00d249e" category="inline-link-macro">針對已設定的 Azure bucket 切換至 Entra ID</block>
+  <block id="958d06d551680ecc2de50098779cabaf" category="inline-xref">制定備份策略</block>
+  <block id="1334bf370e99b217dfa24707a8013ec8" category="paragraph">如果您的環境符合這些需求，您可以在建立任何新的 Azure 物件儲存貯體時，於<block ref="d43a54f1761f010f98e5f729a40650ea" category="inline-xref-macro-rx"></block>中選取<block ref="0248eceb183034c82899c7bc91d5d37c" prefix=" " category="inline-code"></block>作為驗證類型。您也可以從 ONTAP Volumes 的「*Backup settings*」頁面<block ref="6d99e488f0e600fabd6ff47eb61bcf0f" category="inline-link-macro-rx"></block>。</block>
+  <block id="77811f9b1ddfb0aa2879a2000b2513b6" category="section-title">使用客戶代管的金鑰進行資料加密的要求</block>
+  <block id="e1517d7086bafd3d92eae75445613f32" category="list-text">在「定義備份策略」頁面中，選擇以下一項或全部。預設情況下，這三項均已選取：</block>
+  <block id="5741e8ce61ad7e2079c4958447deef4f" category="list-text">*備份目的地設定*：您可以選擇使用現有的備份目的地並從清單中選擇一個，或選擇設定新的備份目的地。</block>
+  <block id="aa67358cced63c3ab92e847061153bda" category="list-text">*供應商設定*：輸入供應商詳細資料，例如儲存桶建立和驗證選項：</block>
+  <block id="f3c92ea169084b24ee7f57949a25e6bc" category="list-text">*建立新儲存桶*：NetApp Backup and Recovery 會在您的供應商環境中建立儲存桶。</block>
+  <block id="9dfa550facaa156053152c7480a78e8a" category="list-text">*自備 Bucket*：使用您已建立的現有 Bucket。</block>
+  <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-xref">要求</block>
+  <block id="760f22cd63d8ba2af5510c6c9a156865" category="list-text">*驗證方法*：選擇使用儲存設備帳戶存取金鑰或 Microsoft Entra ID 向 Azure 進行驗證。只有當您的環境符合 Entra ID <block ref="ddbcf24f8793bd718ad1413287a068f4" category="inline-xref-macro-rx"></block> 時，才能選擇 *Entra ID*。如果選擇 *儲存設備帳戶存取金鑰*，請選擇下列項目：</block>
+  <block id="03628d2a24f98121695c37a42df64ac7" category="list-text">選擇用於儲存備份的 Azure 訂閱。此訂閱可以與 Cloud Volumes ONTAP 系統所在的訂閱不同。</block>
+  <block id="2b6fad0bbaa44587d9b5ac0ac2031ce4" category="section-title">將 Azure 物件存放區組態切換至 Microsoft Entra ID 驗證</block>
+  <block id="53a4f9c26971c8e33aa0fba4358ddb67" category="paragraph">如果您不想使用儲存設備帳戶存取金鑰進行 Azure 驗證，可以在編輯現有 Azure 儲存區組態時，針對 Azure 物件儲存切換至 Microsoft Entra ID 驗證。此選項適用於執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。</block>
+  <block id="969defc1889ccc6f8ee630d878ad0cf6" category="paragraph">請確保您的環境符合使用 Entra ID 的 <block ref="fea8710e19d17f9dcce7cbc75ce18f8b" category="inline-link-macro-rx"></block>。</block>
+  <block id="b7653fde2d6e0a6d514915930b0db4bd" category="list-text">展開 *驗證方法* 區段。</block>
+  <block id="68bc12754c0710946a9eaa7fa64fb06b" category="list-text">選擇 *Entra ID（代管身分）*。</block>
 </blocks>
