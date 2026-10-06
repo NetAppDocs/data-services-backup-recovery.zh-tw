@@ -4023,7 +4023,6 @@
   <block id="d213948679817ac06e8c20f73a6d5e50" category="list-text">TCP 8144（NetApp Plugin for Hyper-V）</block>
   <block id="eb24ddd0422049219f581858a9ae2714" category="list-text">TCP 8145（NetApp Plugin for Windows）</block>
   <block id="72edcbdd4436f32d101a83a36dd2d1db" category="list-text">執行 *ls* 命令以確保已建立資料夾 "catalogdb1"，並且其中包含子資料夾<block ref="45b963397aa40d4a0063e0d85e4fe7a1" prefix=" " category="inline-code"></block>、<block ref="b17be6650251f2e6c7d4e90209beb4e0" prefix=" " category="inline-code"></block>和<block ref="695633290d050f31cec0c9d4bd4a57fe" prefix=" " category="inline-code"></block>。</block>
-  <block id="5896522d63454009d1844a27f9e16972" category="cell">7.4.13 或更新版本</block>
   <block id="0fd3e1f73fc71151c33e67909039dd88" category="paragraph">在此版本中、Oracle Database 工作負載引進下列增強功能：</block>
   <block id="b77d45fa1e71e6bf913df1f7680aa70c" category="list-text">*叢集主機支援*：現在您可以發現並保護使用 Oracle Automatic Storage Management（ASM）且透過 VMDK 部署在 VMFS 檔案系統上的 Oracle Real Application Clusters（RAC）資料庫。如需詳細資訊，請參閱<block ref="d0dab0542f96585a18cc2e536da75fd6" category="inline-link-rx"></block>。</block>
   <block id="cb7dc55d43e841bfb3cf4e114d10c93d" category="inline-link">設定 Oracle 資料庫</block>
@@ -4227,7 +4226,6 @@
   <block id="1eb5bc9aed171393a1b9575017d9efef" category="cell"><block ref="ff10ff95bc79c857a9d612d300c756c9" prefix="" category="inline-code"></block></block>
   <block id="bad5ef63ec2094c6d84831f4e77806a0" category="cell">在 Backup and Recovery Web 使用者介面中，復原工作流程中可以選擇 *Prioritize restore over existing job queue* 選項。在復原工作流程中選擇此選項時，復原作業的優先權將高於其他排隊作業，即使佇列繁忙也能執行。</block>
   <block id="5760817f42cfdcd9c310ec63890ecb27" category="section-title">啟用預覽功能</block>
-  <block id="72493bb7c79c6733ffc1d16ee7c7d104" category="paragraph">啟用預覽功能標誌選項即可使用尚未正式發布的功能。在生產環境中謹慎使用預覽功能。</block>
   <block id="eb7643c8d813a09c07f2d8076b2befd1" category="list-text">切換至 root 使用者：</block>
   <block id="9ba4f57294fda814dbab7cbda4e897fa" category="list-text">在 Docker 中尋找 Backup and Recovery 磁碟區：</block>
   <block id="a68c3c53417789e724bdb983d1b29d52" category="paragraph">輸出結果應類似以下內容：</block>
@@ -4513,7 +4511,6 @@
   <block id="aefd2cbeb423f608e4e14dc18e7cda38" category="section-title">檢視作用中的 VMDK 掛載工作階段</block>
   <block id="29760f5766da0c4d6a0ac770b454e9d0" category="paragraph">此處顯示已開啟的 VMDK 掛載會話清單。您可以查看關聯的備份、來源 VM、掛載路徑和其他資訊。</block>
   <block id="9e75b63d575b523917aa9e47b41b52fb" category="list-text">Oracle AI Database 26ai</block>
-  <block id="f9fe5abdb3368e0236fd36a21bb8f840" category="cell">8.0.24 Hosting Bundle（以及所有後續的 8.0.x 補丁）</block>
   <block id="5b94860a42a3f19b0fba83e9b7d762f3" category="sidebar">複製 VMware 工作負載</block>
   <block id="beb76bddbaec1f03042fdde3ce87a100" category="sidebar">建立和管理 KVM 工作負載備份原則</block>
   <block id="d4989fe657e38f56766b05260a139da1" category="sidebar">建立和管理 Hyper-V 工作負載備份原則</block>
@@ -4529,8 +4526,6 @@
   <block id="17ee1e3baa1892c1f3d00118ea446fca" category="section-title">停用磁碟區索引</block>
   <block id="9d0f404c5a1959bdade3f7db9b0dfed5" category="paragraph">使用下列選項標誌停用特定磁碟區或屬於一個或多個儲存 VM 的所有磁碟區的索引：</block>
   <block id="99d6bb7f841b0ddd33dd9e23fe42b4e8" category="list-text"><block ref="2f0729ea8ff63f23144ca016d097072b" prefix="" category="inline-code"></block>：以逗號分隔的儲存 VM 清單，其磁碟區不應建立索引</block>
-  <block id="a4c2ad915aa7ffe7e12eaa0ec56e0fcb" category="list-text"><block ref="2e56f3828d4fc676b207b81b442eafdd" prefix="" category="inline-code"></block>：不應編入索引的個別磁碟區清單（以逗號分隔）</block>
-  <block id="2e7ba7a2addeb2881d5673ae4329306b" category="list-text">建立一個名為<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>的檔案，並根據您的環境自訂儲存虛擬機器和磁碟區名稱：</block>
   <block id="48be46e5153e88189d804da13793e42d" category="list-text">不支援從本機 Snapshot 還原資料夾。</block>
   <block id="637d209786fc6476ac3ed36c800de343" category="summary">在私有模式（無網際網路存取）下，NetApp Backup and Recovery 會將其組態資料儲存在與備份相同的 StorageGRID 或 ONTAP S3 bucket 中。如果 Console agent 主機系統發生故障，您可以部署新的 Console agent 並還原這些資料。</block>
   <block id="7bc0231d1aacc728e66087d46a205aab" category="paragraph">在 _私有模式_（無網際網路存取）下，NetApp Backup and Recovery 會將其組態資料儲存在與備份相同的 StorageGRID 或 ONTAP S3 bucket 中。如果 Console agent 主機系統發生故障，您可以部署新的 Console agent 並還原這些資料。</block>
@@ -6146,8 +6141,6 @@
   <block id="8e8029d7ebad3152861cb8a5f298ff52" category="cell">每個系統在不同的雲端供應商之間使用超過 6 個儲存桶（最多 100 個儲存桶）</block>
   <block id="33bb0fb1eb1d7544e65ed467aa0cf274" category="cell">9.19.1 或更新版本</block>
   <block id="9ca7107af6688cc44a1bcc2ce2046b03" category="cell"><block ref="85f823e464828e8803d4ef0669c47bde" prefix="" category="inline-code"></block></block>
-  <block id="f4d8d86297c910edd07515360629dc8b" category="inline-link-macro">將 Cloud Volumes ONTAP 備份到 Azure Blob 儲存設備</block>
-  <block id="afdef63d55a31f83b0472ea15938d9cd" category="cell">啟用使用 Microsoft Entra ID 代管身分識別驗證進行 Azure 物件儲存的選項，而不是使用儲存設備帳戶存取金鑰。支援在執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。如需詳細資訊，請參閱 <block ref="233a4aa6c0a23fa528a31eee71ed15ac" category="inline-link-macro-rx"></block>。</block>
   <block id="abe72bc586e5883f1af04cf80727dc68" category="list-text">最低版本要求為 ONTAP 9.8；建議使用 ONTAP 9.8P13 或更新版本。如果針對 Azure 物件儲存使用 Microsoft Entra ID 驗證，則需要 ONTAP 9.16.1 或更新版本。</block>
   <block id="0c4cf99159d4cd1b532e2ab5e24174cb" category="section-title">搭配 Azure 物件存放區使用 Microsoft Entra ID 驗證的需求</block>
   <block id="42920e377000a5bd5c1d6ca781abb0d8" category="paragraph">如果您不想使用儲存設備帳戶存取金鑰進行 Azure 驗證，可以在建立 Azure 物件儲存桶或編輯現有 Azure 儲存桶組態時，為 Azure 物件儲存啟用 Microsoft Entra ID 驗證。此選項適用於執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。</block>
@@ -6172,4 +6165,13 @@
   <block id="969defc1889ccc6f8ee630d878ad0cf6" category="paragraph">請確保您的環境符合使用 Entra ID 的 <block ref="fea8710e19d17f9dcce7cbc75ce18f8b" category="inline-link-macro-rx"></block>。</block>
   <block id="b7653fde2d6e0a6d514915930b0db4bd" category="list-text">展開 *驗證方法* 區段。</block>
   <block id="68bc12754c0710946a9eaa7fa64fb06b" category="list-text">選擇 *Entra ID（代管身分）*。</block>
+  <block id="0491a290496a647f9f8b7a77afbb4a59" category="admonition">所選檔案和資料夾的總大小不能超過 5 MB。</block>
+  <block id="a1cf900390187e5be1460cc1f4cf8265" category="cell">10.0.10 Hosting Bundle</block>
+  <block id="9b237dcdc22b8d854b0c16f0a9d8b68b" category="cell">7.6.4 或更新版本</block>
+  <block id="de67e78e01941dcc9c15168df621fae8" category="cell">啟用此選項，以針對 Azure 物件儲存使用 Microsoft Entra ID 代管身分驗證，而非使用儲存設備帳戶存取金鑰。支援執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP （主控台代理程式也必須位於 Azure 中）。如需詳細資訊，請參閱 <block ref="f363f656ffffe333619f8fa07242f366" category="inline-link-macro-rx"></block>。</block>
+  <block id="80e04227d7e4cba8f70346caa34031fa" category="paragraph">啟用預覽功能標誌以使用尚未正式發布的功能。在生產環境中請注意使用預覽功能。</block>
+  <block id="8830ede83298d61256b72a05ef889a1d" category="admonition">這些範例假設您使用 Docker；如果您使用 Podman，請執行等效的 Podman 命令。</block>
+  <block id="2a3eb35eaa4bea08656e899dd4bc3c61" category="list-text"><block ref="2e56f3828d4fc676b207b81b442eafdd" prefix="" category="inline-code"></block>：以逗號分隔的清單，包含不應建立索引之 Volume 的個別 Volume ID</block>
+  <block id="3a273880b40ea51e4b60121d32145e13" category="list-text">建立名為<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>的檔案，並自訂儲存設備 VM 名稱和 Volume ID 以符合您的環境：</block>
+  <block id="a940e8044fb83a96d0472abdc71d61e8" category="list-text">Cloud Volumes ONTAP 系統和主控台代理程式都必須位於 Azure 中。</block>
 </blocks>

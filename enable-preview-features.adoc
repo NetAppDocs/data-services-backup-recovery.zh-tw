@@ -40,14 +40,17 @@ summary: 啟用 NetApp Backup and Recovery 的預覽和隱藏功能。
 | `"data-transfer-report": true` | 在 NetApp Backup and Recovery for Volumes 的「報告」標籤下啟用每日備份資料傳輸報告。該報告提供整個環境中的每日備份與複寫資料傳輸活動資訊。 
 
 
-| `"use-azure-msi-cvo": true` | 啟用使用 Microsoft Entra ID 代管身分識別驗證進行 Azure 物件儲存的選項，而不是使用儲存設備帳戶存取金鑰。支援在執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。如需詳細資訊，請參閱 link:prev-ontap-backup-cvo-azure.html["將 Cloud Volumes ONTAP 備份到 Azure Blob 儲存設備"]。 
+| `"use-azure-msi-cvo": true` | 啟用此選項，以針對 Azure 物件儲存使用 Microsoft Entra ID 代管身分驗證，而非使用儲存設備帳戶存取金鑰。支援執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP （主控台代理程式也必須位於 Azure 中）。如需詳細資訊，請參閱 link:prev-ontap-backup-cvo-azure.html#anchor-entraid["搭配 Azure 物件存放區使用 Microsoft Entra ID 驗證的需求"]。 
 |===
 
 
 [[enable-preview-features]]
 == 啟用預覽功能
 
-啟用預覽功能標誌選項即可使用尚未正式發布的功能。在生產環境中謹慎使用預覽功能。
+啟用預覽功能標誌以使用尚未正式發布的功能。在生產環境中請注意使用預覽功能。
+
+
+NOTE: 這些範例假設您使用 Docker；如果您使用 Podman，請執行等效的 Podman 命令。
 
 .步驟
 . 使用 SSH 登入 Console 代理程式。
@@ -131,8 +134,11 @@ NOTE: 若要停用預覽功能，請依照相同的步驟操作，但將功能�
 使用下列選項標誌停用特定磁碟區或屬於一個或多個儲存 VM 的所有磁碟區的索引：
 
 * `svms-not-to-index`：以逗號分隔的儲存 VM 清單，其磁碟區不應建立索引
-* `volumes-not-to-index`：不應編入索引的個別磁碟區清單（以逗號分隔）
+* `volumes-not-to-index`：以逗號分隔的清單，包含不應建立索引之 Volume 的個別 Volume ID
 
+
+
+NOTE: 這些範例假設您使用 Docker；如果您使用 Podman，請執行等效的 Podman 命令。
 
 .步驟
 . 使用 SSH 登入 Console 代理程式。
@@ -176,14 +182,14 @@ docker volume inspect service-manager-2_cloudmanager_cbs_volume | grep Mountpoin
 ----
 cd /var/lib/docker/volumes/service-manager-2_cloudmanager_cbs_volume/_data/cbs_catalog_config
 ----
-. 建立一個名為 `production-customer.json`的檔案，並根據您的環境自訂儲存虛擬機器和磁碟區名稱：
+. 建立名為 `production-customer.json`的檔案，並自訂儲存設備 VM 名稱和 Volume ID 以符合您的環境：
 +
 [source, json]
 ----
 {
   "indexing": {
-    "svms-not-to-index": "storage_vm_1,storage_vm_2,storage_vm_3",
-    "volumes-not-to-index": "volume_1,volume_2,volume_3"
+    "svms-not-to-index": "storage_vm_name_1,storage_vm_name_2,storage_vm_name_3",
+    "volumes-not-to-index": "volume_ID_1,volume_ID_2,volume_ID_3"
   }
 }
 ----

@@ -449,10 +449,10 @@ NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程�
 | Microsoft Hyper-V | 2019 、 2022 及 2025 版 
 
 
-| ASP.NET Core Runtime | 8.0.24 Hosting Bundle（以及所有後續的 8.0.x 補丁） 
+| ASP.NET Core Runtime | 10.0.10 Hosting Bundle 
 
 
-| PowerShell | 7.4.13 或更新版本 
+| PowerShell | 7.6.4 或更新版本 
 
 
 | 如果非管理員使用者將負責保護 Hyper-V VM ，請確保這些使用者擁有下列權限  a| 

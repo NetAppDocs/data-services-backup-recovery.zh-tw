@@ -64,6 +64,7 @@ image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recov
 
 NOTE: 您可以在同一 Cloud Volumes ONTAP 系統中為不同的物件存放區組態使用不同的驗證方法，但是在將物件存放區組態交換器為使用 Microsoft Entra ID 後，就無法再交換器回使用儲存設備帳戶金鑰。
 
+* Cloud Volumes ONTAP 系統和主控台代理程式都必須位於 Azure 中。
 * 請確認 Cloud Volumes ONTAP 系統上已啟用「use-azure-msi-cvo」功能標誌。如需詳細資訊，請參閱 link:enable-preview-features.html["啟用預覽功能"]。
 * 僅支援自帶儲存桶備份策略選項。請確認 Azure 儲存設備帳戶已存在，並且包含一個與帳戶同名的 Container。
 * 在 Azure 儲存設備帳戶的 IAM 設定中，確認 `Storage Blob Data Contributor`角色已指派給 Azure 代理程式和 Cloud Volumes ONTAP 系統。如果使用 `Object lock`原則選項，還需在儲存設備帳戶上啟用版本控制，並將 `Storage Blob Data Owner`角色指派給 Azure 代理程式和 Cloud Volumes ONTAP 系統。
