@@ -6175,4 +6175,5 @@
   <block id="3a273880b40ea51e4b60121d32145e13" category="list-text">建立名為<block ref="f75ec94858c3cb7483e22bf2aca20589" prefix=" " category="inline-code"></block>的檔案，並自訂儲存設備 VM 名稱和 Volume ID 以符合您的環境：</block>
   <block id="a940e8044fb83a96d0472abdc71d61e8" category="list-text">Cloud Volumes ONTAP 系統和主控台代理程式都必須位於 Azure 中。</block>
   <block id="389c52d9a18d68d9dd6a3eb24bc88982" category="list-text">*Cloud Volumes ONTAP Azure Entra ID 支援*：如果您不想使用儲存設備帳戶存取金鑰進行 Azure 驗證，現在可以對 Azure 物件儲存儲存區組態使用 Microsoft Entra ID 驗證。此選項適用於執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。</block>
+  <block id="82d1d9da33b9c6cae173365156457fff" category="section-title">VMware 工作負載增強</block>
 </blocks>
