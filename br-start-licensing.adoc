@@ -18,6 +18,8 @@ summary: 向您的雲端供應商購買隨用隨付或年度市場訂閱，或�
 
 關於授權運作方式的幾點說明：
 
+* 當您保護 Microsoft SQL Server 工作負載時，您只需為備份到物件儲存付費（例如，使用 3-2-1 備份架構或磁碟到物件儲存時）。
+* 由於 Oracle Database 工作負載處於預覽版本狀態，因此不需要授權。
 * 使用 ONTAP Volumes 工作負載時，無需授權即可探索和還原磁碟區。但是，如果需要保護（備份）磁碟區，則需要購買授權。
 * 如果您正在搭配 NetApp Console 本機部署使用 Backup and Recovery，則只能購買自備授權（BYOL）授權。
 * NetApp Backup and Recovery自帶許可證 (BYOL) 是一種浮動許可證，您可以在與NetApp Console組織或帳戶關聯的所有系統中使用它。因此，如果您現有的 BYOL 授權具有足夠的備份容量，則無需購買另一個 BYOL 授權。

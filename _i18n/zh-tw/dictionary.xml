@@ -1143,7 +1143,6 @@
   <block id="efe1918d405691fc9d90b1a6589911df" category="list-text">當您從本機快照還原資料庫時， NetApp Backup and Recovery會使用備份中的資料建立_新_資源。</block>
   <block id="b3460ca65bf39006b718d394a43c3ebf" category="list-text">從複製的儲存空間還原時，您可以將其恢復到原始位置。</block>
   <block id="3ac9aabbf91084676e4b67aa8a398c20" category="list-text">從物件儲存還原備份時，您可以將資料還原到來源儲存或本機ONTAP系統，然後從那裡還原資料庫。</block>
-  <block id="de8e79d7f6fb2709000846a84f9a1628" category="paragraph">從「復原」頁面（也稱為「搜尋與復原」），您可以還原資料庫，即使您不記得確切的名稱、它所在的位置或它最後處於良好狀態的日期。您可以使用過濾器搜尋資料庫。</block>
   <block id="f7b6484db67a5a5ebaa0cd7c631c837f" category="section-title">還原 Oracle 資料庫</block>
   <block id="2d2e2835608dd4c300d9727603452421" category="list-text">從名稱搜尋欄位右側的下拉清單中，選擇 *Oracle*。</block>
   <block id="71fcd2352c7b3f1be0c4680747f8cd92" category="list-text">輸入要還原的資料庫的名稱或篩選要還原的資料庫所在的資料庫主機。</block>
@@ -5813,7 +5812,6 @@
   <block id="0a6313cec6301ae98c94e73ba522078e" category="list-text"><block ref="0a6313cec6301ae98c94e73ba522078e" category="inline-link-macro-rx"></block></block>
   <block id="ef28f96440f72809a7152ffc66dd809c" category="list-text"><block ref="ef28f96440f72809a7152ffc66dd809c" category="inline-link-macro-rx"></block></block>
   <block id="51c644b83084bd09a324c54def440e42" category="list-text">請僅選擇一個 PDB。時間點恢復與還原多個 PDB 不相容。</block>
-  <block id="1de84049759abb6734a6922f26da254f" category="list-text">確保資料備份和所需的日誌備份均已編入目錄。</block>
   <block id="4422040316e7063d2b6eeee89d2cb610" category="list-text">選擇要還原的內容：</block>
   <block id="edaeb35620b1bfb1682cb9dc8b30993d" category="list-text">選擇「所有資料檔案」以還原整個資料庫或 Container 資料庫 （CDB）。</block>
   <block id="6ef18b5f7ddc8dccec3f8cfc05180417" category="list-text">選擇「可插拔資料庫 (PDBs)」可以從 CDB 還原一個或多個 PDB，而不會影響 Container 中的其他 PDB。然後從清單中選擇 PDB。</block>
@@ -5848,12 +5846,8 @@
   <block id="6d26fc4748876aad896b3483365ea28f" category="list-text"><block ref="d77f3c9db249e472a92ac4b41ecc4805" prefix="" category="inline-code"></block> 不能選擇進行時間點恢復。</block>
   <block id="bba24b3818e297fabc67f6f7560b0988" category="list-text">控制檔案還原不能與 PDB 或 PDB 表空間的時間點恢復結合使用。</block>
   <block id="08b60260a4bc5ba792144d142c950168" category="list-text"><block ref="fa177138f94a7ea01f549b1aa7893d03" prefix=" " category="inline-code"></block>、<block ref="2000a37455e46fd15ee265c2382b9741" prefix=" " category="inline-code"></block> 和 <block ref="269940bcad6fddf5c68d3e67f767c3d1" prefix=" " category="inline-code"></block> 表空間無法選取。</block>
-  <block id="9919b7cad46288ca29f8fb296dd13536" category="list-text">確認資料備份和所需的日誌備份已編入目錄。</block>
   <block id="0b375c92f006ebc34ffb21da222ac752" category="paragraph">顯示最接近指定日期和時間的快照。</block>
-  <block id="cdb77aa4c72bd58fc3f38eb99937d3d7" category="list-text">（可選）選擇 *View log backups* 以查看相關的日誌備份。</block>
-  <block id="21df2c5f3ea31de3417da5d6b7a5af6f" category="list-text">請確認日誌備份已掛載。</block>
   <block id="fe30a881b5d0622f2e579194115dc323" category="list-text">如果快照儲存在多個位置，請選擇要使用的來源位置，並新增或審查位置詳細資訊。</block>
-  <block id="1a0861850bbff5a4629682768903a6a8" category="paragraph">顯示指定 SCN 的最接近快照。</block>
   <block id="190cbdc2fe368e8cdb928c64072a855e" category="paragraph">將顯示最新快照。還原作業將使用所有可用的日誌備份還原到上次的良好狀態。</block>
   <block id="f7e9cc07ffeb39b44af9c81fc95ee80a" category="paragraph">選擇此選項意味著資料庫將從快照還原，但會跳過恢復（不會套用日誌備份）。</block>
   <block id="12c36d7d5c6e22f7d7de9e842bd09185" category="paragraph">顯示可用的快照。</block>
@@ -5862,7 +5856,6 @@
   <block id="a6bd46b772365e5b6c3e3ebcfb5d88ce" category="list-text">對於 RAC 資料庫，請選擇要執行還原的 RAC 節點。此選項僅適用於 RAC 資料庫。</block>
   <block id="f788e090e936649cf2c5c0ff154c27a9" category="list-text">（可選）啟用「控制檔案」選項，即可同時還原資料庫控制檔。此選項不能用於 PDB 或 PDB 表空間的時間點還原或 SCN 恢復。</block>
   <block id="79d30138f764cb5a18ef350673cd0630" category="list-text">您可以選擇啟用「強制原地還原」選項，以便在備份後新增了新的資料檔案，或在 LVM 磁碟群組中新增、刪除或重新建立 LUN 時執行原地還原。此選項會覆蓋外部檔案檢查；資料庫恢復將使用您選擇的還原選項進行。</block>
-  <block id="7c47104cd2fa4267b0939b38c887b1e1" category="list-text">如果您要將 PDB 或表空間還原到特定時間點或 SCN，而歸檔日誌不在設定的位置，請在「外部歸檔日誌檔案位置」欄位中指定外部歸檔日誌檔位置。輸入以<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>開頭的檔案系統路徑，或以<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>開頭的 ASM 磁碟群組。使用文字輸入欄位旁的「加號」和「減號」按鈕新增或移除位置。從快照還原且不進行任何恢復操作時，此欄位不會顯示。</block>
   <block id="4a2e39bd630275c8eae0d833bd13f831" category="list-text">（可選）啟用「恢復後以讀寫模式開啟資料庫或 Container 資料庫」選項，並選擇與還原範圍相符的子選項（從無恢復的快照還原時，這些選項不會顯示）：</block>
   <block id="1598545f145b423567a9960785cf8619" category="list-text">*所有資料檔案*：恢復後以讀寫模式開啟資料庫或 Container 資料庫。</block>
   <block id="ebdcd90fa368ddf5616f4eacd06110a8" category="list-text">*PDB 或 PDB 表空間*：恢復後以讀寫模式開啟可插拔資料庫。</block>
@@ -5921,7 +5914,6 @@
   <block id="a9c837a95e737168ee3ce1e980c47216" category="list-text">*認證資料*：選擇已儲存的 KVM 主機認證資料。</block>
   <block id="d41a581fc85315dff70aff8313ea3257" category="list-text">*進階設定*：您可以選擇輸入與 KVM 主機通訊的連接埠，並從清單中選擇主機的管理平台。</block>
   <block id="6ba9f255707f8a2103b20486c4949029" category="list-text">選擇跨磁碟的行為。目前支援 *始終包含所有跨磁碟*。</block>
-  <block id="f3a516904e0ccca6ef2462dfb7ce6d13" category="admonition">對於 CIFS 配置，Backup and Recovery 會自動保護保護群組中每個 VM 所連接的每個磁碟。這包括分佈在多個 ONTAP 磁碟區或 ONTAP 儲存設備系統上的檔案（跨區磁碟）以及僅限於單一位置的檔案（非跨區磁碟）。對於 SAN 配置，所有非跨區磁碟都將包含在保護群組中。</block>
   <block id="eb66f05eb35d497da0a423fd13838c97" category="paragraph">您也可以選擇 *建立新原則* 來建立新的保護原則。選擇原則後，將顯示原則詳細資料。</block>
   <block id="c2a9493df2887bffbf4d321961143b50" category="paragraph">在保護執行於 ONTAP 系統上的 VMware 資料存放區與虛擬機器之前，您需要在 NetApp Backup and Recovery 中探索它們。您也可以從 SnapCenter 匯入備份資料與原則。</block>
   <block id="56ed800e3e95a86a0d288e29e284d3d6" category="section-title">探索 VMware 工作負載並可選擇匯入 SnapCenter 外掛資源</block>
@@ -6176,4 +6168,27 @@
   <block id="a940e8044fb83a96d0472abdc71d61e8" category="list-text">Cloud Volumes ONTAP 系統和主控台代理程式都必須位於 Azure 中。</block>
   <block id="389c52d9a18d68d9dd6a3eb24bc88982" category="list-text">*Cloud Volumes ONTAP Azure Entra ID 支援*：如果您不想使用儲存設備帳戶存取金鑰進行 Azure 驗證，現在可以對 Azure 物件儲存儲存區組態使用 Microsoft Entra ID 驗證。此選項適用於執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。</block>
   <block id="82d1d9da33b9c6cae173365156457fff" category="section-title">VMware 工作負載增強</block>
+  <block id="b77bf9dc680cf2db1d8b3d5f6156585b" category="list-text">*NetApp MetroCluster 支援*：NetApp Backup and Recovery 現在可讓您保護由 NetApp MetroCluster 鏡像的 Hyper-V 虛擬機器。</block>
+  <block id="7ed9eebaad97e0f936b753873e6ff586" category="list-text">*SAN 虛擬機器跨磁碟保護*：對於 CIFS 和 SAN 配置，您現在可以保護保護群組中每個虛擬機器所連接的每個磁碟。這包括分佈在多個 ONTAP 磁碟區或 ONTAP 儲存設備系統上的檔案（跨磁碟）以及僅限於單一位置的檔案。</block>
+  <block id="82dd01a289cf98e9d962781faec1018b" category="paragraph">*自動歸檔日誌管理*：在資料庫還原和 Clone 作業期間，NetApp Backup and Recovery 會自動發現並掛載所需的歸檔日誌，然後在作業完成後將其卸載。支援主要、次要和物件儲存日誌來源。</block>
+  <block id="5f1a7ddd55d2a0b34003e08fe7cacdaf" category="section-title">Microsoft SQL Server 工作負載增強</block>
+  <block id="32d770e78ed41453037389dce2e33d9c" category="paragraph">在此版本中，Microsoft SQL Server 工作負載引入了以下增強功能：</block>
+  <block id="92337d8e70dfe880909b2051333e2fe4" category="paragraph">*授權變更*：使用磁碟到磁碟或磁碟到磁碟連出架構的備份不再收費。收費僅適用於備份至物件儲存，包括使用 3-2-1 或磁碟到物件儲存架構的備份。</block>
+  <block id="2f75ea4c51ce88400f5201fdeb2ccb9d" category="inline-link">了解如何使用 NetApp Backup and Recovery 保護 Microsoft SQL Server 工作負載</block>
+  <block id="a5e96f4320434690f042cf906acacdcd" category="paragraph">如需保護 Microsoft SQL Server 工作負載的詳細資訊，請參閱<block ref="36e999a623e2068d9719d9ca1143b559" category="inline-link-rx"></block>。</block>
+  <block id="fb45f68d5333e580b42206cf36659ecd" category="list-text">當您保護 Microsoft SQL Server 工作負載時，您只需為備份到物件儲存付費（例如，使用 3-2-1 備份架構或磁碟到物件儲存時）。</block>
+  <block id="7065e852c4b6888b4e74708a90ddb20d" category="list-text">由於 Oracle Database 工作負載處於預覽版本狀態，因此不需要授權。</block>
+  <block id="e28980c3ae4b3c703cc7a4f8d25ecda7" category="admonition">對於 CIFS 和 SAN 配置，Backup and Recovery 會自動保護保護群組中每個 VM 所連接的每個磁碟。這包括分佈在多個 ONTAP 磁碟區或 ONTAP 儲存設備系統上的檔案（跨磁碟），以及僅限於單一位置的檔案（非跨磁碟）。</block>
+  <block id="c138f0fc5add74f3ad77a943271dcc42" category="section-title">檢視有關可用 Oracle 資料庫還原點的資訊</block>
+  <block id="b8294ceea04597d2d60f5b28b3b3f610" category="paragraph">檢視可用的還原點，包括 SCN 編號和關聯的資料庫版本。</block>
+  <block id="e55e7c5f94a5f9a43478bf91d01e8053" category="admonition">每次使用<block ref="d25b8c1b3f7ba3e06913b87e4360ec6d" prefix=" " category="inline-code"></block> 選項開啟資料庫時，Oracle Database 都會建立一個新的資料庫化身。當您審查還原點以及還原至特定 SCN 時，NetApp Backup and Recovery 會列出相關的資料庫化身。</block>
+  <block id="bd3847966f48b6808bad35d652e79b8b" category="list-text">從 Backup and Recovery 功能表中，選擇 *Inventory*。</block>
+  <block id="770e9d2ddce6214aa3a89285f53f6579" category="list-text">針對 Oracle 資料庫工作負載選擇 *檢視*。</block>
+  <block id="4a2205c1af5bce054c0536c538540831" category="list-text">選擇您要檢視其還原點的資料庫的 *Actions* <block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block> 圖示，然後選擇 *View protection details*。</block>
+  <block id="3300f2655fe420c86cc828285fa0c124" category="list-text">審查可用的還原點，以及與每個還原點關聯的 SCN 編號和資料庫化身。</block>
+  <block id="402afb3450325e60e5ac66aa3a09b855" category="list-text">（選用）參考 <block ref="c12704870bf071e0e07ed4d97d800d3f" category="inline-xref-macro-rx"></block> 以查看可用的 SCN 和相關資料庫化身。</block>
+  <block id="eec1bb4eef0bc2471da6d24624c8e7af" category="paragraph">顯示與指定 SCN 最匹配的快照。如果多個資料庫實例與 SCN 匹配，則顯示所有匹配的實例。</block>
+  <block id="004ae5ca2de3ea160e921da76ac388d7" category="list-text">如果多個資料庫版本符合搜尋條件，請選擇具有正確版本的快照。</block>
+  <block id="38eb0a9d79c02f31a9749c6e9e2b5e32" category="list-text">如果在將 PDB 或表格空間還原至特定時間點或 SCN 時，歸檔日誌不在設定的位置，請在 *Specify external archive log files locations* 欄位中指定外部歸檔日誌檔位置。輸入以<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>開頭的檔案系統路徑，或以<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>開頭的 ASM 磁碟群組。使用文字輸入欄位旁的「加號」和「減號」按鈕來新增或移除位置。當您從快照還原且不進行恢復時，此欄位不會顯示。</block>
+  <block id="e019cb225a4644922cdd06575b099710" category="section-title">2026年10月12日</block>
 </blocks>
