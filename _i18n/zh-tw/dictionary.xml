@@ -3657,7 +3657,6 @@
   <block id="ea7f18044a9efb2ea47bdd370e5870f3" category="example-title">Trident Protect 24.10</block>
   <block id="98d3ce5c789124fc9207b48d4d1e8fc7" category="paragraph">Trident Protect 24.10 在資料保護作業期間不會自動確保 KubeVirt VM 檔案系統的一致性狀態。如果您想使用 Trident Protect 24.10 保護 KubeVirt VM 資料，則需要在執行資料保護作業之前手動啟用檔案系統的凍結/解凍功能。這樣可以確保檔案系統處於一致狀態。</block>
   <block id="acb14ba5b70eb330a1d4de9c6b7a325d" category="inline-link-macro">配置虛擬化</block>
-  <block id="5ea5c247812e1dca5ff02ca853f05032" category="paragraph">您可以設定 Trident Protect 24.10 來管理資料保護作業期間 VM 檔案系統的凍結和解凍，方法是<block ref="e0dd4c4b8aa16596df6c3f5cb36d3cdc" category="inline-link-macro-rx"></block>然後使用下列指令：</block>
   <block id="cedf2576eebff15fc6b30d5a7109eb6b" category="doc">還原和容錯移轉作業期間的命名空間註釋和標籤</block>
   <block id="20f40e0b9308901dac07ce8a8efb3350" category="inline-link-macro">OpenShift 安全上下文約束文檔</block>
   <block id="59f713e31282fe744caf06335d891f9a" category="inline-link-macro">設定其他 Trident Protect Helm Chart 設定</block>
@@ -5359,7 +5358,6 @@
   <block id="e2c49b50023b8581ad0e0c1590477c2c" category="paragraph">監控 Snapshot 快照技術、複寫、備份和還原作業。設定電子郵件通知，並使用 Console Timeline 來調查活動。</block>
   <block id="dfb648ab8bdcaffa1f10f59b16fbdbe6" category="list-text">若要顯示其他欄位（系統、儲存虛擬機器、使用者名稱、工作負載、原則名稱、Snapshot 快照技術標籤），請選擇加號。</block>
   <block id="f961d5780137e52b38d60d0076cfad03" category="paragraph">您可以使用多個篩選器在「作業監控」頁面上篩選操作，例如原則、Snapshot 快照技術標籤、操作類型（保護、還原、保留或其他）和保護類型（本機 Snapshot 快照技術、複寫或備份到雲端）。</block>
-  <block id="5fe43d3e42037473a1d9dcda6cb5135c" category="paragraph">使用此面板可以輸入自由文字搜尋任何資源；例如，「Volume 1」或「應用程式 3」。您也可以根據下拉式選單中的項目篩選工作清單。</block>
   <block id="69eff9fb541f852de7b410e50792716f" category="paragraph">您可以檢視特定已完成任務的詳細資訊。您可以將特定任務的詳細資訊匯出為 JSON 格式。</block>
   <block id="393c89f1515a0c516f0c06ada46600ef" category="paragraph">您可以檢視詳細資訊，例如作業類型（排程或隨需）、SnapMirror 備份類型（初始或定期）、開始和結束時間、持續時間、從系統傳輸至物件儲存的資料量、平均傳輸率、原則名稱、是否啟用保留鎖定、是否執行勒索軟體掃描、保護來源詳細資訊及保護目標詳細資訊。</block>
   <block id="61f87e5c880646f5edd955f28644ca18" category="list-text">選擇「動作」選單<block ref="2a0f14b836fbf833847542e256b2473a" category="inline-image-macro-rx" type="image"></block>，然後選擇*檢視詳細資料*。</block>
@@ -6191,4 +6189,8 @@
   <block id="004ae5ca2de3ea160e921da76ac388d7" category="list-text">如果多個資料庫版本符合搜尋條件，請選擇具有正確版本的快照。</block>
   <block id="38eb0a9d79c02f31a9749c6e9e2b5e32" category="list-text">如果在將 PDB 或表格空間還原至特定時間點或 SCN 時，歸檔日誌不在設定的位置，請在 *Specify external archive log files locations* 欄位中指定外部歸檔日誌檔位置。輸入以<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>開頭的檔案系統路徑，或以<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>開頭的 ASM 磁碟群組。使用文字輸入欄位旁的「加號」和「減號」按鈕來新增或移除位置。當您從快照還原且不進行恢復時，此欄位不會顯示。</block>
   <block id="e019cb225a4644922cdd06575b099710" category="section-title">2026年10月12日</block>
+  <block id="cd8c5a4fae99d9a57a4e12c8f43a8a84" category="paragraph">您可以設定 Trident Protect 24.10 來管理資料保護作業期間 VM 檔案系統的凍結和解凍，方法是<block ref="7689e703f80621bc0155b88d35cddcc8" category="inline-link-macro-rx"></block>然後使用下列指令：</block>
+  <block id="54ea8878308d39d6d78a01f24a278aa1" category="list-text">*工作監控器自訂日期範圍篩選*：您現在可以透過在工作監控器的行事曆中選擇自訂的開始和結束日期，來搜尋過去 90 天的工作。</block>
+  <block id="61065205211a8d57175713e9b45b8198" category="paragraph">使用此面板可以輸入自由文字搜尋任何資源；例如，「Volume 1」或「應用程式 3」。您也可以根據下拉式選單中的項目篩選工作清單。此外，您也可以按時間範圍進行搜尋。</block>
+  <block id="9598a4f2b418f0c49368419070383673" category="paragraph">搜尋時間範圍時，請選取 *自訂範圍*，以從行事曆中選擇開始和結束日期。</block>
 </blocks>
