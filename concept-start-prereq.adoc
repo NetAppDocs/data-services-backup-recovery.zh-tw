@@ -263,6 +263,18 @@ NOTE: 不支援保護儲存在直通磁碟或 VHD/VHDX 檔案中的資料庫，�
 |===
 
 
+[[required-permissions-for-microsoft-sql-server-host-discovery]]
+=== Microsoft SQL Server 主機探索所需的權限
+
+當您探索 SQL Server 主機時，NetApp Backup and Recovery 會在主機上安裝 Microsoft SQL Server 的 NetApp SnapCenter 外掛。您也可以選擇手動安裝外掛。如果您選擇自動安裝，您在探索期間提供的主機認證資料必須具有下列成員資格與權限，以便 Backup and Recovery 能夠安裝外掛：
+
+* 屬於 Microsoft SQL Server 執行個體的 `sysadmin`固定伺服器層級角色
+* Windows 本機管理員群組成員
+* 登入主機的權限
+
+
+
+
 [[requirements-for-protecting-vmware-workloads]]
 == 保護 VMware 工作負載的要求
 
@@ -411,6 +423,33 @@ NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（�
 
 
 |===
+
+
+[[required-permissions-for-oracle-database-host-discovery]]
+=== Oracle Database 主機探索所需的權限
+
+當您探索 Oracle Database 主機時，NetApp Backup and Recovery 會使用以密碼為基礎的 SSH 在主機上安裝 NetApp Oracle Database 外掛。您也可以選擇手動安裝外掛。您需要特定的權限來進行外掛安裝。
+
+
+
+==== 使用自動外掛安裝的要求
+
+您在探索期間提供的主機認證資料必須具有下列權限，以便 Backup and Recovery 可以安裝 NetApp Oracle 資料庫外掛：
+
+* Root 權限，或非 root 使用者的 sudo 存取。若要在主機探索期間授予 sudo 存取，請在「主機註冊」區段中選擇非 root 認證資料，然後選擇「設定 sudoers」並依照指示操作。Root 認證資料不需要此步驟。
+* Java JVM 的執行權限。
+
+
+
+
+==== 手動安裝外掛的要求
+
+如果手動安裝外掛，則用於安裝的帳戶必須具有以下權限：
+
+* 非 root 使用者的 root 權限或 sudo 能力。
+* Java JVM 的執行權限。
+
+
 
 
 [[requirements-for-protecting-kubernetes-applications]]

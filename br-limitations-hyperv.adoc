@@ -24,8 +24,6 @@ summary: 在您的環境中使用 NetApp Backup and Recovery 之前，請先檢�
 在 NetApp Backup and Recovery 中，以下操作對 Hyper-V 工作負載不受支援：
 
 * 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
-* 使用 Microsoft Windows Server 2025 時，不支援保護儲存在 SAN 儲存設備上的第二代虛擬機器。
 * 使用來自多個 Hyper-V 主機的 VM 建立資源群組
-* 使用跨多個 CIFS 共用的跨區磁碟
 * 即使 Hyper-V 中的「處理器相容性」設定正確，也無法在 CPU 廠商不同的系統之間（例如 Intel 和 AMD 或反向）還原虛擬機器或虛擬機器資料。此設定僅支援同一廠商不同世代產品之間的相容性（例如，Intel 到 Intel 或 AMD 到 AMD）。
 

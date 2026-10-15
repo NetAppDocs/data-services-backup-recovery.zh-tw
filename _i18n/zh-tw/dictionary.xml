@@ -584,7 +584,6 @@
   <block id="afedbe20f6822f0dee210eea973a9560" category="list-text">*工作負載類型*：對於此版本，僅 Microsoft SQL Server 可用。</block>
   <block id="8ced46662b7c39f90c1b2041834e629b" category="list-text">*vCenter 設定*：選擇現有的 vCenter 或新增新的 vCenter。若要新增新的 vCenter，請輸入 vCenter FQDN 或 IP 位址、使用者名稱、密碼、連接埠和協定。</block>
   <block id="757f6c0f45e5e6c857597da9d0a937d1" category="admonition">如果要輸入 vCenter 訊息，請輸入 vCenter 設定和主機註冊的資訊。如果您在這裡新增或輸入了 vCenter 訊息，接下來您還需要在進階設定中新增插件資訊。</block>
-  <block id="2b6e241b6ca02934c3d70cbf729b2190" category="list-text">*主機註冊*：選擇*新增憑證*並輸入包含您想要發現的工作負載的主機的資訊。</block>
   <block id="9c4b59ad81bef49107c1a8eb04473a44" category="admonition">如果要新增獨立伺服器而不是 vCenter 伺服器，則僅輸入主機資訊。</block>
   <block id="180f20972969fa31108736a33e1febee" category="list-text">繼續高級設定。</block>
   <block id="4f95933eb191bec1d5fda6d14b048ae9" category="list-text">在發現工作負載資源頁面中，輸入以下資訊。</block>
@@ -4714,7 +4713,6 @@
   <block id="4ad36f854b6d4d49c94081fec1b29de2" category="list-text">要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。</block>
   <block id="59ebd83b4c20d2b24ac46c96525c37fc" category="list-text">ONTAP 9.13.1 或更高版本（若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更高版本；最多可支援 100 個儲存桶）</block>
   <block id="6a0d2c5dd8e27d910d6ff2158f8d5520" category="list-text">主要 ONTAP 系統（ONTAP 9.14.1 或更新版本 - 若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本；最多 100 個儲存桶）</block>
-  <block id="d2bf4d042aabc15b9ccde353c782a6f2" category="list-text">使用 Microsoft Windows Server 2025 時，不支援保護儲存在 SAN 儲存設備上的第二代虛擬機器。</block>
   <block id="b2d5ba8de92c18cbb9c45e01ad3f5509" category="list-text">還原至備用位置（從主要儲存設備、次要儲存設備和物件儲存）</block>
   <block id="62ff0d9db122207756fd73342a3eb3ad" category="paragraph">NetApp Backup and Recovery 現在支援保護系統中多達 100 個儲存桶（跨不同雲端供應商）的工作負載。每個系統支援超過 6 個儲存桶需要 ONTAP 9.19.1 或更新版本。</block>
   <block id="0d1c49b7f34131be8c6ddbc862cc359d" category="list-text">盡可能將 HelmChartConfig 檔案置於變更控制之下。</block>
@@ -5017,7 +5015,6 @@
   <block id="6dee314e5a8212befbbb5550bcd8c82f" category="paragraph">查看 NetApp Backup and Recovery 中 Hyper-V 工作負載的目前限制和不支援的作業。</block>
   <block id="2320ca4680a90af67c892bc394770545" category="paragraph">在 NetApp Backup and Recovery 中，以下操作對 Hyper-V 工作負載不受支援：</block>
   <block id="5ef97381ee778e6a2856d655b0f66fc2" category="list-text">使用來自多個 Hyper-V 主機的 VM 建立資源群組</block>
-  <block id="4b1cae8294562e32be20bab07c14f9bc" category="list-text">使用跨多個 CIFS 共用的跨區磁碟</block>
   <block id="38ac42adbbba8d3dccfd49459843843b" category="paragraph">查看 NetApp Backup and Recovery 中 Kubernetes 工作負載的目前限制和因應措施。</block>
   <block id="c5e627d3d20d62858bf75231e8a6b069" category="section-title">NetApp Console 本地部署的 Backup and Recovery 預覽版限制</block>
   <block id="e5d90e82b6c24e7b1bf837dd1bcb3d30" category="paragraph">如果變更應用程式的保護原則以使用不同的儲存桶或次要複寫目標，則保護可能會失敗。</block>
@@ -5130,9 +5127,7 @@
   <block id="ab01805ccfe371fe51580a961290e0c4" category="paragraph">如果您使用的是 VMware 環境，則此步驟為選用步驟。</block>
   <block id="9b42846cd9771e997a08e3200d79e8e3" category="admonition">如果您要輸入 vCenter 資訊，請同時輸入 vCenter 設定和主機註冊的資訊。如果您在此處新增或輸入了 vCenter 資訊，接下來還需要在「進階設定」中新增外掛資訊。</block>
   <block id="6e895abe8a9bc049bbd4b4acc199426d" category="section-title">在探索的過程中設定進階設定選項並安裝外掛</block>
-  <block id="b5c6b1b5218957aa87aa0f5da8f67efc" category="paragraph">透過進階設定，您可以手動在所有已註冊的伺服器上安裝外掛代理程式。這樣，您可以將所有 SnapCenter 工作負載匯入 NetApp 備份與還原，以便在其中管理備份與還原。NetApp 備份與還原會顯示安裝外掛所需的步驟。</block>
   <block id="05ec5e0d0ed90b0c5620cefe19c46d67" category="list-text">從「探索資源」頁面，選擇右側的向下箭頭，繼續進入「進階設定」。</block>
-  <block id="0a51d763335c94619b1bad74ea3fa23d" category="list-text">*輸入外掛連接埠號碼*：輸入外掛使用的連接埠號碼。</block>
   <block id="8cd0810025b90e56e30a8cd2c7647649" category="list-text">*安裝路徑*：輸入外掛的安裝路徑。</block>
   <block id="9d0a0f1f3ed9f239f57d8c5056d68fae" category="list-text">如果要手動安裝 SnapCenter 代理程式，請選擇以下選項：</block>
   <block id="51b2f0bb496d4976f9362c52c90bc7cb" category="list-text">*使用手冊安裝*：選取此選項可手動安裝外掛。</block>
@@ -6193,4 +6188,25 @@
   <block id="54ea8878308d39d6d78a01f24a278aa1" category="list-text">*工作監控器自訂日期範圍篩選*：您現在可以透過在工作監控器的行事曆中選擇自訂的開始和結束日期，來搜尋過去 90 天的工作。</block>
   <block id="61065205211a8d57175713e9b45b8198" category="paragraph">使用此面板可以輸入自由文字搜尋任何資源；例如，「Volume 1」或「應用程式 3」。您也可以根據下拉式選單中的項目篩選工作清單。此外，您也可以按時間範圍進行搜尋。</block>
   <block id="9598a4f2b418f0c49368419070383673" category="paragraph">搜尋時間範圍時，請選取 *自訂範圍*，以從行事曆中選擇開始和結束日期。</block>
+  <block id="2b8abfeb97d865eaa0365ae5ea904375" category="list-text">*主機註冊*：請輸入以下資訊：</block>
+  <block id="2262ff21634c9674e4ff5f4c74bda8cd" category="list-text">主機 FQDN 或 IP 位址</block>
+  <block id="8c212cb55c136cbf08fbff8301a57f9e" category="list-text">主機用於與 Backup and Recovery 通訊的 Console 代理程式</block>
+  <block id="ffffc5b40a52bf8078bfaa777967b249" category="list-text">主機的已儲存認證資料</block>
+  <block id="ff35c388a5cbf8ae8f8807f67d1462b3" category="paragraph">如果您尚未將此主機的認證資料新增至 NetApp Backup and Recovery，請選取 *新增認證資料* 並輸入主機的認證資料資訊。</block>
+  <block id="0984a9b22a15a2ae7667031dd00e4230" category="paragraph">透過進階設定，您可以手動在所有正在註冊的伺服器上安裝適用於 Microsoft SQL Server 的 NetApp SnapCenter 外掛。這可讓您將所有 SnapCenter 工作負載匯入 NetApp Backup and Recovery，以便在該處管理備份與還原。NetApp Backup and Recovery 會顯示安裝外掛所需的步驟。</block>
+  <block id="ca670126755dcd34f80e41c964315abf" category="list-text">*外掛連接埠*：輸入外掛使用的連接埠號碼。</block>
+  <block id="2f613600ce95cea85557e892bb8ce093" category="section-title">Microsoft SQL Server 主機探索所需的權限</block>
+  <block id="d39410ece499dd7cb49c6305b59c92f2" category="paragraph">當您探索 SQL Server 主機時，NetApp Backup and Recovery 會在主機上安裝 Microsoft SQL Server 的 NetApp SnapCenter 外掛。您也可以選擇手動安裝外掛。如果您選擇自動安裝，您在探索期間提供的主機認證資料必須具有下列成員資格與權限，以便 Backup and Recovery 能夠安裝外掛：</block>
+  <block id="bc6f4ea338b05255900e4b0506829f4c" category="list-text">屬於 Microsoft SQL Server 執行個體的<block ref="48a365b4ce1e322a55ae9017f3daf0c0" prefix=" " category="inline-code"></block>固定伺服器層級角色</block>
+  <block id="85e3de057dc6005479930eb6aa5b2f79" category="list-text">Windows 本機管理員群組成員</block>
+  <block id="2ff43e2a2d5b0aa3489389af408c838a" category="list-text">登入主機的權限</block>
+  <block id="80d46fed65051869c8128d0c98118592" category="section-title">Oracle Database 主機探索所需的權限</block>
+  <block id="79358627f2feaa4d2338391a918789ac" category="paragraph">當您探索 Oracle Database 主機時，NetApp Backup and Recovery 會使用以密碼為基礎的 SSH 在主機上安裝 NetApp Oracle Database 外掛。您也可以選擇手動安裝外掛。您需要特定的權限來進行外掛安裝。</block>
+  <block id="168489ecd7560d51be74b06b631df49c" category="section-title">使用自動外掛安裝的要求</block>
+  <block id="41727149db11b5b52863b15d5def9886" category="paragraph">您在探索期間提供的主機認證資料必須具有下列權限，以便 Backup and Recovery 可以安裝 NetApp Oracle 資料庫外掛：</block>
+  <block id="1da21a47453ca95a01bd9ec124a97558" category="list-text">Root 權限，或非 root 使用者的 sudo 存取。若要在主機探索期間授予 sudo 存取，請在「主機註冊」區段中選擇非 root 認證資料，然後選擇「設定 sudoers」並依照指示操作。Root 認證資料不需要此步驟。</block>
+  <block id="8086df899fb70153c36c060c18be25c4" category="list-text">Java JVM 的執行權限。</block>
+  <block id="3e3321c0918c1d68c43253c427d52a85" category="section-title">手動安裝外掛的要求</block>
+  <block id="bd6c005addd81d8409ae4c84d588f53d" category="paragraph">如果手動安裝外掛，則用於安裝的帳戶必須具有以下權限：</block>
+  <block id="901e5d2cf1e185b371f3c54154d4da3c" category="list-text">非 root 使用者的 root 權限或 sudo 能力。</block>
 </blocks>
