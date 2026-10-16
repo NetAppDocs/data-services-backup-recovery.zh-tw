@@ -4561,7 +4561,6 @@
   <block id="1ce75b5926383de539d27e838bd74b8a" category="paragraph">請參閱<block ref="04b01782baab49091268802b7f1423cb" category="inline-link-rx"></block>以瞭解在 NetApp Backup and Recovery 中執行操作所需的角色與權限詳細資訊。</block>
   <block id="6bb058e639cecc8051a99e8892400bd8" category="section-title">物件儲存備份的要求</block>
   <block id="fc0cba16e06b834a59ea2732ce15d74a" category="section-title">保護 ONTAP Volume 工作負載的需求</block>
-  <block id="45b096193f4470968c1063df19d1c253" category="list-text">必須在內部部署 ONTAP 執行個體上啟用 ONTAP One 授權。</block>
   <block id="ddaa1c8bd07bda0816a8b44d87c10997" category="paragraph">如需支援功能、磁碟區類型、備份與還原目的地等相關資訊，請參閱 <block ref="1d638e05920fe33426fac4dc6285a639" category="inline-link-macro-rx"></block>。</block>
   <block id="ba0f269b2bdb85161db3fe51338e6a7b" category="cell">資料庫主機</block>
   <block id="bff50f1947dbec1e11bc66d60ca0b1d9" category="cell">支援的儲存設備</block>
@@ -6209,4 +6208,8 @@
   <block id="3e3321c0918c1d68c43253c427d52a85" category="section-title">手動安裝外掛的要求</block>
   <block id="bd6c005addd81d8409ae4c84d588f53d" category="paragraph">如果手動安裝外掛，則用於安裝的帳戶必須具有以下權限：</block>
   <block id="901e5d2cf1e185b371f3c54154d4da3c" category="list-text">非 root 使用者的 root 權限或 sudo 能力。</block>
+  <block id="061c095c759eb7e64dd46465f3c7a817" category="paragraph">在備份與復原中探索 ONTAP 系統之前，請確保您已具備下列條件：</block>
+  <block id="5df6bd1a45bdd2a4028f468e490de21e" category="list-text">確保在內部部署 ONTAP 執行個體上啟用 ONTAP One 授權。</block>
+  <block id="74fbbc0e09dfc08bd2ae9fa2fa257555" category="list-text">請確保已將 AMQP 應用程式啟用為您用於探索 ONTAP 系統之 ONTAP 使用者的<block ref="dc647eb65e6711e155375218212b3964" prefix=" " category="inline-code"></block>登入方法。這可讓排程的備份工作顯示在「工作監視器」中。如需使用者管理指示，請參閱<block ref="08349f0e2e31cf6e59517a8789874b25" category="inline-link-rx"></block>。</block>
+  <block id="2a6990e4544c8a19dcf0e20cd83f5c68" category="paragraph">某些 ONTAP 功能需要特定的 ONTAP 版本：</block>
 </blocks>
