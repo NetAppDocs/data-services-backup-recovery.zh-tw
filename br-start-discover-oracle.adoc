@@ -290,13 +290,35 @@ TIP: 新增資源可能需要幾分鐘。若要查看進度，請在庫存頁面
 
 
 .結果
-Oracle 資料庫工作負載會顯示在「清單」頁面的工作負載清單中。
+Oracle 資料庫主機出現在「清單」頁面的工作負載清單中。
+
+
+
+[[view-oracle-database-inventory]]
+== 檢視 Oracle 資料庫清單
+
+檢閱您在 Backup and Recovery 清單中探索到的 Oracle 資料庫資源詳細資訊。
+
+.步驟
+. 從 NetApp Console 選單中，選取 *Protection* > *Backup and Recovery*。
+. 在“工作負載”下，選擇“Oracle”磁貼。
+. 若要檢視已探索的 Oracle 資料庫主機，請選取 *主機* 標籤。
++
+您可以使用此檢視查看詳細資訊，例如每個主機名稱、每個主機託管的資料庫數量、部署模型（例如叢集、Oracle Data Guard 或獨立式）以及其他資訊。
+
+. 若要檢視為保護 Oracle 資料庫資源而建立的保護群組，請選擇 *保護群組* 標籤。
+. 若要檢視每個 Oracle 資料庫主機所託管的資料庫，請選取 *資料庫* 標籤。
++
+此檢視顯示詳細資訊，包括每個資料庫是單一執行個體還是叢集或高可用度組態的一部分。
+
+
 
 
 
 [[continue-to-the-netapp-backup-and-recovery-dashboard]]
 == 繼續存取NetApp Backup and Recovery儀表板
 
+.步驟
 . 從 NetApp Console 選單中，選取 *Protection* > *Backup and Recovery*。
 . 選擇一個工作負載圖塊（例如，Oracle 資料庫）。
 . 從備份和還原選單中，選擇*儀表板*。

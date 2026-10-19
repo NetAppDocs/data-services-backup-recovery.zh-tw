@@ -42,7 +42,7 @@ summary: 在 NetApp Backup and Recovery 中建立和管理 Oracle Database 工�
 . 為保護組提供名稱。
 . 選擇要納入保護群組的資料庫。
 . 選擇“下一步”。
-. 選擇要套用於保護群組的*備份策略*。
+. 選擇要套用於保護群組的 *備份原則*。如果包含屬於 Oracle Data Guard 組態的資料庫，請選擇啟用 Data Guard 選項的備份原則。
 +
 如果要建立策略，請選擇*建立新策略*並依照指示建立策略。看link:br-use-policies-create.html["創建策略"]了解更多。
 
