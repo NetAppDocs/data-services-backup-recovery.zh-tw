@@ -104,6 +104,8 @@ sidebar:
           url: "/prev-ontap-restore-search.html"
         - title: 使用瀏覽與還原功能還原 ONTAP 資料
           url: "/prev-ontap-restore-browse.html"
+        - title: 使用 ONTAP CLI 還原 ONTAP 資料
+          url: "/prev-ontap-restore-cli.html"
     - title: 保護 Microsoft SQL Server 工作負載
       entries:
       - title: Microsoft SQL Server 在 NetApp Backup and Recovery 中的保護工作流程

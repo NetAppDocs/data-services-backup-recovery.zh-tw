@@ -506,15 +506,6 @@
   <block id="7db92dd7efdf06d451de19b3781f8e9c" category="list-text">*標籤*：選擇 S3 儲存桶的標籤。標籤是可用於組織和管理 S3 資源的鍵值對。</block>
   <block id="2e0fcab1edb478e0ed60f14f18213876" category="list-text">*加密*：選擇 S3 儲存桶的加密類型。選項是 AWS S3 管理金鑰或 AWS 金鑰管理服務金鑰。如果您選擇 AWS Key Management Service 金鑰，則必須提供金鑰 ID。</block>
   <block id="041e82a49e6bf584cd99d83e1bafb066" category="list-text">*資源組*：選擇 Azure 資源組的名稱。</block>
-  <block id="ae35608efd65bb3b4a4c91d9eb59142d" category="list-text">*實例詳情*：</block>
-  <block id="fc20d9e6ed90928d9ec3cbce5033eb69" category="list-text">*儲存桶名稱*：輸入StorageGRID桶的名稱。</block>
-  <block id="fb0a62ab3a9d8a07269344d7b23f7f5a" category="list-text">*區域*：輸入儲存桶的StorageGRID區域。</block>
-  <block id="b7fd04780555fe4dcbc36171fb2c2e75" category="list-text">*啟用版本控制*：選擇此選項可為StorageGRID桶啟用版本控制。版本控制使您能夠在儲存桶中保留物件的多個版本，這對於備份和復原目的很有用。</block>
-  <block id="dd72147c676f5569cdd5fff6ac028f32" category="list-text">*物件鎖定*：選擇此選項可為StorageGRID桶啟用物件鎖定。物件鎖定可防止物件在指定的保留期內被刪除或覆蓋，從而提供額外的資料保護層。您只能在建立儲存桶時啟用此功能，並且以後無法將其關閉。</block>
-  <block id="6031dc56db006b45d651306df278faab" category="list-text">*容量*：輸入StorageGRID桶的容量。這是儲存桶中可以儲存的最大資料量。</block>
-  <block id="c6321a7b8f7062e1faad1738a74c7b18" category="list-text">*容量*：輸入ONTAP S3 儲存桶的容量。這是儲存桶中可以儲存的最大資料量。</block>
-  <block id="12ea5f17a4629e89577f5d94a91cf1b0" category="list-text">*啟用版本控制*：選擇此選項可為ONTAP S3 儲存桶啟用版本控制。版本控制使您能夠在儲存桶中保留物件的多個版本，這對於備份和復原目的很有用。</block>
-  <block id="121844aa2e3824e5ec649efe8e79f965" category="list-text">*物件鎖定*：選擇此選項可為ONTAP S3 儲存桶啟用物件鎖定。物件鎖定可防止物件在指定的保留期內被刪除或覆蓋，從而提供額外的資料保護層。您只能在建立儲存桶時啟用此功能，並且以後無法將其關閉。</block>
   <block id="b4f88e9494ba01afc4abc87164a307eb" category="section-title">更改備份目標的憑證</block>
   <block id="784e8d94d56b7cca4512442d67485233" category="paragraph">輸入存取備份目標所需的憑證。</block>
   <block id="500085ef4daa2d41e99c68f5d7ced622" category="list-text">輸入備份目標的新憑證。根據您選擇的備份目標類型，資訊會有所不同。</block>
@@ -1158,7 +1149,6 @@
   <block id="e9bde7b168cf5fbb3d9d5b297ca8bfb2" category="list-text">選擇*從沒有恢復的快照中恢復*。</block>
   <block id="f3d19f008b19feab896904cb50b1a321" category="list-text">*後記*：可選地，啟用此選項並輸入應在復原作業後執行的腳本的完整路徑以及該腳本所採用的任何參數。</block>
   <block id="b82be1f9be4e926901513f5106f48a87" category="summary">在NetApp Backup and Recovery中，建立您自己的策略來管理備份頻率、備份時間以及保留的備份檔案數量。</block>
-  <block id="e10aa0ad03a30aedbdc16bf5e8954db5" category="admonition">其中一些選項和配置部分並不適用於所有工作負載。</block>
   <block id="f32ce25b9d7e6b0f57abe3fec295f863" category="inline-link-macro">SnapCenter與NetApp Backup and Recovery之間的策略差異</block>
   <block id="5ccfa6adf604407ae2c4559222331c92" category="paragraph">如果從SnapCenter匯入資源，您可能會發現SnapCenter中使用的策略與NetApp Backup and Recovery中使用的策略存在一些差異。看<block ref="323b251497d754074219cdf246ce74d7" category="inline-link-macro-rx"></block>。</block>
   <block id="bd47823121834a26ffa455589637515d" category="paragraph">您可以實現以下與政策相關的目標：</block>
@@ -1897,7 +1887,6 @@
   <block id="6520b079587db54a07f00ca17e5ebf3f" category="admonition">如果您打算刪除具有備份的系統或集群，則必須在刪除系統之前刪除備份。當您刪除系統時， NetApp Backup and Recovery不會自動刪除備份，且 UI 中目前不支援在刪除系統後刪除備份。您將繼續為任何剩餘的備份支付對象儲存費用。</block>
   <block id="62fcab4349f4ca0402c709f1892d15bf" category="section-title">刪除系統的所有備份文件</block>
   <block id="990222def8053839fd07dd4a3c81e9dc" category="inline-xref">如這裡所述</block>
-  <block id="390711dbf9b1194e9b19351d96031550" category="paragraph">刪除系統物件儲存上的所有備份並不會停用該系統中磁碟區的未來備份。如果要停止建立系統中所有磁碟區的備份，您可以停用備份<block ref="f79da60ab60aec0656411209a64eca6e" category="inline-xref-macro-rx"></block>。</block>
   <block id="29e9cf7ef22475594ad87c1e6e2499e4" category="list-text">選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於要刪除所有備份的系統，然後選擇*刪除所有備份*。</block>
   <block id="5eb0ad26e5b73df4b25640fc4cecc8b5" category="list-text">在確認對話方塊中，輸入系統的名稱。</block>
   <block id="b2efc38b6f353a6ab5275e1b97a3207b" category="list-text">選擇“進階設定”。</block>
@@ -1918,21 +1907,9 @@
   <block id="1173c80b35af26bafcc4b74670bfa9c8" category="inline-link">從那裡刪除卷</block>
   <block id="8e219be71b8bc390ef2ad2ec3a99ccae" category="paragraph">您無法從NetApp Backup and Recovery使用者介面刪除來源磁碟區。但是，您可以開啟控制台*系統*頁面上的磁碟區詳細資料頁面，然後<block ref="65a826e779230e29e5ca1795b6b89aba" category="inline-link-rx"></block>。</block>
   <block id="07351083dae4540a45ff30e023e217c2" category="list-text">從「卷」標籤中選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於來源卷，然後選擇*備份*&gt;*刪除關係*。</block>
-  <block id="97966562c30303c0bc168db1ef4e82e6" category="section-title">停用系統的NetApp Backup and Recovery</block>
   <block id="8764d766d622ae40812776b15d742a79" category="inline-xref">刪除備份</block>
   <block id="150316ac807c8abc9de05ff5720178a5" category="paragraph">請注意，除非您<block ref="f0fba6094ff5354e1300b0446d643e3c" category="inline-xref-macro-rx"></block>。</block>
-  <block id="a0fb50abe315f82d405a6dfa5e9af373" category="list-text">從「備份設定」頁面中選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於您想要停用備份的系統，然後選擇*停用備份*。</block>
-  <block id="ea2a76f4405b6e362502ec8a74d85774" category="list-text">在確認對話方塊中，選擇*停用*。</block>
-  <block id="8f7dcbf976c2b6952c4600f157324198" category="admonition">當備份被停用時，該系統會出現一個「啟動備份」按鈕。當您想要重新啟用該系統的備份功能時，可以選擇此按鈕。</block>
   <block id="c7f20e0601efa026bf0dd9479de3f55e" category="section-title">取消註冊系統的NetApp Backup and Recovery</block>
-  <block id="36d567455db793edde5264e68c28c75a" category="paragraph">如果您不再想使用備份功能且不想再為該系統的備份付費，則可以取消NetApp Backup and Recovery and Recovery 。通常，當您計劃刪除系統並想要取消備份服務時使用此功能。</block>
-  <block id="15c7aac94228eb0c1ad110f50335500c" category="paragraph">如果您想更改儲存叢集備份的目標物件存儲，也可以使用此功能。取消註冊系統的NetApp Backup and Recovery後，您可以使用新的雲端供應商資訊為該叢集啟用NetApp Backup and Recovery 。</block>
-  <block id="28b9d28e040edb153420aaa034a386c1" category="paragraph">在取消註冊NetApp Backup and Recovery之前，您必須依序執行以下步驟：</block>
-  <block id="39b3af400d3ca8b2d3d8dca4f75cd99e" category="list-text">停用系統的NetApp Backup and Recovery</block>
-  <block id="59aea9f6f5073dc62e11916d7a07492f" category="list-text">刪除該系統的所有備份</block>
-  <block id="f7ae31ad4a6513f59e6103af4d0c2230" category="paragraph">這兩個操作完成之前，取消註冊選項不可用。</block>
-  <block id="1c87fb51fed9ca5989cc401564c7fcb2" category="list-text">從「備份設定」頁面中選擇<block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>對於您想要取消註冊備份服務的系統，然後選擇*取消註冊*。</block>
-  <block id="7c89aa28480fddd6d4128cbe73ba1804" category="list-text">在確認對話方塊中，選擇*取消註冊*。</block>
   <block id="cb261d232a70015577ae3c5052a9ba56" category="doc">使用NetApp Backup and Recovery將本機ONTAP資料備份到 Amazon S3</block>
   <block id="0c0bf2caafe0a0bcf95f58c110265658" category="admonition">「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。</block>
   <block id="e1e487d9ff52c7741cc25ee4b1ff06ea" category="section-title">識別連接方法</block>
@@ -4081,7 +4058,6 @@
   <block id="19e7d45c6bedb302dc81dcad6024f1c3" category="list-text">*將檔案還原至 Linux VM*：您現在可以將 VM 檔案和資料夾還原至 Linux VM。如需詳細資訊，請參閱<block ref="d14b743b42535a5def60386aae0617f3" category="inline-link-rx"></block>。</block>
   <block id="12dc36f8332118bd4fe7f1b4633c0a17" category="list-text">*還原檔案和資料夾時支援 Proxy VM* - 現在，如果您不想將虛擬磁碟附加到原始 VM，可以使用 Proxy VM 從虛擬磁碟還原檔案和資料夾。如需更多資訊，請參閱<block ref="d14b743b42535a5def60386aae0617f3" category="inline-link-rx"></block>。</block>
   <block id="ddd4881e88c799f792de41fafe0a11d7" category="list-text">*遞迴檔案和資料夾搜尋* - 您現在可以在整個虛擬磁碟中搜尋特定檔案或資料夾。如需詳細資訊，請參閱<block ref="d14b743b42535a5def60386aae0617f3" category="inline-link-rx"></block>。</block>
-  <block id="e75ea37e96b8396fc26e7835fb754851" category="list-text">選擇以下可用備份目標類型之一：*AWS*、*Azure*、*StorageGRID*、*ONTAP S3* 或 *GCP*。</block>
   <block id="c6ef992c54853d072b258e289ef08dd0" category="list-text">（僅適用於 AWS 和 Azure 備份目標）在 *Choose credentials location* 區段中、選擇認證所在的位置、然後選擇如何建立認證關聯。</block>
   <block id="3d138696a1e858f52942d736c24c1bd5" category="list-text">對於 GCP：</block>
   <block id="b2f385fda6ddca9e16bfe40b90994155" category="list-text">*憑證名稱*：輸入 Google Cloud 憑證名稱。</block>
@@ -4090,7 +4066,6 @@
   <block id="b054d8e2a18fe4e350f13d024953aa8f" category="list-text">*Bucket 名稱*：輸入 Google Cloud bucket 的名稱。</block>
   <block id="d4e12036c5885fe3db728e0ff90b2385" category="list-text">*GCP 專案*：選擇 Google Cloud 專案的名稱。</block>
   <block id="c4366421a636f973ac0a44746588f3f0" category="list-text">*儲存區區域*：選取 Google Cloud 儲存區的區域。</block>
-  <block id="7a39559ae62ff6325a41e1d2e21ae805" category="list-text">*物件鎖定*：選取此選項可為此儲存貯體中的物件啟用保留期。在保留期生效期間，物件將無法修改或刪除，並且在保留期到期前保持不可更改狀態。如果為儲存貯體啟用此選項，則無法將其關閉。</block>
   <block id="8e3ed50707ba6a187fccaa3ddd0a90cb" category="list-text">選擇 *Original location* 窗格。當您還原至原始位置時，您可以展開 *Destination settings* 區段來檢視目的地設定，但無法變更這些設定。</block>
   <block id="bd388205d06a997206a3077f6f06b20b" category="section-title">還原 KVM 虛擬機器</block>
   <block id="bcc1225a04b96d25ceeaa1d2157718ae" category="list-text">在 *Post-restore options* 部分中，啟用 *Restart virtual machine* 選項，以便在還原作業完成後重新啟動 VM。</block>
@@ -4196,7 +4171,6 @@
   <block id="24a354b4e93e0d1659baa023a11ddcda" category="inline-xref">刪除該磁碟區的所有備份檔案</block>
   <block id="6a9a9c5f060efdfcbe5e8180b067f48a" category="admonition">備份關係刪除後，您無法刪除個別磁碟區備份檔案。但是，您可以<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。</block>
   <block id="a251d9e6fa7397f3631b218bdece2a5c" category="admonition">備份關係刪除後，您將無法刪除單一磁碟區備份檔案。但是，您可以<block ref="3808038aea69a954ce325a28d1d98875" category="inline-xref-macro-rx"></block>。如果您需要刪除某個磁碟區的備份關係，請務必先刪除該磁碟區的備份，然後再刪除備份關係。</block>
-  <block id="015c04742dc48d5005ee2eea17467386" category="paragraph">停用 NetApp Backup and Recovery 會暫停該系統所有磁碟區的備份與還原，但不會刪除現有的備份。這可讓您在不從此系統註銷備份服務的情況下，暫停所有備份與還原活動一段時間。</block>
   <block id="ac702e35e5d377649ce818c63f8cb9d6" category="paragraph">使用此註解<block ref="f49fa3f76b2a4fcdf04dff369d417d84" prefix=" " category="inline-code"></block>可在備份和還原期間設定每次資料移動作業的逾時時間（以秒為單位）。它指定資料移動器在逾時前等待操作取得進展的時間。這對於偵測和處理停滯的傳輸非常有用（例如，當網路問題阻止磁碟區資料還原進程時）。</block>
   <block id="aaaf3fb2db80e20e6d50218f16d99f4f" category="paragraph">在還原和容錯移轉期間，目的地命名空間標籤和註釋會更新以符合來源：來源中的金鑰會新增至目的地金鑰或覆寫目的地金鑰，而僅存在於目的地中的金鑰則保持不變。</block>
   <block id="a0c960e39999d3e07d43b18aadea4f7e" category="admonition">在 Red Hat OpenShift 中，命名空間註解非常重要，因為它們可以確保還原的 Pod 獲得正確的安全內容限制和權限，使其能夠存取磁碟區並在沒有權限錯誤的情況下執行。如需更多資訊，請參閱 <block ref="842acfa178c0bbf09e368bf9db0716b8" category="inline-link-macro-rx"></block>。</block>
@@ -5072,7 +5046,6 @@
   <block id="0a7db0b8fe12008946ac8fe978e3d69e" category="list-text">選擇向下箭頭以展開*資源轉換範本*區段。</block>
   <block id="9c517bfc321114ff54423e43965367b4" category="list-text">（可選）輸入資源群組、版本和名稱。</block>
   <block id="523b43a20131df6f47ff988233d2eecd" category="paragraph">探索或手動新增異地備份目標，例如 AWS S3、Azure Blob Storage、Google Cloud Storage 或 StorageGRID，以便將備份儲存在主要環境之外。</block>
-  <block id="d4db6d6e4928ad83f42d61e0861bc45d" category="paragraph">在使用 NetApp Backup and Recovery 之前，請先設定您的備份目標（Amazon Web Services (AWS) S3、Microsoft Azure Blob Storage、Google Cloud Storage 或 StorageGRID）。</block>
   <block id="23896f5c70301b948b1aa5b4b36cd20a" category="paragraph">提供存取儲存設備帳戶的憑證。NetApp Backup and Recovery 會使用這些憑證來探索並驗證備份目標儲存桶的存取。</block>
   <block id="83a41f03292d1a2eb5d1e5c3c3e82bdd" category="list-text">從 NetApp Backup and Recovery 功能表中，選取 * 備份目標 *。</block>
   <block id="71e713e318f2ad1741f1abee4f606656" category="list-text">*存取金鑰*：請輸入 AWS 存取金鑰。</block>
@@ -5084,10 +5057,6 @@
   <block id="655cc3b0e95dc40ab8723703833d5cb3" category="list-text">*訂閱*：選擇 Azure 訂閱的名稱。</block>
   <block id="c1c1ad906518844255c02a6eb2fa8196" category="list-text">*儲存帳戶名稱*：輸入 Azure Blob 儲存帳戶的名稱。</block>
   <block id="f0f386af9d4c467951d13eabc4185ca7" category="list-text">*Azure 區域*：輸入儲存帳戶的 Azure 區域。</block>
-  <block id="87d2d0ed9aedfdd167b4264a369336ba" category="list-text">*效能類型*：選擇 Azure Blob 儲存帳戶的標準或進階效能類型，以指示所需的效能層級。</block>
-  <block id="29fbc2167fb971b5bdee4e572372b0a4" category="list-text">*加密*：選擇 Azure Blob 儲存帳戶的加密類型。選項包括 Microsoft 管理的金鑰和客戶管理的金鑰。如果選擇客戶管理的金鑰，則必須提供金鑰保存庫名稱和金鑰名稱。</block>
-  <block id="a59d53d7e7ab6a12c16a345297a65da7" category="list-text">*備份目標*：選擇 StorageGRID 備份目標的名稱。</block>
-  <block id="bdd4e66322e60cca57b3bd09ad13e871" category="list-text">*備份目標*：選擇 ONTAP S3 備份目標的名稱。</block>
   <block id="730acae7684dfbf79ddf6b1f05ea9f75" category="list-text">*儲存桶名稱*：輸入 ONTAP S3 儲存桶的名稱。</block>
   <block id="6caed87fa2992f2b01dad7a3a9dc41eb" category="list-text">選取目標，然後在右側選取 *動作* <block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block> 圖示，再選取 *變更認證*。</block>
   <block id="d15ce5f7b11589a195af27e9552d666f" category="paragraph">在 NetApp Backup and Recovery 中探索 Hyper-V 虛擬機器，以便使用保護原則來保護它們。</block>
@@ -6224,4 +6193,78 @@
   <block id="5b82c5e93eb556ac924b1e6909752359" category="list-text">若要在主機探索期間授予 sudo 存取，請在 *主機註冊* 區段中選擇非 root 憑證，然後選擇 *設定 sudoers* 並依照指示操作。Root 憑證無需此步驟。手冊安裝不需要此步驟。</block>
   <block id="41550faf0c68179011d757996fd6d047" category="list-text">Oracle 資料庫使用者需要 <block ref="4811df2c83bee7ee3a883640cc4d80af" prefix="" category="inline-code"></block> 權限。</block>
   <block id="5d3eb6919efa937c33d95e081b5ac2fc" category="section-title">2026 年 10 月 19 日</block>
+  <block id="d2ebbd36608739936bb939c9de72a23a" category="paragraph">在此版本中，NetApp Backup and Recovery 針對 Kubernetes 工作負載引入了以下增強功能：</block>
+  <block id="cc7c8e0fe116e37f04e0ad62644d821b" category="list-text">*Trident Protect 26.10*：此版本包含 Trident Protect 26.10。</block>
+  <block id="ca663f12e620da9687b7846a60e5d2e7" category="list-text">*ontap-nas-economy 和 ontap-san-economy 驅動程式支援*：現在您可以保護由 NetApp Trident<block ref="caafdf62a2c609bfa5316118231a1007" prefix=" " category="inline-code"></block> 驅動程式（Qtree）和<block ref="3016c12c1db45f14c80c9c1731b9c26a" prefix=" " category="inline-code"></block> 驅動程式（LUN）配置的持續性 Volume 宣告（PVC）。使用經濟型驅動程式保護 PVC 時，整個底層 FlexVol 或 LUN 都會受到保護。您可以從這些備份中還原個別的 PVC。</block>
+  <block id="d3ea67062b764fc121c2313921544714" category="list-text">*Kubernetes 感知警報*：NetApp Console 現在會針對每個 Kubernetes 應用程式發送一次 Kubernetes 警報，而不是針對每個 Volume 發送一次。</block>
+  <block id="56763801785ca9815df36fb133a8847a" category="list-text">*Volume 群組快照支援*：現在您可以在定義 Kubernetes 應用程式時建立 Volume 群組。Volume 群組可讓您將多個 Volume 一起快照為損毀狀況一致的集合，確保群組內所有 Volume 的資料一致性。</block>
+  <block id="1d458bfacd6d519628c6da6c1cb44452" category="list-text">*S3 相容物件儲存支援*：您現在可以透過新增備份目標認證資料和設定保護原則，將 Kubernetes 應用程式資源和資料備份到 S3 相容物件儲存。</block>
+  <block id="c49afcf4c9d7fb7f9e3e56e33e3ed3a8" category="paragraph">在此版本中，NetApp Backup and Recovery 針對 ONTAP Volumes 工作負載引入了下列增強功能：</block>
+  <block id="c087f837ef797de43d9ebd1a7d125236" category="list-text">*保護報告*：NetApp Backup and Recovery 現在支援建立和下載 ONTAP Volumes 工作負載的擴充報告。</block>
+  <block id="b9ba826047adb428b13135e4a8370ce8" category="list-text">*選擇在註銷 ONTAP 系統時是否保留備份*：當您從 NetApp Backup and Recovery 註銷 ONTAP 系統時，現在可以選擇捨棄先前備份的資料，或將其保留以供還原。NetApp Backup and Recovery 文件現在包含有關在系統註銷後還原保留資料的說明。</block>
+  <block id="147e4e035d3742c8a163c4282707c86d" category="inline-link">取消註冊系統的 Backup and Recovery</block>
+  <block id="113ea0f6ada6e0a0faeef3e476b36daa" category="paragraph">更多詳情請參閱<block ref="d430b7e541ef6ef0ab6b72278c77300c" category="inline-link-rx"></block>。</block>
+  <block id="4218ebde887e47d99313814e89fca1dc" category="paragraph">在這個版本中，在這個版本中，NetApp Backup and Recovery 針對 Oracle 資料庫工作負載引入了下列增強功能：</block>
+  <block id="d2a0591e201dfac56fdea850632dc8e3" category="paragraph">*還原到備用位置*：NetApp Backup and Recovery 現在支援將 Oracle 資料庫還原到備用位置（不同的註冊主機）。</block>
+  <block id="497cd988427d83c8811290c97c318790" category="paragraph">在使用 NetApp Backup and Recovery 之前，請設定您的備份目標（Amazon Web Services (AWS) S3、ONTAP S3、S3 相容物件儲存、Microsoft Azure Blob Storage、Google Cloud Storage 或 StorageGRID）。</block>
+  <block id="512c8a19583567b0c60a6d4046e3fc9d" category="list-text">選擇以下可用備份目標類型之一：*AWS*、*Azure*、*StorageGRID*、*ONTAP S3*、*S3 相容*或 *GCP*。</block>
+  <block id="4828de8adc4e9d7efea3fb6a81a07cac" category="list-text">適用於 S3 相容：</block>
+  <block id="229cde11dc3a1e8e2c7d01739e81a8cc" category="list-text">*認證資料名稱*：輸入與 S3 相容的認證資料名稱。</block>
+  <block id="f5e327b49bbb21e98940f0e794efac25" category="list-text">*閘道節點 FQDN*：輸入與 S3 相容的閘道節點的 FQDN。</block>
+  <block id="4f4d1f557a30e4b8b6b0ad1b2f14fee9" category="list-text">*連接埠*：輸入與 S3 相容的連接埠號碼。</block>
+  <block id="f40f98161e8527be6da60ccfc954e485" category="list-text">*存取金鑰*：輸入與 S3 相容的存取金鑰。</block>
+  <block id="544dcb1b29d755ccb0cd04844b0c85a8" category="list-text">*秘密金鑰*：輸入與 S3 相容的秘密金鑰。</block>
+  <block id="35ab23dfe4dfebb961a6643c98501af8" category="list-text">*GCP 專案*：輸入您的 Google Cloud 專案名稱。</block>
+  <block id="faa21d68908d97d45895575e1ccfb06c" category="list-text">*執行個體詳細資料*：新增下列資訊：</block>
+  <block id="89942d61d62ce975085dbc1a223193cf" category="list-text">*物件鎖定*：選擇此選項可啟用儲存桶的物件鎖定。物件鎖定可防止物件在指定的保留期間內被刪除或覆寫，從而提供額外階層的資料保護。此功能只能在建立儲存桶時啟用，之後無法關閉。</block>
+  <block id="603cc6c27a8469c81813bfebca168e93" category="list-text">*加密*：選擇 Azure Blob Storage 帳戶的加密類型。您可以選擇 Microsoft 管理的金鑰或客戶管理的金鑰。如果選擇客戶管理的金鑰，則必須同時提供加密金鑰和加密 ID。</block>
+  <block id="1c8f409ecfd750e9ab731c44e8cf83b4" category="list-text">*認證資料名稱*：選擇用於向此儲存桶的備份目標進行驗證的認證資料。</block>
+  <block id="c193c9ebe64e85f3f8bffd1dae7b1b49" category="list-text">*儲存桶名稱*：輸入新 StorageGRID 儲存桶的名稱。</block>
+  <block id="f6d09036b60b1acbf448ef32db03bec9" category="list-text">*物件鎖定*：選擇此選項可啟用儲存桶的物件鎖定功能。物件鎖定功能可防止物件在指定的保留期間內被刪除或覆寫，從而提供額外階層的資料保護。此功能只能在建立儲存桶時啟用，之後無法關閉。</block>
+  <block id="ac2a1e88d9a3d9f15c0797a4a25eb69b" category="list-text">*儲存桶名稱*：輸入新的 S3 相容儲存桶的名稱。</block>
+  <block id="99fb4aae942ff1af2bfc554e10a731d2" category="admonition">如果您的應用程式使用以 Qtree 進行分割的 FlexVol Volume，則保護應用程式將保護屬於該應用程式的任何 FlexVol Volume 中的所有 Qtree。</block>
+  <block id="fb7cdb707e234b2e8272fc581163dfff" category="list-text">您也可以在 *Volume 群組* 區域中，使用標籤選擇器來定義 Volume 群組。每個以逗號分隔的標籤中的資源都會作為損毀狀況一致的集合受到保護。</block>
+  <block id="6a59150c4b9633c51fe2d270250c6749" category="list-text">（選用）在 *Volume 群組* 區域中，啟用將所選 VM 的磁碟一起保護為損毀狀況一致 Volume 群組（每個 VM 一個 Volume 群組）的選項。</block>
+  <block id="fa316da11f02e062f57f24ae76cebc99" category="paragraph">刪除系統物件儲存上的所有備份並不會停用該系統中 Volume 的後續備份。如果您想停止建立系統中所有 Volume 的備份，可以暫停備份 <block ref="627bc8b5a101988e015458f90d7fd491" category="inline-xref-macro-rx"></block>。</block>
+  <block id="cd2e1afe7aab66c663a0c7c824b8efe9" category="section-title">暫停系統的所有備份</block>
+  <block id="f910b8416a243dfc4c6b5c21357aa42a" category="paragraph">暫停系統的所有備份將暫停系統所有 Volume 的備份活動，但不會刪除現有備份。暫停備份不會從此系統取消註冊備份服務。</block>
+  <block id="16e073461cf907aa3388d4dd6cc76b33" category="list-text">在 _備份設定頁面_ 中，針對您要暫停備份的系統選擇 <block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>，然後選擇 *暫停所有備份*。</block>
+  <block id="45fce289f1a8c83302b5f4d872ce0be8" category="list-text">在確認對話方塊中，選擇 *暫停*。</block>
+  <block id="93922475d8b2d2f399fffc2f6502c7ff" category="paragraph">取消註冊系統的 NetApp Backup and Recovery 會停止儲存系統未來的備份，並將其從 NetApp Backup and Recovery 中移除。在此過程中，您可以選擇保留或刪除現有的備份。</block>
+  <block id="b9acdfb3fe6814689f798ee5ba478262" category="inline-link-macro">使用 ONTAP CLI 還原 ONTAP 資料</block>
+  <block id="6b49e32c5370aa75037ea90ff889e18a" category="list-text">若要還原現有備份，請參閱<block ref="ca224e7fbcd3a58dec3d0008f9be881e" category="inline-link-macro-rx"></block>。</block>
+  <block id="55599fb6b927f75020d253ee0e5a1c92" category="list-text">選擇 *備份設定*。</block>
+  <block id="7a51161327000ec76e9bd8e138468625" category="list-text">在備份設定頁面上，選取系統的 <block ref="3ca8d030cf9d4a36f5b783e677ebccee" category="inline-image-macro-rx" type="image"></block>，然後選取 *取消註冊備份*。</block>
+  <block id="ed09bad7864ec765b3bccff9b87f25fb" category="list-text">請選擇下列選項之一：</block>
+  <block id="4bc8fd684d21298394914dc8f59016a2" category="list-text">*停用備份*：停止未來的備份，刪除物件存放區備份關係，並保留物件儲存中現有的備份。系統取消註冊後，您只能使用 ONTAP CLI 還原這些備份。</block>
+  <block id="ff65356755d54101e749f5bb8d6390a5" category="list-text">*停用並刪除備份*：停止未來的備份，刪除物件存放區備份關係，並刪除現有的備份。如果您希望在某個步驟失敗時繼續執行操作，可以選擇 *忽略停用/刪除備份中的錯誤*。</block>
+  <block id="dfee6097752e7129482df13f43e0d016" category="list-text">在 *輸入系統名稱以確認* 中，輸入系統名稱。</block>
+  <block id="6f53822dc138caffe0db3d1b7228eb76" category="list-text">在 *Confirm protection report backup* 下，確認您已儲存所需的所有報告。</block>
+  <block id="0e99a50f987d33fb61f7174388ec5bf7" category="list-text">選取 *確認並取消註冊*。</block>
+  <block id="128b9b68bc952926898e9cb180142a2f" category="list-text">在作業監控器中監控操作直到完成。</block>
+  <block id="f34901277d832930a7715899d8aab192" category="admonition">取消註冊系統不會改變 ONTAP 中的系統 Volume、快照組態或複寫關係。</block>
+  <block id="c697b002591b1081640514a7d1737556" category="summary">在某些情況下，您可能需要使用 ONTAP CLI 來還原 ONTAP 資料。</block>
+  <block id="f01e63e1a85b954f51ca4a6e068eb6b7" category="paragraph">您可能無法使用 Backup and Recovery Web UI 還原某些 ONTAP 資料。如果您在取消註冊系統後保留了備份，或者備份是透過已不存在的關係建立的，則可能會發生這種情況。無論哪種情況，請使用 ONTAP CLI 還原備份。</block>
+  <block id="ec86bd3101749b0341e24ffb93a6a492" category="list-text">請確保您有權存取目的地叢集的 ONTAP CLI，並且您知道要還原哪個備份複本。</block>
+  <block id="75416dfe2ceb2c6cb8491b2cb515feb5" category="list-text">如果要還原到不同的 ONTAP 叢集，該叢集必須已能存取相同的物件存放區。如有必要，請在還原之前在目的地叢集上設定物件存放區。</block>
+  <block id="a54f62a8dcb41305536a5acf09464352" category="list-text">請注意，如果在取消註冊系統之前建立了新的備份關係，NetApp Backup and Recovery 可能會在建立新備份後長達一小時內繼續顯示較舊的快照。在該重新整理期間，以 UI 為基礎的這些較舊快照還原可能會失敗。</block>
+  <block id="fdd4155863226ecb841ae09602e4c668" category="list-text">下載備份報告。</block>
+  <block id="29a4dbbef911b88bedf19bdfa84b4263" category="list-text">在報告中，找到要還原的 Volume，並找到所需備份複本的端點項目：</block>
+  <block id="e01874ecf753c8cb1de8f34c4dfb8d80" category="list-text">對於來自先前關係的較舊備份，請使用 *Endpoint UUID History* 值。</block>
+  <block id="645c3c66102fc66596a98bd5dc33b8ef" category="list-text">若要從目前關係進行備份，請使用 *Endpoint UUID* 值。</block>
+  <block id="8a73294528d93a1f59eecd121d51ff0d" category="paragraph">每個歷史記錄項目均使用此格式<block ref="55e85e3ccf753c88d658ef791c8f6cde" prefix=" " category="inline-code"></block>。記錄您要還原之備份的儲存區名稱和端點 UUID。</block>
+  <block id="5fba4a68d61bc5f7f7e6554abf272e41" category="list-text">連線至 ONTAP 叢集 CLI 並進入診斷模式：</block>
+  <block id="0da552512b372f563014f14813cf9885" category="list-text">建立目的地資料保護（DP）Volume：</block>
+  <block id="8f626d1139a53068fec0fdc5498c1ab6" category="list-text">列出您記錄的儲存桶和端點 UUID 可用的快照：</block>
+  <block id="9b8ba9c9dbbe51510f9dfbdab292ff32" category="admonition">此命令僅列出 ONTAP 為該儲存桶和端點追蹤的快照。它不會列出手動移動到其他儲存桶的快照。</block>
+  <block id="8e2984dd6db099579064ed18ea316672" category="list-text">如果在建立備份後物件存放區認證資料已變更，請在繼續之前更新物件存放區組態：</block>
+  <block id="85b4448e71f07ab48dbb54cf4df1d355" category="list-text">將選定的快照從物件儲存還原到目的地 DP Volume：</block>
+  <block id="3770b537731b467947d113336d70a371" category="paragraph">如需此工作中 ONTAP 命令的詳細資訊，請參閱下列 ONTAP 文件：</block>
+  <block id="4784dd0ffa42c3d1b43b0afd079dfc17" category="inline-link">volume create</block>
+  <block id="0fa851dd782b19eb7cc49215ec058fa8" category="list-text"><block ref="0fa851dd782b19eb7cc49215ec058fa8" category="inline-link-rx"></block></block>
+  <block id="83360a1eaef3ed445d1e195bce123d01" category="inline-link">snapmirror object-store config modify</block>
+  <block id="64a789f9359deaaa5d68c54fd43daf3a" category="list-text"><block ref="64a789f9359deaaa5d68c54fd43daf3a" category="inline-link-rx"></block></block>
+  <block id="5b18e7c216c868ae1b7c4df44ba6df58" category="inline-link">snapmirror 還原</block>
+  <block id="399d4101cbf520dcec67f680dbf4ad81" category="list-text"><block ref="399d4101cbf520dcec67f680dbf4ad81" category="inline-link-rx"></block></block>
+  <block id="b0609734250ba6ba4d0839963ce55146" category="section-title">2026 年 10 月 26 日</block>
 </blocks>

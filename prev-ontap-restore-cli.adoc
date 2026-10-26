@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: prev-ontap-restore-cli.html 
+keywords: CLI, ONTAP, restore, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery 
+summary: 在某些情況下，您可能需要使用 ONTAP CLI 來還原 ONTAP 資料。 
+---
+= 使用 ONTAP CLI 還原 ONTAP 資料
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可能無法使用 Backup and Recovery Web UI 還原某些 ONTAP 資料。如果您在取消註冊系統後保留了備份，或者備份是透過已不存在的關係建立的，則可能會發生這種情況。無論哪種情況，請使用 ONTAP CLI 還原備份。
+
+.開始之前
+* 請確保您有權存取目的地叢集的 ONTAP CLI，並且您知道要還原哪個備份複本。
+* 如果要還原到不同的 ONTAP 叢集，該叢集必須已能存取相同的物件存放區。如有必要，請在還原之前在目的地叢集上設定物件存放區。
+* 請注意，如果在取消註冊系統之前建立了新的備份關係，NetApp Backup and Recovery 可能會在建立新備份後長達一小時內繼續顯示較舊的快照。在該重新整理期間，以 UI 為基礎的這些較舊快照還原可能會失敗。
+
+
+.步驟
+. 從 NetApp Backup and Recovery 選單中，選取 * 報告 *。
+. 下載備份報告。
+. 在報告中，找到要還原的 Volume，並找到所需備份複本的端點項目：
++
+** 對於來自先前關係的較舊備份，請使用 *Endpoint UUID History* 值。
+** 若要從目前關係進行備份，請使用 *Endpoint UUID* 值。
++
+每個歷史記錄項目均使用此格式 `<bucket_name>:<endpoint_uuid>`。記錄您要還原之備份的儲存區名稱和端點 UUID。
+
+
+
+. 連線至 ONTAP 叢集 CLI 並進入診斷模式：
++
+[source, shell]
+----
+set -privilege diagnostic
+----
+. 建立目的地資料保護（DP）Volume：
++
+[source, shell]
+----
+volume create -vserver <vserver_name> -volume <volume_name> -aggregate <aggr_name> -size <size> -type DP
+----
+. 列出您記錄的儲存桶和端點 UUID 可用的快照：
++
+[source, shell]
+----
+snapm object-store endpoint snapshot show -object-store-name <bucket_name> -endpoint-uuid <endpoint_uuid>
+----
++
+
+NOTE: 此命令僅列出 ONTAP 為該儲存桶和端點追蹤的快照。它不會列出手動移動到其他儲存桶的快照。
+
+. 如果在建立備份後物件存放區認證資料已變更，請在繼續之前更新物件存放區組態：
++
+[source, shell]
+----
+snapmirror object-store config show -object-store-name <object_store_name>
+snapmirror object-store config modify -object-store-name <object_store_name> -access-key <new_access_key> -secret-password <new_secret_password>
+----
+. 將選定的快照從物件儲存還原到目的地 DP Volume：
++
+[source, shell]
+----
+snapmirror restore -destination-path <vserver>:<destination_volume> -source-path <bucket_name>:/objstore/<endpoint_uuid> -source-snapshot <snapshot_name> -source-endpoint-uuid <endpoint_uuid>
+----
+
+
+
+
+[[find-more-information]]
+== 查找更多信息
+
+如需此工作中 ONTAP 命令的詳細資訊，請參閱下列 ONTAP 文件：
+
+* https://docs.netapp.com/us-en/ontap-cli/volume-create.html["volume create"]
+* https://docs.netapp.com/us-en/ontap-cli/snapmirror-object-store-config-modify.html["snapmirror object-store config modify"]
+* https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["snapmirror 還原"]
+

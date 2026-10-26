@@ -295,7 +295,7 @@ CAUTION: 如果您打算刪除具有備份的系統或集群，則必須在刪�
 [[delete-all-backup-files-for-a-system]]
 === 刪除系統的所有備份文件
 
-刪除系統物件儲存上的所有備份並不會停用該系統中磁碟區的未來備份。如果要停止建立系統中所有磁碟區的備份，您可以停用備份<<停用系統的NetApp Backup and Recovery,如這裡所述>>。
+刪除系統物件儲存上的所有備份並不會停用該系統中 Volume 的後續備份。如果您想停止建立系統中所有 Volume 的備份，可以暫停備份 <<暫停系統的所有備份,如這裡所述>>。
 
 請注意，此操作不會影響快照或複製磁碟區—這些類型的備份檔案不會被刪除。
 
@@ -386,41 +386,47 @@ NOTE: 備份關係刪除後，您將無法刪除單一磁碟區備份檔案。�
 
 
 
-[[deactivate-netapp-backup-and-recovery-for-a-system]]
-== 停用系統的NetApp Backup and Recovery
+[[pause-all-backups-for-a-system]]
+== 暫停系統的所有備份
 
-停用 NetApp Backup and Recovery 會暫停該系統所有磁碟區的備份與還原，但不會刪除現有的備份。這可讓您在不從此系統註銷備份服務的情況下，暫停所有備份與還原活動一段時間。
+暫停系統的所有備份將暫停系統所有 Volume 的備份活動，但不會刪除現有備份。暫停備份不會從此系統取消註冊備份服務。
 
 請注意，除非您<<刪除備份,刪除備份>>。
 
 .步驟
 . 從*Volumes*選項卡中，選擇*Backup Settings*。
-. 從「備份設定」頁面中選擇image:icon-actions-horizontal.gif["操作圖示"]對於您想要停用備份的系統，然後選擇*停用備份*。
-. 在確認對話方塊中，選擇*停用*。
+. 在 _備份設定頁面_ 中，針對您要暫停備份的系統選擇 image:icon-actions-horizontal.gif["操作圖示"]，然後選擇 *暫停所有備份*。
+. 在確認對話方塊中，選擇 *暫停*。
 
-
-
-NOTE: 當備份被停用時，該系統會出現一個「啟動備份」按鈕。當您想要重新啟用該系統的備份功能時，可以選擇此按鈕。
 
 
 
 [[unregister-netapp-backup-and-recovery-for-a-system]]
 == 取消註冊系統的NetApp Backup and Recovery
 
-如果您不再想使用備份功能且不想再為該系統的備份付費，則可以取消NetApp Backup and Recovery and Recovery 。通常，當您計劃刪除系統並想要取消備份服務時使用此功能。
+取消註冊系統的 NetApp Backup and Recovery 會停止儲存系統未來的備份，並將其從 NetApp Backup and Recovery 中移除。在此過程中，您可以選擇保留或刪除現有的備份。
 
-如果您想更改儲存叢集備份的目標物件存儲，也可以使用此功能。取消註冊系統的NetApp Backup and Recovery後，您可以使用新的雲端供應商資訊為該叢集啟用NetApp Backup and Recovery 。
+.關於此任務
+* 請注意，除非您<<刪除備份,刪除備份>>。
+* 若要還原現有備份，請參閱link:prev-ontap-restore-cli.html["使用 ONTAP CLI 還原 ONTAP 資料"^]。
 
-在取消註冊NetApp Backup and Recovery之前，您必須依序執行以下步驟：
-
-* 停用系統的NetApp Backup and Recovery
-* 刪除該系統的所有備份
-
-
-這兩個操作完成之前，取消註冊選項不可用。
 
 .步驟
-. 從*Volumes*選項卡中，選擇*Backup Settings*。
-. 從「備份設定」頁面中選擇image:icon-actions-horizontal.gif["操作圖示"]對於您想要取消註冊備份服務的系統，然後選擇*取消註冊*。
-. 在確認對話方塊中，選擇*取消註冊*。
+. 前往 *Protection > Backup and Recovery*。
+. 選擇 *Volumes* 圖塊。
+. 選擇 *備份設定*。
+. 在備份設定頁面上，選取系統的 image:icon-actions-horizontal.gif["操作圖示"]，然後選取 *取消註冊備份*。
+. 請選擇下列選項之一：
++
+** *停用備份*：停止未來的備份，刪除物件存放區備份關係，並保留物件儲存中現有的備份。系統取消註冊後，您只能使用 ONTAP CLI 還原這些備份。
+** *停用並刪除備份*：停止未來的備份，刪除物件存放區備份關係，並刪除現有的備份。如果您希望在某個步驟失敗時繼續執行操作，可以選擇 *忽略停用/刪除備份中的錯誤*。
 
+
+. 在 *輸入系統名稱以確認* 中，輸入系統名稱。
+. 在 *Confirm protection report backup* 下，確認您已儲存所需的所有報告。
+. 選取 *確認並取消註冊*。
+. 在作業監控器中監控操作直到完成。
+
+
+
+NOTE: 取消註冊系統不會改變 ONTAP 中的系統 Volume、快照組態或複寫關係。

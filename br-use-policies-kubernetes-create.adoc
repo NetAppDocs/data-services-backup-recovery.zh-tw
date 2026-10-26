@@ -14,9 +14,6 @@ summary: 在NetApp Backup and Recovery中，建立您自己的策略來管理備
 [role="lead"]
 使用 NetApp Backup and Recovery 建立 Kubernetes 備份原則，以控制備份頻率、排程和保留。
 
-
-NOTE: 其中一些選項和配置部分並不適用於所有工作負載。
-
 如果從SnapCenter匯入資源，您可能會發現SnapCenter中使用的策略與NetApp Backup and Recovery中使用的策略存在一些差異。看link:reference-policy-differences-snapcenter.html["SnapCenter與NetApp Backup and Recovery之間的策略差異"]。
 
 您可以實現以下與政策相關的目標：

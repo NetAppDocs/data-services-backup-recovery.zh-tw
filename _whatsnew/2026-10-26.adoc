@@ -1,0 +1,45 @@
+= Kubernetes 工作負載增強功能
+:allow-uri-read: 
+
+
+
+
+[[kubernetes-workloads-enhancements]]
+=== Kubernetes 工作負載增強功能
+
+在此版本中，NetApp Backup and Recovery 針對 Kubernetes 工作負載引入了以下增強功能：
+
+* *Trident Protect 26.10*：此版本包含 Trident Protect 26.10。
+* *ontap-nas-economy 和 ontap-san-economy 驅動程式支援*：現在您可以保護由 NetApp Trident `ontap-nas-economy` 驅動程式（Qtree）和 `ontap-san-economy` 驅動程式（LUN）配置的持續性 Volume 宣告（PVC）。使用經濟型驅動程式保護 PVC 時，整個底層 FlexVol 或 LUN 都會受到保護。您可以從這些備份中還原個別的 PVC。
+* *Kubernetes 感知警報*：NetApp Console 現在會針對每個 Kubernetes 應用程式發送一次 Kubernetes 警報，而不是針對每個 Volume 發送一次。
+* *Volume 群組快照支援*：現在您可以在定義 Kubernetes 應用程式時建立 Volume 群組。Volume 群組可讓您將多個 Volume 一起快照為損毀狀況一致的集合，確保群組內所有 Volume 的資料一致性。
+* *S3 相容物件儲存支援*：您現在可以透過新增備份目標認證資料和設定保護原則，將 Kubernetes 應用程式資源和資料備份到 S3 相容物件儲存。
+
+
+有關保護 Kubernetes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 Kubernetes 工作負載"]。
+
+
+
+[[ontap-volumes-workloads-enhancements]]
+=== ONTAP Volumes 工作負載增強功能
+
+在此版本中，NetApp Backup and Recovery 針對 ONTAP Volumes 工作負載引入了下列增強功能：
+
+* *保護報告*：NetApp Backup and Recovery 現在支援建立和下載 ONTAP Volumes 工作負載的擴充報告。
+* *選擇在註銷 ONTAP 系統時是否保留備份*：當您從 NetApp Backup and Recovery 註銷 ONTAP 系統時，現在可以選擇捨棄先前備份的資料，或將其保留以供還原。NetApp Backup and Recovery 文件現在包含有關在系統註銷後還原保留資料的說明。
+
+
+更多詳情請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-manage.html#unregister-netapp-backup-and-recovery-for-a-system["取消註冊系統的 Backup and Recovery"^]。
+
+有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["了解使用 NetApp Backup and Recovery 的 ONTAP Volume 保護"]。
+
+
+
+[[oracle-database-workloads-enhancement]]
+=== Oracle 資料庫工作負載增強
+
+在這個版本中，在這個版本中，NetApp Backup and Recovery 針對 Oracle 資料庫工作負載引入了下列增強功能：
+
+*還原到備用位置*：NetApp Backup and Recovery 現在支援將 Oracle 資料庫還原到備用位置（不同的註冊主機）。
+
+有關保護 Oracle Database 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-oracle-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 Oracle 資料庫工作負載"]。

@@ -27,6 +27,9 @@ Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員。lin
 
 要保護 Kubernetes 應用程式，首先需要在 NetApp Backup and Recovery 中建立該應用程式。建立應用程式後，NetApp Backup and Recovery 就能感知 Kubernetes 叢集上正在執行的應用程式。
 
+
+NOTE: 如果您的應用程式使用以 Qtree 進行分割的 FlexVol Volume，則保護應用程式將保護屬於該應用程式的任何 FlexVol Volume 中的所有 Qtree。
+
 .開始之前
 在新增和保護 Kubernetes 應用程式之前，您需要link:br-start-discover.html["發現 Kubernetes 工作負載"]。
 
@@ -59,6 +62,7 @@ NOTE: Backup and Recovery 不會儲存搜尋參數或結果；這些參數用於
 
 
 
+. 您也可以在 *Volume 群組* 區域中，使用標籤選擇器來定義 Volume 群組。每個以逗號分隔的標籤中的資源都會作為損毀狀況一致的集合受到保護。
 . Backup and Recovery 會顯示符合您搜尋條件的資源清單。
 . 如果清單包含您想要保護的資源，請選擇「下一步」。
 . 您也可以在「策略」區域中選擇現有的保護策略來保護應用程式，或建立新策略。如果您未選擇策略，則建立的應用程式將沒有保護策略。您可以稍後link:br-use-policies-kubernetes-create.html#create-a-policy["新增保護策略"]。
@@ -89,6 +93,7 @@ NOTE: 如果您從清單中選擇虛擬機器，則應用程式定義是靜態�
 +
 選取的虛擬機器會顯示在右側清單中。
 
+. （選用）在 *Volume 群組* 區域中，啟用將所選 VM 的磁碟一起保護為損毀狀況一致 Volume 群組（每個 VM 一個 Volume 群組）的選項。
 . 如果清單中包含您要保護的 VM，請選取 * 下一步 * 。
 . 您也可以在「策略」區域中選擇現有的保護策略來保護應用程式，或建立新策略。如果您未選擇策略，則建立的應用程式將沒有保護策略。您可以稍後link:br-use-policies-kubernetes-create.html#create-a-policy["新增保護策略"]。
 . 在*Prescripts and postscripts*區域中，啟用並配置您想要在備份操作之前或之後執行的任何prescript或postscript執行掛鉤。若要啟用處方或附言，您必須至少已建立了一個link:br-use-manage-execution-hook-templates.html["執行鉤子模板"]。
@@ -157,6 +162,10 @@ spec:
       labelSelector:
         matchLabels:
           app: another-example-app
+  volumeGroups:
+    - labelSelector:
+        matchLabels:
+          volume-group: my-volume-group
   includedClusterScopedResources:
     - groupVersionKind:
         group: rbac.authorization.k8s.io
