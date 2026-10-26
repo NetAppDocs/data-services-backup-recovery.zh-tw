@@ -6196,15 +6196,12 @@
   <block id="d2ebbd36608739936bb939c9de72a23a" category="paragraph">在此版本中，NetApp Backup and Recovery 針對 Kubernetes 工作負載引入了以下增強功能：</block>
   <block id="cc7c8e0fe116e37f04e0ad62644d821b" category="list-text">*Trident Protect 26.10*：此版本包含 Trident Protect 26.10。</block>
   <block id="ca663f12e620da9687b7846a60e5d2e7" category="list-text">*ontap-nas-economy 和 ontap-san-economy 驅動程式支援*：現在您可以保護由 NetApp Trident<block ref="caafdf62a2c609bfa5316118231a1007" prefix=" " category="inline-code"></block> 驅動程式（Qtree）和<block ref="3016c12c1db45f14c80c9c1731b9c26a" prefix=" " category="inline-code"></block> 驅動程式（LUN）配置的持續性 Volume 宣告（PVC）。使用經濟型驅動程式保護 PVC 時，整個底層 FlexVol 或 LUN 都會受到保護。您可以從這些備份中還原個別的 PVC。</block>
-  <block id="d3ea67062b764fc121c2313921544714" category="list-text">*Kubernetes 感知警報*：NetApp Console 現在會針對每個 Kubernetes 應用程式發送一次 Kubernetes 警報，而不是針對每個 Volume 發送一次。</block>
   <block id="56763801785ca9815df36fb133a8847a" category="list-text">*Volume 群組快照支援*：現在您可以在定義 Kubernetes 應用程式時建立 Volume 群組。Volume 群組可讓您將多個 Volume 一起快照為損毀狀況一致的集合，確保群組內所有 Volume 的資料一致性。</block>
   <block id="1d458bfacd6d519628c6da6c1cb44452" category="list-text">*S3 相容物件儲存支援*：您現在可以透過新增備份目標認證資料和設定保護原則，將 Kubernetes 應用程式資源和資料備份到 S3 相容物件儲存。</block>
   <block id="c49afcf4c9d7fb7f9e3e56e33e3ed3a8" category="paragraph">在此版本中，NetApp Backup and Recovery 針對 ONTAP Volumes 工作負載引入了下列增強功能：</block>
   <block id="c087f837ef797de43d9ebd1a7d125236" category="list-text">*保護報告*：NetApp Backup and Recovery 現在支援建立和下載 ONTAP Volumes 工作負載的擴充報告。</block>
-  <block id="b9ba826047adb428b13135e4a8370ce8" category="list-text">*選擇在註銷 ONTAP 系統時是否保留備份*：當您從 NetApp Backup and Recovery 註銷 ONTAP 系統時，現在可以選擇捨棄先前備份的資料，或將其保留以供還原。NetApp Backup and Recovery 文件現在包含有關在系統註銷後還原保留資料的說明。</block>
   <block id="147e4e035d3742c8a163c4282707c86d" category="inline-link">取消註冊系統的 Backup and Recovery</block>
   <block id="113ea0f6ada6e0a0faeef3e476b36daa" category="paragraph">更多詳情請參閱<block ref="d430b7e541ef6ef0ab6b72278c77300c" category="inline-link-rx"></block>。</block>
-  <block id="4218ebde887e47d99313814e89fca1dc" category="paragraph">在這個版本中，在這個版本中，NetApp Backup and Recovery 針對 Oracle 資料庫工作負載引入了下列增強功能：</block>
   <block id="d2a0591e201dfac56fdea850632dc8e3" category="paragraph">*還原到備用位置*：NetApp Backup and Recovery 現在支援將 Oracle 資料庫還原到備用位置（不同的註冊主機）。</block>
   <block id="497cd988427d83c8811290c97c318790" category="paragraph">在使用 NetApp Backup and Recovery 之前，請設定您的備份目標（Amazon Web Services (AWS) S3、ONTAP S3、S3 相容物件儲存、Microsoft Azure Blob Storage、Google Cloud Storage 或 StorageGRID）。</block>
   <block id="512c8a19583567b0c60a6d4046e3fc9d" category="list-text">選擇以下可用備份目標類型之一：*AWS*、*Azure*、*StorageGRID*、*ONTAP S3*、*S3 相容*或 *GCP*。</block>
@@ -6216,7 +6213,7 @@
   <block id="544dcb1b29d755ccb0cd04844b0c85a8" category="list-text">*秘密金鑰*：輸入與 S3 相容的秘密金鑰。</block>
   <block id="35ab23dfe4dfebb961a6643c98501af8" category="list-text">*GCP 專案*：輸入您的 Google Cloud 專案名稱。</block>
   <block id="faa21d68908d97d45895575e1ccfb06c" category="list-text">*執行個體詳細資料*：新增下列資訊：</block>
-  <block id="89942d61d62ce975085dbc1a223193cf" category="list-text">*物件鎖定*：選擇此選項可啟用儲存桶的物件鎖定。物件鎖定可防止物件在指定的保留期間內被刪除或覆寫，從而提供額外階層的資料保護。此功能只能在建立儲存桶時啟用，之後無法關閉。</block>
+  <block id="89942d61d62ce975085dbc1a223193cf" category="list-text">*物件鎖定*：選擇此選項可啟用儲存桶的物件鎖定。物件鎖定功能可防止物件在指定的保留期間內被刪除或覆寫，從而提供額外階層的資料保護。此功能只能在建立儲存桶時啟用，之後無法關閉。</block>
   <block id="603cc6c27a8469c81813bfebca168e93" category="list-text">*加密*：選擇 Azure Blob Storage 帳戶的加密類型。您可以選擇 Microsoft 管理的金鑰或客戶管理的金鑰。如果選擇客戶管理的金鑰，則必須同時提供加密金鑰和加密 ID。</block>
   <block id="1c8f409ecfd750e9ab731c44e8cf83b4" category="list-text">*認證資料名稱*：選擇用於向此儲存桶的備份目標進行驗證的認證資料。</block>
   <block id="c193c9ebe64e85f3f8bffd1dae7b1b49" category="list-text">*儲存桶名稱*：輸入新 StorageGRID 儲存桶的名稱。</block>
@@ -6267,4 +6264,10 @@
   <block id="5b18e7c216c868ae1b7c4df44ba6df58" category="inline-link">snapmirror 還原</block>
   <block id="399d4101cbf520dcec67f680dbf4ad81" category="list-text"><block ref="399d4101cbf520dcec67f680dbf4ad81" category="inline-link-rx"></block></block>
   <block id="b0609734250ba6ba4d0839963ce55146" category="section-title">2026 年 10 月 26 日</block>
+  <block id="4a8e16ca8f9ac4cf8211bb73ba343c77" category="list-text">*Kubernetes 感知警告*：警告現在每個 Kubernetes 應用程式發送一次，而不是每個 Volume 發送一次。</block>
+  <block id="63de886f7a210d9ff98f81faf2fdfe35" category="paragraph">有關保護 Kubernetes 工作負載的詳細資訊，請參閱<block ref="9502c762ebba5ed034c7cd34473d06a9" category="inline-link-rx"></block>。</block>
+  <block id="5f26b02e379625a9c6c7ab3ff61f6ac2" category="list-text">*註銷 ONTAP 系統時保留備份*：現在，當您從 NetApp Backup and Recovery 註銷 ONTAP 系統時，您可以選擇捨棄先前備份的資料，或將其保留以供還原。NetApp Backup and Recovery 文件現在包含有關在系統註銷後使用 ONTAP CLI 還原保留資料的說明。</block>
+  <block id="6d572acb72c5f88a011bfcc18bed3f7c" category="paragraph">有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱<block ref="24d237f3bd3266db09db22a59e1e6ebf" category="inline-link-rx"></block>。</block>
+  <block id="f43f719a34848bc68a0e2e9868d020db" category="paragraph">在這個版本中，NetApp Backup and Recovery 針對 Oracle 資料庫工作負載引入了以下增強功能：</block>
+  <block id="98c9ad4f11120c6a90c4a25b439d1228" category="paragraph">有關保護 Oracle Database 工作負載的詳細資訊，請參閱<block ref="ce12149fe5cc827258d1b858aab8e2cc" category="inline-link-rx"></block>。</block>
 </blocks>
