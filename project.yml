@@ -36,6 +36,8 @@ sidebar:
       url: "/concept-backup-to-cloud.html"
     - title: NetApp Backup and Recovery 需求
       url: "/concept-start-prereq.html"
+    - title: 支援的備份與恢復目的地
+      url: "/br-start-sources-destinations.html"
     - title: 設定授權
       url: "/br-start-licensing.html"
     - title: 設定安全性證書
@@ -58,7 +60,7 @@ sidebar:
       url: "/br-use-dashboard.html"
     - title: 保護ONTAP磁碟區工作負載
       entries:
-      - title: 了解 NetApp Backup and Recovery for ONTAP 磁碟區
+      - title: 保護ONTAP磁碟區工作負載概述
         url: "/prev-ontap-protect-overview.html"
       - title: 啟用 NetApp Backup and Recovery 以保護磁碟區
         url: "/br-start-enable.html"

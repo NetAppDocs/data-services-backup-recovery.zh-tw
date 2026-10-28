@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: prev-ontap-protect-overview.html 
-keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+keywords: ontap volumes, protect volumes, back up volumes, restore volumes, snapshots, replication, backup to object storage, 3-2-1, FlexVol, FlexGroup, SnapLock, DataLock, ransomware protection, NetApp Backup and Recovery 
+summary: 使用 NetApp Backup and Recovery 透過快照、複寫的 Volume 和物件儲存中的備份來保護 ONTAP Volume，並從任何複本還原 Volume、資料夾或檔案。 
 ---
-= 了解使用 NetApp Backup and Recovery 的 ONTAP Volume 保護
+= 使用 NetApp Backup and Recovery 保護 ONTAP Volume 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,211 +16,86 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 [role="lead"]
 使用 NetApp Backup and Recovery 來保護和還原您的 ONTAP Volume 資料，並長期歸檔備份。您可以實作 3-2-1 策略，即在兩個不同的儲存設備系統上保留三份來源資料複本，並在雲端保留一份複本。
 
+為系統啟用保護後，Backup and Recovery 會建立 Volume 的區塊層級、永久遞增複本。除了來源 Volume 之外，您還有：
 
-NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
-
-啟動後，備份與還原功能會建立區塊層級的遞增永久備份，這些備份儲存在另一個 ONTAP 叢集和雲端物件儲存設備中。除了來源 Volume 之外，您還將擁有：
-
-* 來源系統上磁碟區的快照
-* 不同儲存系統上的複製卷
-* 物件儲存中的磁碟區備份
+* 來源系統上 Volume 的快照
+* 位於不同 ONTAP 儲存系統上的複寫 Volume
+* 物件儲存中 Volume 的備份
 
 
-image:diagram-321-overview-unified.png["一張圖表顯示了備份檔案在來源系統中以快照形式存在，在輔助儲存系統中以複製磁碟區形式存在，以及在物件儲存中以備份檔案形式存在。"]
+image:diagram-321-overview-unified.png["圖表顯示備份檔案如何在來源系統中以快照形式存在，在次要儲存設備系統中以複寫的 Volume 形式存在，以及在物件儲存中以備份檔案形式存在。"]
 
-NetApp 備份與還原使用 NetApp 的 SnapMirror 資料複寫技術，透過建立快照並將其傳輸至備份位置來保持備份同步。
-
-3-2-1 方法的優點包括：
+3-2-1 方法有以下優點：
 
 * 多個資料副本可防止內部和外部網路安全威脅。
 * 如果一種媒體發生故障，使用不同類型的媒體可以幫助您恢復。
 * 您可以從現場副本快速恢復，如果現場副本受到損害，則可以使用異地副本。
 
 
-必要時，您可以將整個磁碟區、資料夾或一個或多個檔案從任何備份副本還原到相同或不同的系統。
+必要時，您可以將整個 _Volume_ 、 _資料夾_ 或一或多個 _檔案_ ，從任何複本還原到相同或不同的系統。
+
+
+
+[[how-protection-for-ontap-volumes-works]]
+== ONTAP Volume 保護的運作方式
+
+當您為 Cloud Volumes ONTAP 或內部部署 ONTAP 系統啟用備份與恢復時，該服務會執行 Volume 資料的完整基礎傳輸。之後，所有傳輸均為遞增：僅傳輸已變更和新增的區塊，從而將網路流量保持在最低限度。
+
+備份與恢復使用 ONTAP SnapMirror 技術來保持您的複本同步。它會在來源 Volume 上建立快照，並將其傳輸至複寫與備份位置。備份至物件儲存是建置於 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirror雲端技術"^]之上。
+
+image:diagram-backup-recovery-general.png["此圖顯示了NetApp Backup and Recovery系統和目標物件儲存進行通訊。"]
+
+此圖顯示將 Volume 複寫到 Cloud Volumes ONTAP 系統，但您也可以將 Volume 複寫到內部部署的 ONTAP 系統。
+
+每種類型的複本都位於不同的位置：
+
+* 快照儲存在來源系統的來源磁碟區上。
+* _複寫的 Volume_ 位於次要儲存設備系統上，該系統可以是 Cloud Volumes ONTAP 或內部部署 ONTAP 系統。
+* _備份複本_ 位於雲端帳戶或內部部署的物件存放區中。控制台會為每個叢集建立一個物件存放區。有關控制台如何建立與命名物件存放區的詳細資料，請參閱 link:concept-backup-to-cloud.html#where-backups-reside-in-object-store-locations["備份在物件儲存位置的位置"]。
+
+
+
+CAUTION: 請勿直接從您的儲存系統或雲端供應商環境中管理或變更備份檔案。這樣做可能會毀損檔案，並導致不受支援的組態。
+
+若要規劃要使用的複本和架構，請參閱link:prev-ontap-protect-journey.html["規劃 ONTAP Volume 保護"]。
 
 
 
 [[features]]
 == 特徵
 
-*複製功能：*
+*複製*
 
 * 在ONTAP儲存系統之間複製資料以支援備份和災難復原。
-* 透過高可用性確保您的 DR 環境的可靠性。
-* 使用兩個系統之間的預共用金鑰 (PSK) 設定原生 ONTAP 飛行中加密。
-* 複製的資料是不可變的，直到您使其可寫入並可供使用為止。
-* 如果傳輸失敗，複製可以自我修復。
-* 與 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"^]相比，NetApp 備份與還原中的複寫包含下列功能：
-+
-** 一次將多個FlexVol磁碟區複製到輔助系統。
-** 使用 UI 將複製的磁碟區還原到來源系統或其他系統。
+* 一次將多個FlexVol磁碟區複製到輔助系統。
+* 在兩個系統之間使用原生 ONTAP 傳輸中加密與預先共用金鑰 (PSK)。
+* 在發生傳輸故障的事件時，依靠自我修復複寫。
+* 將複寫的 Volume 還原至來源系統或其他系統。
 
 
+對於 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"^] 中在使用 Backup and Recovery 複寫時無法使用的功能，請參閱link:br-reference-limitations.html#replication-limitations-for-ontap-volumes["ONTAP磁碟區的複製限制"]。
 
+*備份到物件儲存*
 
-看link:br-reference-limitations.html["ONTAP磁碟區的複製限制"]了解NetApp Backup and Recovery for ONTAP磁碟區不可用的複製功能清單。
+* 將 Volume 的獨立複本備份到低成本物件儲存，從內部部署或雲端系統備份到公有雲或私有雲。
+* 將單一備份原則套用至叢集中的所有 Volume，為具有獨特恢復點目標的 Volume 指派不同的原則，或建立適用於叢集中所有未來 Volume 的原則。請參閱 link:prev-ontap-policy-manage.html["管理 ONTAP Volume 的原則"]。
+* 透過 DataLock 和勒索軟體掃描來保護備份免遭刪除和勒索軟體攻擊。請參閱 link:prev-ontap-policy-object-options.html#datalock-and-ransomware-protection-options["DataLock 和勒索軟體保護選項"]。
+* 將較舊的備份分層儲存到歸檔儲存設備中，以節省成本。請參閱link:prev-ontap-policy-object-options.html#archival-storage-options["檔案存儲選項"]。
+* 刪除備份關係，以便您可以停用來源 Volume，同時保留其備份。
+* 單一 Volume 最多可保留 4,000 個備份。
+* 使用 AES-256 位元加密保護靜態備份資料，並在傳輸過程中使用 TLS 1.2 HTTPS 連線，或使用您自己的客戶管理金鑰來取代預設的雲端供應商金鑰。
 
-*備份到物件功能：*
 
-* 將資料卷的獨立副本備份到低成本的物件儲存。
-* 將單一備份策略套用至群集中的所有捲，或為具有唯一還原點目標的磁碟區指派不同的備份策略。
-* 建立備份策略，以應用於叢集中建立的所有未來磁碟區。
-* 製作不可變的備份文件，以便在保留期內鎖定和保護它們。
-* 掃描備份檔案是否有勒索軟體攻擊，並自動移除或替換受感染的備份。
-* 將較舊的備份文件分層到檔案儲存以節省成本。
-* 刪除備份關係，以便您可以存檔不需要的來源卷，同時保留磁碟區備份。
-* 從雲端備份到雲，從本機系統備份到公有雲或私有雲。
-* 備份資料在靜態時透過 AES-256 位元加密保護，在動態時透過 TLS 1.2 HTTPS 連線保護。
-* 使用您自己的客戶管理金鑰進行資料加密，而不是使用雲端提供者提供的預設加密金鑰。
-* 支援單一磁碟區最多 4,000 個備份。
+*還原*
 
+* 從本機快照、複寫的 Volume 或物件儲存中的備份還原特定時間點的資料。
+* 將 Volume、資料夾或單一檔案還原到來源系統或不同的系統，包括使用不同訂閱或帳戶的系統，或位於不同區域的系統。
+* 當您需要盡快提供對 Volume 的存取時（例如在災難恢復情況下），請將 Volume 從物件儲存 _快速還原_ 至 Cloud Volumes ONTAP 或內部部署系統。
+* 將資料按區塊層級直接還原到您指定的位置，並保留原始 ACL。
+* 瀏覽或搜尋檔案目錄，選擇要還原的單一資料夾和檔案。
 
-*恢復功能：*
 
-* 從物件儲存中的本機快照、複製磁碟區或備份磁碟區還原特定時間點的資料。
-* 將磁碟區、資料夾或單一檔案還原到來源系統或其他系統。
-* 將資料還原到使用不同訂閱/帳戶或位於不同區域的系統。
-* 將磁碟區從雲端儲存快速還原到Cloud Volumes ONTAP系統或本機系統；非常適合需要盡快提供對磁碟區的存取的災難復原情況。
-* 在區塊層級恢復數據，將資料直接放置在您指定的位置，同時保留原始 ACL。
-* 瀏覽和搜尋檔案目錄，輕鬆選擇單一資料夾和檔案進行單一檔案復原。
-
-
-
-
-[[supported-systems-for-backup-and-restore-operations]]
-== 支援備份和復原作業的系統
-
-NetApp Backup and Recovery支援ONTAP系統以及公有和私有雲供應商。
-
-
-
-[[supported-regions]]
-=== 支持的區域
-
-NetApp Backup and Recovery在許多 Amazon Web Services、Microsoft Azure 和 Google Cloud 區域中均支援Cloud Volumes ONTAP 。
-
-https://bluexp.netapp.com/cloud-volumes-global-regions["使用全球區域地圖了解更多信息"^]
-
-
-
-[[supported-backup-destinations]]
-=== 支援的備份目標
-
-NetApp Backup and Recovery 可讓您將 ONTAP Volume 從下列來源系統備份到下列二線系統，以及公有雲和私有雲供應商中的物件儲存。Snapshot 位於來源系統上。
-
-
-NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。其他 S3 相容提供者尚未通過驗證。
-
-[cols="33,33,33"]
-|===
-| 來源系統 | 輔助系統（複製） | 目標物件儲存（備份） 
-
-
-| AWS 中的Cloud Volumes ONTAP  a| 
-* AWS 中的Cloud Volumes ONTAP
-* 本地ONTAP系統
-
-| 亞馬遜 S3 
-
-
-| Azure 中的Cloud Volumes ONTAP  a| 
-* Azure 中的Cloud Volumes ONTAP
-* 本地ONTAP系統
-
-| Azure Blob 
-
-
-| Google 的Cloud Volumes ONTAP  a| 
-* Google 的Cloud Volumes ONTAP
-* 本地ONTAP系統
-
-| Google 雲端儲存 
-
-
-| 本地ONTAP系統  a| 
-* Cloud Volumes ONTAP
-* 本地ONTAP系統
-
- a| 
-* 亞馬遜 S3
-* S3 相容儲存設備
-* Azure Blob
-* Google 雲端儲存
-* StorageGRID
-* ONTAP S3
-
-
-|===
-
-
-[[supported-restore-destinations]]
-=== 支援的還原目標
-
-您可以將ONTAP資料從位於二級系統（複製磁碟區）或物件儲存（備份檔案）中的備份檔案還原到下列系統。快照保存在來源系統上，並且只能還原到同一系統。
-
-
-NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。其他 S3 相容提供者尚未通過驗證。
-
-[cols="33,33,33"]
-|===
-2+| 備份檔案位置 | 目的地系統 
-
-
-| *物件儲存（備份）* | *輔助系統（複製）* |  
-
-
-| 亞馬遜 S3  a| 
-* AWS 中的Cloud Volumes ONTAP
-* 本地ONTAP系統
-
- a| 
-* AWS 中的Cloud Volumes ONTAP
-* 本地ONTAP系統
-
-
-
-
-| Azure Blob  a| 
-* Azure 中的Cloud Volumes ONTAP
-* 本地ONTAP系統
-
- a| 
-* Azure 中的Cloud Volumes ONTAP
-* 本地ONTAP系統
-
-
-
-
-| Google 雲端儲存  a| 
-* Google 的Cloud Volumes ONTAP
-* 本地ONTAP系統
-
- a| 
-* Google 的Cloud Volumes ONTAP
-* 本地ONTAP系統
-
-
-
-
-| StorageGRID  a| 
-* 本地ONTAP系統
-* Cloud Volumes ONTAP
-
-| 本地ONTAP系統 
-
-
-| ONTAP S3  a| 
-* 本地ONTAP系統
-* Cloud Volumes ONTAP
-
-| 本地ONTAP系統 
-
-
-| S3 相容物件儲存設備 | 本地ONTAP系統 | 本地ONTAP系統 
-|===
-
-NOTE: 文中提到的「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
+請參閱link:prev-ontap-restore.html["恢復ONTAP磁碟區工作負載"]以了解還原選項。
 
 
 
@@ -232,233 +107,32 @@ NetApp Backup and Recovery支援以下類型的磁碟區：
 * FlexVol讀寫卷
 * FlexGroup磁碟區（需要ONTAP 9.12.1 或更高版本）
 * SnapLock Enterprise磁碟區（需要ONTAP 9.11.1 或更高版本）
-* 適用於本地磁碟區的SnapLock Compliance （需要ONTAP 9.14 或更高版本）
+* SnapLock Compliance 適用於內部部署 Volume（需要 ONTAP 9.14 或更新版本）
 * SnapMirror資料保護 (DP) 目標卷
 
 
 
 NOTE: NetApp Backup and Recovery不支援FlexCache磁碟區的備份。
 
-請參閱link:br-reference-limitations.html["ONTAP磁碟區的備份和還原限制"]了解其他要求和限制。
+有關 Backup and Recovery 支援的來源系統、二線系統、物件儲存目的地、還原目的地和區域，請參閱 link:br-start-sources-destinations.html["NetApp Backup and Recovery 中支援的備份與恢復目的地"]。有關其他需求和限制，請參閱 link:br-reference-limitations.html["NetApp Backup and Recovery for ONTAP磁碟區的已知限制"]。
 
 
 
-[[cost]]
-== 成本
+[[cost-and-licensing]]
+== 成本與授權
 
-使用NetApp Backup and Recovery與ONTAP系統相關的成本有兩種：資源費用和服務費用。這兩項費用均針對服務的對象部分備份。
+建立快照或複寫 Volume 無需支付任何費用，只需支付它們佔用的磁碟空間即可。雲端供應商的資源費用和 NetApp 的服務費用僅適用於備份到物件儲存。
 
-建立快照或複製磁碟區不收取任何費用—除了儲存快照和複製磁碟區所需的磁碟空間。
+如需費用與授權選項的詳細資訊，請參閱 link:concept-backup-to-cloud.html#cost["了解NetApp Backup and Recovery"] 和 link:br-start-licensing.html["設定授權"]。
 
-*資源費用*
 
-資源費用是向雲端提供者支付的，用於物件儲存容量以及將備份檔案寫入和讀取到雲端。
 
-* 對於備份到對象存儲，您需要向雲端提供者支付對象存儲費用。
-+
-由於NetApp Backup and Recovery保留了來源磁碟區的儲存效率，因此您需要向雲端提供者物件儲存支付ONTAP效率之後的資料費用（針對應用程式重複資料刪除和壓縮後的較少量的資料）。
+[[where-to-go-next]]
+== 接下來該去哪裡？
 
-* 對於使用「搜尋和還原」還原數據，您的雲端提供者會提供某些資源，並且您的搜尋要求掃描的數據量會產生每 TiB 成本。  （瀏覽和恢復不需要這些資源。）
-+
-** 在 AWS 中， https://aws.amazon.com/athena/faqs/["亞馬遜雅典娜"^]和 https://aws.amazon.com/glue/faqs/["AWS Glue"^]資源部署在新的 S3 儲存桶中。
-** 在 Azure 中， https://azure.microsoft.com/en-us/services/synapse-analytics/?&ef_id=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE:G:s&gclid=EAIaIQobChMI46_bxcWZ-QIVjtiGCh2CfwCsEAAYASAAEgKwjvD_BwE["Azure Synapse 工作區"^]和 https://azure.microsoft.com/en-us/services/storage/data-lake-storage/?&ef_id=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&OCID=AIDcmm5edswduu_SEM_EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE:G:s&gclid=EAIaIQobChMIuYz0qsaZ-QIVUDizAB1EmACvEAAYASAAEgJH5fD_BwE["Azure 資料湖儲存"^]在您的儲存帳戶中配置以儲存和分析您的資料。
-** 在 Google 中，部署了一個新的儲存桶，並且 https://cloud.google.com/bigquery["Google Cloud BigQuery 服務"^]在帳戶/項目層級進行配置。
-
-
-* 如果您打算從已移動到檔案物件儲存的備份檔案中恢復磁碟區數據，則雲端提供者會收取額外的每 GiB 檢索費用和每個請求費用。
-* 如果您打算在還原 Volume 資料的過程中掃描備份檔案是否存在勒索軟體（如果您已為雲端備份啟用 DataLock 和勒索軟體保護），那麼您還將產生來自雲端供應商的額外輸出費用。
-
-
-*服務費*
-
-服務費用支付給NetApp ，涵蓋建立物件儲存備份的成本以及從這些備份中還原磁碟區或檔案的成本。您只需為物件儲存中保護的資料付費，該費用會根據備份到物件儲存的ONTAP磁碟區的來源邏輯使用容量（ ONTAP效率之前）計算。此容量也稱為前端兆位元組 (FETB)。
-
-有三種方式可以支付備份服務費用。第一個選項是從您的雲端供應商訂閱，這樣您就可以按月付費。第二種選擇是簽訂年度合約。第三種選擇是直接從NetApp購買授權。
-
-
-
-[[licensing]]
-== 授權
-
-NetApp Backup and Recovery適用於以下消費模式：
-
-* *BYOL*：從NetApp購買的許可證，可與任何雲端提供者一起使用。
-* *PAYGO*：從您的雲端供應商市場按小時訂閱。
-* *年度*：來自雲端提供者市場的年度合約。
-
-
-僅當從物件儲存進行備份和還原時才需要備份許可證。建立快照和複製磁碟區不需要許可證。
-
-
-
-[[bring-your-own-license]]
-=== 自備駕照
-
-BYOL 是基於期限（1、2 或 3 年）和容量的，以 1 TiB 為增量。您向NetApp付費以使用該服務一段時間（例如 1 年）以及最大容量（例如 10 TiB）。
-
-您將收到一個序號，請在NetApp Console中輸入該序號以啟用該服務。當達到任一限制時，您都需要更新許可證。備份 BYOL 授權適用於與您的NetApp Console組織或帳號關聯的所有來源系統。
-
-link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。
-
-
-
-[[pay-as-you-go-subscription]]
-=== 按需付費訂閱
-
-NetApp Backup and Recovery以按需付費模式提供基於消費的授權。透過雲端供應商的市場訂閱後，您需要按 GiB 為備份資料付費 - 無需預付款。您的雲端提供者將透過每月帳單向您收費。
-
-link:br-start-licensing.html["了解如何設定即用即付訂閱"]。
-
-請注意，當您首次註冊 PAYGO 訂閱時，可以享受 30 天的免費試用。
-
-
-
-[[annual-contract]]
-=== 年度合約
-
-使用 AWS 時，有兩種年度合約可供選擇，期限分別為 1 年、2 年或 3 年：
-
-* 「雲端備份」計畫可讓您備份Cloud Volumes ONTAP資料和本機ONTAP資料。
-* 「CVO Professional」計畫可讓您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery。這包括根據此許可證收費的Cloud Volumes ONTAP磁碟區的無限備份（備份容量不計入許可證）。
-
-
-使用 Azure 時，有兩種年度合約可供選擇，分別為 1 年、2 年或 3 年：
-
-* 「雲端備份」計畫可讓您備份Cloud Volumes ONTAP資料和本機ONTAP資料。
-* 「CVO Professional」計畫可讓您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery。這包括根據此許可證收費的Cloud Volumes ONTAP磁碟區的無限備份（備份容量不計入許可證）。
-
-
-當您使用 GCP 時，您可以向NetApp要求私人優惠，然後在NetApp Backup and Recovery啟動期間從 Google Cloud Marketplace 訂閱時選擇該計劃。
-
-link:br-start-licensing.html["了解如何制定年度合約"]。
-
-
-
-[[how-netapp-backup-and-recovery-works]]
-== NetApp Backup and Recovery的工作原理
-
-當您在Cloud Volumes ONTAP或本機ONTAP系統上啟用NetApp Backup and Recovery時，本服務會對您的資料執行完整備份。初始備份之後，所有附加備份都是增量的，這意味著只備份更改的區塊和新區塊。這使得網路流量保持最低限度。物件儲存備份建立在 https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["NetApp SnapMirror雲端技術"^]。
-
-
-CAUTION: 直接從您的雲端提供者環境採取的任何管理或更改雲端備份檔案的操作都可能損壞檔案並導致不受支援的配置。
-
-下圖顯示了各個組件之間的關係：
-
-image:diagram-backup-recovery-general.png["此圖顯示了NetApp Backup and Recovery系統和目標物件儲存進行通訊。"]
-
-此圖顯示磁碟區被複製到Cloud Volumes ONTAP系統，但磁碟區也可以複製到本機ONTAP系統。
-
-
-
-[[where-backups-reside]]
-=== 備份所在位置
-
-根據備份類型，備份位於不同的位置：
-
-* 快照儲存在來源系統的來源磁碟區上。
-* _複製磁碟區_駐留在二級儲存系統上 - Cloud Volumes ONTAP或本機ONTAP系統。
-* _備份副本_儲存在控制台在您的雲端帳戶中建立的物件儲存中。每個集群/系統有一個物件存儲，控制台將物件存儲命名為：「netapp-backup-clusteruuid」。請確保不要刪除此物件存儲。
-+
-** 在 AWS 中，控制台可以實現 https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 阻止公共存取功能"^] 在 S3 鏟斗上。
-** 在 Azure 中，控制台使用新的或現有的資源群組，並為 Blob 容器指派儲存帳戶。主機 https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["阻止公眾存取您的 Blob 數據"] 預設情況下。
-** 在 GCP 中，控制台使用具有 Google Cloud Storage 儲存桶儲存帳戶的新專案或現有專案。
-** 在StorageGRID中，控制台使用現有的租用戶帳戶來管理 S3 儲存桶。
-** 在ONTAP S3 中，控制台使用 S3 儲存桶的現有使用者帳戶。
-
-
-
-
-如果您將來想要更改叢集的目標物件存儲，則需要link:prev-ontap-backup-manage.html["取消註冊系統的NetApp Backup and Recovery"]，然後使用新的雲端供應商資訊啟用NetApp Backup and Recovery 。
-
-
-
-[[customizable-backup-schedule-and-retention-settings]]
-=== 可自訂的備份計劃和保留設置
-
-當您為系統啟用NetApp Backup and Recovery時，您最初選擇的所有磁碟區都會使用您選擇的策略進行備份。您可以為快照、複製磁碟區和備份檔案選擇不同的策略。如果您想要為具有不同復原點目標 (RPO) 的某些磁碟區指派不同的備份策略，則可以為該叢集建立其他策略，並在啟動NetApp Backup and Recovery後將這些原則指派給其他磁碟區。
-
-您可以選擇所有捲的每小時、每天、每週、每月和每年備份的組合。對於物件備份，您還可以選擇系統定義的策略之一，提供 3 個月、1 年和 7 年的備份和保留。您使用ONTAP System Manager 或ONTAP CLI 在叢集上建立的備份保護原則也會作為選擇出現。這包括使用自訂SnapMirror標籤建立的策略。
-
-
-NOTE: 套用於 Volume 的快照原則必須包含您在複寫原則和備份到物件原則中使用的標籤之一。如果找不到符合的標籤，則不會建立備份檔案。例如，如果您想要建立「每週」複寫 Volume 和備份檔案，則必須使用建立「每週」快照的快照原則。
-
-一旦達到某個類別或間隔的最大備份數量，較舊的備份就會被刪除，以便您始終擁有最新的備份（因此過時的備份不會繼續佔用空間）。
-
-
-TIP: 資料保護磁碟區備份的保留期與來源SnapMirror關係中定義的保留期相同。如果您願意，可以使用 API 來變更此設定。
-
-
-
-[[backup-file-protection-settings]]
-=== 備份檔案保護設定
-
-如果您的叢集使用 ONTAP 9.11.1 或更高版本，您可以保護物件儲存中的備份，使其免受刪除和勒索軟體攻擊。每個備份原則都提供了一個用於 _DataLock 和勒索軟體保護_ 的區段，可在特定期間內套用至您的備份檔案，即 _保留期間_。
-
-* _DataLock_ 保護您的備份檔案不被修改或刪除。
-* _勒索軟體保護_會在建立備份檔案時以及恢復備份檔案中的資料時掃描您的備份檔案以查找勒索軟體攻擊的證據。
-
-
-預設啟用計劃的勒索軟體防護掃描。掃描頻率的預設為 7 天。掃描僅發生在最新的快照上。可以停用計劃掃描以降低成本。您可以透過「進階設定」頁面上的選項，啟用或停用最新快照上的計畫勒索軟體掃描。如果啟用它，則預設每週執行一次掃描。您可以將該計劃更改為幾天或幾週，或停用它，以節省成本。
-
-備份保留期與備份計畫保留期相同，再加上最多 31 天的緩衝期。例如，每週備份保留 5 份副本，每個備份檔案將鎖定 5 週。每月備份保留 6 份副本，每個備份檔案將鎖定 6 個月。
-
-目前，當備份目的地為 Amazon S3、Azure Blob 或 StorageGRID 時，此功能受到支援。其他儲存設備供應商目的地將在未來的版本中新增。
-
-欲了解更多詳細信息，請參閱以下信息：
-
-* link:prev-ontap-policy-object-options.html["DataLock 和勒索軟體保護的工作原理"]。
-* link:prev-ontap-policy-object-advanced-settings.html["如何在「進階設定」頁面中更新勒索軟體防護選項"]。
-
-
-
-TIP: 如果您將備份分層到檔案存儲，則無法啟用 DataLock。
-
-
-
-[[archival-storage-for-older-backup-files]]
-=== 舊備份文件的存檔存儲
-
-使用某些雲端儲存時，您可以在一定天數後將較舊的備份檔案移至較便宜的儲存類別/存取層。您也可以選擇立即將備份檔案傳送到檔案存儲，而無需寫入標準雲端儲存。請注意，如果您啟用了 DataLock，則無法使用檔案儲存。
-
-* 在 AWS 中，備份從「標準」儲存類別開始，並在 30 天後轉換到「標準-不頻繁存取」儲存類別。
-+
-如果您的叢集使用的是ONTAP 9.10.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and RecoveryUI 中的“S3 Glacier”或“S3 Glacier Deep Archive”存儲，以進一步優化成本。link:prev-reference-aws-archive-storage-tiers.html["了解有關 AWS 檔案儲存的更多信息"]。
-
-
-
-* 在 Azure 中，備份與 _Cool_ 存取層相關聯。
-+
-如果您的叢集使用的是ONTAP 9.10.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and RecoveryUI 中的“Azure Archive”存儲，以進一步優化成本。link:prev-reference-azure-archive-storage-tiers.html["了解有關 Azure 檔案儲存的更多信息"]。
-
-
-
-* 在 GCP 中，備份與 _Standard_ 儲存類別相關聯。
-+
-如果您的叢集使用的是ONTAP 9.12.1 或更高版本，您可以選擇在一定天數後將舊備份分層到NetApp Backup and Recovery UI 中的「_Archive_」儲存中，以進一步最佳化成本。link:prev-reference-gcp-archive-storage-tiers.html["詳細了解 Google 歸檔存儲"]。
-
-* 在StorageGRID中，備份與 _Standard_ 儲存類別相關聯。
-+
-如果您的本機叢集使用的是 ONTAP 9.12.1 或更高版本，而您的 StorageGRID 系統使用的是 11.4 或更高版本，則可以在一定天數後將較舊的備份檔案歸檔到公有雲歸檔儲存設備。目前支援 AWS S3 Glacier/S3 Glacier Deep Archive 或 Azure Archive 儲存設備層。link:prev-ontap-backup-onprem-storagegrid.html["了解有關從StorageGRID歸檔備份檔案的更多信息"]。
-
-
-
-請參閱link:prev-ontap-policy-object-options.html["舊備份檔案歸檔的工作原理"]。
-
-
-
-[[fabricpool-tiering-policy-considerations]]
-== FabricPool分層策略注意事項
-
-當您要備份的磁碟區位於FabricPool聚合上，並且指派了分層策略時，您需要注意以下幾點 `none`：
-
-* FabricPool分層磁碟區的第一次備份需要讀取所有本機和所有分層資料（從物件儲存）。備份作業不會「重新加熱」物件儲存中分層的冷資料。
-+
-此操作可能會導致從雲端供應商讀取資料的成本一次性增加。
-
-+
-** 後續備份是增量的，不會產生這種影響。
-** 如果在最初建立磁碟區時將分層策略指派給磁碟區，則您將不會看到此問題。
-
-
-* 在分配之前考慮備份的影響 `all`對磁碟區進行分層策略。由於資料是立即分層的，NetApp Backup and Recovery將從雲層而不是本地層讀取資料。由於並發備份操作共享與雲端物件儲存的網路鏈接，因此如果網路資源飽和，可能會出現效能下降。在這種情況下，您可能需要主動配置多個網路介面 (LIF) 來減少這種類型的網路飽和。
+* link:prev-ontap-protect-journey.html["規劃 ONTAP Volume 保護"]
+* link:br-start-enable.html["啟用 NetApp Backup and Recovery 以保護 ONTAP 磁碟區"]
+* link:prev-ontap-policy-manage.html["管理 ONTAP Volume 的原則"]
+* link:prev-ontap-backup-manage.html["管理 ONTAP 系統的備份"]
+* link:prev-ontap-restore.html["恢復ONTAP磁碟區工作負載"]
 

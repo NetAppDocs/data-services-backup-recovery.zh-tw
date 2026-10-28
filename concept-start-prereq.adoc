@@ -184,7 +184,7 @@ link:br-start-enable.html#enable-backup-and-recovery-in-netapp-console-local-dep
 
 | 每個系統在不同的雲端供應商之間使用超過 6 個儲存桶（最多 100 個儲存桶） | 9.19.1 或更新版本 
 |===
-如需支援功能、磁碟區類型、備份與還原目的地等相關資訊，請參閱 link:prev-ontap-protect-overview.html["保護您的ONTAP卷數據"]。
+如需支援功能、磁碟區類型、備份與還原目的地等相關資訊，請參閱 link:prev-ontap-protect-overview.html["使用 NetApp Backup and Recovery 保護 ONTAP Volume 工作負載"]。
 
 
 

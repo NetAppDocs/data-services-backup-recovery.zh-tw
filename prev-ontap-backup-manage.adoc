@@ -412,6 +412,7 @@ IMPORTANT: 在取消註冊系統之前，請下載完整的「保護總覽」報
 .關於此任務
 * 請注意，除非您<<刪除備份,刪除備份>>。
 * 若要還原現有備份，請參閱link:prev-ontap-restore-cli.html["使用 ONTAP CLI 還原 ONTAP 資料"^]。
+* 啟用備份後，您無法變更系統的目的地物件存放區。若要使用不同的物件存放區，請取消註冊系統的 NetApp Backup and Recovery，然後使用新的雲端供應商資訊重新啟用。
 
 
 .步驟

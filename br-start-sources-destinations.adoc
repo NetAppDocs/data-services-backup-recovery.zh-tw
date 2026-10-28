@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: br-start-sources-destinations.html 
+keywords: supported systems, supported regions, backup destinations, restore destinations, backup sources, secondary system, object storage, Amazon S3, Azure Blob, Google Cloud Storage, StorageGRID, ONTAP S3, Amazon FSx for NetApp ONTAP, Google Cloud NetApp Volumes Flex 
+summary: NetApp Backup and Recovery 支援跨各種來源系統、二線系統和物件儲存目的地備份和還原資料。 
+---
+= NetApp Backup and Recovery 中支援的備份與恢復目的地
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+檢閱 NetApp Backup and Recovery 支援的來源系統、二線系統和物件儲存目的地，以進行跨工作負載的備份與恢復作業。
+
+
+
+[[supported-systems-for-backup-and-restore-operations]]
+== 支援備份和復原作業的系統
+
+NetApp Backup and Recovery支援ONTAP系統以及公有和私有雲供應商。
+
+
+
+[[supported-regions]]
+=== 支持的區域
+
+NetApp Backup and Recovery在許多 Amazon Web Services、Microsoft Azure 和 Google Cloud 區域中均支援Cloud Volumes ONTAP 。
+
+https://bluexp.netapp.com/cloud-volumes-global-regions["使用全球區域地圖了解更多信息"^]
+
+
+
+[[supported-backup-destinations]]
+=== 支援的備份目標
+
+NetApp Backup and Recovery 可讓您將資料從下列來源系統備份至下列二線系統，以及公有雲與私有雲端供應商中的物件儲存。快照位於來源系統上。
+
+
+NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。其他 S3 相容提供者尚未通過驗證。
+
+[cols="33,33,33"]
+|===
+| 來源系統 | 輔助系統（複製） | 目標物件儲存（備份） 
+
+
+| AWS 中的Cloud Volumes ONTAP  a| 
+* AWS 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+| 亞馬遜 S3 
+
+
+| Azure 中的Cloud Volumes ONTAP  a| 
+* Azure 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+| Azure Blob 
+
+
+| Google 的Cloud Volumes ONTAP  a| 
+* Google 的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+| Google 雲端儲存 
+
+
+| 本地ONTAP系統  a| 
+* Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+ a| 
+* 亞馬遜 S3
+* S3 相容儲存設備
+* Azure Blob
+* Google 雲端儲存
+* NetAppStorageGRID
+* ONTAP S3
+
+
+
+
+| Google Cloud NetApp Volumes Flex（僅限 Oracle 資料庫和 VMware 工作負載） | Google Cloud NetApp Volumes Flex | Google 雲端儲存 
+
+
+| Amazon FSx for NetApp ONTAP （僅限 Microsoft SQL Server、Oracle 資料庫和 VMware 工作負載） | AWS 中的Cloud Volumes ONTAP | Amazon S3（僅限 Cloud Volumes ONTAP） 
+|===
+
+NOTE: 文中提到的「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
+
+
+
+[[supported-restore-destinations]]
+=== 支援的還原目標
+
+您可以將位於二線系統（複寫的 Volume）或物件儲存（備份檔案）中的備份檔案、虛擬機器、資料庫或 Kubernetes 資源中的資料還原到下列系統。快照位於來源系統上，並且只能還原到同一系統。
+
+
+NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。其他 S3 相容提供者尚未通過驗證。
+
+[cols="30,35,35"]
+|===
+| 備份位置（物件存放區） | 從物件儲存（備份）還原時的目的地系統 | 從二線系統還原時的目的地系統（複寫） 
+
+
+| 亞馬遜 S3  a| 
+* AWS 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+* Amazon FSx for NetApp ONTAP （僅限 Microsoft SQL Server、Oracle 資料庫和 VMware 工作負載）
+
+ a| 
+* AWS 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+* Amazon FSx for NetApp ONTAP
+
+
+
+
+| Azure Blob  a| 
+* Azure 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+ a| 
+* Azure 中的Cloud Volumes ONTAP
+* 本地ONTAP系統
+
+
+
+
+| Google 雲端儲存  a| 
+* Google 的Cloud Volumes ONTAP
+* 本地ONTAP系統
+* Google Cloud NetApp Volumes Flex
+
+ a| 
+* Google 的Cloud Volumes ONTAP
+* 本地ONTAP系統
+* Google Cloud NetApp Volumes Flex
+
+
+
+
+| StorageGRID  a| 
+* 本地ONTAP系統
+* Cloud Volumes ONTAP
+
+| 本地ONTAP系統 
+
+
+| ONTAP S3  a| 
+* 本地ONTAP系統
+* Cloud Volumes ONTAP
+
+| 本地ONTAP系統 
+
+
+| 相容 S3 的物件儲存（僅限 ONTAP Volume） | 本地ONTAP系統 | 本地ONTAP系統 
+|===
+請注意以下還原注意事項：
+
+* 從 Cloud Volumes ONTAP （複寫）還原只能還原至 Cloud Volumes ONTAP。但是，AWS 中的 Cloud Volumes ONTAP 也支援還原至 Amazon FSx for NetApp ONTAP。
+* 從內部部署 ONTAP（複寫）還原只能還原至內部部署 ONTAP。
+* 從第一方 Amazon FSx for NetApp ONTAP 和 Google Cloud NetApp Volumes （複寫）的還原只能還原到對應的第一方系統。
+* 從 Amazon S3 還原到 Amazon FSx for NetApp ONTAP 必須遵循以下順序：Amazon S3 到 Cloud Volumes ONTAP，然後 Cloud Volumes ONTAP 到 Amazon FSx for NetApp ONTAP。
+
+
+
+NOTE: 文中提到的「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
