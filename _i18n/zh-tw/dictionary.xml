@@ -716,7 +716,6 @@
   <block id="a34a8fde09044472852b8ae530184af7" category="list-text">從二級儲存上的複製資源恢復</block>
   <block id="a1b1d3e1eb4d41f3b8f52d69b7033868" category="list-text">從物件儲存備份還原</block>
   <block id="6e32536aeb87365f67ba5a96c664e861" category="paragraph-title">恢復到這些點</block>
-  <block id="4acf582ba1791858c42c901e8d64f664" category="paragraph">您可以將資料恢復到原始位置；在此私人預覽版中不提供恢復到備用位置的功能。</block>
   <block id="485775104c27dcbdf8d49f22f897f823" category="paragraph-title">從物件儲存中復原的注意事項</block>
   <block id="fb1b557500e8d14608e76a0b93711e4c" category="admonition">您將需要向雲端提供者支付額外的出口費用才能存取備份文件的內容。</block>
   <block id="10f4565a78ebd1822c60902cbb077e98" category="section-title">恢復工作負載的工作原理</block>
@@ -1206,13 +1205,6 @@
   <block id="4b6c3c6a317300967177891eec6ba8fd" category="paragraph">手動建立 Kubernetes 應用程式的備份，為未來的備份和快照建立基線，或確保最新資料受到保護。</block>
   <block id="46b6ecff43461a732d3eda912df73a42" category="list-text">選擇*立即備份*。</block>
   <block id="408156cb89b56d3b746dba5ade40b0e4" category="paragraph">控制台建立應用程式的備份並在備份和還原的*監控*區域中顯示進度。此備份是根據與應用程式關聯的保護策略建立的。</block>
-  <block id="2f2fda22f167ad6c7dcc0ac3f92cd945" category="summary">在NetApp Backup and Recovery中，建立報告以查看備份狀態，包括備份數量、成功備份數量和失敗備份數量。您還可以查看每個備份的詳細信息，包括備份類型、備份使用的儲存系統以及備份的時間。</block>
-  <block id="3b0a91a5ea7b77db2fb83f740b7d1303" category="list-text">選擇*建立報告*。</block>
-  <block id="df9d16703353a537518df08cc1ae9663" category="list-text">輸入報告範圍詳細資料：</block>
-  <block id="b2b514343358129a23936d3ca58a5d35" category="list-text">*報告名稱*：輸入報告的唯一名稱。</block>
-  <block id="12f8b86f9f1efb1bb6f1f20f4f141746" category="list-text">*報表類型*：選擇您想要按帳戶還是按工作量（Microsoft SQL Server）報表。</block>
-  <block id="baeaf9ec5b3f1514a0e74632387b1436" category="list-text">*選擇主機*：如果您按工作負載選擇，請選擇要為其產生報告的主機。</block>
-  <block id="d6b2fc5f6100a1d9ca1a63a42e2b74ee" category="list-text">*選擇內容*：選擇報告是否包含所有備份的摘要或每個備份的詳細資訊。  （如果您選擇“按帳戶”）</block>
   <block id="fb197ee87a0f850dc3b7bb98fe408518" category="inline-link-macro">配置設定</block>
   <block id="e1fb45ea82cb12d1d1dbdee887e2850a" category="summary">NetApp Backup and Recovery使您能夠恢復已透過保護策略保護的應用程式。</block>
   <block id="5a870c22146ba310e89eaf52f510bdc8" category="paragraph">出現還原點清單。</block>
@@ -3142,7 +3134,6 @@
   <block id="0f18ca4c27c34246c6bc09d2bbf775c6" category="sidebar">從ONTAP備份還原</block>
   <block id="c00b274754a2d13242a61b1534660a37" category="sidebar">管理 Microsoft SQL Server 庫存</block>
   <block id="41e1a34ea3ba2b687b86e55ec1a7955d" category="sidebar">管理 Microsoft SQL Server 快照</block>
-  <block id="c8ffa42e0e508862d020665c979eb5c0" category="sidebar">建立 Microsoft SQL Server 報告</block>
   <block id="3186e7c44dc909386a0204716ffc46f6" category="sidebar">管理 Kubernetes 工作負載的執行鉤子模板</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="sidebar">監控作業</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考</block>
@@ -3848,23 +3839,6 @@
   <block id="5a9e2fbc6e8b2849a76465cd1a86c575" category="doc">General Availability（GA）支援的 KVM 工作負載</block>
   <block id="2c4d488d266d9d0655ce2e1451e05b2d" category="paragraph">Kubernetes 工作負載支援現已在 NetApp Backup and Recovery 中正式發布（GA）。此版本的 Kubernetes 工作負載還引入了以下增強功能：</block>
   <block id="2329c3692bdf2d2f098db291ec4e9427" category="paragraph">*報告支援*：現在您可以為受 NetApp Backup and Recovery 保護的 Kubernetes 叢集和應用程式產生保護活動報告。</block>
-  <block id="66330fd6b5a015d85e0b01e96c040005" category="summary">建立 Kubernetes 工作負載的保護報告，以檢視保護狀態和詳細資訊，包括成功和失敗的備份計數、備份類型、叢集健全狀況資訊等。</block>
-  <block id="d45ba014e75a2424453d999d1ec1584d" category="section-title">建立保護報告</block>
-  <block id="764cb0718c60ad28fec23c72e06cd3eb" category="list-text">*報告類型*：選擇按帳戶或按工作負載產生報告（從清單中選擇 Kubernetes）。</block>
-  <block id="32e7d2bef37709329417fce15d4ef70a" category="list-text">*Select cluster*：如果您按工作負載選擇，請從清單中選擇要為其產生報告的 cluster，然後選擇 *Accept*。選擇 *Select all* 可產生所有 cluster 的報告。</block>
-  <block id="4aa69b04f720d9cf28bddc129bdda982" category="list-text">輸入報告範圍：選擇您希望報告包含過去一天、過去 7 天、過去 30 天、過去一個季度或過去一年的資料。</block>
-  <block id="6966f88ce9330f288d2ff468e8f1bf31" category="section-title">下載保護報告</block>
-  <block id="ca0fab6dece474777af6f27a9ab6f7bf" category="paragraph">下載產生的保護報告，報告格式可以是 JSON 檔案或 PDF 文件，以便查看和分享。</block>
-  <block id="16d046f9df08fac82032019de67dd111" category="list-text">在 *Reports* 頁面上，選擇 *Reports* 選單，即可查看產生的保護報告清單。</block>
-  <block id="46d0b33f9602910da192296aa16047c8" category="list-text">若要下載報告，請選擇「操作」圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *下載*。</block>
-  <block id="3e67afef1e2a25129f8131a465c1f233" category="list-text">選擇 *Download JSON* 以下載 JSON 格式的報表。</block>
-  <block id="6a6e83b2656cc80c95ff1d51721fdfdf" category="list-text">選擇 *Download PDF* 將報告下載為 PDF 文件。</block>
-  <block id="907ad6bf80ead0c498e1b96eeac0931b" category="section-title">檢視保護報告</block>
-  <block id="4282f8fe4c83ccf233576c6529acd9cf" category="list-text">若要查看報告，請選擇「操作」圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *查看報告*。</block>
-  <block id="ba033453bbd04ac2ce08fa3e831d97b0" category="paragraph">報告詳細資料隨即顯示。</block>
-  <block id="a1c5f902308b29e3dc37ca9471a1016c" category="section-title">刪除保護報告</block>
-  <block id="ba71a8f948ce2ac60c238f470758a980" category="paragraph">當您不再需要保護報告時，請將其刪除。</block>
-  <block id="583b019e08073df7e3a4598861ee7567" category="list-text">若要刪除報告，請選擇 Actions 圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *Delete* 。</block>
   <block id="ea78509096df982db8c5234ed6ea3e7c" category="list-text">選擇 *Delete* 以確認操作。</block>
   <block id="3b8d8ee10228976bdc630252832886f7" category="list-text">選擇主機以列出該主機上可用的虛擬機器。若要包含所有已發現主機上的虛擬機器，請在主機清單中選擇 *All*。</block>
   <block id="fc20073811aa1e335ccc2bd9d99eebc7" category="list-text">選擇要包含在保護群組中的個別 VM，或選擇 *All* 以包含清單中的所有 VM。</block>
@@ -3872,7 +3846,6 @@
   <block id="7e6254a3c499887f0d500958fc6584ed" category="paragraph">如果您需要在不刪除和重新建立保護群組的情況下變更保護群組的詳細資訊，請編輯保護群組。</block>
   <block id="78fa67c28bf09a9555618080f725243c" category="list-text">對保護群組中的一般詳細資料和 VM 進行任何必要的變更。</block>
   <block id="3573adc4fce66bc7bb13c8f35b9d7e90" category="list-text">如有需要，請變更與保護群組相關聯的原則。</block>
-  <block id="175ddb68a640ea3daeb84c25a2402e6f" category="sidebar">建立和管理保護報告</block>
   <block id="1d30989467a5dda6a77c2158034a190b" category="paragraph">NetApp Backup and Recovery 中現已正式提供 KVM 工作負載支援（GA）。</block>
   <block id="403eb7104337d3b7cb0c9cbd6a28b588" category="section-title">正式版 (GA) 中支援的 Kubernetes 工作負載</block>
   <block id="3103a41775992118299ff5a989897ac4" category="paragraph">不支援下列動作：</block>
@@ -4548,7 +4521,6 @@
   <block id="811a794fc3af22bb5e0566f56adc0406" category="list-text">S3 相容儲存設備</block>
   <block id="29fc78ad7b30ceab82a6fad5327f5e05" category="cell">S3 相容物件儲存設備</block>
   <block id="d0eb32456912dd737e495d1233503746" category="summary">由 NetApp Console 稽核所支援的備份與還原動作參考。</block>
-  <block id="a29588ca393407a53992df452b4d7451" category="doc">已審核的 NetApp Backup and Recovery 作業</block>
   <block id="da8be55f3871d0a372174a9f477823f0" category="inline-link">從「稽核」頁面稽核使用者活動</block>
   <block id="199370791c099a5f1bca782c3d1d470c" category="list-text">從備份還原磁碟區或檔案</block>
   <block id="732e9096426149869bf78ef0e9e94714" category="list-text">將磁碟區還原為快照</block>
@@ -4579,7 +4551,6 @@
   <block id="67ddca6cd047644d2e1c3f3346bf654b" category="list-text">初始化系統保護</block>
   <block id="2f7e188563796edaa051f5c504c41194" category="list-text">重新整理磁碟區備份中繼資料（已排程）</block>
   <block id="1bba399ba8ca257955b82abe9b77a1c8" category="list-text">在磁碟區中啟用備份</block>
-  <block id="6b379ae81008ca1fdc4a1bee622b4b94" category="list-text">刪除 ANF 快照原則</block>
   <block id="ceb742da8b5f49c43e25068bf4ebfec4" category="list-text">在系統中啟動全景保護</block>
   <block id="796522f5baf9f759608770ab7ad25640" category="list-text">修改系統中的全景保護</block>
   <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="section-title">更多資訊</block>
@@ -4639,7 +4610,6 @@
   <block id="81bdc0623ea533b24d0e11cb1d26ba25" category="list-text">對於使用 SMB 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在 ONTAP 系統上啟用持續可用性共用屬性。請參閱<block ref="5c340db4eb0fc64db199962e418ffbd0" category="inline-link-rx"></block>以取得相關說明。</block>
   <block id="fe336167ccf46f9fb348006254d0f3ee" category="list-text">輸入叢集名稱並選擇要與叢集搭配使用的 Console 代理程式。</block>
   <block id="6dd3c7c1ba8e65da85c3e2fe08fa8a94" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="44371de0a029c248f1a90987cb1f4534" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員、備份與還原備份管理員或備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="52d42f2d4b51510352e6a5d5264a2324" category="paragraph">*必要的 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。<block ref="0f393d0ed3fe42bcd53eff5ef49bfe77" category="inline-link-macro-rx"></block>.<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>.</block>
   <block id="66591c0e71be05bd24e1869944b92db6" category="doc">增強對所有工作負載的多儲存貯體支援</block>
   <block id="9bf2c1ebc9be74ae2e995a0a4dab1fec" category="paragraph">有關 NetApp Backup and Recovery 的詳細資訊，請參閱<block ref="a026c5bec08ff7bb5b963e48c0daa63e" category="inline-link-rx"></block>。</block>
@@ -4816,12 +4786,10 @@
   <block id="bac042f679d2f17a81d0d6d37aadcf66" category="list-text"><block ref="a50bdd85c91df76c8278b2b7972cf2e2" category="inline-link-macro-rx"></block>。</block>
   <block id="2dcc97b7b5d7bbb9216b1e9c1d0cbc38" category="inline-link-macro">在 NetApp Backup and Recovery 中管理 Kubernetes 應用程式</block>
   <block id="f9b08ae1eccef4edb6f8cf8e83729eda" category="list-text"><block ref="7a505e7ac488846d15d2ebbd264a01b1" category="inline-link-macro-rx"></block>。</block>
-  <block id="23337653dd09050d55a14abb882d3e7f" category="doc">在 NetApp Backup and Recovery 中管理 Kubernetes 保護報告</block>
   <block id="b75d59ed6e695ac7c7951b21101cf900" category="inline-link-macro">在 NetApp Backup and Recovery 中管理 KVM 保護群組</block>
   <block id="426086f918326399d7697355e378bce6" category="doc">在 NetApp Backup and Recovery 中管理 Kubernetes 執行掛鉤範本</block>
   <block id="014cdc5a08fd7c5bad41f0da392d3f7b" category="doc">在 NetApp Backup and Recovery 還原期間修改 Kubernetes 資源</block>
   <block id="685d9f05fa8e2a37d148ad281f51ee68" category="doc">Microsoft SQL Server 在 NetApp Backup and Recovery 中的保護工作流程</block>
-  <block id="404bc9ed709ff3d64fea2404cf0959d2" category="doc">在 NetApp Backup and Recovery 中建立 Microsoft SQL Server 保護報告</block>
   <block id="42d5af576055aa21949010929e4837db" category="doc">使用 NetApp Backup and Recovery Web UI 還原 Kubernetes 應用程式</block>
   <block id="0ecbe0a8ca59b45c9e922386c2e93a08" category="doc">在 NetApp Backup and Recovery 中管理 VMware 保護群組</block>
   <block id="13b01a96c5d11eb4f3c03b640bd403a8" category="doc">在 NetApp Backup and Recovery 中還原 VMware 客體檔案和資料夾</block>
@@ -5174,13 +5142,7 @@
   <block id="e1ef40f1a46abc3ebb82a230d9dbe624" category="list-text">用於保護跨多個 Kubernetes 叢集（包括容器和虛擬機器）的應用程式的單一控制平面。</block>
   <block id="f93f49117842410931a00a9e5da717df" category="list-text">與 NetApp SnapMirror 的原生整合可支援備份與還原工作流程的儲存設備卸載。</block>
   <block id="5c3c0320e466a29396956e43b93a8694" category="paragraph">您可以對 Kubernetes 工作負載執行下列任務：</block>
-  <block id="bcb0289c16a67fbfb0e21f6d7f03f054" category="paragraph">在 NetApp Backup and Recovery 中建立 Kubernetes 保護報告，以監控備份狀態、備份類型和叢集健全狀況。</block>
-  <block id="5cec6a2f5940e0a900924a5e4188764f" category="paragraph">建立保護報告以檢視叢集的保護狀態。</block>
   <block id="b3a076e39701c1a6c7a756328efcc7b6" category="list-text">從 NetApp Backup and Recovery 選單中，選取 * 報告 *。</block>
-  <block id="aa6dea2fb2eb93723e210a770122fd6f" category="list-text">輸入報告組態詳細資料：選擇報告是執行一次還是按排程定期執行。對於排程報告，請選擇重複頻率並選取開始日期。</block>
-  <block id="a334b38dae3308edaacb960f28f0fc4a" category="list-text">輸入電子郵件傳送詳細資料：僅針對排程報告，請輸入一個或多個電子郵件地址以接收報告。</block>
-  <block id="d71b658aab251c0a16602cfdeeb169ee" category="paragraph">在「設定」頁面設定電子郵件通知。有關設定電子郵件通知的詳細資訊，請參閱<block ref="395b0c19462e78afc4e209cde346ef5d" category="inline-link-macro-rx"></block>。</block>
-  <block id="a65ef01654c031729d64f926edfb7eb8" category="paragraph">在 NetApp Backup and Recovery 中檢視保護報告的互動式詳細資料。您可以查看工作總結資訊、資料保護狀態、組態詳細資訊等。</block>
   <block id="f032057dd58cc7937dcc0195fee94c02" category="paragraph">將內部部署 ONTAP 系統中的 KVM 保護群組備份至 Amazon Web Services、Azure NetApp Files 或 StorageGRID。當您備份保護群組時，NetApp Backup and Recovery 會備份該群組中的虛擬機器和儲存資源池，並將備份儲存在公有雲或私有雲帳戶的物件存放區中。</block>
   <block id="5ee7c0d5d7a91804a25ecd0edd61e0d7" category="inline-link-macro">建立 KVM 保護原則</block>
   <block id="9be16c85836779d17217bd4b60140ebc" category="admonition">若要執行排程備份，請建立治理備份與還原作業的原則。請參閱 <block ref="386add99f2f24ebee93bfd9e6e2f86ca" category="inline-link-macro-rx"></block> 以取得相關說明。</block>
@@ -5383,7 +5345,6 @@
   <block id="27bb0e289edab1132883935e52645683" category="paragraph">還原 Oracle 資料庫工作負載時，會發生以下情況：</block>
   <block id="4e3fce457d1a9a8459a6a5ea98a6e9fc" category="paragraph">根據您的需求，您可以將 Oracle 資料庫還原到特定時間點、特定系統變更號碼 （SCN） 或上次正常狀態。您也可以從 Snapshot 快照技術還原資料庫，並跳過自動恢復程序，例如，若您想手動執行恢復。您可以使用資料庫名稱或特定篩選條件搜尋資料庫。</block>
   <block id="4c82cd55e9c216695cfce74c86a368dd" category="paragraph">*所需 NetApp Console 角色* 備份與還原超級管理員或備份與還原還原管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="37141d7af0dc9b5fc98cbb0382dab44e" category="paragraph">此預覽版本不適用於 Oracle 資料庫工作負載。</block>
   <block id="31f78782ca396cf4a28f08976d81c51b" category="paragraph">使用 NetApp Backup and Recovery 建立 Hyper-V 備份原則，以控制備份頻率、排程和保留。</block>
   <block id="69447293a8590769734416cbc1de503e" category="list-text">*3-2-1 扇出*：主儲存設備（磁碟）到次要儲存設備（磁碟）到雲端（物件存放區）。它會在不同的儲存設備系統中建立多個資料複本，例如 ONTAP 到 ONTAP 以及 ONTAP 到物件存放區的配置。物件儲存可以是雲端供應商的物件存放區，也可以是私有物件存放區。最適合實現最佳資料保護和災難恢復。此選項不適用於 Amazon FSx for NetApp ONTAP。</block>
   <block id="2b1c387b066ff48cdfc281e5400640f9" category="list-text">*3-2-1 級聯*：主儲存設備（磁碟）到次要儲存設備（磁碟），以及主儲存設備（磁碟）到雲端儲存（物件存放區）。雲端儲存可以是雲端供應商物件存放區，也可以是私有物件存放區，例如 StorageGRID。這會在多個系統之間建立資料複寫鏈，以確保備援和可靠性。此選項不適用於 Amazon FSx for NetApp ONTAP。</block>
@@ -5421,10 +5382,6 @@
   <block id="904b88ee206b2990c6e5a86debda3616" category="paragraph">要保護 Kubernetes 應用程式，首先需要在 NetApp Backup and Recovery 中建立該應用程式。建立應用程式後，NetApp Backup and Recovery 就能感知 Kubernetes 叢集上正在執行的應用程式。</block>
   <block id="0511bb4c7582ecddab07c60556ddeb77" category="admonition">如果您從清單中選擇虛擬機器，則應用程式定義是靜態的——之後不會將新的虛擬機器新增至應用程式（您需要編輯應用程式才能新增並保護它們）。如果您使用標籤選擇器，則無法選擇單一虛擬機器或編輯產生的清單，但之後任何與選擇器相符的虛擬機器都會自動包含在內並受到保護。</block>
   <block id="d56068b27fec2ab6ae86c162a7e949e3" category="paragraph">應用程式建立完成後，將顯示在 Kubernetes 清單的「應用程式」標籤中的應用程式清單中。NetApp Backup and Recovery 可根據您的設定保護應用程式，您可以在「監控」區域中監控進度。</block>
-  <block id="fb406209c4888f54c2015c163c354b91" category="paragraph">在 NetApp Backup and Recovery 中建立 Microsoft SQL Server 工作負載的報告，以審查備份狀態和詳細資訊，包括成功和失敗的備份計數、備份類型、儲存系統和時間戳記。</block>
-  <block id="221aa46c478bf23cffdd54280aed393a" category="list-text">輸入報告範圍：選擇報告是否包含過去一天、過去 7 天、過去 30 天、過去一個季度或過去一年的資料。</block>
-  <block id="234d750893e6b8d3bf8c90b4fab1e2e3" category="list-text">輸入報告傳送詳細資料：如果您希望透過電子郵件傳送報告，請選擇 *Send report using email*。輸入您希望接收報告的電子郵件地址。</block>
-  <block id="064904aaaadfb6c195c362f6d5270baf" category="paragraph">在「設定」頁面設定電子郵件通知。有關設定電子郵件通知的詳細資訊，請參閱 <block ref="395b0c19462e78afc4e209cde346ef5d" category="inline-link-macro-rx"></block>。</block>
   <block id="56ec4c243b7d8732ebb3017fd77212db" category="doc">使用自訂資源恢復 Kubernetes 應用程式</block>
   <block id="8de93c15cc1aac67c9764efff22a8c11" category="paragraph">使用自訂資源從快照或備份還原應用程式。將應用程式還原到同一叢集時，從現有快照還原通常速度更快。</block>
   <block id="3afae8d93d814bf6f2377525fe03b6d8" category="list-text">您可以使用進階設定來自訂還原操作。若要深入瞭解，請參閱 <block ref="7a3143b2dfd83e6320f8bf3cf68e173b" category="inline-link-macro-rx"></block>。</block>
@@ -5740,7 +5697,6 @@
   <block id="a4aa2f0da5fe920e49b4efa7582a1089" category="list-text">為指令碼選擇一個逾時值。如果指令碼在此時間段內未能執行，還原仍將繼續進行。</block>
   <block id="808c0184b1d838fe3f6240a02adeedf3" category="paragraph">Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="3079e07efcec8dc4c03ec09df82c5810" category="paragraph">Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
-  <block id="24bd8e8186e76baf41a1a139a325a041" category="paragraph">*必要的 NetApp Console 角色* Backup and Recovery 超級管理員、Backup and Recovery 備份管理員、Backup and Recovery 還原管理員、Backup and Recovery Clone 管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多<block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="69a43e53caadcedb493c59719fb671f3" category="paragraph">*必要的 NetApp Console 角色* 備份與恢復超級管理員、備份與恢復備份管理員、備份與恢復 Clone 管理員或備份與恢復檢視者角色。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
   <block id="a833b9bd73e803116825184a502ff988" category="list-text">您可以選擇勾選「自動修復本機快照、複寫和備份中的標籤不符」複選框。這將建立標籤與快照、複寫和備份原則中的標籤相符的快照。</block>
   <block id="13c6aaa719abfb2f3c46b10b2329a40f" category="paragraph">選擇要保護的 Volume。受保護的 Volume 是指具有下列一項或多項原則的 Volume：快照原則、複寫原則、備份至物件原則。</block>
@@ -5774,7 +5730,6 @@
   <block id="84069594ae22604a5263ed16cc5c85d7" category="list-text">在「目標設定」部分，執行以下操作：</block>
   <block id="a6bd46b772365e5b6c3e3ebcfb5d88ce" category="list-text">對於 RAC 資料庫，請選擇要執行還原的 RAC 節點。此選項僅適用於 RAC 資料庫。</block>
   <block id="f788e090e936649cf2c5c0ff154c27a9" category="list-text">（可選）啟用「控制檔案」選項，即可同時還原資料庫控制檔。此選項不能用於 PDB 或 PDB 表空間的時間點還原或 SCN 恢復。</block>
-  <block id="79d30138f764cb5a18ef350673cd0630" category="list-text">您可以選擇啟用「強制原地還原」選項，以便在備份後新增了新的資料檔案，或在 LVM 磁碟群組中新增、刪除或重新建立 LUN 時執行原地還原。此選項會覆蓋外部檔案檢查；資料庫恢復將使用您選擇的還原選項進行。</block>
   <block id="4a2e39bd630275c8eae0d833bd13f831" category="list-text">（可選）啟用「恢復後以讀寫模式開啟資料庫或 Container 資料庫」選項，並選擇與還原範圍相符的子選項（從無恢復的快照還原時，這些選項不會顯示）：</block>
   <block id="1598545f145b423567a9960785cf8619" category="list-text">*所有資料檔案*：恢復後以讀寫模式開啟資料庫或 Container 資料庫。</block>
   <block id="ebdcd90fa368ddf5616f4eacd06110a8" category="list-text">*PDB 或 PDB 表空間*：恢復後以讀寫模式開啟可插拔資料庫。</block>
@@ -6107,7 +6062,6 @@
   <block id="402afb3450325e60e5ac66aa3a09b855" category="list-text">（選用）參考 <block ref="c12704870bf071e0e07ed4d97d800d3f" category="inline-xref-macro-rx"></block> 以查看可用的 SCN 和相關資料庫化身。</block>
   <block id="eec1bb4eef0bc2471da6d24624c8e7af" category="paragraph">顯示與指定 SCN 最匹配的快照。如果多個資料庫實例與 SCN 匹配，則顯示所有匹配的實例。</block>
   <block id="004ae5ca2de3ea160e921da76ac388d7" category="list-text">如果多個資料庫版本符合搜尋條件，請選擇具有正確版本的快照。</block>
-  <block id="38eb0a9d79c02f31a9749c6e9e2b5e32" category="list-text">如果在將 PDB 或表格空間還原至特定時間點或 SCN 時，歸檔日誌不在設定的位置，請在 *Specify external archive log files locations* 欄位中指定外部歸檔日誌檔位置。輸入以<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>開頭的檔案系統路徑，或以<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>開頭的 ASM 磁碟群組。使用文字輸入欄位旁的「加號」和「減號」按鈕來新增或移除位置。當您從快照還原且不進行恢復時，此欄位不會顯示。</block>
   <block id="e019cb225a4644922cdd06575b099710" category="section-title">2026年10月12日</block>
   <block id="cd8c5a4fae99d9a57a4e12c8f43a8a84" category="paragraph">您可以設定 Trident Protect 24.10 來管理資料保護作業期間 VM 檔案系統的凍結和解凍，方法是<block ref="7689e703f80621bc0155b88d35cddcc8" category="inline-link-macro-rx"></block>然後使用下列指令：</block>
   <block id="54ea8878308d39d6d78a01f24a278aa1" category="list-text">*工作監控器自訂日期範圍篩選*：您現在可以透過在工作監控器的行事曆中選擇自訂的開始和結束日期，來搜尋過去 90 天的工作。</block>
@@ -6267,4 +6221,101 @@
   <block id="47b9e13f36f004e69c67f2b5cdbd757f" category="paragraph">對於所有工作負載，您只需為保護至物件儲存的資源付費。費用是根據套用效率之前的來源工作負載邏輯已用容量來計算（對於 ONTAP Volumes 工作負載，稱為前端 TB （FETB））。對於資料庫，這表示資料庫大小；對於 VM，則是 VM 大小。對於 Kubernetes 工作負載，費用是根據這些應用程式的持續性磁碟區總大小來計算。</block>
   <block id="9d78b594ffc798524458faaab99dce48" category="paragraph">對於所有工作負載，只有涉及物件儲存的備份與恢復作業才需要備份授權。建立本機快照並複寫到 ONTAP 次要儲存設備不需要授權。</block>
   <block id="13dc5da0f7aa7ae2f943cee57f5c9c6e" category="list-text">*按需付費（PAYGO）*：透過您的雲端供應商市場訂閱，並按每 GiB 備份資料付費，按小時計費。無需預付款。首次註冊即可享 30 天免費試用。如需詳細資訊，請參閱<block ref="8edaf8cd3966d935673fb34ac864f172" category="inline-link-rx"></block>。</block>
+  <block id="79c164e01ef5305bebeb38be7672f92f" category="paragraph">您可以將資料庫還原到原始位置，或將其還原為另一個已註冊主機（備用位置）上的新資料庫。</block>
+  <block id="8fb144d7137e4a618ca12b318cc351ac" category="list-text">還原到備用位置（不同的註冊主機）</block>
+  <block id="721c491a7e1c01cc9b5d2b9891d67270" category="list-text">當您還原至替代位置時， NetApp Backup and Recovery 會將來源資料庫的選定備份還原為不同已註冊主機上的新資料庫。您指定目標主機和新資料庫的名稱。如果您未提供還原規格檔案， Backup and Recovery 會自動計算目標主機上資料檔案、控制檔案和重做日誌檔的位置。</block>
+  <block id="1064bf4cf4bd9c959ca81cc3b25a4e9a" category="paragraph">當您還原至替代位置時，請注意下列支援與不支援的還原情境：</block>
+  <block id="365c28e4293d605d3530d045be814644" category="paragraph">*支援的備用位置還原方案*</block>
+  <block id="e237c81b519f332a737b0dce2b1a2ef4" category="list-text">將單一完整的 Oracle 資料庫還原到單一目標主機</block>
+  <block id="6a2608f4d11f081fdebbc09abe46642a" category="list-text">恢復到特定時間點、特定 SCN 或最新備份</block>
+  <block id="8e97ae91561608ac0fd0ac7c07606c71" category="list-text">當所選恢復點所需的歸檔日誌未包含在備份中時，使用外部歸檔日誌目錄</block>
+  <block id="b56b90364db9d9cf399e478f9b6bd728" category="paragraph">*不支援的備用位置還原方案*</block>
+  <block id="9cc6342760879fb0472201373353e9b8" category="list-text">僅表格空間還原，包括還原 PDB 中的表格空間</block>
+  <block id="f0b23952bff8d317f8fd2e9c083b96ad" category="list-text">僅 PDB 還原至不同的 Container 資料庫（CDB）</block>
+  <block id="ed4a8bbaceb377ddbc1b397f86eda428" category="list-text">從次要儲存設備還原</block>
+  <block id="057422fe1ce47d45d4dec8d9477849da" category="list-text">從物件儲存還原</block>
+  <block id="c6dbf560d90e4cd93f9d8b2687ef373a" category="list-text">您可以選擇啟用 *強制原地還原* 選項，以便在備份後新增資料檔，或在 LVM 磁碟群組中新增、刪除或重新建立 LUN 時執行原地還原。這會覆寫外部檔案檢查；資料庫恢復將使用您選擇的還原選項繼續進行。</block>
+  <block id="ba524493176975ecc0b7a9cc2e9e6ece" category="list-text">如果要將資料庫還原到特定時間點或 SCN，且歸檔日誌不在設定的位置，請在 *指定外部歸檔日誌檔位置* 欄位中指定外部歸檔日誌檔位置。輸入以<block ref="6666cd76f96956469e7be39d750cc7d9" prefix=" " category="inline-code"></block>開頭的檔案系統路徑或以<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block>開頭的 ASM 磁碟群組。使用文字輸入欄位旁的「加號」和「減號」按鈕新增或移除位置。從快照還原且不進行恢復時，此欄位不會顯示。</block>
+  <block id="1cc66ef9269665f32d600ff1e9c3e514" category="inline-xref">支援與不支援的情境</block>
+  <block id="7e86c747a522ca35e240fc06086cd2cb" category="paragraph">將資料庫還原為另一台已註冊主機上的新資料庫。開始前請先審查 <block ref="ffc87a72406c087fbf4d484f0c06dc8d" category="inline-xref-macro-rx"></block>。</block>
+  <block id="38b76ba0679c671583852a983649d2b1" category="list-text">*目標主機*：選擇要建立新資料庫的已註冊主機。</block>
+  <block id="07ade3fdc562da3622685cfe4d342752" category="list-text">*目標資料庫*：輸入目標資料庫的名稱。預設情況下，名稱以來源資料庫的名稱開頭，您可以對其進行編輯。</block>
+  <block id="e5134fc357bb4259a19d0e042f3c53ef" category="list-text">*自訂目標資料庫參數*：啟用此選項可上傳自訂還原規格檔案以自訂目標資料庫參數。</block>
+  <block id="4f1c1a0f97fa27a917002a2b3aef4a69" category="list-text">*還原規格檔案*：如果您啟用了 *自訂目標資料庫參數* 選項，請提供還原規格檔案，以控制還原的檔案在目標主機上的放置位置。您可以下載預設的還原規格檔案並對其進行自訂，以變更目標資料庫的詳細資料，例如驗證和日誌位置。</block>
+  <block id="706711bcb5a199990037bb0d2a40b277" category="paragraph">如果您不提供還原規格檔案，Backup and Recovery 會自動計算資料檔案、控制檔案和重做日誌檔的位置。</block>
+  <block id="bb7b669713321160cf3407453dc64346" category="paragraph">還原作業完成後，請檢查 *Inventory* 頁面，確認新資料庫已列出。如果資料庫未列出，請重新整理目標主機。</block>
+  <block id="51ad6f0621384c48bf862d7e1b154c5e" category="summary">在 NetApp Backup and Recovery 中，為您的工作負載建立報告，以審查保護狀態、作業狀態、使用情況和稽核詳細資訊。</block>
+  <block id="604f9b75dc3ff7018984ea7307b7c8f5" category="doc">在 NetApp Backup and Recovery 中建立和管理報告</block>
+  <block id="6d2bb02231b43012835cacd7cfc47e33" category="paragraph">在 NetApp Backup and Recovery 中建立報告，以確認您的工作負載受到保護，並尋找需要注意的備份。報告顯示成功和失敗備份的數量、備份類型、儲存設備系統、叢集健全狀況和時間戳記。您可以執行一次報告，也可以按排程執行，然後檢視、下載或刪除產生的報告。</block>
+  <block id="515c43c2c3766fa9928436ddf1ca72b7" category="paragraph">*必要的 NetApp Console 角色* 備份和恢復超級管理員、備份和恢復備份管理員、備份和恢復還原管理員，或備份和恢復 Clone 管理員。如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解 <block ref="c66026e4383ae9f791b566ffeb2b3bc3" category="inline-link-macro-rx"></block>。<block ref="8d054a08e0e901ba9c326f172eb3627b" category="inline-link-rx"></block>。</block>
+  <block id="4130611968b439ece96b9ce259d858c8" category="section-title">您可以建立的報告類型</block>
+  <block id="3ddc99e55a6760911d07633de025b1b9" category="paragraph">選擇能夠回答您問題的報告類型，例如工作負載是否受到保護、您的收費情況或哪些作業失敗。</block>
+  <block id="67617c3dd7048bff7de2a5db0e9bb12c" category="cell">報告類型</block>
+  <block id="4af39b8c609e94299d6c11ef13a2428c" category="cell">保護總覽</block>
+  <block id="f07a382899601719890d5ef2b4d50501" category="cell">全面總覽您的保護狀態，包括清單和還原總結。</block>
+  <block id="e5ad2d3ac3b6d6874e05db026017a384" category="cell">使用情況和費用</block>
+  <block id="384119f24f8f456a79c6f58b8ed6686c" category="cell">每個工作負載或資源的用量和費用詳情。</block>
+  <block id="15db00e4ed79529e92bab2ee3f9da76a" category="cell">狀態總結</block>
+  <block id="a78322982cad282eaebffbf0daa924c2" category="cell">所有已排程和按需工作的狀態，以及每項工作的詳細資訊。</block>
+  <block id="0a29b8411ae20f6e019552e89a9d9c2c" category="cell">稽核報告</block>
+  <block id="0573e56c3371f6d235f5750fadd942fb" category="cell">系統內所有操作和事件的稽核追蹤。</block>
+  <block id="4f64237bee72bb58ff4152fa48632885" category="cell">Kubernetes 總覽</block>
+  <block id="c1444a8945e771334fdd5d6b79465169" category="cell">Kubernetes 叢集、應用程式和命名空間的保護和備份狀態。</block>
+  <block id="df63e1970b7cb20512cb62b542bcd3f8" category="section-title">建立報告</block>
+  <block id="1fb8957ab66a03627a71f783a560d425" category="paragraph">建立報告以審查您的帳戶、特定代理程式、特定主機或特定工作負載的保護狀態。您可以執行一次報告，也可以按排程定期執行。</block>
+  <block id="734b52fab7f64c9be1c559c0678065b1" category="list-text">從 NetApp Backup and Recovery 功能表中，選擇 *報告*，然後如果出現 *保護報告* 頁面，請選擇 *前往新報告*。</block>
+  <block id="de0babb507a81450a45b1e601c460a14" category="list-text">選擇 *新增報告*。</block>
+  <block id="2417616426e11a03f1e57feee6278e1b" category="list-text">在 *選擇報告類型* 中，選擇報告類型並選擇 *繼續*。</block>
+  <block id="3bc4555ba922f30ee63cdb5245df412d" category="list-text">在 *報告名稱* 中，輸入報告的唯一名稱。</block>
+  <block id="1a5a003389974914e09a7c33b5110cdf" category="paragraph">名稱長度必須介於 3 到 100 個字元之間，只能包含字母、數字、空格、底線（_）和連字號（-），且必須以字母開頭。</block>
+  <block id="3e2044adad48f4ff429ba6f04b988082" category="list-text">在 *範圍* 下，選擇報告收集資料的層級：</block>
+  <block id="66a657863c9ddf42405f906e806f1933" category="list-text">*按帳戶*：包含帳戶中的所有項目。無需其他輸入。</block>
+  <block id="ace172ea88647489ca738bff6e6c3ed5" category="list-text">*依代理程式*：在 *代理程式* 中，選擇一個或多個 Console 代理程式。報告僅包含所選代理程式代管的資源。</block>
+  <block id="30d916fe44967250e49a970e3e98a49a" category="list-text">*按主機*：在*選擇主機*中，選擇一個或多個主機，然後選擇*接受*。此選項適用於在主機上執行的工作負載，例如 Microsoft SQL Server 和 Oracle 資料庫。</block>
+  <block id="65731f6854cbe29f50d55c2b94de3068" category="list-text">*按工作負載*：在*工作負載*中，選擇一種或多種工作負載類型。</block>
+  <block id="98cbecaadbfa01c2ae848ecdfbad28e8" category="admonition">*按工作負載*清單不包含 ONTAP 磁碟區。若要建立 ONTAP 磁碟區的報告，請使用*按帳戶*或*按代理程式*範圍。</block>
+  <block id="a50b45cce8fbc76deeadb89cda0896e2" category="list-text">在 *頻率* 下，選擇執行報告的頻率：</block>
+  <block id="a6acd9053e801b4812a37a2072b838b6" category="list-text">*一次*：執行報告一次。這是預設值。</block>
+  <block id="85107a14e3640a6a8a6870c1e32b5592" category="list-text">*按排程*：重複執行報告。在 *執行間隔* 中，選擇頻率。排程報告會顯示在 *排程報告* 標籤上。</block>
+  <block id="a879df1524333889b8555457d0e51344" category="list-text">在 *報告傳送選項* 下，可以選擇啟用 *報告執行時透過電子郵件傳送報告結果*。</block>
+  <block id="6a40d700c28098528cb12121dd82719b" category="paragraph">此選項預設為停用。預設情況下，報告會傳送給組織中的所有使用者。若要將報告傳送給特定收件者，請在 *設定* 頁面的 *通知* 下設定電子郵件通知。如需設定電子郵件通知的詳細資訊，請參閱 <block ref="395b0c19462e78afc4e209cde346ef5d" category="inline-link-macro-rx"></block>。</block>
+  <block id="bda8436c5a08e46b7566f4961bb0852e" category="list-text">在 *保留期限* 下的 *保留時間* 中，選擇報告在刪除前保留的時間。預設值為 30 天。</block>
+  <block id="2e852fccf44065ea54571f82013b950b" category="paragraph">該報告會顯示在 *已產生的報告* 清單頂部。當報告準備就緒時，會顯示成功訊息，您可以下載或刪除該報告。</block>
+  <block id="5c887b4fb339d7787d46d96a37bc57be" category="paragraph">*已產生的報告*清單顯示每份報告的名稱、類型、範圍、產生時間和使用者。*範圍*欄位概括了報告涵蓋的內容，例如「1 個帳戶」或「1 個代理程式」。在*範圍*欄中選擇*檢視*即可開啟報告。對於一次性報告，範圍顯示為 N/A。</block>
+  <block id="6ce0de604c64ab72bce8be38d2e5c09f" category="section-title">以 JSON、PDF、Excel 或 CSV 格式下載報告</block>
+  <block id="e56ee02314aabd036aab264c58429e5a" category="paragraph">下載產生的報告以便離線審查，或與沒有權限存取 NetApp Console 的其他人共享。</block>
+  <block id="7ba876de16e3cf2053e555b7cbf7e338" category="list-text">在 *已產生的報告* 標籤上，找到您要下載的報告。</block>
+  <block id="963be51d2aba603b805b33b15795f485" category="list-text">在報告列中，選取 *下載*，然後選擇一種格式：</block>
+  <block id="c627f8d34f0b8f445c8e784824cfd61e" category="list-text">*下載 JSON*</block>
+  <block id="8d35356708b90f345700540d4abf3476" category="list-text">*下載 PDF*</block>
+  <block id="b4cf8700bd0dfaae798df1c87c44e4a4" category="list-text">*下載 Excel*</block>
+  <block id="87feefa117b5425db41179239216b443" category="list-text">*下載 CSV 檔案*</block>
+  <block id="8d4a53ba5f0afbb3fb889378c487bae3" category="paragraph">您也可以使用報告頁面上的 *下載* 選單。</block>
+  <block id="a85337a093dd0014661473eab91f5b43" category="paragraph">大型報告可能需要較長的時間來準備。</block>
+  <block id="65cc2a33d248c5ee8c76006bc589d138" category="section-title">檢視報告詳情</block>
+  <block id="95e5c819c8faa88e1b1047187548fb6c" category="paragraph">檢視 NetApp Backup and Recovery 中產生的報告詳細資料，包括總結、庫存計數和詳細表格。</block>
+  <block id="aff23fa93b85f19cb4f97549fabff756" category="list-text">在 *產生的報告* 標籤上，選擇要檢視的報告名稱。</block>
+  <block id="d252ddfe92dc24a574df61d816f20d34" category="list-text">展開 *庫存* 以查看系統、SVM、磁碟區、主機、執行個體和儲存桶的數量。</block>
+  <block id="0aac72659cb4e0fbc677aa9b79c0f2b3" category="list-text">向下捲動審查報告表格。顯示的表格取決於報告類型。</block>
+  <block id="34a4728d76624a8b20f2e9206c3676d1" category="list-text">（選用）若要選擇表格顯示的欄，請選取表格標題列右側的欄圖示，選取或清除欄，然後選取 *套用*。</block>
+  <block id="8d9031888b1f50907129eed4539672bf" category="paragraph">*資源名稱* 欄位始終保持開啟。選取 *還原預設值* 以返回預設欄位。</block>
+  <block id="33ba74bad2824fc822667c7b5f6c5ed7" category="list-text">若要返回報告列表，請選擇頁面頂部的 *報告*。</block>
+  <block id="2a14d8a91ebcbbc17b47e92bbeaac522" category="section-title">刪除報告</block>
+  <block id="c3a67a228eb815d50e86710028379d6f" category="paragraph">刪除已產生的報告即可將其從 *已產生的報告* 清單中移除。報告也會在其保留期間結束後自動刪除。</block>
+  <block id="b6dda75cadf45032a2f7b669c2ed698b" category="list-text">在 *已產生的報告* 標籤上，找到您要刪除的報告。</block>
+  <block id="2fa51b5441e39836a4d481ba656b724e" category="list-text">在報告的列中，選取刪除圖示。</block>
+  <block id="a7c30a61f2dfd07dcaa1e6279e7f43b8" category="admonition">在取消註冊系統之前，請下載完整的「保護總覽」報告。該報告列出您現有的備份及其 UUID。如果您保留這些備份，則需要這些 UUID 才能還原它們。</block>
+  <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">類別</block>
+  <block id="06df33001c1d7187fdd81ea1f5b277aa" category="cell">動作</block>
+  <block id="6be8f3086a30e59e908d53eb620b51dd" category="cell">還原和恢復</block>
+  <block id="0005178bc39ba0a7b9382f06bfe6ee94" category="cell">備份與快照作業</block>
+  <block id="b28c63848752299be56246c93b04e6a1" category="list-text">刪除 Azure NetApp Files 快照原則</block>
+  <block id="f7b50daf9c05ce3fe48e43ff058feddb" category="cell">保護和複寫</block>
+  <block id="873f85f8fb4189e515617ad5355ee394" category="cell">全景保護</block>
+  <block id="c33199d1fc51518b3e58d77a81f7d924" category="cell">備份移轉</block>
+  <block id="46f90459a6f8819d9dbc64e4be0730d9" category="cell">Cyber Vault 管理</block>
+  <block id="d490fcefdb771dde30c4187c4f40784a" category="cell">物件儲存管理</block>
+  <block id="bc6d0492c51401fb2dbf19ed1efdf743" category="cell">雲端認證資料管理</block>
+  <block id="a37f9043116c528dc094be8481838512" category="cell">發現和組態</block>
+  <block id="92c0342f0088c494151781581cdebf28" category="sidebar">建立和管理報告</block>
 </blocks>

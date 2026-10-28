@@ -1,0 +1,8 @@
+---
+permalink: br-use-kubernetes-reports.html 
+redirect: data-services-backup-recovery/br-use-reports.html 
+---
+= 
+:allow-uri-read: 
+
+
