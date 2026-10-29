@@ -23,6 +23,18 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 * 您可以從現場副本快速恢復，如果現場副本受到損害，則可以使用異地副本。
 
 
+
+
+[[oracle-data-guard-support]]
+== Oracle Data Guard 支援
+
+NetApp Backup and Recovery 可以保護具有單一執行個體主資料庫和一個處於掛載狀態之實體備用資料庫的 Oracle Data Guard 組態。
+
+
+
+[[supported-tasks]]
+== 支援的工作
+
 您可以使用 NetApp Backup and Recovery 來執行下列與 Oracle Database 工作負載相關的任務：
 
 * link:br-start-discover-oracle.html["探索 Oracle Database 工作負載"]

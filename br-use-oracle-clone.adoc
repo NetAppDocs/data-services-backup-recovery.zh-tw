@@ -25,6 +25,9 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 
 從現有快照立即建立複本。使用此方法建立一次性複本，該複本不會從快照持續重新整理。
 
+
+NOTE: 在 Oracle Data Guard 組態中，您可以 Clone 受保護的主資料庫或受保護的實體備用資料庫。此 Clone 是獨立式資料庫，且不屬於 Oracle Data Guard 組態的一部分。如果您 Clone 備用資料庫，則在重新整理主機之前，新資料庫會列為 *Data Guard Standby*。重新整理主機後，它會列為一般資料庫。
+
 .步驟
 . 從NetApp Console選單中，選擇「保護」>「備份和復原」。
 . 在“工作負載”下，選擇“Oracle”磁貼。
@@ -68,6 +71,9 @@ summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作�
 
 
 NOTE: 建立具有重新整理排程的即時快照和 Clone 僅適用於完整資料庫 Clone。不適用於 PDB Clone。
+
+
+NOTE: 在 Oracle Data Guard 組態中，您可以 Clone 受保護的主資料庫或受保護的實體備用資料庫。此 Clone 是獨立式資料庫，且不屬於 Oracle Data Guard 組態的一部分。如果您 Clone 備用資料庫，則在重新整理主機之前，新資料庫會列為 *Data Guard Standby*。重新整理主機後，它會列為一般資料庫。
 
 .步驟
 . 從NetApp Console選單中，選擇「保護」>「備份和復原」。

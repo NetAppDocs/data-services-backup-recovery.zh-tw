@@ -41,8 +41,11 @@ summary: 在 NetApp Backup and Recovery 中建立和管理 Oracle Database 工�
 . 選擇*建立保護組*。
 . 為保護組提供名稱。
 . 選擇要納入保護群組的資料庫。
++
+預設情況下，不會列出備用資料庫。若要列出這些資料庫，請選擇 *顯示 Data Guard 備用資料庫*。如果您選擇的資料庫屬於 Oracle Data Guard 組態，NetApp Backup and Recovery 也會新增同一組態中的其他資料庫。只有當發現該資料庫、可對其進行保護，且該資料庫不屬於其他保護群組時，才會執行此操作。
+
 . 選擇“下一步”。
-. 選擇要套用於保護群組的 *備份原則*。如果包含屬於 Oracle Data Guard 組態的資料庫，請選擇啟用 Data Guard 選項的備份原則。
+. 選擇要套用於保護群組的*備份原則*。如果該群組包含 Oracle Data Guard 資料庫，請使用原則中的*Data Guard 設定*來選擇要備份的資料庫。請參閱 link:br-use-policies-oracle-create.html["建立和管理 Oracle 資料庫備份原則"]。
 +
 如果要建立策略，請選擇*建立新策略*並依照指示建立策略。看link:br-use-policies-create.html["創建策略"]了解更多。
 
@@ -50,6 +53,9 @@ summary: 在 NetApp Backup and Recovery 中建立和管理 Oracle Database 工�
 . 檢查配置。
 . 選擇“*建立*”來建立保護組。
 
+
+
+NOTE: 如果在建立保護群組之後新增備用主機，請編輯並儲存該保護群組。NetApp Backup and Recovery 會自動新增備用主機。在備用主機上，僅將備用資料庫新增至該群組。如果該主機上的其他資料庫需要不同類型的備份，則會導致該主機的備份失敗。
 
 
 

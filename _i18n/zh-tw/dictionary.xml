@@ -5966,12 +5966,9 @@
   <block id="0b988f352bf3178a56bb9dbb7aa6f591" category="section-title">檢視 Oracle 資料庫清單</block>
   <block id="13b17d82aa76831194bc5fedd9ef5155" category="paragraph">檢閱您在 Backup and Recovery 清單中探索到的 Oracle 資料庫資源詳細資訊。</block>
   <block id="ef09861f0e356e1256cc79b90af82a9c" category="list-text">若要檢視已探索的 Oracle 資料庫主機，請選取 *主機* 標籤。</block>
-  <block id="acb5a0c1d6543fd64291bcd931b0212a" category="paragraph">您可以使用此檢視查看詳細資訊，例如每個主機名稱、每個主機託管的資料庫數量、部署模型（例如叢集、Oracle Data Guard 或獨立式）以及其他資訊。</block>
   <block id="5ef22a9f4e63d5ea6dccdceaf60cc129" category="list-text">若要檢視為保護 Oracle 資料庫資源而建立的保護群組，請選擇 *保護群組* 標籤。</block>
   <block id="4636080fe3dd6af1a05f50e6b8612fcd" category="list-text">若要檢視每個 Oracle 資料庫主機所託管的資料庫，請選取 *資料庫* 標籤。</block>
   <block id="88b5a8e3aeecbee62ee44ae9949af352" category="paragraph">此檢視顯示詳細資訊，包括每個資料庫是單一執行個體還是叢集或高可用度組態的一部分。</block>
-  <block id="c567e32a931e50ea00e322c45bada4f9" category="list-text">選擇要套用於保護群組的 *備份原則*。如果包含屬於 Oracle Data Guard 組態的資料庫，請選擇啟用 Data Guard 選項的備份原則。</block>
-  <block id="e07c044b43b8ab05fce956dd78928ec0" category="list-text">*Data Guard 設定*：選擇是否要在原則中啟用 Data Guard 設定，並選擇在 Oracle Data Guard 部署中保護資料庫時，是備份主資料庫、輔助資料庫還是同時備份主資料庫和輔助資料庫。您可以使用保護群組來保護 Oracle Data Guard 部署中的資料庫。</block>
   <block id="debe14f2792fef47d8b9076e14c82cb3" category="section-title">外掛安裝要求</block>
   <block id="3cf57a2a4d07542c89b05ad643bb219e" category="list-text">能夠使用 SSH 登入主機。</block>
   <block id="1bcf5153145f75a86a1ad16ea9b03c7a" category="list-text">Root 權限，或非 root 使用者的 sudo 存取。</block>
@@ -6275,4 +6272,30 @@
   <block id="84618cfc7eb2bbb4efbbd7209a02b83b" category="list-text"><block ref="84618cfc7eb2bbb4efbbd7209a02b83b" category="inline-link-macro-rx"></block></block>
   <block id="37f041132ba68784c19dbe8a3c6a5d54" category="list-text"><block ref="37f041132ba68784c19dbe8a3c6a5d54" category="inline-link-macro-rx"></block></block>
   <block id="dbc0ac8fb1f3ed243ea3e89e9cfc4781" category="sidebar">支援的備份與恢復目的地</block>
+  <block id="e92c60b9dce59b8a708c12a44c8cd00c" category="list-text">目前不支援將 Oracle Data Guard 組態中處於備用狀態的資料庫還原到原始位置。請改為將其還原至替代位置。</block>
+  <block id="d0ea0d089a51f4912e025340deac9c94" category="list-text">不支援使用 RAC 的 Oracle Data Guard 組態和 Oracle Active Data Guard 組態。</block>
+  <block id="8ead40bfdf058563a49a6088340c0a5e" category="admonition">如果您的資料庫採用 Oracle Data Guard 組態，請將主要主機和備用主機新增為分隔的主機。</block>
+  <block id="cb3202cc77d4d07b32f7413c59f5764b" category="paragraph">您可以使用此檢視查看詳細資訊，例如每個主機名稱、每個主機代管的資料庫數量、部署模型（例如叢集、Data Guard 或獨立式）以及其他資訊。</block>
+  <block id="024c370a5e2df8680dde3adb456bc63b" category="paragraph">Oracle Data Guard 資料庫標示為 *Data Guard Primary* 或 *Data Guard Standby*。備用資料庫預設為隱藏狀態。若要顯示它們，請在 *Type* 篩選器中選擇 *Data Guard Standby*。每個 Oracle Data Guard 資料庫名稱會顯示為 Oracle SID，後面加上括號中的資料庫名稱，例如 <block ref="6a829caf0294d3176c613fc594dbcc91" prefix=" " category="inline-code"></block>。</block>
+  <block id="a4acb54c369f0c50a25853f5f2d72387" category="paragraph">切換或容錯移轉後，選取 *主機* 索引標籤，然後為受影響的主機選取 *重新整理*，以更新顯示的角色。</block>
+  <block id="8e3defa486fd6395b3186f053883b5d7" category="admonition">對於 Oracle Data Guard 資料庫，NetApp Backup and Recovery 會在備份開始時檢查每個資料庫的目前角色，並遵循原則中的 *Data Guard 設定*。切換或容錯移轉後，下一次備份會使用新的角色。</block>
+  <block id="848e936049005dc765ef08314cfe45b8" category="admonition">在 Oracle Data Guard 組態中，您可以 Clone 受保護的主資料庫或受保護的實體備用資料庫。此 Clone 是獨立式資料庫，且不屬於 Oracle Data Guard 組態的一部分。如果您 Clone 備用資料庫，則在重新整理主機之前，新資料庫會列為 *Data Guard Standby*。重新整理主機後，它會列為一般資料庫。</block>
+  <block id="326535fa9507ec810eb8c39ff9808048" category="section-title">Oracle Data Guard 支援</block>
+  <block id="f8524f96f354b3f8d4fca9e30727bfd6" category="paragraph">NetApp Backup and Recovery 可以保護具有單一執行個體主資料庫和一個處於掛載狀態之實體備用資料庫的 Oracle Data Guard 組態。</block>
+  <block id="2ef07622f2dfb8abf76b043b142d62c6" category="section-title">支援的工作</block>
+  <block id="75089d6e1e93d883e04ed0b3a24ca3c9" category="paragraph">預設情況下，不會列出備用資料庫。若要列出這些資料庫，請選擇 *顯示 Data Guard 備用資料庫*。如果您選擇的資料庫屬於 Oracle Data Guard 組態，NetApp Backup and Recovery 也會新增同一組態中的其他資料庫。只有當發現該資料庫、可對其進行保護，且該資料庫不屬於其他保護群組時，才會執行此操作。</block>
+  <block id="03d1a38bd67097c9f65b44addd6c10b1" category="inline-link-macro">建立和管理 Oracle 資料庫備份原則</block>
+  <block id="8f7f8bda280de96a8d2ea204f01f0e79" category="list-text">選擇要套用於保護群組的*備份原則*。如果該群組包含 Oracle Data Guard 資料庫，請使用原則中的*Data Guard 設定*來選擇要備份的資料庫。請參閱 <block ref="dbb202f56fddd64d485e7ab84741d680" category="inline-link-macro-rx"></block>。</block>
+  <block id="cb4a9fdc969151f53f537c85ddd4e60a" category="admonition">如果在建立保護群組之後新增備用主機，請編輯並儲存該保護群組。NetApp Backup and Recovery 會自動新增備用主機。在備用主機上，僅將備用資料庫新增至該群組。如果該主機上的其他資料庫需要不同類型的備份，則會導致該主機的備份失敗。</block>
+  <block id="d5ead59a8fc743551f9007e24cadba9a" category="paragraph">*關於還原 Oracle Data Guard 資料庫的重要說明*</block>
+  <block id="616672565c96137c7a96fd54acc8e9da" category="list-text">在還原之前，請確保資料庫角色是最新的。如果發生切換或容錯移轉，請選取 *主機* 索引標籤，然後先針對該主機選取 *重新整理*。可用的還原選項取決於資料庫目前的角色。</block>
+  <block id="b211c3a6078492ed458135e880352629" category="list-text">如果資料庫目前是備用資料庫，則無論備份時它扮演什麼角色，都無法將其還原到原始位置。請將其還原到其他位置。</block>
+  <block id="d93c32f5f94e7a9c136c20e11c78def2" category="list-text">如果資料庫目前處於備用狀態，則無法還原僅存在於次要儲存設備或物件儲存中的快照。</block>
+  <block id="368ff82501bf375fe962ae7b3740bb7b" category="list-text">資料庫成為主資料庫後，您可以將資料庫作為備用資料庫時所建立的備份還原到原始位置。</block>
+  <block id="ae3633e4eb4a82b89a3980ff858610f1" category="admonition">還原主資料庫不會改變備用資料庫。在時間點或 SCN 還原後，當您使用<block ref="d25b8c1b3f7ba3e06913b87e4360ec6d" prefix=" " category="inline-code"></block>開啟主資料庫時，它會啟動新的資料庫化身。如果備用資料庫已經套用超過該時間點的重做，則備用資料庫上的重做套用會因錯誤而停止，且備用資料庫會保持在其先前的狀態。若要恢復保護，請在還原後使用 Oracle 工具重新建立備用資料庫。</block>
+  <block id="a593f44359692a4c6bb8088242bffe01" category="list-text">*Data Guard 設定*：選取 *啟用 Data Guard 設定* 以選擇要備份的 Oracle Data Guard 資料庫：</block>
+  <block id="030c52c41fd1981a36ae43013d3e78c3" category="list-text">*同時備份主要與待命*（預設）</block>
+  <block id="5af099efa04197b8148cd4c53d100646" category="list-text">*僅在主要設備上備份*</block>
+  <block id="e2d9ce30ebfec7057c448e8a44f805e1" category="list-text">*僅在備用狀態下備份*</block>
+  <block id="ec521975a51b13a00e3d392d7acdf5f5" category="paragraph">如果您不啟用 *Data Guard 設定*，則主資料庫和備用資料庫都會備份。將原則指派給資源後，您將無法停用 *Data Guard 設定*。</block>
 </blocks>
