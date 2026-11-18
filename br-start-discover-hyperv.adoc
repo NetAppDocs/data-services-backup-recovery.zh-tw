@@ -4,7 +4,7 @@ permalink: br-start-discover-hyperv.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Hyper-V, workloads, protect 
 summary: NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您才能保護它們。 
 ---
-= 在NetApp Backup and Recovery中發現 Hyper-V 工作負載
+= 在 NetApp Backup and Recovery 中探索與管理 Hyper-V 工作負載
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -62,6 +62,24 @@ TIP: 此過程可能需要幾分鐘。
 
 .結果
 NetApp Backup and Recovery發現資源後，「清單」頁面會在工作負載清單中顯示 Hyper-V 工作負載。
+
+
+
+[[refresh-a-hyper-v-host]]
+== 重新整理 Hyper-V 主機
+
+重新整理 Hyper-V 主機以更新主機上的虛擬機器清單並對應連接的儲存設備。您可能需要在 MetroCluster 切換或切回之後執行此操作，或是如果您最近從主機新增或移除了虛擬機器。
+
+
+IMPORTANT: 如果 Hyper-V 主機受 NetApp MetroCluster 組態保護，請在每次 MetroCluster 切換或切回之後，以及下一次排程或手動備份或快照之前，重新整理主機。在重新整理主機之前為其執行的任何備份或快照都會失敗。如果您未手動重新整理主機，Backup and Recovery 會在 12 小時內自動將其重新整理。
+
+.步驟
+. 從 NetApp Console 選單中，選取 *Protection* > *Backup and Recovery*。
+. 選擇 Hyper-V 工作負載磁貼。
+. 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
+. 選擇 Hyper-V 工作負載類型的 *檢視* 連結。
+. 選擇要重新整理的 Hyper-V 主機，然後選擇「操作」圖示 image:../media/icon-action.png["操作選項"] > *重新整理*。
+
 
 
 

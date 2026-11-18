@@ -511,7 +511,6 @@
   <block id="500085ef4daa2d41e99c68f5d7ced622" category="list-text">輸入備份目標的新憑證。根據您選擇的備份目標類型，資訊會有所不同。</block>
   <block id="65aa0e52587b5f59eb26af06ddeef28a" category="list-text">選擇*完成*。</block>
   <block id="6d655e5ab4c22c9a5dd1c7b3cc53bcd4" category="summary">NetApp Backup and Recovery必須先發現 Hyper-V 虛擬機，然後您才能保護它們。</block>
-  <block id="ebe1fa7e8a9f4c3139f8657f10a169ee" category="doc">在NetApp Backup and Recovery中發現 Hyper-V 工作負載</block>
   <block id="ccb99cc37b628cd3d05ccf85f8c0c579" category="section-title">新增 Hyper-V 主機並發現資源</block>
   <block id="6512c2901e9f9eae6ce40754ef6845cb" category="admonition">當您新增 Hyper-V 主機並發現資源時， NetApp Backup and Recovery會在 Hyper-V 主機上安裝NetApp Hyper-V 插件和NetApp SnapCenter Windows FileSystem 插件，以協助管理和保護虛擬機器。</block>
   <block id="dd38712b98e7db15ffc7ca4ac996020c" category="list-text">從NetApp Console選單中，選擇 *保護* &gt; *備份和還原*。</block>
@@ -6296,4 +6295,17 @@
   <block id="ec521975a51b13a00e3d392d7acdf5f5" category="paragraph">如果您不啟用 *Data Guard 設定*，則主資料庫和備用資料庫都會備份。將原則指派給資源後，您將無法停用 *Data Guard 設定*。</block>
   <block id="ce6934326bbfd4652849311e1ed89fe6" category="paragraph">在此版本中，NetApp Backup and Recovery 針對所有工作負載引入了以下授權增強功能：</block>
   <block id="83b090108fa1e810d92771b23b7b0267" category="paragraph">如需授權的詳細資訊，請參閱<block ref="aa1a103ec550203513cdef85cd5672c0" category="inline-link-rx"></block>。</block>
+  <block id="78ba94be34b62da6b3c55ab6428c64de" category="paragraph">在此版本中，NetApp Backup and Recovery 針對 Hyper-V 工作負載引進了下列增強功能：</block>
+  <block id="5a17a39de31b7b5832a689a22a0960d3" category="paragraph">*NetApp MetroCluster 支援增強功能*：NetApp Backup and Recovery 現在支援在 NetApp MetroCluster 組態中，於切換或切回作業前後保護 Hyper-V 主機。</block>
+  <block id="3df1770bd78ab7f279534a4bc01e8279" category="inline-link">探索並管理 Hyper-V 工作負載</block>
+  <block id="3cb8f9712223b09ad73c450e0af0ea64" category="paragraph">有關在 NetApp MetroCluster 組態中保護 Hyper-V 主機的詳細資訊，請參閱<block ref="665a91254fa4402bbc204875b0e6bd92" category="inline-link-rx"></block>。</block>
+  <block id="844ae54d758df29e7d829704e13ec279" category="paragraph">有關保護 Hyper-V 工作負載的詳細資訊，請參閱<block ref="ae9a446e0ed2e2ae49be41b424784f6c" category="inline-link-rx"></block>。</block>
+  <block id="cf675c654413dcc854cb4be52cd83dc3" category="doc">在 NetApp Backup and Recovery 中探索與管理 Hyper-V 工作負載</block>
+  <block id="d69713a2a3c453e5fbf0ea6d3400e8d8" category="section-title">重新整理 Hyper-V 主機</block>
+  <block id="41d2c48fc5de199e2d709875cf13b714" category="paragraph">重新整理 Hyper-V 主機以更新主機上的虛擬機器清單並對應連接的儲存設備。您可能需要在 MetroCluster 切換或切回之後執行此操作，或是如果您最近從主機新增或移除了虛擬機器。</block>
+  <block id="07a120107375b845b998da2fcc4ff1b5" category="admonition">如果 Hyper-V 主機受 NetApp MetroCluster 組態保護，請在每次 MetroCluster 切換或切回之後，以及下一次排程或手動備份或快照之前，重新整理主機。在重新整理主機之前為其執行的任何備份或快照都會失敗。如果您未手動重新整理主機，Backup and Recovery 會在 12 小時內自動將其重新整理。</block>
+  <block id="f801f8619ab78bc2c752d1ee8fd4f92c" category="list-text">選擇 Hyper-V 工作負載類型的 *檢視* 連結。</block>
+  <block id="09ccb7f44019b1b4d13b4944ec04a56f" category="list-text">選擇要重新整理的 Hyper-V 主機，然後選擇「操作」圖示 <block ref="2137b8853c2ddb346939b7d46bf562c2" category="inline-image-macro-rx" type="image"></block> &gt; *重新整理*。</block>
+  <block id="2ed0cb11d89d0befd7096c8dfd797cf8" category="admonition">如果 Hyper-V 主機受 NetApp MetroCluster 組態保護，請在每次 MetroCluster 切換或切回之後，以及下一次排程或手冊備份或快照之前，重新整理主機。如需相關指示，請參閱 <block ref="8cb2dd4b3d4a18fa676f8b0c073c9b7b" category="inline-link-macro-rx"></block>。</block>
+  <block id="e370f8f4d5db9e4f93257ac02adddec3" category="section-title">2026年11月9日</block>
 </blocks>

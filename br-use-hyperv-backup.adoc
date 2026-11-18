@@ -28,6 +28,9 @@ summary: 使用NetApp備份並復原保護您的 Hyper-V 工作負載。
 
 在進行系統變更之前，請使用隨需備份來保護您的資料。
 
+
+IMPORTANT: 如果 Hyper-V 主機受 NetApp MetroCluster 組態保護，請在每次 MetroCluster 切換或切回之後，以及下一次排程或手冊備份或快照之前，重新整理主機。如需相關指示，請參閱 link:br-start-discover-hyperv.html#refresh-a-hyper-v-host["重新整理 Hyper-V 主機"]。
+
 *所需 NetApp Console 角色* Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .步驟
