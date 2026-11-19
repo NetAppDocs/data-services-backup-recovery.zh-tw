@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-gcp.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP Volume 備份至 Google Cloud Storage，包括準備主控台代理程式、權限和加密金鑰。 
 ---
-= 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 備份至 Google Cloud Storage
+= 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 備份到 Google Cloud
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,7 +24,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 [[verify-support-for-your-configuration]]
 == 驗證對您的配置的支持
 
-在開始將磁碟區備份到 Google Cloud Storage 之前，請閱讀以下要求以確保您具有受支援的配置。
+在開始將 Volume 備份到 Google Cloud Storage 之前，請確認您的組態是否受支援。
 
 下圖顯示了每個組件以及您需要在它們之間準備的連接。
 
@@ -34,7 +34,7 @@ image:diagram_cloud_backup_cvo_google.png["此圖顯示了NetApp Backup and Reco
 
 支援的 ONTAP 版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
 支援的 GCP 區域:: 所有 GCP 區域均支援NetApp Backup and Recovery。
-GCP 服務帳戶:: 您需要在 Google Cloud 專案中擁有一個具有自訂角色的服務帳戶。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-creating-gcp-service-account.html["了解如何建立服務帳號"^] 。
+GCP 服務帳戶:: 您需要在 Google Cloud 專案中擁有一個具有自訂角色的服務帳戶。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-creating-gcp-service-account.html["了解如何建立服務帳號"^]。
 
 
 
@@ -146,7 +146,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 * 如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
 * ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
 +
-由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。
+由於您可以複寫到 Cloud Volumes ONTAP 或內部部署系統，請審查內部部署 ONTAP 系統的對等關係需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^]。
 
 
 
@@ -305,7 +305,7 @@ cloudkms.keyRings.setIamPolicy
 
 * 支援 HSM（硬體支援）和軟體產生的金鑰。
 * 支援新建立或匯入的 Cloud KMS 金鑰。
-* 僅支援區域密鑰，不支援全域密鑰。
+* 僅支援區域金鑰。不支援全域金鑰。
 * 目前僅支援“對稱加密/解密”目的。
 * NetApp Backup and Recovery為與儲存帳戶關聯的服務代理程式指派了「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM 角色。
 
@@ -369,7 +369,7 @@ cloudkms.keyRings.setIamPolicy
 
 ====
 .步驟
-請注意，如果您選擇的 Volume 已套用快照或複寫原則，則您稍後選擇的原則將覆寫這些現有原則。
+如果您選擇的 Volume 已經套用了快照或複寫原則，則您稍後選擇的原則將覆寫這些現有原則。
 
 . 在「選擇卷」頁面中，選擇要保護的一個或多個磁碟區。
 +

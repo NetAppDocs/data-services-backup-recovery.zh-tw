@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-storagegrid.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區資料從本機主ONTAP系統備份到二級儲存系統以及NetApp StorageGRID系統中的物件儲存。 
+summary: 透過準備環境並啟動備份，將內部部署 ONTAP 系統中的 Volume 資料備份到次要儲存設備系統和 StorageGRID 物件儲存。 
 ---
 = 使用NetApp Backup and Recovery將本機ONTAP資料備份到StorageGRID
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 完成NetApp Backup and Recovery中的幾個步驟，開始將磁碟區
 
 
 [role="lead"]
-在 NetApp Backup and Recovery 中，您可以將主要內部部署 ONTAP 系統的 Volume 資料備份至次要儲存設備和 StorageGRID 物件儲存。請使用此頁面準備您的環境並啟動備份。
+使用 NetApp Backup and Recovery 將 Volume 資料從主要內部部署 ONTAP 系統備份到次要儲存設備系統和 StorageGRID 物件儲存。準備您的環境，然後啟動備份以保護您的 Volume。
 
 
 NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
@@ -151,12 +151,12 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 * ONTAP叢集透過使用者指定的連接埠從叢集間 LIF 啟動到StorageGRID網關節點的 HTTPS 連接，以執行備份和還原作業。此連接埠可在備份設定期間配置。
 +
-ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是響應。
+ONTAP 從物件儲存讀取和寫入資料。物件儲存從不主動發起連線。它只負責回應。
 
 * ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。控制台代理必須位於您的場所。
 * 每個託管要備份的磁碟區的ONTAP節點上都需要一個叢集間 LIF。  LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有關 IP 空間的更多信息"^] 。
 +
-當您設定NetApp Backup and Recovery時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
+設定 NetApp Backup and Recovery 時，系統會提示您選擇要使用的 IPspace。請選擇每個 LIF 關聯的 IPspace。這可能是「預設」IPspace 或您建立的自訂 IPspace。
 
 * 節點的群集間 LIF 能夠存取物件儲存（當控制台代理安裝在「暗」站點時不需要）。
 * 已為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["為 SVM 配置 DNS 服務"^]。
@@ -178,7 +178,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 * 如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
 * ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
 +
-由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。
+由於您可以複寫到 Cloud Volumes ONTAP 或內部部署系統，請審查內部部署 ONTAP 系統的對等關係需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^]。
 
 
 
@@ -235,7 +235,7 @@ S3 憑證:: 您必須建立 S3 租用戶帳戶來控制對StorageGRID儲存的�
 [[prepare-to-archive-older-backup-files-to-public-cloud-storage]]
 === 準備將較舊的備份文件存檔到公有雲存儲
 
-將較舊的備份檔案分層到檔案儲存中可以節省資金，因為您可以使用較便宜的儲存類別來儲存您可能不需要的備份。 StorageGRID是一種內部部署（私有雲）解決方案，不提供檔案存儲，但您可以將較舊的備份檔案移至公有雲檔案儲存。以這種方式使用時，分層到雲端儲存的資料或從雲端儲存恢復的資料會在StorageGRID和雲端儲存之間傳輸 - 控制台不參與此資料傳輸。
+將較舊的備份檔案分層至歸檔儲存設備，可針對您可能不需要的備份使用較便宜的儲存類別，進而節省成本。StorageGRID 是一種內部部署（私有雲）解決方案，不提供歸檔儲存設備，但您可以將較舊的備份檔案移至公有雲歸檔儲存設備。透過此設定，您分層至雲端儲存或從雲端儲存還原的資料，會在 StorageGRID 與雲端儲存之間傳輸。主控台不參與此資料傳輸。
 
 目前支援可讓您將備份存檔至 AWS _S3 Glacier_/_S3 Glacier Deep Archive_ 或 _Azure Archive_ 儲存體。
 

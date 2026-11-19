@@ -4,7 +4,7 @@ permalink: prev-ontap-protect-overview.html
 keywords: ontap volumes, protect volumes, back up volumes, restore volumes, snapshots, replication, backup to object storage, 3-2-1, FlexVol, FlexGroup, SnapLock, DataLock, ransomware protection, NetApp Backup and Recovery 
 summary: 使用 NetApp Backup and Recovery 透過快照、複寫的 Volume 和物件儲存中的備份來保護 ONTAP Volume，並從任何複本還原 Volume、資料夾或檔案。 
 ---
-= 使用 NetApp Backup and Recovery 保護 ONTAP Volume 工作負載
+= 了解使用 NetApp Backup and Recovery 的 ONTAP Volume 保護
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -28,7 +28,7 @@ image:diagram-321-overview-unified.png["圖表顯示備份檔案如何在來源�
 3-2-1 方法有以下優點：
 
 * 多個資料副本可防止內部和外部網路安全威脅。
-* 如果一種媒體發生故障，使用不同類型的媒體可以幫助您恢復。
+* 如果一種媒體失效，其他類型的媒體可以幫助您恢復。
 * 您可以從現場副本快速恢復，如果現場副本受到損害，則可以使用異地副本。
 
 
@@ -55,7 +55,7 @@ image:diagram-backup-recovery-general.png["此圖顯示了NetApp Backup and Reco
 
 
 
-CAUTION: 請勿直接從您的儲存系統或雲端供應商環境中管理或變更備份檔案。這樣做可能會毀損檔案，並導致不受支援的組態。
+CAUTION: 請勿直接從儲存系統或雲端供應商環境中管理或變更備份檔案。這樣做可能會毀損檔案，並導致組態不受支援。
 
 若要規劃要使用的複本和架構，請參閱link:prev-ontap-protect-journey.html["規劃 ONTAP Volume 保護"]。
 
@@ -69,7 +69,7 @@ CAUTION: 請勿直接從您的儲存系統或雲端供應商環境中管理或�
 * 在ONTAP儲存系統之間複製資料以支援備份和災難復原。
 * 一次將多個FlexVol磁碟區複製到輔助系統。
 * 在兩個系統之間使用原生 ONTAP 傳輸中加密與預先共用金鑰 (PSK)。
-* 在發生傳輸故障的事件時，依靠自我修復複寫。
+* 如果傳輸失敗，則依靠自我修復複寫。
 * 將複寫的 Volume 還原至來源系統或其他系統。
 
 
@@ -104,7 +104,7 @@ CAUTION: 請勿直接從您的儲存系統或雲端供應商環境中管理或�
 
 NetApp Backup and Recovery支援以下類型的磁碟區：
 
-* FlexVol讀寫卷
+* FlexVol 讀寫 Volume
 * FlexGroup磁碟區（需要ONTAP 9.12.1 或更高版本）
 * SnapLock Enterprise磁碟區（需要ONTAP 9.11.1 或更高版本）
 * SnapLock Compliance 適用於內部部署 Volume（需要 ONTAP 9.14 或更新版本）

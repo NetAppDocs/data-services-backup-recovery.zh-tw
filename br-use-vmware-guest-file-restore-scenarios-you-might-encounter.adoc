@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-guest-file-restore-scenarios-you-might-encounter.html 
 keywords:  
-summary: 嘗試還原用戶端檔案時，您可能會遇到用戶端檔案還原工作階段為空白、用戶端檔案還原附加磁碟作業失敗或用戶端檔案還原工作階段停止後備份未分離的情況。 
+summary: 疑難排解 NetApp Backup and Recovery 中的 VMware 訪客檔案還原問題，包括空白的還原工作階段、失敗的附加磁碟作業，以及保持附加狀態的備份。 
 ---
 = 在 NetApp Backup and Recovery 中疑難排解 VMware 來賓檔案還原問題
 :hardbreaks:
@@ -23,7 +23,7 @@ summary: 嘗試還原用戶端檔案時，您可能會遇到用戶端檔案還�
 
 如果在建立用戶機檔案復原工作階段期間用戶機作業系統重啟，則會發生此問題。客戶作業系統中的 VMDK 可能處於離線狀態，因此客戶文件復原會話清單為空。
 
-若要解決此問題，請在客戶作業系統中手動將 VMDK 重新置於連線狀態。當 VMDK 線上時，來賓文件恢復工作階段將顯示正確的內容。
+若要解決此問題，請在客體作業系統中手動將 VMDK 重新設為線上。當 VMDK 處於線上狀態時，客體檔案還原工作階段會顯示正確的內容。
 
 
 

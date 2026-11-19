@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-kvm-protect-overview.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID 的KVM 虛擬機，確保您的資料受到保護。 
+summary: 使用 NetApp Backup and Recovery 將 KVM 虛擬機器從內部部署 ONTAP 系統保護至 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和 StorageGRID。 
 ---
 = KVM 保護工作流程與 NetApp Backup and Recovery
 :hardbreaks:
@@ -18,7 +18,7 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 
 您的 KVM 主機和虛擬機器必須由 Apache CloudStack 等平台進行代管，然後才能使用 NetApp Backup and Recovery 加以保護。
 
-使用NetApp Backup and Recovery實作 3-2-1 保護策略，其中您在 2 個不同的儲存系統上擁有 3 個來源資料副本，並在雲端中擁有 1 個副本。3-2-1 方法的優點包括：
+使用 NetApp Backup and Recovery 實作 3-2-1 保護策略，即在兩個不同的儲存設備系統上保留三份來源資料複本，並在雲端保留一份複本。3-2-1 方法的優點包括：
 
 * 多個資料副本可防止內部和外部網路安全威脅。
 * 使用不同類型的媒體有助於在一種媒體發生故障時進行還原。

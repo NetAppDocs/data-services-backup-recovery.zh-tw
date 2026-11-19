@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-policy-differences-snapcenter.html 
 keywords: backup policy, backup policies, snapcenter, migration 
-summary: NetApp Backup and Recovery中使用的政策與SnapCenter中使用的策略之間存在一些差異。 
+summary: 比較 SnapCenter 與 NetApp Backup and Recovery 原則排程分層、保留和標籤，以了解匯入的資源和原則如何變化。 
 ---
 = SnapCenter與NetApp Backup and Recovery之間的策略差異
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: NetApp Backup and Recovery中使用的政策與SnapCenter中使用的�
 
 
 [role="lead"]
-使用此參考資料了解 SnapCenter 與 NetApp Backup and Recovery 之間的原則差異，這些差異可能會影響匯入的資源和原則。
+SnapCenter 和 NetApp Backup and Recovery 處理原則排程、保留和標籤的方式不同，這可能會影響匯入的資源和原則。
 
 
 
@@ -69,9 +69,9 @@ NetApp Backup and Recovery 會依照下列方式調整 SnapCenter 排程：
 
 重複間隔大於一小時的SnapCenter每小時策略將轉換為NetApp Backup and Recovery中的每日策略。
 
-任何重複間隔不是 24 倍（例如 5、7 等）的每小時策略都會跳過一天中的某些快照。
+任何重複間隔不是 24 之因數的每小時原則，例如 5 或 7，都會在一天中跳過一些快照。
 
-* 範例 *：如果您有 SnapCenter 每小時原則，從上午 1:00 開始每 5 小時重複一次，NetApp Backup and Recovery（移轉後）會將排程設定為每日，間隔 5 小時，時間為上午 1:00、上午 6:00、上午 11:00、下午 4:00 和晚上 9:00。某些時段會被跳過，晚上 9:00 之後應該是上午 2:00 才能每 5 小時重複一次，但始終會是上午 1:00。
+*範例*：如果您有從凌晨 1:00 開始、每 5 小時重複一次的 SnapCenter 每小時原則，NetApp Backup and Recovery（移轉後）會將排程設定為每日，間隔 5 小時，分別在凌晨 1:00、上午 6:00、上午 11:00、下午 4:00 和晚上 9:00。某些小時會被跳過。晚上 9:00 之後，下一個快照應該在凌晨 2:00 進行，以保持每 5 小時重複一次，但它總是在凌晨 1:00 進行。
 
 
 

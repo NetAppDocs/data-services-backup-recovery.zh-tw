@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-policies-hyper-v-create.html 
 keywords: backing up, back up, backup, backup on-premises ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
-summary: 在NetApp Backup and Recovery中，建立您自己的策略來管理備份頻率、備份時間以及保留的備份檔案數量。 
+summary: 在 NetApp Backup and Recovery 中建立 Hyper-V 備份原則，以控制備份頻率、排程與保留，並編輯或刪除原則。 
 ---
 = 在 NetApp Backup and Recovery 中建立及管理 Hyper-V 備份原則
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: 在NetApp Backup and Recovery中，建立您自己的策略來管理備
 
 如果從SnapCenter匯入資源，您可能會發現SnapCenter中使用的策略與NetApp Backup and Recovery中使用的策略存在一些差異。看link:reference-policy-differences-snapcenter.html["SnapCenter與NetApp Backup and Recovery之間的策略差異"]。
 
-您可以實現以下與政策相關的目標：
+您可以執行以下原則任務：
 
 * 建立本機快照策略
 * 建立複製到輔助儲存的策略
@@ -62,7 +62,7 @@ NOTE: 對於 Hyper-V 工作負載，備份排程使用 Hyper-V 主機的時區�
 如果您要保護儲存在 Cloud Volumes ONTAP 叢集上的資料，則還需要 Cloud Volumes ONTAP 管理員角色。了解更多link:reference-roles.html["備份和恢復角色和權限"]。 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .開始之前
-如果您打算複製到二級儲存並希望在本機快照或遠端ONTAP二級儲存上使用快照鎖定，則首先需要在叢集層級初始化ONTAP合規時脈。這是在政策中啟用快照鎖定的要求。
+如果您打算複寫到次要儲存設備，並希望在本機 Snapshot 快照技術或遠端 ONTAP 次要儲存設備上使用 Snapshot 快照技術鎖定，則首先需要在叢集層級初始化 ONTAP 法規遵循時鐘。這是在原則中啟用 Snapshot 快照技術鎖定的要求。
 
 有關如何執行此操作的說明，請參閱 https://docs.netapp.com/us-en/ontap/snaplock/initialize-complianceclock-task.html["在ONTAP中初始化合規性時鐘"^]。
 

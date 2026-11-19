@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-manage.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 透過NetApp Backup and Recovery，您可以透過變更備份計畫、啟用磁碟區備份、暫停備份、刪除備份等方式管理Cloud Volumes ONTAP和本機ONTAP系統的備份。您也可以取消註冊NetApp Backup and Recovery。 
+summary: 透過變更排程、暫停或刪除備份、執行勒索軟體掃描，以及取消註冊服務，來管理 Cloud Volumes ONTAP 和內部部署 ONTAP 系統的備份。 
 ---
 = 使用NetApp Backup and Recovery管理ONTAP系統的備份
 :hardbreaks:
@@ -17,7 +17,7 @@ summary: 透過NetApp Backup and Recovery，您可以透過變更備份計畫、
 使用 NetApp Backup and Recovery 管理 Cloud Volumes ONTAP 和內部部署 ONTAP 系統的快照、複寫和物件儲存備份。您可以變更排程、啟用或停用 Volume 備份、暫停備份、刪除備份以及取消註冊服務。
 
 
-CAUTION: 請勿直接在儲存系統或雲端提供者環境中管理或變更備份檔案。這可能會損壞檔案並導致不受支援的配置。
+CAUTION: 請勿直接在儲存設備系統或雲端供應商環境中管理或變更備份檔案。這可能會毀損檔案，並導致組態不受支援。
 
 
 NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
@@ -83,7 +83,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 * 同一系統
 * 相同樣式（FlexVol或FlexGroup磁碟區）
-* 相同類型（讀寫或資料保護卷）
+* 相同類型（讀寫或資料保護 Volume）
 
 
 當啟用備份的磁碟區超過五個時， NetApp Backup and Recovery一次只會初始化五個磁碟區。當這些完成後，它會以 5 個為一組繼續進行，直到所有捲都初始化完畢。
@@ -128,7 +128,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 如果在為此叢集啟動 NetApp Backup and Recovery 時啟用了「DataLock 與勒索軟體保護」，則隨需備份也將設定 DataLock，且保留期間為 30 天。臨機操作備份不支援勒索軟體掃描。link:prev-ontap-policy-object-options.html["了解有關 DataLock 和勒索軟體保護的更多信息"^]。
 
-建立臨時備份時，會在來源 Volume 上建立快照。由於此快照不屬於一般快照排程，因此不會自動輪換刪除。備份完成後，您可能需要手動從來源 Volume 中刪除此快照。這將釋放與此快照相關的區塊。快照名稱將以 `cbs-snapshot-adhoc-`. https://docs.netapp.com/us-en/ontap/san-admin/delete-all-existing-snapshot-copies-volume-task.html["了解如何使用 ONTAP CLI 刪除快照"^]開頭。
+建立臨時備份時，會在來源 Volume 上建立快照。由於此快照不屬於一般快照排程的一部分，因此不會輪替刪除。備份完成後，您可能需要手動從來源 Volume 中刪除此快照。這將可釋放與此快照相關的區塊。快照的名稱將以  `cbs-snapshot-adhoc-`. https://docs.netapp.com/us-en/ontap/san-admin/delete-all-existing-snapshot-copies-volume-task.html["了解如何使用 ONTAP CLI 刪除快照"^] 開頭。
 
 
 NOTE: 資料保護卷不支援按需卷備份。
@@ -203,7 +203,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 | 暫停複製 | 暫停快照的增量傳輸，以更新目標磁碟區。如果您想重新開始增量更新，可以稍後再恢復。 
 
 
-| 中斷複製 | 打破來源磁碟區和目標磁碟區之間的關係，並啟動目標磁碟區進行資料存取 - 使其可讀寫。當來源磁碟區因資料損壞、意外刪除或離線狀態等事件而無法提供資料時，通常會使用此選項。https://docs.netapp.com/us-en/ontap-sm-classic/volume-disaster-recovery/index.html["了解如何在ONTAP文件中配置目標磁碟區以進行資料存取並重新啟動來源磁碟區"^] 
+| 中斷複製 | 中斷來源和目的地 Volume 之間的關係，並啟動目的地 Volume 的資料存取 - 使其可讀寫。此選項通常用於來源 Volume 因資料毀損、意外刪除或離線狀態等事件而無法提供資料時。https://docs.netapp.com/us-en/ontap-sm-classic/volume-disaster-recovery/index.html["了解如何在ONTAP文件中配置目標磁碟區以進行資料存取並重新啟動來源磁碟區"^] 
 
 
 | 中止複製 | 停用將此磁碟區備份到目標系統，並且也會停用還原磁碟區的功能。任何現有的備份都不會被刪除。這不會刪除來源磁碟區和目標磁碟區之間的資料保護關係。 
@@ -212,7 +212,7 @@ NOTE: 資料保護卷不支援按需卷備份。
 | 反向重新同步 | 反轉來源磁碟區和目標磁碟區的角色。原始來源磁碟區的內容將被目標磁碟區的內容覆蓋。當您想要重新啟動離線的來源磁碟區時，這很有用。上次資料複製和來源磁碟區停用之間寫入原始來源磁碟區的任何資料都不會保留。 
 
 
-| 刪除關係 | 刪除來源磁碟區和目標磁碟區之間的資料保護關係，這表示磁碟區之間不再發生資料複製。此操作不會啟動目標磁碟區以進行資料存取 - 這表示它不會使其可讀寫。如果系統之間沒有其他資料保護關係，此操作也會刪除叢集對等關係和儲存虛擬機器 (SVM) 對等關係。 
+| 刪除關係 | 刪除來源和目的地 Volume 之間的資料保護關係，這表示 Volume 之間不再進行資料複寫。此行動不會啟動目的地 Volume 的資料存取，也就是說，它不會使其可讀寫。如果系統之間沒有其他資料保護關係，此行動也會刪除叢集對等關係和儲存設備虛擬機器（SVM）對等關係。 
 |===
 
 

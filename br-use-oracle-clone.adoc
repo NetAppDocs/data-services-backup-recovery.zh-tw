@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-oracle-clone.html 
 keywords: clone, clone application data, Amazon Web Services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
-summary: 使用 NetApp Backup and Recovery 複製您的 Oracle Database 工作負載。 
+summary: 使用 NetApp Backup and Recovery 建立、排程、分割及刪除 Oracle Database 工作負載的 Clone。 
 ---
 = 使用 NetApp Backup and Recovery Clone Oracle 資料庫工作負載
 :hardbreaks:

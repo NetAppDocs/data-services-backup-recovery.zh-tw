@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-s3-compatible.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, S3, compatible, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 使用 NetApp Backup and Recovery 驗證支援的組態，並將 Volume 資料從內部部署 ONTAP 系統備份至 S3 相容的物件儲存。 
 ---
-= 使用 NetApp Backup and Recovery 將內部部署 ONTAP 資料備份至與 S3 相容的儲存設備
+= 使用 NetApp Backup and Recovery 將 ONTAP 資料備份至 S3 相容儲存設備
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,14 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-使用此頁面驗證您的組態是否受支援，並設定從您的主要內部部署 ONTAP 系統到 NetApp Backup and Recovery 中的 S3 相容物件儲存設備的備份。
+確認您的組態受支援，然後在 NetApp Backup and Recovery 中設定從您的主要內部部署 ONTAP 系統到 S3 相容物件儲存的備份。
 
 
 
 [[verify-support-for-your-configuration]]
 == 驗證對您的配置的支持
 
-在開始將磁碟區備份到 S3 相容儲存設備之前、請先閱讀下列需求、確保您擁有支援的組態。
+在開始將 Volume 備份到 S3 相容儲存設備之前，請確保您擁有受支援的組態。
 
 支援的 ONTAP 版本:: ONTAP 最低版本要求為 9.17.1。
 
@@ -92,7 +92,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 [[prepare-console-agent-networking-requirements]]
 === 準備控制台代理網路要求
 
-確保安裝控制台代理程式的網路啟用以下連線：
+確認安裝 Console 代理程式的網路啟用以下連線：
 
 * 透過連接埠 443 與 S3 相容伺服器建立 HTTPS 連線
 * 透過連接埠 443 建立到來源ONTAP叢集管理 LIF 的 HTTPS 連接
@@ -170,7 +170,7 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 [[verify-ontap-networking-requirements-for-backing-up-data-to-object-storage]]
 === 驗證ONTAP網路要求以將資料備份到對象存儲
 
-您必須確保連接到物件儲存的系統符合以下要求。
+確認連接到物件儲存的系統符合以下要求。
 
 [NOTE]
 ====
@@ -266,7 +266,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 ====
 .步驟
-請注意，如果您選擇的 Volume 已套用快照或複寫原則，則您稍後選擇的原則將覆寫這些現有原則。
+如果您選擇的 Volume 已經套用了快照或複寫原則，則您稍後選擇的原則將覆寫這些現有原則。
 
 . 在「選擇卷」頁面中，選擇要保護的一個或多個磁碟區。
 +
@@ -384,7 +384,7 @@ TIP: 若要使用備份和復原建立自訂策略，請參閱link:br-use-polici
 [[review-your-selections]]
 === 檢查您的選擇
 
-這是審查您的選擇並在必要時進行調整的機會。
+審查您的選擇，如有必要，請進行調整。
 
 .步驟
 . 在「審核」頁面中，審核您的選擇。

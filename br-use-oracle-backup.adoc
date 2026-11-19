@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-oracle-backup.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web Services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, protection group 
-summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作負載。 
+summary: 使用 NetApp Backup and Recovery 隨需備份 Oracle 資料庫保護群組或個別資料庫，以保護您的資料。 
 ---
 = 使用 NetApp Backup and Recovery 備份 Oracle Database 工作負載
 :hardbreaks:

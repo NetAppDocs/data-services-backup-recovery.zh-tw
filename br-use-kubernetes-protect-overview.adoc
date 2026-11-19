@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-kubernetes-protect-overview.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和StorageGRID 的Kubernetes 應用程式和應用程式數據，確保您的資料受到保護。 
+summary: 將 Kubernetes 應用程式和應用程式資料從內部部署 ONTAP 系統保護至 Amazon Web Services、Microsoft Azure、Google Cloud Platform 和 StorageGRID。 
 ---
 = 使用 NetApp Backup and Recovery 的 Kubernetes 保護工作流程
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: 您可以保護從本機ONTAP系統到 Amazon Web Services、Microsoft 
 [role="lead"]
 使用 NetApp Backup and Recovery，透過單一介面探索、管理和保護 Kubernetes 叢集和應用程式。
 
-下圖展示了 Kubernetes 備份與恢復的元件和基本架構，以及如何將資料複本儲存在不同的位置：
+該圖展示了 Kubernetes 備份與還原的元件和基本架構，以及如何將資料複本儲存在不同的位置：
 
 image:../media/backup-recovery-architecture-diagram.png["Kubernetes 工作負載備份與復原架構圖"]
 

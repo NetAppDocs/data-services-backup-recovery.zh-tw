@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-oracle.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, workloads, protect, Oracle 
-summary: NetApp Backup and Recovery 必須先探索工作負載，才能加以保護。 
+summary: 在 NetApp Backup and Recovery 中探索 Oracle 資料庫主機和工作負載，檢視 Oracle 清單，並準備使用備份和快照來保護資料庫。 
 ---
 = 在 NetApp Backup and Recovery 中探索 Oracle Database 工作負載
 :hardbreaks:
@@ -35,7 +35,7 @@ IMPORTANT: 在進行任何變更之前，請檢查現有的 CoreDNS 組態和現
 
 
 .步驟
-. 檢查現有的 CoreDNS 組態，確保您沒有置換現有的變更：
+. 檢查現有的 CoreDNS 組態，以確認您沒有覆寫現有的變更：
 +
 [source, shell]
 ----

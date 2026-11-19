@@ -103,7 +103,7 @@ transformations:
           "topology.kubernetes.io/zone": "us-east-1a"
           disktype: "ssd"
 ----
-使用以下命令透過命令列執行此轉換：
+使用以下命令從命令列執行此轉換：
 
 [source, bash]
 ----
@@ -126,7 +126,7 @@ transformations:
         from: "/data/source-key"
         path: "/data/backup-key"
 ----
-使用以下命令透過命令列執行此轉換：
+使用以下命令從命令列執行此轉換：
 
 [source, bash]
 ----
@@ -149,7 +149,7 @@ transformations:
         from: "/data/OLD_KEY"
         path: "/data/NEW_KEY"
 ----
-使用以下命令透過命令列執行此轉換：
+使用以下命令從命令列執行此轉換：
 
 [source, bash]
 ----
@@ -174,7 +174,7 @@ transformations:
 
 NOTE: 在上述範例的路徑中、 `~1` 是  `/` 的 JSON Pointer 轉義序列。
 
-使用以下命令透過命令列執行此轉換：
+使用以下命令從命令列執行此轉換：
 
 [source, bash]
 ----
@@ -198,7 +198,7 @@ transformations:
         path: "/spec/host"
         value: "prod.example.com"
 ----
-使用以下命令透過命令列執行此轉換：
+使用以下命令從命令列執行此轉換：
 
 [source, bash]
 ----
@@ -224,7 +224,7 @@ transformations:
         path: "/data/database-host"
         value: "prod-db.example.com"
 ----
-使用以下命令透過命令列執行此轉換：
+使用以下命令從命令列執行此轉換：
 
 [source, bash]
 ----

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-monitor-tasks.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, jobs 
-summary: 使用NetApp Backup and Recovery作業。 
+summary: 監控快照、複寫、備份和還原作業，審查通知中心的警報，調查 Console Timeline 中的活動，並取消後續的作業。 
 ---
 = 監控NetApp Backup and Recovery中的作業
 :hardbreaks:
@@ -271,7 +271,7 @@ https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.htm
 [[cancel-an-ongoing-job]]
 == 取消後續的工作
 
-有些備份與恢復工作負載支援在作業完成時間過長且尚未失敗的情況下取消後續的作業。
+有些備份和恢復工作負載支援在作業完成時間過長且尚未失敗的情況下取消後續的作業。
 
 
 NOTE: 若要取消 ONTAP Volumes 還原作業，請參閱<<取消 ONTAP Volumes 還原作業>>。
@@ -289,7 +289,7 @@ NOTE: 若要取消 ONTAP Volumes 還原作業，請參閱<<取消 ONTAP Volumes 
 [[cancel-an-ontap-volumes-restore-job]]
 == 取消 ONTAP Volumes 還原作業
 
-如果 ONTAP Volumes 還原作業耗時過長且尚未失敗，則取消該作業。
+如果 ONTAP Volumes 還原作業耗時過長且尚未失敗，請取消此作業。
 
 取消 Volume 還原時，整個還原作業將會回滾，因此 Volume 的任何部分都不會還原。
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-manage-snapshots.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: 您可以透過從NetApp Backup and Recovery中刪除 Microsoft SQL Server 快照來管理它們。 
+summary: 從 NetApp Backup and Recovery 的清單中刪除本機 Microsoft SQL Server 快照。 
 ---
 = 使用NetApp Backup and Recovery管理 Microsoft SQL Server 快照
 :hardbreaks:

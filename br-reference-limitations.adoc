@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-reference-limitations.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Microsoft SQL Server database, SAP HANA database 
-summary: 已知限制標識了該產品的此版本不支援的功能，或無法與其正確互通的功能。仔細審查這些限制。 
+summary: 審查搭配 ONTAP 磁碟區的 NetApp Backup and Recovery 已知限制。 
 ---
 = NetApp Backup and Recovery for ONTAP磁碟區的已知限制
 :hardbreaks:
@@ -95,7 +95,7 @@ FlexVol® Volume 沒有此類限制：您可以選擇系統中的所有 FlexVol�
 [[restore-limitations-for-ontap-volumes]]
 == ONTAP磁碟區的還原限制
 
-這些限制適用於恢復文件和資料夾的搜尋和恢復方法以及瀏覽和恢復方法；除非特別指出。
+除非另有特別說明，否則這些限制適用於「搜尋和還原」以及「瀏覽和還原」兩種檔案和資料夾還原方法。
 
 * 不支援從本機 Snapshot 還原資料夾。
 * 在災難復原（DR）設定中還原檔案和資料夾：故障轉移後、為 DR 設定的儲存 VM 上的磁碟區會以中斷狀態保留既有的 SnapMirror 關係。由於目的地磁碟區已有關係、因此 ONTAP 會封鎖嘗試還原會建立暫時性 SnapMirror RST 關係的檔案或資料夾。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery需要先發現工作負載，以便您使用該服務。 
+summary: 在 NetApp Backup and Recovery 中探索 Microsoft SQL Server 工作負載，並可選擇匯入 SnapCenter 資源、主機、憑證和排程。 
 ---
 = 在 NetApp Backup and Recovery 中探索 Microsoft SQL Server 工作負載
 :hardbreaks:
@@ -35,7 +35,7 @@ IMPORTANT: 在進行任何變更之前，請檢查現有的 CoreDNS 組態和現
 
 
 .步驟
-. 檢查現有的 CoreDNS 組態，確保您沒有置換現有的變更：
+. 檢查現有的 CoreDNS 組態，以確認您沒有覆寫現有的變更：
 +
 [source, shell]
 ----
@@ -250,9 +250,9 @@ kubectl -n kube-system rollout restart deploy/rke2-coredns-rke2-coredns
 * 如果您已有SnapCenter ，請使用NetApp Backup and Recovery and Recovery UI 將SnapCenter資源匯入NetApp Backup and Recovery and Recovery。
 +
 
-NOTE: 如果您已經擁有 SnapCenter，請先確認在從 SnapCenter 匯入之前已符合先決條件。例如，您應該先將內部部署的 SnapCenter 叢集儲存系統新增至 NetApp Console，然後再從 SnapCenter 匯入。請參閱link:concept-start-prereq-snapcenter-import.html["從SnapCenter匯入資源的先決條件"]。
+NOTE: 如果您已有 SnapCenter，請在從 SnapCenter 匯入之前確認您已符合先決條件。例如，在從 SnapCenter 匯入之前，請先將內部部署 SnapCenter 叢集儲存系統新增至 NetApp Console。請參閱 link:concept-start-prereq-snapcenter-import.html["從SnapCenter匯入資源的先決條件"]。
 
-* 如果您還沒有 SnapCenter，您仍然可以透過手動新增 vCenter 並執行探索來探索工作負載。
+* 如果您還沒有 SnapCenter，您仍然可以透過手動新增 vCenter 並執行探索，來探索工作負載。
 
 
 
@@ -327,7 +327,7 @@ NOTE: 如果 SnapCenter Server 已註冊，您可以更新現有的註冊資訊�
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *查看詳情*顯示工作量詳情。
 . 在清單 > 工作負載頁面中，選擇操作圖標image:../media/icon-action.png["操作選項"]> *管理* 顯示管理主機頁面。
 . 選擇*管理*。
-. 在管理主機頁面中，選擇使用現有 vCenter 或新增新的 vCenter。
+. 在「管理主機」頁面中，選擇現有的 vCenter 或新增 vCenter。
 . 選擇*管理*。
 +
 庫存頁面顯示新管理的SnapCenter資源。

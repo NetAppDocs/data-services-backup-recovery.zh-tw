@@ -23,7 +23,7 @@ summary: 向您的雲端供應商購買隨用隨付或年度市場訂閱，或�
 * 使用 ONTAP Volumes 工作負載時，無需授權即可發現和還原磁碟區。但是，如果需要將磁碟區保護（備份）到物件儲存，則需要購買授權。
 * 如果您正在搭配 NetApp Console 本機部署使用 Backup and Recovery，則只能購買自備授權（BYOL）授權。
 * NetApp Backup and Recovery自帶許可證 (BYOL) 是一種浮動許可證，您可以在與NetApp Console組織或帳戶關聯的所有系統中使用它。因此，如果您現有的 BYOL 授權具有足夠的備份容量，則無需購買另一個 BYOL 授權。
-* 如果您使用自帶授權 （BYOL） 授權搭配 NetApp Console，建議您同時訂閱隨用隨付 （PAYGO） 訂閱。如果您備份的資料超過 BYOL 授權允許的範圍，或您的授權到期，備份將繼續透過您的隨用隨付 （PAYGO） 訂閱進行，服務不會中斷。
+* 如果您搭配 NetApp Console 使用 BYOL 授權，請同時訂閱 PAYGO 訂閱。如果您備份的資料超過 BYOL 授權所允許的範圍，或者您的授權期限到期，則備份將透過您的隨用隨付 (PAYGO) 訂閱繼續進行，服務不會中斷。
 * 將內部部署 ONTAP 資料備份到 StorageGRID 時，您需要 BYOL 授權，但雲端供應商儲存空間是免費的。
 
 
@@ -37,8 +37,8 @@ link:concept-backup-to-cloud.html["了解有關使用NetApp Backup and Recovery 
 NetApp Backup and Recovery 有三種授權選項：
 
 * 直接從 NetApp 購買授權，也稱為自帶授權 (BYOL)。此選項適用於 NetApp Console 和 Console 本地部署。
-* 從大型公有雲市場購買年度合約。此選項僅適用於 NetApp Console。
-* 從大型公有雲市場訂閱隨用隨付 （PAYGO） 授權。此選項僅適用於 NetApp Console。
+* 從雲端供應商市場購買年度合約。此選項僅適用於 NetApp Console。
+* 從雲端供應商市場訂閱隨用隨付 (PAYGO) 授權。此選項僅適用於 NetApp Console。
 
 
 
@@ -66,7 +66,7 @@ NetApp Backup and Recovery 有三種授權選項：
 [[use-a-byol-license]]
 === 使用自備授權 (BYOL)
 
-來自 NetApp 的自帶授權提供 1 年、2 年或 3 年的期限。您只需為保護至物件儲存的資料付費，此費用是根據正在備份至物件儲存的來源工作負載的邏輯已用容量（在任何效率提升之前）來計算。對於 ONTAP 磁碟區，此容量也稱為前端 TB（FETB）。僅透過本機快照或複寫至 ONTAP 次要儲存設備進行保護的資料，不計入您的授權容量。
+來自 NetApp 的自攜授權提供 1 年、2 年或 3 年的期限。您只需為保護至物件儲存的資料付費，費用是根據備份至物件儲存的來源工作負載的邏輯已用容量（在任何效率提升_之前_）來計算。對於 ONTAP 磁碟區，此容量也稱為前端 TB（FETB）。僅使用本機快照或複寫至 ONTAP 次要儲存設備進行保護的資料，不會計入您的授權容量。
 
 BYOL NetApp Backup and Recovery 授權是一種浮動授權，其總容量在與您的 NetApp Console 組織或帳戶相關聯的所有系統之間是共享的。對於 ONTAP 磁碟區，您可以透過針對計畫備份到物件儲存的磁碟區執行 CLI 命令 `volume show -fields logical-used-by-afs`，來粗略估算所需的容量。
 
@@ -89,7 +89,7 @@ https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-se
 
 * 年度合約在各市場均以私人優惠形式提供。
 * 年度合約可讓您備份 Cloud Volumes ONTAP 資料和內部部署 ONTAP 資料。
-* 您可以從市場頁面註冊年度合約。從市場頁面設定您的訂閱，然後將該訂閱與您的 https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html["AWS"^]、 https://docs.netapp.com/us-en/console-setup-admin/task-adding-azure-accounts.html#subscribe["Azure"^]或 GCP 憑證建立關聯。請注意，您還需要使用此年度合約訂閱來支付 Cloud Volumes ONTAP 系統的費用，因為您在主控台中只能為您的 AWS 憑證指派一個作用中的訂閱。
+* 您可以從市場頁面註冊年度合約。從市場頁面設定您的訂閱，然後將訂閱與您的 https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html["AWS"^]、 https://docs.netapp.com/us-en/console-setup-admin/task-adding-azure-accounts.html#subscribe["Azure"^] 或 GCP 憑證建立關聯。請注意，您也需要使用此年度合約訂閱來支付 Cloud Volumes ONTAP 系統的費用，因為在主控台中，您只能將一個作用中的訂閱指派給您的 AWS 憑證。
 * 如果您購買「CVO Professional」方案，它將包含已授權 Cloud Volumes ONTAP 系統的無限備份，且這些備份不計入授權容量。此方案不支援備份內部部署 ONTAP 資料或透過 Freemium 或 Essentials 方案授權的 Cloud Volumes ONTAP 系統；僅支援透過 Professional 方案授權的 Cloud Volumes ONTAP 系統。
 +
 請參閱 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP授權主題"^]以了解有關此授權選項的更多資訊。

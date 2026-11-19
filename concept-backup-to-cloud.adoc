@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-backup-to-cloud.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: NetApp Backup and Recovery是一種資料服務，可為您的所有ONTAP工作負載（包括磁碟區、資料庫、虛擬機器和 Kubernetes 工作負載）提供高效率、安全且經濟高效的資料保護。 
+summary: 了解 NetApp Backup and Recovery 如何保護 ONTAP 工作負載（包括 Volume、資料庫、虛擬機器和 Kubernetes 應用程式），以及支援的目標、授權和成本。 
 ---
 = 了解NetApp Backup and Recovery
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery是一種資料服務，可為您的所有ONT
 
 
 [role="lead"]
-使用此總覽來了解 NetApp Backup and Recovery 如何保護您的 ONTAP 工作負載、它支援哪些工作負載和備份目標，以及授權和成本如何運作。
+NetApp Backup and Recovery 透過本機快照、複寫和物件儲存備份來保護您的 ONTAP 工作負載。了解它支援哪些工作負載和備份目標，以及授權和費用如何計算。
 
 工作負載是指系統內資源的邏輯分組，作為一個整體進行管理，以實現保護、治理、偵測和復原。在 Backup and Recovery 中，工作負載就是您需要保護的單元。其意義取決於資料來源：對於 Kubernetes，工作負載指的是應用程式；對於虛擬機器環境，它指的是虛擬機器；對於資料庫環境，它指的是資料庫。
 
@@ -217,7 +217,7 @@ NetApp Backup and Recovery可保護下列類型的工作負載：
 
 當您啟用NetApp Backup and Recovery，本服務會為您的資料執行完整備份。初始備份之後，所有附加備份都是增量備份。這使得網路流量保持最低限度。
 
-下圖顯示了組件之間的關係。
+該映像顯示元件之間的關係。
 
 image:diagram-br-321-aff-a.png["展示NetApp Backup and Recovery如何使用 3-2-1 保護策略的圖表"]
 
@@ -229,7 +229,7 @@ NOTE: 還支援從主存儲到對象存儲，而不僅僅是從二級存儲到�
 [[where-backups-reside-in-object-store-locations]]
 === 備份在物件儲存位置的位置
 
-備份副本儲存在NetApp Console在您的雲端帳戶中建立的物件儲存中。每個叢集或系統都有一個物件存儲，控制台以如下方式命名該物件存儲： `netapp-backup-clusteruuid` 。請確保不要刪除此物件存儲。
+備份副本儲存在 NetApp Console 於您的雲端帳戶中建立的物件存放區中。每個叢集或系統都有一個物件存放區，且 Console 會以下列方式命名該物件存放區： `netapp-backup-clusteruuid`。請勿刪除此物件存放區。
 
 * 在 AWS 中， NetApp Console可以實現以下功能： https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html["Amazon S3 阻止公共存取功能"^]在 S3 鏟斗上。
 * 在 Azure 中，NetApp Console 使用新的或現有的資源群組，該資源群組包含用於 Blob Container 的儲存設備帳戶。Console https://docs.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-prevent["阻止公眾存取您的 Blob 數據"]預設情況下。

@@ -4,7 +4,7 @@ permalink: br-use-oracle-protection-groups.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle, database, workloads, volumes, snapshots 
 summary: 在 NetApp Backup and Recovery 中建立和管理 Oracle Database 工作負載的保護群組。 
 ---
-= 使用 NetApp Backup and Recovery 為 Oracle Database 工作負載建立及管理保護群組
+= 在 NetApp Backup and Recovery 中管理 Oracle 資料庫保護群組
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

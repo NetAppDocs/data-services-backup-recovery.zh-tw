@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-aws.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 透過驗證需求、準備 Console 代理程式，以及在 NetApp Backup and Recovery 中啟動備份，將 Cloud Volumes ONTAP 資料備份至 Amazon S3。 
 ---
 = 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 備份至 Amazon S3
 :hardbreaks:
@@ -24,11 +24,11 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 [[verify-support-for-your-configuration]]
 == 驗證對您的配置的支持
 
-在開始將磁碟區備份到 S3 之前，請閱讀以下要求以確保您具有受支援的配置。
+在開始將 Volume 備份到 S3 之前，請確認您符合受支援組態的要求。
 
 下圖顯示了每個組件以及您需要在它們之間準備的連接。
 
-或者，您也可以使用公用或私有連線連線到用於複製磁碟區的輔助ONTAP系統。
+針對複寫的 Volume，您也可以透過公用或私有連線連接至次要 ONTAP 系統。
 
 image:diagram_cloud_backup_cvo_aws.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
@@ -38,7 +38,7 @@ VPC 閘道端點必須已經存在於您的 VPC 中。 https://docs.aws.amazon.c
 NOTE: 如果您使用私有 VPC 端點進行備份或還原資料傳輸，則其優先權高於任何已設定的 Proxy 連線。
 
 支援的 ONTAP 版本:: 最低版本為ONTAP 9.8；建議使用ONTAP 9.8P13 及更高版本。
-使用客戶管理的密鑰進行資料加密所需的信息:: 您可以在啟動精靈中選擇自己的客戶管理金鑰進行資料加密，而不是使用預設的 Amazon S3 加密金鑰。在這種情況下，您需要設定加密管理金鑰。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["了解如何使用自己的密鑰"^] 。
+使用客戶管理的密鑰進行資料加密所需的信息:: 您可以在啟動精靈中選擇您自己的客戶管理金鑰進行資料加密，而不是使用預設的 Amazon S3 加密金鑰。在這種情況下，您必須已經設定好您的客戶管理金鑰 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-setting-up-kms.html["了解如何使用自己的密鑰"^]。
 
 
 
@@ -50,7 +50,7 @@ NOTE: 如果您使用私有 VPC 端點進行備份或還原資料傳輸，則其
 
 對於允許您備份Cloud Volumes ONTAP資料和本地ONTAP資料的年度合同，您需要從 https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri["AWS Marketplace 頁面"^]進而 https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html["將訂閱與您的 AWS 憑證關聯"^]。
 
-對於允許您捆綁Cloud Volumes ONTAP和NetApp Backup and Recovery 的年度合同，您必須在建立Cloud Volumes ONTAP系統時設定年度合約。此選項不允許您備份本機資料。
+對於可讓您將 Cloud Volumes ONTAP 和 NetApp Backup and Recovery 套裝組合的年度合約，您必須在建立 Cloud Volumes ONTAP 系統時設定年度合約。此選項無法讓您備份內部部署資料。
 
 對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。當控制台代理程式和Cloud Volumes ONTAP系統部署在暗站時，您必須使用 BYOL 授權。
 
@@ -192,7 +192,7 @@ link:prev-ontap-protect-journey.html["了解有關創建您自己的存儲桶的
 * 如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
 * ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
 +
-由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。
+由於您可以複寫到 Cloud Volumes ONTAP 或內部部署系統，請審查內部部署 ONTAP 系統的對等關係需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^]。
 
 
 

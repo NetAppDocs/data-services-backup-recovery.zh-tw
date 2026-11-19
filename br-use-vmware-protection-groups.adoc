@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-protection-groups.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, vmware, vm, virtual machines, workloads, volumes, snapshots 
-summary: 在NetApp Backup and Recovery中建立和管理 VMware 工作負載的保護群組。 
+summary: 建立與管理 VMware 工作負載的保護群組（包括以標籤為基礎的群組），以便在 NetApp Backup and Recovery 中一起備份與還原虛擬機器和資料存放區。 
 ---
 = 在 NetApp Backup and Recovery 中管理 VMware 保護群組
 :hardbreaks:
@@ -54,8 +54,8 @@ summary: 在NetApp Backup and Recovery中建立和管理 VMware 工作負載的�
 *所需 NetApp Console 角色* Backup and Recovery 超級管理員或 Backup and Recovery 備份管理員角色 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["了解所有服務的NetApp Console存取角色"^]。
 
 .開始之前
-* 請確保您的環境使用的是受支援的 VMware vSphere 版本。
-* 在建立以標籤為基礎的保護群組時，請確保您要保護的虛擬機器和資料存放區已經在 vCenter 中關聯了一個或多個 vSphere 標籤。
+* 確認您的環境使用支援的 VMware vSphere 版本。
+* 建立標籤型保護群組時，請確認您要保護的虛擬機器和資料存放區已在 vCenter 中與一或多個 vSphere 標籤建立關聯。
 * 對於 VMware 工作負載，排程備份時間使用管理主機的時區。如需詳細資訊，請參閱 link:br-use-policies-vmware-create.html["在 NetApp Backup and Recovery 中建立及管理 VMware 備份原則"]。
 
 
@@ -77,9 +77,9 @@ IMPORTANT: 不支援混合資源類型（例如，將標籤與相同保護群組
 . 完成後，選擇 *Next*。
 . 選擇保護群組如何處理虛擬磁碟跨越多個資料存放區的 VM：
 +
-** *始終排除所有跨距資料存放區*：保護群組將僅包含直接新增至其中的資料存放區，以及直接新增至保護群組的任何 VM 的主要資料存放區。
-** *始終包含所有跨越的資料儲存區*：保護群組將包含所包含虛擬機器跨越的所有資料儲存區。
-** *手動選擇要包含的跨區資料儲存區*：如果選擇此選項，則需要從顯示的清單中手動選擇要包含在保護群組中的跨區資料儲存區。此選擇是靜態的；每次在群組中新增 VM 時，都必須更新跨區資料儲存區清單。
+** *一律排除所有跨距資料存放區*：保護群組僅包含直接加入其中的資料存放區，以及直接加入保護群組的任何虛擬機器的主要資料存放區。
+** *一律包含所有跨越的資料存放區*：保護群組包含所含虛擬機器跨越的所有資料存放區。
+** *手動選擇要包含的跨區資料儲存區*：如果您選取此選項，請從顯示的清單中手動選取要包含在保護群組中的跨區資料儲存區。此選擇是靜態的，因此每次將新的虛擬機器新增至群組時，請更新跨區資料儲存區清單。
 
 
 . 選擇“下一步”。
@@ -117,7 +117,7 @@ IMPORTANT: 不支援混合資源類型（例如，將標籤與相同保護群組
 
 復原已暫停的保護群組將重新啟動該保護群組的計畫備份。
 
-當您暫停保護群組時，保護狀態將從「維護中」變更為當您恢復保護群組時「受保護」。您可以隨時還原備份計畫。
+當您恢復保護群組時，保護狀態會從「維護中」變更為「受保護」。您可以隨時恢復備份排程。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。
@@ -160,7 +160,7 @@ IMPORTANT: 不支援混合資源類型（例如，將標籤與相同保護群組
 排程備份使用建立保護群組排程時所記錄的 vCenter Server 時區。如果您變更 vCenter Server 時區，現有保護群組將繼續以其原始時區（通常為 UTC）執行，直到您更新其排程為止。
 
 
-NOTE: 只有在您修改保護群組名稱、新增或刪除虛擬機器、變更指派的原則或更新備份前/後腳本時，才會重新建立排程。如果未進行任何變更而直接儲存，則不會更新排程。此排程更新對於每個保護群組而言是一次性操作，不會立即啟動備份。
+NOTE: 只有當您修改保護群組名稱、新增或移除 VM、變更指派的原則或更新執行前 / 後指令碼時，才會重新建立排程。若未進行任何變更即儲存，則不會更新排程。此排程更新對每個保護群組而言是一次性行動，不會啟動立即備份。
 
 .步驟
 . 刷新 vCenter 伺服器以取得其目前時區。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-policy-manage.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 檢視、建立、編輯和刪除快照、複寫與備份至物件儲存的原則，這些原則可控制 ONTAP Volume 的備份頻率與保留。 
 ---
 = 使用NetApp Backup and Recovery管理ONTAP磁碟區的備份策略
 :hardbreaks:
@@ -19,7 +19,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
 
-使用啟動精靈為 Volume 啟用備份與還原服務時，您可以從預設原則以及系統中已有的任何其他原則（Cloud Volumes ONTAP 或內部部署 ONTAP 系統）中進行選擇。如果您想使用與現有原則不同的原則，可以在使用啟動精靈之前或期間建立該原則。
+當您使用啟動精靈為 Volume 啟用備份與還原服務時，您可以從預設原則以及系統（Cloud Volumes ONTAP 或內部部署 ONTAP 系統）中已存在的任何其他原則中進行選擇。如果您需要不同的原則，請在使用啟動精靈之前或期間建立該原則。
 
 若要了解提供的預設備份策略，請參閱link:prev-ontap-protect-journey.html["規劃您的保育之旅"]。
 
@@ -55,7 +55,7 @@ TIP: 使用系統管理員時，選擇*非同步*作為複製策略的策略類�
 +
 出現「策略管理」頁面。預設顯示快照策略。
 
-. 若要查看系統中存在的其他策略，請選擇「複製策略」或「備份策略」。如果現有策略可用於您的備份計劃，則一切就緒。如果您需要具有不同特徵的策略，您可以從此頁面建立新策略。
+. 若要檢視系統中存在的其他原則，請選擇 *複寫原則* 或 *備份原則*。如果現有的原則符合您的備份需求，您可以使用它們。如果您需要具有不同特性的原則，可以從此頁面建立新原則。
 
 
 
@@ -87,7 +87,7 @@ TIP: 使用系統管理員時，選擇*非同步*作為複製策略的策略類�
 
 . 在原則管理頁面中，選擇 *Create policy* > *Create snapshot policy*。
 . 指定策略名稱。
-. 選擇一個或多個快照計劃。您最多可以有 5 個標籤。或者，建立一個時間表。
+. 選擇快照排程或多個排程。最多可以有五個標籤。或者，建立一個排程。
 . 如果您選擇建立時間表：
 +
 .. 選擇每小時、每天、每週、每月或每年的頻率。
@@ -129,7 +129,7 @@ TIP: 使用系統管理員時，選擇*非同步*作為複製策略的策略類�
 .步驟
 . 在「原則管理」頁面中，選擇 *建立原則* > *建立複寫原則*。
 . 在「策略詳細資料」部分中，指定策略名稱。
-. 指定SnapMirror標籤（最多 5 個）以表示每個標籤的保留。
+. 指定 SnapMirror 標籤（最多五個），表示每個標籤的保留。
 . 指定傳輸時間表。
 . 選擇“*創建*”。
 
@@ -150,7 +150,7 @@ TIP: 使用系統管理員時，選擇*非同步*作為複製策略的策略類�
 .步驟
 . 在原則管理頁面中，選擇 *建立原則* > *建立備份原則*。
 . 在「策略詳細資料」部分中，指定策略名稱。
-. 指定SnapMirror標籤（最多 5 個）以表示每個標籤的保留。
+. 指定 SnapMirror 標籤（最多五個），表示每個標籤的保留。
 . 指定設置，包括傳輸計劃和何時存檔備份。
 . （可選）要在一定天數後將較舊的備份檔案移至較便宜的儲存類別或存取層，請選擇*存檔*選項並指示存檔資料之前應經過的天數。輸入 *0* 作為「存檔天數」以將備份檔案直接傳送到存檔儲存。
 +

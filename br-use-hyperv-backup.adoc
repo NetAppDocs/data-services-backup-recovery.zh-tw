@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-hyperv-backup.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp backup and recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用NetApp備份並復原保護您的 Hyper-V 工作負載。 
+summary: 透過 NetApp Backup and Recovery，使用排程原則、保護群組或隨選備份至支援的物件儲存，來備份 Hyper-V VM。 
 ---
 = 使用NetApp Backup and RecoveryHyper-V 工作負載
 :hardbreaks:

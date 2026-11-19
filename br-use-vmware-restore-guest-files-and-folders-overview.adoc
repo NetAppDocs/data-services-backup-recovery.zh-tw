@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-restore-guest-files-and-folders-overview.html 
 keywords:  
-summary: '您可以從 Windows 用戶作業系統上的虛擬機器磁碟 (VMDK) 還原檔案或資料夾。' 
+summary: 從 Windows 或 Linux 客體作業系統上的 VMDK 還原檔案或資料夾，並審查客體檔案還原的要求和限制。 
 ---
 = VMware 訪客檔案還原在 NetApp Backup and Recovery 中的要求
 :hardbreaks:

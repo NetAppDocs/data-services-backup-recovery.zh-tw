@@ -16,7 +16,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 KVM 工作負載的保�
 [role="lead"]
 建立和管理保護群組，以便您可以將相關的 KVM 虛擬機器和儲存資源池一起備份。
 
-您可以使用保護群組執行以下操作：
+您可以使用保護群組執行下列任務：
 
 * 建立保護組
 * 查看保護詳細信息
@@ -61,7 +61,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 KVM 工作負載的保�
 [[edit-a-protection-group]]
 == 編輯保護群組
 
-如果您需要在不刪除和重新建立保護群組的情況下變更保護群組的詳細資訊，請編輯保護群組。
+編輯保護群組以變更其詳細資料，而無需將其刪除並重新建立。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *Inventory*。

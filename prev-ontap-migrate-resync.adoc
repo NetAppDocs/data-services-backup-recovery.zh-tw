@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-migrate-resync.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database, migrate volumes, SnapMirror to Cloud Resync, ONTAP, NetApp, NetApp ONTAP, NetApp Cloud Volumes ONTAP, FlexVols, FlexGroups 
-summary: NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能簡化了NetApp環境中捲遷移期間的資料保護和連續性。 
+summary: 在 NetApp Backup and Recovery 中，使用 SnapMirror to Cloud Resync，在移轉 ONTAP Volume 後無需重新建立基準即可保持雲端備份可用。 
 ---
 = 在NetApp Backup and Recovery中使用SnapMirror將磁碟區遷移到 Cloud Resync
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: NetApp Backup and Recovery中的SnapMirror到雲端重新同步功能�
 [role="lead"]
 使用 NetApp Backup and Recovery 中的 SnapMirror to Cloud Resync，可在您使用 SnapMirror 邏輯複寫（LRSE）移轉 Volume 後，保持現有雲端備份可用。此功能可讓備份繼續進行而無需重新建立基準，並自 ONTAP 9.16.1 起提供。
 
-SnapMirror to Cloud Resync 支援 FlexVol® 和 FlexGroup 移轉，並協助您在混合雲和多雲環境中維持備份連續性。
+SnapMirror 至 Cloud Resync 支援 FlexVol 與 FlexGroup 移轉，並協助您在混合雲和多雲環境中保持備份連續性。
 
 
 NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-start-switch-ui.html["切換到不同的NetApp Backup and Recovery工作負載"]。
@@ -46,7 +46,7 @@ NOTE: 目前不支援使用 SVM-Migrate、SVM-DR 或 Head Swap 方法遷移後�
 
 假設您有一個名為 Vol1a 的內部部署 Volume。該 Volume 有三個快照：S1、S2 和 S3。這些快照就是還原點。Vol1a 使用 SnapMirror to Cloud （SM-C） 備份到雲端，但物件存放區中只有 S1 和 S2。
 
-現在，您想要將 Vol1 遷移到另一個ONTAP叢集。為此，您需要建立與名為 Vol1b 的新雲端磁碟區的SnapMirror邏輯複製 (LRSE) 關係。這會將所有三個快照（S1、S2 和 S3）從 Vol1a 傳輸到 Vol1b。
+現在，您想要將 Vol1a 移轉到另一個 ONTAP 叢集。為此，您建立一個 SnapMirror 邏輯複寫（LRSE）關係至名為 Vol1b 的新雲端 Volume。這會將所有三個快照（S1、S2 和 S3）從 Vol1a 傳輸到 Vol1b。
 
 遷移完成後，您將獲得以下設定：
 
@@ -123,7 +123,7 @@ NOTE: 請勿使用SnapMirror「Vault」類型的策略將磁碟區從舊的 ONTA
 . 在控制台*系統*頁面中將新的ONTAP叢集新增為系統。
 +
 
-NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例 UUID 是唯一標識符，在遷移過程中保持一致，而磁碟區 ID 可能會在遷移後發生變化。
+NOTE: 應使用 Volume 執行個體 UUID，而非 Volume ID。Volume 執行個體 UUID 是唯一識別碼，在移轉過程中保持一致，而 Volume ID 在移轉後可能會改變。
 
 
 
@@ -135,7 +135,7 @@ NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例
 遷移後， NetApp Tech Refresh 團隊執行SnapMirror到 Cloud Resync 作業，以從新遷移的磁碟區還原雲端備份。
 
 . 在控制台*系統*頁面中將新的ONTAP叢集新增為系統。
-. 查看NetApp Backup and Recovery磁碟區頁面以確保舊來源系統詳細資訊可用。
+. 查看 NetApp Backup and Recovery Volume 頁面，確認舊來源系統詳細資料是否可用。
 . 從NetApp Backup and Recovery卷頁頁面中，選擇*備份設定*。
 +
 ** 在備份設定頁面中，選擇*查看全部*。
@@ -158,7 +158,7 @@ NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例
 . 選擇“上傳卷對映詳細資料”下的“上傳”，將完成的 CSV 表上傳到NetApp Backup and RecoveryUI。
 +
 
-NOTE: 應該使用磁碟區實例 UUID，而不是磁碟區 ID。磁碟區實例 UUID 是唯一標識符，在遷移過程中保持一致，而磁碟區 ID 可能會在遷移後發生變化。
+NOTE: 應使用 Volume 執行個體 UUID，而非 Volume ID。Volume 執行個體 UUID 是唯一識別碼，在移轉過程中保持一致，而 Volume ID 在移轉後可能會改變。
 
 . 輸入重新同步操作所需的提供者和網路設定資訊。
 . 選擇*提交*開始驗證程序。

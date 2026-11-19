@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-policy-object-advanced-settings.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 在 NetApp Backup and Recovery 中變更叢集層級備份至物件設定，包括頻寬、歷史快照匯出、年度快照刪除和勒索軟體掃描。 
 ---
 = 在 NetApp Backup and Recovery 中管理備份至物件的進階設定
 :hardbreaks:
@@ -131,8 +131,8 @@ TIP: 根據雲端提供者的不同，啟用勒索軟體掃描將產生額外費
 . 在出現的頁面中，展開「*勒索軟體掃描*」部分。
 . 啟用或停用*勒索軟體掃描*。
 . 選擇*計劃勒索軟體掃描*。
-. 或者，將每週預設掃描更改為幾天或幾週。
-. 設定掃描運作的頻率（以天數或週數為單位）。
+. （可選）將預設的每週掃描變更為天數或週數。
+. 設定掃描運作的頻率，以天或週為單位。
 . 選擇*應用*。
 
 
@@ -150,8 +150,8 @@ TIP: 根據雲端提供者的不同，啟用勒索軟體掃描將產生額外費
 . 展開「勒索軟體掃描」部分。
 . 啟用或停用*勒索軟體掃描*。
 . 選擇*計劃勒索軟體掃描*。
-. 或者，將每週預設掃描更改為幾天或幾週。
-. 設定掃描運作的頻率（以天數或週數為單位）。
+. （可選）將預設的每週掃描變更為天數或週數。
+. 設定掃描運作的頻率，以天或週為單位。
 . 選擇*應用*。
 
 

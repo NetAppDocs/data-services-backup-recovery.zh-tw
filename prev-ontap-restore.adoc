@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-restore.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 您可以使用搜尋和還原功能從 ONTAP 備份檔案中還原磁碟區、資料夾或檔案。 
+summary: 比較「瀏覽與還原」與「搜尋與還原」，並選擇如何從快照、複寫的 Volume 或備份檔案中還原 ONTAP Volume、資料夾或檔案。 
 ---
 = ONTAP 資料還原選項（位於 NetApp Backup and Recovery 中）
 :hardbreaks:
@@ -26,7 +26,7 @@ NOTE: 當您還原已啟用 SnapLock 的磁碟區時，只有在目的地儲存�
 
 您需要有效的NetApp Backup and Recovery許可證才能將資料還原到生產系統。
 
-總而言之，這些是可用於將磁碟區資料還原到ONTAP系統的有效流程：
+這些流程適用於將 Volume 資料還原到 ONTAP 系統：
 
 * 備份檔案 -> 還原卷
 * 複製卷 -> 恢復卷
@@ -58,7 +58,7 @@ NOTE: NetApp Backup and Recovery必須已為至少一個系統激活，並且必
 
 一般來說，如果您需要還原過去一周或一個月內的特定 Volume、資料夾或檔案，並且知道檔案名稱、位置以及上次狀態良好的日期，則 _Browse & Restore_ 通常是更好的選擇。如果您需要還原 Volume、資料夾或檔案，但不記得確切名稱、所在 Volume 或上次狀態良好的日期，則 _Search & Restore_ 通常是更好的選擇。
 
-表格提供了兩種方法的功能比較。
+表格比較了兩種方法的功能。
 
 [cols="50,50"]
 |===
@@ -73,7 +73,7 @@ NOTE: NetApp Backup and Recovery必須已為至少一個系統激活，並且必
 
 | 支援快速恢復。 | 不支援快速恢復。 
 |===
-此表根據備份檔案所在的位置提供了有效還原作業的清單。
+此表列出您的備份檔案所位於之每個位置的有效還原作業。
 
 [cols="14h,14,14,14,14,14,14"]
 |===
@@ -91,7 +91,7 @@ NOTE: NetApp Backup and Recovery必須已為至少一個系統激活，並且必
 
 | 備份文件 | 是的 | 是的 | 是的 | 是的 | 是的 | 是的 
 |===
-在使用任何一種復原方法之前，請先配置您的環境以滿足資源需求。詳情請見以下章節。
+在使用任何一種還原方法之前，設定您的環境以滿足資源需求。
 
 請參閱要使用的還原操作類型的要求和還原步驟：
 

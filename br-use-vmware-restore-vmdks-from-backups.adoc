@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-restore-vmdks-from-backups.html 
 keywords:  
-summary: 您可以從傳統虛擬機器或 vVol 虛擬機器的主備份或輔助備份中還原現有的 VMDK 或已刪除或分離的 VMDK。 
+summary: 從傳統虛擬機器或 vVol 虛擬機器的主要或次要備份還原現有、已刪除或已分離的 VMDK。 
 ---
 = 在 NetApp Backup and Recovery 中從備份還原 VMware 虛擬磁碟
 :hardbreaks:
@@ -50,7 +50,7 @@ TIP: 為了提高 NFS 環境中復原作業的效能，請啟用 VMware 應用�
 +
 對於每個快照，*位置*列中任何亮起的圖示都表示快照可用的儲存位置（主儲存、輔助儲存或物件儲存）。
 
-. 啟用要還原的快照對應的單選按鈕。
+. 選擇要還原的快照對應的單選按鈕。
 . 選擇“下一步”。
 +
 顯示快照位置選項。

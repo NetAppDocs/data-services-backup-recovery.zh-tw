@@ -16,7 +16,7 @@ summary: 在NetApp Backup and Recovery中建立和管理 Hyper-V 工作負載的
 [role="lead"]
 建立保護群組，將相關的 Hyper-V 虛擬機器一起保護，並在 NetApp Backup and Recovery 中管理其備份作業。
 
-您可以執行與保護群組相關的以下任務：
+您可以執行下列保護群組任務：
 
 * 建立保護組。
 * 檢視保護群組詳細資料。

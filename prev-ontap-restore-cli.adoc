@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-restore-cli.html 
 keywords: CLI, ONTAP, restore, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery 
-summary: 在某些情況下，您可能需要使用 ONTAP CLI 來還原 ONTAP 資料。 
+summary: 當無法透過備份和還原 Web UI 還原時，可以使用 ONTAP CLI 從物件儲存備份中還原 ONTAP 資料。 
 ---
 = 使用 ONTAP CLI 還原 ONTAP 資料
 :hardbreaks:
@@ -19,7 +19,7 @@ summary: 在某些情況下，您可能需要使用 ONTAP CLI 來還原 ONTAP �
 .開始之前
 * 請確保您有權存取目的地叢集的 ONTAP CLI，並且您知道要還原哪個備份複本。
 * 如果要還原到不同的 ONTAP 叢集，該叢集必須已能存取相同的物件存放區。如有必要，請在還原之前在目的地叢集上設定物件存放區。
-* 請注意，如果在取消註冊系統之前建立了新的備份關係，NetApp Backup and Recovery 可能會在建立新備份後長達一小時內繼續顯示較舊的快照。在該重新整理期間，以 UI 為基礎的這些較舊快照還原可能會失敗。
+* 如果在取消註冊系統之前建立了新的備份關係，NetApp Backup and Recovery 可能會在建立新備份後長達一小時內繼續顯示較舊的快照。在該重新整理期間，以 UI 為基礎的這些較舊快照還原可能會失敗。
 
 
 .步驟

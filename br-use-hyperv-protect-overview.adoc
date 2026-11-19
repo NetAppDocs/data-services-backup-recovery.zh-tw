@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-hyperv-protect-overview.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: 您可以保護 Hyper-V 虛擬機，從本機ONTAP系統到主儲存和二級存儲，確保您的資料受到保護。 
+summary: 將內部部署 ONTAP 系統中的 Hyper-V 虛擬機器備份到主要與次要儲存設備，並還原它們以保護您的資料。 
 ---
 = 使用 NetApp Backup and Recovery 保護 Hyper-V 工作負載
 :hardbreaks:
@@ -18,16 +18,16 @@ summary: 您可以保護 Hyper-V 虛擬機，從本機ONTAP系統到主儲存和
 
 您可以將 Hyper-V 工作負載備份到 Amazon S3 或 StorageGRID，並將其還原至內部部署的 Hyper-V 主機。
 
-使用 NetApp Backup and Recovery 實作 3-2-1 保護策略，即在 2 個不同的儲存設備系統中保存 3 份來源資料複本，並在雲端保存 1 份複本。3-2-1 方法的優點包括：
+使用 NetApp Backup and Recovery 實作 3-2-1 保護策略，在兩個不同的儲存設備系統上保留三份來源資料複本，並在雲端保留一份複本。3-2-1 方法的優點包括：
 
 * 多個資料副本可防止內部和外部網路安全威脅。
-* 多種媒體類型可確保在一種媒體類型發生實體或邏輯故障時能夠進行故障轉移。
+* 如果一種媒體類型在實體或邏輯上發生故障，多種媒體類型可維持容錯移轉的可行性。
 * 本地複本可協助您快速還原資料，如果本地複本受損，您可以使用異地複本。
 
 
 當您新增 Hyper-V 主機並偵測資源時，NetApp Backup and Recovery 會在每台 Hyper-V 主機上安裝 NetApp Hyper-V 外掛和 NetApp SnapCenter Windows FileSystem 外掛，以協助管理與保護虛擬機器。
 
-您可以使用NetApp Backup and Recovery執行與 Hyper-V 工作負載相關的下列任務：
+使用 NetApp Backup and Recovery 來完成 Hyper-V 工作負載的這些任務：
 
 * link:br-start-discover-hyperv.html["發現 Hyper-V 工作負載"]
 * link:br-use-hyperv-protection-groups.html["為 Hyper-V 工作負載建立和管理保護群組"]

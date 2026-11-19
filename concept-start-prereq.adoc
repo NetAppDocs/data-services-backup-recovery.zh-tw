@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-start-prereq.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery 
-summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的準備情況來開始使用NetApp Backup and Recovery 。要使用NetApp Backup and Recovery，您需要滿足這些先決條件。 
+summary: 驗證 NetApp Console、物件儲存與工作負載需求，以便使用 NetApp Backup and Recovery 保護 ONTAP Volume、SQL Server、VMware、KVM、Oracle、Kubernetes 和 Hyper-V。 
 ---
 = NetApp Backup and Recovery 需求
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 [role="lead"]
-在開始使用 NetApp Backup and Recovery 之前、請確保您的 NetApp Console 和作業環境符合下列要求。
+驗證您的 NetApp Console 和作業環境是否符合使用 NetApp Backup and Recovery 保護 ONTAP Volume、資料庫、虛擬機器和 Kubernetes 工作負載的要求。
 
 
 
@@ -182,7 +182,7 @@ link:br-start-enable.html#enable-backup-and-recovery-in-netapp-console-local-dep
 | 備份或還原到與 S3 相容的物件儲存 | 9.17.1 或更新版本 
 
 
-| 每個系統在不同的雲端供應商之間使用超過 6 個儲存桶（最多 100 個儲存桶） | 9.19.1 或更新版本 
+| 每個系統可在不同的雲端供應商之間使用超過六個儲存桶（最多 100 個儲存桶） | 9.19.1 或更新版本 
 |===
 如需支援功能、磁碟區類型、備份與還原目的地等相關資訊，請參閱 link:prev-ontap-protect-overview.html["使用 NetApp Backup and Recovery 保護 ONTAP Volume 工作負載"]。
 
@@ -194,7 +194,7 @@ link:br-start-enable.html#enable-backup-and-recovery-in-netapp-console-local-dep
 若要將NetApp Backup and Recovery用於 Microsoft SQL Server 工作負載，您需要滿足下列主機系統、空間和大小調整前提條件。
 
 
-NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
+NOTE: 需要 ONTAP 9.19.1 或更新版本，才能支援每個系統跨不同雲端供應商使用超過 6 個儲存桶（最多 100 個儲存桶）。
 
 [cols="33,66a"]
 |===
@@ -212,7 +212,7 @@ Microsoft Windows 有關受支援版本的最新信息，請參閱 https://imt.n
 
 
 | SnapCenter伺服器版本  a| 
-如果要將現有資料從SnapCenter匯入NetApp Backup and Recovery ，則需要SnapCenter Server 5.0 或更高版本。
+需要 SnapCenter Server 5.0 版或更新版本，才能將現有資料從 SnapCenter 匯入 NetApp Backup and Recovery。
 
 
 NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯入之前已滿足先決條件。看link:concept-start-prereq-snapcenter-import.html["從SnapCenter匯入資源的先決條件"]。
@@ -227,7 +227,7 @@ NOTE: 如果您已經擁有SnapCenter，請先檢查以確保在從SnapCenter匯
 | SQL Server 主機上插件的最小安裝和日誌空間  a| 
 5GB
 
-分配足夠的磁碟空間並監控日誌資料夾的儲存消耗。所需的日誌空間取決於執行的備份次數和資料保護操作的頻率。如果沒有足夠的空間，則不會為操作建立日誌。
+分配足夠的磁碟空間並監控日誌資料夾的儲存設備使用情況。所需的日誌空間取決於執行的備份次數和資料保護作業的頻率。如果空間不足，則不會為這些作業建立日誌。
 
 
 
@@ -308,7 +308,7 @@ NOTE: 不支援保護儲存在直通磁碟或 VHD/VHDX 檔案中的資料庫，�
 
 
 | 連接的儲存設備  a| 
-* ONTAP 9.13.1 或更高版本（若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更高版本；最多可支援 100 個儲存桶）
+* ONTAP 9.13.1 或更高版本（如果要支援跨不同雲端供應商的每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更高版本；最多可支援 100 個儲存桶）
 * ASA r2 SAN 專用系統（需要 ONTAP 9.17.1 或更新版本）
 * 執行 9.13.1 或更新版本的 Amazon FSx for NetApp ONTAP 儲存系統
 * Google Cloud NetApp Volumes（ONTAP 模式和 Flex Unified 服務層級）
@@ -344,7 +344,7 @@ NOTE: 不支援保護儲存在直通磁碟或 VHD/VHDX 檔案中的資料庫，�
 您需要特定的要求來發現和保護 KVM 虛擬機器。
 
 
-NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
+NOTE: 需要 ONTAP 9.19.1 或更新版本，才能支援每個系統跨不同雲端供應商使用超過 6 個儲存桶（最多 100 個儲存桶）。
 
 * 運行核心版本 5.14.0-503.22.1.el9_5.x86_64（長期）或更高版本的現代 Linux 發行版
 * 您的 KVM 主機和虛擬機器必須由管理平台進行管理。NetApp Backup and Recovery支援以下管理平台：
@@ -389,7 +389,7 @@ chown -R qemu:qemu <kvm_vm_mount_path> & chmod 771 <kvm_vm_mount_path>
 確保您的環境符合發現和保護 Oracle Database 資源的特定要求。
 
 
-NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
+NOTE: 需要 ONTAP 9.19.1 或更新版本，才能支援每個系統跨不同雲端供應商使用超過 6 個儲存桶（最多 100 個儲存桶）。
 
 |===
 | 要求 | 支援 
@@ -459,7 +459,7 @@ NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（�
 您需要特定的要求來發現 Kubernetes 資源並保護您的 Kubernetes 應用程式。
 
 
-NOTE: 要支援跨不同雲端供應商的每個系統超過 6 個儲存桶（最多 100 個儲存桶），需要 ONTAP 9.19.1 或更新版本。
+NOTE: 需要 ONTAP 9.19.1 或更新版本，才能支援每個系統跨不同雲端供應商使用超過 6 個儲存桶（最多 100 個儲存桶）。
 
 
 NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程式指派靜態 IP 位址，以避免在代理程式 IP 位址變更時出現問題。
@@ -486,7 +486,7 @@ NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程�
 | 要求 | 支援 
 
 
-| Microsoft Hyper-V | 2019 、 2022 及 2025 版 
+| Microsoft Hyper-V | 2019年、2022年及2025年版 
 
 
 | ASP.NET Core Runtime | 10.0.10 Hosting Bundle 
@@ -522,11 +522,11 @@ NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程�
 * Hyper-V 主機上插件的最低安裝和日誌空間為 5GB
 +
 
-NOTE: 確保在 Hyper-V 主機上為日誌資料夾分配足夠的磁碟空間並定期監控其使用情況。所需空間取決於備份和資料保護操作發生的頻率。如果空間不足，則不會產生日誌。
+NOTE: 請確保在 Hyper-V 主機上為日誌資料夾分配足夠的磁碟空間，並定期監控其使用情況。所需空間取決於備份和資料保護操作的頻率。如果空間不足，則不會產生日誌。
 
 
 
 .NetApp ONTAP 組態需求
-* 主要 ONTAP 系統（ONTAP 9.14.1 或更新版本 - 若要支援跨不同雲端供應商每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本；最多 100 個儲存桶）
+* 主要 ONTAP 系統（ONTAP 9.14.1 或更新版本 - 若要支援跨不同雲端供應商的每個系統超過 6 個儲存桶，則需要 ONTAP 9.19.1 或更新版本；最多 100 個儲存桶）
 * 對於使用 SMB 共用儲存虛擬機器資料的 Hyper-V 部署，請確保在 ONTAP 系統上啟用持續可用性共用屬性。請參閱 https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/configure-shares-continuous-availability-task.html["ONTAP 文檔"^]以取得相關說明。
 

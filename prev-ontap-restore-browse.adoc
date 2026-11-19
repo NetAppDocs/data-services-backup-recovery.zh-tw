@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-restore-browse.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery，透過瀏覽和還原來還原 ONTAP 資料。 
+summary: 使用 NetApp Backup and Recovery 中的「瀏覽與還原」，從快照、複寫的 Volume 或物件儲存備份中還原 ONTAP Volume、資料夾和檔案。 
 ---
 = 使用 NetApp Backup and Recovery 中的「瀏覽與還原」功能還原 ONTAP 資料
 :hardbreaks:
@@ -121,7 +121,7 @@ NOTE: 從 Azure 歸檔儲存設備還原資料到 StorageGRID 系統時，不支
 * 對於 ONTAP S3，Console 代理程式可以部署在本機（無論是否具有網際網路存取）或雲端供應商環境中。
 
 
-請注意，「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
+「本地部署的 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
 
 
 NOTE: 如果您系統上的ONTAP版本低於 9.13.1，且備份檔案已配置 DataLock 和勒索軟體，則您無法還原資料夾或檔案。在這種情況下，您可以從備份檔案還原整個卷，然後存取所需的檔案。
@@ -157,7 +157,7 @@ image:diagram_browse_restore_volume.png["此圖顯示了使用瀏覽和還原執
 
 . 選擇“下一步”。
 +
-請注意，如果您選擇物件儲存中的備份檔案，且該備份已啟用勒索軟體保護（如果您在備份原則中啟用了 DataLock 和勒索軟體保護），則在還原資料之前，系統會提示您對該備份檔案執行額外的勒索軟體掃描。我們建議您掃描該備份檔案是否含有勒索軟體。（存取備份檔案的內容會產生額外的雲端供應商出站流量費用。）
+如果您選擇物件儲存中的備份檔案，且該備份的勒索軟體保護為作用中（如果您在備份原則中啟用了 DataLock 和勒索軟體保護），系統會提示您在還原資料之前對該備份檔案執行額外的勒索軟體掃描。我們建議您掃描該備份檔案是否有勒索軟體。（存取備份檔案的內容會產生來自雲端供應商的額外輸出費用。）
 
 . 在「選擇目標」頁面中，選擇要恢復磁碟區的*系統*。
 . 從物件儲存還原備份檔案時，如果您選擇本機ONTAP系統且尚未配置與物件儲存的叢集連接，系統將提示您輸入其他資訊：
@@ -195,7 +195,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 .結果
 NetApp Backup and Recovery根據您選擇的備份建立一個新磁碟區。
 
-請注意，從駐留在檔案儲存中的備份檔案還原磁碟區可能需要幾分鐘或幾小時，具體取決於檔案層和復原優先權。您可以選擇「作業監控」標籤來查看恢復進度。
+從位於歸檔儲存設備中的備份檔案還原 Volume 可能需要數分鐘或數小時，具體取決於歸檔分層和還原優先權。您可以選擇 *作業監控* 標籤來查看還原進度。
 
 
 

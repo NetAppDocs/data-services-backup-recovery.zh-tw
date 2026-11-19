@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-reference-gcp-archive-storage-tiers.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery支援一個 Google 歸檔儲存類別和大多數區域。 
+summary: 審查 NetApp Backup and Recovery 支援的 Google Cloud Storage 歸檔分層，並了解歸檔備份的還原成本和擷取時間。 
 ---
 = NetApp Backup and Recovery支援 Google 歸檔儲存層
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery支援一個 Google 歸檔儲存類別和大�
 
 
 [role="lead"]
-利用這些資訊，您可以了解 NetApp Backup and Recovery 支援的 Google Cloud Storage 歸檔層。您也可以審查已歸檔備份的還原成本和擷取時間。
+NetApp Backup and Recovery 支援 Google Cloud Storage 歸檔分層，用於較舊的備份。了解此分層中備份的還原成本和擷取時間。
 
 
 
@@ -23,9 +23,9 @@ summary: NetApp Backup and Recovery支援一個 Google 歸檔儲存類別和大�
 
 備份檔案最初建立時，會儲存在 _Standard_ 儲存設備中。此分層針對儲存不經常存取的資料進行最佳化，但仍允許立即存取。
 
-如果您的本地叢集使用 ONTAP 9.12.1 或更高版本，您可以在 NetApp Backup and Recovery 使用者介面中選擇在特定天數後（通常超過 30 天）將較舊的備份分層至_歸檔_儲存設備，以進一步最佳化成本。此分層中的資料需要較高的擷取成本，因此您需要考慮從這些歸檔備份檔案還原資料的頻率。請參閱本頁關於從歸檔儲存設備還原資料的部分。
+如果您的內部部署叢集使用 ONTAP 9.12.1 或更新版本，您可以在特定天數（通常超過 30 天）之後，於 NetApp Backup and Recovery 使用者介面中將較舊的備份分層至「歸檔」儲存設備，以進一步最佳化成本。此分層中的資料擷取成本較高，因此請考慮您可能需要從這些歸檔備份檔案還原資料的頻率。請參閱本頁關於從歸檔儲存設備還原資料的部分。
 
-請注意，當您使用此類生命週期規則配置NetApp Backup and Recovery時，在 Google 帳戶中設定儲存桶時不得配置任何生命週期規則。
+當您使用這種生命週期規則設定 NetApp Backup and Recovery 時，在您的 Google 帳戶中設定儲存桶時，請勿設定任何生命週期規則。
 
 https://cloud.google.com/storage/docs/storage-classes["了解 Google 儲存類別"^]。
 
@@ -34,14 +34,14 @@ https://cloud.google.com/storage/docs/storage-classes["了解 Google 儲存類�
 [[restore-data-from-archival-storage]]
 == 從檔案儲存中復原數據
 
-雖然將較舊的備份檔案儲存在存檔儲存中比標準儲存便宜得多，但從存檔儲存中的備份檔案中存取資料進行復原作業將花費更長的時間並且花費更多。
+將較舊的備份檔案儲存在歸檔儲存設備中比儲存在標準儲存設備中便宜得多。但是，從歸檔儲存設備中的備份檔案還原資料需要更長的時間，而且成本更高。
 
 從 Google Archive 恢復資料需要多少錢？:: 若要了解按地區劃分的 Google Cloud Storage 詳細定價，請造訪 https://cloud.google.com/storage/pricing["Google Cloud Storage 定價頁面"^]。
-要恢復我在 Google Archive 中存檔的物件需要多長時間？:: 總還原時間由兩部分組成：
+要恢復我在 Google Archive 中存檔的物件需要多長時間？:: 總還原時間分為兩部分：
 +
 --
 * *檢索時間*：從存檔中檢索備份檔案並將其放置在標準儲存中的時間。這有時被稱為“補水”時間。與其他雲端供應商提供的「最冷」儲存解決方案不同，您的資料可以在幾毫秒內存取。
-* *恢復時間*：從標準儲存中的備份檔案還原資料的時間。這次與不使用存檔層時直接從標準儲存進行的典型復原作業沒有什麼不同。
+* *還原時間*：從標準儲存設備中的備份檔案還原資料所需的時間。此時間與不使用歸檔分層時直接從標準儲存設備還原的典型時間相同。
 
 
 --

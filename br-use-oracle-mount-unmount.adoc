@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-oracle-mount-unmount.html 
 keywords: restore, vm, oracle, databases, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 Oracle Database 工作負載。 
+summary: 掛載、取下與目錄 Oracle Database 恢復點，以檢視資料庫變更歷史記錄，並在 RMAN 恢復目錄中保留備份中繼資料。 
 ---
-= 使用 NetApp Backup and Recovery 掛載、卸載和編目 Oracle Database 還原點
+= 使用 NetApp Backup and Recovery 管理 Oracle 資料庫恢復點
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

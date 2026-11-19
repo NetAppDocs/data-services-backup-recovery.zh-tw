@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-discover-no-activate.html 
 keywords: activate, backup and recovery, volumes, back up, discover 
-summary: 無需啟動 NetApp Backup and Recovery 即可探索系統和 Volume。 
+summary: 無需啟動 NetApp Backup and Recovery 即可探索 ONTAP 系統與 Volume，以便您在保護 Volume 之前對其進行審查。 
 ---
 = 無需啟動 NetApp Backup and Recovery 即可探索 ONTAP 系統和 Volume
 :hardbreaks:

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-gcp.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 使用 NetApp Backup and Recovery 將內部部署 ONTAP Volume 資料備份至 Google Cloud Storage，包括準備 Console 代理程式、ONTAP 叢集和儲存桶權限。 
 ---
-= 使用NetApp Backup and Recovery將本地ONTAP資料備份到 Google Cloud Storage
+= 使用 NetApp Backup and Recovery 將內部部署 ONTAP 資料備份至 Google Cloud
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-在 NetApp 備份與還原中，您可以將內部部署 ONTAP 系統的 Volume 資料備份至次要儲存設備和 Google Cloud Storage。請使用此頁面準備您的環境並啟動備份。
+使用 NetApp Backup and Recovery 將 Volume 資料從內部部署 ONTAP 系統備份至 Google Cloud Storage 和次要儲存設備系統。準備您的環境，然後啟動備份。
 
 
 NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
@@ -33,7 +33,7 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 * *私人連接* - 使用 VPN 或 Google Cloud Interconnect 並透過使用私人 IP 位址的私人 Google Access 介面路由流量。
 
 
-或者，您也可以使用公用或私有連線連線到用於複製磁碟區的輔助ONTAP系統。
+您也可以使用公用或私有連線來連線至二線 ONTAP 系統，以供複寫的 Volume 使用。
 
 下圖顯示了*公共連接*方法以及您需要在組件之間準備的連接。控制台代理程式必須部署在 Google Cloud Platform VPC 中。
 
@@ -57,7 +57,7 @@ image:diagram_cloud_backup_onprem_gcp_private.png["此圖表展示了NetApp Back
 
 如果您已經在 Google Cloud Platform VPC 中部署了控制台代理，那麼一切就緒了。
 
-如果沒有，那麼您需要在該位置建立一個控制台代理，以將ONTAP資料備份到 Google Cloud Storage。您不能使用部署在其他雲端提供者或本機的控制台代理程式。
+如果沒有，請在該位置建立主控台代理程式，以將 ONTAP 資料備份到 Google Cloud Storage。您無法使用部署在其他雲端供應商或內部部署的主控台代理程式。
 
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解控制台代理"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["在 GCP 中安裝控制台代理"^]
@@ -92,7 +92,7 @@ image:diagram_cloud_backup_onprem_gcp_private.png["此圖表展示了NetApp Back
 
 .步驟
 . 在 https://console.cloud.google.com["Google 雲端控制台"^]，轉到*角色*頁面。
-. 使用頁面頂部的下拉列表，選擇包含要編輯的角色的項目或組織。
+. 從頁面頂部的下拉清單中，選擇包含您要編輯的角色的專案或組織。
 . 選擇自訂角色。
 . 選擇*編輯角色*來更新角色的權限。
 . 選擇*新增權限*為角色新增下列新權限。
@@ -192,19 +192,19 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 * ONTAP叢集透過連接埠 443 啟動從叢集間 LIF 到 Google Cloud Storage 的 HTTPS 連接，以進行備份和還原作業。
 +
-ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是響應。
+ONTAP 從物件儲存讀取和寫入資料。物件儲存從不主動發起連線。它只負責回應。
 
 * ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。控制台代理可以駐留在 Google Cloud Platform VPC 中。
 * 每個託管要備份的磁碟區的ONTAP節點上都需要一個叢集間 LIF。  LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有關 IP 空間的更多信息"^] 。
 +
 當您設定NetApp Backup and Recovery時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
 
-* 節點的叢集間 LIF 能夠存取物件儲存。
+* 節點的叢集間 LIF 可以存取物件存放區。
 * 已為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["為 SVM 配置 DNS 服務"^]。
 +
 如果您使用的是 Private Google Access 或 Private Service Connect，請確保您的 DNS 伺服器已設定為指向 `storage.googleapis.com`到正確的內部（私有）IP 位址。
 
-* 請注意、如果您使用的 IPspace 與 Default 不同、則可能需要建立靜態路由才能存取物件儲存設備。
+* 如果您使用 Default 以外的 IPspace，您可能需要建立靜態路由以存取物件儲存。
 * 如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery透過連接埠 443 從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
 
 
@@ -222,7 +222,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 * 如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
 * ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
 +
-由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。
+由於您可以複寫到 Cloud Volumes ONTAP 或內部部署系統，請審查內部部署 ONTAP 系統的對等關係需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^]。
 
 
 
@@ -329,8 +329,8 @@ cloudkms.keyRings.setIamPolicy
 *CMEK 注意事項：*
 
 * 支援 HSM（硬體支援）和軟體產生的金鑰。
-* 支援新建立或匯入的 Cloud KMS 金鑰。
-* 僅支援區域密鑰，不支援全域密鑰。
+* 支援新建立與匯入的 Cloud KMS 金鑰。
+* 僅支援區域金鑰。不支援全域金鑰。
 * 目前僅支援“對稱加密/解密”目的。
 * NetApp Backup and Recovery為與儲存帳戶關聯的服務代理程式指派了「CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)」IAM 角色。
 

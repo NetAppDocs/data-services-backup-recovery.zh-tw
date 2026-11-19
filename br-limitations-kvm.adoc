@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-limitations-kvm.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, KVM, SAP HANA database, virtual machine, vm 
-summary: 此版本的NetApp Backup and Recovery具有以下已知限制。 
+summary: 審查 KVM 工作負載在 NetApp Backup and Recovery 中不支援的動作、不支援的組態，以及疑難排解注意事項。 
 ---
 = NetApp Backup and Recovery針對 KVM 工作負載的已知限制
 :hardbreaks:

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-discover-kubernetes.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Kubernetes 
-summary: NetApp Backup and Recovery需要先發現工作負載，以便您使用該服務。 
+summary: 在 NetApp Backup and Recovery 中探索 Kubernetes 叢集和工作負載，包括實體隔離叢集，以便您可以使用原則保護應用程式。 
 ---
 = 探索NetApp Backup and Recovery中的 Kubernetes 工作負載
 :hardbreaks:
@@ -27,7 +27,7 @@ summary: NetApp Backup and Recovery需要先發現工作負載，以便您使用
 
 [NOTE]
 ====
-當您探索目前受 Trident Protect 保護的叢集時，由於 Trident Protect 備份排程與備份與還原不相容，因此在探索過程中，所有與 Trident Protect 搭配使用的備份排程都會停用。若要保護叢集的應用程式，link:br-use-policies-create.html["建立新的保護原則"]或將應用程式與現有原則建立關聯。您可以視需要移除 Trident Protect 備份排程。
+當您探索目前受 Trident Protect 保護的叢集時，在探索過程中，任何與 Trident Protect 搭配使用的備份排程都會被停用，因為 Trident Protect 備份排程與備份與還原不相容。若要保護叢集的應用程式，link:br-use-policies-create.html["建立新的保護原則"] 或將應用程式與現有原則建立關聯。然後，您可以視需要移除 Trident Protect 備份排程。
 
 ====
 .步驟
@@ -74,7 +74,7 @@ https://docs.netapp.com/us-en/console-setup-admin/concept-identity-and-access-ma
 ... 輸入您的私人 Docker Container 登錄的 URL。安裝過程中，將使用此登錄下載 Trident Protect 和 Trident Protect Connector "映像"。
 ... 如果您的私有 Container 登錄需要驗證，請使用下列其中一種方法來設定登錄認證：
 +
-**** *節點層級驗證*：在每個節點的 Container 執行階段中設定登錄憑證。設定完成後，所有 Pod 均可提取"映像"，無需額外的 Helm 設定。
+**** *節點層級驗證*：在每個節點的 Container 執行階段中設定登錄檔憑證。設定後，所有 Pod 無需額外的 Helm 設定即可拉取映像。
 **** *Kubernetes image pull secret*：在 `trident-protect`命名空間中建立 Kubernetes image pull secret，然後在 Trident Protect 安裝說明中的 Helm 升級步驟中引用它：
 +
 [source, console]

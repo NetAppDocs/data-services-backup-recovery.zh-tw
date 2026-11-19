@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-restart-backup.html 
 keywords: backup restart, restart backup 
-summary: 在某些情況下，您可能需要重新啟動NetApp Backup and Recovery。 
+summary: 使用適用於您部署類型的 Docker 或 Podman 命令，從主控台代理程式主機重新啟動 NetApp Backup and Recovery。 
 ---
 = 重新啟動NetApp Backup and Recovery
 :hardbreaks:

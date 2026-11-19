@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-restore-kubernetes-files-folders.html 
 keywords: backing up, restoring, back up, backup, file, folder, files and folders, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery 
-summary: NetApp Backup and Recovery 可讓您還原和下載從基於 VM 的應用程式備份的檔案和資料夾。 
+summary: 在 NetApp Backup and Recovery 中，從以 VM 為基礎的 Kubernetes 應用程式還原點還原或下載檔案和資料夾。 
 ---
 = 使用 NetApp Backup and Recovery 還原或下載基於虛擬機器的應用程式檔案和資料夾
 :hardbreaks:

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-api-backup-restore.html 
 keywords: api, apis, rest, restful, authorization, getting started, body, header, token, reference, expired token, expires, expired, token expired, list apis 
-summary: 可透過 Web UI 使用的NetApp Backup and Recovery功能也可透過 RESTful API 使用。 
+summary: 使用 NetApp Backup and Recovery REST API 可自動化備份與恢復任務，取得所需的權杖和 ID，並監控作業。 
 ---
 = 利用 REST API 自動化 NetApp Backup and Recovery
 :hardbreaks:
@@ -117,10 +117,10 @@ Header:
 [[example-using-the-apis]]
 == 使用 API 的範例
 
-以下範例展示了一個 API 呼叫，該呼叫使用新原則在系統上啟動 NetApp Backup and Recovery。該原則包含每日、每小時和每週標籤，並在 East US 2 Azure 區域中，於 180 天後進行歸檔。此請求啟用系統上的備份，但不會備份任何 Volume。
+此範例 API 呼叫會在具有新原則的系統上啟動 NetApp Backup and Recovery。該原則具有每日、每小時和每週標籤，並在 180 天後於 Azure 美國東部 2 區域進行歸檔。此要求會在系統上啟用備份，但不會備份任何磁碟區。
 
 .API 請求
-您會看到我們使用NetApp Console帳號 ID `account-DpTFcxN3` 、控制台代理 ID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients`和用戶令牌 `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g`在此命令中。
+此範例使用 NetApp Console 帳戶 ID `account-DpTFcxN3`、Console 代理程式 ID `iZwFFeVCZjWnzGlw8RgD0QQNANZvpP7Iclients` 和使用者權杖 `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rSXlPVFUzUWpZek1E…y6nyhBjwkeMwHc4ValobjUmju2x0xUH48g`。
 
 [source, shell]
 ----

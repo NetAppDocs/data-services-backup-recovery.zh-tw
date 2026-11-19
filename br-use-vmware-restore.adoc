@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-restore.html 
 keywords: restore, vmware, vm, virtual machine, snapshots, object storage, cloud storage, backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 將 VMware 虛擬機器從本機快照、次要儲存設備或物件儲存備份還原到原始位置或備用位置。 
 ---
 = 使用NetApp Backup and RecoveryVMware 工作負載
 :hardbreaks:
@@ -27,7 +27,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 .恢復到這些點
 您可以將資料還原到以下點：
 
-* *恢復到原始位置*：虛擬機器將恢復到原始位置，即相同的 vCenter 部署、ESXi 主機和資料儲存。虛擬機器及其所有資料均被覆蓋。
+* *還原至原始位置*：還原會將虛擬機器還原至相同的 vCenter 部署、ESXi 主機和資料存放區，並覆寫虛擬機器及其所有資料。
 * *恢復到備用位置*：您可以選擇不同的 vCenter、ESXi 主機或資料儲存作為虛擬機器的復原目標。這對於管理位於不同位置和狀態的相同虛擬機器的不同副本非常有用。
 
 
@@ -42,7 +42,7 @@ TIP: 您可能需要向雲端提供者支付額外費用才能存取備份檔案
 [[how-vmware-workload-restore-works]]
 == VMware 工作負載還原的運作方式
 
-恢復工作負載時，會發生以下情況：
+還原行為取決於還原來源：
 
 * 當您從本機快照或遠端備份還原工作負載時，如果您還原到原始位置， NetApp Backup and Recovery會覆寫原始虛擬機器；如果您還原到備用位置，則會建立新的資源。
 * 從複製的工作負載復原時，您可以將工作負載還原到原始的本機ONTAP系統，也可以還原到不同的本機ONTAP系統。
@@ -68,7 +68,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 +
 將顯示符合您搜尋條件的虛擬機器清單。
 
-. 在清單中找到要從中復原的虛擬機，然後選擇該虛擬機的選項選單按鈕。
+. 在清單中找到您要還原的 VM，然後選取該 VM 的選項選單按鈕。
 . 在出現的選單中，選擇“恢復虛擬機器”。
 +
 顯示在該虛擬機器上建立的快照（還原點）清單。預設情況下，會顯示您在「時間範圍」下拉式選單中選擇的時間範圍內的最新快照。
@@ -76,7 +76,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 +
 對於每個快照，*位置*列中任何亮起的圖示都表示快照可用的儲存位置（主儲存、輔助儲存或物件儲存）。
 
-. 啟用要還原的快照對應的單選按鈕。
+. 選擇要還原的快照對應的單選按鈕。
 . 選擇“下一步”。
 +
 顯示快照位置選項。

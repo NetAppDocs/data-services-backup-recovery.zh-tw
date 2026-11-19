@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-restore-search.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 您可以使用搜尋和還原功能從 ONTAP 備份檔案中還原磁碟區、資料夾或檔案。 
+summary: 當您不知道確切的系統、Volume 或檔案名稱時，可以在 NetApp Backup and Recovery 中從 ONTAP 備份搜尋並還原 Volume、資料夾或檔案。 
 ---
 = 使用 NetApp Backup and Recovery 中的搜尋和還原功能來還原 ONTAP 資料
 :hardbreaks:
@@ -46,7 +46,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 
 
 ====
-在開始之前，您應該對要還原的 Volume 或檔案的名稱或位置有所了解。
+在開始之前，請至少知道要還原的 Volume 或檔案的部分名稱或位置。
 
 
 
@@ -88,7 +88,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 * 對於 ONTAP S3，Console 代理程式可以部署在本機（無論是否具有網際網路存取）或雲端供應商環境中。
 
 
-請注意，「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
+「本地部署的 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。
 
 
 
@@ -120,7 +120,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 +
 ** 必須將特定的 Amazon Athena、AWS Glue 和 AWS S3 權限新增至為控制台提供權限的使用者角色。link:prev-ontap-backup-onprem-aws.html["確保所有權限均已正確配置"]。
 +
-請注意，如果您已經使用過去設定的控制台代理程式來使用NetApp Backup and Recovery ，則現在需要將 Athena 和 Glue 權限新增至控制台使用者角色。它們是搜尋和恢復所必需的。
+如果您之前已經透過您所設定的主控台代理程式來使用 NetApp Backup and Recovery，現在您需要將 Athena 和 Glue 權限新增至主控台使用者角色。它們是搜尋與還原所必需的。
 
 
 
@@ -129,7 +129,7 @@ link:prev-reference-aws-archive-storage-tiers.html["了解有關從 AWS 檔案�
 ** 您必須將 Azure Synapse Analytics 資源供應商（名為「Microsoft.Synapse」）註冊到您的訂閱中 https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider["了解如何為您的訂閱註冊此資源提供程序"^]。您必須是訂閱的*擁有者*或*參與者*才能註冊資源供應商。
 ** 必須將特定的 Azure Synapse Workspace 和 Data Lake Storage 帳戶權限新增至為控制台提供權限的使用者角色。link:prev-ontap-backup-onprem-azure.html["確保所有權限均已正確配置"]。
 +
-請注意，如果您已經使用NetApp Backup and Recovery以及過去配置的控制台代理，則現在需要將 Azure Synapse Workspace 和 Data Lake Storage 帳戶權限新增至控制台使用者角色。它們是搜尋和恢復所必需的。
+如果您先前已將 NetApp Backup and Recovery 與過去設定的 Console 代理程式搭配使用，現在需要將 Azure Synapse Workspace 和 Data Lake Storage 帳戶權限新增至 Console 使用者角色。這些是搜尋與還原所需的權限。
 
 ** 控制台代理必須配置為*不帶*代理伺服器才能與網際網路進行 HTTP 通訊。如果您已為控制台代理程式設定了 HTTP 代理伺服器，則無法使用搜尋和還原功能。
 
@@ -282,7 +282,7 @@ mount 10.192.24.17:/CATALOG_SCALE_234 /opt/application/netapp/cbs
 . 尋找包含您要復原的資料的資源，然後選擇「檢視所有備份」以顯示包含符合磁碟區、資料夾或檔案的所有備份檔案。
 . 找到您想要用於還原資料的備份檔案並選擇*復原*。
 +
-請注意，搜尋結果會顯示包含您搜尋檔案的本機 Volume 快照和遠端複製 Volume。您可以選擇從雲端備份檔案、快照或複製 Volume 還原。
+搜尋結果會識別出包含您所搜尋檔案的本機 Volume 快照和遠端複寫的 Volume。您可以選擇從雲端備份檔案、快照或複寫的 Volume 進行還原。
 
 . 選擇要還原磁碟區、資料夾或檔案的目標位置，然後選擇*復原*。
 +

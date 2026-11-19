@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-reference-azure-archive-storage-tiers.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery支援一個 Azure 存檔存取層和大多數區域。 
+summary: 審查 NetApp Backup and Recovery 支援的 Azure 歸檔存取分層，以及歸檔備份的還原成本和擷取時間。 
 ---
 = NetApp Backup and Recovery支援的 Azure 存檔存取層
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Backup and Recovery支援一個 Azure 存檔存取層和大多�
 
 
 [role="lead"]
-利用這些資訊，您可以了解 NetApp Backup and Recovery 支援的 Azure 歸檔層。您也可以審查已歸檔備份的還原成本和擷取時間。
+NetApp Backup and Recovery 支援 Azure 存檔存取分層，可用於對較舊的備份進行分層，從而降低儲存設備成本。存檔備份的還原成本更高，所需時間也更長，因此在對備份進行分層之前，請審查還原成本和擷取時間。
 
 
 
@@ -23,9 +23,9 @@ summary: NetApp Backup and Recovery支援一個 Azure 存檔存取層和大多�
 
 備份檔案最初建立時，會儲存在「冷存取分層」。該分層針對儲存不經常存取的資料進行了最佳化，但需要時可以立即存取。
 
-如果您的來源叢集運行的是ONTAP 9.10.1 或更高版本，您可以選擇在一定天數（通常超過 30 天）後將備份從「Cool_」儲存分層到「Azure Archive_」存儲，以進一步最佳化成本。此層中的資料在需要時無法立即訪問，並且需要更高的檢索成本，因此您需要考慮可能需要多久從這些存檔的備份檔案中恢復資料。請參閱此頁面上有關從檔案儲存復原資料的部分。
+如果您的來源叢集執行的是 ONTAP 9.10.1 或更高版本，您可以選擇在特定天數（通常超過 30 天）後將備份從 _Cool_ 分層到 _Azure Archive_ 儲存設備，以進一步最佳化成本。此分層中的資料無法在需要時立即存取，並且需要較高的擷取成本，因此您需要考慮從這些歸檔備份檔案中還原資料的頻率。請參閱此頁面上有關從歸檔儲存設備還原資料的區段。
 
-請注意，當您使用此類生命週期規則來設定NetApp Backup and Recovery時，在 Azure 帳戶中設定容器時不得設定任何生命週期規則。
+當您使用這種類型的生命週期規則設定 NetApp Backup and Recovery 時，在您的 Azure 帳戶中設定 Container 時，請勿設定任何生命週期規則。
 
 https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["了解 Azure Blob 存取層"^]。
 
@@ -34,7 +34,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["了�
 [[restore-data-from-archival-storage]]
 == 從檔案儲存中復原數據
 
-雖然將較舊的備份檔案儲存在檔案儲存中比冷儲存便宜得多，但從 Azure 檔案中的備份檔案存取資料進行還原作業將花費更長的時間並且花費更多。
+雖然將較舊的備份檔案儲存在歸檔儲存設備中比儲存在冷儲存設備中便宜得多，但從 Azure 歸檔中的備份檔案存取資料以進行還原作業需要更長時間且成本更高。
 
 從 Azure 存檔復原資料需要多少費用？:: 從 Azure 檔案擷取資料時，可以選擇兩個還原優先權：
 +
@@ -51,7 +51,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["了�
 
 NOTE: 從 Azure 還原資料到 StorageGRID 系統時，不支援高優先權。
 
-恢復 Azure 存檔中存檔的資料需要多長時間？:: 恢復時間由兩部分組成：
+恢復 Azure 存檔中存檔的資料需要多長時間？:: 還原時間由兩部分組成：
 +
 --
 * *檢索時間*：從 Azure 檔案中擷取已存檔的備份檔案並將其放置在冷儲存中的時間。這有時被稱為“補水”時間。檢索時間根據您選擇的復原優先順序而不同：

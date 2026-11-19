@@ -14,7 +14,7 @@ IMPORTANT: 在進行任何變更之前，請檢查現有的 CoreDNS 組態和現
 
 
 .步驟
-. 檢查現有的 CoreDNS 組態，確保您沒有置換現有的變更：
+. 檢查現有的 CoreDNS 組態，以確認您沒有覆寫現有的變更：
 +
 [source, shell]
 ----

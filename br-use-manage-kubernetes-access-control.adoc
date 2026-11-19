@@ -4,7 +4,7 @@ permalink: br-use-manage-kubernetes-access-control.html
 keywords: backup, back up, restore, recovery, kubernetes, k8s, access control, rbac, iam, folder, project 
 summary: 透過使用 NetApp Console 資料夾、專案和角色，管理對 NetApp Backup and Recovery 中 Kubernetes 資源的存取。 
 ---
-= 管理 Kubernetes 資源存取
+= 在 NetApp Backup and Recovery 中管理對 Kubernetes 資源的存取
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

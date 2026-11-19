@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-protect-kubernetes-applications.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, snapcenter 
-summary: NetApp Backup and Recovery讓您能夠管理工作負載主機資訊、資料庫資訊和執行個體資訊。您可以查看、編輯和刪除庫存的保護設定。 
+summary: 使用 Web UI 或自訂資源檔案，將以命名空間或 VM 為基礎的 Kubernetes 應用程式新增至 NetApp Backup and Recovery 以進行保護。 
 ---
 = 在 NetApp Backup and Recovery 中新增和保護 Kubernetes 應用程式
 :hardbreaks:
@@ -39,7 +39,7 @@ NOTE: 如果您的應用程式使用以 Qtree 進行分割的 FlexVol Volume，�
 --
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory*。
-. 在頁面右上角，確保工作負載清單中已選擇 *Kubernetes*。
+. 在頁面右上角，確認工作負載清單中已選擇 *Kubernetes*。
 . 選取工作負載行項目的 *View* 以檢視 Kubernetes 資源。
 . 選擇“*應用程式*”標籤。
 . 選擇*建立應用程式*。
@@ -78,7 +78,7 @@ NOTE: Backup and Recovery 不會儲存搜尋參數或結果；這些參數用於
 --
 .步驟
 . 在NetApp Backup and Recovery中，選擇 *Inventory*。
-. 在頁面右上角，確保工作負載清單中已選擇 *Kubernetes*。
+. 在頁面右上角，確認工作負載清單中已選擇 *Kubernetes*。
 . 選取工作負載行項目的 *View* 以檢視 Kubernetes 資源。
 . 選擇“*應用程式*”標籤。
 . 選擇*建立應用程式*。

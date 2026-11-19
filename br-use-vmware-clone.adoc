@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-clone.html 
 keywords: clone, clone application data, NetApp backup and recovery, VMware 
-summary: 使用 NetApp Backup and Recovery 複製您的 VMware 虛擬機器工作負載。 
+summary: 使用 NetApp Backup and Recovery 從主要或次要快照建立、分割及移除 VMware 虛擬機器的可寫入的 Clone。 
 ---
 = 使用 NetApp Backup and Recovery 複製 VMware 工作負載
 :hardbreaks:
@@ -61,7 +61,7 @@ NOTE: 建立 VM 複製後，您必須更新複製虛擬機器的 IP 位址，以
 [[split-a-clone]]
 == 分裂克隆
 
-您可以拆分 VMware VM 的複本，使其與父磁碟區分離。拆分後，複本將成為獨立的磁碟區，不再依賴父磁碟區。
+您可以分割 VMware 虛擬機器的 Clone，使其與父 Volume 分離。分割後，Clone 將成為一個獨立的 Volume，不再依賴父。
 
 拆分後，與複製虛擬機器關聯的資料儲存區將成為一個新的、獨立的資料儲存區。複製虛擬機器本身則被保留。
 

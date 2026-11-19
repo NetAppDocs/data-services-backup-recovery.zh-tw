@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-audit-actions.html 
 keywords: audit, audit actions, NetApp Console, Backup and Recovery, audit log 
-summary: 由 NetApp Console 稽核所支援的備份與還原動作參考。 
+summary: 查看哪些 NetApp Backup and Recovery 動作被 NetApp Console 記錄以進行稽核，包括還原、備份、複寫、Cyber Vault 和認證資料管理。 
 ---
 = 已審核的 NetApp Backup and Recovery 動作
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 由 NetApp Console 稽核所支援的備份與還原動作參考。
 
 
 [role="lead"]
-使用此參考資訊可查看 NetApp Console 在「稽核」頁面上記錄的 NetApp Backup and Recovery 行動。有關查看和篩選稽核事件的詳細資訊，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["從「稽核」頁面稽核使用者活動"^]（位於 NetApp Console 文件中）。
+查看 NetApp Console 在「稽核」頁面上記錄了哪些 NetApp Backup and Recovery 動作。如需檢視與篩選稽核事件的詳細資訊，請參閱 NetApp Console 文件中的 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-audit-page["從「稽核」頁面稽核使用者活動"^]。
 
 對於每個已稽核的行動，NetApp Console 會記錄服務名稱、代理程式、資源、使用者和行動狀態。
 

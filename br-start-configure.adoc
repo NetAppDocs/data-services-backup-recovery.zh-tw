@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-start-configure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 完成幾個步驟來設定NetApp Backup and Recovery。 
+summary: 新增主機憑證、維護 VMware vCenter 設定、匯入 SnapCenter 資源、新增 KVM 管理平台，並在 NetApp Backup and Recovery 中建立範本。 
 ---
 = 配置NetApp Backup and Recovery設置
 :hardbreaks:
@@ -55,7 +55,7 @@ summary: 完成幾個步驟來設定NetApp Backup and Recovery。
 ** *驗證模式*：選擇 *Windows*、*Microsoft SQL*、*Oracle Database* 或 *Linux*。
 +
 
-TIP: 對於 Microsoft SQL Server 工作負載，您必須輸入 Windows 和 Microsoft SQL Server 的憑證，需要兩組憑證。
+TIP: 對於 Microsoft SQL Server 工作負載，您必須輸入兩組憑證：一組用於 Windows，一組用於 Microsoft SQL Server。
 
 +
 [role="tabbed-block"]
@@ -182,7 +182,7 @@ TIP: 對於 Microsoft SQL Server 工作負載，您必須輸入 Windows 和 Micr
 第一步從SnapCenter匯入主機資源，並在NetApp Backup and Recovery清單頁面中顯示這些資源。此時，資源尚未由NetApp Backup and Recovery管理。
 
 
-TIP: 匯入SnapCenter主機資源後， NetApp Backup and Recovery不會接手保護管理。為此，您必須明確選擇在NetApp Backup and Recovery中管理這些資源。
+TIP: 匯入 SnapCenter 主機資源後，NetApp Backup and Recovery 不會接管保護管理。若要轉移管理，請明確選取這些資源，以在 NetApp Backup and Recovery 中進行管理。
 
 .步驟
 . 從NetApp Backup and Recovery選單中，選擇 *設定*。
@@ -217,10 +217,10 @@ NOTE: 如果 SnapCenter Server 已註冊，您可以更新現有的註冊資訊�
 [[manage-snapcenter-host-resources]]
 === 管理SnapCenter主機資源
 
-匯入SnapCenter資源後，在NetApp Backup and Recovery中管理這些主機資源。在您選擇管理這些匯入的資源後， NetApp Backup and Recovery and Recovery可以備份並還原您從SnapCenter匯入的資源。您不再需要在SnapCenter Server 中管理這些資源。
+匯入 SnapCenter 資源後，在 NetApp Backup and Recovery 中管理這些主機資源。管理匯入的資源後，NetApp Backup and Recovery 即可備份與恢復它們。您無需再於 SnapCenter 伺服器中管理這些資源。
 
 .步驟
-. 匯入SnapCenter資源後，在出現的「清單」頁面上，選擇您匯入的、希望從現在開始由NetApp Backup and Recovery管理的SnapCenter資源。
+. 匯入 SnapCenter 資源後，在庫存頁面上，選取您想要 NetApp Backup and Recovery 管理的已匯入 SnapCenter 資源。
 . 選擇“操作”圖標image:../media/icon-action.png["操作選項"]> *管理* 管理資源。
 . 選擇“在NetApp Console中管理”*。
 +
@@ -307,7 +307,7 @@ NOTE: 您在此處建立的範本僅可用於保護 Kubernetes 工作負載。
 . 展開*執行鉤子模板*部分。
 . 選擇*建立執行鉤子模板*。
 . 輸入執行掛鉤的名稱。
-. （可選）選擇一種鉤子類型。例如，還原後鉤子會在還原作業完成後執行。
+. （選用）選擇掛鉤的類型。例如，還原後掛鉤會在還原作業完成後執行。
 . 在 *Script* 文字方塊中，輸入要作為執行掛鉤範本的一部分執行的可執行 shell 腳本。或者，您可以選擇“*上傳腳本*”來上傳腳本檔案。
 . 選擇“*創建*”。
 +
@@ -342,7 +342,7 @@ NOTE: 您在此處建立的範本僅可用於保護 Kubernetes 工作負載。
 .. 輸入作業適用的 JSON 路徑。
 .. 如果適用，請輸入要新增或更新的值，或要從中移動的 JSON 路徑。
 +
-這些欄位僅在需要它們的作業中才會顯示。
+這些欄位僅在需要它們的操作中才會顯示。
 
 .. 若要為此範本新增其他操作，請選擇 *Add operation*。
 

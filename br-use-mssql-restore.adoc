@@ -126,7 +126,7 @@ image:diagram_browse_restore_volume-unified.png["顯示恢復資源的流程的�
 
 
 
-[[restore-to-specific-point-in-time]]
+[[restore-to-a-specific-point-in-time]]
 === 恢復到特定時間點
 
 NetApp Backup and Recovery使用日誌和最新的快照來建立資料的時間點復原。

@@ -43,7 +43,7 @@ summary: 在 NetApp Console 或 NetApp Console 本機部署中的系統上啟動
 在 NetApp Console 本機部署中啟用備份與還原服務。
 
 .開始之前
-請確保您已取得 NetApp Backup and Recovery 的授權。請參閱 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#obtain-a-license-file["取得授權"^]以取得更多資訊。
+請確認您擁有 NetApp Backup and Recovery 授權。請參閱 https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#obtain-a-license-file["取得授權"^]以取得更多資訊。
 
 .步驟
 . 從 NetApp Console 選單中，選取 *Storage* > *Fleets*。

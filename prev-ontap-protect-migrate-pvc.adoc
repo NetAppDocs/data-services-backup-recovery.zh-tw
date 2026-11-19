@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-protect-migrate-pvc.html 
 keywords: migrate, pvc, nfs, storage, performance, persistence 
-summary: 提高 NetApp Console 本機部署環境中的目錄索引效能。 
+summary: 將搜尋與還原目錄索引儲存設備移轉至 ONTAP NFS，以提升 NetApp Console 本機部署環境中的效能。 
 ---
 = 將搜尋與還原目錄儲存設備移轉至 ONTAP NFS
 :hardbreaks:
@@ -58,7 +58,7 @@ kubectl get pods -n cbs | grep cloudmanager-cbs-catalog-worker- || echo "no work
 . 將正在運作的協調器 pod 中的資料複製到 ONTAP 裝載，無需中間目錄。協調器必須仍在運作。
 +
 
-NOTE: 將內容複製到 Volume 根目錄，而不是子目錄。ONTAP Volume 是新的 `/opt/netapp/cbs/catalog/shared`目錄。資料必須位於 Volume 根目錄，以便應用程式能夠透過相同的路徑找到它（例如 /opt/netapp/cbs/catalog/shared/cbs/<DATASET_NAME>/……）。以下命令中的 tar 命令格式會將目錄內容（包括點檔案）串流傳輸到裝載根目錄，避免建立巢狀 `shared`資料夾。
+NOTE: 將內容複製到 Volume 根目錄，而不是子目錄。ONTAP Volume 是新的 `/opt/netapp/cbs/catalog/shared`目錄。資料必須位於 Volume 根目錄，以便應用程式能在相同的路徑找到它（例如，/opt/netapp/cbs/catalog/shared/cbs/<DATASET_NAME>/……）。下列命令中的 tar 命令格式會將目錄內容（包括點檔案）串流傳輸到裝載根目錄，避免產生巢狀的 `shared`資料夾。
 
 . 在 NetApp Console 本機部署上，將 ONTAP NFS 匯出裝載至本機安裝點。使用與稍後在 pv.yaml 中使用的相同伺服器/路徑：
 +
@@ -166,7 +166,7 @@ spec:
     matchLabels:
       volume: ontap-nfs-share # Forces binding to the specific PV above
 ----
-. 首先套用 PV，然後再套用 PVC，這樣就能套用 YAML 物件（PV 必須存在，PVC 的標籤選擇器才能連結到該 PV）。然後驗證 PVC 宣告是否已連結：
+. 先套用 PV，再套用 PVC（PV 必須存在，PVC 的標籤選擇器才能連結）。然後驗證 PVC 宣告是否已連結：
 +
 [source, shell]
 ----

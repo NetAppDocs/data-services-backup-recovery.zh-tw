@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-cvo-azure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP Volume 備份至 Azure Blob 儲存設備，驗證要求，啟用服務，並啟動 Volume 上的備份。 
 ---
 = 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 備份至 Azure Blob 儲存設備
 :hardbreaks:
@@ -24,9 +24,9 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 [[verify-support-for-your-configuration]]
 == 驗證對您的配置的支持
 
-在開始將磁碟區備份到 Azure Blob 儲存體之前，請閱讀下列要求以確保您具有支援的設定。
+在開始將 Volume 備份到 Azure Blob Storage 之前，請確保您擁有受支援的組態。
 
-下圖顯示了每個組件以及您需要在它們之間準備的連接。
+映像顯示每個元件，以及您需要在它們之間準備的連線。
 
 或者，您也可以使用公用或私有連線連線到用於複製磁碟區的輔助ONTAP系統。
 
@@ -168,7 +168,7 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 [[requirements-for-using-customer-managed-keys-for-data-encryption]]
 === 使用客戶代管的金鑰進行資料加密的要求
 
-您可以在啟動精靈中使用自己的客戶管理金鑰進行資料加密，而不是使用預設的 Microsoft 管理加密金鑰。在這種情況下，您將需要有 Azure 訂閱、Key Vault 名稱和金鑰。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["了解如何使用自己的密鑰"^] 。
+您可以在啟動精靈中使用自己的客戶管理金鑰來進行資料加密，而非使用預設的 Microsoft 管理加密金鑰。在這種情況下，您需要 Azure 訂閱、Key Vault 名稱與金鑰 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["了解如何使用自己的密鑰"^]。
 
 NetApp Backup and Recovery支援 Azure 存取策略、Azure 基於角色的存取控制 (Azure RBAC) 權限模型和託管硬體安全模型 (HSM)（請參閱 https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/overview["什麼是 Azure Key Vault 託管 HSM？"]）。
 
@@ -195,7 +195,7 @@ link:prev-ontap-protect-journey.html["了解有關創建自己的儲存帳戶的
 * 如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
 * ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
 +
-由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。
+由於您可以複寫到 Cloud Volumes ONTAP 或內部部署系統，請審查內部部署 ONTAP 系統的對等關係需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^]。
 
 
 
@@ -404,7 +404,7 @@ TIP: 若要在啟動複製之前建立自訂策略，請參閱link:br-use-polici
 **** 建立自己的管理 Blob 容器的資源群組，或選擇資源組類型和群組。
 +
 
-TIP: 如果您想保護備份檔案不被修改或刪除，請確保建立儲存帳戶時啟用了 30 天保留期的不可變儲存。
+TIP: 如果您想保護備份檔案不被修改或刪除，請確認建立儲存設備帳戶時已啟用不可變儲存設備，並設定了 30 天的保留期間。
 
 
 
@@ -453,7 +453,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 [[review-your-selections]]
 === 檢查您的選擇
 
-這是審查您的選擇並在必要時進行調整的機會。
+審查您的選擇，如有必要，請進行調整。
 
 .步驟
 . 在「審核」頁面中，審核您的選擇。
@@ -479,7 +479,7 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 [[show-the-api-commands]]
 === 顯示 API 命令
 
-您可能需要顯示並（可選）複製「啟動備份與還原」精靈中使用的 API 命令。您可能需要執行此操作，以便在未來的系統中自動化備份啟動。
+顯示並可選擇取得「啟動備份與還原」精靈中所用 API 命令的複本，以便在未來的系統中自動化備份啟動。
 
 .步驟
 . 在「啟動備份與還原」精靈中，選取 *View API request*。

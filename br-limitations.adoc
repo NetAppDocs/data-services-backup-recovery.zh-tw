@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-limitations.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Microsoft SQL Server database, SAP HANA database 
-summary: NetApp Backup and Recovery需要先發現數據，以便您使用該服務。在發現過程中， NetApp Backup and Recovery會分析組織內系統中的所有磁碟區和檔案。 
+summary: 審查 NetApp Backup and Recovery 搭配 SQL Server 工作負載的已知限制。 
 ---
 = NetApp Backup and Recovery for SQL Server 工作負載的已知限制
 :hardbreaks:
@@ -53,7 +53,7 @@ Windows 叢集名稱不能包含底線 (_) 字元。
 [[snapcenter-migration-issues]]
 == SnapCenter遷移問題
 
-將資源從SnapCenter遷移到NetApp Backup and Recovery有以下限制。
+將資源從 SnapCenter 移轉至 NetApp Backup and Recovery 時，會受到一些限制。
 
 有關SnapCenter策略如何遷移到NetApp Backup and Recovery策略的詳細信息，請參閱link:reference-policy-differences-snapcenter.html["SnapCenter中的策略與NetApp Backup and Recovery中的策略比較"]。
 

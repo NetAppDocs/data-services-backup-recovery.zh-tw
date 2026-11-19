@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-restore-guest-files-and-folders-from-vmdks.html 
 keywords: restore, guest, files, folders, files and folders, guest VM, windows, linux, VMDK, attach 
-summary: 您可以將一個或多個檔案或資料夾從 VMDK 還原到客體虛擬機器。 
+summary: 使用 NetApp Backup and Recovery 將一個或多個檔案或資料夾從 VMDK 還原至原始 VM 或其他 VM。 
 ---
 = 在 NetApp Backup and Recovery 中還原 VMware 客體檔案和資料夾
 :hardbreaks:

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-roles.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, IAM, identity, access, management 
-summary: NetApp Backup and Recovery採用 IAM 角色來管理每個使用者對特定功能和操作的存取權。 
+summary: 尋找控制每個使用者可存取哪些 NetApp Backup and Recovery 功能與動作的 IAM 角色。 
 ---
 = NetApp Backup and Recovery IAM 角色
 :hardbreaks:

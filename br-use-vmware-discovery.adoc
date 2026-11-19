@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-vmware-discovery.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 在 ONTAP 系統上探索 VMware 資料存放區與虛擬機器，匯入 SnapCenter Plug-in for VMware vSphere 資源，並在 NetApp Backup and Recovery 中管理它們。 
 ---
 = 使用NetApp Backup and Recovery發現 VMware 工作負載
 :hardbreaks:
@@ -25,7 +25,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 在發現過程中， NetApp Backup and Recovery會分析您組織內的 VMware 工作負載，並評估和匯入現有的保護策略、快照以及備份和復原選項。
 
-如果您使用內部部署的 SnapCenter Plug-in for VMware vSphere，您可以將 VMware 資料存放區和資源 VM 匯入 NetApp Backup and Recovery。
+如果您使用內部部署的 SnapCenter Plug-in for VMware vSphere，您可以將 VMware 資料存放區和虛擬機器匯入至 NetApp Backup and Recovery。
 
 
 NOTE: 將儲存系統新增至 NetApp Console 後，請等待幾分鐘再進行資源探索。如果在新增儲存系統後立即進行資源探索，可能會導致探索失敗。
@@ -49,7 +49,7 @@ NOTE: NetApp Backup and Recovery 僅支援 VMware vCenter，且不會探索 vVol
 * 如果您已經有 SnapCenter 或適用於 VMware vSphere 的 SnapCenter 外掛，請使用 NetApp Backup and Recovery UI 將 SnapCenter 資源匯入至 NetApp Backup and Recovery。
 +
 
-NOTE: 如果您已經有 SnapCenter 外掛，請在從 SnapCenter 匯入之前，確保您已滿足先決條件。例如，在從 SnapCenter 匯入之前，您應該先在 NetApp Console 中為所有內部部署的 SnapCenter 叢集儲存設備建立系統。請參閱 link:concept-start-prereq-snapcenter-import.html["從SnapCenter匯入資源的先決條件"]。若要直接從 SnapCenter 主機匯入資料，請參閱 link:br-start-configure.html#import-and-manage-snapcenter-host-resources["匯入並管理SnapCenter主機資源"]。
+NOTE: 如果您已有 SnapCenter 外掛程式，請確認在從 SnapCenter 匯入之前已符合先決條件。例如，在從 SnapCenter 匯入之前，您應先在 NetApp Console 中為所有內部部署的 SnapCenter 叢集儲存設備建立系統。請參閱 link:concept-start-prereq-snapcenter-import.html["從SnapCenter匯入資源的先決條件"]。若要直接從 SnapCenter 主機匯入資料，請參閱 link:br-start-configure.html#import-and-manage-snapcenter-host-resources["匯入並管理SnapCenter主機資源"]。
 
 * 如果您還沒有SnapCenter插件，您仍然可以透過手動新增 vCenter 並執行發現來發現系統中的工作負載。
 

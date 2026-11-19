@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-policies-kubernetes-create.html 
 keywords: backing up, back up, backup, backup on-premises ontap, policy, policies, backup policies, cloud backup, aws, aws s3, azure, google cloud 
-summary: 在NetApp Backup and Recovery中，建立您自己的策略來管理備份頻率、備份時間以及保留的備份檔案數量。 
+summary: 在 NetApp Backup and Recovery 中建立 Kubernetes 備份原則，以控制備份頻率、排程和保留，並編輯或刪除原則。 
 ---
 = 在 NetApp Backup and Recovery 中建立及管理 Kubernetes 備份原則
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: 在NetApp Backup and Recovery中，建立您自己的策略來管理備
 
 如果從SnapCenter匯入資源，您可能會發現SnapCenter中使用的策略與NetApp Backup and Recovery中使用的策略存在一些差異。看link:reference-policy-differences-snapcenter.html["SnapCenter與NetApp Backup and Recovery之間的策略差異"]。
 
-您可以實現以下與政策相關的目標：
+您可以執行以下原則任務：
 
 * 建立本機快照策略
 * 建立複製到輔助儲存的策略

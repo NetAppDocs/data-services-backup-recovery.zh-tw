@@ -159,7 +159,7 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 
 | 相容 S3 的物件儲存（僅限 ONTAP Volume） | 本地ONTAP系統 | 本地ONTAP系統 
 |===
-請注意以下還原注意事項：
+這些限制適用於還原：
 
 * 從 Cloud Volumes ONTAP （複寫）還原只能還原至 Cloud Volumes ONTAP。但是，AWS 中的 Cloud Volumes ONTAP 也支援還原至 Amazon FSx for NetApp ONTAP。
 * 從內部部署 ONTAP（複寫）還原只能還原至內部部署 ONTAP。

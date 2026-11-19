@@ -18,7 +18,7 @@ summary: 使用 NetApp Backup and Recovery，將內部部署 ONTAP 系統中的 
 
 NetApp Backup and Recovery使用NetApp SnapMirror透過建立快照並將其傳輸到備份位置來同步備份。
 
-請使用以下工作流程來保護您的資料：
+使用以下工作流程保護您的資料：
 
 * link:concept-start-prereq-snapcenter-import.html["如果從SnapCenter匯入，則配置其他項目"]
 * link:br-start-discover.html["發現 Microsoft SQL Server 工作負載並選擇性地匯入SnapCenter資源"]

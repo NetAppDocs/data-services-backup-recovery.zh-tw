@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-start-prereq-snapcenter-import.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, backup and recovery, snapcenter, import, migration, migrate 
-summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的準備情況來開始使用NetApp Backup and Recovery 。要使用NetApp Backup and Recovery，您需要滿足這些先決條件。 
+summary: 準備將 SnapCenter Microsoft SQL Server 資源匯入 NetApp Backup and Recovery，方法是新增系統、檢查主機需求，並停用 UAC 遠端限制。 
 ---
 = SnapCenter 匯入 NetApp Backup and Recovery 的先決條件
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: 透過驗證操作環境、控制台代理程式和控制台帳戶的�
 
 
 [role="lead"]
-在將 SnapCenter Plug-in for Microsoft SQL Server 中的資源匯入 NetApp Backup and Recovery 之前，請確保您的環境符合這些額外需求。
+準備將資源從 SnapCenter Plug-in for Microsoft SQL Server 匯入 NetApp Backup and Recovery，方法是將您的系統新增至主控台、確認主機需求，以及停用使用者帳戶控制遠端限制。
 
 
 
 [[create-systems-in-netapp-console-first]]
 == 首先在NetApp Console中建立系統
 
-如果要從SnapCenter匯入資源，則應先將所有本機SnapCenter叢集儲存體新增至控制台 *系統* 頁面，然後再從SnapCenter匯入。這確保主機資源能夠被正確地發現和導入。
+在從 SnapCenter 匯入資源之前，請將所有內部部署的 SnapCenter 叢集儲存設備新增至 Console 的 *Systems* 頁面，以便 Console 能夠正確探索並匯入主機資源。
 
 
 
@@ -132,7 +132,7 @@ CAUTION: 以提升的權限執行 PowerShell 指令可能會影響系統設定�
 .. 右鍵單擊該選項並選擇*以管理員身份執行*。
 
 
-. 確保您的系統上安裝了 PowerShell。安裝後，它應該會出現在*開始*選單中。
+. 確認 PowerShell 已安裝在您的系統上。安裝後，它應該會出現在 *開始* 功能表中。
 +
 
 TIP: Windows 7 及更高版本預設包含 PowerShell。

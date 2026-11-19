@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-ontaps3.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 將內部部署 ONTAP 系統的 Volume 資料備份至 ONTAP S3，複寫至二線系統，並使用 NetApp Backup and Recovery 啟動備份。 
 ---
 = 使用NetApp Backup and Recovery將本機ONTAP資料備份到ONTAP S3
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-在 NetApp Backup and Recovery 中，您可以將主要內部部署 ONTAP 系統中的 Volume 資料備份到 ONTAP S3，也可以選擇備份到次要 ONTAP 系統以進行複寫。請使用此頁面準備您的環境並啟動備份。
+在 NetApp Backup and Recovery 中，您可以將 Volume 資料從主要的內部部署 ONTAP 系統備份至 ONTAP S3，並可選擇備份至二線 ONTAP 系統以進行複寫。準備您的環境並啟動備份。
 
 主本地ONTAP系統可以是FAS、 AFF或ONTAP Select系統。輔助ONTAP系統可以是本機ONTAP或Cloud Volumes ONTAP系統。物件儲存可以位於本機ONTAP系統或已啟用簡單儲存服務 (S3) 物件儲存伺服器的Cloud Volumes ONTAP系統上。
 
@@ -38,7 +38,7 @@ image:diagram_cloud_backup_onprem_ontap_s3.png["此圖顯示了NetApp Backup and
 
 image:diagram_cloud_backup_onprem_ontap_s3_cloud.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
-在這種情況下，控制台代理應部署在部署Cloud Volumes ONTAP系統的相同雲端提供者環境中。
+在這種情況下，將控制台代理程式部署在與 Cloud Volumes ONTAP 系統相同的雲端供應商環境中。
 
 
 
@@ -86,7 +86,7 @@ NetApp Backup and Recovery功能內建於控制台代理程式中。以私人模
 [[verify-license-requirements]]
 == 驗證許可證要求
 
-在為叢集啟動NetApp Backup and Recovery之前，您需要從NetApp購買並啟動NetApp Backup and Recovery BYOL 授權。此授權用於備份和還原物件儲存 - 建立快照或複製磁碟區不需要授權。此許可證適用於該帳戶，可跨多個系統使用。
+在為叢集啟動 NetApp Backup and Recovery 之前，您需要向 NetApp 購買並啟動 NetApp Backup and Recovery BYOL 授權。此授權用於備份與恢復至物件儲存。建立快照或複寫的 Volume 無需授權。此授權適用於該帳戶，且可在多個系統上使用。
 
 您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用本服務。link:br-start-licensing.html["了解如何管理您的 BYOL 許可證"]。
 
@@ -156,20 +156,20 @@ link:prev-ontap-protect-journey.html["了解有關備份架構類型的更多信
 
 
 ====
-需滿足以下ONTAP集群網路需求：
+設定 ONTAP 叢集以滿足這些連網要求：
 
 * ONTAP叢集透過使用者指定的連接埠從叢集間 LIF 啟動到ONTAP S3 伺服器的 HTTPS 連接，以執行備份和還原作業。此連接埠可在備份設定期間配置。
 +
-ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是響應。
+ONTAP 從物件儲存讀取和寫入資料。物件儲存從不主動發起連線。它只負責回應。
 
 * ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。
 * 每個託管要備份的磁碟區的ONTAP節點上都需要一個叢集間 LIF。  LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有關 IP 空間的更多信息"^] 。
 +
-當您設定NetApp Backup and Recovery時，系統會提示您輸入要使用的 IP 空間。您應該選擇與每個 LIF 關聯的 IP 空間。這可能是「預設」 IP 空間或您建立的自訂 IP 空間。
+設定 NetApp Backup and Recovery 時，系統會提示您選擇要使用的 IPspace。請選擇與每個 LIF 關聯的 IPspace。這可能是「預設」IPspace，或是您建立的自訂 IPspace。
 
 * 節點的群集間 LIF 能夠存取物件儲存（當控制台代理安裝在「暗」站點時不需要）。
 * 已為磁碟區所在的儲存虛擬機器設定 DNS 伺服器。了解如何 https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html["為 SVM 配置 DNS 服務"^]。
-* 如果您使用的 IPspace 與 Default 不同，則可能需要建立靜態路由才能存取物件儲存設備。
+* 如果您使用 Default 以外的 IPspace，您可能需要建立靜態路由以存取物件儲存。
 * 如有必要，請更新防火牆規則，以允許NetApp Backup and Recovery服務透過您指定的連接埠（通常為連接埠 443）從ONTAP連接到物件存儲，並透過連接埠 53（TCP/UDP）從儲存虛擬機器到 DNS 伺服器的名稱解析流量。
 
 
@@ -187,7 +187,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 * 如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
 * ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
 +
-由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。
+由於您可以複寫到 Cloud Volumes ONTAP 或內部部署系統，請審查內部部署 ONTAP 系統的對等關係需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^]。
 
 
 
@@ -205,7 +205,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 您必須在計畫用於物件儲存備份的ONTAP叢集中啟用簡單儲存服務 (S3) 物件儲存伺服器。查看 https://docs.netapp.com/us-en/ontap/s3-config/index.html["ONTAP S3 文檔"^]了解詳情。
 
-*注意：*您可以將此叢集新增至控制台*系統*頁面，但它不會被識別為 S3 物件儲存伺服器，並且您無法將來源系統拖曳到此 S3 系統上以啟動備用啟動。
+*注意：* 您可以將此叢集新增至控制台的 *系統* 頁面，但控制台不會將其識別為 S3 物件儲存伺服器。您無法將來源系統拖曳到此 S3 系統上以起始備份啟動。
 
 此ONTAP系統必須符合以下要求。
 
@@ -263,7 +263,7 @@ S3 憑證:: 您必須建立 S3 使用者來控制對ONTAP S3 儲存的存取。 
 
 . 繼續以下選項：
 +
-** 如果您已經有控制台代理，那麼一切就緒了。只需選擇*下一步*。
+** 如果您已經有 Console 代理程式，請選擇 *下一步*。
 ** 如果您沒有控制台代理，則會出現「新增控制台代理」選項。參考<<準備控制台代理>>。
 
 
@@ -286,12 +286,12 @@ S3 憑證:: 您必須建立 S3 使用者來控制對ONTAP S3 儲存的存取。 
 
 ====
 .步驟
-請注意，如果您選擇的 Volume 已套用快照或複寫原則，則您稍後選擇的原則將覆寫這些現有原則。
+如果您選擇的 Volume 已經套用了快照或複寫原則，則您稍後選擇的原則將覆寫這些現有原則。
 
 . 在「選擇卷」頁面中，選擇要保護的一個或多個磁碟區。
 +
 ** 或者，過濾行以僅顯示具有特定卷類型、樣式等的捲，以便更輕鬆地進行選擇。
-** 選擇第一個磁碟區後，您可以選擇所有FlexVol磁碟區（FlexGroup磁碟區一次只能選擇一個）。若要備份所有現有的FlexVol卷，請先選取一個卷，然後選取標題行中的框。
+** 選擇第一個 Volume 後，您可以選擇所有 FlexVol Volume（FlexGroup Volume 一次只能選擇一個）。若要備份所有現有的 FlexVol Volume，請先勾選一個 Volume，然後勾選標題列中的核取方塊。
 ** 若要備份單一卷，請選取每個卷對應的複選框。
 
 
@@ -396,7 +396,7 @@ TIP: 若要使用備份和復原建立自訂策略，請參閱link:br-use-polici
 
 
 +
-** *將現有快照匯出至物件儲存作為備份檔案*：如果此系統中存在與您剛剛選擇的備份排程標籤（例如，每日、每週等）相符的 Volume 的本機快照，則會顯示此附加提示。勾選此核取方塊，即可將所有歷史快照複製到物件儲存作為備份檔案，以確保您的 Volume 獲得最完整的保護。
+** *將現有快照匯出至物件儲存作為備份檔案*：如果此系統中存在與您剛剛選擇的備份排程標籤（例如，每日或每週）相符的 Volume 的本機快照，主控台將顯示此額外提示。勾選此核取方塊，即可將所有歷史快照複製到物件儲存作為備份檔案，以確保您的 Volume 獲得最完整的保護。
 
 
 . 選擇“下一步”。
@@ -407,7 +407,7 @@ TIP: 若要使用備份和復原建立自訂策略，請參閱link:br-use-polici
 [[review-your-selections]]
 === 檢查您的選擇
 
-這是審查您的選擇並在必要時進行調整的機會。
+審查您的選擇，如有必要，請進行調整。
 
 .步驟
 . 在「審核」頁面中，審核您的選擇。
@@ -431,7 +431,7 @@ NetApp Backup and Recovery開始對您的磁碟區進行初始備份。複製捲
 [[show-the-api-commands]]
 === 顯示 API 命令
 
-您可能需要顯示並（可選）複製「啟動備份與還原」精靈中使用的 API 命令。您可能需要執行此操作，以便在未來的系統中自動化備份啟動。
+顯示並可選擇取得「啟動備份與還原」精靈中所用 API 命令的複本，以便在未來的系統中自動化備份啟動。
 
 .步驟
 . 在「啟動備份與還原」精靈中，選取 *View API request*。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-hyper-v-restore-guest-files-and-folders.html 
 keywords: restore, guest, files, folders, files and folders, Windows, VM, virtual machine, browse, mount, virtual disk, session, snapshot, backup 
-summary: 您可以將 Hyper-V VM 快照中的一個或多個檔案或資料夾還原到 Windows 客體 VM。 
+summary: 將 Hyper-V VM 快照中的檔案和資料夾還原到原始 Windows 來賓 VM，方法是從快照掛載虛擬磁碟。 
 ---
 = 使用 NetApp Backup and Recovery 還原 Hyper-V 來賓 VM 檔案和資料夾
 :hardbreaks:
@@ -31,7 +31,7 @@ summary: 您可以將 Hyper-V VM 快照中的一個或多個檔案或資料夾�
 
 還原效能取決於待還原的檔案或資料夾的大小和數量。對於給定的資料集大小，還原大量小檔案通常比還原少量大檔案花費的時間更長。
 
-還原檔案和資料夾時，請注意以下事項：
+還原檔案和資料夾時，請注意以下幾點：
 
 [NOTE]
 ====
@@ -92,7 +92,7 @@ NetApp Backup and Recovery 會將虛擬磁碟掛載到原始 VM，並顯示所�
 +
 如果存在同名文件，您可以選擇覆蓋或跳過它們。
 
-. 在「還原後選項」部分，您可以選擇啟用「還原完成後中斷來賓工作階段」設定，在還原完成後中斷來賓工作階段。這將分離虛擬磁碟並卸載資料存放區。這表示您需要在執行任何其他檔案和資料夾還原作業之前重新連接來賓工作階段。
+. 在 *還原後選項* 區段中，您可以透過啟用 *還原完成後中斷來賓工作階段連線* 設定，選擇在還原完成後中斷來賓工作階段連線。這會卸離虛擬磁碟並卸載資料存放區。之後，您必須重新連線來賓工作階段，然後才能執行任何其他檔案和資料夾還原作業。
 . 選擇*恢復*。
 +
 您可以在「作業監控」頁面上查看恢復進度。

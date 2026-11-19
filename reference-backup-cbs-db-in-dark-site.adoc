@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-backup-cbs-db-in-dark-site.html 
 keywords: backup database, recover database, dark site, private mode, restore database, backup and recovery, Console agent 
-summary: 在私有模式（無網際網路存取）下，NetApp Backup and Recovery 會將其組態資料儲存在與備份相同的 StorageGRID 或 ONTAP S3 bucket 中。如果 Console agent 主機系統發生故障，您可以部署新的 Console agent 並還原這些資料。 
+summary: 在私有模式下發生 Console 代理程式故障後，部署新的 Console 代理程式，並從 StorageGRID 或 ONTAP S3 儲存區還原 NetApp Backup and Recovery 組態資料。 
 ---
 = 在暗站中恢復NetApp Backup and Recovery配置數據
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: 在私有模式（無網際網路存取）下，NetApp Backup and Recov
 [role="lead"]
 在 _私有模式_（無網際網路存取）下，NetApp Backup and Recovery 會將其組態資料儲存在與備份相同的 StorageGRID 或 ONTAP S3 bucket 中。如果 Console agent 主機系統發生故障，您可以部署新的 Console agent 並還原這些資料。
 
-您也可以依照下列步驟取代控制台代理程式並還原在本機使用標準模式備份和還原時（不涉及雲端帳戶時，例如，使用 NetApp StorageGRID 作為備份目標時）儲存在其上的組態資料。
+當您在內部部署以_標準模式_使用 Backup and Recovery 且不涉及雲端帳戶時（例如，當您使用 NetApp StorageGRID 作為備份目的地時），您也可以遵循這些步驟來取代 Console 代理程式，並還原儲存於其上的組態資料。
 
 
 NOTE: 此過程僅適用於ONTAP磁碟區資料。
@@ -26,7 +26,7 @@ NOTE: 此過程僅適用於ONTAP磁碟區資料。
 備份的資料有兩種類型：
 
 * NetApp Backup and Recovery資料庫 - 包含所有磁碟區、備份檔案、備份策略和設定資訊的清單。
-* 索引目錄檔案 - 包含用於搜尋和復原功能的詳細索引，可讓您在尋找要復原的磁碟區資料時搜尋非常快速且有效。
+* 索引目錄檔案 - 包含詳細的索引，搜尋與還原功能會使用這些索引來快速尋找您想要還原的 Volume 資料。
 
 
 這些資料每天午夜備份一次，每個檔案最多保留 7 份副本。如果控制台代理程式正在管理多個本機ONTAP系統，則NetApp Backup and Recovery檔案將儲存在首先啟動的系統的儲存桶中。
@@ -46,12 +46,12 @@ TIP: NetApp Backup and Recovery資料庫或索引目錄檔案中從未包含任�
 * 安裝新的控制台代理
 * 還原NetApp Backup and Recovery資料庫
 * 恢復索引目錄文件
-* 將所有本機ONTAP系統和StorageGRID系統重新發現到NetApp ConsoleUI
+* 將所有內部部署 ONTAP 系統和 StorageGRID 系統重新探索至 NetApp Console UI
 
 
 檢查系統正常運作後，建立新的備份檔案。
 
-.你需要什麼
+.開始之前
 您需要從儲存備份檔案的StorageGRID或ONTAP S3 儲存桶存取最新的資料庫和索引備份：
 
 * NetApp Backup and RecoveryMySQL 資料庫文件
@@ -124,7 +124,7 @@ mysql -u root -p cloud_backup
 mysql> show tables;
 mysql> select * from volume;
 ----
-. 請確保顯示的磁碟區與原始環境中的磁碟區相同。
+. 確認所顯示的 Volume 與您原始環境中的 Volume 相同。
 
 
 

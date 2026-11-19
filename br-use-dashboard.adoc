@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: br-use-dashboard.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, backup, recovery, dashboard, view, health, status, alerts, notifications 
-summary: 監控工作負載的健康狀況可確保您了解工作負載保護的問題並採取措施解決這些問題。查看備份和復原的狀態並對NetApp Backup and Recovery儀表板上出現的任何警報做出回應。您可以查看保護摘要、復原摘要、系統摘要等。 
+summary: 在 NetApp Backup and Recovery 儀表板上監控工作負載的健全狀況、審查備份與恢復狀態，並回應警報。 
 ---
-= 在備份與還原儀表板上檢視保護健全狀況
+= 在 NetApp Backup and Recovery 儀表板上檢視保護健全狀況
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

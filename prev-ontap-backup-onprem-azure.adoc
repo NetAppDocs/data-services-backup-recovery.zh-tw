@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: prev-ontap-backup-onprem-azure.html 
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
-summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。 
+summary: 準備您的環境，並使用 NetApp Backup and Recovery 啟動內部部署 ONTAP Volume 至 Azure Blob 儲存體的備份。 
 ---
-= 使用NetApp Backup and Recovery將本機ONTAP資料備份到 Azure Blob 存儲
+= 使用 NetApp Backup and Recovery 將內部部署 ONTAP 資料備份至 Azure Blob Storage
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 使用 NetApp Backup and Recovery 保護您的 VMware 工作負載。
 
 
 [role="lead"]
-在 NetApp 備份與還原中，您可以將內部部署 ONTAP 系統中的 Volume 資料備份到次要儲存設備和 Azure Blob。請使用此頁面準備您的環境並啟動備份。
+在 NetApp Backup and Recovery 中，您可以將 Volume 資料從內部部署 ONTAP 系統備份到次要儲存設備系統和 Azure Blob 儲存體。準備您的環境，然後啟動備份以保護您的 Volume。
 
 
 NOTE: 「本地ONTAP系統」包括FAS、 AFF和ONTAP Select系統。
@@ -80,7 +80,7 @@ NetApp Backup and Recovery 在 Azure 政府區域中受到支援，前提是 Con
 +
 ** 透過連接埠 443 建立到NetApp Backup and Recovery以及 Blob 物件儲存的 HTTPS 連接(https://docs.netapp.com/us-en/console-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["查看端點列表"^]）
 ** 透過連接埠 443 建立到ONTAP叢集管理 LIF 的 HTTPS 連接
-** 為了讓NetApp Backup and Recovery搜尋與還原功能正常運作，必須開啟連接埠 1433 以便控制台代理程式和 Azure Synapse SQL 服務之間進行通訊。
+** 若要使 NetApp Backup and Recovery 搜尋與還原功能正常運作，必須開啟連接埠 1433，以便在主控台代理程式與 Azure Synapse SQL 服務之間進行通訊。
 ** Azure 和 Azure 政府部署需要額外的入站安全性群組規則。看 https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Azure 中的控制台代理程式規則"^]了解詳情。
 
 
@@ -272,7 +272,7 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 * 如果叢集位於本機，則您應該從公司網路連接到雲端提供者中的虛擬網路。這通常是 VPN 連線。
 * ONTAP叢集必須滿足額外的子網路、連接埠、防火牆和叢集要求。
 +
-由於您可以複製到Cloud Volumes ONTAP或本機系統，因此請查看本機ONTAP系統的對等需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^] 。
+由於您可以複寫到 Cloud Volumes ONTAP 或內部部署系統，請審查內部部署 ONTAP 系統的對等關係需求。 https://docs.netapp.com/us-en/ontap-sm-classic/peering/reference_prerequisites_for_cluster_peering.html["查看ONTAP文件中的叢集對等前提條件"^]。
 
 
 
@@ -290,9 +290,9 @@ ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是
 
 . 您可以在啟動精靈中使用自己的自訂管理金鑰進行資料加密，而不是使用預設的 Microsoft 管理加密金鑰。在這種情況下，您將需要有 Azure 訂閱、Key Vault 名稱和金鑰。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["了解如何使用自己的密鑰"^] 。
 +
-請注意，NetApp Backup and Recovery 支援 _Azure 存取原則_ 作為權限模型。目前不支援 _Azure 角色型存取控制_（Azure RBAC）權限模型。
+NetApp Backup and Recovery 支援 _Azure 存取原則_ 作為權限模型。目前不支援 _Azure 角色型存取控制_ （Azure RBAC）權限模型。
 
-. 如果您希望透過公共網際網路從本機資料中心到 VNet 建立更安全的連接，則可以在啟動精靈中設定 Azure 專用端點。在這種情況下，您需要了解此連接的 VNet 和子網路。 https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview["請參閱有關使用私有端點的詳細信息"^] 。
+. 如果您希望透過公用網際網路從內部部署資料中心到 VNet 建立更安全的連線，可以選擇在啟動精靈中設定 Azure 私人端點。在這種情況下，您需要知道此連線的 VNet 和子網路。 https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview["請參閱有關使用私有端點的詳細信息"^]
 
 
 

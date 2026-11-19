@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: br-use-manage-execution-hook-templates.html 
 keywords: hooks, execution hooks, exec hooks, hook, execution, script, postscript, prescript, post, pre, run, backup, snapshot, freeze 
-summary: NetApp Backup and Recovery使您能夠管理執行掛鉤，以便在應用程式保護作業之前或之後採取行動。 
+summary: 在 NetApp Backup and Recovery 中管理執行掛勾，以便在 Kubernetes 應用程式的保護作業之前或之後執行自訂指令碼。 
 ---
 = 在 NetApp Backup and Recovery 中管理 Kubernetes 執行掛鉤範本
 :hardbreaks:
@@ -92,7 +92,7 @@ NOTE: 執行鉤子可能會降低或停用應用程式的功能。請確保自�
 [[execution-hook-filters]]
 == 執行鉤子過濾器
 
-當您新增或編輯應用程式的執行掛鉤時，可以向執行掛鉤新增篩選器，以控制掛鉤匹配哪些 Container。篩選器適用於在所有 Container 上使用相同 Container 映像，但可能將每個映像用於不同用途的應用程式（例如 Elasticsearch）。篩選器可讓您建立執行掛鉤在部分（但不一定全部）相同 Container 上執行的情境。如果為單一執行掛鉤建立多個篩選器，它們將透過邏輯 AND 運算子進行組合。每個執行掛鉤最多可以有 10 個作用中篩選器。
+當您新增或編輯應用程式的執行掛鉤時，您可以將過濾器新增至執行掛鉤，以控制掛鉤符合哪些 Container。過濾器對於在所有 Container 上使用相同 Container 映像，但可能將每個映像用於不同用途的應用程式（例如 Elasticsearch）非常有用。過濾器可讓執行掛鉤在部分（而非全部）相同的 Container 上執行。如果您為單一執行掛鉤建立多個過濾器，它們會與邏輯 AND 營運者結合。每個執行掛鉤最多可以有 10 個作用中過濾器。
 
 新增至執行鉤子的每個篩選器都使用正規表示式來比對叢集中的 Container。當鉤子比對到 Container 時，它會在該 Container 上執行其關聯的指令碼。篩選器的正規表示式使用正規表示式 2 (RE2) 語法，該語法不支援建立從符合清單中排除 Container 的篩選器。有關 NetApp Backup and Recovery 在執行鉤子篩選器中支援的正規表示式語法的詳細資訊，請參閱 https://github.com/google/re2/wiki/Syntax["正規表示式 2 (RE2) 語法支持"^]。
 
@@ -125,7 +125,7 @@ NOTE: 您在此處建立的範本僅可用於保護 Kubernetes 工作負載。
 . 展開*執行鉤子模板*部分。
 . 選擇*建立執行鉤子模板*。
 . 輸入執行掛鉤的名稱。
-. （可選）選擇一種鉤子類型。例如，還原後鉤子會在還原作業完成後執行。
+. （選用）選擇掛鉤的類型。例如，還原後掛鉤會在還原作業完成後執行。
 . 在 *Script* 文字方塊中，輸入要作為執行掛鉤範本的一部分執行的可執行 shell 腳本。或者，您可以選擇“*上傳腳本*”來上傳腳本檔案。
 . 選擇“*創建*”。
 +
