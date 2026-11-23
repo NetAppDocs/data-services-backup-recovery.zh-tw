@@ -14,7 +14,7 @@ summary: 審查搭配 ONTAP 磁碟區的 NetApp Backup and Recovery 已知限制
 
 
 [role="lead"]
-在使用 NetApp Backup and Recovery 備份 ONTAP 磁碟區之前，請先查看這些限制。
+在使用適用於 ONTAP Volume 的 NetApp Backup and Recovery 之前，請審查影響備份、複寫和還原作業的已知限制。
 
 * NetApp Backup and Recovery可以將Cloud Volumes ONTAP備份到 AWS 中國區域（包括北京和寧夏）的物件儲存；但是，您可能需要先手動修改身分和存取策略。
 +
@@ -23,7 +23,7 @@ summary: 審查搭配 ONTAP 磁碟區的 NetApp Backup and Recovery 已知限制
 +
 有關更多詳細信息，請參閱博客文章 https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-Backup-and-Recovery-Feature-Blog-May-23-Updates/ba-p/444052["NetApp Backup and Recovery功能部落格 2023 年 5 月"^]。
 
-* NetApp Backup and Recovery不支援 Microsoft Azure 中國區域。
+* 只有在 Console 代理程式部署於 Azure 中國區域時，NetApp Backup and Recovery 才能將 Cloud Volumes ONTAP 和內部部署的 ONTAP 系統備份至 Microsoft Azure 中國（21Vianet）區域的 Azure Blob 儲存設備。位於商業 Azure 區域、Azure Government 或內部部署的 Console 代理程式無法備份至 Azure 中國。Console 代理程式也必須以標準模式執行，而非受限模式。
 +
 有關在 Azure 中建立控制台代理的詳細信息，請參閱 https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-bluexp.html["在 Azure 中安裝控制台代理"^]。
 
@@ -41,7 +41,7 @@ FlexVol® Volume 沒有此類限制：您可以選擇系統中的所有 FlexVol�
 
 * 支援以下功能 https://docs.netapp.com/us-en/data-services-replication/index.html["NetApp Replication"]，但使用NetApp Backup and Recovery的複製功能時則不然：
 +
-** 不支援從磁碟區 A 到磁碟區 B 以及從磁碟區 B 到磁碟區 C 的級聯設定複製。支援從卷 A 到卷 B 的複製。
+** 不支援級聯配置（即從 Volume A 複寫到 Volume B，再從 Volume B 複寫到 Volume C）。支援從 Volume A 複寫到 Volume B。
 ** 不支援在 FSx for ONTAP系統之間複製資料。
 ** 不支援創建卷的一次性複製。
 
@@ -56,7 +56,7 @@ FlexVol® Volume 沒有此類限制：您可以選擇系統中的所有 FlexVol�
 == ONTAP磁碟區的備份到物件限制
 
 * 在 NetApp Console 本機部署的備份與還原預覽版本中，僅支援將備份至物件儲存的 ONTAP S3 和 StorageGRID 目標。此預覽版本不支援備份歸檔。
-* 備份資料時， NetApp Backup and Recovery將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。
+* 備份資料時，NetApp Backup and Recovery 不會保留 NetApp Volume 加密（NVE）。NVE Volume 上的加密資料會在傳輸至目的地時解密，且不會保留加密。
 +
 有關這些加密類型的說明，請參閱https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["配置NetApp卷加密概述"^]。
 

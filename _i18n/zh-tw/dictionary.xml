@@ -349,19 +349,16 @@
   <block id="4e69be20405025b3c646d8500efa2d1b" category="paragraph">有關在 AWS 中建立控制台代理的詳細信息，請參閱<block ref="faab5e2f0edd338d700e3f66193d79cc" category="inline-link-rx"></block>。</block>
   <block id="1bf8fbc0cb0e033ecf9b07ea0039e165" category="inline-link">NetApp Backup and Recovery功能部落格 2023 年 5 月</block>
   <block id="f0772f99efac13786eabc71ff657227c" category="paragraph">有關更多詳細信息，請參閱博客文章<block ref="ca2bde5ba8c2bfa7fcfd262a9ba49b66" category="inline-link-rx"></block>。</block>
-  <block id="02780e379a2dabb98bdc99c7fda3bcea" category="list-text">NetApp Backup and Recovery不支援 Microsoft Azure 中國區域。</block>
   <block id="765e34ac1754f1657d34edb386acb690" category="inline-link">在 Azure 中安裝控制台代理</block>
   <block id="d13aaa20cb991d422323052ee4f0a476" category="paragraph">有關在 Azure 中建立控制台代理的詳細信息，請參閱<block ref="da07eca50d6db76a150911ab72473ee2" category="inline-link-rx"></block>。</block>
   <block id="f6cc9ee766f8fd9f53bd87f3caa49fff" category="list-text">NetApp Backup and Recovery不支援FlexCache磁碟區的備份。</block>
   <block id="a8a0607f859b592d67071c436d8a3293" category="section-title">ONTAP磁碟區的複製限制</block>
   <block id="a5db9212acd617412153fca9cdf5d9d7" category="inline-link">NetApp Replication</block>
   <block id="7d9b5071b293a2ab2e21750b9effaf27" category="list-text">支援以下功能<block ref="356880875ef4bae2b42c114b4a36f64f" category="inline-link-rx"></block>，但使用NetApp Backup and Recovery的複製功能時則不然：</block>
-  <block id="27c6b4b9b51b34d742cb3f51782e8bd8" category="list-text">不支援從磁碟區 A 到磁碟區 B 以及從磁碟區 B 到磁碟區 C 的級聯設定複製。支援從卷 A 到卷 B 的複製。</block>
   <block id="ae23bee4c78e8568b6dddf5191feac02" category="list-text">不支援在 FSx for ONTAP系統之間複製資料。</block>
   <block id="0c23616cc33d59b54422397ae3ade277" category="list-text">不支援創建卷的一次性複製。</block>
   <block id="21d64258a41a5b12606a567cacffa6cc" category="list-text">從本機ONTAP系統建立複製時，如果目標Cloud Volumes ONTAP系統上的ONTAP版本為 9.8、9.9 或 9.11，則只允許鏡像保管庫策略。</block>
   <block id="9ce8ee2150db1faf27c57c358f33b1a8" category="section-title">ONTAP磁碟區的備份到物件限制</block>
-  <block id="baab0bf328a764b384d4ecab2375f4fa" category="list-text">備份資料時， NetApp Backup and Recovery將不會維護NetApp磁碟區加密 (NVE)。這意味著 NVE 磁碟區上的加密資料將在資料傳輸到目標時被解密，並且加密將無法維持。</block>
   <block id="c638f77e97a62d0d11f775816222d62a" category="inline-link">配置NetApp卷加密概述</block>
   <block id="3553f96cf9281793975488d9cea2ab17" category="paragraph">有關這些加密類型的說明，請參閱<block ref="4e5be28408ee7dfd001133bf87f0a28f" category="inline-link-rx"></block>。</block>
   <block id="3a3d9f6ee5fa05f3aa042e0258eebf58" category="list-text">當您建立或編輯備份策略但未向該策略指派任何磁碟區時，保留的備份數量最多可為 1018。將磁碟區指派給策略後，您可以編輯該策略以建立最多 4000 個備份。</block>
@@ -1536,7 +1533,6 @@
   <block id="aeca4594f6e55fcbfbfb9d9afb369365" category="list-text">若要將指令複製到剪貼簿，請選擇*複製*圖示。</block>
   <block id="72d36f035030892bb9ec47d7087d0a31" category="paragraph"><block ref="72d36f035030892bb9ec47d7087d0a31" category="inline-image-macro-rx" type="image"></block></block>
   <block id="455aadf3bd22f71973763b3cdc7db550" category="list-text">支援的 Azure 區域</block>
-  <block id="79e9b30c82dffd47c798aea3942a38aa" category="list-text">所有 Azure 區域（包括 Azure 政府區域）都支援NetApp Backup and Recovery。</block>
   <block id="95fa16fe802a71eca4c0ade2049c7325" category="inline-link">變更儲存帳戶的複製方式</block>
   <block id="0d41426b51861f181e462e3410ed4a2e" category="paragraph">預設情況下， NetApp Backup and Recovery為 Blob 容器提供本機冗餘 (LRS) 以優化成本。如果您想要確保資料在不同區域之間複製，則可以在啟動NetApp Backup and Recovery後將此設定變更為區域冗餘 (ZRS)。請參閱 Microsoft 說明<block ref="c549763665cfbb93dbccfdbf667aa0f2" category="inline-link-rx"></block>。</block>
   <block id="5befa7486c8d00eaafce2041341f9c2e" category="list-text">在不同的 Azure 訂閱中建立備份所需的設置</block>
@@ -1583,7 +1579,6 @@
   <block id="88a7904e700f31e4cf7bb57f46eb7a09" category="list-text">當您想要啟動備份時，請繼續<block ref="cf0309d29ec4628c69a24a15a021ad35" category="inline-xref-macro-rx"></block>。</block>
   <block id="b96778e4cd2c48436423057f2b9568a3" category="paragraph">如果備份的 Azure 目標作為系統存在於 *系統* 頁面上，則可以將ONTAP叢集拖曳到 Azure Blob 物件儲存體上。</block>
   <block id="a2b724613c39ef29deebeb977e432480" category="list-text">在備份和復原欄中選擇*卷*。從磁碟區選項卡中，選擇*操作*<block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block>圖示並選擇單一磁碟區（尚未啟用複製或備份到物件儲存）的*啟動備份*。</block>
-  <block id="c3694a048dbc829bb10fdffdf4d06cfe" category="list-text">選擇第一個磁碟區後，您可以選擇所有FlexVol磁碟區。 （一次只能選擇一個FlexGroup磁碟區。）若要備份所有現有的FlexVol卷，請先選取一個卷，然後選取標題行中的框。</block>
   <block id="421239975ac0190f099c7d9e7999845f" category="list-text">您是否需要一個或所有備份選項：本機快照、複製和備份到物件存儲</block>
   <block id="c261701c0a638fff16b256b7172f9ad8" category="list-text">*本機快照*：選擇現有的快照原則或建立一個。</block>
   <block id="b18210e92f4a87b1f7c6722188562864" category="admonition">若要在啟動複製之前建立自訂策略，請參閱<block ref="d9904d3bd7927987056edc09c02007e9" category="inline-link-macro-rx"></block>。</block>
@@ -1904,7 +1899,6 @@
   <block id="7da78d28f4669d299817775a1035d272" category="list-text"><block ref="7da78d28f4669d299817775a1035d272" category="inline-link-rx"></block></block>
   <block id="96fe77e6e2cd8589ca112918c9a04ec6" category="section-title">為控制台代理準備網絡</block>
   <block id="8544a73c8f1ed9d1174487e7b7fa086b" category="paragraph">確保控制台代理程式具有所需的網路連線。</block>
-  <block id="15427d0a2840aa09c27fa15b5a2886f3" category="list-text">透過連接埠 443 建立到NetApp Backup and Recovery以及 Blob 物件儲存的 HTTPS 連接<block ref="a7858263bce6ec9551f5c1d76a8113be" category="inline-link-rx"></block>）</block>
   <block id="c8a6f5b35623034a3b81bd2fc65c5050" category="inline-link">Azure 中的控制台代理程式規則</block>
   <block id="ea98085d9c8873d99f99f5a8a1ed80cc" category="list-text">Azure 和 Azure 政府部署需要額外的入站安全性群組規則。看<block ref="f5e2689734fd64ad5e48acbcc4fcc6c5" category="inline-link-rx"></block>了解詳情。</block>
   <block id="8240150c9129fb5bbd345db1d278bce1" category="list-text">啟用 VNet 專用終端點到 Azure 儲存體。如果您有從ONTAP叢集到 VNet 的 ExpressRoute 或 VPN 連接，並且希望控制台代理程式和 Blob 儲存之間的通訊保持在虛擬專用網路（*專用*連接）中，則需要這樣做。</block>
@@ -1915,8 +1909,6 @@
   <block id="99502accd75b1c001f0d4173b25e6554" category="inline-link">Azure 市場提供的NetApp Console</block>
   <block id="38b11d9697757c33227037f48357f555" category="list-text">對於NetApp Backup and RecoveryBYOL 許可，您需要NetApp提供的序號，以便您在許可證的有效期限和容量內使用該服務。<block ref="706a4c6b2a498be3949e082e6d4f63b6" category="inline-link-macro-rx"></block>。</block>
   <block id="39476a4d8825e098719d72ca18619ed8" category="list-text">您需要對用於儲存備份的物件儲存空間進行 Azure 訂閱。</block>
-  <block id="a2dc9a4fb704e8ca875a1a77d909ba7d" category="paragraph">您可以在所有區域（包括 Azure 政府區域）中建立從本機系統到 Azure Blob 的備份。您在設定服務時指定儲存備份的區域。</block>
-  <block id="e205929749fe8da699042c6ba176c09f" category="list-text">ONTAP叢集透過連接埠 443 啟動從叢集間 LIF 到 Azure Blob 儲存體的 HTTPS 連接，以執行備份和還原作業。</block>
   <block id="92cc6f012ccda72f0aac6364e38469e9" category="paragraph">ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是響應。</block>
   <block id="e683c8d17cee340e56653758650f3736" category="list-text">ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。控制台代理程式可以駐留在 Azure VNet 中。</block>
   <block id="b04d41e3b51c1f118a8384301436e19a" category="list-text">每個託管要備份的磁碟區的ONTAP節點上都需要一個叢集間 LIF。  LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。<block ref="0edb32ced43734581c082142ee8a87a9" category="inline-link-rx"></block> 。</block>
@@ -2465,7 +2457,6 @@
   <block id="d1e78885195470cf33cb8f9291c0bba6" category="list-text">對於 AWS，您必須使用 30 天的保留期在儲存桶上啟用物件鎖定。</block>
   <block id="bc8f2392396da79157f4c431c6896bbc" category="list-text">對於 Azure，您需要建立具有版本級不變性支援的儲存體類別。</block>
   <block id="80ce2cedb0425adf0c19e467f3b5d08f" category="section-title">您正在使用哪種控制台代理部署模式</block>
-  <block id="c2bb04382ff014dac3da6a200f29a092" category="paragraph">NetApp Console提供多種部署模式，讓您能夠以滿足業務和安全要求的方式使用控制台。  _標準模式_利用控制台 SaaS 層提供全部功能，而_限制模式_和_私人模式_適用於有連線限制的組織。</block>
   <block id="87fc1df694d240556b315b5a66ddab48" category="inline-link">了解有關NetApp Console部署模式的更多信息</block>
   <block id="cb4eb4bfd5e8b0d2810ce42aa2349cb8" category="paragraph"><block ref="a9f1702e0ab2d23396c3d8966ac018c9" category="inline-link-rx"></block>。</block>
   <block id="b41bae1862cc28338655904ad32e407e" category="section-title">支援具有完整網路連線的網站</block>
@@ -2562,7 +2553,6 @@
   <block id="9336df9a96bed9adb0f67170b2dad2b3" category="inline-image-macro">此圖顯示了使用瀏覽和還原執行磁碟區還原操作的流程。</block>
   <block id="38aad7ac8bd6898064d142472e3e7624" category="paragraph"><block ref="7d27a3070fb1dce60f7cb72cb7d60b55" category="inline-image-macro-rx" type="image"></block></block>
   <block id="00e49e17372cc54391186a012dcec566" category="list-text">從「瀏覽和復原」部分，選擇「恢復磁碟區」。</block>
-  <block id="7eccde2a14cd84f78dde1af09cf04af9" category="list-text">在「選擇來源」頁面中，導覽至要還原的磁碟區的備份檔案。選擇具有要還原的日期/時間戳記的*系統*、*磁碟區*和*備份*檔案。</block>
   <block id="ec4f513ca338429ab9e381b2d0283d04" category="list-text">在「選擇目標」頁面中，選擇要恢復磁碟區的*系統*。</block>
   <block id="4f77ec7cb4d938e815d515d86daf431e" category="list-text">從物件儲存還原備份檔案時，如果您選擇本機ONTAP系統且尚未配置與物件儲存的叢集連接，系統將提示您輸入其他資訊：</block>
   <block id="51610f62d18ca7d65b1b6ede56b0ec28" category="list-text">從 Azure Blob 還原時，選擇目標磁碟區所在的ONTAP叢集中的 IP 空間，選擇用於存取物件儲存的 Azure 訂閱，並透過選擇 VNet 和子網路來選擇用於安全資料傳輸的私人端點。</block>
@@ -2592,8 +2582,6 @@
   <block id="7f3b049ad5900157b661c3f11e45c18c" category="section-title">還原資料夾和文件</block>
   <block id="a6d15ed479d88aab273727debe09b199" category="paragraph">請依照下列步驟將資料夾或檔案從ONTAP磁碟區備份還原到磁碟區。您應該知道要用於還原資料夾或檔案的磁碟區的名稱和備份檔案的日期。此功能使用即時瀏覽，以便您可以查看每個備份檔案中的目錄和檔案清單。</block>
   <block id="a19213459f6819b386fb315d0d0a38f3" category="list-text">從「瀏覽和復原」部分，選擇「復原檔案或資料夾」。</block>
-  <block id="8dae1c1faacbe2a68a103e4d19abbda1" category="list-text">在「選擇來源」頁面中，導覽至包含要還原的資料夾或檔案的磁碟區的備份檔案。選擇具有要從中復原檔案的日期/時間戳記的*系統*、*磁碟區*和*備份*。</block>
-  <block id="a4d28c95dc9a398dc52d0e10b7e6526a" category="list-text">選擇“*下一步*”，將顯示磁碟區備份中的資料夾和檔案清單。</block>
   <block id="cbb08f72335795850ccfc691c171d12b" category="paragraph">如果您要從位於檔案儲存層的備份文件還原資料夾或文件，則可以選擇還原優先權。</block>
   <block id="85a7bc53afc77150588eb7e96fff336f" category="paragraph"><block ref="ee2d4c64a4d42f71a3357c6cd2b7b94b" category="inline-link-macro-rx"></block>。<block ref="bf09a0f29ffa1dc0ee63da51e58f16ef" category="inline-link-macro-rx"></block>。<block ref="9220ac6939e2eccbf843225c6d0eb5f6" category="inline-link-macro-rx"></block>。Google Archive 儲存層中的備份檔案幾乎可以立即恢復，並且不需要恢復優先順序。</block>
   <block id="fa7edcf4876f70f9cdbd4ded39683873" category="list-text">在「選擇項目」頁面中，選擇要復原的資料夾或文件，然後選擇「繼續」。為了幫助您找到該物品：</block>
@@ -4608,7 +4596,6 @@
   <block id="d3a956cbe0bf78268d257899952f08c7" category="list-text">*Organization admin* 和 *Backup and Recovery super admin*：擁有這些角色的使用者可以檢視所有組織的資源，並且可以探索備份與恢復工作負載並將其指派給專案（例如，US East 或 US West）。</block>
   <block id="57b7754010d1d0d98e95e4196832fff4" category="list-text">*資料夾或專案管理員*和*Backup and Recovery 超級管理員*：擁有這些角色的使用者只能檢視其指派的資料夾或專案中的資源，但可以探索 Backup and Recovery 工作負載並將其指派給該專案。</block>
   <block id="3b4277556de7d3613194280e020b6065" category="paragraph">組織管理員、資料夾管理員或專案管理員可以將 NetApp Console 使用者新增至包含工作負載的專案中。根據使用者的存取需求，為其指派「組織檢視者」角色和「備份與恢復」角色。擁有適當「備份與恢復」角色的使用者將自動取得這些專案中新工作負載的存取權。</block>
-  <block id="88fc0613362536e4ff2a625c2d60a42f" category="paragraph">在使用 NetApp Backup and Recovery 備份 ONTAP 磁碟區之前，請先查看這些限制。</block>
   <block id="d04c100aa8e9be0aa91497c899b0ae70" category="list-text">一次只能選取一個 FlexGroup Volume 進行複寫。您需要為每個 FlexGroup Volume 分別啟動備份。</block>
   <block id="0a1be80c0c91abdd10a795c65987cc4c" category="paragraph">FlexVol® Volume 沒有此類限制：您可以選擇系統中的所有 FlexVol® Volume，並指派相同的備份原則。</block>
   <block id="8e46cbca822594e1ba592a2db6c34e21" category="list-text">具有 SnapMirror 標籤<block ref="b17c9a947d4e38d7975718380fab6b7a" prefix=" " category="inline-code"></block> 和<block ref="02d69a40f5f4cdc817176fabd085b511" prefix=" " category="inline-code"></block> 的關係將不會備份到雲端。</block>
@@ -5301,7 +5288,6 @@
   <block id="d4c627b86ea7fcc97aab9ca0d343fcbe" category="inline-link">使用 ONTAP CLI 建立快照原則</block>
   <block id="4171790834a17f92e35176a29fd09458" category="paragraph"><block ref="244560fcf5d380e290ecd4b178a412c9" category="inline-link-rx"></block> <block ref="d8ea6acc45a89d2ab361031769419dd5" category="inline-link-rx"></block> <block ref="6a671fae687ae09ed6ec2eb759a70329" category="inline-link-rx"></block> <block ref="76f9b86225921137bc166f71caebf3f1" category="inline-link-rx"></block> <block ref="ab2445e139747cf732d46d877cc62a64" category="inline-link-rx"></block> <block ref="9c225a8772c7b3c40b62701739b123cf" category="inline-link-rx"></block></block>
   <block id="32fe9a563ca84556ad18ae2933089bed" category="admonition">這些設定僅適用於備份到物件儲存設備。這些設定不會影響您的快照或複寫設定。</block>
-  <block id="3853002b75aefc21d388f510cae8f516" category="paragraph">「位置」欄位顯示備份檔案（快照）是位於「本機」（來源系統上的快照）、「輔助」（輔助 ONTAP 系統上的複寫 Volume）或「物件儲存」（物件儲存中的備份檔案）。選擇要還原的檔案。</block>
   <block id="bf550c792f32f60cca4d833c734e3139" category="paragraph">如果需要將 PDB 或表空間還原到特定時間點或 SCN：</block>
   <block id="6d26fc4748876aad896b3483365ea28f" category="list-text"><block ref="d77f3c9db249e472a92ac4b41ecc4805" prefix="" category="inline-code"></block> 不能選擇進行時間點恢復。</block>
   <block id="bba24b3818e297fabc67f6f7560b0988" category="list-text">控制檔案還原不能與 PDB 或 PDB 表空間的時間點恢復結合使用。</block>
@@ -5586,7 +5572,6 @@
   <block id="a48a0937fc12df9714feb4f90708686d" category="cell">9.17.1 或更新版本</block>
   <block id="33bb0fb1eb1d7544e65ed467aa0cf274" category="cell">9.19.1 或更新版本</block>
   <block id="9ca7107af6688cc44a1bcc2ce2046b03" category="cell"><block ref="85f823e464828e8803d4ef0669c47bde" prefix="" category="inline-code"></block></block>
-  <block id="abe72bc586e5883f1af04cf80727dc68" category="list-text">最低版本要求為 ONTAP 9.8；建議使用 ONTAP 9.8P13 或更新版本。如果針對 Azure 物件儲存使用 Microsoft Entra ID 驗證，則需要 ONTAP 9.16.1 或更新版本。</block>
   <block id="0c4cf99159d4cd1b532e2ab5e24174cb" category="section-title">搭配 Azure 物件存放區使用 Microsoft Entra ID 驗證的需求</block>
   <block id="42920e377000a5bd5c1d6ca781abb0d8" category="paragraph">如果您不想使用儲存設備帳戶存取金鑰進行 Azure 驗證，可以在建立 Azure 物件儲存桶或編輯現有 Azure 儲存桶組態時，為 Azure 物件儲存啟用 Microsoft Entra ID 驗證。此選項適用於執行 ONTAP 9.16.1 或更新版本的 Azure 系統中的 Cloud Volumes ONTAP。</block>
   <block id="19491804ac62048a8e851071df62ae81" category="admonition">您可以在同一 Cloud Volumes ONTAP 系統中為不同的物件存放區組態使用不同的驗證方法，但是在將物件存放區組態交換器為使用 Microsoft Entra ID 後，就無法再交換器回使用儲存設備帳戶金鑰。</block>
@@ -5890,7 +5875,6 @@
   <block id="4673e46faba78d14200a232a440349f4" category="cell">Google Cloud NetApp Volumes Flex（僅限 Oracle 資料庫和 VMware 工作負載）</block>
   <block id="13b13feeb79c410e7ea4bc459d2d8402" category="cell">Google Cloud NetApp Volumes Flex</block>
   <block id="3569ba028d06272de9c6ad7b95cc26a3" category="cell">Amazon FSx for NetApp ONTAP （僅限 Microsoft SQL Server、Oracle 資料庫和 VMware 工作負載）</block>
-  <block id="5ac62c42b8923cbbcf88a944aa9e62b6" category="cell">Amazon S3（僅限 Cloud Volumes ONTAP）</block>
   <block id="4aae266054b7913b4a49b5bba6b2cb50" category="paragraph">您可以將位於二線系統（複寫的 Volume）或物件儲存（備份檔案）中的備份檔案、虛擬機器、資料庫或 Kubernetes 資源中的資料還原到下列系統。快照位於來源系統上，並且只能還原到同一系統。</block>
   <block id="9765ad2ecfd61a46ff868e7596bf496d" category="cell">備份位置（物件存放區）</block>
   <block id="989d412f8649103b82711fd2a6496fb7" category="cell">從物件儲存（備份）還原時的目的地系統</block>
@@ -6208,7 +6192,6 @@
   <block id="2ba14c31a5cd1dcfcf78ba9dd0b173ea" category="list-text">您可以在啟動精靈中選擇您自己的客戶管理金鑰進行資料加密，而不是使用預設的 Amazon S3 加密金鑰。在這種情況下，您必須已經設定好您的客戶管理金鑰<block ref="bfab1fe336406f519c233add80b595e0" category="inline-link-rx"></block>。</block>
   <block id="1a573cf6c5b90e5234648544f637c007" category="paragraph">對於可讓您將 Cloud Volumes ONTAP 和 NetApp Backup and Recovery 套裝組合的年度合約，您必須在建立 Cloud Volumes ONTAP 系統時設定年度合約。此選項無法讓您備份內部部署資料。</block>
   <block id="6ac43c9fe45432435d11754f7b1babda" category="summary">使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP Volume 備份至 Azure Blob 儲存設備，驗證要求，啟用服務，並啟動 Volume 上的備份。</block>
-  <block id="0a8461b58da7ccc36b3bc75d5030787c" category="doc">使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 備份至 Azure Blob 儲存設備</block>
   <block id="0adefc171c98e2ac46b7ef622d5fb68c" category="paragraph">在開始將 Volume 備份到 Azure Blob Storage 之前，請確保您擁有受支援的組態。</block>
   <block id="fd6f6cfbcc0f027a5ca4938551521483" category="paragraph">映像顯示每個元件，以及您需要在它們之間準備的連線。</block>
   <block id="e4f2cf3e78109b76607eefab66233fee" category="paragraph">您可以在啟動精靈中使用自己的客戶管理金鑰來進行資料加密，而非使用預設的 Microsoft 管理加密金鑰。在這種情況下，您需要 Azure 訂閱、Key Vault 名稱與金鑰<block ref="50f2f49feb0afd07f1969b5faf2ca775" category="inline-link-rx"></block>。</block>
@@ -6241,7 +6224,6 @@
   <block id="aed6081e6b39b0f616e97e05abde6070" category="list-text">如果您已有控制台代理程式，請繼續。選取 *下一步*。</block>
   <block id="875377740ffdb9fd65883d8f5f95f8a2" category="paragraph">審查您的選擇，如有必要，請進行調整。</block>
   <block id="401c59f52c47c3c4b984bfc788839dfe" category="summary">準備您的環境，並使用 NetApp Backup and Recovery 啟動內部部署 ONTAP Volume 至 Azure Blob 儲存體的備份。</block>
-  <block id="d72ef1702405f2f64b59cc8391f6dc18" category="doc">使用 NetApp Backup and Recovery 將內部部署 ONTAP 資料備份至 Azure Blob Storage</block>
   <block id="b1f63824a1523dc4f50c45ba64cbf3bc" category="paragraph">在 NetApp Backup and Recovery 中，您可以將 Volume 資料從內部部署 ONTAP 系統備份到次要儲存設備系統和 Azure Blob 儲存體。準備您的環境，然後啟動備份以保護您的 Volume。</block>
   <block id="ba6e8196539afe3c8d483bc06ae08171" category="list-text">若要使 NetApp Backup and Recovery 搜尋與還原功能正常運作，必須開啟連接埠 1433，以便在主控台代理程式與 Azure Synapse SQL 服務之間進行通訊。</block>
   <block id="a43704ace6b36177b1a3b4122d1f532f" category="paragraph">NetApp Backup and Recovery 支援 _Azure 存取原則_ 作為權限模型。目前不支援 _Azure 角色型存取控制_ （Azure RBAC）權限模型。</block>
@@ -6380,4 +6362,46 @@
   <block id="6520af307bf6809e056c119993409d88" category="paragraph">*範例*：如果您有從凌晨 1:00 開始、每 5 小時重複一次的 SnapCenter 每小時原則，NetApp Backup and Recovery（移轉後）會將排程設定為每日，間隔 5 小時，分別在凌晨 1:00、上午 6:00、上午 11:00、下午 4:00 和晚上 9:00。某些小時會被跳過。晚上 9:00 之後，下一個快照應該在凌晨 2:00 進行，以保持每 5 小時重複一次，但它總是在凌晨 1:00 進行。</block>
   <block id="b3fc5c8e269244553faa46f55c0d5afd" category="summary">使用適用於您部署類型的 Docker 或 Podman 命令，從主控台代理程式主機重新啟動 NetApp Backup and Recovery。</block>
   <block id="a1d1c459bfe9fc7ab52f461d8eb57876" category="summary">尋找控制每個使用者可存取哪些 NetApp Backup and Recovery 功能與動作的 IAM 角色。</block>
+  <block id="fe137bb7e7054941bc9c91c50085f74f" category="list-text">*Amazon FSx for NetApp ONTAP 支援磁碟對磁碟備份架構*：您現在可以建立 Kubernetes 保護原則，這些原則使用磁碟對磁碟備份架構，並以 Amazon FSx for NetApp ONTAP 作為主儲存設備，以及將另一個 FSx for NetApp ONTAP 檔案系統作為次要儲存設備，位於同一個 AWS 區域或不同的 AWS 區域。您也可以使用 Cloud Volumes ONTAP 作為主儲存設備，並將 FSx for NetApp ONTAP 作為次要儲存設備。</block>
+  <block id="f0fe6c245af38530401dcf0ad8dfed35" category="list-text">*修正 qtree 還原問題*：ontap-nas-economy Volume 還原先前會還原擁有者和權限不正確的 qtree 目錄。此問題已在此版本中解決。</block>
+  <block id="28a7fe5c0d3dddc8f87571ff9c276c1d" category="paragraph">如需建立 Kubernetes 保護原則的詳細資訊，請參閱<block ref="bfe6c4e3e3b18b6562d50ee9cf2c4f82" category="inline-link-rx"></block>。</block>
+  <block id="04df59aebaa27ff65cee06cd27064bff" category="list-text">*還原介面改進*：ONTAP Volume 的還原精靈採用了全新的版面配置與改進的導覽：</block>
+  <block id="335272593837dc282e2df95a4a0177c6" category="list-text">*改進的選擇表格*：選擇表格一次顯示更多列與欄。還原畫面採用更優化的間距和導覽路徑，讓您能了解自己目前在工作流程中的位置。</block>
+  <block id="f0e5c0e1059e3a13f23bf2b09cc506f2" category="list-text">*逐步導覽*：*下一步*和*繼續*按鈕的功能已改進，避免您意外跳到下一個主要步驟。*上一步*按鈕會將您帶回上次完成的畫面，並保留您先前的選擇，因此您無需重新啟動該步驟。</block>
+  <block id="e32f3db58cd6a52e42519a253337192b" category="list-text">*選擇來源 Volume 時可查看更多詳細資訊*：Volume 清單現在顯示 Volume 類型、Volume 樣式、SnapLock 類型、現有保護和保護健全狀況。「現有保護」欄位更寬，因此您可以查看所有保護指標（快照、複寫和備份）。</block>
+  <block id="da6b444d508815a1ee28ad87ca1663f9" category="list-text">*支援保護託管在 Azure 中國區域的 Volume*：您現在可以將 ONTAP Volume 備份到 Azure 中國（世紀互聯）的 Azure Blob 儲存設備。此支援適用於 Cloud Volumes ONTAP 和內部部署 ONTAP 系統。商業 Azure 和 Azure 政府區域保持不變。</block>
+  <block id="14416421c32790bf85fab615846254ca" category="paragraph">在使用適用於 ONTAP Volume 的 NetApp Backup and Recovery 之前，請審查影響備份、複寫和還原作業的已知限制。</block>
+  <block id="fdaca2afe78b2cea2e2f9c64c7edcb19" category="list-text">只有在 Console 代理程式部署於 Azure 中國區域時，NetApp Backup and Recovery 才能將 Cloud Volumes ONTAP 和內部部署的 ONTAP 系統備份至 Microsoft Azure 中國（21Vianet）區域的 Azure Blob 儲存設備。位於商業 Azure 區域、Azure Government 或內部部署的 Console 代理程式無法備份至 Azure 中國。Console 代理程式也必須以標準模式執行，而非受限模式。</block>
+  <block id="e88a36fd67132b05254981c68926aab6" category="list-text">不支援級聯配置（即從 Volume A 複寫到 Volume B，再從 Volume B 複寫到 Volume C）。支援從 Volume A 複寫到 Volume B。</block>
+  <block id="c861d15f37332a4a81b2f76e51b35a84" category="list-text">備份資料時，NetApp Backup and Recovery 不會保留 NetApp Volume 加密（NVE）。NVE Volume 上的加密資料會在傳輸至目的地時解密，且不會保留加密。</block>
+  <block id="72bdf8f4dafb7832ebc8e2b3d79633e4" category="list-text">Amazon FSx for NetApp ONTAP（僅限 Kubernetes 工作負載）</block>
+  <block id="f1fe406d251959b551346911bb9e70eb" category="cell">Amazon FSx for NetApp ONTAP （僅限 Microsoft SQL Server、Oracle Database、VMware 和 Kubernetes 工作負載）</block>
+  <block id="186470bf0d26e8e5ab1ee24f2acbb926" category="list-text">Amazon FSx for NetApp ONTAP 在相同或不同的 AWS 區域（僅限 Kubernetes 工作負載）</block>
+  <block id="02b36d5d2867083e930cd24a7ec2004f" category="cell">Amazon S3（僅限 Cloud Volumes ONTAP；不適用於 Kubernetes 工作負載）</block>
+  <block id="227450ed1235c305581924d014ebf3e3" category="list-text">*磁碟對磁碟*：主儲存設備（磁碟）到次要儲存設備（磁碟）。ONTAP 到 ONTAP 資料保護策略會在兩個 ONTAP 系統之間複寫資料，以確保高可用度與災難恢復。這通常是使用 SnapMirror 來達成，它支援同步與非同步複寫。此方法可讓您的資料在不同位置保持更新與可用，以提供強大的資料保護。對於 Amazon FSx for NetApp ONTAP，您可以將一個 FSx for NetApp ONTAP 檔案系統作為主儲存設備，並將另一個 FSx for NetApp ONTAP 檔案系統作為次要儲存設備，這兩個檔案系統可以位於相同的 AWS 區域或不同的 AWS 區域。您也可以使用 Cloud Volumes ONTAP 作為主儲存設備，並將 FSx for NetApp ONTAP 作為次要儲存設備。</block>
+  <block id="48d0ab545e0e4640a771800e57203914" category="list-text">Amazon FSx for NetApp ONTAP 支援作為主儲存設備或次要儲存設備，並採用磁碟對磁碟備份架構。Kubernetes 叢集必須是在 AWS 上執行的自我管理叢集。</block>
+  <block id="2093b28ab56b30de9a797c9c2153efc2" category="doc">使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 備份到 Azure Blob</block>
+  <block id="988ec48b0201495ae885d2069c5c039e" category="list-text">最低版本要求為 ONTAP 9.8；建議使用 ONTAP 9.8P13 或更新版本。如果您針對 Azure 物件儲存使用 Microsoft Entra ID 驗證，則需要 ONTAP 9.16.1 或更新版本。</block>
+  <block id="24d0c1000735c07c100643dfd2c657a5" category="list-text">所有 Azure 商業區域和 Azure 政府區域均支援 NetApp Backup and Recovery。</block>
+  <block id="4b7f7241adc0866f93f6b5c5efe51116" category="paragraph">當 Console 代理程式部署在 Azure 中國區域（中國東部、中國東部 2、中國東部 3、中國北部、中國北部 2 或中國北部 3）時，Azure 中國（世紀互聯）區域也支援 NetApp Backup and Recovery。Console 代理程式會根據其所在區域，自動使用 Azure 中國管理、登入及 Blob 儲存設備端點。位於其他 Azure 雲端中的 Console 代理程式無法備份至 Azure 中國。如需 Azure 中國的 Console 代理程式需求詳細資料，請參閱 <block ref="9fa9ecad0fff4855b8674bbd19f98b10" category="inline-xref-macro-rx"></block>。</block>
+  <block id="f0d95de32c66af67d2001f5de2d918ea" category="paragraph">若要備份到 Azure China，請在 Azure China 區域中以標準模式部署 NetApp Console 代理程式（不支援受限模式）。允許從 NetApp Console 代理程式傳出 HTTPS（連接埠 443）到<block ref="c47032ae4cfd6c7a16fbace8a91861b3" prefix=" " category="inline-code"></block>，包括<block ref="3bfccc2d6d33c6f24783c29a56602fbd" prefix=" " category="inline-code"></block>和<block ref="14392ea92ffddff9801ea7a9f0f2f86f" prefix=" " category="inline-code"></block>，以及 NetApp Console 代理程式所需的其他端點。</block>
+  <block id="102036d1d4f838cf832b1a662ee0517e" category="list-text">在 Backup and Recovery 欄中選取 *Volumes*。從 Volumes 索引標籤中，選取 *Actions* <block ref="29668165f4efcae1e525eece87489e44" category="inline-image-macro-rx" type="image"></block> 圖示，然後為單一 Volume（尚未啟用複寫或備份至物件儲存）選取 *Activate Backup*。</block>
+  <block id="f9e82c6f2854f301e4c58181c4eee10b" category="list-text">選擇第一個 Volume 後，您可以選擇所有 FlexVol Volume。（FlexGroup Volume 一次只能選擇一個。）若要備份所有現有的 FlexVol Volume，請先勾選一個 Volume，然後勾選標題列中的核取方塊。</block>
+  <block id="dddd7d1da656de63ec6e7d5042bff42c" category="list-text">*本機快照*：如果您要對物件儲存執行複寫或備份，則必須建立本機快照。</block>
+  <block id="f3fb5f9a87aeb5359c71827c1f2d8202" category="list-text">*加密金鑰*：如果您建立了新的 Azure 儲存設備帳戶，請輸入供應商提供給您的加密金鑰資訊。選擇您要使用預設的 Azure 加密金鑰，還是從您的 Azure 帳戶中選擇您自己的客戶管理金鑰，來管理資料的加密。</block>
+  <block id="2a2cdc5cb95060a92466fc8878e6847d" category="list-text">（選用）勾選 *自動將快照原則標籤與複寫和備份原則標籤同步* 核取方塊。這會建立標籤與複寫和備份原則中的標籤相符的快照。</block>
+  <block id="8b741c2a741d1d766a67affa55e3ef6c" category="doc">使用 NetApp Backup and Recovery 將內部部署 ONTAP 資料備份至 Azure Blob</block>
+  <block id="abb4cff70bb4b1b1c967ffb03681289b" category="paragraph">若要備份到 Azure China （21Vianet） 的 Azure Blob 儲存設備，您必須在 Azure China 區域以標準模式部署 Console 代理程式。安裝在您內部部署、商業 Azure 區域或 Azure Government 的 Console 代理程式無法備份到 Azure China。</block>
+  <block id="3d78cd61a91d4674e9ff79cf574244ca" category="list-text">透過連接埠 443 建立至 NetApp Backup and Recovery 以及 Blob 物件儲存的 HTTPS 連線 <block ref="a7858263bce6ec9551f5c1d76a8113be" category="inline-link-rx"></block>）。對於 Azure China，Console 代理程式還必須能夠連線至<block ref="c47032ae4cfd6c7a16fbace8a91861b3" prefix=" " category="inline-code"></block>，包括<block ref="3bfccc2d6d33c6f24783c29a56602fbd" prefix=" " category="inline-code"></block>和<block ref="14392ea92ffddff9801ea7a9f0f2f86f" prefix=" " category="inline-code"></block>。</block>
+  <block id="69ef1149b2b0a97a52355790598221e1" category="paragraph">您可以將內部部署系統的備份建立至所有 Azure 商業區域與 Azure 政府區域的 Azure Blob。設定服務時，您可以指定儲存備份的區域。</block>
+  <block id="b016245f5251d8fa6cf9fd728e2f5341" category="paragraph">當 Console 代理程式部署在 Azure 中國區域時，您也可以在 Azure 中國（世紀互聯）區域（中國東部、中國東部 2、中國東部 3、中國北部、中國北部 2 和中國北部 3）建立備份至 Azure Blob。Console 代理程式會根據其所在區域自動使用 Azure 中國端點，並在 Console 代理程式所在的區域中建立備份儲存設備帳戶。</block>
+  <block id="8a2074fc72f565c72e00f3f82188f6f4" category="list-text">ONTAP 叢集從叢集間 LIF 透過 443 連接埠起始 HTTPS 連線至 Azure Blob 儲存設備，以進行備份與恢復作業。對於 Azure 中國，叢集間 LIF 需要透過 443 連接埠對<block ref="098b00a80d1d110eeab1824e05fa9c62" prefix=" " category="inline-code"></block>進行傳出存取。如果 LIF 沒有傳出路徑，則在物件存放區驗證期間，備份將因連線逾時錯誤而失敗。</block>
+  <block id="dd2a99115a39a73e0bfc6691b1b8a202" category="paragraph">ONTAP 從物件儲存讀取和寫入資料。物件儲存從不主動發起連線。它只負責回應。</block>
+  <block id="0048efd63afc8fc2c207259db9eb706e" category="paragraph">NetApp Console 提供多種部署模式，讓您以符合業務和安全性需求的方式使用 Console。_Standard mode_ 使用 Console SaaS 階層來提供完整功能，而 _受限模式_ 和 _private mode_ 則適用於有連線限制的組織。</block>
+  <block id="fb515af606b4ad6dec3b59a0287b4cae" category="paragraph">若要備份到 Azure 中國（21Vianet）的 Azure Blob 儲存設備，請在 Azure 中國區域中以標準模式部署 Console 代理程式。如需詳細資訊，請參閱上文列出的 Azure 備份程序。</block>
+  <block id="b97d3217cda156b35d7550657e198f11" category="list-text">在 _選擇來源_ 頁面中，導覽至要還原的 Volume 的備份檔案。選擇 *系統*、*Volume* 以及具有要還原的日期/時間戳記的 *快照*。選擇後，系統將自動進入精靈的下一個子步驟。</block>
+  <block id="162b7a075ce1777720bbfe981dc2d0b4" category="paragraph">*位置* 列顯示快照是 *本機*（來源系統上的快照）、*次要*（次要 ONTAP 系統上的複寫 Volume）或 *物件儲存*（物件儲存中的備份檔案）。選擇要還原的檔案。</block>
+  <block id="99507a0ea5e9c66da18a8b9e395857a3" category="list-text">在 _選擇來源_ 頁面中，導覽至包含您要還原之資料夾或檔案的 Volume 的備份檔案。選擇 *系統*、*Volume* 以及具有您要從中還原檔案之日期/時間戳記的 *快照*。當您進行選擇後，將會自動進入精靈的下一個子步驟。</block>
+  <block id="520d1813f543362134c5608776ef99ae" category="list-text">選擇快照後，選擇 *下一步*，將顯示 Volume 備份中的資料夾和檔案清單。</block>
+  <block id="915ff3f4971afffdc671ac4bb1e52630" category="section-title">2026年11月23日</block>
 </blocks>

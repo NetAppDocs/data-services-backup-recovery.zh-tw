@@ -4,7 +4,7 @@ permalink: prev-ontap-backup-cvo-azure.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP Volume 備份至 Azure Blob 儲存設備，驗證要求，啟用服務，並啟動 Volume 上的備份。 
 ---
-= 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 備份至 Azure Blob 儲存設備
+= 使用 NetApp Backup and Recovery 將 Cloud Volumes ONTAP 備份到 Azure Blob
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -32,10 +32,12 @@ NOTE: 若要切換至NetApp Backup and Recovery工作負載，請參閱link:br-s
 
 image:diagram_cloud_backup_cvo_azure.png["此圖顯示了NetApp Backup and Recovery如何與來源系統上的磁碟區以及備份檔案所在的目標儲存裝置進行通訊。"]
 
-支援的 ONTAP 版本:: 最低版本要求為 ONTAP 9.8；建議使用 ONTAP 9.8P13 或更新版本。如果針對 Azure 物件儲存使用 Microsoft Entra ID 驗證，則需要 ONTAP 9.16.1 或更新版本。
-支援的 Azure 區域:: 所有 Azure 區域（包括 Azure 政府區域）都支援NetApp Backup and Recovery。
+支援的 ONTAP 版本:: 最低版本要求為 ONTAP 9.8；建議使用 ONTAP 9.8P13 或更新版本。如果您針對 Azure 物件儲存使用 Microsoft Entra ID 驗證，則需要 ONTAP 9.16.1 或更新版本。
+支援的 Azure 區域:: 所有 Azure 商業區域和 Azure 政府區域均支援 NetApp Backup and Recovery。
 +
 --
+當 Console 代理程式部署在 Azure 中國區域（中國東部、中國東部 2、中國東部 3、中國北部、中國北部 2 或中國北部 3）時，Azure 中國（世紀互聯）區域也支援 NetApp Backup and Recovery。Console 代理程式會根據其所在區域，自動使用 Azure 中國管理、登入及 Blob 儲存設備端點。位於其他 Azure 雲端中的 Console 代理程式無法備份至 Azure 中國。如需 Azure 中國的 Console 代理程式需求詳細資料，請參閱 <<準備控制台代理>>。
+
 預設情況下， NetApp Backup and Recovery為 Blob 容器提供本機冗餘 (LRS) 以優化成本。如果您想要確保資料在不同區域之間複製，則可以在啟動NetApp Backup and Recovery後將此設定變更為區域冗餘 (ZRS)。請參閱 Microsoft 說明 https://learn.microsoft.com/en-us/azure/storage/common/redundancy-migration?tabs=portal["變更儲存帳戶的複製方式"^]。
 
 --
@@ -78,6 +80,8 @@ NOTE: 您可以在同一 Cloud Volumes ONTAP 系統中為不同的物件存放�
 == 準備控制台代理
 
 控制台代理可以安裝在具有完全或有限網際網路存取權限（「標準」或「受限」模式）的 Azure 區域。 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["有關詳細信息，請參閱NetApp Console部署模式"^] 。
+
+若要備份到 Azure China，請在 Azure China 區域中以標準模式部署 NetApp Console 代理程式（不支援受限模式）。允許從 NetApp Console 代理程式傳出 HTTPS（連接埠 443）到 `*.chinacloudapi.cn`，包括 `login.chinacloudapi.cn`和 `management.chinacloudapi.cn`，以及 NetApp Console 代理程式所需的其他端點。
 
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解控制台代理"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["在 Azure 中以標準模式（完全網際網路存取）部署控制台代理"^]
@@ -278,7 +282,7 @@ NOTE: 如果您想要選擇資源組的名稱，請在部署Cloud Volumes ONTAP�
 +
 如果備份的 Azure 目標作為系統存在於 *系統* 頁面上，則可以將ONTAP叢集拖曳到 Azure Blob 物件儲存體上。
 
-** 在備份和復原欄中選擇*卷*。從磁碟區選項卡中，選擇*操作*image:icon-action.png["操作圖示"]圖示並選擇單一磁碟區（尚未啟用複製或備份到物件儲存）的*啟動備份*。
+** 在 Backup and Recovery 欄中選取 *Volumes*。從 Volumes 索引標籤中，選取 *Actions* image:icon-action.png["操作圖示"] 圖示，然後為單一 Volume（尚未啟用複寫或備份至物件儲存）選取 *Activate Backup*。
 
 
 +
@@ -314,7 +318,7 @@ NOTE: 如果您想要選擇資源組的名稱，請在部署Cloud Volumes ONTAP�
 . 在「選擇卷」頁面中，選擇要保護的一個或多個磁碟區。
 +
 ** 或者，過濾行以僅顯示具有特定卷類型、樣式等的捲，以便更輕鬆地進行選擇。
-** 選擇第一個磁碟區後，您可以選擇所有FlexVol磁碟區。 （一次只能選擇一個FlexGroup磁碟區。）若要備份所有現有的FlexVol卷，請先選取一個卷，然後選取標題行中的框。
+** 選擇第一個 Volume 後，您可以選擇所有 FlexVol Volume。（FlexGroup Volume 一次只能選擇一個。）若要備份所有現有的 FlexVol Volume，請先勾選一個 Volume，然後勾選標題列中的核取方塊。
 ** 若要備份單一卷，請選取每個卷對應的複選框。
 
 
@@ -342,7 +346,7 @@ NOTE: 如果您選擇的磁碟區具有與您在此步驟中選擇的策略不�
 .步驟
 . 在「定義備份策略」頁面中，選擇以下一項或全部。預設情況下，這三項均已選取：
 +
-** *本機快照*：如果您正在執行複製或備份到物件存儲，則必須建立本機快照。
+** *本機快照*：如果您要對物件儲存執行複寫或備份，則必須建立本機快照。
 ** *複製*：在另一個ONTAP儲存系統上建立複製磁碟區。
 ** *備份*：將磁碟區備份到物件儲存。
 
@@ -410,7 +414,7 @@ TIP: 如果您想保護備份檔案不被修改或刪除，請確認建立儲存
 
 
 
-** *加密金鑰*：如果您建立了新的 Azure 儲存體帳戶，請輸入提供者提供給您的加密金鑰資訊。選擇是否使用預設 Azure 加密金鑰，或從 Azure 帳戶中選擇您自己的客戶管理金鑰來管理資料加密。
+** *加密金鑰*：如果您建立了新的 Azure 儲存設備帳戶，請輸入供應商提供給您的加密金鑰資訊。選擇您要使用預設的 Azure 加密金鑰，還是從您的 Azure 帳戶中選擇您自己的客戶管理金鑰，來管理資料的加密。
 +
 如果您選擇使用自己的客戶管理金鑰，請輸入金鑰保管庫和金鑰資訊。 https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview["了解如何使用自己的密鑰"^] 。
 
@@ -457,7 +461,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 
 .步驟
 . 在「審核」頁面中，審核您的選擇。
-. 您可以選擇勾選「自動將快照原則標籤與複寫和備份原則標籤同步」複選框。這將建立標籤與複寫和備份原則中的標籤相符的快照。
+. （選用）勾選 *自動將快照原則標籤與複寫和備份原則標籤同步* 核取方塊。這會建立標籤與複寫和備份原則中的標籤相符的快照。
 . 選擇*啟動備份*。
 
 

@@ -258,7 +258,7 @@ NOTE: 在 Azure 中建立用作備份目的地的容器時，請確保您建立�
 
 如果您已使用 Console 管理儲存設備，則 Console 代理程式已安裝。如果您打算將同一個 Console 代理程式用於 NetApp Backup and Recovery，則一切就緒。如果您需要使用不同的 Console 代理程式，請在開始實作備份與還原之前先安裝。
 
-NetApp Console提供多種部署模式，讓您能夠以滿足業務和安全要求的方式使用控制台。  _標準模式_利用控制台 SaaS 層提供全部功能，而_限制模式_和_私人模式_適用於有連線限制的組織。
+NetApp Console 提供多種部署模式，讓您以符合業務和安全性需求的方式使用 Console。_Standard mode_ 使用 Console SaaS 階層來提供完整功能，而 _受限模式_ 和 _private mode_ 則適用於有連線限制的組織。
 
 https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解有關NetApp Console部署模式的更多信息"^]。
 
@@ -280,6 +280,8 @@ https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["了解有�
 * link:prev-ontap-backup-onprem-storagegrid.html["將本地ONTAP資料備份到StorageGRID"]
 * link:prev-ontap-backup-onprem-ontaps3.html["將本地ONTAP備份到ONTAP S3"]
 
+
+若要備份到 Azure 中國（21Vianet）的 Azure Blob 儲存設備，請在 Azure 中國區域中以標準模式部署 Console 代理程式。如需詳細資訊，請參閱上文列出的 Azure 備份程序。
 
 
 

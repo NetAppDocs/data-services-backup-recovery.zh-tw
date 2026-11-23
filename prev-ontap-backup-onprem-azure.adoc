@@ -4,7 +4,7 @@ permalink: prev-ontap-backup-onprem-azure.html
 keywords: backing up, back up, backup, backup application data, Amazon Web services, AWS, NetApp Backup and Recovery, Oracle database, Microsoft SQL Server database, SAP HANA database 
 summary: 準備您的環境，並使用 NetApp Backup and Recovery 啟動內部部署 ONTAP Volume 至 Azure Blob 儲存體的備份。 
 ---
-= 使用 NetApp Backup and Recovery 將內部部署 ONTAP 資料備份至 Azure Blob Storage
+= 使用 NetApp Backup and Recovery 將內部部署 ONTAP 資料備份至 Azure Blob
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -59,6 +59,8 @@ image:diagram_cloud_backup_onprem_azure_private.png["此圖顯示了NetApp Backu
 
 如果沒有，那麼您需要在其中一個位置建立一個控制台代理，以將ONTAP資料備份到 Azure Blob 儲存體。您不能使用部署在其他雲端提供者的控制台代理程式。
 
+若要備份到 Azure China （21Vianet） 的 Azure Blob 儲存設備，您必須在 Azure China 區域以標準模式部署 Console 代理程式。安裝在您內部部署、商業 Azure 區域或 Azure Government 的 Console 代理程式無法備份到 Azure China。
+
 * https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["了解控制台代理"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["在 Azure 中安裝控制台代理"^]
 * https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["在您的場所安裝控制台代理"^]
@@ -78,7 +80,7 @@ NetApp Backup and Recovery 在 Azure 政府區域中受到支援，前提是 Con
 .步驟
 . 確保安裝控制台代理程式的網路啟用以下連線：
 +
-** 透過連接埠 443 建立到NetApp Backup and Recovery以及 Blob 物件儲存的 HTTPS 連接(https://docs.netapp.com/us-en/console-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["查看端點列表"^]）
+** 透過連接埠 443 建立至 NetApp Backup and Recovery 以及 Blob 物件儲存的 HTTPS 連線 (https://docs.netapp.com/us-en/console-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["查看端點列表"^]）。對於 Azure China，Console 代理程式還必須能夠連線至 `*.chinacloudapi.cn`，包括 `login.chinacloudapi.cn`和 `management.chinacloudapi.cn`。
 ** 透過連接埠 443 建立到ONTAP叢集管理 LIF 的 HTTPS 連接
 ** 若要使 NetApp Backup and Recovery 搜尋與還原功能正常運作，必須開啟連接埠 1433，以便在主控台代理程式與 Azure Synapse SQL 服務之間進行通訊。
 ** Azure 和 Azure 政府部署需要額外的入站安全性群組規則。看 https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Azure 中的控制台代理程式規則"^]了解詳情。
@@ -182,7 +184,9 @@ https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.ht
 
 *支援地區*
 
-您可以在所有區域（包括 Azure 政府區域）中建立從本機系統到 Azure Blob 的備份。您在設定服務時指定儲存備份的區域。
+您可以將內部部署系統的備份建立至所有 Azure 商業區域與 Azure 政府區域的 Azure Blob。設定服務時，您可以指定儲存備份的區域。
+
+當 Console 代理程式部署在 Azure 中國區域時，您也可以在 Azure 中國（世紀互聯）區域（中國東部、中國東部 2、中國東部 3、中國北部、中國北部 2 和中國北部 3）建立備份至 Azure Blob。Console 代理程式會根據其所在區域自動使用 Azure 中國端點，並在 Console 代理程式所在的區域中建立備份儲存設備帳戶。
 
 
 
@@ -243,9 +247,9 @@ https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-sn
 
 需滿足以下ONTAP集群網路需求：
 
-* ONTAP叢集透過連接埠 443 啟動從叢集間 LIF 到 Azure Blob 儲存體的 HTTPS 連接，以執行備份和還原作業。
+* ONTAP 叢集從叢集間 LIF 透過 443 連接埠起始 HTTPS 連線至 Azure Blob 儲存設備，以進行備份與恢復作業。對於 Azure 中國，叢集間 LIF 需要透過 443 連接埠對 `<storage_account>.blob.core.chinacloudapi.cn`進行傳出存取。如果 LIF 沒有傳出路徑，則在物件存放區驗證期間，備份將因連線逾時錯誤而失敗。
 +
-ONTAP從物件儲存讀取和寫入資料。物件儲存從不啟動，它只是響應。
+ONTAP 從物件儲存讀取和寫入資料。物件儲存從不主動發起連線。它只負責回應。
 
 * ONTAP需要從控制台代理到叢集管理 LIF 的入站連線。控制台代理程式可以駐留在 Azure VNet 中。
 * 每個託管要備份的磁碟區的ONTAP節點上都需要一個叢集間 LIF。  LIF 必須與ONTAP用於連接物件儲存的 _IPspace_ 相關聯。 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["了解有關 IP 空間的更多信息"^] 。
@@ -508,7 +512,7 @@ TIP: 若要在啟動備份之前建立自訂策略，請參閱link:br-use-polici
 [[review-your-selections]]
 === 檢查您的選擇
 
-這是審查您的選擇並在必要時進行調整的機會。
+審查您的選擇，如有必要，請進行調整。
 
 .步驟
 . 在「審核」頁面中，審核您的選擇。

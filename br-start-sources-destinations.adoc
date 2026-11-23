@@ -50,6 +50,7 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 | AWS 中的Cloud Volumes ONTAP  a| 
 * AWS 中的Cloud Volumes ONTAP
 * 本地ONTAP系統
+* Amazon FSx for NetApp ONTAP（僅限 Kubernetes 工作負載）
 
 | 亞馬遜 S3 
 
@@ -86,7 +87,11 @@ NOTE: 目前，Wasabi 是唯一獲得認證的 S3 相容物件儲存提供者。
 | Google Cloud NetApp Volumes Flex（僅限 Oracle 資料庫和 VMware 工作負載） | Google Cloud NetApp Volumes Flex | Google 雲端儲存 
 
 
-| Amazon FSx for NetApp ONTAP （僅限 Microsoft SQL Server、Oracle 資料庫和 VMware 工作負載） | AWS 中的Cloud Volumes ONTAP | Amazon S3（僅限 Cloud Volumes ONTAP） 
+| Amazon FSx for NetApp ONTAP （僅限 Microsoft SQL Server、Oracle Database、VMware 和 Kubernetes 工作負載）  a| 
+* AWS 中的Cloud Volumes ONTAP
+* Amazon FSx for NetApp ONTAP 在相同或不同的 AWS 區域（僅限 Kubernetes 工作負載）
+
+| Amazon S3（僅限 Cloud Volumes ONTAP；不適用於 Kubernetes 工作負載） 
 |===
 
 NOTE: 文中提到的「內部部署 ONTAP 系統」包括 FAS、AFF 和 ONTAP Select 系統。

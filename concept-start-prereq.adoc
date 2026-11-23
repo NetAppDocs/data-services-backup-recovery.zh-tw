@@ -465,6 +465,10 @@ NOTE: 需要 ONTAP 9.19.1 或更新版本，才能支援每個系統跨不同雲
 NOTE: NetApp 強烈建議為用於 Kubernetes 工作負載的 Console 代理程式指派靜態 IP 位址，以避免在代理程式 IP 位址變更時出現問題。
 
 * 主要 ONTAP 系統（不支援 ASA r2 系統）
++
+** Amazon FSx for NetApp ONTAP 支援作為主儲存設備或次要儲存設備，並採用磁碟對磁碟備份架構。Kubernetes 叢集必須是在 AWS 上執行的自我管理叢集。
+
+
 * NetApp Trident 25.06 至 26.06
 * NetApp Trident Protect 26.08 或更高版本（在 Kubernetes 叢集發現期間安裝）
 * Kubernetes 叢集 - 支援的 Kubernetes 發行版和版本包括  https://docs.netapp.com/us-en/trident/trident-protect/trident-protect-requirements.html["Trident Protect"] 支援的版本。

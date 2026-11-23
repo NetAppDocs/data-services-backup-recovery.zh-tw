@@ -1,0 +1,37 @@
+= Kubernetes 工作負載增強功能
+:allow-uri-read: 
+
+
+
+
+[[kubernetes-workloads-enhancements]]
+=== Kubernetes 工作負載增強功能
+
+在此版本中，NetApp Backup and Recovery 針對 Kubernetes 工作負載引入了以下增強功能：
+
+* *Amazon FSx for NetApp ONTAP 支援磁碟對磁碟備份架構*：您現在可以建立 Kubernetes 保護原則，這些原則使用磁碟對磁碟備份架構，並以 Amazon FSx for NetApp ONTAP 作為主儲存設備，以及將另一個 FSx for NetApp ONTAP 檔案系統作為次要儲存設備，位於同一個 AWS 區域或不同的 AWS 區域。您也可以使用 Cloud Volumes ONTAP 作為主儲存設備，並將 FSx for NetApp ONTAP 作為次要儲存設備。
+* *修正 qtree 還原問題*：ontap-nas-economy Volume 還原先前會還原擁有者和權限不正確的 qtree 目錄。此問題已在此版本中解決。
+
+
+如需建立 Kubernetes 保護原則的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-kubernetes-create.html["在 NetApp Backup and Recovery 中建立及管理 Kubernetes 備份原則"^]。
+
+有關保護 Kubernetes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-kubernetes-protect-overview.html["了解如何使用 NetApp Backup and Recovery 保護 Kubernetes 工作負載"^]。
+
+
+
+[[ontap-volumes-workloads-enhancements]]
+=== ONTAP Volumes 工作負載增強功能
+
+在此版本中，NetApp Backup and Recovery 針對 ONTAP Volumes 工作負載引入了下列增強功能：
+
+* *還原介面改進*：ONTAP Volume 的還原精靈採用了全新的版面配置與改進的導覽：
++
+** *改進的選擇表格*：選擇表格一次顯示更多列與欄。還原畫面採用更優化的間距和導覽路徑，讓您能了解自己目前在工作流程中的位置。
+** *逐步導覽*：*下一步*和*繼續*按鈕的功能已改進，避免您意外跳到下一個主要步驟。*上一步*按鈕會將您帶回上次完成的畫面，並保留您先前的選擇，因此您無需重新啟動該步驟。
+** *選擇來源 Volume 時可查看更多詳細資訊*：Volume 清單現在顯示 Volume 類型、Volume 樣式、SnapLock 類型、現有保護和保護健全狀況。「現有保護」欄位更寬，因此您可以查看所有保護指標（快照、複寫和備份）。
+
+
+* *支援保護託管在 Azure 中國區域的 Volume*：您現在可以將 ONTAP Volume 備份到 Azure 中國（世紀互聯）的 Azure Blob 儲存設備。此支援適用於 Cloud Volumes ONTAP 和內部部署 ONTAP 系統。商業 Azure 和 Azure 政府區域保持不變。
+
+
+有關保護 ONTAP Volumes 工作負載的詳細資訊，請參閱 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-overview.html["了解使用 NetApp Backup and Recovery 的 ONTAP Volume 保護"^]。
